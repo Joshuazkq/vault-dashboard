@@ -236,9 +236,9 @@ tr:hover td{background:rgba(255,255,255,.03)}
     <div class="alert-title">CF Conviction Upgraded 7.5 &rarr; 8/10 &mdash; Cluster A 80%</div>
     <div class="alert-text">D2 (Valuation Mismatch) confirmed 4/5 after NOLA $673-675/st breached $636/st trigger. Sell-side consensus $7.65 EPS still not reflecting S3. Next gate: April Tampa NH3 settlement.</div>
   </div>
-  <div class="alert alert-warning">
-    <div class="alert-title">GTT Conviction Upgraded 6.5 &rarr; 7/10 &mdash; Meets Investment Threshold</div>
-    <div class="alert-text">D1 3&rarr;4, D3 2&rarr;3, D8 2&rarr;3 on Ras Laffan structural catalyst. Cluster A 60% &lt; 70% required for INVESTMENT reclassification. Remains TRADE. Time-stop Sep 30 (194 days).</div>
+  <div class="alert alert-positive">
+    <div class="alert-title">GTT Upgraded TRADE &rarr; INVESTMENT &middot; Conviction 8/10 &middot; Cluster A 80% &middot; RC 5/5</div>
+    <div class="alert-text">D1 4&rarr;5, D2 2&rarr;3, D3 3&rarr;4 on Ras Laffan structural catalyst (17% LNG capacity destroyed, 3-5yr repair). Portfolio now 100% INVESTMENT (no TRADEs). Wtd avg conviction 8.6. Total CWA 5.76.</div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-title">USDA Prospective Plantings &mdash; Mar 31 (11 days)</div>
@@ -251,8 +251,8 @@ tr:hover td{background:rgba(255,255,255,.03)}
       <div class="metric-box"><div class="metric-value" style="color:#4ade80">67%</div><div class="metric-label">Deployed</div></div>
       <div class="metric-box"><div class="metric-value" style="color:#60a5fa">33%</div><div class="metric-label">Cash</div></div>
       <div class="metric-box"><div class="metric-value">3/12</div><div class="metric-label">Slots Used</div></div>
-      <div class="metric-box"><div class="metric-value" style="color:#4ade80">8.4</div><div class="metric-label">Wtd Conviction</div></div>
-      <div class="metric-box"><div class="metric-value" style="color:#fbbf24">2.4%</div><div class="metric-label">Max TRADE Loss</div></div>
+      <div class="metric-box"><div class="metric-value" style="color:#4ade80">8.6</div><div class="metric-label">Wtd Conviction</div></div>
+      <div class="metric-box"><div class="metric-value" style="color:#22d3ee">5.76</div><div class="metric-label">Total CWA</div></div>
     </div>
   </div>
 
@@ -335,14 +335,13 @@ tr:hover td{background:rgba(255,255,255,.03)}
     <div class="bar-container">
       <div class="bar-segment" style="width:40%;background:linear-gradient(90deg,#16a34a,#22c55e)">VOW 40%</div>
       <div class="bar-segment" style="width:17%;background:linear-gradient(90deg,#22c55e,#4ade80)">CF 17%</div>
-      <div class="bar-segment" style="width:10%;background:linear-gradient(90deg,#d97706,#f59e0b)">GTT 10%</div>
+      <div class="bar-segment" style="width:10%;background:linear-gradient(90deg,#16a34a,#22d3ee)">GTT 10%</div>
       <div class="bar-segment" style="width:33%;background:#2d3748;color:#8b9bb4">Cash 33%</div>
     </div>
     <div style="height:10px"></div>
     <div class="bar-label">Type split (deployed capital only)</div>
     <div class="bar-container">
-      <div class="bar-segment" style="width:85%;background:linear-gradient(90deg,#16a34a,#22c55e)">INVESTMENT 85%</div>
-      <div class="bar-segment" style="width:15%;background:linear-gradient(90deg,#d97706,#f59e0b)">TRADE 15%</div>
+      <div class="bar-segment" style="width:100%;background:linear-gradient(90deg,#16a34a,#22c55e)">INVESTMENT 100%</div>
     </div>
   </div>
 
@@ -368,10 +367,18 @@ tr:hover td{background:rgba(255,255,255,.03)}
             <td>84%</td>
             <td>4/5</td>
           </tr>
+          <tr>
+            <td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span> <span class="tag tag-investment">INVESTMENT</span> <span style="font-size:10px;color:#22d3ee;margin-left:4px">NEW</span></td>
+            <td>10%</td>
+            <td><span class="pill pill-high">8/10</span></td>
+            <td>80%</td>
+            <td>68%</td>
+            <td>5/5</td>
+          </tr>
           <tr style="border-top:2px solid #2d3748">
             <td><strong>Total</strong></td>
-            <td><strong>57%</strong></td>
-            <td><span class="pill pill-high">Wtd 8.7</span></td>
+            <td><strong>67%</strong></td>
+            <td><span class="pill pill-high">Wtd 8.6</span></td>
             <td></td><td></td><td></td>
           </tr>
         </tbody>
@@ -379,19 +386,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
     </div>
     <div class="card">
       <div class="card-title">Trade Positions</div>
-      <table>
-        <thead><tr><th>Ticker</th><th>Alloc</th><th>Setup</th><th>Time-Stop</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span> <span class="tag tag-trade">TRADE</span></td>
-            <td>10%</td>
-            <td><span class="pill pill-mid">18/25</span></td>
-            <td>Sep 30 (194d)</td>
-          </tr>
-        </tbody>
-      </table>
-      <div style="height:12px"></div>
-      <canvas id="chartSetup" height="200"></canvas>
+      <div style="padding:20px;text-align:center;color:#64748b;font-size:13px">No active TRADEs. GTT upgraded to INVESTMENT on 2026-03-20.</div>
     </div>
   </div>
 
@@ -408,8 +403,8 @@ tr:hover td{background:rgba(255,255,255,.03)}
         <div class="exposure-text">Day 21: Hormuz closed; both sides destroying production facilities. Ras Laffan 17% LNG destroyed (3-5yr repair). Yanbu bypass struck. Brent $113.77. S3 base case 55%. No ceasefire mechanism.</div>
       </div>
       <div class="exposure-item exposure-micro">
-        <div class="exposure-label" style="color:#4ade80">Micro-Execution (57%)</div>
-        <div class="exposure-text">VOW Maritime margin at ~68% new-contract mix &rarr; Q1 2026 (May 20) validates 18.8% central estimate. CF NOLA $673-675/st confirmed S3 pricing; EPS $26.9 prob-weighted vs consensus $7.65.</div>
+        <div class="exposure-label" style="color:#4ade80">Micro-Execution (67%)</div>
+        <div class="exposure-text">VOW (40%): Q1 2026 May 20 &mdash; ~68% new-contract mix. CF (17%): NOLA $673-675/st confirmed above S3 trigger. Tampa NH3 imminent. USDA Mar 31. GTT (10%): Q1 activity update Apr 22; consensus gap &euro;740-780M vs &euro;902.8M.</div>
       </div>
       <div class="exposure-item exposure-macro">
         <div class="exposure-label" style="color:#60a5fa">Macro (33%)</div>
@@ -438,7 +433,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
       <div class="rc-score" style="color:#4ade80">4/5</div>
     </div>
     <div class="rc-row">
-      <div class="rc-ticker"><div class="rc-name">GTT</div><div class="rc-meta">TRD 10%</div></div>
+      <div class="rc-ticker"><div class="rc-name">GTT</div><div class="rc-meta">INV 10%</div></div>
       <div class="rc-track"><div class="rc-fill" style="width:80%;background:#16a34a"><span class="rc-fill-label">4/5</span></div></div>
       <div class="rc-score" style="color:#4ade80">4/5</div>
     </div>
@@ -523,7 +518,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
       <thead><tr><th>Ticker</th><th>Type</th><th>Days Since Update</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td><span class="ticker-link" onclick="openProfile('CF')">CF</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
-        <tr><td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span></td><td><span class="tag tag-trade">TRADE</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
+        <tr><td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
         <tr><td><span class="ticker-link" onclick="openProfile('VOW')">VOW</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>1 day</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
         <tr><td>SLB</td><td><span class="tag tag-monitoring">MONITORING</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
         <tr><td>HON</td><td><span class="tag tag-monitoring">MONITORING</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
@@ -587,7 +582,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
     </div>
     <div class="theme-tickers">
       <div class="theme-ticker-chip" onclick="openProfile('CF')"><span class="pill pill-high" style="font-size:10px;padding:1px 6px">8/10</span> CF &middot; INV 17%</div>
-      <div class="theme-ticker-chip" onclick="openProfile('GTT')"><span class="pill pill-mid" style="font-size:10px;padding:1px 6px">7/10</span> GTT &middot; TRD 10%</div>
+      <div class="theme-ticker-chip" onclick="openProfile('GTT')"><span class="pill pill-high" style="font-size:10px;padding:1px 6px">8/10</span> GTT &middot; INV 10%</div>
     </div>
   </div>
 
@@ -728,7 +723,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
     <div class="collapsible-content">
       <div class="briefing-item">
         <div class="briefing-date">Mar 20 &mdash; Hormuz Daily Briefing + Israel-Iran War Report</div>
-        <div class="briefing-text">Day 21: infrastructure destruction phase. Ras Laffan 17% LNG destroyed (3-5yr). Multi-state Gulf attacks. Brent $113.77/$119. Copper archived. GTT conviction 6.5&rarr;7/10.</div>
+        <div class="briefing-text">Day 21: infrastructure destruction phase. Ras Laffan 17% LNG destroyed (3-5yr). Multi-state Gulf attacks. Brent $113.77/$119. Copper archived. GTT upgraded TRADE&rarr;INVESTMENT 8/10.</div>
       </div>
       <div class="briefing-item">
         <div class="briefing-date">Mar 19 &mdash; Hormuz Daily Briefing</div>
@@ -980,10 +975,10 @@ const D = {
         {id:"D8",name:"Catalyst Clarity",score:5,rationale:"NOLA repricing weekly; April Tampa; Q1 earnings May 6; India Kharif Apr-Jun; USDA Mar 31"}
       ],
       scenarios:[
-        {name:"S1 (2wk)",probability:5,target:"$530/t",upside:"EPS $10.3"},
-        {name:"S2 (4wk)",probability:20,target:"$610/t",upside:"EPS $13.0"},
+        {name:"S1 (2wk)",probability:3,target:"$530/t",upside:"EPS $10.3"},
+        {name:"S2 (4wk)",probability:15,target:"$610/t",upside:"EPS $13.0"},
         {name:"S3 (3mo)",probability:55,target:"$850/t",upside:"EPS $26.3"},
-        {name:"S4 (6mo)",probability:20,target:"$1,000/t",upside:"EPS $46.7"}
+        {name:"S4 (6mo)",probability:27,target:"$1,000/t",upside:"EPS $46.7"}
       ],
       probWeightedTarget:"EPS ~$26.9 \u2192 P/E 4.7x at $125.77",
       catalysts:[
@@ -1026,19 +1021,18 @@ const D = {
       ]
     },
     GTT: {
-      company:"Gaztransport & Technigaz",theme:"Hormuz Disruption",status:"ACTIVE",portfolioType:"TRADE",
-      allocation:10,conviction:7,clusterA:60,clusterB:68,rc:4,rcMax:5,
-      price:"\u20ac198.90",marketCap:"\u20ac7.58B",exchange:"Euronext Paris",
-      setupScore:{s1:4,s2:4,s3:3,s4:3,s5:4,total:18,max:25,timeStop:"Sep 30, 2026",daysRemaining:194},
+      company:"Gaztransport & Technigaz",theme:"Hormuz Disruption",status:"ACTIVE",portfolioType:"INVESTMENT",
+      allocation:10,conviction:8,clusterA:80,clusterB:68,rc:5,rcMax:5,
+      price:"\u20ac204.40",marketCap:"\u20ac7.58B",exchange:"Euronext Paris",
       dimensions:[
-        {id:"D1",name:"Fundamentals Trajectory",score:4,rationale:"Ras Laffan 17% destroyed = structural LNG deficit bridging FY2026-27 trough; 84 Mtpa FID record"},
-        {id:"D2",name:"Valuation Mismatch",score:2,rationale:"17.9x trailing / ~20x forward; premium \u2014 market may be efficient"},
-        {id:"D3",name:"Mispricing Reason",score:3,rationale:"Ceasefire no longer fully unwinds GTT \u2014 structural capacity loss creates durable demand"},
-        {id:"D4",name:"Downside Protection",score:3,rationale:"\u20ac8.94 dividend floor; 4.5% yield supports"},
-        {id:"D5",name:"Thesis Simplicity",score:3,rationale:"3 conditions; FID conversion is DATA GAP"},
-        {id:"D6",name:"Upside Optionality",score:4,rationale:"5 paths: FID >90%, ULEC, LNG fuel, Ras Laffan replacement, naval coalition"},
-        {id:"D7",name:"Evidence Quality",score:4,rationale:"25 transcripts; filings comprehensive; 4 consecutive guidance beats"},
-        {id:"D8",name:"Catalyst Clarity",score:3,rationale:"Ras Laffan structural catalyst adds clarity; Q1 confirms trough; FID signals Q2-Q3"}
+        {id:"D1",name:"Fundamentals Trajectory",score:5,rationale:"Ras Laffan 17% destroyed = structural LNG deficit (3-5yr repair); 84 Mtpa FID record; FY2025 record \u20ac803M"},
+        {id:"D2",name:"Valuation Mismatch",score:3,rationale:"Market conflates geopolitical premium (~3-4%) with structural deficit premium (persists beyond ceasefire)"},
+        {id:"D3",name:"Mispricing Reason",score:4,rationale:"Self-correcting: replacement FIDs \u2192 orders \u2192 revenue, 12-18mo timeline; ceasefire downside only ~\u20ac6-8/share"},
+        {id:"D4",name:"Downside Protection",score:3,rationale:"\u20ac8.94 dividend floor; 4.5% yield supports; asset-light; margin floor \u20ac490-530M"},
+        {id:"D5",name:"Thesis Simplicity",score:3,rationale:"LNG demand holding, monopoly holding, FID conversion 75-90% confirmed"},
+        {id:"D6",name:"Upside Optionality",score:4,rationale:"5 paths: FID >90%, ULEC, LNG fuel, dual chokepoint, naval coalition"},
+        {id:"D7",name:"Evidence Quality",score:4,rationale:"25 transcripts; multiple filings; high factual base; 4 consecutive guidance beats"},
+        {id:"D8",name:"Catalyst Clarity",score:3,rationale:"Ras Laffan forcing function identified; Q1 results Apr 22 as first signal"}
       ],
       scenarios:[
         {name:"Base (50%)",probability:50,target:"\u20ac190-215",upside:"4.5% dividend carry + structural catalyst"},
@@ -1047,20 +1041,22 @@ const D = {
       ],
       probWeightedTarget:"\u20ac195-220 (range with carry + structural upside)",
       catalysts:[
-        {date:"Apr 22",event:"Q1 2026 activity update \u2014 FY2026 trough; \u20ac740-780M guided vs consensus \u20ac902.8M"},
-        {date:"Q2-Q3 2026",event:"FID-to-order signals \u2014 pipeline 105-135 vessels at 75-90% conversion"},
-        {date:"Sep 30, 2026",event:"TIME-STOP: exit or re-score if no LNGC order acceleration (>25/quarter)"}
+        {date:"Apr 22",event:"Q1 2026 activity update \u2014 FY2026 guidance clarity; consensus gap \u20ac740-780M vs \u20ac902.8M"},
+        {date:"H1 2026",event:"FID acceleration signals \u2014 watch if >21 mtpa/quarter (Ras Laffan replacement pull-forward)"},
+        {date:"Q2-Q3 2026",event:"FID-to-order conversion signals \u2014 pipeline 105-135 vessels at 75-90% conversion"}
       ],
       questions:{critical:[
-        {text:"FID-to-order conversion rate \u2014 75-90% historical; 84mtpa \u2192 ~150 vessels",resolved:false},
-        {text:"Ras Laffan replacement LNG capacity \u2014 FID acceleration timeline?",resolved:false},
-        {text:"Qatar 3-5yr repair \u2014 does this pull forward non-ME FIDs?",resolved:false},
-        {text:"Hormuz premium decomposition \u2014 how much of +27% YTD is Hormuz vs beat?",resolved:false},
-        {text:"China indigenous membrane tech \u2014 5-10 year risk at 5%?",resolved:false},
-        {text:"Danelec synergies \u2014 \u20ac25M target; included in FY2026 guidance",resolved:false}
+        {text:"Ras Laffan 17% \u2014 does destruction trigger FID acceleration above 21 mtpa/quarter?",resolved:false},
+        {text:"Qatar replacement LNG capacity \u2014 additional FIDs beyond NFE/NFS expansion?",resolved:false},
+        {text:"FY2026 consensus (\u20ac844M) vs guidance (\u20ac760M) gap \u2014 how does consensus react to Q1?",resolved:false},
+        {text:"Samsung KC-2C timeline to 174K m\u00b3 commercial order (10-15% Korea probability)",resolved:false},
+        {text:"French government \u20ac86M Elogen subsidy clawback terms",resolved:false}
       ],bullCase:[
-        {text:"ENGIE fully exited Sep 2025 \u2014 overhang cleared",resolved:true}
-      ],resolvedCount:12},
+        {text:"ENGIE fully exited Sep 2025 \u2014 overhang cleared",resolved:true},
+        {text:"Elogen gigafactory halted \u2014 capex risk foreclosed",resolved:true},
+        {text:"FID conversion 75-90% confirmed \u2014 pipeline reliable",resolved:true},
+        {text:"Hormuz premium only ~3-4% of YTD move \u2014 structural thesis dominant",resolved:true}
+      ],resolvedCount:18},
       debates:[
         {vector:"Chinese Membrane Tech",status:"OPEN",detail:"China has policy incentive; monopoly premium vulnerable to R&D announcement."},
         {vector:"Asset-Light Sentiment Lever",status:"PARTIALLY COUNTERED",detail:"FID leading-indicator valid but +27% YTD suggests leverage already pulled."},
@@ -1077,9 +1073,9 @@ const D = {
         {date:"Mar 16",text:"Naval coalition escort corridor = 5th upside path; military LNG security infrastructure creates structural demand"}
       ],
       recentNotes:[
-        {date:"Mar 20",source:"Hormuz Briefing Day 21",summary:"D1 3\u21924, D3 2\u21923, D8 2\u21923; conviction 6.5\u21927/10; Ras Laffan structural catalyst"},
-        {date:"Mar 20",source:"FY2026 Guidance Clarification",summary:"Danelec included in \u20ac740-780M; 84 Mtpa FID record = secular not Hormuz"},
-        {date:"Mar 16",source:"Houthi Assessment + D6 Upgrade",summary:"Dual chokepoint not active; D6 3\u21924 (naval coalition 5th path)"}
+        {date:"Mar 20",source:"TRADE \u2192 INVESTMENT Upgrade",summary:"D1 4\u21925, D2 2\u21923, D3 3\u21924; Cluster A 60%\u219280%; conviction 7\u21928/10; RC 5/5. Ras Laffan structural catalyst."},
+        {date:"Mar 19",source:"Report Review + Questions Resolution",summary:"ENGIE fully exited; FID conversion 75-90%; Hormuz premium ~3-4% of YTD; Elogen capex foreclosed; margin resilience confirmed"},
+        {date:"Mar 16",source:"CapIQ Data + D6 Upgrade",summary:"Institutional 44%; 11 analysts; mean PT $226; D6 3\u21924 (naval coalition 5th path)"}
       ]
     },
     SLB: {
@@ -1222,10 +1218,9 @@ function closeProfile(){document.getElementById('profileOverlay').classList.remo
 const doughnutOpts={responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}},cutout:'55%'};
 
 new Chart(document.getElementById('chartPosition'),{type:'doughnut',data:{labels:['VOW (40%)','CF (17%)','GTT (10%)','Cash (33%)'],datasets:[{data:[40,17,10,33],backgroundColor:['#22c55e','#4ade80','#f59e0b','#334155'],borderWidth:0}]},options:doughnutOpts});
-new Chart(document.getElementById('chartType'),{type:'doughnut',data:{labels:['Investment (57%)','Trade (10%)','Cash (33%)'],datasets:[{data:[57,10,33],backgroundColor:['#22c55e','#f59e0b','#334155'],borderWidth:0}]},options:doughnutOpts});
+new Chart(document.getElementById('chartType'),{type:'doughnut',data:{labels:['Investment (67%)','Cash (33%)'],datasets:[{data:[67,33],backgroundColor:['#22c55e','#334155'],borderWidth:0}]},options:doughnutOpts});
 new Chart(document.getElementById('chartTheme'),{type:'doughnut',data:{labels:['Sent-Val (40%)','Hormuz (27%)','Cash (33%)'],datasets:[{data:[40,27,33],backgroundColor:['#8b5cf6','#ef4444','#334155'],borderWidth:0}]},options:doughnutOpts});
-new Chart(document.getElementById('chartSetup'),{type:'radar',data:{labels:['S1 Macro','S2 Position','S3 Catalyst','S4 R/R','S5 Exit'],datasets:[{label:'GTT',data:[4,4,3,3,4],backgroundColor:'rgba(251,191,36,0.12)',borderColor:'#fbbf24',pointBackgroundColor:'#fbbf24',borderWidth:2}]},options:{responsive:true,scales:{r:{beginAtZero:true,max:5,min:0,ticks:{stepSize:1,color:'#64748b',font:{size:10},backdropColor:'transparent'},grid:{color:'rgba(255,255,255,.08)'},pointLabels:{color:'#8b9bb4',font:{size:10}},angleLines:{color:'rgba(255,255,255,.06)'}}},plugins:{legend:{display:false}}}});
-new Chart(document.getElementById('chartScatter'),{type:'bubble',data:{datasets:[{label:'VOW',data:[{x:9,y:40,r:18}],backgroundColor:'rgba(74,222,128,0.3)',borderColor:'#4ade80',borderWidth:2},{label:'CF',data:[{x:8,y:17,r:13}],backgroundColor:'rgba(34,197,94,0.3)',borderColor:'#22c55e',borderWidth:2}]},options:{responsive:true,scales:{x:{title:{display:true,text:'Conviction Score',color:'#8b9bb4'},min:4,max:10,ticks:{color:'#64748b'},grid:{color:'rgba(255,255,255,.06)'}},y:{title:{display:true,text:'Allocation %',color:'#8b9bb4'},min:0,max:50,ticks:{color:'#64748b',callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.06)'}}},plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},usePointStyle:true}},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.y+'% at '+ctx.raw.x+'/10'}}}}});
+new Chart(document.getElementById('chartScatter'),{type:'bubble',data:{datasets:[{label:'VOW',data:[{x:9,y:40,r:18}],backgroundColor:'rgba(74,222,128,0.3)',borderColor:'#4ade80',borderWidth:2},{label:'CF',data:[{x:8,y:17,r:13}],backgroundColor:'rgba(34,197,94,0.3)',borderColor:'#22c55e',borderWidth:2},{label:'GTT',data:[{x:8,y:10,r:9}],backgroundColor:'rgba(34,211,238,0.3)',borderColor:'#22d3ee',borderWidth:2}]},options:{responsive:true,scales:{x:{title:{display:true,text:'Conviction Score',color:'#8b9bb4'},min:4,max:10,ticks:{color:'#64748b'},grid:{color:'rgba(255,255,255,.06)'}},y:{title:{display:true,text:'Allocation %',color:'#8b9bb4'},min:0,max:50,ticks:{color:'#64748b',callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.06)'}}},plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},usePointStyle:true}},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.y+'% at '+ctx.raw.x+'/10'}}}}});
 new Chart(document.getElementById('chartDataGaps'),{type:'bar',data:{labels:['CF','GTT','KIST','HON','SLB','LCUT','VOW'],datasets:[{label:'DATA GAP count',data:[10,8,5,3,3,2,1],backgroundColor:['#ef4444','#ef4444','#f59e0b','#f59e0b','#f59e0b','#f59e0b','#22c55e'],borderRadius:6,barThickness:24}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{color:'#64748b',stepSize:5},grid:{color:'rgba(255,255,255,.06)'}},y:{ticks:{color:'#e2e8f0',font:{weight:'600'}},grid:{display:false}}}}});
 new Chart(document.getElementById('chartQuestions'),{type:'bar',data:{labels:['CF','GTT','VOW','LCUT','KIST','SLB','HON'],datasets:[{label:'Critical',data:[6,6,3,3,5,3,3],backgroundColor:'#ef4444',borderRadius:2},{label:'Bull Case',data:[2,1,2,0,0,0,0],backgroundColor:'#f59e0b',borderRadius:2},{label:'Resolved',data:[49,12,12,5,0,8,6],backgroundColor:'#22c55e',borderRadius:2}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}},scales:{x:{stacked:true,beginAtZero:true,ticks:{color:'#64748b',stepSize:10},grid:{color:'rgba(255,255,255,.06)'}},y:{stacked:true,ticks:{color:'#e2e8f0',font:{weight:'600'}},grid:{display:false}}}}});
 new Chart(document.getElementById('chartDebates'),{type:'doughnut',data:{labels:['OPEN (8)','PARTIALLY COUNTERED (3)','COUNTERED (4)','CONCEDED (2)','RESOLVED (1)'],datasets:[{data:[8,3,4,2,1],backgroundColor:['#ef4444','#f59e0b','#22c55e','#dc2626','#3b82f6'],borderWidth:0}]},options:{responsive:true,cutout:'55%',plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}}}});
