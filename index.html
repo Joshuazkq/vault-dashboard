@@ -4,165 +4,428 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Dashboard — 2026-03-21 (post-rescore)</title>
+<title>Research Vault Dashboard — 2026-03-21</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e0e0e0; padding: 24px; }
-  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; color: #fff; }
-  .subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 28px; }
-  .card { background: #1a1d27; border-radius: 10px; padding: 20px; border: 1px solid #2a2d3a; }
-  .card-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 14px; }
-  .chart-container { position: relative; width: 100%; max-width: 280px; margin: 0 auto; }
-  .full-width { grid-column: 1 / -1; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th { text-align: left; padding: 10px 12px; border-bottom: 2px solid #2a2d3a; color: #888; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
-  td { padding: 10px 12px; border-bottom: 1px solid #1f2230; }
-  tr:hover td { background: #1f2230; }
-  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-  .tag-investment { background: #1a3a2a; color: #4ade80; }
-  .tag-cash { background: #1a2a3a; color: #60a5fa; }
-  .bar-container { width: 100%; background: #1f2230; border-radius: 4px; height: 24px; margin-top: 8px; overflow: hidden; display: flex; }
-  .bar-segment { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #fff; }
-  .score-pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-  .score-high { background: #1a3a2a; color: #4ade80; }
-  .score-exceptional { background: #1a4a1a; color: #22ff22; border: 1px solid #4ade80; }
-  .exposure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .exposure-item { background: #12141c; border-radius: 8px; padding: 14px; border-left: 3px solid; }
-  .exposure-geo { border-color: #f87171; }
-  .exposure-micro { border-color: #4ade80; }
-  .exposure-macro { border-color: #60a5fa; }
-  .exposure-struct { border-color: #a78bfa; }
-  .exposure-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 600; }
-  .exposure-label-geo { color: #f87171; }
-  .exposure-label-micro { color: #4ade80; }
-  .exposure-label-macro { color: #60a5fa; }
-  .exposure-label-struct { color: #a78bfa; }
-  .exposure-text { font-size: 12px; color: #ccc; line-height: 1.5; }
-  .stacked-bar-label { font-size: 12px; color: #aaa; margin-bottom: 4px; }
-  .alert-banner { background: #3a1a1a; border: 1px solid #f87171; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; }
-  .alert-banner .alert-title { color: #f87171; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
-  .alert-banner .alert-text { color: #fca5a5; font-size: 13px; line-height: 1.5; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,#0c1220 0%,#131b2e 50%,#0f1724 100%);color:#e2e8f0;padding:24px 24px 80px;min-height:100vh}
+h1{font-size:22px;font-weight:700;color:#f1f5f9}
+.subtitle{font-size:13px;color:#8b9bb4;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-bottom:20px}
+.card{background:linear-gradient(145deg,#1a2435 0%,#1e2a3d 100%);border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,.06);box-shadow:0 2px 12px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04)}
+.card-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#8b9bb4;margin-bottom:14px;font-weight:600}
+.full-width{grid-column:1/-1}
+.two-col{grid-column:span 2}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:10px 12px;border-bottom:2px solid #2d3748;color:#8b9bb4;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:#cbd5e1}
+tr:hover td{background:rgba(255,255,255,.03)}
+.tag{display:inline-block;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:600}
+.tag-investment{background:rgba(22,163,74,.15);color:#4ade80}
+.tag-trade{background:rgba(217,119,6,.15);color:#fbbf24}
+.tag-monitoring{background:rgba(37,99,235,.15);color:#60a5fa}
+.tag-passed{background:rgba(148,163,184,.1);color:#64748b}
+.tag-active{background:rgba(22,163,74,.15);color:#4ade80}
+.pill{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;color:#fff}
+.pill-high{background:linear-gradient(135deg,#16a34a,#22c55e)}
+.pill-exceptional{background:linear-gradient(135deg,#059669,#10b981);border:1px solid #4ade80}
+.pill-mid{background:linear-gradient(135deg,#d97706,#f59e0b)}
+.pill-low{background:linear-gradient(135deg,#dc2626,#ef4444)}
+.pill-blue{background:linear-gradient(135deg,#2563eb,#3b82f6)}
+
+/* Tabs */
+.tab-bar{display:flex;gap:0;border-bottom:2px solid #2d3748;margin-bottom:20px;position:sticky;top:0;background:linear-gradient(180deg,#0c1220,#0c1220ee);z-index:100;padding-top:4px;backdrop-filter:blur(12px)}
+.tab-btn{padding:10px 20px;font-size:13px;font-weight:600;color:#64748b;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s}
+.tab-btn.active{color:#60a5fa;border-bottom-color:#3b82f6}
+.tab-btn:hover{color:#e2e8f0}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Metrics row */
+.metrics-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:16px}
+.metric-box{text-align:center}
+.metric-value{font-size:28px;font-weight:700}
+.metric-label{font-size:11px;color:#8b9bb4;margin-top:4px}
+
+/* Alert banners */
+.alert{border-radius:14px;padding:14px 18px;margin-bottom:12px;border-left:4px solid}
+.alert-positive{background:linear-gradient(135deg,rgba(22,163,74,.12),rgba(22,163,74,.06));border-color:#22c55e}
+.alert-positive .alert-title{color:#4ade80}
+.alert-positive .alert-text{color:#86efac}
+.alert-warning{background:linear-gradient(135deg,rgba(217,119,6,.12),rgba(217,119,6,.06));border-color:#f59e0b}
+.alert-warning .alert-title{color:#fbbf24}
+.alert-warning .alert-text{color:#fde68a}
+.alert-danger{background:linear-gradient(135deg,rgba(220,38,38,.12),rgba(220,38,38,.06));border-color:#ef4444}
+.alert-danger .alert-title{color:#f87171}
+.alert-danger .alert-text{color:#fca5a5}
+.alert-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:4px}
+.alert-text{font-size:13px;line-height:1.5}
+
+/* Priority queue */
+.pq-item{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);gap:12px}
+.pq-item:last-child{border-bottom:none}
+.pq-rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.pq-rank-1{background:rgba(22,163,74,.2);color:#4ade80}
+.pq-rank-2{background:rgba(37,99,235,.2);color:#60a5fa}
+.pq-rank-3{background:rgba(217,119,6,.2);color:#fbbf24}
+.pq-rank-default{background:rgba(148,163,184,.1);color:#64748b}
+.pq-content{flex:1;min-width:0}
+.pq-ticker{font-weight:700;font-size:14px;color:#f1f5f9}
+.pq-reason{font-size:12px;color:#8b9bb4;margin-top:2px}
+.pq-action{font-size:11px;font-weight:600;color:#60a5fa;margin-top:2px}
+.pq-score{font-size:13px;font-weight:600;color:#8b9bb4;flex-shrink:0}
+
+/* Stacked bar */
+.bar-container{width:100%;background:#1e2a3d;border-radius:8px;height:28px;overflow:hidden;display:flex}
+.bar-segment{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#fff}
+.bar-label{font-size:12px;color:#8b9bb4;margin-bottom:4px}
+
+/* Exposure cards */
+.exposure-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.exposure-item{background:linear-gradient(145deg,#1a2435,#1e2a3d);border-radius:14px;padding:14px;border-left:3px solid}
+.exposure-geo{border-color:#ef4444}
+.exposure-micro{border-color:#22c55e}
+.exposure-macro{border-color:#3b82f6}
+.exposure-struct{border-color:#8b5cf6}
+.exposure-label{font-size:11px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:600}
+.exposure-text{font-size:12px;color:#94a3b8;line-height:1.5}
+
+/* RC gauge */
+.rc-row{display:flex;align-items:center;margin-bottom:12px}
+.rc-row:last-child{margin-bottom:0}
+.rc-ticker{width:90px;flex-shrink:0}
+.rc-name{font-size:14px;font-weight:600;color:#f1f5f9}
+.rc-meta{font-size:11px;color:#8b9bb4}
+.rc-track{flex:1;height:22px;background:#1e2a3d;border-radius:8px;overflow:hidden}
+.rc-fill{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;transition:width .4s}
+.rc-fill-label{font-size:11px;font-weight:600;color:#fff}
+.rc-score{width:50px;text-align:right;font-size:14px;font-weight:600;flex-shrink:0;margin-left:12px}
+
+/* Theme cards */
+.theme-card{background:linear-gradient(145deg,#1a2435,#1e2a3d);border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,.06);box-shadow:0 2px 12px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04);margin-bottom:16px}
+.theme-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.theme-name{font-size:16px;font-weight:700;color:#f1f5f9}
+.theme-priority{font-size:24px;font-weight:700}
+.theme-meta{display:flex;gap:16px;margin-bottom:12px;font-size:12px;color:#8b9bb4}
+.theme-signal{background:rgba(255,255,255,.04);border-radius:10px;padding:10px;font-size:12px;color:#94a3b8;line-height:1.5;margin-top:10px}
+.theme-tickers{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.theme-ticker-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,.08);transition:all .15s;color:#cbd5e1}
+.theme-ticker-chip:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15)}
+.status-badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.status-strengthening{background:rgba(22,163,74,.15);color:#4ade80}
+.status-stable{background:rgba(37,99,235,.15);color:#60a5fa}
+.status-weakening{background:rgba(217,119,6,.15);color:#fbbf24}
+.status-fading{background:rgba(220,38,38,.15);color:#f87171}
+
+/* Pipeline cards */
+.pipeline-card{background:linear-gradient(145deg,#1a2435,#1e2a3d);border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,.06);box-shadow:0 2px 12px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04);margin-bottom:12px}
+.pipeline-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.pipeline-ticker{font-size:16px;font-weight:700;color:#f1f5f9}
+.pipeline-company{font-size:13px;color:#8b9bb4}
+.blocker-list{list-style:none;padding:0;margin-top:10px}
+.blocker-list li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;color:#94a3b8;display:flex;align-items:flex-start;gap:6px}
+.blocker-list li:last-child{border-bottom:none}
+.blocker-icon{flex-shrink:0;width:16px;text-align:center}
+.next-action{margin-top:10px;padding:10px;background:rgba(37,99,235,.12);border-radius:10px;font-size:12px;color:#93c5fd;font-weight:500}
+
+/* Ticker profile overlay */
+.profile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;overflow-y:auto;backdrop-filter:blur(4px)}
+.profile-overlay.active{display:block}
+.profile-panel{background:linear-gradient(160deg,#131b2e,#1a2435);margin:20px auto;max-width:900px;border-radius:20px;padding:28px;box-shadow:0 12px 48px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);position:relative;border:1px solid rgba(255,255,255,.06)}
+.profile-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:#8b9bb4}
+.profile-close:hover{background:rgba(255,255,255,.1)}
+.profile-header{margin-bottom:20px}
+.profile-ticker-name{font-size:24px;font-weight:700;color:#f1f5f9}
+.profile-company{font-size:14px;color:#8b9bb4}
+.profile-badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center}
+.profile-section{margin-top:24px}
+.profile-section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#8b9bb4;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #2d3748}
+.scenario-table{width:100%;font-size:12px}
+.scenario-table th{font-size:11px;padding:8px;background:rgba(255,255,255,.04)}
+.scenario-table td{padding:8px;font-size:12px}
+.scenario-table tr.scenario-base{background:rgba(22,163,74,.1);font-weight:600}
+.question-category{margin-bottom:16px}
+.question-category-title{font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:6px}
+.question-item{padding:6px 0;font-size:12px;color:#94a3b8;line-height:1.4;border-bottom:1px solid rgba(255,255,255,.03);display:flex;gap:6px}
+.question-item:last-child{border-bottom:none}
+.q-status{flex-shrink:0;font-size:11px;font-weight:600}
+.q-open{color:#f87171}
+.q-resolved{color:#4ade80}
+.debate-item{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.debate-item:last-child{border-bottom:none}
+.debate-vector{font-size:13px;font-weight:600;color:#f1f5f9}
+.debate-status{font-size:11px;margin-top:2px}
+.debate-detail{font-size:12px;color:#94a3b8;margin-top:4px;line-height:1.4}
+.catalyst-item{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.catalyst-item:last-child{border-bottom:none}
+.catalyst-date{font-weight:600;color:#f1f5f9;flex-shrink:0;width:100px}
+.catalyst-text{color:#94a3b8;flex:1}
+.note-item{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.note-item:last-child{border-bottom:none}
+.note-date{font-size:12px;font-weight:600;color:#f1f5f9}
+.note-source{font-size:11px;color:#8b9bb4}
+.note-text{font-size:12px;color:#94a3b8;margin-top:2px;line-height:1.4}
+.financials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.fin-box{text-align:center;padding:12px;background:rgba(255,255,255,.04);border-radius:12px}
+.fin-value{font-size:18px;font-weight:700;color:#f1f5f9}
+.fin-label{font-size:11px;color:#8b9bb4;margin-top:2px}
+.chart-sm{max-width:300px;margin:0 auto}
+
+/* Collapsible */
+.collapsible-header{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+.collapsible-header:hover{color:#60a5fa}
+.collapsible-content{display:none;padding-top:8px}
+.collapsible-content.open{display:block}
+.chevron{transition:transform .2s;font-size:12px;color:#64748b}
+.chevron.open{transform:rotate(90deg)}
+
+/* Changelog metrics */
+.cl-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cl-box{background:rgba(255,255,255,.04);border-radius:12px;padding:14px;text-align:center}
+.cl-num{font-size:28px;font-weight:700}
+.cl-label{font-size:11px;color:#8b9bb4;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+
+/* Staleness */
+.st-green{color:#4ade80}
+.st-yellow{color:#fbbf24}
+.st-red{color:#f87171}
+
+/* Ticker link */
+.ticker-link{color:#60a5fa;font-weight:700;cursor:pointer;text-decoration:none}
+.ticker-link:hover{text-decoration:underline}
+
+/* Chart container */
+.chart-container{position:relative;width:100%;max-width:280px;margin:0 auto}
+
+/* Candidate cards */
+.candidate-card{background:rgba(255,255,255,.04);border-radius:14px;padding:14px;border:1px solid rgba(255,255,255,.06);margin-bottom:10px}
+.candidate-name{font-size:14px;font-weight:700;color:#f1f5f9}
+.candidate-meta{font-size:12px;color:#8b9bb4;margin-top:4px}
+.candidate-evidence{font-size:12px;color:#94a3b8;margin-top:6px;line-height:1.4}
+
+/* Briefing feed */
+.briefing-item{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.briefing-item:last-child{border-bottom:none}
+.briefing-date{font-weight:600;color:#f1f5f9}
+.briefing-text{color:#94a3b8;margin-top:2px;line-height:1.4}
+
+/* Mobile bottom nav */
+.bottom-nav{display:none}
+
+@media(max-width:768px){
+  body{padding:12px 12px 72px}
+  .tab-bar{display:none}
+  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:linear-gradient(180deg,#131b2e,#0c1220);border-top:1px solid rgba(255,255,255,.06);z-index:150;padding:6px 0;box-shadow:0 -4px 20px rgba(0,0,0,.4)}
+  .bottom-nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 4px;border:none;background:none;cursor:pointer;font-size:10px;color:#64748b;font-weight:500}
+  .bottom-nav-btn.active{color:#60a5fa}
+  .bottom-nav-btn svg{width:20px;height:20px}
+  .grid{grid-template-columns:1fr}
+  .two-col{grid-column:span 1}
+  .exposure-grid{grid-template-columns:1fr}
+  .metrics-row{grid-template-columns:repeat(3,1fr)}
+  .profile-panel{margin:0;border-radius:0;min-height:100vh;padding:16px}
+  table{display:block;overflow-x:auto;white-space:nowrap}
+  .cl-metrics{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:769px) and (max-width:1024px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
 
-<h1>Portfolio Dashboard</h1>
-<p class="subtitle">Last updated: 2026-03-21 (post-rescore) &middot; 3 of 12 slots &middot; 77% deployed &middot; 23% cash &middot; All INVESTMENT &middot; Wtd conviction 9.3</p>
+<h1>Research Vault Dashboard</h1>
+<p class="subtitle">Last updated: 2026-03-21 &middot; 3 of 12 slots &middot; 77% deployed &middot; 23% cash &middot; All INVESTMENT &middot; Wtd conviction 9.3</p>
 
-<div class="alert-banner" style="background:#1a4a1a; border-color:#22ff22;">
-  <div class="alert-title" style="color:#22ff22;">Conviction Rescore Complete &mdash; VOW 10/10 (First 6/5 Scores)</div>
-  <div class="alert-text" style="color:#86efac;">VOW D1&rarr;6/5 (24% new-contract margin slide), D2&rarr;6/5 (single division &gt;2x group EV). Cluster A 107%. CF D1&rarr;5/5 (S3 pricing confirmed). GTT D7&rarr;5/5 (strongest evidence base). MEOH remapped to standard D1-D8 framework. Portfolio wtd avg conviction 8.5&rarr;9.3. CWA 6.56&rarr;7.15.</div>
+<!-- Desktop Tab Bar -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('portfolio')">Portfolio</button>
+  <button class="tab-btn" onclick="switchTab('health')">Research Health</button>
+  <button class="tab-btn" onclick="switchTab('themes')">Themes</button>
+  <button class="tab-btn" onclick="switchTab('pipeline')">Pipeline</button>
 </div>
 
-<div class="alert-banner">
-  <div class="alert-title">Imminent Catalysts &mdash; Tampa NH3 Settlement + USDA Mar 31</div>
-  <div class="alert-text">Tampa ammonia settlement (late Mar/early Apr) &mdash; first war-conditions NH3 benchmark; 30.7% of CF revenue. USDA Prospective Plantings Mar 31 (10 days) &mdash; corn &gt;93M acres = demand intact; &lt;92M = 10%+ volume headwind.</div>
-</div>
+<!-- Mobile Bottom Nav -->
+<nav class="bottom-nav" id="bottomNav">
+  <button class="bottom-nav-btn active" onclick="switchTab('portfolio')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    Portfolio
+  </button>
+  <button class="bottom-nav-btn" onclick="switchTab('health')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    Health
+  </button>
+  <button class="bottom-nav-btn" onclick="switchTab('themes')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Themes
+  </button>
+  <button class="bottom-nav-btn" onclick="switchTab('pipeline')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+    Pipeline
+  </button>
+</nav>
 
-<div class="alert-banner" style="background:#2a1a1a; border-color:#fbbf24;">
-  <div class="alert-title" style="color:#fbbf24;">DOJ Antitrust Probe (CF) + Orica $169.5M Settlement</div>
-  <div class="alert-text" style="color:#fde68a;">DOJ investigating CF, Nutrien, Mosaic, Koch, Yara for potential fertilizer price-fixing. Civil AND criminal under review. Grand jury = material; civil = manageable. Orica $169.5M cash H2 2026. Monitor Q1 10-Q (May).</div>
-</div>
+<!-- ==================== TAB 1: PORTFOLIO ==================== -->
+<div class="tab-content active" id="tab-portfolio">
 
-<div class="grid">
+  <!-- Alerts -->
+  <div class="alert alert-positive">
+    <div class="alert-title">Conviction Rescore Complete &mdash; VOW 10/10 (First 6/5 Scores)</div>
+    <div class="alert-text">VOW D1&rarr;6/5 (24% new-contract margin slide), D2&rarr;6/5 (single division &gt;2x group EV). Cluster A 107%. CF D1&rarr;5/5 (S3 pricing confirmed). GTT D7&rarr;5/5 (strongest evidence base). Portfolio wtd avg conviction 8.5&rarr;9.3. CWA 6.56&rarr;7.15.</div>
+  </div>
+  <div class="alert alert-danger">
+    <div class="alert-title">Imminent Catalysts &mdash; Tampa NH3 Settlement + USDA Mar 31</div>
+    <div class="alert-text">Tampa ammonia settlement (late Mar/early Apr) &mdash; first war-conditions NH3 benchmark; 30.7% of CF revenue. USDA Prospective Plantings Mar 31 (10 days) &mdash; corn &gt;93M acres = demand intact; &lt;92M = 10%+ volume headwind.</div>
+  </div>
+  <div class="alert alert-warning">
+    <div class="alert-title">DOJ Antitrust Probe (CF) + Orica $169.5M Settlement</div>
+    <div class="alert-text">DOJ investigating CF, Nutrien, Mosaic, Koch, Yara for potential fertilizer price-fixing. Civil AND criminal under review. Grand jury = material; civil = manageable. Orica $169.5M cash H2 2026.</div>
+  </div>
+  <div class="alert alert-warning">
+    <div class="alert-title">Hormuz Day 22+ (Mar 21)</div>
+    <div class="alert-text">Iran partial transits to "friendly countries" &mdash; India 22 vessels; China in talks. ME exports still -61%. Israel struck South Pars + killed Intelligence Minister Khatib. US bunker busters on Iranian missile sites. Brent peaked $126. S3 55% intact.</div>
+  </div>
 
-  <!-- Pie: By Position -->
-  <div class="card">
-    <div class="card-title">Allocation by Position</div>
-    <div class="chart-container">
-      <canvas id="chartPosition"></canvas>
+  <!-- Summary Metrics -->
+  <div class="card full-width" style="margin-bottom:16px">
+    <div class="card-title">Portfolio Summary</div>
+    <div class="metrics-row">
+      <div class="metric-box"><div class="metric-value" style="color:#4ade80">77%</div><div class="metric-label">Deployed</div></div>
+      <div class="metric-box"><div class="metric-value" style="color:#60a5fa">23%</div><div class="metric-label">Cash</div></div>
+      <div class="metric-box"><div class="metric-value">3/12</div><div class="metric-label">Slots Used</div></div>
+      <div class="metric-box"><div class="metric-value" style="color:#22ff22">9.3</div><div class="metric-label">Wtd Conviction</div></div>
+      <div class="metric-box"><div class="metric-value" style="color:#22d3ee">7.15</div><div class="metric-label">Total CWA</div></div>
     </div>
   </div>
 
-  <!-- Pie: By Type -->
-  <div class="card">
-    <div class="card-title">By Position Type</div>
-    <div class="chart-container">
-      <canvas id="chartType"></canvas>
+  <!-- Priority Queue -->
+  <div class="card full-width" style="margin-bottom:16px">
+    <div class="card-title">Priority Queue &mdash; What Needs Work</div>
+    <div class="pq-item">
+      <div class="pq-rank pq-rank-1">1</div>
+      <div class="pq-content">
+        <div class="pq-ticker"><span class="ticker-link" onclick="openProfile('CF')">CF</span> &middot; Tampa NH3 Settlement (Imminent)</div>
+        <div class="pq-reason">Late Mar/early Apr. First war-conditions ammonia benchmark. 30.7% of CF revenue. Pre-war Tampa $615/mt; market-implied ~$650/mt.</div>
+        <div class="pq-action">Action: Monitor Tampa settlement, update THESIS.md with price data, trigger D2 rescore if &ge;$500/t</div>
+      </div>
+    </div>
+    <div class="pq-item">
+      <div class="pq-rank pq-rank-2">2</div>
+      <div class="pq-content">
+        <div class="pq-ticker"><span class="ticker-link" onclick="openProfile('CF')">CF</span> &middot; USDA Prospective Plantings (Mar 31)</div>
+        <div class="pq-reason">Binary demand destruction signal. Corn &gt;93M acres = demand intact. Corn &lt;92M = 10%+ volume headwind. 10 days away.</div>
+        <div class="pq-action">Action: Monitor USDA release, update demand destruction scenario in DEBATES.md</div>
+      </div>
+    </div>
+    <div class="pq-item">
+      <div class="pq-rank pq-rank-3">3</div>
+      <div class="pq-content">
+        <div class="pq-ticker"><span class="ticker-link" onclick="openProfile('GTT')">GTT</span> &middot; Q1 Earnings (Apr 22)</div>
+        <div class="pq-reason">FY2026 trough baseline &mdash; revenue &euro;740-780M guided. 32 days away. Position 20%. Consensus &euro;844M above guidance.</div>
+        <div class="pq-action">Action: Prepare pre-earnings analysis, review consensus expectations</div>
+      </div>
+    </div>
+    <div class="pq-item">
+      <div class="pq-rank pq-rank-default">4</div>
+      <div class="pq-content">
+        <div class="pq-ticker"><span class="ticker-link" onclick="openProfile('CF')">CF</span> &middot; DOJ Antitrust Probe</div>
+        <div class="pq-reason">Grand jury (criminal) = material risk. Civil = manageable. Two class-action farmer lawsuits filed.</div>
+        <div class="pq-action">Action: Monitor Q1 10-Q legal disclosures (May)</div>
+      </div>
+    </div>
+    <div class="pq-item">
+      <div class="pq-rank pq-rank-default">5</div>
+      <div class="pq-content">
+        <div class="pq-ticker"><span class="ticker-link" onclick="openProfile('VOW')">VOW</span> &middot; Q1 2026 Results (May 20)</div>
+        <div class="pq-reason">First read on new-contract-dominant margins (~68% new mix). 60 days away. Position 40%.</div>
+        <div class="pq-action">Action: Monitor insider activity, prepare pre-earnings framework</div>
+      </div>
     </div>
   </div>
 
-  <!-- Pie: By Theme -->
-  <div class="card">
-    <div class="card-title">By Theme</div>
-    <div class="chart-container">
-      <canvas id="chartTheme"></canvas>
+  <div class="grid">
+    <!-- Doughnut: By Position -->
+    <div class="card">
+      <div class="card-title">Allocation by Position</div>
+      <div class="chart-container"><canvas id="chartPosition"></canvas></div>
+    </div>
+    <!-- Doughnut: By Type -->
+    <div class="card">
+      <div class="card-title">By Position Type</div>
+      <div class="chart-container"><canvas id="chartType"></canvas></div>
+    </div>
+    <!-- Doughnut: By Theme -->
+    <div class="card">
+      <div class="card-title">By Theme</div>
+      <div class="chart-container"><canvas id="chartTheme"></canvas></div>
     </div>
   </div>
 
-  <!-- Stacked allocation bar -->
-  <div class="card full-width">
+  <!-- Capital Deployment -->
+  <div class="card full-width" style="margin-bottom:16px">
     <div class="card-title">Capital Deployment</div>
-    <div class="stacked-bar-label">Portfolio allocation</div>
+    <div class="bar-label">Portfolio allocation</div>
     <div class="bar-container">
-      <div class="bar-segment" style="width:40%; background:#4ade80;">VOW 40%</div>
-      <div class="bar-segment" style="width:17%; background:#34d399;">CF 17%</div>
-      <div class="bar-segment" style="width:20%; background:#22d3ee;">GTT 20%</div>
-      <div class="bar-segment" style="width:23%; background:#334155;">Cash 23%</div>
+      <div class="bar-segment" style="width:40%;background:linear-gradient(90deg,#059669,#10b981)">VOW 40%</div>
+      <div class="bar-segment" style="width:17%;background:linear-gradient(90deg,#16a34a,#22c55e)">CF 17%</div>
+      <div class="bar-segment" style="width:20%;background:linear-gradient(90deg,#0891b2,#22d3ee)">GTT 20%</div>
+      <div class="bar-segment" style="width:23%;background:#2d3748;color:#8b9bb4">Cash 23%</div>
     </div>
-    <div style="height:12px"></div>
-    <div class="stacked-bar-label">Type split (deployed capital only)</div>
+    <div style="height:10px"></div>
+    <div class="bar-label">Type split (deployed capital only)</div>
     <div class="bar-container">
-      <div class="bar-segment" style="width:100%; background:#4ade80;">INVESTMENT 100%</div>
+      <div class="bar-segment" style="width:100%;background:linear-gradient(90deg,#16a34a,#22c55e)">INVESTMENT 100%</div>
     </div>
   </div>
 
-  <!-- INVESTMENT table -->
-  <div class="card full-width">
+  <!-- INVESTMENT Table -->
+  <div class="card full-width" style="margin-bottom:16px">
     <div class="card-title">Investment Positions &mdash; Conviction vs. Allocation</div>
     <table>
-      <thead>
-        <tr><th>Ticker</th><th>Alloc</th><th>Conviction</th><th>Cluster A</th><th>Cluster B</th><th>RC</th><th>Conv-Wtd Alloc</th></tr>
-      </thead>
+      <thead><tr><th>Ticker</th><th>Alloc</th><th>Conviction</th><th>Cluster A</th><th>Cluster B</th><th>RC</th><th>CWA</th></tr></thead>
       <tbody>
         <tr>
-          <td><strong>VOW</strong> <span class="tag tag-investment">INVESTMENT</span></td>
+          <td><span class="ticker-link" onclick="openProfile('VOW')">VOW</span> <span class="tag tag-investment">INVESTMENT</span></td>
           <td>40%</td>
-          <td><span class="score-pill score-exceptional">10/10</span></td>
+          <td><span class="pill pill-exceptional">10/10</span></td>
           <td><strong>107%</strong></td>
           <td>80%</td>
           <td>5/5</td>
           <td><strong>4.00</strong></td>
         </tr>
         <tr>
-          <td><strong>GTT</strong> <span class="tag tag-investment">INVESTMENT</span></td>
+          <td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span> <span class="tag tag-investment">INVESTMENT</span></td>
           <td>20%</td>
-          <td><span class="score-pill score-high">8.5/10</span></td>
+          <td><span class="pill pill-high">8.5/10</span></td>
           <td>87%</td>
           <td>72%</td>
           <td>5/5</td>
           <td>1.70</td>
         </tr>
         <tr>
-          <td><strong>CF</strong> <span class="tag tag-investment">INVESTMENT</span></td>
+          <td><span class="ticker-link" onclick="openProfile('CF')">CF</span> <span class="tag tag-investment">INVESTMENT</span></td>
           <td>17%</td>
-          <td><span class="score-pill score-high">8.5/10</span></td>
+          <td><span class="pill pill-high">8.5/10</span></td>
           <td>87%</td>
           <td>84%</td>
           <td>4/5</td>
           <td>1.45</td>
         </tr>
-        <tr style="border-top: 2px solid #2a2d3a;">
+        <tr style="border-top:2px solid #2d3748">
           <td><strong>Total</strong></td>
           <td><strong>77%</strong></td>
-          <td><span class="score-pill score-exceptional">Wtd 9.3</span></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><span class="pill pill-exceptional">Wtd 9.3</span></td>
+          <td></td><td></td><td></td>
           <td><strong>7.15</strong></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Conviction vs Allocation scatter -->
-  <div class="card full-width">
+  <!-- Conviction vs Allocation -->
+  <div class="card full-width" style="margin-bottom:16px">
     <div class="card-title">Conviction vs. Allocation (All Positions)</div>
-    <div style="max-width: 600px; margin: 0 auto;">
-      <canvas id="chartScatter"></canvas>
-    </div>
+    <div style="max-width:550px;margin:0 auto"><canvas id="chartScatter"></canvas></div>
   </div>
 
   <!-- Exposure Analysis -->
@@ -170,165 +433,696 @@
     <div class="card-title">Exposure Analysis &mdash; What the Portfolio Depends On</div>
     <div class="exposure-grid">
       <div class="exposure-item exposure-geo">
-        <div class="exposure-label exposure-label-geo">Geopolitical (CF + GTT = 37%)</div>
-        <div class="exposure-text">
-          Hormuz Day 22. S3 55%. Trump rules out ceasefire. Iran proposing transit tolls. Ras Laffan 17% destroyed (3-5yr repair) = structural beyond ceasefire. QatarEnergy second FM on 3-5yr contracts. GTT Hormuz premium only ~3-4% of YTD &mdash; structural thesis.
-        </div>
+        <div class="exposure-label" style="color:#f87171">Geopolitical (CF + GTT = 37%)</div>
+        <div class="exposure-text">Hormuz Day 22. S3 55%. Trump rules out ceasefire. Iran proposing transit tolls. Ras Laffan 17% destroyed (3-5yr repair) = structural beyond ceasefire. QatarEnergy second FM on 3-5yr contracts. GTT Hormuz premium only ~3-4% of YTD &mdash; structural thesis.</div>
       </div>
       <div class="exposure-item exposure-micro">
-        <div class="exposure-label exposure-label-micro">Micro-Execution (77% of portfolio)</div>
-        <div class="exposure-text">
-          VOW (40%): D1=6/5, D2=6/5. Q1 May 20 &mdash; 24% new-contract margin to confirm. CF (17%): D1=5/5, S3 pricing confirmed. Tampa NH3 imminent. USDA Mar 31. DOJ probe. GTT (20%): D7=5/5. Q1 activity Apr 22. 9 LNGCs ordered Q1.
-        </div>
+        <div class="exposure-label" style="color:#4ade80">Micro-Execution (77% of portfolio)</div>
+        <div class="exposure-text">VOW (40%): D1=6/5, D2=6/5. Q1 May 20 &mdash; 24% new-contract margin to confirm. CF (17%): D1=5/5, S3 pricing confirmed. Tampa NH3 imminent. USDA Mar 31. DOJ probe. GTT (20%): D7=5/5. Q1 activity Apr 22. 9 LNGCs ordered Q1.</div>
       </div>
       <div class="exposure-item exposure-macro">
-        <div class="exposure-label exposure-label-macro">Macro</div>
-        <div class="exposure-text">
-          Fed 3.5-3.75%; PCE &uarr;2.7%; 1 cut in 2026. 10Y 4.27% (+25bps). Inflation re-acceleration risk (oil $100+). WTI ~$98, Brent peaked $126. No recession signal. India Kharif Apr-Jun.
-        </div>
+        <div class="exposure-label" style="color:#60a5fa">Macro</div>
+        <div class="exposure-text">Fed 3.5-3.75%; PCE 2.7%; 1 cut in 2026. 10Y 4.27% (+25bps). Inflation re-acceleration risk (oil $100+). WTI ~$98, Brent peaked $126. No recession signal. India Kharif Apr-Jun.</div>
       </div>
       <div class="exposure-item exposure-struct">
-        <div class="exposure-label exposure-label-struct">Market Structure</div>
-        <div class="exposure-text">
-          VOW: zero coverage, ~NOK 2.60, D2=6/5 (single division &gt;2x group EV). CF: #1 S&amp;P performer (+59% YTD), consensus not reflecting S3. GTT: consensus revenue gap (Apr 22 event). MEOH: 7 analysts, consensus frozen pre-Hormuz, PT below price.
-        </div>
+        <div class="exposure-label" style="color:#a78bfa">Market Structure</div>
+        <div class="exposure-text">VOW: zero coverage, ~NOK 2.60, D2=6/5 (single division &gt;2x group EV). CF: #1 S&amp;P performer (+59% YTD), consensus not reflecting S3. GTT: consensus revenue gap (Apr 22 event). MEOH: 7 analysts, consensus frozen pre-Hormuz.</div>
       </div>
     </div>
   </div>
-
-  <!-- Key Metrics -->
-  <div class="card full-width">
-    <div class="card-title">Portfolio Summary Metrics</div>
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
-      <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:700; color:#4ade80;">77%</div>
-        <div style="font-size:11px; color:#888; margin-top:4px;">Deployed</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:700; color:#60a5fa;">23%</div>
-        <div style="font-size:11px; color:#888; margin-top:4px;">Cash</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:700; color:#fff;">3/12</div>
-        <div style="font-size:11px; color:#888; margin-top:4px;">Slots Used</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:700; color:#22ff22;">9.3</div>
-        <div style="font-size:11px; color:#888; margin-top:4px;">Wtd Conviction</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:700; color:#22d3ee;">7.15</div>
-        <div style="font-size:11px; color:#888; margin-top:4px;">Total CWA</div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
+<!-- ==================== TAB 2: RESEARCH HEALTH ==================== -->
+<div class="tab-content" id="tab-health">
+
+  <!-- RC Gauges -->
+  <div class="card full-width" style="margin-bottom:16px">
+    <div class="card-title">Research Confidence (0-5 Scale)</div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">VOW</div><div class="rc-meta">INV 40%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:100%;background:#16a34a"><span class="rc-fill-label">5/5</span></div></div>
+      <div class="rc-score" style="color:#4ade80">5/5</div>
+    </div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">CF</div><div class="rc-meta">INV 17%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:80%;background:#16a34a"><span class="rc-fill-label">4/5</span></div></div>
+      <div class="rc-score" style="color:#4ade80">4/5</div>
+    </div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">GTT</div><div class="rc-meta">INV 20%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:100%;background:#16a34a"><span class="rc-fill-label">5/5</span></div></div>
+      <div class="rc-score" style="color:#4ade80">5/5</div>
+    </div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">MEOH</div><div class="rc-meta">ACT 0%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:100%;background:#16a34a"><span class="rc-fill-label">5/5</span></div></div>
+      <div class="rc-score" style="color:#4ade80">5/5</div>
+    </div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">LCUT</div><div class="rc-meta">MON 0%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:40%;background:#dc2626"><span class="rc-fill-label">2/5</span></div></div>
+      <div class="rc-score" style="color:#f87171">2/5</div>
+    </div>
+    <div class="rc-row">
+      <div class="rc-ticker"><div class="rc-name">KIST</div><div class="rc-meta">MON 0%</div></div>
+      <div class="rc-track"><div class="rc-fill" style="width:0%;background:#dc2626"></div></div>
+      <div class="rc-score" style="color:#f87171">0/5</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- QUESTIONS Status -->
+    <div class="card">
+      <div class="card-title">QUESTIONS Status</div>
+      <div class="chart-container" style="max-width:100%"><canvas id="chartQuestions"></canvas></div>
+    </div>
+    <!-- DEBATES -->
+    <div class="card">
+      <div class="card-title">DEBATES Vector Resolution</div>
+      <div class="chart-container"><canvas id="chartDebates"></canvas></div>
+    </div>
+    <!-- CHANGELOG -->
+    <div class="card">
+      <div class="card-title">CHANGELOG Propagation (Last 30 Days)</div>
+      <div class="cl-metrics">
+        <div class="cl-box"><div class="cl-num" style="color:#e2e8f0">33</div><div class="cl-label">Total Entries</div></div>
+        <div class="cl-box"><div class="cl-num" style="color:#4ade80">33</div><div class="cl-label">Propagated</div></div>
+        <div class="cl-box"><div class="cl-num" style="color:#4ade80">0</div><div class="cl-label">Unpropagated</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Staleness -->
+  <div class="card full-width">
+    <div class="card-title">Staleness Tracker &mdash; Days Since Last NOTES.md Entry</div>
+    <table>
+      <thead><tr><th>Ticker</th><th>Type</th><th>Days Since Update</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ticker-link" onclick="openProfile('CF')">CF</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
+        <tr><td><span class="ticker-link" onclick="openProfile('GTT')">GTT</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
+        <tr><td><span class="ticker-link" onclick="openProfile('VOW')">VOW</span></td><td><span class="tag tag-investment">INVESTMENT</span></td><td>2 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
+        <tr><td>MEOH</td><td><span class="tag tag-active">ACTIVE</span></td><td>0 days</td><td class="st-green" style="font-weight:600">Fresh</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== TAB 3: THEMES ==================== -->
+<div class="tab-content" id="tab-themes">
+
+  <!-- Active Themes -->
+  <div class="theme-card">
+    <div class="theme-header">
+      <div>
+        <div class="theme-name">Sentiments-Valuation Mismatch</div>
+        <span class="status-badge status-strengthening">STRENGTHENING</span>
+      </div>
+      <div class="theme-priority" style="color:#4ade80">25<span style="font-size:12px;color:#64748b;font-weight:400;opacity:.7">/25</span></div>
+    </div>
+    <div class="theme-meta">
+      <span>Impact: <strong>5/5</strong></span>
+      <span>Discovery: <strong>5/5</strong></span>
+      <span>Deployed: <strong>40%</strong></span>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;line-height:1.5">
+      <strong>Thesis:</strong> VOW SOTP implies +212% upside (NOK 7.54 vs 2.42) with imminent hard catalyst (Q1 results May 20, Q2 Aug 2026). D1=6/5, D2=6/5 (first scores exceeding scale).<br>
+      <strong>Scenarios:</strong> Deep Bear 10% (NOK 1.12) &middot; Base 35% (NOK 5.76) &middot; Bull 40% (NOK 9.01) &middot; Super Bull 15% (NOK 12.06)<br>
+      <strong>Archive Trigger:</strong> VOW re-rates to NOK 4-6 OR covenant breach invalidates thesis
+    </div>
+    <div class="theme-tickers">
+      <div class="theme-ticker-chip" onclick="openProfile('VOW')"><span class="pill pill-exceptional" style="font-size:10px;padding:1px 6px">10</span> VOW &middot; INV 40%</div>
+    </div>
+  </div>
+
+  <div class="theme-card">
+    <div class="theme-header">
+      <div>
+        <div class="theme-name">Hormuz Disruption</div>
+        <span class="status-badge status-strengthening">STRENGTHENING</span>
+      </div>
+      <div class="theme-priority" style="color:#4ade80">25<span style="font-size:12px;color:#64748b;font-weight:400;opacity:.7">/25</span></div>
+    </div>
+    <div class="theme-meta">
+      <span>Impact: <strong>5/5</strong></span>
+      <span>Discovery: <strong>5/5</strong></span>
+      <span>Deployed: <strong>37%</strong></span>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;line-height:1.5">
+      <strong>Thesis:</strong> Hormuz closure (Feb 28) disrupts 33% seaborne fertilizer + 44% global sulphur. No strategic reserves. S3 base case (3-month, $800-1000/t urea) at 55%. Ras Laffan 17% destroyed = structural.<br>
+      <strong>Tickers:</strong> CF (INV 17%), GTT (INV 20%), MEOH (ACT, not held), KIST (MON) + 7 PASSED<br>
+      <strong>Archive Trigger:</strong> Ceasefire + confirmed Hormuz reopening + mine clearance timeline
+    </div>
+    <div class="theme-signal">
+      <strong>Latest Signal (Mar 21):</strong> Day 22. Iran partial transits; India 22 vessels; ME exports -61%. Israel struck South Pars + killed Intel Minister. US bunker busters deployed. Brent $126 peak. NATO refused coalition. S3 intact.
+    </div>
+    <div class="theme-tickers">
+      <div class="theme-ticker-chip" onclick="openProfile('CF')"><span class="pill pill-high" style="font-size:10px;padding:1px 6px">8.5</span> CF &middot; INV 17%</div>
+      <div class="theme-ticker-chip" onclick="openProfile('GTT')"><span class="pill pill-high" style="font-size:10px;padding:1px 6px">8.5</span> GTT &middot; INV 20%</div>
+      <div class="theme-ticker-chip"><span class="pill pill-mid" style="font-size:10px;padding:1px 6px">7.5</span> MEOH &middot; ACT</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> KIST</div>
+    </div>
+  </div>
+
+  <div class="theme-card" style="opacity:.8">
+    <div class="theme-header">
+      <div>
+        <div class="theme-name">Tariffs Refund Beneficiaries</div>
+        <span class="status-badge status-stable">STABLE</span>
+      </div>
+      <div class="theme-priority" style="color:#fbbf24">12<span style="font-size:12px;color:#64748b;font-weight:400;opacity:.7">/25</span></div>
+    </div>
+    <div class="theme-meta">
+      <span>Impact: <strong>4/5</strong></span>
+      <span>Discovery: <strong>3/5</strong></span>
+      <span>Deployed: <strong>0%</strong></span>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;line-height:1.5">
+      <strong>Thesis:</strong> SCOTUS invalidated IEEPA tariffs; $166B refund pool. CIT ordered nationwide refunds. CBP automated process ~Apr 23. Sub-$200M importers with &gt;10% refund/mcap.<br>
+      <strong>Archive Trigger:</strong> Government appeal; CBP delays; sector insolvency
+    </div>
+    <div class="theme-tickers">
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> LCUT</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> GPRO</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> HOFT</div>
+    </div>
+  </div>
+
+  <div class="theme-card" style="opacity:.7">
+    <div class="theme-header">
+      <div>
+        <div class="theme-name">AI Disruption Opportunity</div>
+        <span class="status-badge status-stable">STABLE</span>
+      </div>
+      <div class="theme-priority" style="color:#fbbf24">12<span style="font-size:12px;color:#64748b;font-weight:400;opacity:.7">/25</span></div>
+    </div>
+    <div class="theme-meta">
+      <span>Impact: <strong>4/5</strong></span>
+      <span>Discovery: <strong>3/5</strong></span>
+      <span>Deployed: <strong>0%</strong></span>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;line-height:1.5">
+      <strong>Thesis:</strong> AI reinforces moats in VMS/proprietary-data platforms. Market conflates AI exposure with AI risk.<br>
+      <strong>Archive Trigger:</strong> Apple/Google policy changes; Meta competitive response
+    </div>
+    <div class="theme-tickers">
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> TOI</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> APP</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> SPSC</div>
+      <div class="theme-ticker-chip"><span class="pill pill-blue" style="font-size:10px;padding:1px 6px">MON</span> SGE</div>
+    </div>
+  </div>
+
+  <div class="theme-card" style="opacity:.5">
+    <div class="theme-header">
+      <div>
+        <div class="theme-name">Hidden Value SOTP</div>
+        <span class="status-badge status-fading">ARCHIVED</span>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;line-height:1.5">
+      Both tickers (SLB, HON) moved to PASSED. No active/monitoring remaining. HON revisit trigger: Investor Day June 3.
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TAB 4: PIPELINE ==================== -->
+<div class="tab-content" id="tab-pipeline">
+
+  <div class="card-title" style="margin-bottom:12px">Monitoring Tickers &mdash; Promotion Readiness</div>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div>
+        <div class="pipeline-ticker">KIST &mdash; Kistos Holdings</div>
+        <div class="pipeline-company">Hormuz Disruption &middot; Oil/Gas E&amp;P</div>
+      </div>
+      <span class="pill pill-blue">MON</span>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;margin-bottom:8px">
+      <span>Conviction: <strong>unscored</strong></span>
+      <span>RC: <strong>0/5</strong></span>
+    </div>
+    <ul class="blocker-list">
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> Post-tax FCF unknown after UK EPL (75%) / Norwegian tax (78%)</li>
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> Q10-A depletion rate unknown</li>
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> AIM liquidity risk; Oman close timing unclear</li>
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> No filings or transcripts reviewed</li>
+    </ul>
+    <div class="next-action">Next: Await Q1 2026 production data; model post-tax FCF; upload and review filings</div>
+  </div>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div>
+        <div class="pipeline-ticker">LCUT &mdash; Lifetime Brands</div>
+        <div class="pipeline-company">Tariffs Refund &middot; China 80%+ import exposure</div>
+      </div>
+      <span class="pill pill-blue">MON</span>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;margin-bottom:8px">
+      <span>Conviction: <strong>unscored</strong></span>
+      <span>RC: <strong>2/5</strong></span>
+    </div>
+    <div class="rc-track" style="height:16px;margin-bottom:8px">
+      <div class="rc-fill" style="width:40%;background:#dc2626"><span class="rc-fill-label" style="font-size:10px">2/5</span></div>
+    </div>
+    <ul class="blocker-list">
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> RC 2/5 &mdash; critical questions unresolved</li>
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> No management acknowledgment of refund; 1592 investigation may delay CBP auto-refund</li>
+      <li><span class="blocker-icon" style="color:#4ade80">&#10003;</span> Refund/MCap: ~100% ($48M vs $75M MCap)</li>
+      <li><span class="blocker-icon" style="color:#fbbf24">&#8226;</span> KitchenAid license expiry Dec 2026 (35-40% revenue risk)</li>
+    </ul>
+    <div class="next-action">Next: CBP ACE go-live (~Apr 23); monitor Q1 earnings refund disclosure; KitchenAid license status</div>
+  </div>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div>
+        <div class="pipeline-ticker">GPRO &mdash; GoPro</div>
+        <div class="pipeline-company">Tariffs Refund &middot; Shenzhen manufacturing</div>
+      </div>
+      <span class="pill pill-blue">MON</span>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;margin-bottom:8px">
+      <span>Conviction: <strong>unscored</strong></span>
+      <span>RC: <strong>0/5</strong></span>
+    </div>
+    <ul class="blocker-list">
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> Revenue -19% YoY; stock $0.68; fundamental deterioration</li>
+      <li><span class="blocker-icon" style="color:#4ade80">&#10003;</span> CIT suit provides strongest IOR; auto-refund via CBP</li>
+    </ul>
+    <div class="next-action">Next: Monitor CBP auto-refund; Q1 earnings; assess fundamental vs refund catalyst</div>
+  </div>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div>
+        <div class="pipeline-ticker">TOI &mdash; Topicus.com</div>
+        <div class="pipeline-company">AI Disruption &middot; VMS Roll-up</div>
+      </div>
+      <span class="pill pill-blue">MON</span>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;margin-bottom:8px">
+      <span>Conviction: <strong>unscored</strong></span>
+      <span>RC: <strong>0/5</strong></span>
+    </div>
+    <ul class="blocker-list">
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> No filings or transcripts reviewed</li>
+      <li><span class="blocker-icon" style="color:#fbbf24">&#8226;</span> AI moat reinforcement thesis untested</li>
+    </ul>
+    <div class="next-action">Next: Upload FY2025 annual report + transcripts; filing-review then bulk-transcript-review</div>
+  </div>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div>
+        <div class="pipeline-ticker">APP &mdash; AppLovin</div>
+        <div class="pipeline-company">AI Disruption &middot; AI-driven DSP+SSP</div>
+      </div>
+      <span class="pill pill-blue">MON</span>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;margin-bottom:8px">
+      <span>Conviction: <strong>unscored</strong></span>
+      <span>RC: <strong>0/5</strong></span>
+    </div>
+    <ul class="blocker-list">
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> RC 0/5 &mdash; no audited filing reviewed</li>
+      <li><span class="blocker-icon" style="color:#f87171">&#10007;</span> Meta competitive threat unresolved</li>
+    </ul>
+    <div class="next-action">Next: Upload 10-K + recent transcripts; assess Meta re-entry risk vs. valuation</div>
+  </div>
+</div>
+
+<!-- ==================== TICKER PROFILE OVERLAY ==================== -->
+<div class="profile-overlay" id="profileOverlay" onclick="if(event.target===this)closeProfile()">
+  <div class="profile-panel" id="profilePanel">
+    <button class="profile-close" onclick="closeProfile()">&times;</button>
+    <div id="profileContent"><!-- Rendered by JS --></div>
+  </div>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
 <script>
-const chartColors = {
-  vow: '#4ade80',
-  cf: '#34d399',
-  gtt: '#22d3ee',
-  cash: '#334155',
-  investment: '#4ade80',
-  hormuz: '#f87171',
-  sentiment: '#a78bfa'
-};
-
-const doughnutOpts = {
-  responsive: true,
-  plugins: {
-    legend: { position: 'bottom', labels: { color: '#aaa', font: { size: 11 }, padding: 12, usePointStyle: true, pointStyle: 'circle' } }
-  },
-  cutout: '55%'
-};
-
-// By Position
-new Chart(document.getElementById('chartPosition'), {
-  type: 'doughnut',
-  data: {
-    labels: ['VOW (40%)', 'GTT (20%)', 'CF (17%)', 'Cash (23%)'],
-    datasets: [{ data: [40, 20, 17, 23], backgroundColor: [chartColors.vow, chartColors.gtt, chartColors.cf, chartColors.cash], borderWidth: 0 }]
-  },
-  options: doughnutOpts
-});
-
-// By Type
-new Chart(document.getElementById('chartType'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Investment (77%)', 'Cash (23%)'],
-    datasets: [{ data: [77, 23], backgroundColor: [chartColors.investment, chartColors.cash], borderWidth: 0 }]
-  },
-  options: doughnutOpts
-});
-
-// By Theme
-new Chart(document.getElementById('chartTheme'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Sentiments-Val (40%)', 'Hormuz (37%)', 'Cash (23%)'],
-    datasets: [{ data: [40, 37, 23], backgroundColor: [chartColors.sentiment, chartColors.hormuz, chartColors.cash], borderWidth: 0 }]
-  },
-  options: doughnutOpts
-});
-
-// Conviction vs Allocation scatter
-new Chart(document.getElementById('chartScatter'), {
-  type: 'bubble',
-  data: {
-    datasets: [
-      {
-        label: 'VOW',
-        data: [{ x: 10, y: 40, r: 18 }],
-        backgroundColor: 'rgba(34, 255, 34, 0.6)',
-        borderColor: '#22ff22',
-        borderWidth: 2
-      },
-      {
-        label: 'GTT',
-        data: [{ x: 8.5, y: 20, r: 13 }],
-        backgroundColor: 'rgba(34, 211, 238, 0.6)',
-        borderColor: '#22d3ee',
-        borderWidth: 2
-      },
-      {
-        label: 'CF',
-        data: [{ x: 8.5, y: 17, r: 12 }],
-        backgroundColor: 'rgba(52, 211, 153, 0.6)',
-        borderColor: '#34d399',
-        borderWidth: 2
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      x: {
-        title: { display: true, text: 'Conviction Score', color: '#888' },
-        min: 4, max: 11,
-        ticks: { color: '#888' },
-        grid: { color: '#1f2230' }
-      },
-      y: {
-        title: { display: true, text: 'Allocation %', color: '#888' },
-        min: 0, max: 50,
-        ticks: { color: '#888', callback: v => v + '%' },
-        grid: { color: '#1f2230' }
-      }
+// === VAULT DATA ===
+const D = {
+  tickers: {
+    VOW: {
+      company:"Vow ASA",theme:"Sentiments-Valuation Mismatch",status:"ACTIVE",portfolioType:"INVESTMENT",
+      allocation:40,conviction:10,clusterA:107,clusterB:80,rc:5,rcMax:5,
+      price:"NOK ~2.60",marketCap:"NOK ~750M",exchange:"Oslo Bors",
+      dimensions:[
+        {id:"D1",name:"Fundamentals Trajectory",score:6,rationale:"24% new-contract margin confirmed via Q4 slide analysis; 2.7x improvement vs old contracts"},
+        {id:"D2",name:"Valuation Mismatch",score:6,rationale:"Maritime division alone (NOK 1,528M) exceeds entire group EV (~700M) by 2x+"},
+        {id:"D3",name:"Mispricing Reason",score:4,rationale:"Micro-cap screen-out, zero coverage, governance history, shareholder fatigue"},
+        {id:"D4",name:"Downside Protection",score:3,rationale:"Balance sheet fragility; Q3 2026 covenant at 3.5x needs ~NOK 103M rolling EBITDA"},
+        {id:"D5",name:"Thesis Simplicity",score:5,rationale:"One condition: signed backlog converts at contracted margins — already happening"},
+        {id:"D6",name:"Upside Optionality",score:4,rationale:"Industrial divestiture, Aftersales compounding, new wins, coverage initiation"},
+        {id:"D7",name:"Evidence Quality",score:5,rationale:"Audited filings, 17 transcripts, observed Q4 2025 margin; RC 5/5"},
+        {id:"D8",name:"Catalyst Clarity",score:4,rationale:"Q1-Q2 2026 earnings are self-revealing; blend margin shows new-contract economics"}
+      ],
+      scenarios:[
+        {name:"Deep Bear",probability:10,target:"NOK 1.12",upside:"-54%"},
+        {name:"Base",probability:35,target:"NOK 5.76",upside:"+138%"},
+        {name:"Bull",probability:40,target:"NOK 9.01",upside:"+272%"},
+        {name:"Super Bull",probability:15,target:"NOK 12.06",upside:"+398%"}
+      ],
+      probWeightedTarget:"NOK 7.54 (+212%)",
+      catalysts:[
+        {date:"May 20, 2026",event:"Q1 2026 results — first read on new-contract-dominant margins (~68% mix)"},
+        {date:"Aug 2026",event:"Q2 results — margin normalization test; new covenant 6.75x"},
+        {date:"Sep 30, 2026",event:"EUR 27M contract cancellation expiry — backlog de-risking"},
+        {date:"Q3 2026",event:"Covenant test 3.5x NIBD/EBITDA — THE critical gating event"}
+      ],
+      questions:{critical:[
+        {text:"Q1 2026 normalized Maritime EBITDA — 68% new mix should yield 15-17% blended margin",resolved:false},
+        {text:"FY2025 audited impairment test — full test in annual report (Apr-May 2026)",resolved:false},
+        {text:"Installed base size discrepancy: 200 (Q4 call) vs 250+ (intel brief)",resolved:false},
+        {text:"EUR 27M contract cancellation risk — vessels 3-4 cancellable until Sep 30, 2026",resolved:false}
+      ],bullCase:[
+        {text:"Mid-life retrofit TAM: ~40-60 vessels in 12-15 year window",resolved:false},
+        {text:"Heat Treatment margins sustainability — Q4 ~33% vs peer 10-15%",resolved:false}
+      ],resolvedCount:16},
+      debates:[
+        {vector:"Maritime Margin Normalization",status:"OPEN",detail:"Assumes 13-15% new-contract. If actually 13% (no improvement), thesis breaks."},
+        {vector:"Balance Sheet Fragility",status:"OPEN",detail:"Equity 21.3%, NIBD 362M; 5 covenant breaches (all waived); untested Q2 covenant."},
+        {vector:"'Prove It' Discount Warranted",status:"CONCEDED",detail:"Superseded by D1=6/5, D2=6/5 rescore. Market at ~10x normalized EBITDA but margin slide analysis proves otherwise."},
+        {vector:"Cruise Cyclicality",status:"OPEN",detail:"78-ship backlog durable? Post-9/11, 2008, COVID all saw contractions."}
+      ],
+      financials:{revenue:"NOK 1,034M (FY2025)",backlog:"NOK 1,587M + NOK 400M options",debtMaturity:"DNB Q3 2027",equityRatio:"21.3%",
+        segments:[{name:"Maritime",pct:"52%",margin:"6.3%"},{name:"Aftersales",pct:"23%",margin:"17.8%"},{name:"Industrial",pct:"25%",margin:"-39%"}]},
+      recentNotes:[
+        {date:"Mar 21",source:"Conviction Rescore",summary:"D1→6/5, D2→6/5 (first scores exceeding scale). Conviction 9→10/10. Cluster A 93%→107%."},
+        {date:"Mar 19",source:"VP Sales Insider Buy",summary:"VP Sales bought 105K shares @ NOK 2.58 — commercial-side conviction signal"},
+        {date:"Mar 15",source:"SOTP v2 Revaluation",summary:"Prob-weighted NOK 7.54 (+212%); 8 questions resolved; RC upgraded to 4/5→5/5"}
+      ]
     },
-    plugins: {
-      legend: { position: 'bottom', labels: { color: '#aaa', font: { size: 11 }, usePointStyle: true } },
-      tooltip: {
-        callbacks: {
-          label: ctx => `${ctx.dataset.label}: ${ctx.raw.y}% at ${ctx.raw.x}/10 conviction`
-        }
-      }
+    CF: {
+      company:"CF Industries Holdings",theme:"Hormuz Disruption",status:"ACTIVE",portfolioType:"INVESTMENT",
+      allocation:17,conviction:8.5,clusterA:87,clusterB:84,rc:4,rcMax:5,
+      price:"~$130",marketCap:"~$22B",exchange:"NYSE",
+      dimensions:[
+        {id:"D1",name:"Fundamentals Trajectory",score:5,rationale:"S3 pricing confirmed. #1 US nitrogen producer; 97% utilization; $450/t cost moat vs Europe"},
+        {id:"D2",name:"Valuation Mismatch",score:4,rationale:"NOLA physical $673-675/st ($742-745/t) sustained above $700/t trigger"},
+        {id:"D3",name:"Mispricing Reason",score:4,rationale:"Consensus not pricing S3; sell-side median PT $95.50; #1 S&P performer but thesis intact"},
+        {id:"D4",name:"Downside Protection",score:3,rationale:"Gas de-risked <5% impact; no maturities until 2034; $1.7B remaining buyback"},
+        {id:"D5",name:"Thesis Simplicity",score:5,rationale:"Hormuz stays closed → urea goes up → CF prints money"},
+        {id:"D6",name:"Upside Optionality",score:4,rationale:"S4, India emergency procurement, UAN/ammonia margin expansion"},
+        {id:"D7",name:"Evidence Quality",score:4,rationale:"NOLA physical pricing; audited cost structure; CapIQ consensus; ME spreads"},
+        {id:"D8",name:"Catalyst Clarity",score:5,rationale:"Tampa NH3 imminent; USDA Mar 31; Q1 earnings May 6; India Kharif Apr-Jun"}
+      ],
+      scenarios:[
+        {name:"S1 (2wk)",probability:5,target:"$530/t",upside:"EPS $10.3"},
+        {name:"S2 (4wk)",probability:15,target:"$610/t",upside:"EPS $13.0"},
+        {name:"S3 (3mo)",probability:55,target:"$850/t",upside:"EPS $26.3"},
+        {name:"S4 (6mo)",probability:25,target:"$1,000/t",upside:"EPS $46.7"}
+      ],
+      probWeightedTarget:"EPS ~$26.9 → P/E ~4.8x at current price",
+      catalysts:[
+        {date:"Late Mar/Apr",event:"Tampa NH3 settlement — first war-conditions ammonia benchmark"},
+        {date:"Mar 31",event:"USDA Prospective Plantings — corn vs soybean acreage"},
+        {date:"May 6",event:"CF Q1 2026 earnings — first Hormuz-impacted quarter"},
+        {date:"Ongoing",event:"DOJ antitrust probe — monitor Q1 10-Q legal disclosures"}
+      ],
+      questions:{critical:[
+        {text:"Tampa ammonia settlement level and market implications",resolved:false},
+        {text:"USDA corn acreage — demand destruction signal",resolved:false},
+        {text:"DOJ antitrust probe — grand jury vs civil outcome",resolved:false},
+        {text:"India Kharif timing — expected Apr-Jun 2026",resolved:false},
+        {text:"China export surge — could China lift quotas above 4-6M tons?",resolved:false}
+      ],bullCase:[
+        {text:"Post-reopening glut risk — how fast does urea revert?",resolved:false}
+      ],resolvedCount:26},
+      debates:[
+        {vector:"Urea Price Mean-Reversion",status:"COUNTERED",detail:"Historical spikes required exogenous catalysts. Current has neither; duration thesis strengthened."},
+        {vector:"US Natural Gas Cost Moat",status:"COUNTERED",detail:"Moat WIDENED; HH $3/MMBtu vs TTF $16.7; $13+/MMBtu advantage."},
+        {vector:"Demand Destruction",status:"PARTIALLY COUNTERED",detail:"Probability 15-20% but price effect dominates volume loss."},
+        {vector:"Consensus Pricing",status:"COUNTERED",detail:"NOT consensus trade; analysts Neutral/Underperform."}
+      ],
+      financials:{revenue:"$7,084M (FY2025)",grossMargin:"38.5%",eps:"$8.97 (FY2025)",gasPrice:"$3.31/MMBtu",debtMaturity:"No material until 2034",
+        segments:[{name:"Ammonia",pct:"30.7%",margin:""},{name:"Granular Urea",pct:"25.1%",margin:""},{name:"UAN",pct:"30.5%",margin:""},{name:"AN",pct:"5.9%",margin:""}]},
+      recentNotes:[
+        {date:"Mar 21",source:"D1 Rescore + DOJ Probe",summary:"D1 upgraded 4→5 on S3 pricing confirmation. DOJ antitrust probe flagged."},
+        {date:"Mar 20",source:"Orica Settlement",summary:"$169.5M settlement; AN supply agreement termination; net positive"},
+        {date:"Mar 19",source:"Day 20 NOLA Checkpoint",summary:"Physical $673-675/st sustained above $636/st trigger; D2 rescored 3→4"}
+      ]
+    },
+    GTT: {
+      company:"Gaztransport & Technigaz",theme:"Hormuz Disruption",status:"ACTIVE",portfolioType:"INVESTMENT",
+      allocation:20,conviction:8.5,clusterA:87,clusterB:72,rc:5,rcMax:5,
+      price:"~\u20ac210",marketCap:"~\u20ac7.8B",exchange:"Euronext Paris",
+      dimensions:[
+        {id:"D1",name:"Fundamentals Trajectory",score:5,rationale:"Ras Laffan structural catalyst; 9 LNGCs ordered Q1; 3-5yr supply deficit"},
+        {id:"D2",name:"Valuation Mismatch",score:3,rationale:"Premium multiple but structural catalyst not yet priced"},
+        {id:"D3",name:"Mispricing Reason",score:4,rationale:"Market prices cyclical trough; Ras Laffan structural impact unmodeled"},
+        {id:"D4",name:"Downside Protection",score:3,rationale:"\u20ac8.94 dividend floor; 4.5% yield supports"},
+        {id:"D5",name:"Thesis Simplicity",score:3,rationale:"Structural LNG supply deficit + monopoly position"},
+        {id:"D6",name:"Upside Optionality",score:4,rationale:"FID >90%, ULEC, LNG fuel, dual chokepoint, naval coalition"},
+        {id:"D7",name:"Evidence Quality",score:5,rationale:"25 transcripts; filings comprehensive; 4 consecutive beats; RC 5/5"},
+        {id:"D8",name:"Catalyst Clarity",score:4,rationale:"Q1 Apr 22; FID pipeline May-Jun; Ras Laffan rebuild timeline"}
+      ],
+      scenarios:[
+        {name:"Bear (15%)",probability:15,target:"\u20ac170-185",upside:"-12 to -19%"},
+        {name:"Base (50%)",probability:50,target:"\u20ac210-240",upside:"0 to +14%"},
+        {name:"Bull (35%)",probability:35,target:"\u20ac260-300",upside:"+24 to +43%"}
+      ],
+      probWeightedTarget:"\u20ac230-260 range (structural upside)",
+      catalysts:[
+        {date:"Apr 22",event:"GTT Q1 earnings — FY2026 trough baseline; consensus \u20ac844M above \u20ac740-780M guidance"},
+        {date:"May-Jun",event:"FID pipeline updates from LNG project developers"},
+        {date:"H2 2026",event:"Ras Laffan rebuild timeline confirmation — 3-5yr structural catalyst"}
+      ],
+      questions:{critical:[
+        {text:"Samsung KC-2C 174K commercial order timing",resolved:false},
+        {text:"Hormuz premium reclassification — how much of YTD is structural vs event?",resolved:false},
+        {text:"FY2026 revenue trough — market reaction risk if guidance confirmed",resolved:false}
+      ],bullCase:[
+        {text:"ENGIE ownership % — likely exited; overhang cleared",resolved:false}
+      ],resolvedCount:25},
+      debates:[
+        {vector:"Chinese Membrane Tech",status:"PARTIALLY COUNTERED",detail:"5-10 year risk; manageable at current probability."},
+        {vector:"FID Pipeline Conversion",status:"PARTIALLY COUNTERED",detail:"Ras Laffan structural catalyst partially bypasses FID uncertainty."},
+        {vector:"Hormuz Amplification",status:"PARTIALLY COUNTERED",detail:"Reclassified: GTT premium only 3-4% of YTD; structural thesis dominates."}
+      ],
+      financials:{revenue:"\u20ac803M (FY2025)",ebitdaMargin:"67%",orderBook:"342 core + 56 LNG fuel units",dividend:"\u20ac8.94/share (4.5% yield)",
+        segments:[{name:"LNG Carriers",pct:"83%",margin:""},{name:"LNG as Fuel",pct:"7%",margin:""},{name:"Services",pct:"7%",margin:""},{name:"Electrolysers",pct:"2%",margin:""}]},
+      recentNotes:[
+        {date:"Mar 20",source:"Upgrade to INVESTMENT",summary:"TRADE→INVESTMENT. D1 4→5, D2 2→3, D3 3→4 on Ras Laffan structural catalyst. Conviction 7→8.5/10."},
+        {date:"Mar 20",source:"Ras Laffan Analysis",summary:"17% capacity destroyed; 3-5yr repair; QatarEnergy on 3-5yr contracts; structural beyond ceasefire"},
+        {date:"Mar 19",source:"9 LNGCs Ordered Q1",summary:"Q1 order acceleration signal validates thesis ahead of Apr 22 earnings"}
+      ]
     }
   }
-});
-</script>
+};
 
+// === TAB SWITCHING ===
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.bottom-nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  const tabNames = ['portfolio','health','themes','pipeline'];
+  const idx = tabNames.indexOf(tabId);
+  document.querySelectorAll('.tab-btn')[idx]?.classList.add('active');
+  document.querySelectorAll('.bottom-nav-btn')[idx]?.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// === COLLAPSIBLE ===
+function toggleCollapsible(el) {
+  const content = el.nextElementSibling;
+  const chevron = el.querySelector('.chevron');
+  content.classList.toggle('open');
+  chevron.classList.toggle('open');
+}
+
+// === TICKER PROFILE ===
+function openProfile(ticker) {
+  const t = D.tickers[ticker];
+  if (!t) return;
+  let html = '';
+  html += `<div class="profile-header">
+    <div class="profile-ticker-name">${ticker}</div>
+    <div class="profile-company">${t.company} &middot; ${t.exchange}</div>
+    <div class="profile-badges">
+      ${t.portfolioType ? `<span class="tag tag-${t.portfolioType.toLowerCase()}">${t.portfolioType}</span>` : ''}
+      <span class="tag tag-${t.status.toLowerCase()}">${t.status}</span>
+      ${t.conviction ? `<span class="pill ${t.conviction >= 10 ? 'pill-exceptional' : t.conviction >= 8 ? 'pill-high' : t.conviction >= 6 ? 'pill-mid' : 'pill-low'}">${t.conviction}/10</span>` : ''}
+      ${t.allocation ? `<span style="font-size:13px;color:#8b9bb4">${t.allocation}% allocation</span>` : ''}
+      <span style="font-size:13px;color:${t.rc >= 4 ? '#4ade80' : t.rc >= 3 ? '#fbbf24' : '#f87171'}">RC ${t.rc}/${t.rcMax}</span>
+      ${t.price ? `<span style="font-size:13px;color:#8b9bb4">${t.price}</span>` : ''}
+    </div>
+  </div>`;
+  if (t.probWeightedTarget) {
+    html += `<div style="background:rgba(22,163,74,.12);border-radius:12px;padding:12px;margin-bottom:16px;font-size:13px;border:1px solid rgba(22,163,74,.15)">
+      <strong>Prob-Weighted Target:</strong> ${t.probWeightedTarget}
+    </div>`;
+  }
+  if (t.scenarios && t.scenarios.length) {
+    html += `<div class="profile-section"><div class="profile-section-title">Scenario Analysis</div>
+      <table class="scenario-table"><thead><tr><th>Scenario</th><th>Prob</th><th>Target</th><th>Upside</th></tr></thead><tbody>`;
+    t.scenarios.forEach(s => {
+      const isBase = s.probability >= 35 && s.probability <= 55;
+      html += `<tr${isBase ? ' class="scenario-base"' : ''}><td>${s.name}</td><td>${s.probability}%</td><td>${s.target}</td><td>${s.upside}</td></tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  if (t.dimensions && t.dimensions.length) {
+    html += `<div class="profile-section">
+      <div class="profile-section-title">Conviction Scorecard ${t.clusterA !== null ? `(A: ${t.clusterA}% &middot; B: ${t.clusterB}%)` : ''}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div><canvas id="profileRadar"></canvas></div>
+        <div><table style="font-size:12px"><thead><tr><th>Dim</th><th>Score</th><th>Rationale</th></tr></thead><tbody>`;
+    t.dimensions.forEach(d => {
+      html += `<tr><td style="font-weight:600;white-space:nowrap">${d.id}</td><td><span class="pill ${d.score >= 5 ? 'pill-exceptional' : d.score >= 4 ? 'pill-high' : d.score >= 3 ? 'pill-mid' : 'pill-low'}" style="font-size:10px;padding:1px 6px">${d.score}/5</span></td><td style="font-size:11px;color:#94a3b8">${d.rationale}</td></tr>`;
+    });
+    html += `</tbody></table></div></div></div>`;
+  }
+  if (t.catalysts && t.catalysts.length) {
+    html += `<div class="profile-section"><div class="profile-section-title">Catalyst Calendar</div>`;
+    t.catalysts.forEach(c => {
+      html += `<div class="catalyst-item"><div class="catalyst-date">${c.date}</div><div class="catalyst-text">${c.event}</div></div>`;
+    });
+    html += `</div>`;
+  }
+  if (t.questions) {
+    const q = t.questions;
+    const openCount = (q.critical?.filter(x=>!x.resolved).length||0) + (q.bullCase?.filter(x=>!x.resolved).length||0);
+    html += `<div class="profile-section"><div class="profile-section-title">Questions (${openCount} Open &middot; ${q.resolvedCount} Resolved)</div>`;
+    if (q.critical && q.critical.length) {
+      html += `<div class="question-category"><div class="question-category-title" style="color:#f87171">Critical Path</div>`;
+      q.critical.forEach(item => {
+        html += `<div class="question-item"><span class="q-status ${item.resolved ? 'q-resolved' : 'q-open'}">${item.resolved ? '\u2713' : '\u25CB'}</span><span>${item.text}</span></div>`;
+      });
+      html += `</div>`;
+    }
+    if (q.bullCase && q.bullCase.length) {
+      html += `<div class="question-category"><div class="question-category-title" style="color:#fbbf24">Bull Case Validation</div>`;
+      q.bullCase.forEach(item => {
+        html += `<div class="question-item"><span class="q-status ${item.resolved ? 'q-resolved' : 'q-open'}">${item.resolved ? '\u2713' : '\u25CB'}</span><span>${item.text}</span></div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+  }
+  if (t.debates && t.debates.length) {
+    const openD = t.debates.filter(d=>d.status==='OPEN').length;
+    html += `<div class="profile-section"><div class="profile-section-title">Debate Vectors (${openD} Open / ${t.debates.length} Total)</div>`;
+    t.debates.forEach(d => {
+      const statusColor = d.status === 'OPEN' ? '#f87171' : d.status === 'COUNTERED' ? '#4ade80' : '#fbbf24';
+      html += `<div class="debate-item">
+        <div class="debate-vector">${d.vector}</div>
+        <div class="debate-status"><span class="tag" style="background:${statusColor}15;color:${statusColor}">${d.status}</span></div>
+        <div class="debate-detail">${d.detail}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+  if (t.financials && (t.financials.revenue || t.financials.segments?.length)) {
+    html += `<div class="profile-section"><div class="profile-section-title">Key Financials</div><div class="financials-grid">`;
+    if (t.financials.revenue) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.revenue}</div><div class="fin-label">Revenue</div></div>`;
+    if (t.financials.grossMargin) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.grossMargin}</div><div class="fin-label">Gross Margin</div></div>`;
+    if (t.financials.ebitdaMargin) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.ebitdaMargin}</div><div class="fin-label">EBITDA Margin</div></div>`;
+    if (t.financials.eps) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.eps}</div><div class="fin-label">EPS</div></div>`;
+    if (t.financials.gasPrice) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.gasPrice}</div><div class="fin-label">Gas Cost</div></div>`;
+    if (t.financials.dividend) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.dividend}</div><div class="fin-label">Dividend</div></div>`;
+    if (t.financials.orderBook) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.orderBook}</div><div class="fin-label">Order Book</div></div>`;
+    if (t.financials.backlog) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.backlog}</div><div class="fin-label">Backlog</div></div>`;
+    if (t.financials.debtMaturity) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.debtMaturity}</div><div class="fin-label">Debt Maturity</div></div>`;
+    if (t.financials.equityRatio) html += `<div class="fin-box"><div class="fin-value" style="font-size:14px">${t.financials.equityRatio}</div><div class="fin-label">Equity Ratio</div></div>`;
+    html += `</div>`;
+    if (t.financials.segments && t.financials.segments.length) {
+      html += `<table style="margin-top:12px;font-size:12px"><thead><tr><th>Segment</th><th>Revenue/Size</th><th>Margin</th></tr></thead><tbody>`;
+      t.financials.segments.forEach(s => { html += `<tr><td>${s.name}</td><td>${s.pct}</td><td>${s.margin || '-'}</td></tr>`; });
+      html += `</tbody></table>`;
+    }
+    html += `</div>`;
+  }
+  if (t.recentNotes && t.recentNotes.length) {
+    html += `<div class="profile-section"><div class="profile-section-title">Recent Research Notes</div>`;
+    t.recentNotes.forEach(n => {
+      html += `<div class="note-item"><div class="note-date">${n.date} <span class="note-source">&middot; ${n.source}</span></div><div class="note-text">${n.summary}</div></div>`;
+    });
+    html += `</div>`;
+  }
+  document.getElementById('profileContent').innerHTML = html;
+  document.getElementById('profileOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  if (t.dimensions && t.dimensions.length) {
+    setTimeout(() => {
+      const ctx = document.getElementById('profileRadar');
+      if (ctx) {
+        new Chart(ctx, {
+          type:'radar',
+          data:{labels:t.dimensions.map(d=>d.id),datasets:[{label:ticker,data:t.dimensions.map(d=>Math.min(d.score,5)),backgroundColor:'rgba(96,165,250,0.15)',borderColor:'#60a5fa',pointBackgroundColor:'#60a5fa',borderWidth:2}]},
+          options:{responsive:true,scales:{r:{beginAtZero:true,max:5,min:0,ticks:{stepSize:1,color:'#64748b',font:{size:10},backdropColor:'transparent'},grid:{color:'rgba(255,255,255,.08)'},pointLabels:{color:'#8b9bb4',font:{size:11}},angleLines:{color:'rgba(255,255,255,.06)'}}},plugins:{legend:{display:false}}}
+        });
+      }
+    }, 50);
+  }
+}
+
+function closeProfile() {
+  document.getElementById('profileOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// === CHARTS ===
+const doughnutOpts = {
+  responsive:true,
+  plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}},
+  cutout:'55%'
+};
+
+// Portfolio tab charts
+new Chart(document.getElementById('chartPosition'), {
+  type:'doughnut',
+  data:{labels:['VOW (40%)','GTT (20%)','CF (17%)','Cash (23%)'],datasets:[{data:[40,20,17,23],backgroundColor:['#10b981','#22d3ee','#4ade80','#334155'],borderWidth:0}]},
+  options:doughnutOpts
+});
+
+new Chart(document.getElementById('chartType'), {
+  type:'doughnut',
+  data:{labels:['Investment (77%)','Cash (23%)'],datasets:[{data:[77,23],backgroundColor:['#22c55e','#334155'],borderWidth:0}]},
+  options:doughnutOpts
+});
+
+new Chart(document.getElementById('chartTheme'), {
+  type:'doughnut',
+  data:{labels:['Sent-Val (40%)','Hormuz (37%)','Cash (23%)'],datasets:[{data:[40,37,23],backgroundColor:['#8b5cf6','#ef4444','#334155'],borderWidth:0}]},
+  options:doughnutOpts
+});
+
+new Chart(document.getElementById('chartScatter'), {
+  type:'bubble',
+  data:{datasets:[
+    {label:'VOW',data:[{x:10,y:40,r:18}],backgroundColor:'rgba(34,255,34,0.3)',borderColor:'#22ff22',borderWidth:2},
+    {label:'GTT',data:[{x:8.5,y:20,r:14}],backgroundColor:'rgba(34,211,238,0.3)',borderColor:'#22d3ee',borderWidth:2},
+    {label:'CF',data:[{x:8.5,y:17,r:13}],backgroundColor:'rgba(74,222,128,0.3)',borderColor:'#4ade80',borderWidth:2}
+  ]},
+  options:{responsive:true,scales:{
+    x:{title:{display:true,text:'Conviction Score',color:'#8b9bb4'},min:4,max:11,ticks:{color:'#64748b'},grid:{color:'rgba(255,255,255,.06)'}},
+    y:{title:{display:true,text:'Allocation %',color:'#8b9bb4'},min:0,max:50,ticks:{color:'#64748b',callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.06)'}}
+  },plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},usePointStyle:true}},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.raw.y}% at ${ctx.raw.x}/10`}}}}
+});
+
+// Research Health charts
+new Chart(document.getElementById('chartQuestions'), {
+  type:'bar',
+  data:{labels:['CF','VOW','GTT'],datasets:[
+    {label:'Open',data:[22,9,4],backgroundColor:'#ef4444',borderRadius:2},
+    {label:'Resolved',data:[26,16,25],backgroundColor:'#22c55e',borderRadius:2}
+  ]},
+  options:{indexAxis:'y',responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}},scales:{x:{stacked:true,beginAtZero:true,ticks:{color:'#64748b'},grid:{color:'rgba(255,255,255,.06)'}},y:{stacked:true,ticks:{color:'#e2e8f0',font:{weight:'600'}},grid:{display:false}}}}
+});
+
+new Chart(document.getElementById('chartDebates'), {
+  type:'doughnut',
+  data:{labels:['OPEN (5)','PARTIALLY COUNTERED (4)','COUNTERED (4)','CONCEDED (1)'],datasets:[{data:[5,4,4,1],backgroundColor:['#ef4444','#f59e0b','#22c55e','#64748b'],borderWidth:0}]},
+  options:{responsive:true,cutout:'55%',plugins:{legend:{position:'bottom',labels:{color:'#8b9bb4',font:{size:11},padding:12,usePointStyle:true,pointStyle:'circle'}}}}
+});
+
+// Keyboard: Escape closes profile
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProfile(); });
+</script>
 </body>
 </html>
