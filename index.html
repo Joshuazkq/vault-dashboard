@@ -160,6 +160,7 @@ const D = {
         {date:"Mar 31",event:"FuelEU Maritime reporting year 2025 verification deadline",type:"Hard",dim:"D1",urgency:"week2"},
         {date:"Apr 5",event:"FY2025 audited annual report — impairment test, DCF assumptions",type:"Hard",dim:"D4",urgency:"week3"},
         {date:"May 20",event:"Q1 2026 results — first read on new-contract margins (~68% new mix)",type:"Hard",dim:"D8,D1",urgency:"month2"},
+        {date:"Jun 30",event:"FuelEU Maritime penalty date if non-compliant — regulatory tailwind",type:"Hard",dim:"D1",urgency:"month2"},
         {date:"Aug 2026",event:"Q2 2026 results + first covenant test (6.75x)",type:"Hard",dim:"D4",urgency:"beyond"},
         {date:"Sep 30",event:"EUR 27M cancellation rights expiry (vessels 3-4)",type:"Hard",dim:"D1",urgency:"beyond"},
         {date:"Nov 2026",event:"Q3 2026 covenant test at 3.5x — BINARY (requires ~NOK 103M rolling EBITDA)",type:"Hard",dim:"D4",urgency:"beyond"}
@@ -364,9 +365,14 @@ const D = {
       variantViews:[
         "17.5 MMT ME methanol removed (56% of traded). Zero ME production. April repricing = Q2 surprise.",
         "MTO demand destruction ceiling raised to $420-450/t by correlated naphtha spike (Brent >$110).",
-        "Even ceasefire doesn't snap-back prices: infrastructure damage = 6-24mo restart, war-risk insurance 6-18mo."
+        "Even ceasefire doesn't snap-back prices: infrastructure damage = 6-24mo restart, war-risk insurance 6-18mo.",
+        "Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply, structurally higher methanol prices post-war."
       ],
-      recentNotes:[]
+      recentNotes:[
+        {date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum, infrastructure damage 6-24mo, war-risk insurance 6-18mo. Bear case floor $320-340/t."},
+        {date:"2026-03-21",title:"Sell-side consensus: 12-18mo elevated pricing. Management sensitivity: $400/t = $1,450M EBITDA. MTO ceiling raised to $420-450/t."},
+        {date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled. Removes 2028-2030 oversupply risk. Structural methanol repricing."}
+      ]
     },
     KIST: {
       company:"Kistos Holdings", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
@@ -415,13 +421,53 @@ const D = {
       catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — no known compliance issues",type:"Soft",dim:"D1",urgency:"week3"}],
       questions:{critical:[],open:[],resolved:0},debates:[],
       financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)"},variantViews:[],recentNotes:[]
+    },
+    TOI: {
+      company:"Topicus.com Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"European VMS serial acquirer (CSU spin-off); 180+ portfolio companies; ~14x EV/FCF"},
+      variantViews:[],recentNotes:[]
+    },
+    APP: {
+      company:"AppLovin Corporation", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"Pure-play AI-driven DSP+SSP; 40% YTD decline creates entry opportunity"},
+      variantViews:[],recentNotes:[]
+    },
+    SPSC: {
+      company:"SPS Commerce, Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"100-quarter compounder at trough (18x vs 50-60x historical); core EDI network moat + MAX AI optionality"},
+      variantViews:[],recentNotes:[]
+    },
+    SGE: {
+      company:"The Sage Group plc", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); measurable AI pricing uplift (5.5%); 37% off highs"},
+      variantViews:[],recentNotes:[]
     }
   },
   themes: [
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW"],color:"#4ade80"},
     {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH","KIST"],color:"#f59e0b"},
     {name:"Hidden Value SOTP",status:"STABLE",impact:4,discovery:4,priority:16,tickers:[],color:"#8b9bb4",note:"Both tickers PASSED and archived to Case Studies (Mar 21)"},
-    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:[],color:"#a78bfa",note:"4 tickers MONITORING (TOI, APP, SPSC, SGE)"},
+    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["TOI","APP","SPSC","SGE"],color:"#a78bfa",note:"4 tickers MONITORING"},
     {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","GPRO","HOFT"],color:"#64748b"}
   ],
   candidates: [
@@ -719,4 +765,3 @@ renderPortfolio();
 </script>
 </body>
 </html>
-<\!-- Regenerated: 2026-03-22 03:21:48 -->
