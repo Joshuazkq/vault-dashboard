@@ -33,6 +33,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .pill-red{background:rgba(220,38,38,.12);color:#f87171}
 .pill-blue{background:rgba(37,99,235,.15);color:#60a5fa}
 .pill-purple{background:rgba(139,92,246,.15);color:#a78bfa}
+.pill-grey{background:rgba(255,255,255,.06);color:#94a3b8}
 .alert{padding:14px 16px;border-radius:14px;margin-bottom:10px;font-size:13px;line-height:1.5;border-left:3px solid}
 .alert-red{background:linear-gradient(90deg,rgba(220,38,38,.12),rgba(220,38,38,.06));border-color:#ef4444}
 .alert-amber{background:linear-gradient(90deg,rgba(217,119,6,.12),rgba(217,119,6,.06));border-color:#f59e0b}
@@ -83,6 +84,7 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .badge-active{background:rgba(37,99,235,.15);color:#60a5fa;border:1px solid rgba(37,99,235,.2)}
 .badge-monitoring{background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.2)}
 .badge-passed{background:rgba(255,255,255,.06);color:#64748b;border:1px solid rgba(255,255,255,.08)}
+.badge-parked{background:rgba(255,255,255,.06);color:#94a3b8;border:1px solid rgba(255,255,255,.08)}
 .question-cat{margin-bottom:12px}
 .question-cat h5{font-size:12px;color:#94a3b8;text-transform:uppercase;margin-bottom:4px}
 .question-item{font-size:12px;padding:4px 0;color:#e2e8f0;border-bottom:1px solid rgba(255,255,255,.03)}
@@ -138,9 +140,12 @@ const D = {
   alerts: [
     {type:"hormuz",text:"<strong>CF</strong> — Tampa ammonia settlement imminent (late Mar/early Apr). First war-conditions NH3 benchmark. 30.7% of CF revenue. Pre-defined: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6 upgrade."},
     {type:"hormuz",text:"<strong>CF</strong> — USDA Prospective Plantings Mar 31 (8 days). Binary signal: corn >93M = demand intact; <92M = volume headwind 10%+."},
-    {type:"svm",text:"<strong>VOW</strong> — Q1 2026 results May 20 (40% of portfolio). First read at ~68% new-contract mix. Resolves 15% vs 18.8% margin debate. Silent period active."},
-    {type:"hormuz",text:"<strong>CF</strong> — DOJ antitrust probe: CF, Nutrien, Mosaic, Koch, Yara under investigation. Civil AND criminal. Monitor Q1 10-Q."},
-    {type:"svm",text:"<strong>TRI</strong> — Added ACTIVE 8/10, RC 5/5. Pattern-match 87% (Strong). Deep dive priority. FY2026 results Jul 2026."}
+    {type:"svm",text:"<strong>VOW</strong> — Stock ~NOK 2.06 (Mar 18 thin-volume selloff, -19.8% on 10K shares). No news catalyst. Base NOK 5.76 = +180% upside. Monitor for follow-through or recovery."},
+    {type:"hormuz",text:"<strong>Hormuz Day 24 (Mar 23)</strong> — Iran allowing partial transits to friendly countries. ME exports still -61%. Israel struck South Pars + killed Intelligence Minister. Brent peaked $126. S3 at 55% intact."},
+    {type:"hormuz",text:"<strong>CF</strong> — DOJ antitrust probe: CF, Nutrien, Mosaic, Koch, Yara under investigation. Civil AND criminal. Two class-action lawsuits. Monitor Q1 10-Q (May)."},
+    {type:"svm",text:"<strong>TRI</strong> — Added ACTIVE Mar 22 with conviction 8/10, RC 5/5. Pattern-match 30.5/35 (87%, Strong). Deep dive priority."},
+    {type:"svm",text:"<strong>ARR</strong> — Added ACTIVE Mar 23. Pattern-match 28/35 (80%, Strong). Recovery already proven (4Q EBITDA+, net cash, dividend). Verify price/cap post-reverse-split."},
+    {type:"hormuz",text:"<strong>GTT</strong> — Q1 2026 activity update Apr 22. FY2026 guidance EUR 740-780M vs consensus EUR 902.8M. Key sentiment catalyst."}
   ],
   tickers: {
     VOW: {
@@ -160,10 +165,11 @@ const D = {
       catalysts:[
         {date:"Mar 31",event:"FuelEU Maritime reporting year 2025 verification deadline",type:"Hard",dim:"D1",urgency:"week2"},
         {date:"Apr 5",event:"FY2025 audited annual report — impairment test, DCF assumptions",type:"Hard",dim:"D4",urgency:"week3"},
-        {date:"May 20",event:"Q1 2026 results — first read on new-contract margins (~68% new mix)",type:"Hard",dim:"D8,D1",urgency:"month2"},
+        {date:"May 20",event:"Q1 2026 results — first read on new-contract margins (~68% new mix). EARLIEST margin resolution point.",type:"Hard",dim:"D8,D1,D4",urgency:"month2"},
         {date:"Jun 30",event:"FuelEU Maritime penalty date if non-compliant — regulatory tailwind",type:"Hard",dim:"D1",urgency:"month2"},
-        {date:"Aug 2026",event:"Q2 2026 results + first covenant test (6.75x)",type:"Hard",dim:"D4",urgency:"beyond"},
+        {date:"Aug 2026",event:"Q2 2026 results + first covenant test (6.75x NIBD/EBITDA)",type:"Hard",dim:"D4",urgency:"beyond"},
         {date:"Sep 30",event:"EUR 27M cancellation rights expiry (vessels 3-4)",type:"Hard",dim:"D1",urgency:"beyond"},
+        {date:"~Oct 2026",event:"IMO MEPC extraordinary session (Net-Zero Framework) — potential regulatory tightening",type:"Soft",dim:"D1",urgency:"beyond"},
         {date:"Nov 2026",event:"Q3 2026 covenant test at 3.5x — BINARY (requires ~NOK 103M rolling EBITDA)",type:"Hard",dim:"D4",urgency:"beyond"}
       ],
       questions:{
@@ -174,39 +180,49 @@ const D = {
           {q:"Confirm normalized Maritime EBITDA margin on pure new-contract basis (model: 18.8% central; Q4 slide shows 24%)",resolved:false},
           {q:"Clarify installed base: ~200 vs 250+ vessels (NOK 59M revenue delta)",resolved:false},
           {q:"Target net debt level by YE 2026",resolved:false},
-          {q:"EUR 27M contract cancellation rights status",resolved:false},
-          {q:"Mid-life upgrade addressable market sizing (~40-60 vessels)",resolved:false},
-          {q:"Heat Treatment ~20% margin sustainability (needs 2-3 quarters)",resolved:false}
+          {q:"EUR 27M contract cancellation rights status (vessels 3-4, valid until Sep 30)",resolved:false},
+          {q:"Mid-life upgrade addressable market sizing (~40-60 vessels in upgrade window)",resolved:false},
+          {q:"Heat Treatment ~20% margin sustainability (needs 2-3 quarters of data)",resolved:false},
+          {q:"Expected Industrial Solutions EBITDA for FY 2026 after strategic pivot",resolved:false},
+          {q:"Status update on Murfitts/ETEL ELT plant — FID timeline",resolved:false}
         ],
         resolved:12
       },
       debates:[
-        {vector:"Maritime Margin Normalization",side:"BULL",resolution:"OPEN",impact:"Awaiting Q1 2026 data (May 20)"},
-        {vector:"Balance Sheet Fragility",side:"BULL",resolution:"OPEN",impact:"Genuine risk limiting position sizing"},
-        {vector:"'Prove It' Discount Is Warranted",side:"BULL",resolution:"OPEN",impact:"Awaiting execution proof"},
-        {vector:"Cruise Industry Cyclicality",side:"BULL",resolution:"OPEN",impact:"Bounded by NOK 1.7B backlog to 2034"},
-        {vector:"Probability-Weighted EV Below Market",side:"BULL",resolution:"RESOLVED",impact:"SOTP v2 corrected: prob-weighted NOK 7.54 vs price NOK 2.37"}
+        {vector:"Maritime Margin Normalization",side:"BULL",resolution:"OPEN",impact:"Awaiting Q1 2026 data (May 20). Q4 slide shows 24% — bull validated if confirmed."},
+        {vector:"Balance Sheet Fragility",side:"BULL",resolution:"OPEN",impact:"Genuine risk limiting position sizing. Q3 2026 covenant at 3.5x = critical."},
+        {vector:"'Prove It' Discount Is Warranted",side:"BULL",resolution:"OPEN",impact:"Awaiting execution proof. Insider buying is strongest counter."},
+        {vector:"Cruise Industry Cyclicality",side:"BULL",resolution:"OPEN",impact:"Bounded by NOK 1.7B backlog to 2034. NCLH ordered 3 new vessels 2036-37."},
+        {vector:"Probability-Weighted EV Below Market",side:"BULL",resolution:"RESOLVED",impact:"SOTP v2 corrected: prob-weighted NOK 7.54 vs price NOK 2.37. Concession resolved."}
       ],
       financials:{
         revenue:"NOK 1,035M (FY2025)",
         adjEBITDA:"NOK -49M (FY2025, Industrial drag)",
         maritimeRev:"NOK 536M (+25%)",
+        maritimeEBITDA:"NOK 34M (6.3% margin, Q2 catch-up depressed)",
         aftersalesRev:"NOK 236M (+14%)",
+        aftersalesEBITDA:"NOK 42M (17.8% margin)",
         industrialRev:"NOK 262M (-31%)",
+        industrialEBITDA:"NOK -102M",
         netDebt:"NOK 362M",
         backlog:"NOK 1.7B to 2034",
-        marketCap:"~NOK 691M"
+        marketCap:"~NOK 691M (~$63M USD)",
+        sharesOut:"291.4M",
+        equityRatio:"21.3%"
       },
       variantViews:[
-        "Market prices entire group below what Maritime division alone is worth at any defensible parameterization (Maritime NOK 1,528M vs group EV NOK 700M).",
+        "Market prices entire group below what Maritime division alone is worth at any defensible parameterization (Maritime NOK 1,528M vs group EV ~NOK 700M).",
         "24% margin on new-contract revenue (Q4 slide) significantly above 18.8% model central — bull case validated.",
         "VP Sales Gorbani buying 105K shares at NOK 2.58 post-Q4 — commercial-side pipeline visibility signal.",
+        "Regulatory ratchet under-appreciated: Norwegian Sea ECA + Canadian Arctic ECA + EU ETS 100% + PPR 13 sewage standards = moat deepening over time.",
         "Iran Hormuz toll proposal is irrelevant to VOW — cruise wastewater has zero energy security exposure. Portfolio diversification intact."
       ],
       recentNotes:[
+        {date:"2026-03-21",title:"Conviction 9->10/10. D1 5->6/5, D2 5->6/5 (first 6/5 scores in vault). 24% margin slide + single division >2x group EV. Cluster A 107%."},
         {date:"2026-03-19",title:"News Scan: VOW -19.8% thin-volume selloff on 10K shares. No catalyst. Base NOK 5.76 = +180% upside at ~NOK 2.06."},
         {date:"2026-03-17",title:"Intel Brief: VP Sales Gorbani bought 105K shares at NOK 2.58. Q1 results May 20. NCLH ordered 3 new vessels (2036-37). Arctic ECA entered force."},
-        {date:"2026-03-15",title:"SOTP v2 revaluation complete. Base NOK 5.76, prob-weighted NOK 7.54. D2 3->5, D8 3->4. Conviction 9/10 confirmed. RC upgraded 3->4/5."}
+        {date:"2026-03-15",title:"SOTP v2 revaluation complete. Base NOK 5.76, prob-weighted NOK 7.54. Conviction 9/10 confirmed. RC upgraded 3->4/5."},
+        {date:"2026-03-13",title:"Portfolio entry: INVESTMENT at 40%. Conviction 9/10, Cluster A 93%."}
       ]
     },
     CF: {
@@ -224,58 +240,69 @@ const D = {
         methodology:"Scenario-Weighted P/E",thesisType:"Cyclical/Commodity + Event-Driven",lastUpdated:"2026-03-21"
       },
       catalysts:[
-        {date:"Late Mar/Early Apr",event:"Tampa ammonia settlement — first war-conditions NH3 benchmark (30.7% of revenue)",type:"Soft",dim:"D2,D6,D1",urgency:"week2"},
-        {date:"Mar 31",event:"USDA Prospective Plantings — corn >93M = demand intact; <92M = headwind",type:"Hard",dim:"D4,D8",urgency:"week2"},
-        {date:"~End of Mar",event:"US Navy escort for fertilizer tankers — highest-leverage price-normalization action",type:"Soft",dim:"D5",urgency:"week2"},
+        {date:"Late Mar/Early Apr",event:"Tampa ammonia settlement — first war-conditions NH3 benchmark (30.7% of revenue). Triggers: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6.",type:"Soft",dim:"D2,D6,D1",urgency:"week2"},
+        {date:"~End of Mar",event:"US Navy escort for fertilizer tankers — highest-leverage price-normalization action (15-20% rapid urea decline)",type:"Soft",dim:"D5",urgency:"week2"},
+        {date:"Mar 31",event:"USDA Prospective Plantings — corn >93M = demand intact; <92M = volume headwind 10%+",type:"Hard",dim:"D4,D8",urgency:"week2"},
+        {date:"Apr 17",event:"$12B Farm Aid Package enrollment deadline",type:"Hard",dim:"D6",urgency:"week3"},
         {date:"May 6",event:"Q1 2026 earnings — first S3 margin read; consensus $7.65 not reflecting S3",type:"Hard",dim:"D2,D1",urgency:"month2"},
         {date:"Apr-Jun",event:"India Kharif pre-buy window — IFFCO+3 force majeures, emergency procurement",type:"Soft",dim:"D6",urgency:"month2"},
         {date:"Late Jul",event:"Q2 2026 earnings — captures PEAK season pricing",type:"Hard",dim:"D2,D1",urgency:"beyond"},
-        {date:"Aug 31",event:"S3 scenario time-stop — if urea <$800/t, trim to core hold",type:"Hard",dim:"D2",urgency:"beyond"}
+        {date:"Aug 31",event:"S3 scenario time-stop — if urea <$800/t, trim to core hold",type:"Hard",dim:"D2",urgency:"beyond"},
+        {date:"Q4 2026",event:"Yazoo City full capacity restoration (~10.4M tons)",type:"Soft",dim:"D1",urgency:"beyond"}
       ],
       questions:{
         critical:[
-          {q:"Tampa ammonia settlement level vs pre-war $615/mt — imminent",resolved:false},
-          {q:"USDA Prospective Plantings Mar 31 — corn acres signal",resolved:false}
+          {q:"Tampa ammonia settlement level vs pre-war $615/mt — imminent (late Mar/early Apr)",resolved:false},
+          {q:"USDA Prospective Plantings Mar 31 — corn acres signal for demand destruction",resolved:false}
         ],
         open:[
           {q:"India Kharif import volumes and timing (Apr-Jun)",resolved:false},
           {q:"Navy escort for fertilizer tankers — if announced, urea normalizes 15-20%",resolved:false},
           {q:"Yazoo City product mix impact on 2026 capacity",resolved:false},
-          {q:"China export quota expansion risk in high price environment",resolved:false},
-          {q:"Inflation re-acceleration compressing CF P/E even as EPS rises",resolved:false},
-          {q:"DOJ antitrust probe severity — grand jury = material risk",resolved:false},
-          {q:"Blue Point tariff exposure on imported equipment/modules",resolved:false}
+          {q:"China export quota expansion risk in high price environment (~5M tons 2025, may expand)",resolved:false},
+          {q:"Inflation re-acceleration compressing CF P/E even as EPS rises (Fed PCE raised to 2.7%)",resolved:false},
+          {q:"DOJ antitrust probe severity — grand jury = material risk; civil = manageable",resolved:false},
+          {q:"Orica/Nelson Brothers $169.5M settlement — impact on H2 2026 cash flow",resolved:false},
+          {q:"Blue Point tariff exposure on imported equipment/modules",resolved:false},
+          {q:"QAFCO urea production loss from Ras Laffan physical damage (beyond FM)",resolved:false},
+          {q:"Saudi Yanbu export route viability after drone strike",resolved:false}
         ],
         resolved:18
       },
       debates:[
-        {vector:"Urea Price Mean-Reversion",side:"BULL",resolution:"RESOLVED",impact:"+0.5 conviction — duration requires supply catalyst, none present"},
-        {vector:"US Natural Gas Cost Moat",side:"BULL",resolution:"RESOLVED",impact:"Moat WIDENED to $13+/MMBtu vs Europe; HH flat at $3.03"},
-        {vector:"Strategic Fertilizer Releases",side:"BULL",resolution:"RESOLVED",impact:"No mechanism exists; no strategic urea reserves globally"},
-        {vector:"Demand Destruction",side:"BULL",resolution:"PARTIALLY COUNTERED",impact:"Price >> volume; net revenue +21% even at 10% volume loss"}
+        {vector:"Urea Price Mean-Reversion",side:"BULL",resolution:"RESOLVED",impact:"+0.5 conviction — duration requires supply catalyst, none present. Both 2008 and 2022 required exogenous shocks."},
+        {vector:"US Natural Gas Cost Moat",side:"BULL",resolution:"RESOLVED",impact:"Moat WIDENED to $13+/MMBtu vs Europe; HH flat at $3.03. LNG capacity maxed = no Hormuz->HH transmission."},
+        {vector:"Strategic Fertilizer Releases",side:"BULL",resolution:"RESOLVED",impact:"No mechanism exists; no strategic urea reserves globally. Political noise only."},
+        {vector:"Demand Destruction",side:"BULL",resolution:"PARTIALLY COUNTERED",impact:"Price >> volume; net revenue +21% even at 10% volume loss. USDA Mar 31 is next test."}
       ],
       financials:{
         revenue:"$7,084M (FY2025, +19%)",
-        EBITDA:"~$3,100M",
+        operatingEarnings:"$2,329M (+32%)",
         EPS:"$8.97 GAAP (FY2025)",
         consensusEPS:"$7.65 (pre-Hormuz, likely stale)",
+        scenarioEPS:"S3 ~$26.3 (prob-weighted ~$27.8)",
         cashPosition:"$1.98B",
         debtMaturity:"None until 2034",
         segments:"Ammonia 31%, Urea 25%, UAN 31%, AN 6%, Other 8%",
         geography:"NA 85%, International 15%",
-        gasCost:"~$3.2/MMBtu (HH)"
+        gasCost:"~$3.2/MMBtu (HH) vs Europe ~$16.7/MMBtu",
+        utilization:"97% (nameplate ~10.4M tons)",
+        buybacks:"$4.78B over 4 years (95% of FCF returned)"
       },
       variantViews:[
         "Oil has 400M bbl SPR ceiling; fertilizer has NO strategic reserve — structurally uncapped CF upside.",
         "NOLA-ME basis ($50-80/t structural) = real-time mismatch the market hasn't closed.",
         "Iran toll proposal = permanent Hormuz cost floor even post-ceasefire, structurally widening CF advantage.",
         "Market treating as temporary spike (FY2022 analog); Ras Laffan 3-5yr repair = structural deficit justifying higher multiples (8-10x vs 5-7x).",
-        "Agricultural cascade unpriced: corn planting reduction 1-1.5M ha + urea $700/t not in grain futures or fertilizer equities."
+        "Agricultural cascade unpriced: corn planting reduction 1-1.5M ha + urea $700/t not in grain futures or fertilizer equities.",
+        "EU CBAM adds $75/t on imported ammonia — structural cost advantage for CF's US gas position."
       ],
       recentNotes:[
-        {date:"2026-03-21",title:"Hormuz Day 22: Trump rules out ceasefire. Tampa retail $925-961/t. European coalition conditions escort on ceasefire first."},
-        {date:"2026-03-21",title:"Fair value estimation: S3 base $158, prob-weighted $169. Peer-validated 5-7x P/E at peak cycle."},
-        {date:"2026-03-20",title:"DOJ antitrust probe opened (CF, Nutrien, Mosaic, Koch, Yara). Orica $169.5M settlement. Two class-action lawsuits."}
+        {date:"2026-03-21",title:"Hormuz Day 22: Trump rules out ceasefire. Tampa retail $925-961/t. European coalition conditions escort on ceasefire first. S1 at floor 3%."},
+        {date:"2026-03-21",title:"Fair value estimation: S3 base $158, prob-weighted $169. Peer-validated 5-7x P/E at peak cycle. D1 upgraded 4->5. Conviction 8->8.5/10."},
+        {date:"2026-03-20",title:"DOJ antitrust probe opened (CF, Nutrien, Mosaic, Koch, Yara). Orica $169.5M settlement. Two class-action lawsuits."},
+        {date:"2026-03-19",title:"D2 3->4 confirmed. Day 20 NOLA $673-675/st ($742-745/t). Conviction 7.5->8/10. Cluster A 73%->80%."},
+        {date:"2026-03-16",title:"Position add 2% (15%->17%). NOLA momentum + Hormuz no relaxation."}
       ]
     },
     GTT: {
@@ -293,14 +320,14 @@ const D = {
         methodology:"Peer-Anchored EV/EBITDA (22x adjusted)",thesisType:"Structural Growth + Event-Driven",lastUpdated:"2026-03-21"
       },
       catalysts:[
-        {date:"Apr 22",event:"Q1 2026 activity update — FY2026 guidance (EUR 740-780M) vs consensus (EUR 902.8M)",type:"Hard",dim:"D1,D2,D8",urgency:"week3"},
+        {date:"Apr 22",event:"Q1 2026 activity update — FY2026 guidance (EUR 740-780M) vs consensus (EUR 902.8M). Sentiment catalyst.",type:"Hard",dim:"D1,D2,D8",urgency:"week3"},
         {date:"Q2-Q3 2026",event:"FID-to-order conversion signals — pipeline 105-135 vessels at 75-90% conversion",type:"Soft",dim:"D1,D5,D8",urgency:"month3"},
         {date:"Q3-Q4 2027",event:"FID pipeline major conversion point — DO NOT sell into this catalyst",type:"Soft",dim:"D1",urgency:"beyond"}
       ],
       questions:{
         critical:[
           {q:"French govt EUR 86M Elogen subsidy clawback terms (gigafactory halted)",resolved:false},
-          {q:"Samsung KC-2C: timeline for 174K m3 commercial order (competitive threat)",resolved:false}
+          {q:"Samsung KC-2C: timeline for 174K m3 commercial order (competitive threat, 10-15% Korea probability)",resolved:false}
         ],
         open:[
           {q:"Should 'Hormuz premium = 3-4%' be reclassified to include structural LNG deficit premium?",resolved:false},
@@ -309,11 +336,12 @@ const D = {
         resolved:22
       },
       debates:[
-        {vector:"Near-Monopoly / Chinese Membrane Tech",side:"BULL",resolution:"OPEN",impact:"10-15% Korea probability (5-8yr timeline); China very low"},
-        {vector:"Asset-Light Royalty Model (no near-term Hormuz leverage)",side:"BULL",resolution:"PARTIALLY COUNTERED",impact:"FID leading-indicator argument accepted"},
-        {vector:"EBITDA Margin Peak at 67%",side:"BULL",resolution:"OPEN",impact:"Conditional on FID pipeline inflection in H1-H2 2026"},
-        {vector:"FID Pipeline Conversion Rate",side:"BULL",resolution:"OPEN",impact:"75-90% historical confirmed; 105-135 vessel realistic range"},
-        {vector:"Hormuz Amplification (management avoids attribution)",side:"BULL",resolution:"OPEN",impact:"Compare FID run-rate H1 2026 vs H2 2025 baseline"}
+        {vector:"Near-Monopoly / Chinese Membrane Tech",side:"BULL",resolution:"OPEN",impact:"10-15% Korea probability (KC-2C 7,500 m3 only, 5-8yr timeline); China very low (deepening GTT partnership)"},
+        {vector:"Asset-Light Royalty Model (no near-term Hormuz leverage)",side:"BULL",resolution:"PARTIALLY COUNTERED",impact:"FID leading-indicator argument accepted. Market prices orderbook changes forward."},
+        {vector:"EBITDA Margin Peak at 67%",side:"BULL",resolution:"OPEN",impact:"Conditional on FID pipeline inflection in H1-H2 2026. Margin resilience confirmed (EUR 490-530M EBITDA guidance)."},
+        {vector:"FID Pipeline Conversion Rate",side:"BULL",resolution:"OPEN",impact:"75-90% historical confirmed; 105-135 vessel realistic range. DATA GAP resolved."},
+        {vector:"Hormuz Amplification (management avoids attribution)",side:"BULL",resolution:"OPEN",impact:"Compare FID run-rate H1 2026 vs H2 2025 baseline. 14 LNGCs ordered YTD 2026."},
+        {vector:"Peak Earnings at Premium Multiple",side:"BEAR",resolution:"OPEN",impact:"Bear case may understate risk if ceasefire + FY2026 miss + recession combine."}
       ],
       financials:{
         revenue:"EUR 803M (FY2025, +25%)",
@@ -324,19 +352,23 @@ const D = {
         FY2026guidance:"EUR 740-780M rev, EUR 490-530M EBITDA",
         dividendYield:"4.4% (EUR 8.94/share)",
         orderbook:"288 core units",
-        FIDpipeline:"84 mtpa record (2025) -> ~105-135 vessels"
+        FIDpipeline:"84 mtpa record (2025) -> ~105-135 vessels at 75-90% conversion",
+        patents:"2,466 active"
       },
       variantViews:[
         "Market conflates temporary geopolitical premium (3-4%) with structural LNG deficit premium (Ras Laffan 3-5yr repair persists beyond ceasefire).",
         "67% EBITDA margin is 2.4x peer median (28%) — monopoly franchise quality not reflected in 18x trailing multiple.",
         "Iran Hormuz toll proposal = structural cost floor for non-Hormuz LNG supply chains, accelerating FIDs permanently.",
         "Consensus EUR 902.8M revenue vs guidance EUR 760M — gap creates sentiment catalyst at Q1 update (Apr 22).",
-        "Peer-adjusted 22x EV/EBITDA (vs 18.5x median) may itself be conservative given 67% margins and 2,466-patent moat."
+        "Peer-adjusted 22x EV/EBITDA (vs 18.5x median) may itself be conservative given 67% margins and 2,466-patent moat.",
+        "Sonangol order (Angola) = new geographic diversification of demand not previously visible in order book."
       ],
       recentNotes:[
         {date:"2026-03-21",title:"Hormuz Day 22: QatarEnergy 2nd FM on 3-5yr contracts. JKM $20-22/MMBtu. Trump no ceasefire. Duration thesis strengthened."},
-        {date:"2026-03-21",title:"Fair value: Base EUR 317, prob-weighted EUR 305. Peer-adjusted 22x. D2 upgraded 3->4. D7 upgraded 4->5. Conviction 8->8.5/10."},
-        {date:"2026-03-20",title:"Triple order win (Mar 5/12/17). Ras Laffan 17% destroyed = structural catalyst. GTT upgraded TRADE->INVESTMENT."}
+        {date:"2026-03-21",title:"Fair value: Base EUR 317, prob-weighted EUR 305. D2 3->4, D7 4->5. Conviction 8->8.5/10. Cluster B 68%->72%."},
+        {date:"2026-03-20",title:"Triple order win (Mar 5/12/17). Ras Laffan 17% destroyed = structural catalyst. GTT upgraded TRADE->INVESTMENT. D1 4->5, D2 2->3, D3 3->4."},
+        {date:"2026-03-19",title:"Resolution Report: ENGIE fully exited (Sep 2025), Elogen gigafactory halted, FID conversion 75-90% confirmed, margin resilience confirmed."},
+        {date:"2026-03-13",title:"Portfolio entry: TRADE at 10%. Setup Score 18/25."}
       ]
     },
     MEOH: {
@@ -350,17 +382,19 @@ const D = {
       ],
       fairValue:null,
       catalysts:[
-        {date:"Apr 2026",event:"Q1 2026 contract repricing — first war-conditions MNRP/MECR reset",type:"Soft",dim:"D2",urgency:"week3"},
+        {date:"Apr 2026",event:"Q1 2026 contract repricing — first war-conditions MNRP/MECR reset (ARP guided $330-340 pre-Hormuz)",type:"Soft",dim:"D2",urgency:"week3"},
         {date:"May 2026",event:"Q1 earnings — first Hormuz impact on realized prices",type:"Soft",dim:"D2",urgency:"month2"},
         {date:"Aug 2026",event:"Q2 earnings — THE earnings surprise quarter (full April repricing captured)",type:"Soft",dim:"D2",urgency:"beyond"},
-        {date:"Sep 2026",event:"Titan Trinidad gas contract expiry — 730 KT production at risk (binary)",type:"Hard",dim:"D1,D4",urgency:"beyond"}
+        {date:"Sep 2026",event:"Titan Trinidad gas contract expiry — 730 KT production at risk (binary)",type:"Hard",dim:"D1,D4",urgency:"beyond"},
+        {date:"Dec 2027",event:"First unsecured note maturity ($400M, 5.125%)",type:"Hard",dim:"D4",urgency:"beyond"}
       ],
-      questions:{critical:[],open:[{q:"Chinese coal-to-methanol supply response timeline (5+ MMT in 6-12mo)",resolved:false},{q:"Iran 19.6 MMT expansion pipeline — cancelled/delayed 3-5yr?",resolved:false}],resolved:0},
+      questions:{critical:[],open:[{q:"Chinese coal-to-methanol supply response timeline (5+ MMT in 6-12mo). Price ceiling $350-430/t.",resolved:false},{q:"Iran 19.6 MMT expansion pipeline — cancelled/delayed 3-5yr?",resolved:false},{q:"Titan Trinidad gas contract renewal risk",resolved:false}],resolved:0},
       debates:[],
       financials:{
         revenue:"~$4B",
         capacity:"10.4 MMT (69% NA gas-advantaged)",
         leverage:"3.26x ND/EBITDA",
+        zeroMEproduction:"Zero ME production — pure beneficiary",
         ARP_sensitivity:"$300/t=$650M, $350/t=$1,075M, $400/t=$1,450M EBITDA"
       },
       variantViews:[
@@ -370,100 +404,10 @@ const D = {
         "Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply, structurally higher methanol prices post-war."
       ],
       recentNotes:[
-        {date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum, infrastructure damage 6-24mo, war-risk insurance 6-18mo. Bear case floor $320-340/t."},
-        {date:"2026-03-21",title:"Sell-side consensus: 12-18mo elevated pricing. Management sensitivity: $400/t = $1,450M EBITDA. MTO ceiling raised to $420-450/t."},
-        {date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled. Removes 2028-2030 oversupply risk. Structural methanol repricing."}
+        {date:"2026-03-21",title:"Full remap to standard D1-D8 framework. D1=5, D2=5, D3=4, D4=2, D5=4, D6=4, D7=4, D8=5. Conviction 7->7.5/10. Cluster A 93%, B 76%."},
+        {date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum, infrastructure damage 6-24mo."},
+        {date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled. Removes 2028-2030 oversupply risk."}
       ]
-    },
-    KIST: {
-      company:"Kistos Holdings", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"Overdue (2024)",event:"Q10-A Orion extension FID (still feasibility stage, ~450+ days overdue)",type:"Soft",dim:"D1,D4",urgency:"overdue"},
-        {date:"Q1 2026 ending",event:"Oman acquisition close — production doubling catalyst",type:"Soft",dim:"D1",urgency:"overdue"}
-      ],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Fully unhedged North Sea gas/oil producer; direct TTF/NBP exposure; <1x fwd EV/EBITDA at current TTF"},
-      variantViews:[],recentNotes:[]
-    },
-    LCUT: {
-      company:"Lifetime Brands", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:2, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"~Apr 23",event:"CBP ACE automated refund system go-live (~45 days from Mar 9 order)",type:"Soft",dim:"D1",urgency:"week3"},
-        {date:"Late Apr/May",event:"Q1 2026 earnings — first refund acknowledgment opportunity",type:"Soft",dim:"D1",urgency:"month2"},
-        {date:"Jul 24",event:"Section 122 replacement tariff expires",type:"Hard",dim:"D1",urgency:"beyond"},
-        {date:"Dec 2026",event:"KitchenAid license expiry",type:"Hard",dim:"D1",urgency:"beyond"}
-      ],
-      questions:{critical:[],open:[{q:"Section 1592 investigation (since 2019) — may delay automated refund",resolved:false}],resolved:0},
-      debates:[],
-      financials:{revenue:"$648M",EBITDA:"$50.8M",leverage:"2.9x",mcap:"$103.5M",refundEstimate:"$15-30M (14-29% of mcap)"},
-      variantViews:["CIT Mar 4 universal refund order benefits all importers — no individual suit needed."],
-      recentNotes:[]
-    },
-    GPRO: {
-      company:"GoPro", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:2,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — doubly covered (CIT suit + universal order)",type:"Soft",dim:"D1",urgency:"week3"}],
-      questions:{critical:[],open:[{q:"Audited 10-K needed for balance sheet solvency verification",resolved:false},{q:"ITC Insta360 exclusion final outcome (Jan 2026?)",resolved:false}],resolved:0},debates:[],
-      financials:{mcap:"$108M",tariffCost:"$20M FY2025",refundRatio:"18.5%",forwardBenefit:"$45M/yr tariff elimination",subscriptionRev:"~$100M at >50% margins",cashBurn:"~$53M FY2025 (down from $144M FY2024)"},
-      variantViews:["ITC Insta360 import ban removes primary US competitor — 10-15% addressable market recapture.","Tariff double-benefit: $20M one-time refund + ~$32M/yr GM recovery (32%→37%) = $52M+ first year.","CEO Woodman $4M open-market purchases meaningful at $108M MCap."],
-      recentNotes:[{date:"2026-03-22",title:"THESIS.md updated: 5 pending changes applied — bear case Q3 nuanced (product cycle gap), ITC + AI licensing added to bull, tariff double-benefit quantified, RC 2/5, insider alignment added."}]
-    },
-    HOFT: {
-      company:"Hooker Furnishings", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — no known compliance issues",type:"Soft",dim:"D1",urgency:"week3"}],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)"},variantViews:[],recentNotes:[]
-    },
-    TOI: {
-      company:"Topicus.com Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"European VMS serial acquirer (CSU spin-off); 180+ portfolio companies; ~14x EV/FCF"},
-      variantViews:[],recentNotes:[]
-    },
-    APP: {
-      company:"AppLovin Corporation", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Pure-play AI-driven DSP+SSP; 40% YTD decline creates entry opportunity"},
-      variantViews:[],recentNotes:[]
-    },
-    SPSC: {
-      company:"SPS Commerce, Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"100-quarter compounder at trough (18x vs 50-60x historical); core EDI network moat + MAX AI optionality"},
-      variantViews:[],recentNotes:[]
-    },
-    SGE: {
-      company:"The Sage Group plc", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); measurable AI pricing uplift (5.5%); 37% off highs"},
-      variantViews:[],recentNotes:[]
     },
     TRI: {
       company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
@@ -486,7 +430,7 @@ const D = {
       questions:{
         critical:[{q:"Auto aftermarket split (replacement vs new vehicle production)",resolved:false}],
         open:[
-          {q:"Peer multiples verification (Bossard, Bufab, Würth)",resolved:false},
+          {q:"Peer multiples verification (Bossard, Bufab, Wurth)",resolved:false},
           {q:"Customer concentration risk (top 5 customers)",resolved:false},
           {q:"Manufactured vs distributed revenue split and margin differential",resolved:false}
         ],
@@ -494,14 +438,15 @@ const D = {
       },
       debates:[],
       financials:{
-        revenue:"£223.5M (FY2025)",
+        revenue:"GBP 223.5M (FY2025)",
         ebitMargin:"6.7% (FY2025), 7.2% ex-FX (H1 FY2026)",
         grossMargin:"28.9% (H1 FY2026, +150bps)",
         leverage:"0.9x",
-        mcap:"£81M",
-        bookValue:"£124M (net assets > mcap)",
+        mcap:"GBP 81M",
+        bookValue:"GBP 124M (net assets > mcap)",
         eps:"5.78p (FY2025, tripled YoY)",
-        patternMatch:"30.5/35 (87%, Strong)"
+        patternMatch:"30.5/35 (87%, Strong)",
+        insiderBuying:"Mills 16.3% + Percival 521K shares"
       },
       variantViews:[
         "Market anchors on 38% automotive exposure + 81% drawdown; ignores certification moat (<1% BOM, 100% failure risk = zero switching).",
@@ -521,7 +466,7 @@ const D = {
       catalysts:[
         {date:"Q2 2026",event:"Source FY2025 annual report — verify balance sheet and segment economics",type:"Soft",dim:"D1,D4",urgency:"month2"}
       ],
-      questions:{critical:[{q:"Verify share price and market cap post-reverse-split",resolved:false}],open:[{q:"Cloud Division trajectory — key client loss in Q4 2025",resolved:false},{q:"Customer concentration risk",resolved:false}],resolved:0},
+      questions:{critical:[{q:"Verify share price and market cap post-reverse-split",resolved:false}],open:[{q:"Cloud Division trajectory — key client loss in Q4 2025",resolved:false},{q:"Customer concentration risk",resolved:false},{q:"Dilution history (614.8% share growth) — is it over?",resolved:false}],resolved:0},
       debates:[],
       financials:{
         revenue:"NOK 579M (+16%)",
@@ -532,8 +477,58 @@ const D = {
         insiderBuying:"NOK 1.91M",
         patternMatch:"28/35 (80%, Strong)"
       },
-      variantViews:["Already-delivered turnaround (4Q EBITDA+, net cash, dividend proposed) priced as failed micro-cap. Zero coverage = no distribution mechanism."],
+      variantViews:["Already-delivered turnaround (4Q EBITDA+, net cash, dividend proposed) priced as failed micro-cap. Zero analyst coverage = no distribution mechanism."],
       recentNotes:[{date:"2026-03-23",title:"Added as ACTIVE. Pattern-match 28/35 (Strong). Recovery proven. Verify price/cap post-reverse-split before conviction scoring."}]
+    },
+    KIST: {
+      company:"Kistos Holdings", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"Overdue (2024)",event:"Q10-A Orion extension FID (still feasibility stage, ~450+ days overdue)",type:"Soft",dim:"D1,D4",urgency:"overdue"},
+        {date:"Q1 2026 ending",event:"Oman acquisition close — production doubling catalyst",type:"Soft",dim:"D1",urgency:"overdue"}
+      ],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"Fully unhedged North Sea gas/oil producer; direct TTF/NBP exposure; <1x fwd EV/EBITDA at current TTF. Austin 17.3% insider stake."},
+      variantViews:[],recentNotes:[]
+    },
+    LCUT: {
+      company:"Lifetime Brands", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:2, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"~Apr 23",event:"CBP ACE automated refund system go-live (~45 days from Mar 9 order)",type:"Soft",dim:"D1",urgency:"week3"},
+        {date:"Late Apr/May",event:"Q1 2026 earnings — first refund acknowledgment opportunity",type:"Soft",dim:"D1",urgency:"month2"},
+        {date:"Jul 24",event:"Section 122 replacement tariff expires",type:"Hard",dim:"D1",urgency:"beyond"},
+        {date:"Dec 2026",event:"KitchenAid license expiry (corrected from Jun 2026)",type:"Hard",dim:"D1",urgency:"beyond"}
+      ],
+      questions:{critical:[],open:[{q:"Section 1592 investigation (since 2019) — may delay automated refund via CBP flagging",resolved:false}],resolved:0},
+      debates:[],
+      financials:{revenue:"$648M",EBITDA:"$50.8M",leverage:"2.9x",mcap:"$103.5M",refundEstimate:"$15-30M (14-29% of mcap)",chinaExposure:"85%+"},
+      variantViews:["CIT Mar 4 universal refund order benefits all importers — no individual suit needed. LCUT has 8,300+ customs records confirming IOR."],
+      recentNotes:[]
+    },
+    GPRO: {
+      company:"GoPro", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:2,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — doubly covered (CIT suit Dec 2025 + universal order). Clean record = likely early recipient.",type:"Soft",dim:"D1",urgency:"week3"}],
+      questions:{critical:[],open:[{q:"Audited 10-K needed for balance sheet solvency verification",resolved:false}],resolved:0},debates:[],
+      financials:{mcap:"$108M",tariffCost:"$20M FY2025",refundRatio:"18.5%",forwardBenefit:"$45M/yr tariff elimination",cashBurn:"~$53M FY2025 (improved from $144M FY2024)"},
+      variantViews:["ITC Insta360 import ban removes primary US competitor — 10-15% addressable market recapture.","Tariff double-benefit: $20M one-time refund + ~$32M/yr GM recovery (32%->37%) = $52M+ first year."],
+      recentNotes:[{date:"2026-03-22",title:"THESIS.md updated: bear case Q3 nuanced, ITC + AI licensing added to bull, tariff double-benefit quantified, RC 2/5."}]
+    },
+    HOFT: {
+      company:"Hooker Furnishings", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — no known compliance issues",type:"Soft",dim:"D1",urgency:"week3"}],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)",sourcing:"Vietnam 76% / China 13%"},variantViews:[],recentNotes:[]
     },
     BLMN: {
       company:"Bloomin' Brands", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
@@ -570,65 +565,116 @@ const D = {
       dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
       scenarios:[],fairValue:null,
       catalysts:[
-        {date:"Q1 2026",event:"Q4/FY2025 results — confirm post-divestment margin trajectory",type:"Soft",dim:"D1",urgency:"week3"}
+        {date:"Q1 2026",event:"Q4/FY2025 results — confirm post-divestment margin trajectory (target 15-18%)",type:"Soft",dim:"D1",urgency:"week3"}
       ],
       questions:{critical:[{q:"Segment-level Brakes vs Actuators profitability split",resolved:false}],open:[{q:"Germany 38% revenue concentration risk in EU downturn",resolved:false}],resolved:0},
       debates:[],
       financials:{mcap:"~EUR 261M",ebitdaMargin:"15.5% (Q3 2025)",leverage:"2.1x",marginTarget:"15-18%",drawdown:"53% from 2021 peak",patternMatch:"26.5/35 (76%)"},
-      variantViews:["Post-Oct 2024 auto divestment = fundamentally different business. Pure-play industrial electromagnetics with certification moats. Zero US/UK coverage."],
+      variantViews:["Post-Oct 2024 auto divestment = fundamentally different business. Pure-play industrial electromagnetics with certification moats. Zero US/UK coverage. SB member EUR 2.03M purchase."],
       recentNotes:[]
+    },
+    TOI: {
+      company:"Topicus.com Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"European VMS serial acquirer (CSU spin-off); 180+ portfolio companies; Asseco Poland transformative deal; ~14x EV/FCF; 52% off highs"},
+      variantViews:[],recentNotes:[]
+    },
+    APP: {
+      company:"AppLovin Corporation", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"Pure-play AI-driven DSP+SSP; 40% YTD decline creates entry opportunity; monitor Meta competitive response"},
+      variantViews:[],recentNotes:[]
+    },
+    SPSC: {
+      company:"SPS Commerce, Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"100-quarter compounder at trough (18x vs 50-60x historical); core EDI network moat + MAX AI optionality; activist catalyst (Anson/Irenic)"},
+      variantViews:[],recentNotes:[]
+    },
+    SGE: {
+      company:"The Sage Group plc", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); Intacct growing 23%+; measurable AI pricing uplift (5.5%); 37% off highs"},
+      variantViews:[],recentNotes:[]
+    },
+    TRI_AI: {
+      company:"Thomson Reuters Corp.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:3,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{info:"AI content moat; CoCounsel 1M+ users; 28% GenAI ACV; 39.2% EBITDA margin; FCF $1.95B; prob-wtd FV $97; at $70: 38% upside. Entry below $70."},
+      variantViews:[],recentNotes:[]
     }
   },
   themes: [
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","BLMN","GO","KENDR"],color:"#4ade80"},
     {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH","KIST"],color:"#f59e0b"},
-    {name:"Hidden Value SOTP",status:"STABLE",impact:4,discovery:4,priority:16,tickers:[],color:"#8b9bb4",note:"Both tickers PASSED and archived to Case Studies (Mar 21)"},
-    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["TOI","APP","SPSC","SGE"],color:"#a78bfa",note:"4 tickers MONITORING"},
+    {name:"Hidden Value SOTP",status:"DORMANT",impact:0,discovery:0,priority:0,tickers:[],color:"#8b9bb4",note:"DORMANT — Both tickers PASSED and archived to Case Studies (Mar 21). No active/monitoring tickers."},
+    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["TOI","APP","SPSC","SGE","TRI_AI"],color:"#a78bfa",note:"5 tickers MONITORING. Entry below target prices."},
     {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","GPRO","HOFT"],color:"#64748b"}
   ],
   candidates: [
-    {name:"Tanker/Shipping Supercycle",priority:12,persistence:5,status:"Persistence confirmed (5 briefings). Strong overlap with Hormuz theme."},
-    {name:"European Defense & Infrastructure Boom",priority:12,persistence:2,status:"Persistence confirmed. EUR 600B German spend. Defense ATHs."},
-    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. Discovery 2/5 (front-page news)."},
-    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Contrarian angle."},
-    {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:2,status:"Persistence confirmed. Pentagon 2027 deadline. China export controls."},
-    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in consensus models."}
+    {name:"Tanker/Shipping Supercycle",priority:12,persistence:5,status:"Persistence confirmed (5 briefings). Strong overlap with Hormuz theme. FRO Q1 VLCC $107K/day vs $25K breakeven."},
+    {name:"European Defense & Infrastructure Boom",priority:12,persistence:2,status:"Persistence confirmed. EUR 600B German spend. LMT ATH $692, +40% YTD. RTX backlog $268B."},
+    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. EU CBAM + ammonia spike. Discovery 2/5 (front-page news)."},
+    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Blue Owl -30% YTD. Contrarian angle."},
+    {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:2,status:"Persistence confirmed. Pentagon 2027 deadline. China expanded licensing to samarium/gadolinium/lutetium."},
+    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in any consensus model. -20% to -30% healthcare sector if realized."}
   ],
   priorityQueue: []
 };
 
 // Compute priority queue
 function computePriorityQueue() {
-  const items = [];
-  for (const [sym, t] of Object.entries(D.tickers)) {
-    const posW = t.allocation > 0 ? t.allocation / 10 : 1;
+  var items = [];
+  for (var sym in D.tickers) {
+    var t = D.tickers[sym];
+    var posW = t.allocation > 0 ? t.allocation / 10 : 1;
     if (t.catalysts) {
-      t.catalysts.forEach(c => {
-        let urgMul = 1;
+      t.catalysts.forEach(function(c) {
+        var urgMul = 1;
         if (c.urgency === 'overdue') urgMul = 10;
         else if (c.urgency === 'week2') urgMul = 8;
         else if (c.urgency === 'week3') urgMul = 6;
         else if (c.urgency === 'month2') urgMul = 4;
         else if (c.urgency === 'month3') urgMul = 3;
         else urgMul = 2;
-        const catW = t.allocation > 0 ? 1.5 : 1.0;
-        const score = Math.round(posW * urgMul * catW * 10) / 10;
+        var catW = t.allocation > 0 ? 1.5 : 1.0;
+        var score = Math.round(posW * urgMul * catW * 10) / 10;
         items.push({ticker:sym,event:c.event,date:c.date,score:score,type:'Catalyst',action:'Monitor and assess impact on thesis dimensions'});
       });
     }
     if (t.conviction > 7 && t.rc < 4) {
-      const score = Math.round(posW * 6 * 1.0 * 10) / 10;
+      var score = Math.round(posW * 6 * 1.0 * 10) / 10;
       items.push({ticker:sym,event:'RC gap: conviction '+t.conviction+' but RC '+t.rc+'/5 — resolve critical questions before conviction upgrade',date:'Now',score:score,type:'Research Gap',action:'Run filing-review or transcript-review on outstanding sources'});
     }
   }
-  items.sort((a,b) => b.score - a.score);
+  items.sort(function(a,b){return b.score - a.score});
   D.priorityQueue = items.slice(0, 15);
 }
 computePriorityQueue();
 
 function switchTab(id) {
-  document.querySelectorAll('.content').forEach(e => e.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(e => e.classList.remove('active'));
+  document.querySelectorAll('.content').forEach(function(e){e.classList.remove('active')});
+  document.querySelectorAll('.tab').forEach(function(e){e.classList.remove('active')});
   document.getElementById(id).classList.add('active');
   event.target.classList.add('active');
   renderTab(id);
@@ -642,22 +688,23 @@ function renderTab(id) {
 }
 
 function renderPortfolio() {
-  const el = document.getElementById('portfolio');
-  const p = D.portfolio;
-  const ptickers = Object.entries(D.tickers).filter(([_,t]) => t.allocation > 0);
+  var el = document.getElementById('portfolio');
+  var p = D.portfolio;
+  var ptickers = Object.entries(D.tickers).filter(function(e){return e[1].allocation > 0});
 
-  let alertsHtml = D.alerts.map(a => '<div class="alert alert-'+a.type+'">'+a.text+'</div>').join('');
+  var alertsHtml = D.alerts.map(function(a){return '<div class="alert alert-'+a.type+'">'+a.text+'</div>'}).join('');
 
-  let prioHtml = D.priorityQueue.slice(0,10).map(item =>
-    '<div class="priority-item"><span class="priority-score">'+item.score+'</span><strong><span class="ticker-link" onclick="openOverlay(\''+item.ticker+'\')">'+item.ticker+'</span></strong> &mdash; '+item.event+'<div class="priority-action">'+item.date+' &middot; '+item.type+'</div></div>'
-  ).join('');
+  var prioHtml = D.priorityQueue.slice(0,10).map(function(item){
+    return '<div class="priority-item"><span class="priority-score">'+item.score+'</span><strong><span class="ticker-link" onclick="openOverlay(\''+item.ticker+'\')">'+item.ticker+'</span></strong> &mdash; '+item.event+'<div class="priority-action">'+item.date+' &middot; '+item.type+'</div></div>';
+  }).join('');
 
-  let posRows = ptickers.map(([s,t]) => {
-    const cwa = (t.allocation * t.conviction / 10).toFixed(2);
-    const convColor = t.conviction>=9?'#4ade80':t.conviction>=8?'#60a5fa':'#fbbf24';
-    const aColor = t.clusterA>=100?'#4ade80':t.clusterA>=80?'#60a5fa':'#fbbf24';
-    const bColor = t.clusterB>=80?'#4ade80':t.clusterB>=70?'#60a5fa':'#fbbf24';
-    return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> <span class="badge badge-investment">INV</span></td><td>'+t.theme+'</td><td><strong>'+t.allocation+'%</strong></td><td style="color:'+convColor+'">'+t.conviction+'/10</td><td style="color:'+aColor+'">'+t.clusterA+'%</td><td style="color:'+bColor+'">'+t.clusterB+'%</td><td>'+t.rc+'/5</td><td>'+cwa+'</td><td>'+(t.fairValue?t.fairValue.probWeightedFV:'—')+'</td></tr>';
+  var posRows = ptickers.map(function(e){
+    var s=e[0],t=e[1];
+    var cwa = (t.allocation * t.conviction / 10).toFixed(2);
+    var convColor = t.conviction>=9?'#4ade80':t.conviction>=8?'#60a5fa':'#fbbf24';
+    var aColor = t.clusterA>=100?'#4ade80':t.clusterA>=80?'#60a5fa':'#fbbf24';
+    var bColor = t.clusterB>=80?'#4ade80':t.clusterB>=70?'#60a5fa':'#fbbf24';
+    return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> <span class="badge badge-investment">INV</span></td><td>'+t.theme+'</td><td><strong>'+t.allocation+'%</strong></td><td style="color:'+convColor+'">'+t.conviction+'/10</td><td style="color:'+aColor+'">'+t.clusterA+'%</td><td style="color:'+bColor+'">'+t.clusterB+'%</td><td>'+t.rc+'/5</td><td>'+cwa+'</td><td>'+(t.fairValue?t.fairValue.probWeightedFV:'--')+'</td></tr>';
   }).join('');
 
   el.innerHTML = '<div class="section-title">Alerts</div>'+alertsHtml+
@@ -671,16 +718,16 @@ function renderPortfolio() {
     '<div class="card"><h3>Conviction Metrics</h3>'+
     '<div class="metric"><span class="label">Wtd Avg Conviction</span><span class="value" style="color:#4ade80">'+p.wtdConviction+'/10</span></div>'+
     '<div class="metric"><span class="label">Total CWA</span><span class="value">'+p.totalCWA+'</span></div>'+
-    ptickers.map(([s,t]) => '<div class="metric"><span class="label">'+s+' CWA</span><span class="value">'+(t.allocation*t.conviction/10).toFixed(2)+'</span></div>').join('')+
+    ptickers.map(function(e){return '<div class="metric"><span class="label">'+e[0]+' CWA</span><span class="value">'+(e[1].allocation*e[1].conviction/10).toFixed(2)+'</span></div>'}).join('')+
     '<div class="chart-container-sm"><canvas id="typeDoughnut"></canvas></div></div>'+
     '<div class="card"><h3>Conviction vs Allocation</h3><div class="chart-container"><canvas id="bubbleChart"></canvas></div></div></div>'+
     '<div class="section-title">Priority Queue</div><div class="grid-2">'+prioHtml+'</div>'+
     '<div class="section-title">Investment Positions</div><div class="card" style="overflow-x:auto"><table>'+
     '<tr><th>Ticker</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>Cluster A</th><th>Cluster B</th><th>RC</th><th>CWA</th><th>Fair Value</th></tr>'+posRows+'</table></div>'+
     '<div class="section-title">Exposure Analysis</div><div class="grid">'+
-    '<div class="card"><h3>Geopolitical (37%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">CF + GTT exposed to Hormuz. S3 base case 55%. Selective passage emerging but ME exports -61%. Ras Laffan 17% destroyed (3-5yr repair). GTT Hormuz correlation only ~3-4% of YTD move.</p></div>'+
-    '<div class="card"><h3>Micro-Execution (77%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">VOW: Maritime margin normalization (Q1 May 20). CF: NOLA-ME spread + Tampa settlement. GTT: FID pipeline conversion. Imminent: Tampa NH3 (late Mar) + USDA (Mar 31).</p></div>'+
-    '<div class="card"><h3>Concentration Risk</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">77% deployed across 3 positions. VOW Q1 (May 20) = 40% exposure. Hormuz duration = 37%. No hedging. Cash 23% buffer. 3 currencies unhedged (NOK, EUR, USD). No recession hedge.</p></div></div>';
+    '<div class="card"><h3>Geopolitical (37%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">CF + GTT exposed to Hormuz. S3 base case 55%. Day 24: selective passage emerging but ME exports -61%. Ras Laffan 17% destroyed (3-5yr repair). Israel struck South Pars + killed Intel Minister. Brent peaked $126. GTT Hormuz correlation only ~3-4% of YTD move — primarily structural, not geopolitical.</p></div>'+
+    '<div class="card"><h3>Micro-Execution (77%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">VOW: Maritime margin normalization (Q1 May 20). CF: NOLA-ME spread + Tampa settlement (imminent) + USDA Mar 31. GTT: FID pipeline conversion (Q1 update Apr 22). Concentration: VOW Q1 May 20 = 40% of portfolio. Hormuz duration = 37%.</p></div>'+
+    '<div class="card"><h3>Concentration & Correlation</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">77% deployed across 3 positions. VOW uncorrelated to Hormuz (cruise wastewater). CF-GTT correlated but diverge on mechanism (CF immediate commodity, GTT lagged structural). Cash 23% buffer. 3 currencies unhedged (NOK, EUR, USD). No recession hedge. If Hormuz resolves: CF -10-20% immediately, GTT only ~3-4%.</p></div></div>';
 
   setTimeout(function(){
     new Chart(document.getElementById('allocDoughnut'),{type:'doughnut',data:{labels:ptickers.map(function(e){return e[0]}).concat(['Cash']),datasets:[{data:ptickers.map(function(e){return e[1].allocation}).concat([p.cashPct]),backgroundColor:['#22c55e','#3b82f6','#8b5cf6','#475569'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#94a3b8',font:{size:11},padding:8}}}}});
@@ -701,7 +748,7 @@ function renderResearch() {
 
   var dHtml = scored.filter(function(e){return e[1].debates&&e[1].debates.length>0}).map(function(e){var s=e[0],t=e[1];var op=t.debates.filter(function(d){return d.resolution==='OPEN'}).length;var re=t.debates.filter(function(d){return d.resolution==='RESOLVED'}).length;var pa=t.debates.filter(function(d){return d.resolution==='PARTIALLY COUNTERED'}).length;return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.debates.length+' vectors</h3><div class="chart-container-sm"><canvas id="dChart_'+s+'"></canvas></div><div style="font-size:12px;color:#94a3b8">'+op+' open, '+pa+' partial, '+re+' resolved</div></div>'}).join('');
 
-  var dimRows = scored.map(function(e){var s=e[0],t=e[1];var cells='';for(var d=1;d<=8;d++){var v=t.dimensions['D'+d];var c=v>=5?'#4ade80':v>=4?'#60a5fa':v>=3?'#fbbf24':'#f87171';cells+='<td style="color:'+c+';font-weight:600">'+v+'/5</td>'}var ac=t.clusterA>=80?'#4ade80':'#fbbf24';var bc=t.clusterB>=80?'#4ade80':'#fbbf24';return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span></td>'+cells+'<td style="color:'+ac+'">'+t.clusterA+'%</td><td style="color:'+bc+'">'+t.clusterB+'%</td></tr>'}).join('');
+  var dimRows = scored.map(function(e){var s=e[0],t=e[1];var cells='';for(var d=1;d<=8;d++){var v=t.dimensions['D'+d];var c=v>=5?'#4ade80':v>=4?'#60a5fa':v>=3?'#fbbf24':'#f87171';cells+='<td style="color:'+c+';font-weight:600">'+(v>=6?v+'/5':v+'/5')+'</td>'}var ac=t.clusterA>=80?'#4ade80':'#fbbf24';var bc=t.clusterB>=80?'#4ade80':'#fbbf24';return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span></td>'+cells+'<td style="color:'+ac+'">'+t.clusterA+'%</td><td style="color:'+bc+'">'+t.clusterB+'%</td></tr>'}).join('');
 
   el.innerHTML = '<div class="section-title">Research Confidence</div><div class="grid">'+rcHtml+'</div>'+
     '<div class="section-title">Questions Tracker</div><div class="grid">'+qHtml+'</div>'+
@@ -725,10 +772,10 @@ function renderResearch() {
 function renderThemes() {
   var el = document.getElementById('themes');
   var themeRows = D.themes.map(function(th,i){
-    var statusPill = th.status==='STRENGTHENING'?'green':th.status==='STABLE'?'blue':th.status==='WEAKENING'?'amber':'red';
-    var prioColor = th.priority>=20?'#4ade80':th.priority>=12?'#60a5fa':'#94a3b8';
+    var statusPill = th.status==='STRENGTHENING'?'green':th.status==='STABLE'?'blue':th.status==='WEAKENING'?'amber':th.status==='DORMANT'?'grey':'red';
+    var prioColor = th.priority>=20?'#4ade80':th.priority>=12?'#60a5fa':th.priority>0?'#94a3b8':'#64748b';
     var tickerLinks = th.tickers.length>0?th.tickers.map(function(t){return '<span class="ticker-link" onclick="openOverlay(\''+t+'\')">'+t+'</span>'}).join(', '):(th.note||'<span style="color:#64748b">None active</span>');
-    return '<tr><td>'+(i+1)+'</td><td style="font-weight:600;color:'+th.color+'">'+th.name+'</td><td><span class="pill pill-'+statusPill+'">'+th.status+'</span></td><td>'+th.impact+'/5</td><td>'+th.discovery+'/5</td><td style="font-weight:700;color:'+prioColor+'">'+th.priority+'</td><td>'+tickerLinks+'</td></tr>';
+    return '<tr><td>'+(i+1)+'</td><td style="font-weight:600;color:'+th.color+'">'+th.name+'</td><td><span class="pill pill-'+statusPill+'">'+th.status+'</span></td><td>'+(th.impact||'--')+'/5</td><td>'+(th.discovery||'--')+'/5</td><td style="font-weight:700;color:'+prioColor+'">'+(th.priority||'--')+'</td><td>'+tickerLinks+'</td></tr>';
   }).join('');
 
   var themeCards = D.themes.filter(function(th){return th.tickers.length>0}).map(function(th){
@@ -737,7 +784,7 @@ function renderThemes() {
       var badge = t.portfolioType?'<span class="badge badge-'+t.portfolioType.toLowerCase()+'">'+t.portfolioType+'</span>':'<span class="badge badge-'+t.status.toLowerCase()+'">'+t.status+'</span>';
       return '<div class="metric"><span class="label"><span class="ticker-link" onclick="openOverlay(\''+sym+'\')">'+sym+'</span> '+badge+'</span><span class="value">'+t.conviction+'/10'+(t.allocation>0?' ('+t.allocation+'%)':'')+'</span></div>';
     }).join('');
-    return '<div class="card"><h3 style="color:'+th.color+'">'+th.name+'</h3><div class="metric"><span class="label">Priority</span><span class="value" style="color:'+th.color+'">'+th.priority+'/25</span></div><div class="metric"><span class="label">Impact x Discovery</span><span class="value">'+th.impact+' x '+th.discovery+'</span></div><div class="metric"><span class="label">Status</span><span class="value"><span class="pill pill-blue">'+th.status+'</span></span></div><h4>Tickers</h4>'+tickerMetrics+'</div>';
+    return '<div class="card"><h3 style="color:'+th.color+'">'+th.name+'</h3><div class="metric"><span class="label">Priority</span><span class="value" style="color:'+th.color+'">'+(th.priority||'--')+'/25</span></div><div class="metric"><span class="label">Impact x Discovery</span><span class="value">'+(th.impact||'--')+' x '+(th.discovery||'--')+'</span></div><div class="metric"><span class="label">Status</span><span class="value"><span class="pill pill-blue">'+th.status+'</span></span></div><h4>Tickers</h4>'+tickerMetrics+'</div>';
   }).join('');
 
   var candidateCards = D.candidates.map(function(c){
@@ -757,18 +804,19 @@ function renderPipeline() {
 
   var activeCards = activeNoPos.map(function(e){
     var s=e[0],t=e[1];
-    var nextAction = t.catalysts&&t.catalysts.length>0?t.catalysts[0].event:'No near-term catalyst';
-    var blocker = t.conviction>=7&&t.clusterA>=70?'Meets INVESTMENT threshold — ready for portfolio entry':'Conviction '+t.conviction+'/10, Cluster A '+t.clusterA+'%'+(t.clusterA<70?' (needs >=70%)':'');
-    return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-active">ACTIVE</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value" style="color:#60a5fa">'+t.conviction+'/10</span></div><div class="metric"><span class="label">Cluster A / B</span><span class="value">'+t.clusterA+'% / '+t.clusterB+'%</span></div><div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div><h4>RC Progress</h4><div class="gauge"><div class="gauge-fill gauge-green" style="width:'+t.rc*20+'%"></div></div><h4>Promotion Status</h4><div style="font-size:12px;color:'+(t.conviction>=7&&t.clusterA>=70?'#4ade80':'#f87171')+'">'+blocker+'</div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
+    var nextAction = t.catalysts&&t.catalysts.length>0?t.catalysts[0].event:'No near-term catalyst defined';
+    var blocker = t.conviction>=7&&t.clusterA>=70?'Meets INVESTMENT threshold — ready for portfolio entry decision':'Conviction '+t.conviction+'/10, Cluster A '+t.clusterA+'%'+(t.clusterA<70&&t.conviction>0?' (needs >=70%)':'')+(t.conviction===0?' — unscored, needs conviction scoring':'');
+    return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-active">ACTIVE</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+(t.conviction>=7?'#60a5fa':'#fbbf24')+'">'+t.conviction+'/10</span></div><div class="metric"><span class="label">Cluster A / B</span><span class="value">'+(t.clusterA>0?t.clusterA+'% / '+t.clusterB+'%':'Unscored')+'</span></div><div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div><h4>RC Progress</h4><div class="gauge"><div class="gauge-fill '+(t.rc>=4?'gauge-green':t.rc>=2?'gauge-amber':'gauge-red')+'" style="width:'+t.rc*20+'%"></div></div><h4>Promotion Status</h4><div style="font-size:12px;color:'+(t.conviction>=7&&t.clusterA>=70?'#4ade80':'#f87171')+'">'+blocker+'</div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
   }).join('');
 
   var monCards = monitoring.map(function(e){
     var s=e[0],t=e[1];
-    var nextAction = t.catalysts&&t.catalysts.length>0?t.catalysts[0].event:'Awaiting data';
+    var nextAction = t.catalysts&&t.catalysts.length>0?t.catalysts[0].event:'Awaiting data or catalyst';
     return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-monitoring">MONITORING</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value">'+t.conviction+'/10</span></div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
   }).join('');
 
-  el.innerHTML = '<div class="section-title">Promotion Readiness — Active (No Position)</div>'+(activeNoPos.length===0?'<div class="card"><p style="color:#94a3b8">No active tickers without positions meeting threshold.</p></div>':'')+
+  el.innerHTML = '<div class="section-title">Promotion Readiness — Active (No Position)</div>'+
+    (activeNoPos.length===0?'<div class="card"><p style="color:#94a3b8">No active tickers without positions.</p></div>':'')+
     '<div class="grid">'+activeCards+'</div>'+
     '<div class="section-title">Monitoring Tickers</div><div class="grid">'+monCards+'</div>';
 }
@@ -836,25 +884,25 @@ function openOverlay(sym) {
   var dimClusters = ['A','A','A','B','B','B','B','B'];
   for (var i=0;i<8;i++){
     var score = t.dimensions['D'+(i+1)];
-    var c = score>=5?'#4ade80':score>=4?'#60a5fa':score>=3?'#fbbf24':'#f87171';
-    dimTable += '<tr><td>'+dimNames[i]+'</td><td style="color:'+c+';font-weight:700">'+score+'/5</td><td>'+dimClusters[i]+'</td></tr>';
+    var c = score>=5?'#4ade80':score>=4?'#60a5fa':score>=3?'#fbbf24':score>0?'#f87171':'#64748b';
+    dimTable += '<tr><td>'+dimNames[i]+'</td><td style="color:'+c+';font-weight:700">'+(score>0?score+'/5':'--')+'</td><td>'+dimClusters[i]+'</td></tr>';
   }
   dimTable += '</table>';
 
   var badge = t.portfolioType?'<span class="badge badge-'+t.portfolioType.toLowerCase()+'">'+t.portfolioType+'</span>':'';
   var statusBadge = '<span class="badge badge-'+t.status.toLowerCase()+'">'+t.status+'</span>';
   var allocSpan = t.allocation>0?'<span style="font-size:13px;color:#4ade80;margin-left:8px;font-weight:600">'+t.allocation+'% allocation</span>':'';
-  var convColor = t.conviction>=9?'#4ade80':'#60a5fa';
-  var aColor = t.clusterA>=80?'#4ade80':'#fbbf24';
-  var bColor = t.clusterB>=80?'#4ade80':'#fbbf24';
+  var convColor = t.conviction>=9?'#4ade80':t.conviction>=7?'#60a5fa':'#fbbf24';
+  var aColor = t.clusterA>=80?'#4ade80':t.clusterA>0?'#fbbf24':'#64748b';
+  var bColor = t.clusterB>=80?'#4ade80':t.clusterB>0?'#fbbf24':'#64748b';
 
   content.innerHTML = '<button class="overlay-close" onclick="closeOverlay()">&times;</button>'+
     '<h2 style="font-size:20px;font-weight:700;color:#f1f5f9;margin-bottom:4px">'+sym+' &mdash; '+t.company+'</h2>'+
     '<div style="margin-bottom:16px">'+badge+' '+statusBadge+' <span style="font-size:13px;color:#94a3b8;margin-left:8px">'+t.theme+'</span>'+allocSpan+'</div>'+
     '<div class="grid-2" style="margin-bottom:16px"><div>'+
     '<div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+convColor+';font-size:20px">'+t.conviction+'/10</span></div>'+
-    '<div class="metric"><span class="label">Cluster A</span><span class="value" style="color:'+aColor+'">'+t.clusterA+'%</span></div>'+
-    '<div class="metric"><span class="label">Cluster B</span><span class="value" style="color:'+bColor+'">'+t.clusterB+'%</span></div>'+
+    '<div class="metric"><span class="label">Cluster A</span><span class="value" style="color:'+aColor+'">'+(t.clusterA>0?t.clusterA+'%':'--')+'</span></div>'+
+    '<div class="metric"><span class="label">Cluster B</span><span class="value" style="color:'+bColor+'">'+(t.clusterB>0?t.clusterB+'%':'--')+'</span></div>'+
     '<div class="metric"><span class="label">Research Confidence</span><span class="value">'+t.rc+'/5</span></div></div>'+
     '<div><div class="radar-container"><canvas id="radarChart"></canvas></div></div></div>'+
     fvHtml+scenarioHtml+dimTable+catalystHtml+questionsHtml+debatesHtml+financialsHtml+variantHtml+notesHtml;
