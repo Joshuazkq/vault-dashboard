@@ -406,12 +406,14 @@ const D = {
     },
     GPRO: {
       company:"GoPro", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:2,
       dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
       scenarios:[],fairValue:null,
       catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — doubly covered (CIT suit + universal order)",type:"Soft",dim:"D1",urgency:"week3"}],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{mcap:"$108M",tariffCost:"$20M FY2025"},variantViews:[],recentNotes:[]
+      questions:{critical:[],open:[{q:"Audited 10-K needed for balance sheet solvency verification",resolved:false},{q:"ITC Insta360 exclusion final outcome (Jan 2026?)",resolved:false}],resolved:0},debates:[],
+      financials:{mcap:"$108M",tariffCost:"$20M FY2025",refundRatio:"18.5%",forwardBenefit:"$45M/yr tariff elimination",subscriptionRev:"~$100M at >50% margins",cashBurn:"~$53M FY2025 (down from $144M FY2024)"},
+      variantViews:["ITC Insta360 import ban removes primary US competitor — 10-15% addressable market recapture.","Tariff double-benefit: $20M one-time refund + ~$32M/yr GM recovery (32%→37%) = $52M+ first year.","CEO Woodman $4M open-market purchases meaningful at $108M MCap."],
+      recentNotes:[{date:"2026-03-22",title:"THESIS.md updated: 5 pending changes applied — bear case Q3 nuanced (product cycle gap), ITC + AI licensing added to bull, tariff double-benefit quantified, RC 2/5, insider alignment added."}]
     },
     HOFT: {
       company:"Hooker Furnishings", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
