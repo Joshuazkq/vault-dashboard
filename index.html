@@ -463,6 +463,119 @@ const D = {
       questions:{critical:[],open:[],resolved:0},debates:[],
       financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); measurable AI pricing uplift (5.5%); 37% off highs"},
       variantViews:[],recentNotes:[]
+    },
+    TRI: {
+      company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
+      allocation:0, conviction:8, clusterA:80, clusterB:84, rc:5,
+      dimensions:{D1:4,D2:4,D3:4,D4:4,D5:4,D6:5,D7:4,D8:4},
+      scenarios:[
+        {name:"Bear (auto downturn)",target:"40-55p",prob:25},
+        {name:"Base (steady improvement)",target:"90-110p",prob:45},
+        {name:"Bull (rebuild phase)",target:"130-160p",prob:30}
+      ],
+      fairValue:{
+        baseCaseFV:"100p",probWeightedFV:"~95p",bearCaseFV:"40p",bullCaseFV:"160p",
+        methodology:"SOTP + Peer Multiples",thesisType:"Turnaround + Hidden Franchise",lastUpdated:"2026-03-22"
+      },
+      catalysts:[
+        {date:"Jul 2026",event:"FY2026 Final Results — key test of 10% margin target progress",type:"Hard",dim:"D1,D2",urgency:"beyond"},
+        {date:"Nov 2026",event:"H1 FY2027 Interim Results — rebuild midpoint",type:"Hard",dim:"D1",urgency:"beyond"},
+        {date:"TBD",event:"Analyst initiation (Panmure Liberum + Zeus Capital visible)",type:"Soft",dim:"D2,D3",urgency:"month3"}
+      ],
+      questions:{
+        critical:[{q:"Auto aftermarket split (replacement vs new vehicle production)",resolved:false}],
+        open:[
+          {q:"Peer multiples verification (Bossard, Bufab, Würth)",resolved:false},
+          {q:"Customer concentration risk (top 5 customers)",resolved:false},
+          {q:"Manufactured vs distributed revenue split and margin differential",resolved:false}
+        ],
+        resolved:15
+      },
+      debates:[],
+      financials:{
+        revenue:"£223.5M (FY2025)",
+        ebitMargin:"6.7% (FY2025), 7.2% ex-FX (H1 FY2026)",
+        grossMargin:"28.9% (H1 FY2026, +150bps)",
+        leverage:"0.9x",
+        mcap:"£81M",
+        bookValue:"£124M (net assets > mcap)",
+        eps:"5.78p (FY2025, tripled YoY)",
+        patternMatch:"30.5/35 (87%, Strong)"
+      },
+      variantViews:[
+        "Market anchors on 38% automotive exposure + 81% drawdown; ignores certification moat (<1% BOM, 100% failure risk = zero switching).",
+        "0.53x EV/Sales, ~7x FY26E EBIT vs Bossard 12-15x, Bufab 21x — structural discount for identical business model.",
+        "Seven independent upside paths (margin, coverage, M&A, smart infra, NA, Saudi, institutional threshold) — 3+ showing early evidence.",
+        "Self-funding turnaround: positive FCF, sub-1x leverage, no dilution risk."
+      ],
+      recentNotes:[
+        {date:"2026-03-22",title:"Pattern-match 30.5/35 (Strong). Conviction scored 8/10. RC 5/5. Deep dive priority — VOW archetype (drawdown + new mgmt + certification moat + margin inflection + coverage gap)."}
+      ]
+    },
+    ARR: {
+      company:"Arribatec Group ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"Q2 2026",event:"Source FY2025 annual report — verify balance sheet and segment economics",type:"Soft",dim:"D1,D4",urgency:"month2"}
+      ],
+      questions:{critical:[{q:"Verify share price and market cap post-reverse-split",resolved:false}],open:[{q:"Cloud Division trajectory — key client loss in Q4 2025",resolved:false},{q:"Customer concentration risk",resolved:false}],resolved:0},
+      debates:[],
+      financials:{
+        revenue:"NOK 579M (+16%)",
+        ebitda:"~NOK 62M (4 consecutive quarters positive)",
+        netCash:"NOK 73.8M",
+        dividend:"NOK 1.00/share (~12.5% yield)",
+        grossMargin:"74.6%",
+        insiderBuying:"NOK 1.91M",
+        patternMatch:"28/35 (80%, Strong)"
+      },
+      variantViews:["Already-delivered turnaround (4Q EBITDA+, net cash, dividend proposed) priced as failed micro-cap. Zero coverage = no distribution mechanism."],
+      recentNotes:[{date:"2026-03-23",title:"Added as ACTIVE. Pattern-match 28/35 (Strong). Recovery proven. Verify price/cap post-reverse-split before conviction scoring."}]
+    },
+    BLMN: {
+      company:"Bloomin' Brands", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"May 2026",event:"Q1 CY2026 results — key comp trend confirmation",type:"Soft",dim:"D1",urgency:"month2"}
+      ],
+      questions:{critical:[{q:"10-K covenant headroom and maturity schedule",resolved:false}],open:[{q:"Beef inflation trajectory vs mid-11% margin guidance",resolved:false}],resolved:0},
+      debates:[],
+      financials:{mcap:"~$496M",revenue:"~$3.95B",netDebt:"~$728M",restaurantMargins:"~11%",evRevenue:"~0.3x",patternMatch:"27.5/35 (79%)"},
+      variantViews:["CEO+CFO $2M cluster buy + Starboard activist + Outback traffic first positive since Q4 2021 (+90bps industry outperformance)."],
+      recentNotes:[]
+    },
+    GO: {
+      company:"Grocery Outlet", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"May 2026",event:"Securities class action lead plaintiff deadline",type:"Hard",dim:"D4",urgency:"month2"},
+        {date:"Q2 2026",event:"Q2 comp confirmation — WOW strategy working?",type:"Soft",dim:"D1",urgency:"month3"}
+      ],
+      questions:{critical:[{q:"Securities class action scope and potential liability",resolved:false}],open:[{q:"IO model operator retention rates post-store closures",resolved:false}],resolved:0},
+      debates:[],
+      financials:{mcap:"~$568M",revenue:"$4.6-4.72B (FY2026 guided)",stores:"~520",storeClosures:"36 announced",drawdown:"85% from peak",patternMatch:"27.5/35 (79%)"},
+      variantViews:["CEO Potter $1.69M purchase (99% increase in holdings) at peak distress. IO franchise model is genuinely unique in US grocery."],
+      recentNotes:[]
+    },
+    KENDR: {
+      company:"Kendrion N.V.", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
+      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      scenarios:[],fairValue:null,
+      catalysts:[
+        {date:"Q1 2026",event:"Q4/FY2025 results — confirm post-divestment margin trajectory",type:"Soft",dim:"D1",urgency:"week3"}
+      ],
+      questions:{critical:[{q:"Segment-level Brakes vs Actuators profitability split",resolved:false}],open:[{q:"Germany 38% revenue concentration risk in EU downturn",resolved:false}],resolved:0},
+      debates:[],
+      financials:{mcap:"~EUR 261M",ebitdaMargin:"15.5% (Q3 2025)",leverage:"2.1x",marginTarget:"15-18%",drawdown:"53% from 2021 peak",patternMatch:"26.5/35 (76%)"},
+      variantViews:["Post-Oct 2024 auto divestment = fundamentally different business. Pure-play industrial electromagnetics with certification moats. Zero US/UK coverage."],
+      recentNotes:[]
     }
   },
   themes: [
