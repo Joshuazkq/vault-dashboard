@@ -138,14 +138,18 @@ const D = {
     totalCWA: 7.15
   },
   alerts: [
-    {type:"hormuz",text:"<strong>CF</strong> — Tampa ammonia settlement imminent (late Mar/early Apr). First war-conditions NH3 benchmark. 30.7% of CF revenue. Pre-defined: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6 upgrade."},
+    {type:"red",text:"<strong>CRITICAL — Trump 48-Hour Ultimatum (expires ~23:44 GMT Mar 24)</strong> — \"If Iran doesn't FULLY OPEN the Strait of Hormuz within 48 HOURS, the US will hit and obliterate their POWER PLANTS.\" Iran response: Hormuz will be \"completely closed\" if attacked. Binary catalyst: S1/S2 enrichment OR S4 escalation to 35-40%. Do NOT rebalance before deadline passes."},
+    {type:"hormuz",text:"<strong>Back-Channel Ceasefire Talks (NEW)</strong> — Trump envoys Witkoff + Kushner engaged via Egypt/Qatar/UK. Iran conditions: ceasefire guarantees + compensation. US demands: 5yr missile suspension + enrichment halt. First credible S1/S2 path since Day 1. Contradicted by simultaneous power plant ultimatum."},
+    {type:"hormuz",text:"<strong>Iraq Force Majeure</strong> — Iraq Oil Ministry ordered full production shutdown at foreign-operated concession areas. Basra Oil output slashed from 3.3 MMbpd to ~900K bpd. Widens supply deficit beyond Hormuz. S4 probability reassessed upward."},
+    {type:"hormuz",text:"<strong>CF</strong> — NOLA ammonia ~$450/MT, <strong>down 23.7% m/m</strong>. New US Gulf capacity (Gulf Coast Ammonia + Woodside Beaumont) ~2.3 MMT/yr offsets ~4.3 MMT Hormuz loss. Ammonia LESS tight than urea. Bearish for CF ammonia segment (30.7% of rev)."},
+    {type:"hormuz",text:"<strong>CF</strong> — Tampa ammonia settlement imminent (late Mar/early Apr). First war-conditions NH3 benchmark. Triggers: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6 upgrade."},
     {type:"hormuz",text:"<strong>CF</strong> — USDA Prospective Plantings Mar 31 (8 days). Binary signal: corn >93M = demand intact; <92M = volume headwind 10%+."},
-    {type:"svm",text:"<strong>VOW</strong> — Stock ~NOK 2.06 (Mar 18 thin-volume selloff, -19.8% on 10K shares). No news catalyst. Base NOK 5.76 = +180% upside. Monitor for follow-through or recovery."},
-    {type:"hormuz",text:"<strong>Hormuz Day 24 (Mar 23)</strong> — Iran allowing partial transits to friendly countries. ME exports still -61%. Israel struck South Pars + killed Intelligence Minister. Brent peaked $126. S3 at 55% intact."},
     {type:"hormuz",text:"<strong>CF</strong> — DOJ antitrust probe: CF, Nutrien, Mosaic, Koch, Yara under investigation. Civil AND criminal. Two class-action lawsuits. Monitor Q1 10-Q (May)."},
+    {type:"hormuz",text:"<strong>GTT</strong> — March 2026 order intake: 6 LNG carriers (Samsung, HD KSOE, Hudong-Zhonghua). All European ship-owner orders. FID pipeline active. Q1 2026 activity update Apr 22."},
+    {type:"svm",text:"<strong>VOW</strong> — Monday data: Q4 rev NOK 347.4M (+30.7% YoY, ATH). FY2025 net loss NOK 279.5M driven by NOK 119.3M Industrial impairments (non-cash). Maritime + Aftersales at records. AGM date pending."},
     {type:"svm",text:"<strong>TRI</strong> — Added ACTIVE Mar 22 with conviction 8/10, RC 5/5. Pattern-match 30.5/35 (87%, Strong). Deep dive priority."},
     {type:"svm",text:"<strong>ARR</strong> — Added ACTIVE Mar 23. Pattern-match 28/35 (80%, Strong). Recovery already proven (4Q EBITDA+, net cash, dividend). Verify price/cap post-reverse-split."},
-    {type:"hormuz",text:"<strong>GTT</strong> — Q1 2026 activity update Apr 22. FY2026 guidance EUR 740-780M vs consensus EUR 902.8M. Key sentiment catalyst."}
+    {type:"hormuz",text:"<strong>Hormuz Day 24 (Mar 23)</strong> — Traffic plunged 95%. Over 150 ships anchored. Iran selective passage framework for friendly countries. Brent peaked $126. $20B DFC-Chubb maritime reinsurance facility activated but limited uptake."}
   ],
   tickers: {
     VOW: {
@@ -196,16 +200,18 @@ const D = {
         {vector:"Probability-Weighted EV Below Market",side:"BULL",resolution:"RESOLVED",impact:"SOTP v2 corrected: prob-weighted NOK 7.54 vs price NOK 2.37. Concession resolved."}
       ],
       financials:{
-        revenue:"NOK 1,035M (FY2025)",
+        revenue:"NOK 1,034M (FY2025)",
         adjEBITDA:"NOK -49M (FY2025, Industrial drag)",
+        Q4revenue:"NOK 347.4M (+30.7% YoY, ATH)",
+        Q4adjEBITDA:"NOK 15.8M",
         maritimeRev:"NOK 536M (+25%)",
         maritimeEBITDA:"NOK 34M (6.3% margin, Q2 catch-up depressed)",
         aftersalesRev:"NOK 236M (+14%)",
         aftersalesEBITDA:"NOK 42M (17.8% margin)",
         industrialRev:"NOK 262M (-31%)",
-        industrialEBITDA:"NOK -102M",
+        industrialEBITDA:"NOK -102M (incl NOK 119.3M impairments)",
         netDebt:"NOK 362M",
-        backlog:"NOK 1.7B to 2034",
+        backlog:"NOK 1.7B + NOK 400M options to 2034",
         marketCap:"~NOK 691M (~$63M USD)",
         sharesOut:"291.4M",
         equityRatio:"21.3%"
@@ -218,11 +224,11 @@ const D = {
         "Iran Hormuz toll proposal is irrelevant to VOW — cruise wastewater has zero energy security exposure. Portfolio diversification intact."
       ],
       recentNotes:[
+        {date:"2026-03-23",title:"Monday data: Q4 rev NOK 347.4M ATH (+30.7%). FY2025 net loss NOK 279.5M (Industrial impairments, non-cash). Gorbani bought 105K shares at NOK 2.58. Covenant waivers confirmed Q4/Q1."},
         {date:"2026-03-21",title:"Conviction 9->10/10. D1 5->6/5, D2 5->6/5 (first 6/5 scores in vault). 24% margin slide + single division >2x group EV. Cluster A 107%."},
         {date:"2026-03-19",title:"News Scan: VOW -19.8% thin-volume selloff on 10K shares. No catalyst. Base NOK 5.76 = +180% upside at ~NOK 2.06."},
         {date:"2026-03-17",title:"Intel Brief: VP Sales Gorbani bought 105K shares at NOK 2.58. Q1 results May 20. NCLH ordered 3 new vessels (2036-37). Arctic ECA entered force."},
-        {date:"2026-03-15",title:"SOTP v2 revaluation complete. Base NOK 5.76, prob-weighted NOK 7.54. Conviction 9/10 confirmed. RC upgraded 3->4/5."},
-        {date:"2026-03-13",title:"Portfolio entry: INVESTMENT at 40%. Conviction 9/10, Cluster A 93%."}
+        {date:"2026-03-15",title:"SOTP v2 revaluation complete. Base NOK 5.76, prob-weighted NOK 7.54. Conviction 9/10 confirmed. RC upgraded 3->4/5."}
       ]
     },
     CF: {
@@ -240,8 +246,8 @@ const D = {
         methodology:"Scenario-Weighted P/E",thesisType:"Cyclical/Commodity + Event-Driven",lastUpdated:"2026-03-21"
       },
       catalysts:[
+        {date:"~Mar 24",event:"Trump 48-hour ultimatum expires (~23:44 GMT). Binary: Iran opens (S1/S2) OR US strikes power plants -> full closure (S4 35-40%)",type:"Hard",dim:"D2,D4",urgency:"week2"},
         {date:"Late Mar/Early Apr",event:"Tampa ammonia settlement — first war-conditions NH3 benchmark (30.7% of revenue). Triggers: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6.",type:"Soft",dim:"D2,D6,D1",urgency:"week2"},
-        {date:"~End of Mar",event:"US Navy escort for fertilizer tankers — highest-leverage price-normalization action (15-20% rapid urea decline)",type:"Soft",dim:"D5",urgency:"week2"},
         {date:"Mar 31",event:"USDA Prospective Plantings — corn >93M = demand intact; <92M = volume headwind 10%+",type:"Hard",dim:"D4,D8",urgency:"week2"},
         {date:"Apr 17",event:"$12B Farm Aid Package enrollment deadline",type:"Hard",dim:"D6",urgency:"week3"},
         {date:"May 6",event:"Q1 2026 earnings — first S3 margin read; consensus $7.65 not reflecting S3",type:"Hard",dim:"D2,D1",urgency:"month2"},
@@ -265,7 +271,8 @@ const D = {
           {q:"Orica/Nelson Brothers $169.5M settlement — impact on H2 2026 cash flow",resolved:false},
           {q:"Blue Point tariff exposure on imported equipment/modules",resolved:false},
           {q:"QAFCO urea production loss from Ras Laffan physical damage (beyond FM)",resolved:false},
-          {q:"Saudi Yanbu export route viability after drone strike",resolved:false}
+          {q:"Saudi Yanbu export route viability after drone strike",resolved:false},
+          {q:"NOLA ammonia down 23.7% m/m — new US Gulf capacity offsetting Hormuz loss",resolved:false}
         ],
         resolved:18
       },
@@ -295,14 +302,15 @@ const D = {
         "Iran toll proposal = permanent Hormuz cost floor even post-ceasefire, structurally widening CF advantage.",
         "Market treating as temporary spike (FY2022 analog); Ras Laffan 3-5yr repair = structural deficit justifying higher multiples (8-10x vs 5-7x).",
         "Agricultural cascade unpriced: corn planting reduction 1-1.5M ha + urea $700/t not in grain futures or fertilizer equities.",
-        "EU CBAM adds $75/t on imported ammonia — structural cost advantage for CF's US gas position."
+        "EU CBAM adds $75/t on imported ammonia — structural cost advantage for CF's US gas position.",
+        "Ammonia rebalancing risk: new US Gulf capacity ~2.3 MMT/yr partially offsets 4.2 MMT Hormuz loss. Ammonia less tight than urea."
       ],
       recentNotes:[
+        {date:"2026-03-23",title:"Briefing: Back-channel ceasefire talks (Witkoff/Kushner via Egypt/Qatar/UK) — first credible S1/S2 path. NOLA ammonia $450/MT, down 23.7% m/m. $20B DFC-Chubb insurance facility activated. Iran selective passage framework."},
+        {date:"2026-03-23",title:"Trump 48-hour ultimatum: open Hormuz or US strikes power plants. Iran threatens complete closure. Expires ~Mar 24. Binary catalyst."},
         {date:"2026-03-21",title:"Hormuz Day 22: Trump rules out ceasefire. Tampa retail $925-961/t. European coalition conditions escort on ceasefire first. S1 at floor 3%."},
         {date:"2026-03-21",title:"Fair value estimation: S3 base $158, prob-weighted $169. Peer-validated 5-7x P/E at peak cycle. D1 upgraded 4->5. Conviction 8->8.5/10."},
-        {date:"2026-03-20",title:"DOJ antitrust probe opened (CF, Nutrien, Mosaic, Koch, Yara). Orica $169.5M settlement. Two class-action lawsuits."},
-        {date:"2026-03-19",title:"D2 3->4 confirmed. Day 20 NOLA $673-675/st ($742-745/t). Conviction 7.5->8/10. Cluster A 73%->80%."},
-        {date:"2026-03-16",title:"Position add 2% (15%->17%). NOLA momentum + Hormuz no relaxation."}
+        {date:"2026-03-20",title:"DOJ antitrust probe opened (CF, Nutrien, Mosaic, Koch, Yara). Orica $169.5M settlement. Two class-action lawsuits."}
       ]
     },
     GTT: {
@@ -345,14 +353,17 @@ const D = {
       ],
       financials:{
         revenue:"EUR 803M (FY2025, +25%)",
-        EBITDA:"EUR 542M (67% margin, record)",
-        EPS:"EUR 11.12 (FY2025)",
+        EBITDA:"EUR 542M (67.5% margin, record)",
+        EPS:"EUR 11.16 (FY2025)",
         netCash:"~EUR 300M (zero financial risk)",
         shares:"37.08M",
+        marketCap:"EUR 7.87B (+53% 1yr)",
+        PE_TTM:"~16.2x",
+        dividendYield:"~5.1% (EUR 8.00/share)",
         FY2026guidance:"EUR 740-780M rev, EUR 490-530M EBITDA",
-        dividendYield:"4.4% (EUR 8.94/share)",
         orderbook:"288 core units",
         FIDpipeline:"84 mtpa record (2025) -> ~105-135 vessels at 75-90% conversion",
+        marchOrders:"6 LNG carriers (Samsung, HD KSOE, Hudong-Zhonghua)",
         patents:"2,466 active"
       },
       variantViews:[
@@ -364,11 +375,11 @@ const D = {
         "Sonangol order (Angola) = new geographic diversification of demand not previously visible in order book."
       ],
       recentNotes:[
+        {date:"2026-03-23",title:"Monday data: March order intake 6 LNG carriers (Samsung, HD KSOE, Hudong-Zhonghua x4). All European ship-owner orders. FY2025: rev EUR 803M, EBITDA EUR 542M (67.5%), EPS EUR 11.16."},
         {date:"2026-03-21",title:"Hormuz Day 22: QatarEnergy 2nd FM on 3-5yr contracts. JKM $20-22/MMBtu. Trump no ceasefire. Duration thesis strengthened."},
         {date:"2026-03-21",title:"Fair value: Base EUR 317, prob-weighted EUR 305. D2 3->4, D7 4->5. Conviction 8->8.5/10. Cluster B 68%->72%."},
         {date:"2026-03-20",title:"Triple order win (Mar 5/12/17). Ras Laffan 17% destroyed = structural catalyst. GTT upgraded TRADE->INVESTMENT. D1 4->5, D2 2->3, D3 3->4."},
-        {date:"2026-03-19",title:"Resolution Report: ENGIE fully exited (Sep 2025), Elogen gigafactory halted, FID conversion 75-90% confirmed, margin resilience confirmed."},
-        {date:"2026-03-13",title:"Portfolio entry: TRADE at 10%. Setup Score 18/25."}
+        {date:"2026-03-19",title:"Resolution Report: ENGIE fully exited (Sep 2025), Elogen gigafactory halted, FID conversion 75-90% confirmed, margin resilience confirmed."}
       ]
     },
     MEOH: {
@@ -376,34 +387,57 @@ const D = {
       allocation:0, conviction:7.5, clusterA:93, clusterB:76, rc:5,
       dimensions:{D1:5,D2:5,D3:4,D4:2,D5:4,D6:4,D7:4,D8:5},
       scenarios:[
-        {name:"Bear (S1/S2, ceasefire)",target:"$40-45",prob:20},
-        {name:"Base (S3, 3mo)",target:"$60-70",prob:45},
-        {name:"Bull (S3/S4, extended)",target:"$70-85",prob:35}
+        {name:"S1/S2 (Bear, ceasefire)",target:"$40-45",prob:20},
+        {name:"S3 (Base, 3mo)",target:"$63",prob:35},
+        {name:"S3/S4 (Bull, extended)",target:"$70-85",prob:45}
       ],
-      fairValue:null,
+      fairValue:{
+        baseCaseFV:"$63",probWeightedFV:"$71",bearCaseFV:"$40",bullCaseFV:"$85",
+        methodology:"Scenario-Weighted EV/EBITDA (6.5x)",thesisType:"Cyclical/Commodity + Event-Driven",lastUpdated:"2026-03-23"
+      },
       catalysts:[
         {date:"Apr 2026",event:"Q1 2026 contract repricing — first war-conditions MNRP/MECR reset (ARP guided $330-340 pre-Hormuz)",type:"Soft",dim:"D2",urgency:"week3"},
-        {date:"May 2026",event:"Q1 earnings — first Hormuz impact on realized prices",type:"Soft",dim:"D2",urgency:"month2"},
+        {date:"May 2026",event:"Q1 earnings — first Hormuz impact on realized prices. Q4 miss ($-0.14 vs $0.81 est) creates low bar.",type:"Soft",dim:"D2",urgency:"month2"},
         {date:"Aug 2026",event:"Q2 earnings — THE earnings surprise quarter (full April repricing captured)",type:"Soft",dim:"D2",urgency:"beyond"},
         {date:"Sep 2026",event:"Titan Trinidad gas contract expiry — 730 KT production at risk (binary)",type:"Hard",dim:"D1,D4",urgency:"beyond"},
         {date:"Dec 2027",event:"First unsecured note maturity ($400M, 5.125%)",type:"Hard",dim:"D4",urgency:"beyond"}
       ],
-      questions:{critical:[],open:[{q:"Chinese coal-to-methanol supply response timeline (5+ MMT in 6-12mo). Price ceiling $350-430/t.",resolved:false},{q:"Iran 19.6 MMT expansion pipeline — cancelled/delayed 3-5yr?",resolved:false},{q:"Titan Trinidad gas contract renewal risk",resolved:false}],resolved:0},
+      questions:{
+        critical:[
+          {q:"Titan Trinidad gas contract renewal (Sep 2026 expiry) — 730 KT production at risk",resolved:false}
+        ],
+        open:[
+          {q:"MTO affordability ceiling at Hormuz oil prices — revised breakpoint $450-550/t?",resolved:false},
+          {q:"Ammonia contribution upside at wartime prices (Beaumont 340 KT)",resolved:false},
+          {q:"OCI synergy realization timeline ($30M target by end 2026)",resolved:false},
+          {q:"Egypt JV partner identity and governance",resolved:false},
+          {q:"Natgasoline operating performance — why $38M net loss at 100% basis?",resolved:false}
+        ],
+        resolved:7
+      },
       debates:[],
       financials:{
-        revenue:"~$4B",
+        revenue:"~$4B (FY2025)",
+        Q4EPS:"($0.14) vs $0.81 est (miss by $0.95)",
+        Q4production:"2.36M tonnes (+26.7% YoY, strong)",
         capacity:"10.4 MMT (69% NA gas-advantaged)",
         leverage:"3.26x ND/EBITDA",
         zeroMEproduction:"Zero ME production — pure beneficiary",
-        ARP_sensitivity:"$300/t=$650M, $350/t=$1,075M, $400/t=$1,450M EBITDA"
+        ARP_sensitivity:"$300/t=$650M, $350/t=$1,075M, $400/t=$1,450M EBITDA",
+        spotPricing:"CFR SEA $494-496/t (Mar 12); China 2,960 CNY/t; FOB US Gulf 106-108 cts/gal",
+        probWeightedEBITDA:"$1,226M",
+        insiderOwnership:"13.09%"
       },
       variantViews:[
         "17.5 MMT ME methanol removed (56% of traded). Zero ME production. April repricing = Q2 surprise.",
         "MTO demand destruction ceiling raised to $420-450/t by correlated naphtha spike (Brent >$110).",
         "Even ceasefire doesn't snap-back prices: infrastructure damage = 6-24mo restart, war-risk insurance 6-18mo.",
-        "Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply, structurally higher methanol prices post-war."
+        "Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply, structurally higher methanol prices post-war.",
+        "CEO confirmed 18-20 MMT/yr supply restricted. Supply hole is 2x Methanex's entire output."
       ],
       recentNotes:[
+        {date:"2026-03-23",title:"Monday data: Q4 EPS miss ($-0.14 vs $0.81). Production +26.7% YoY. CEO confirmed 18-20 MMT restricted. CFR SEA $494-496/t vs Q1 guide $330-340. Consensus PT $52.36 below current price."},
+        {date:"2026-03-23",title:"Fair value estimated: S3 base $63, prob-weighted $71 (+26% vs $56.30). At 7.5x: prob-weighted $87 (+55%). Asymmetry improves at higher multiples."},
         {date:"2026-03-21",title:"Full remap to standard D1-D8 framework. D1=5, D2=5, D3=4, D4=2, D5=4, D6=4, D7=4, D8=5. Conviction 7->7.5/10. Cluster A 93%, B 76%."},
         {date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum, infrastructure damage 6-24mo."},
         {date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled. Removes 2028-2030 oversupply risk."}
@@ -481,17 +515,14 @@ const D = {
       recentNotes:[{date:"2026-03-23",title:"Added as ACTIVE. Pattern-match 28/35 (Strong). Recovery proven. Verify price/cap post-reverse-split before conviction scoring."}]
     },
     KIST: {
-      company:"Kistos Holdings", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
+      company:"Kistos Holdings", theme:"Hormuz Disruption", status:"PARKED", portfolioType:null,
       allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
       dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
       scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"Overdue (2024)",event:"Q10-A Orion extension FID (still feasibility stage, ~450+ days overdue)",type:"Soft",dim:"D1,D4",urgency:"overdue"},
-        {date:"Q1 2026 ending",event:"Oman acquisition close — production doubling catalyst",type:"Soft",dim:"D1",urgency:"overdue"}
-      ],
+      catalysts:[],
       questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Fully unhedged North Sea gas/oil producer; direct TTF/NBP exposure; <1x fwd EV/EBITDA at current TTF. Austin 17.3% insider stake."},
-      variantViews:[],recentNotes:[]
+      financials:{info:"Downgraded MONITORING->PARKED (Mar 23). Dynamic PM 17/35 — below 22 threshold. U3=2 (no business quality), U4=2 (tight cash, AIM liquidity), C2=1 (pure commodity bet). Re-evaluate: post-tax FCF model + Oman ramp + UK EPL reform."},
+      variantViews:[],recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. PM 17/35. Pure directional TTF bet, not an investable thesis."}]
     },
     LCUT: {
       company:"Lifetime Brands", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
@@ -510,17 +541,6 @@ const D = {
       variantViews:["CIT Mar 4 universal refund order benefits all importers — no individual suit needed. LCUT has 8,300+ customs records confirming IOR."],
       recentNotes:[]
     },
-    GPRO: {
-      company:"GoPro", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:2,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — doubly covered (CIT suit Dec 2025 + universal order). Clean record = likely early recipient.",type:"Soft",dim:"D1",urgency:"week3"}],
-      questions:{critical:[],open:[{q:"Audited 10-K needed for balance sheet solvency verification",resolved:false}],resolved:0},debates:[],
-      financials:{mcap:"$108M",tariffCost:"$20M FY2025",refundRatio:"18.5%",forwardBenefit:"$45M/yr tariff elimination",cashBurn:"~$53M FY2025 (improved from $144M FY2024)"},
-      variantViews:["ITC Insta360 import ban removes primary US competitor — 10-15% addressable market recapture.","Tariff double-benefit: $20M one-time refund + ~$32M/yr GM recovery (32%->37%) = $52M+ first year."],
-      recentNotes:[{date:"2026-03-22",title:"THESIS.md updated: bear case Q3 nuanced, ITC + AI licensing added to bull, tariff double-benefit quantified, RC 2/5."}]
-    },
     HOFT: {
       company:"Hooker Furnishings", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
@@ -531,18 +551,15 @@ const D = {
       financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)",sourcing:"Vietnam 76% / China 13%"},variantViews:[],recentNotes:[]
     },
     BLMN: {
-      company:"Bloomin' Brands", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
+      company:"Bloomin' Brands", theme:"Sentiments-Valuation Mismatch", status:"PARKED", portfolioType:null,
       allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
       dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
       scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"May 2026",event:"Q1 CY2026 results — key comp trend confirmation",type:"Soft",dim:"D1",urgency:"month2"}
-      ],
-      questions:{critical:[{q:"10-K covenant headroom and maturity schedule",resolved:false}],open:[{q:"Beef inflation trajectory vs mid-11% margin guidance",resolved:false}],resolved:0},
-      debates:[],
-      financials:{mcap:"~$496M",revenue:"~$3.95B",netDebt:"~$728M",restaurantMargins:"~11%",evRevenue:"~0.3x",patternMatch:"27.5/35 (79%)"},
+      catalysts:[],
+      questions:{critical:[],open:[],resolved:0},debates:[],
+      financials:{mcap:"~$496M",revenue:"~$3.95B",netDebt:"~$728M",restaurantMargins:"~11%",evRevenue:"~0.3x",patternMatch:"20/35 (57%, PARKED)"},
       variantViews:["CEO+CFO $2M cluster buy + Starboard activist + Outback traffic first positive since Q4 2021 (+90bps industry outperformance)."],
-      recentNotes:[]
+      recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. Dynamic PM 20/35. U3=2 (casual dining, no moat), U4=2 (D/E 2.77x). Re-evaluate: Q1 comps + leverage below 2.5x."}]
     },
     GO: {
       company:"Grocery Outlet", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
@@ -625,19 +642,25 @@ const D = {
     }
   },
   themes: [
-    {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","BLMN","GO","KENDR"],color:"#4ade80"},
-    {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH","KIST"],color:"#f59e0b"},
+    {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR"],color:"#4ade80"},
+    {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH"],color:"#f59e0b"},
     {name:"Hidden Value SOTP",status:"DORMANT",impact:0,discovery:0,priority:0,tickers:[],color:"#8b9bb4",note:"DORMANT — Both tickers PASSED and archived to Case Studies (Mar 21). No active/monitoring tickers."},
     {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["TOI","APP","SPSC","SGE","TRI_AI"],color:"#a78bfa",note:"5 tickers MONITORING. Entry below target prices."},
-    {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","GPRO","HOFT"],color:"#64748b"}
+    {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],color:"#64748b"}
   ],
   candidates: [
     {name:"Tanker/Shipping Supercycle",priority:12,persistence:5,status:"Persistence confirmed (5 briefings). Strong overlap with Hormuz theme. FRO Q1 VLCC $107K/day vs $25K breakeven."},
     {name:"European Defense & Infrastructure Boom",priority:12,persistence:2,status:"Persistence confirmed. EUR 600B German spend. LMT ATH $692, +40% YTD. RTX backlog $268B."},
-    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. EU CBAM + ammonia spike. Discovery 2/5 (front-page news)."},
-    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Blue Owl -30% YTD. Contrarian angle."},
+    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in any consensus model. -20% to -30% healthcare sector if realized."},
     {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:2,status:"Persistence confirmed. Pentagon 2027 deadline. China expanded licensing to samarium/gadolinium/lutetium."},
-    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in any consensus model. -20% to -30% healthcare sector if realized."}
+    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Blue Owl -30% YTD. Contrarian angle."},
+    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. EU CBAM + ammonia spike. Discovery 2/5 (front-page news)."}
+  ],
+  parked: [
+    {ticker:"KIST",company:"Kistos Holdings",theme:"Hormuz Disruption",pm:"17/35",reason:"Pure directional TTF bet, no business quality",trigger:"Post-tax FCF model + Oman ramp + UK EPL reform"},
+    {ticker:"BLMN",company:"Bloomin' Brands",theme:"SVM",pm:"20/35",reason:"Casual dining, no moat, high leverage",trigger:"Q1 comps + leverage below 2.5x + covenant review"},
+    {ticker:"SMWH",company:"WH Smith PLC",theme:"SVM",pm:"25.5/35",reason:"6 analysts, high leverage, FCA investigation",trigger:"After Quinn has 2 quarters results (Oct 2026)"},
+    {ticker:"MCB",company:"McCoy Global Inc.",theme:"SVM",pm:"24.5/35",reason:"Insider buying trivially small ($28K)",trigger:"Board/CEO meaningful open-market purchases"}
   ],
   priorityQueue: []
 };
@@ -725,9 +748,9 @@ function renderPortfolio() {
     '<div class="section-title">Investment Positions</div><div class="card" style="overflow-x:auto"><table>'+
     '<tr><th>Ticker</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>Cluster A</th><th>Cluster B</th><th>RC</th><th>CWA</th><th>Fair Value</th></tr>'+posRows+'</table></div>'+
     '<div class="section-title">Exposure Analysis</div><div class="grid">'+
-    '<div class="card"><h3>Geopolitical (37%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">CF + GTT exposed to Hormuz. S3 base case 55%. Day 24: selective passage emerging but ME exports -61%. Ras Laffan 17% destroyed (3-5yr repair). Israel struck South Pars + killed Intel Minister. Brent peaked $126. GTT Hormuz correlation only ~3-4% of YTD move — primarily structural, not geopolitical.</p></div>'+
-    '<div class="card"><h3>Micro-Execution (77%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">VOW: Maritime margin normalization (Q1 May 20). CF: NOLA-ME spread + Tampa settlement (imminent) + USDA Mar 31. GTT: FID pipeline conversion (Q1 update Apr 22). Concentration: VOW Q1 May 20 = 40% of portfolio. Hormuz duration = 37%.</p></div>'+
-    '<div class="card"><h3>Concentration & Correlation</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">77% deployed across 3 positions. VOW uncorrelated to Hormuz (cruise wastewater). CF-GTT correlated but diverge on mechanism (CF immediate commodity, GTT lagged structural). Cash 23% buffer. 3 currencies unhedged (NOK, EUR, USD). No recession hedge. If Hormuz resolves: CF -10-20% immediately, GTT only ~3-4%.</p></div></div>';
+    '<div class="card"><h3>Geopolitical (37%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">CF + GTT exposed to Hormuz. S3 base case 55%. <strong>Trump 48-hour ultimatum expires ~Mar 24.</strong> Binary: Iran opens (S1/S2) or US strikes -> full closure (S4 35-40%). Iraq FM slashes 2.4 MMbpd. Iran selective passage for friendly countries. Ras Laffan 17% destroyed (3-5yr repair). Back-channel ceasefire talks emerging (Witkoff/Kushner). GTT correlation only ~3-4% of YTD move — primarily structural, not geopolitical.</p></div>'+
+    '<div class="card"><h3>Micro-Execution (77%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">VOW: Maritime margin normalization (Q1 May 20). Q4 rev ATH NOK 347.4M. CF: Tampa settlement (imminent) + USDA Mar 31. NOLA ammonia -23.7% m/m (bearish for ammonia segment). GTT: Q1 activity update Apr 22; March orders 6 LNGCs. Concentration: VOW Q1 May 20 = 40% of portfolio. Hormuz binary event = 37%.</p></div>'+
+    '<div class="card"><h3>Concentration & Correlation</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">77% deployed across 3 positions. VOW uncorrelated to Hormuz (cruise wastewater). CF-GTT correlated but diverge on mechanism (CF immediate commodity, GTT lagged structural). Cash 23% buffer. 3 currencies unhedged (NOK, EUR, USD). No recession hedge. If Hormuz resolves: CF -10-20% immediately, GTT only ~3-4%. If S4 escalation: CF/GTT spike, VOW neutral.</p></div></div>';
 
   setTimeout(function(){
     new Chart(document.getElementById('allocDoughnut'),{type:'doughnut',data:{labels:ptickers.map(function(e){return e[0]}).concat(['Cash']),datasets:[{data:ptickers.map(function(e){return e[1].allocation}).concat([p.cashPct]),backgroundColor:['#22c55e','#3b82f6','#8b5cf6','#475569'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#94a3b8',font:{size:11},padding:8}}}}});
@@ -792,9 +815,14 @@ function renderThemes() {
     return '<div class="card"><h3>'+c.name+'</h3><div class="metric"><span class="label">Priority</span><span class="value" style="color:'+prioColor+'">'+c.priority+'</span></div><div class="metric"><span class="label">Persistence</span><span class="value">'+c.persistence+' briefings</span></div><div style="font-size:12px;color:#94a3b8;margin-top:8px">'+c.status+'</div></div>';
   }).join('');
 
+  var parkedHtml = D.parked.map(function(p){
+    return '<tr><td>'+p.ticker+'</td><td>'+p.company+'</td><td>'+p.theme+'</td><td>'+p.pm+'</td><td style="font-size:12px">'+p.reason+'</td><td style="font-size:12px">'+p.trigger+'</td></tr>';
+  }).join('');
+
   el.innerHTML = '<div class="section-title">Theme Priority Dashboard</div><div class="card" style="overflow-x:auto;margin-bottom:16px"><table><tr><th>#</th><th>Theme</th><th>Status</th><th>Impact</th><th>Discovery</th><th>Priority</th><th>Tickers</th></tr>'+themeRows+'</table></div>'+
     '<div class="section-title">Theme Cards</div><div class="grid-2">'+themeCards+'</div>'+
-    '<div class="section-title">New Theme Candidates</div><div class="grid">'+candidateCards+'</div>';
+    '<div class="section-title">New Theme Candidates</div><div class="grid">'+candidateCards+'</div>'+
+    '<div class="section-title">Parked Tickers</div><div class="card" style="overflow-x:auto"><table><tr><th>Ticker</th><th>Company</th><th>Theme</th><th>PM Score</th><th>Reason</th><th>Re-evaluate Trigger</th></tr>'+parkedHtml+'</table></div>';
 }
 
 function renderPipeline() {
@@ -929,4 +957,3 @@ renderPortfolio();
 </script>
 </body>
 </html>
-<\!-- deployed 2026-03-23 03:18:26 -->
