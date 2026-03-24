@@ -650,30 +650,31 @@ const D = {
       businessBackground:"UK-based manufacturer and distributor of engineered industrial fastenings. GBP 223.5M revenue. 38% automotive exposure but certification moat (<1% of BOM, 100% failure risk = zero switching). Manufacturing + distribution hybrid model across UK, Europe, Asia. Market cap GBP 81M vs book value GBP 124M. Leverage 0.9x. 3 analysts (expanding from 1). Insider buying: Mills 16.3% stake + Percival 521K shares.",
       thesisOverview:"Turnaround + Hidden Franchise. 81% drawdown masks genuine certification moat and margin inflection (5.1%→6.8%→7.2% ex-FX, target 10%+). Trading at 0.53x EV/Sales vs peers Bossard 12-15x, Bufab 21x EBIT multiples. Seven independent upside paths (margin, coverage, M&A, smart infra 18% growing double-digits, NA expansion, Saudi, institutional threshold) — 3+ showing early evidence. Self-funding turnaround: positive FCF, sub-1x leverage, no dilution risk.",
       valuation:{
-        methodology:"SOTP + Peer Multiples",
-        rationale:"Sum-of-the-parts by customer segment with segment-specific EBIT margins and multiples. Reflects margin trajectory uncertainty via scenario approach. Trading at 50-60% discount to peers on identical business model.",
+        methodology:"Peer-Anchored EV/EBIT (15.7x adjusted)",
+        rationale:"Type 2 (Turnaround) + Type 3 (SOTP). Peer median 17.7x (Bossard 13.1x, Bufab 22.3x) adjusted -2.0 turns net for margin gap, execution risk, micro-cap discount (probability-weighted). 30% haircut for time-to-realization (2-3yr to 10%+ margin) and execution risk (turnaround base rate <50%).",
         assumptions:[
-          {label:"FY2026E revenue",value:"GBP 214-225M"},
-          {label:"EBIT margin trajectory",value:"4.9%→5.1%→6.8%→7.2% (target 10%)"},
-          {label:"Smart Infra + Medical margin",value:"10-12% at 12-15x"},
-          {label:"Auto OEM margin",value:"5-7% at 8-10x"},
-          {label:"Net debt",value:"GBP 17M (0.9x leverage)"}
+          {label:"FY2026E revenue",value:"GBP 211-215M"},
+          {label:"EBIT margin (current)",value:"7.2% ex-FX (H1 FY2026)"},
+          {label:"EBIT margin (destination)",value:"10%+ (management target FY2027-28)"},
+          {label:"Adjusted EV/EBIT",value:"15.7x (peer median 17.7x - 2.0 turns)"},
+          {label:"Execution haircut",value:"30% (time value + turnaround risk)"},
+          {label:"Net debt",value:"GBP 17.4M (0.9x leverage)"}
         ],
         peers:[
-          {name:"Bossard",multiple:"12-15x EBIT"},
-          {name:"Bufab",multiple:"~21x EBIT"},
-          {name:"TRI current",multiple:"~7x EBIT (50-60% discount)"}
+          {name:"Bossard (BOSN.SW)",multiple:"13.1x EV/EBIT, ~10% margin"},
+          {name:"Bufab (BUFAB.ST)",multiple:"22.3x EV/EBIT, ~13% margin"},
+          {name:"TRI current",multiple:"7.1x EV/EBIT (40% of peer median)"}
         ],
         sensitivity:{
           rows:[
-            {label:"Bear (5-6% margin)",vals:["40-55p"]},
-            {label:"Base (8-9% margin)",vals:["90-110p"]},
-            {label:"Bull (10%+ margin)",vals:["130-160p"]}
+            {label:"EBIT GBP 13M (6-7%)",vals:["49p","80p","95p"]},
+            {label:"EBIT GBP 18M (8-9%)",vals:["73p","122p","148p"]},
+            {label:"EBIT GBP 22M (10%+)",vals:["93p","148p","174p"]}
           ],
-          cols:["Range"],
-          title:"Fair Value by margin scenario"
+          cols:["10x EBIT","14x EBIT","16x EBIT"],
+          title:"Fair Value (p/share, post-30% haircut) by EBIT x multiple"
         },
-        lastUpdated:"2026-03-22"
+        lastUpdated:"2026-03-24"
       },
       dimensions:{D1:4,D2:4,D3:4,D4:4,D5:4,D6:5,D7:4,D8:4},
       currentPrice:null,priceHistory:[],
