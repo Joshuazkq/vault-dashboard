@@ -391,6 +391,33 @@ const D = {
       allocation:10, conviction:8.5, clusterA:93, clusterB:84, rc:4,
       businessBackground:"North America's largest nitrogen fertilizer producer (~10.4M tons capacity). Products: ammonia (31% rev), UAN (31%), urea (25%), AN (6%). 97% utilization rate. NA 85% of revenue. Structural cost advantage: US natural gas ~$3.2/MMBtu vs Europe ~$16.7/MMBtu. $1.98B cash, no debt maturities until 2034. Returns 95% of FCF via buybacks ($4.78B over 4 years).",
       thesisOverview:"Cyclical/Commodity + Event-Driven. Hormuz closure removes ~4.3 MMT ammonia and significant urea supply. Triple constraint: Hormuz physical closure + Ras Laffan 17% destroyed (3-5yr repair) + China export restrictions. S3 base case (58%): 3-month duration, urea $850/t, EPS $26.3 vs consensus $7.65. Market pricing mean-reversion — only 2/16 analysts bullish on S3.",
+      valuation:{
+        methodology:"Scenario-Weighted P/E",
+        rationale:"Market underprices duration and magnitude of Hormuz-driven urea upcycle. Scenario EPS captures the commodity cycle; probability weights express variant view on duration. Peak-cycle P/E compresses as EPS rises (sustainability discount). Do NOT normalize to mid-cycle — strips out thesis.",
+        assumptions:[
+          {label:"FY2025 baseline EPS",value:"$8.97 (audited)"},
+          {label:"S3 scenario EPS",value:"$26.3 (urea $850/t, 3mo duration)"},
+          {label:"Prob-weighted EPS",value:"$27.8"},
+          {label:"P/E range",value:"5-7x (peak cycle); S3 base: 6x"},
+          {label:"Consensus EPS",value:"$7.65 (pre-Hormuz, stale)"}
+        ],
+        peers:[
+          {name:"CF (FY2022 peak)",multiple:"3.2x P/E"},
+          {name:"Nutrien",multiple:"8.8-10.1x EV/EBITDA"},
+          {name:"Mosaic",multiple:"5.1-5.4x EV/EBITDA"},
+          {name:"LSB Industries",multiple:"7.8x EV/EBITDA"}
+        ],
+        sensitivity:{
+          rows:[
+            {label:"S2 EPS $13.0",vals:["$65","$78","$91"]},
+            {label:"S3 EPS $26.3",vals:["$132","$158","$184"]},
+            {label:"S4 EPS $46.7",vals:["$234","$280","$327"]}
+          ],
+          cols:["5x P/E","6x P/E","7x P/E"],
+          title:"Fair Value ($/share) by EPS scenario x P/E multiple"
+        },
+        lastUpdated:"2026-03-21"
+      },
       dimensions:{D1:5,D2:4,D3:5,D4:3,D5:5,D6:4,D7:4,D8:5},
       currentPrice:{price:120.18,change:-0.27,currency:"USD"},
       priceHistory:[129.57,129.57,124.26,124.84,126.73,124.44,125.69,124.9,124.9,120.18],
