@@ -12,15 +12,32 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .header{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .header h1{font-size:22px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px}
 .header .date{font-size:13px;color:#8b9bb4}
+.header-right{display:flex;align-items:center;gap:12px}
+.search-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 14px;color:#e2e8f0;font-size:13px;width:180px;outline:none;transition:all .2s}
+.search-box:focus{border-color:rgba(59,130,246,.4);background:rgba(255,255,255,.08);width:220px}
+.search-results{position:absolute;top:100%;right:0;background:#1a2435;border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-top:4px;min-width:240px;z-index:300;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.search-results.active{display:block}
+.search-result{padding:10px 14px;cursor:pointer;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04)}
+.search-result:hover{background:rgba(255,255,255,.04)}
+.search-result:last-child{border:none}
+.search-result .sr-ticker{font-weight:700;color:#60a5fa}
+.search-result .sr-company{color:#94a3b8;margin-left:8px}
 .tabs{display:flex;gap:4px;padding:12px 24px;position:sticky;top:0;z-index:100;background:linear-gradient(160deg,#0c1220,#131b2e);border-bottom:1px solid rgba(255,255,255,.06)}
 .tab{padding:10px 20px;border-radius:12px;cursor:pointer;font-size:14px;font-weight:500;color:#8b9bb4;transition:all .2s;border:1px solid transparent}
 .tab:hover{color:#e2e8f0;background:rgba(255,255,255,.04)}
 .tab.active{background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(59,130,246,.08));color:#60a5fa;border-color:rgba(59,130,246,.2)}
+/* KPI Strip */
+.kpi-strip{display:flex;gap:0;padding:0 24px;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(255,255,255,.02)}
+.kpi-item{flex:1;text-align:center;padding:10px 8px;border-right:1px solid rgba(255,255,255,.04)}
+.kpi-item:last-child{border-right:none}
+.kpi-item .kpi-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:2px}
+.kpi-item .kpi-value{font-size:15px;font-weight:700;color:#f1f5f9}
 .content{padding:16px 24px 100px;display:none}
 .content.active{display:block}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:16px}
 .card{background:linear-gradient(145deg,#1a2435,#1e2a3d);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04)}
+.card-featured{border-color:rgba(59,130,246,.15);box-shadow:0 2px 12px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.06)}
 .card h3{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:12px}
 .card h4{font-size:13px;font-weight:600;color:#94a3b8;margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px}
 .metric{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -34,49 +51,113 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .pill-blue{background:rgba(37,99,235,.15);color:#60a5fa}
 .pill-purple{background:rgba(139,92,246,.15);color:#a78bfa}
 .pill-grey{background:rgba(255,255,255,.06);color:#94a3b8}
-.alert{padding:14px 16px;border-radius:14px;margin-bottom:10px;font-size:13px;line-height:1.5;border-left:3px solid}
+/* Alert System */
+.alert-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(145deg,#1a2435,#1e2a3d);border:1px solid rgba(255,255,255,.06);border-radius:14px;margin-bottom:16px;flex-wrap:wrap}
+.alert-badge{padding:6px 14px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;border:1px solid transparent;user-select:none}
+.alert-badge:hover{filter:brightness(1.2)}
+.alert-badge.active{border-color:rgba(255,255,255,.2)}
+.alert-badge-red{background:rgba(220,38,38,.2);color:#f87171}
+.alert-badge-hormuz{background:rgba(245,158,11,.15);color:#f59e0b}
+.alert-badge-svm{background:rgba(74,222,128,.12);color:#4ade80}
+.alert-badge-tariff{background:rgba(100,116,139,.12);color:#94a3b8}
+.alert-badge-ai{background:rgba(167,139,250,.12);color:#a78bfa}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.alert-badge-red{animation:pulse 2s ease-in-out infinite}
+.alert-expand{margin-left:auto;padding:6px 14px;border-radius:10px;font-size:12px;font-weight:500;color:#8b9bb4;cursor:pointer;background:rgba(255,255,255,.04);border:none;transition:all .2s}
+.alert-expand:hover{color:#e2e8f0;background:rgba(255,255,255,.08)}
+.alert-drawer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.alert-drawer.open{max-height:2000px}
+.alert-group{margin-bottom:8px}
+.alert-group-header{font-size:12px;font-weight:600;color:#94a3b8;padding:8px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+.alert{padding:12px 16px;border-radius:12px;margin-bottom:6px;font-size:13px;line-height:1.5;border-left:3px solid}
 .alert-red{background:linear-gradient(90deg,rgba(220,38,38,.12),rgba(220,38,38,.06));border-color:#ef4444}
-.alert-amber{background:linear-gradient(90deg,rgba(217,119,6,.12),rgba(217,119,6,.06));border-color:#f59e0b}
+.alert-amber,.alert-hormuz{background:linear-gradient(90deg,rgba(217,119,6,.12),rgba(217,119,6,.06));border-color:#f59e0b}
 .alert-blue{background:linear-gradient(90deg,rgba(37,99,235,.12),rgba(37,99,235,.06));border-color:#3b82f6}
-.alert-green{background:linear-gradient(90deg,rgba(22,163,74,.12),rgba(22,163,74,.06));border-color:#22c55e}
-.alert-hormuz{background:linear-gradient(90deg,rgba(245,158,11,.12),rgba(245,158,11,.06));border-color:#f59e0b}
-.alert-svm{background:linear-gradient(90deg,rgba(74,222,128,.12),rgba(74,222,128,.06));border-color:#4ade80}
+.alert-green,.alert-svm{background:linear-gradient(90deg,rgba(22,163,74,.12),rgba(22,163,74,.06));border-color:#22c55e}
 .alert-tariff{background:linear-gradient(90deg,rgba(100,116,139,.12),rgba(100,116,139,.06));border-color:#64748b}
 .alert-ai{background:linear-gradient(90deg,rgba(167,139,250,.12),rgba(167,139,250,.06));border-color:#a78bfa}
+/* Tables */
 table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;padding:10px 8px;color:#94a3b8;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #2d3748}
+th{text-align:left;padding:10px 8px;color:#94a3b8;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #2d3748;cursor:pointer;user-select:none;transition:color .2s}
+th:hover{color:#e2e8f0}
+th .sort-arrow{font-size:10px;margin-left:4px;opacity:.4}
+th.sorted .sort-arrow{opacity:1;color:#60a5fa}
 td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#e2e8f0}
 tr:hover td{background:rgba(255,255,255,.02)}
 .ticker-link{color:#60a5fa;cursor:pointer;font-weight:600;text-decoration:none}
 .ticker-link:hover{text-decoration:underline}
 .chart-container{position:relative;height:220px;margin:8px 0}
 .chart-container-sm{position:relative;height:180px;margin:8px 0}
-.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 12px;padding-bottom:8px;border-bottom:1px solid #2d3748}
+/* Collapsible Sections */
+.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 12px;padding-bottom:8px;border-bottom:1px solid #2d3748;cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between}
 .section-title:first-child{margin-top:0}
+.section-title::after{content:'\25BC';font-size:10px;color:#64748b;transition:transform .2s}
+.section-title.collapsed::after{transform:rotate(-90deg)}
+.section-content{transition:max-height .3s ease,opacity .2s ease;overflow:hidden}
+.section-content.collapsed{max-height:0!important;opacity:0;margin:0;padding:0}
+/* Catalyst Timeline */
+.timeline{padding:0}
+.timeline-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start}
+.timeline-item:last-child{border:none}
+.timeline-date{min-width:80px;font-size:12px;font-weight:600;color:#94a3b8;padding-top:2px}
+.timeline-dot{width:8px;height:8px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.timeline-dot-red{background:#ef4444}
+.timeline-dot-blue{background:#3b82f6}
+.timeline-dot-amber{background:#f59e0b}
+.timeline-event{font-size:13px;color:#e2e8f0;line-height:1.4;flex:1}
+.timeline-ticker{font-weight:600;color:#60a5fa;margin-left:8px;font-size:12px}
+/* Sparkline */
+.sparkline-container{display:inline-block;width:80px;height:28px;vertical-align:middle}
+/* Staleness dot */
+.staleness-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.staleness-fresh{background:#22c55e}
+.staleness-aging{background:#f59e0b}
+.staleness-stale{background:#ef4444}
+/* Theme Filter */
+.theme-filter{display:flex;gap:4px;margin-bottom:16px;flex-wrap:wrap}
+.theme-filter-pill{padding:6px 14px;border-radius:10px;font-size:12px;font-weight:500;color:#8b9bb4;cursor:pointer;background:rgba(255,255,255,.04);border:1px solid transparent;transition:all .2s}
+.theme-filter-pill:hover{color:#e2e8f0;background:rgba(255,255,255,.06)}
+.theme-filter-pill.active{color:#60a5fa;background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.2)}
+/* Priority Item */
 .priority-item{padding:12px 16px;border-radius:14px;margin-bottom:8px;background:linear-gradient(145deg,#1a2435,#1e2a3d);border:1px solid rgba(255,255,255,.06)}
 .priority-item .priority-score{font-size:20px;font-weight:700;color:#fbbf24;float:right}
 .priority-item .priority-action{font-size:12px;color:#94a3b8;margin-top:4px}
+/* Gauges */
 .gauge{height:8px;border-radius:4px;background:rgba(255,255,255,.08);margin:4px 0;overflow:hidden}
 .gauge-fill{height:100%;border-radius:4px;transition:width .5s}
 .gauge-green{background:linear-gradient(90deg,#16a34a,#22c55e)}
 .gauge-amber{background:linear-gradient(90deg,#d97706,#f59e0b)}
 .gauge-red{background:linear-gradient(90deg,#dc2626,#ef4444)}
 .gauge-blue{background:linear-gradient(90deg,#2563eb,#3b82f6)}
+/* Exposure bars */
+.exposure-bar{display:flex;height:28px;border-radius:8px;overflow:hidden;margin:8px 0}
+.exposure-segment{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;transition:all .2s}
+.exposure-bar-label{display:flex;justify-content:space-between;font-size:11px;color:#94a3b8;margin-top:4px}
+.exposure-detail{font-size:13px;color:#94a3b8;line-height:1.5;margin-top:12px;display:none}
+.exposure-detail.show{display:block}
+.exposure-toggle{font-size:11px;color:#60a5fa;cursor:pointer;margin-top:8px;display:inline-block}
+/* Overlay */
 .overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:200;overflow-y:auto;padding:40px 24px}
 .overlay.active{display:block}
 .overlay-content{max-width:900px;margin:0 auto;background:linear-gradient(145deg,#1a2435,#1e2a3d);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 .overlay-close{float:right;cursor:pointer;font-size:20px;color:#8b9bb4;background:none;border:none;padding:4px 8px}
 .overlay-close:hover{color:#f1f5f9}
+.overlay-tabs{display:flex;gap:4px;margin:16px 0;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
+.overlay-tab{padding:8px 16px;border-radius:10px;font-size:13px;font-weight:500;color:#8b9bb4;cursor:pointer;transition:all .2s}
+.overlay-tab:hover{color:#e2e8f0}
+.overlay-tab.active{color:#60a5fa;background:rgba(59,130,246,.1)}
+.overlay-panel{display:none}
+.overlay-panel.active{display:block}
 .fv-box{background:linear-gradient(145deg,rgba(37,99,235,.1),rgba(37,99,235,.05));border:1px solid rgba(59,130,246,.2);border-radius:14px;padding:16px;margin:12px 0}
 .fv-box .fv-method{font-size:12px;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .fv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .fv-item{text-align:center}
 .fv-item .fv-label{font-size:11px;color:#94a3b8}
 .fv-item .fv-value{font-size:18px;font-weight:700;margin-top:2px}
-.fv-bear{color:#f87171}
-.fv-base{color:#e2e8f0}
-.fv-prob{color:#4ade80}
-.fv-bull{color:#fbbf24}
+.fv-bear{color:#f87171}.fv-base{color:#e2e8f0}.fv-prob{color:#4ade80}.fv-bull{color:#fbbf24}
+.upside-bar{height:12px;border-radius:6px;background:rgba(255,255,255,.06);position:relative;margin:8px 0}
+.upside-bar-range{position:absolute;top:0;height:100%;border-radius:6px;background:linear-gradient(90deg,#f87171,#fbbf24,#4ade80)}
+.upside-bar-marker{position:absolute;top:-4px;width:3px;height:20px;background:#fff;border-radius:2px}
 .radar-container{position:relative;height:260px;margin:12px auto;max-width:320px}
 .badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:600}
 .badge-investment{background:rgba(22,163,74,.15);color:#4ade80;border:1px solid rgba(22,163,74,.2)}
@@ -93,6 +174,15 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .debate-vector .dv-title{font-size:13px;font-weight:600;color:#f1f5f9}
 .debate-vector .dv-status{font-size:11px;margin-top:4px}
 .variant-view{padding:10px;border-radius:12px;margin-bottom:6px;background:rgba(139,92,246,.06);border-left:2px solid #8b5cf6;font-size:12px;color:#c4b5fd;line-height:1.4}
+/* Price alert proximity */
+.proximity-bar{height:6px;border-radius:3px;background:rgba(255,255,255,.06);position:relative;margin:6px 0}
+.proximity-fill{height:100%;border-radius:3px;background:#4ade80}
+/* Help overlay */
+.help-overlay{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#1a2435;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;z-index:400;box-shadow:0 8px 32px rgba(0,0,0,.5);min-width:320px}
+.help-overlay.active{display:block}
+.help-overlay h3{margin-bottom:12px}
+.help-key{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:2px 8px;font-size:12px;font-family:monospace;color:#e2e8f0;margin-right:8px}
+.help-row{padding:6px 0;font-size:13px;color:#94a3b8}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
   .grid,.grid-2{grid-template-columns:1fr}
@@ -100,20 +190,29 @@ tr:hover td{background:rgba(255,255,255,.02)}
   .tab{padding:8px 12px;font-size:12px}
   .content{padding-bottom:80px}
   .fv-grid{grid-template-columns:repeat(2,1fr)}
+  .kpi-strip{flex-wrap:wrap}
+  .kpi-item{min-width:33%}
+  .search-box{width:120px}
+  .search-box:focus{width:160px}
 }
 </style>
 </head>
 <body>
 <div class="header">
   <h1>Research Vault</h1>
-  <span class="date">Last updated: 2026-03-23</span>
+  <div class="header-right" style="position:relative">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search tickers..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" onblur="setTimeout(function(){document.getElementById('searchResults').classList.remove('active')},200)">
+    <div class="search-results" id="searchResults"></div>
+    <span class="date">Updated: 2026-03-23</span>
+  </div>
 </div>
 <div class="tabs">
   <div class="tab active" onclick="switchTab('portfolio')">Portfolio</div>
-  <div class="tab" onclick="switchTab('research')">Research Health</div>
+  <div class="tab" onclick="switchTab('research')">Research</div>
   <div class="tab" onclick="switchTab('themes')">Themes</div>
   <div class="tab" onclick="switchTab('pipeline')">Pipeline</div>
 </div>
+<div class="kpi-strip" id="kpiStrip"></div>
 
 <div id="portfolio" class="content active"></div>
 <div id="research" class="content"></div>
@@ -122,6 +221,15 @@ tr:hover td{background:rgba(255,255,255,.02)}
 
 <div id="tickerOverlay" class="overlay" onclick="if(event.target===this)closeOverlay()">
   <div class="overlay-content" id="overlayContent"></div>
+</div>
+
+<div id="helpOverlay" class="help-overlay">
+  <h3 style="color:#f1f5f9">Keyboard Shortcuts</h3>
+  <div class="help-row"><span class="help-key">1-4</span> Switch tabs</div>
+  <div class="help-row"><span class="help-key">/</span> Focus search</div>
+  <div class="help-row"><span class="help-key">Esc</span> Close overlay</div>
+  <div class="help-row"><span class="help-key">?</span> Toggle this help</div>
+  <div style="margin-top:12px;font-size:11px;color:#64748b">Press any key to close</div>
 </div>
 
 <script>
@@ -138,24 +246,44 @@ const D = {
     totalCWA: 7.15
   },
   alerts: [
-    {type:"red",text:"<strong>CRITICAL — Trump 48-Hour Ultimatum (expires ~23:44 GMT Mar 24)</strong> — \"If Iran doesn't FULLY OPEN the Strait of Hormuz within 48 HOURS, the US will hit and obliterate their POWER PLANTS.\" Iran response: Hormuz will be \"completely closed\" if attacked. Binary catalyst: S1/S2 enrichment OR S4 escalation to 35-40%. Do NOT rebalance before deadline passes."},
-    {type:"hormuz",text:"<strong>Back-Channel Ceasefire Talks (NEW)</strong> — Trump envoys Witkoff + Kushner engaged via Egypt/Qatar/UK. Iran conditions: ceasefire guarantees + compensation. US demands: 5yr missile suspension + enrichment halt. First credible S1/S2 path since Day 1. Contradicted by simultaneous power plant ultimatum."},
-    {type:"hormuz",text:"<strong>Iraq Force Majeure</strong> — Iraq Oil Ministry ordered full production shutdown at foreign-operated concession areas. Basra Oil output slashed from 3.3 MMbpd to ~900K bpd. Widens supply deficit beyond Hormuz. S4 probability reassessed upward."},
-    {type:"hormuz",text:"<strong>CF</strong> — NOLA ammonia ~$450/MT, <strong>down 23.7% m/m</strong>. New US Gulf capacity (Gulf Coast Ammonia + Woodside Beaumont) ~2.3 MMT/yr offsets ~4.3 MMT Hormuz loss. Ammonia LESS tight than urea. Bearish for CF ammonia segment (30.7% of rev)."},
-    {type:"hormuz",text:"<strong>CF</strong> — Tampa ammonia settlement imminent (late Mar/early Apr). First war-conditions NH3 benchmark. Triggers: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6 upgrade."},
-    {type:"hormuz",text:"<strong>CF</strong> — USDA Prospective Plantings Mar 31 (8 days). Binary signal: corn >93M = demand intact; <92M = volume headwind 10%+."},
-    {type:"hormuz",text:"<strong>CF</strong> — DOJ antitrust probe: CF, Nutrien, Mosaic, Koch, Yara under investigation. Civil AND criminal. Two class-action lawsuits. Monitor Q1 10-Q (May)."},
-    {type:"hormuz",text:"<strong>GTT</strong> — March 2026 order intake: 6 LNG carriers (Samsung, HD KSOE, Hudong-Zhonghua). All European ship-owner orders. FID pipeline active. Q1 2026 activity update Apr 22."},
-    {type:"svm",text:"<strong>VOW</strong> — Monday data: Q4 rev NOK 347.4M (+30.7% YoY, ATH). FY2025 net loss NOK 279.5M driven by NOK 119.3M Industrial impairments (non-cash). Maritime + Aftersales at records. AGM date pending."},
-    {type:"svm",text:"<strong>TRI</strong> — Added ACTIVE Mar 22 with conviction 8/10, RC 5/5. Pattern-match 30.5/35 (87%, Strong). Deep dive priority."},
-    {type:"svm",text:"<strong>ARR</strong> — Added ACTIVE Mar 23. Pattern-match 28/35 (80%, Strong). Recovery already proven (4Q EBITDA+, net cash, dividend). Verify price/cap post-reverse-split."},
-    {type:"hormuz",text:"<strong>Hormuz Day 24 (Mar 23)</strong> — Traffic plunged 95%. Over 150 ships anchored. Iran selective passage framework for friendly countries. Brent peaked $126. $20B DFC-Chubb maritime reinsurance facility activated but limited uptake."}
+    {type:"red",group:"critical",text:"<strong>CRITICAL — Trump 48-Hour Ultimatum (expires ~23:44 GMT Mar 24)</strong> — \"If Iran doesn't FULLY OPEN the Strait of Hormuz within 48 HOURS, the US will hit and obliterate their POWER PLANTS.\" Iran response: Hormuz will be \"completely closed\" if attacked. Binary catalyst: S1/S2 enrichment OR S4 escalation to 35-40%. Do NOT rebalance before deadline passes."},
+    {type:"hormuz",group:"hormuz",text:"<strong>Back-Channel Ceasefire Talks (NEW)</strong> — Trump envoys Witkoff + Kushner engaged via Egypt/Qatar/UK. Iran conditions: ceasefire guarantees + compensation. US demands: 5yr missile suspension + enrichment halt. First credible S1/S2 path since Day 1. Contradicted by simultaneous power plant ultimatum."},
+    {type:"hormuz",group:"hormuz",text:"<strong>Iraq Force Majeure</strong> — Iraq Oil Ministry ordered full production shutdown at foreign-operated concession areas. Basra Oil output slashed from 3.3 MMbpd to ~900K bpd. Widens supply deficit beyond Hormuz. S4 probability reassessed upward."},
+    {type:"hormuz",group:"hormuz",text:"<strong>CF</strong> — NOLA ammonia ~$450/MT, <strong>down 23.7% m/m</strong>. New US Gulf capacity (Gulf Coast Ammonia + Woodside Beaumont) ~2.3 MMT/yr offsets ~4.3 MMT Hormuz loss. Ammonia LESS tight than urea. Bearish for CF ammonia segment (30.7% of rev)."},
+    {type:"hormuz",group:"hormuz",text:"<strong>CF</strong> — Tampa ammonia settlement imminent (late Mar/early Apr). First war-conditions NH3 benchmark. Triggers: >=450/t D2 4; >=500/t D2 5; >=700/t D1/D6 upgrade."},
+    {type:"hormuz",group:"hormuz",text:"<strong>CF</strong> — USDA Prospective Plantings Mar 31 (8 days). Binary signal: corn >93M = demand intact; <92M = volume headwind 10%+."},
+    {type:"hormuz",group:"hormuz",text:"<strong>CF</strong> — DOJ antitrust probe: CF, Nutrien, Mosaic, Koch, Yara under investigation. Civil AND criminal. Two class-action lawsuits. Monitor Q1 10-Q (May)."},
+    {type:"hormuz",group:"hormuz",text:"<strong>GTT</strong> — March 2026 order intake: 6 LNG carriers (Samsung, HD KSOE, Hudong-Zhonghua). All European ship-owner orders. FID pipeline active. Q1 2026 activity update Apr 22."},
+    {type:"svm",group:"svm",text:"<strong>VOW</strong> — Monday data: Q4 rev NOK 347.4M (+30.7% YoY, ATH). FY2025 net loss NOK 279.5M driven by NOK 119.3M Industrial impairments (non-cash). Maritime + Aftersales at records. AGM date pending."},
+    {type:"svm",group:"svm",text:"<strong>TRI</strong> — Added ACTIVE Mar 22 with conviction 8/10, RC 5/5. Pattern-match 30.5/35 (87%, Strong). Deep dive priority."},
+    {type:"svm",group:"svm",text:"<strong>ARR</strong> — Added ACTIVE Mar 23. Pattern-match 28/35 (80%, Strong). Recovery already proven (4Q EBITDA+, net cash, dividend). Verify price/cap post-reverse-split."},
+    {type:"hormuz",group:"hormuz",text:"<strong>Hormuz Day 24 (Mar 23)</strong> — Traffic plunged 95%. Over 150 ships anchored. Iran selective passage framework for friendly countries. Brent peaked $126. $20B DFC-Chubb maritime reinsurance facility activated but limited uptake."}
+  ],
+  catalystTimeline: [
+    {date:"Mar 24",ticker:"CF/GTT/MEOH",event:"Trump 48-hr ultimatum expiry — binary S1/S2 vs S4",type:"Overdue",dot:"red"},
+    {date:"Mar 31",ticker:"CF",event:"USDA Prospective Plantings — corn acreage signal",type:"Hard",dot:"blue"},
+    {date:"Late Mar",ticker:"CF",event:"Tampa ammonia April settlement — war-conditions NH3 benchmark",type:"Soft",dot:"amber"},
+    {date:"Early Apr",ticker:"MEOH",event:"April Methanex posted prices (MNRP/MECR reset)",type:"Hard",dot:"blue"},
+    {date:"Apr 5",ticker:"VOW",event:"FY2025 audited annual report — impairment test",type:"Hard",dot:"blue"},
+    {date:"~Apr 23",ticker:"LCUT/HOFT",event:"CBP ACE automated refund system go-live",type:"Soft",dot:"amber"},
+    {date:"Apr 21",ticker:"GTT",event:"Q1 2026 earnings — new CEO, guidance gap vs consensus",type:"Hard",dot:"blue"},
+    {date:"May 6",ticker:"CF",event:"Q1 2026 earnings — first S3 margin read",type:"Hard",dot:"blue"},
+    {date:"May 20",ticker:"VOW",event:"Q1 2026 results — 68% new-contract mix, margin proof",type:"Hard",dot:"blue"}
+  ],
+  priceAlerts: [
+    {ticker:"APP",threshold:431,currency:"USD",current:375,below:true,rationale:"25% below base FV ~$575"},
+    {ticker:"TOI",threshold:116,currency:"CAD",current:96,below:true,rationale:"25% below base FV ~C$155. Below threshold."},
+    {ticker:"TRI_AI",threshold:72,currency:"USD",current:70,below:true,rationale:"25% below prob-wtd FV $96.60"},
+    {ticker:"SGE",threshold:756,currency:"GBX",current:null,below:true,rationale:"25% below base FV ~1,008p"},
+    {ticker:"SPSC",threshold:55,currency:"USD",current:null,below:true,rationale:"25% below base FV ~$74"}
   ],
   tickers: {
     VOW: {
       company:"Vow ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:40, conviction:10, clusterA:107, clusterB:80, rc:5,
       dimensions:{D1:6,D2:6,D3:4,D4:3,D5:5,D6:4,D7:4,D8:4},
+      currentPrice:{price:2.39,change:3.46,currency:"NOK"},
+      priceHistory:[2.42,2.42,2.37,2.37,2.37,2.06,2.15,2.32,2.32,2.39],
       scenarios:[
         {name:"Deep Bear",target:"NOK 1.12",prob:10},
         {name:"Base",target:"NOK 5.76",prob:35},
@@ -177,9 +305,7 @@ const D = {
         {date:"Nov 2026",event:"Q3 2026 covenant test at 3.5x — BINARY (requires ~NOK 103M rolling EBITDA)",type:"Hard",dim:"D4",urgency:"beyond"}
       ],
       questions:{
-        critical:[
-          {q:"FY2025 audited impairment test methodology and sensitivity (Apr-May 2026)",resolved:false}
-        ],
+        critical:[{q:"FY2025 audited impairment test methodology and sensitivity (Apr-May 2026)",resolved:false}],
         open:[
           {q:"Confirm normalized Maritime EBITDA margin on pure new-contract basis (model: 18.8% central; Q4 slide shows 24%)",resolved:false},
           {q:"Clarify installed base: ~200 vs 250+ vessels (NOK 59M revenue delta)",resolved:false},
@@ -235,6 +361,8 @@ const D = {
       company:"CF Industries", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:17, conviction:8.5, clusterA:87, clusterB:84, rc:4,
       dimensions:{D1:5,D2:4,D3:4,D4:3,D5:5,D6:4,D7:4,D8:5},
+      currentPrice:{price:120.18,change:-0.27,currency:"USD"},
+      priceHistory:[129.57,129.57,124.26,124.84,126.73,124.44,125.69,124.9,124.9,120.18],
       scenarios:[
         {name:"S1 (2wk ceasefire)",target:"$103",prob:3},
         {name:"S2 (1Q duration)",target:"$104",prob:15},
@@ -317,6 +445,8 @@ const D = {
       company:"Gaztransport & Technigaz", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:20, conviction:8.5, clusterA:87, clusterB:72, rc:5,
       dimensions:{D1:5,D2:4,D3:4,D4:3,D5:3,D6:4,D7:5,D8:3},
+      currentPrice:{price:199.70,change:-1.33,currency:"EUR"},
+      priceHistory:[198.50,199.40,203.60,203.40,204.40,204.00,213.20,203.80,203.80,199.70],
       scenarios:[
         {name:"Deep Bear (recession + Chinese tech)",target:"EUR 152",prob:5},
         {name:"Bear (FID disappoints, 60% margins)",target:"EUR 222",prob:20},
@@ -386,286 +516,80 @@ const D = {
       company:"Methanex Corporation", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:null,
       allocation:0, conviction:7.5, clusterA:93, clusterB:76, rc:5,
       dimensions:{D1:5,D2:5,D3:4,D4:2,D5:4,D6:4,D7:4,D8:5},
-      scenarios:[
-        {name:"S1/S2 (Bear, ceasefire)",target:"$40-45",prob:20},
-        {name:"S3 (Base, 3mo)",target:"$63",prob:35},
-        {name:"S3/S4 (Bull, extended)",target:"$70-85",prob:45}
-      ],
-      fairValue:{
-        baseCaseFV:"$63",probWeightedFV:"$71",bearCaseFV:"$40",bullCaseFV:"$85",
-        methodology:"Scenario-Weighted EV/EBITDA (6.5x)",thesisType:"Cyclical/Commodity + Event-Driven",lastUpdated:"2026-03-23"
-      },
-      catalysts:[
-        {date:"Apr 2026",event:"Q1 2026 contract repricing — first war-conditions MNRP/MECR reset (ARP guided $330-340 pre-Hormuz)",type:"Soft",dim:"D2",urgency:"week3"},
-        {date:"May 2026",event:"Q1 earnings — first Hormuz impact on realized prices. Q4 miss ($-0.14 vs $0.81 est) creates low bar.",type:"Soft",dim:"D2",urgency:"month2"},
-        {date:"Aug 2026",event:"Q2 earnings — THE earnings surprise quarter (full April repricing captured)",type:"Soft",dim:"D2",urgency:"beyond"},
-        {date:"Sep 2026",event:"Titan Trinidad gas contract expiry — 730 KT production at risk (binary)",type:"Hard",dim:"D1,D4",urgency:"beyond"},
-        {date:"Dec 2027",event:"First unsecured note maturity ($400M, 5.125%)",type:"Hard",dim:"D4",urgency:"beyond"}
-      ],
-      questions:{
-        critical:[
-          {q:"Titan Trinidad gas contract renewal (Sep 2026 expiry) — 730 KT production at risk",resolved:false}
-        ],
-        open:[
-          {q:"MTO affordability ceiling at Hormuz oil prices — revised breakpoint $450-550/t?",resolved:false},
-          {q:"Ammonia contribution upside at wartime prices (Beaumont 340 KT)",resolved:false},
-          {q:"OCI synergy realization timeline ($30M target by end 2026)",resolved:false},
-          {q:"Egypt JV partner identity and governance",resolved:false},
-          {q:"Natgasoline operating performance — why $38M net loss at 100% basis?",resolved:false}
-        ],
-        resolved:7
-      },
+      currentPrice:null,priceHistory:[],
+      scenarios:[{name:"S1/S2 (Bear, ceasefire)",target:"$40-45",prob:20},{name:"S3 (Base, 3mo)",target:"$63",prob:35},{name:"S3/S4 (Bull, extended)",target:"$70-85",prob:45}],
+      fairValue:{baseCaseFV:"$63",probWeightedFV:"$71",bearCaseFV:"$40",bullCaseFV:"$85",methodology:"Scenario-Weighted EV/EBITDA (6.5x)",thesisType:"Cyclical/Commodity + Event-Driven",lastUpdated:"2026-03-23"},
+      catalysts:[{date:"Apr 2026",event:"Q1 2026 contract repricing — first war-conditions MNRP/MECR reset",type:"Soft",dim:"D2",urgency:"week3"},{date:"May 2026",event:"Q1 earnings — first Hormuz impact on realized prices",type:"Soft",dim:"D2",urgency:"month2"},{date:"Aug 2026",event:"Q2 earnings — THE earnings surprise quarter",type:"Soft",dim:"D2",urgency:"beyond"},{date:"Sep 2026",event:"Titan Trinidad gas contract expiry — 730 KT at risk",type:"Hard",dim:"D1,D4",urgency:"beyond"},{date:"Dec 2027",event:"First unsecured note maturity ($400M, 5.125%)",type:"Hard",dim:"D4",urgency:"beyond"}],
+      questions:{critical:[{q:"Titan Trinidad gas contract renewal (Sep 2026 expiry) — 730 KT production at risk",resolved:false}],open:[{q:"MTO affordability ceiling at Hormuz oil prices — revised breakpoint $450-550/t?",resolved:false},{q:"Ammonia contribution upside at wartime prices (Beaumont 340 KT)",resolved:false},{q:"OCI synergy realization timeline ($30M target by end 2026)",resolved:false},{q:"Egypt JV partner identity and governance",resolved:false},{q:"Natgasoline operating performance — why $38M net loss at 100% basis?",resolved:false}],resolved:7},
       debates:[],
-      financials:{
-        revenue:"~$4B (FY2025)",
-        Q4EPS:"($0.14) vs $0.81 est (miss by $0.95)",
-        Q4production:"2.36M tonnes (+26.7% YoY, strong)",
-        capacity:"10.4 MMT (69% NA gas-advantaged)",
-        leverage:"3.26x ND/EBITDA",
-        zeroMEproduction:"Zero ME production — pure beneficiary",
-        ARP_sensitivity:"$300/t=$650M, $350/t=$1,075M, $400/t=$1,450M EBITDA",
-        spotPricing:"CFR SEA $494-496/t (Mar 12); China 2,960 CNY/t; FOB US Gulf 106-108 cts/gal",
-        probWeightedEBITDA:"$1,226M",
-        insiderOwnership:"13.09%"
-      },
-      variantViews:[
-        "17.5 MMT ME methanol removed (56% of traded). Zero ME production. April repricing = Q2 surprise.",
-        "MTO demand destruction ceiling raised to $420-450/t by correlated naphtha spike (Brent >$110).",
-        "Even ceasefire doesn't snap-back prices: infrastructure damage = 6-24mo restart, war-risk insurance 6-18mo.",
-        "Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply, structurally higher methanol prices post-war.",
-        "CEO confirmed 18-20 MMT/yr supply restricted. Supply hole is 2x Methanex's entire output."
-      ],
-      recentNotes:[
-        {date:"2026-03-23",title:"Monday data: Q4 EPS miss ($-0.14 vs $0.81). Production +26.7% YoY. CEO confirmed 18-20 MMT restricted. CFR SEA $494-496/t vs Q1 guide $330-340. Consensus PT $52.36 below current price."},
-        {date:"2026-03-23",title:"Fair value estimated: S3 base $63, prob-weighted $71 (+26% vs $56.30). At 7.5x: prob-weighted $87 (+55%). Asymmetry improves at higher multiples."},
-        {date:"2026-03-21",title:"Full remap to standard D1-D8 framework. D1=5, D2=5, D3=4, D4=2, D5=4, D6=4, D7=4, D8=5. Conviction 7->7.5/10. Cluster A 93%, B 76%."},
-        {date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum, infrastructure damage 6-24mo."},
-        {date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled. Removes 2028-2030 oversupply risk."}
-      ]
+      financials:{revenue:"~$4B (FY2025)",Q4EPS:"($0.14) vs $0.81 est",Q4production:"2.36M tonnes (+26.7% YoY)",capacity:"10.4 MMT (69% NA gas-advantaged)",leverage:"3.26x ND/EBITDA",zeroMEproduction:"Zero ME production — pure beneficiary",ARP_sensitivity:"$300/t=$650M, $350/t=$1,075M, $400/t=$1,450M EBITDA",probWeightedEBITDA:"$1,226M",insiderOwnership:"13.09%"},
+      variantViews:["17.5 MMT ME methanol removed (56% of traded). Zero ME production. April repricing = Q2 surprise.","MTO demand destruction ceiling raised to $420-450/t by correlated naphtha spike (Brent >$110).","Even ceasefire doesn't snap-back prices: infrastructure damage = 6-24mo restart, war-risk insurance 6-18mo.","Iran 19.6 MMT expansion pipeline cancelled/delayed 3-5yr — removes future oversupply.","CEO confirmed 18-20 MMT/yr supply restricted. Supply hole is 2x Methanex's entire output."],
+      recentNotes:[{date:"2026-03-23",title:"Monday data: Q4 EPS miss ($-0.14 vs $0.81). Production +26.7% YoY. CEO confirmed 18-20 MMT restricted. Consensus PT $52.36 below current price."},{date:"2026-03-23",title:"Fair value estimated: S3 base $63, prob-weighted $71 (+26% vs $56.30)."},{date:"2026-03-21",title:"Full remap to standard D1-D8 framework. Conviction 7->7.5/10. Cluster A 93%, B 76%."},{date:"2026-03-21",title:"Duration analysis: ceasefire does NOT snap-back prices. 2.5mo restart minimum."},{date:"2026-03-21",title:"Iran 19.6 MMT expansion pipeline effectively cancelled."}]
     },
     TRI: {
       company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
       allocation:0, conviction:8, clusterA:80, clusterB:84, rc:5,
       dimensions:{D1:4,D2:4,D3:4,D4:4,D5:4,D6:5,D7:4,D8:4},
-      scenarios:[
-        {name:"Bear (auto downturn)",target:"40-55p",prob:25},
-        {name:"Base (steady improvement)",target:"90-110p",prob:45},
-        {name:"Bull (rebuild phase)",target:"130-160p",prob:30}
-      ],
-      fairValue:{
-        baseCaseFV:"100p",probWeightedFV:"~95p",bearCaseFV:"40p",bullCaseFV:"160p",
-        methodology:"SOTP + Peer Multiples",thesisType:"Turnaround + Hidden Franchise",lastUpdated:"2026-03-22"
-      },
-      catalysts:[
-        {date:"Jul 2026",event:"FY2026 Final Results — key test of 10% margin target progress",type:"Hard",dim:"D1,D2",urgency:"beyond"},
-        {date:"Nov 2026",event:"H1 FY2027 Interim Results — rebuild midpoint",type:"Hard",dim:"D1",urgency:"beyond"},
-        {date:"TBD",event:"Analyst initiation (Panmure Liberum + Zeus Capital visible)",type:"Soft",dim:"D2,D3",urgency:"month3"}
-      ],
-      questions:{
-        critical:[{q:"Auto aftermarket split (replacement vs new vehicle production)",resolved:false}],
-        open:[
-          {q:"Peer multiples verification (Bossard, Bufab, Wurth)",resolved:false},
-          {q:"Customer concentration risk (top 5 customers)",resolved:false},
-          {q:"Manufactured vs distributed revenue split and margin differential",resolved:false}
-        ],
-        resolved:15
-      },
+      currentPrice:null,priceHistory:[],
+      scenarios:[{name:"Bear (auto downturn)",target:"40-55p",prob:25},{name:"Base (steady improvement)",target:"90-110p",prob:45},{name:"Bull (rebuild phase)",target:"130-160p",prob:30}],
+      fairValue:{baseCaseFV:"100p",probWeightedFV:"~95p",bearCaseFV:"40p",bullCaseFV:"160p",methodology:"SOTP + Peer Multiples",thesisType:"Turnaround + Hidden Franchise",lastUpdated:"2026-03-22"},
+      catalysts:[{date:"Jul 2026",event:"FY2026 Final Results — key test of 10% margin target progress",type:"Hard",dim:"D1,D2",urgency:"beyond"},{date:"Nov 2026",event:"H1 FY2027 Interim Results — rebuild midpoint",type:"Hard",dim:"D1",urgency:"beyond"},{date:"TBD",event:"Analyst initiation (Panmure Liberum + Zeus Capital visible)",type:"Soft",dim:"D2,D3",urgency:"month3"}],
+      questions:{critical:[{q:"Auto aftermarket split (replacement vs new vehicle production)",resolved:false}],open:[{q:"Peer multiples verification (Bossard, Bufab, Wurth)",resolved:false},{q:"Customer concentration risk (top 5 customers)",resolved:false},{q:"Manufactured vs distributed revenue split and margin differential",resolved:false}],resolved:15},
       debates:[],
-      financials:{
-        revenue:"GBP 223.5M (FY2025)",
-        ebitMargin:"6.7% (FY2025), 7.2% ex-FX (H1 FY2026)",
-        grossMargin:"28.9% (H1 FY2026, +150bps)",
-        leverage:"0.9x",
-        mcap:"GBP 81M",
-        bookValue:"GBP 124M (net assets > mcap)",
-        eps:"5.78p (FY2025, tripled YoY)",
-        patternMatch:"30.5/35 (87%, Strong)",
-        insiderBuying:"Mills 16.3% + Percival 521K shares"
-      },
-      variantViews:[
-        "Market anchors on 38% automotive exposure + 81% drawdown; ignores certification moat (<1% BOM, 100% failure risk = zero switching).",
-        "0.53x EV/Sales, ~7x FY26E EBIT vs Bossard 12-15x, Bufab 21x — structural discount for identical business model.",
-        "Seven independent upside paths (margin, coverage, M&A, smart infra, NA, Saudi, institutional threshold) — 3+ showing early evidence.",
-        "Self-funding turnaround: positive FCF, sub-1x leverage, no dilution risk."
-      ],
-      recentNotes:[
-        {date:"2026-03-22",title:"Pattern-match 30.5/35 (Strong). Conviction scored 8/10. RC 5/5. Deep dive priority — VOW archetype (drawdown + new mgmt + certification moat + margin inflection + coverage gap)."}
-      ]
+      financials:{revenue:"GBP 223.5M (FY2025)",ebitMargin:"6.7% (FY2025), 7.2% ex-FX (H1 FY2026)",grossMargin:"28.9% (H1 FY2026, +150bps)",leverage:"0.9x",mcap:"GBP 81M",bookValue:"GBP 124M (net assets > mcap)",eps:"5.78p (FY2025, tripled YoY)",patternMatch:"30.5/35 (87%, Strong)",insiderBuying:"Mills 16.3% + Percival 521K shares"},
+      variantViews:["Market anchors on 38% automotive exposure + 81% drawdown; ignores certification moat (<1% BOM, 100% failure risk = zero switching).","0.53x EV/Sales, ~7x FY26E EBIT vs Bossard 12-15x, Bufab 21x — structural discount.","Seven independent upside paths — 3+ showing early evidence.","Self-funding turnaround: positive FCF, sub-1x leverage, no dilution risk."],
+      recentNotes:[{date:"2026-03-22",title:"Pattern-match 30.5/35 (Strong). Conviction scored 8/10. RC 5/5. Deep dive priority."}]
     },
     ARR: {
       company:"Arribatec Group ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
       allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
       dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
+      currentPrice:null,priceHistory:[],
       scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"Q2 2026",event:"Source FY2025 annual report — verify balance sheet and segment economics",type:"Soft",dim:"D1,D4",urgency:"month2"}
-      ],
+      catalysts:[{date:"Q2 2026",event:"Source FY2025 annual report — verify balance sheet and segment economics",type:"Soft",dim:"D1,D4",urgency:"month2"}],
       questions:{critical:[{q:"Verify share price and market cap post-reverse-split",resolved:false}],open:[{q:"Cloud Division trajectory — key client loss in Q4 2025",resolved:false},{q:"Customer concentration risk",resolved:false},{q:"Dilution history (614.8% share growth) — is it over?",resolved:false}],resolved:0},
       debates:[],
-      financials:{
-        revenue:"NOK 579M (+16%)",
-        ebitda:"~NOK 62M (4 consecutive quarters positive)",
-        netCash:"NOK 73.8M",
-        dividend:"NOK 1.00/share (~12.5% yield)",
-        grossMargin:"74.6%",
-        insiderBuying:"NOK 1.91M",
-        patternMatch:"28/35 (80%, Strong)"
-      },
-      variantViews:["Already-delivered turnaround (4Q EBITDA+, net cash, dividend proposed) priced as failed micro-cap. Zero analyst coverage = no distribution mechanism."],
-      recentNotes:[{date:"2026-03-23",title:"Added as ACTIVE. Pattern-match 28/35 (Strong). Recovery proven. Verify price/cap post-reverse-split before conviction scoring."}]
+      financials:{revenue:"NOK 579M (+16%)",ebitda:"~NOK 62M (4Q positive)",netCash:"NOK 73.8M",dividend:"NOK 1.00/share (~12.5% yield)",grossMargin:"74.6%",insiderBuying:"NOK 1.91M",patternMatch:"28/35 (80%, Strong)"},
+      variantViews:["Already-delivered turnaround priced as failed micro-cap. Zero analyst coverage."],
+      recentNotes:[{date:"2026-03-23",title:"Added as ACTIVE. Pattern-match 28/35 (Strong). Recovery proven. Verify price/cap post-reverse-split."}]
     },
-    KIST: {
-      company:"Kistos Holdings", theme:"Hormuz Disruption", status:"PARKED", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Downgraded MONITORING->PARKED (Mar 23). Dynamic PM 17/35 — below 22 threshold. U3=2 (no business quality), U4=2 (tight cash, AIM liquidity), C2=1 (pure commodity bet). Re-evaluate: post-tax FCF model + Oman ramp + UK EPL reform."},
-      variantViews:[],recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. PM 17/35. Pure directional TTF bet, not an investable thesis."}]
-    },
-    LCUT: {
-      company:"Lifetime Brands", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:2, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"~Apr 23",event:"CBP ACE automated refund system go-live (~45 days from Mar 9 order)",type:"Soft",dim:"D1",urgency:"week3"},
-        {date:"Late Apr/May",event:"Q1 2026 earnings — first refund acknowledgment opportunity",type:"Soft",dim:"D1",urgency:"month2"},
-        {date:"Jul 24",event:"Section 122 replacement tariff expires",type:"Hard",dim:"D1",urgency:"beyond"},
-        {date:"Dec 2026",event:"KitchenAid license expiry (corrected from Jun 2026)",type:"Hard",dim:"D1",urgency:"beyond"}
-      ],
-      questions:{critical:[],open:[{q:"Section 1592 investigation (since 2019) — may delay automated refund via CBP flagging",resolved:false}],resolved:0},
-      debates:[],
-      financials:{revenue:"$648M",EBITDA:"$50.8M",leverage:"2.9x",mcap:"$103.5M",refundEstimate:"$15-30M (14-29% of mcap)",chinaExposure:"85%+"},
-      variantViews:["CIT Mar 4 universal refund order benefits all importers — no individual suit needed. LCUT has 8,300+ customs records confirming IOR."],
-      recentNotes:[]
-    },
-    HOFT: {
-      company:"Hooker Furnishings", theme:"Tariffs Refund", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live — no known compliance issues",type:"Soft",dim:"D1",urgency:"week3"}],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)",sourcing:"Vietnam 76% / China 13%"},variantViews:[],recentNotes:[]
-    },
-    BLMN: {
-      company:"Bloomin' Brands", theme:"Sentiments-Valuation Mismatch", status:"PARKED", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{mcap:"~$496M",revenue:"~$3.95B",netDebt:"~$728M",restaurantMargins:"~11%",evRevenue:"~0.3x",patternMatch:"20/35 (57%, PARKED)"},
-      variantViews:["CEO+CFO $2M cluster buy + Starboard activist + Outback traffic first positive since Q4 2021 (+90bps industry outperformance)."],
-      recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. Dynamic PM 20/35. U3=2 (casual dining, no moat), U4=2 (D/E 2.77x). Re-evaluate: Q1 comps + leverage below 2.5x."}]
-    },
-    GO: {
-      company:"Grocery Outlet", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"May 2026",event:"Securities class action lead plaintiff deadline",type:"Hard",dim:"D4",urgency:"month2"},
-        {date:"Q2 2026",event:"Q2 comp confirmation — WOW strategy working?",type:"Soft",dim:"D1",urgency:"month3"}
-      ],
-      questions:{critical:[{q:"Securities class action scope and potential liability",resolved:false}],open:[{q:"IO model operator retention rates post-store closures",resolved:false}],resolved:0},
-      debates:[],
-      financials:{mcap:"~$568M",revenue:"$4.6-4.72B (FY2026 guided)",stores:"~520",storeClosures:"36 announced",drawdown:"85% from peak",patternMatch:"27.5/35 (79%)"},
-      variantViews:["CEO Potter $1.69M purchase (99% increase in holdings) at peak distress. IO franchise model is genuinely unique in US grocery."],
-      recentNotes:[]
-    },
-    KENDR: {
-      company:"Kendrion N.V.", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:1,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[
-        {date:"Q1 2026",event:"Q4/FY2025 results — confirm post-divestment margin trajectory (target 15-18%)",type:"Soft",dim:"D1",urgency:"week3"}
-      ],
-      questions:{critical:[{q:"Segment-level Brakes vs Actuators profitability split",resolved:false}],open:[{q:"Germany 38% revenue concentration risk in EU downturn",resolved:false}],resolved:0},
-      debates:[],
-      financials:{mcap:"~EUR 261M",ebitdaMargin:"15.5% (Q3 2025)",leverage:"2.1x",marginTarget:"15-18%",drawdown:"53% from 2021 peak",patternMatch:"26.5/35 (76%)"},
-      variantViews:["Post-Oct 2024 auto divestment = fundamentally different business. Pure-play industrial electromagnetics with certification moats. Zero US/UK coverage. SB member EUR 2.03M purchase."],
-      recentNotes:[]
-    },
-    TOI: {
-      company:"Topicus.com Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"European VMS serial acquirer (CSU spin-off); 180+ portfolio companies; Asseco Poland transformative deal; ~14x EV/FCF; 52% off highs"},
-      variantViews:[],recentNotes:[]
-    },
-    APP: {
-      company:"AppLovin Corporation", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Pure-play AI-driven DSP+SSP; 40% YTD decline creates entry opportunity; monitor Meta competitive response"},
-      variantViews:[],recentNotes:[]
-    },
-    SPSC: {
-      company:"SPS Commerce, Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"100-quarter compounder at trough (18x vs 50-60x historical); core EDI network moat + MAX AI optionality; activist catalyst (Anson/Irenic)"},
-      variantViews:[],recentNotes:[]
-    },
-    SGE: {
-      company:"The Sage Group plc", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:0,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); Intacct growing 23%+; measurable AI pricing uplift (5.5%); 37% off highs"},
-      variantViews:[],recentNotes:[]
-    },
-    TRI_AI: {
-      company:"Thomson Reuters Corp.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:0, clusterB:0, rc:3,
-      dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},
-      scenarios:[],fairValue:null,
-      catalysts:[],
-      questions:{critical:[],open:[],resolved:0},debates:[],
-      financials:{info:"AI content moat; CoCounsel 1M+ users; 28% GenAI ACV; 39.2% EBITDA margin; FCF $1.95B; prob-wtd FV $97; at $70: 38% upside. Entry below $70."},
-      variantViews:[],recentNotes:[]
-    }
+    KIST: {company:"Kistos Holdings",theme:"Hormuz Disruption",status:"PARKED",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"Downgraded MONITORING->PARKED. Dynamic PM 17/35."},variantViews:[],recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. PM 17/35. Pure directional TTF bet."}]},
+    LCUT: {company:"Lifetime Brands",theme:"Tariffs Refund",status:"MONITORING",portfolioType:null,allocation:0,conviction:2,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[{date:"~Apr 23",event:"CBP ACE automated refund system go-live",type:"Soft",dim:"D1",urgency:"week3"},{date:"Late Apr/May",event:"Q1 2026 earnings — first refund acknowledgment",type:"Soft",dim:"D1",urgency:"month2"},{date:"Jul 24",event:"Section 122 replacement tariff expires",type:"Hard",dim:"D1",urgency:"beyond"},{date:"Dec 2026",event:"KitchenAid license expiry",type:"Hard",dim:"D1",urgency:"beyond"}],questions:{critical:[],open:[{q:"Section 1592 investigation may delay automated refund",resolved:false}],resolved:0},debates:[],financials:{revenue:"$648M",EBITDA:"$50.8M",leverage:"2.9x",mcap:"$103.5M",refundEstimate:"$15-30M (14-29% of mcap)",chinaExposure:"85%+"},variantViews:["CIT Mar 4 universal refund order benefits all importers."],recentNotes:[]},
+    HOFT: {company:"Hooker Furnishings",theme:"Tariffs Refund",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[{date:"~Apr 23",event:"CBP ACE refund go-live",type:"Soft",dim:"D1",urgency:"week3"}],questions:{critical:[],open:[],resolved:0},debates:[],financials:{mcap:"$121M",refundEstimate:"$20-33M (17-27% of mcap)",sourcing:"Vietnam 76% / China 13%"},variantViews:[],recentNotes:[]},
+    BLMN: {company:"Bloomin' Brands",theme:"Sentiments-Valuation Mismatch",status:"PARKED",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:1,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{mcap:"~$496M",revenue:"~$3.95B",patternMatch:"20/35 (57%, PARKED)"},variantViews:["CEO+CFO $2M cluster buy + Starboard activist + Outback traffic first positive since Q4 2021."],recentNotes:[{date:"2026-03-23",title:"Downgraded MONITORING->PARKED. PM 20/35."}]},
+    GO: {company:"Grocery Outlet",theme:"Sentiments-Valuation Mismatch",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:1,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[{date:"May 2026",event:"Securities class action lead plaintiff deadline",type:"Hard",dim:"D4",urgency:"month2"},{date:"Q2 2026",event:"Q2 comp confirmation",type:"Soft",dim:"D1",urgency:"month3"}],questions:{critical:[{q:"Securities class action scope",resolved:false}],open:[{q:"IO model operator retention rates",resolved:false}],resolved:0},debates:[],financials:{mcap:"~$568M",revenue:"$4.6-4.72B",stores:"~520",drawdown:"85% from peak",patternMatch:"27.5/35 (79%)"},variantViews:["CEO Potter $1.69M purchase. IO franchise model genuinely unique in US grocery."],recentNotes:[]},
+    KENDR: {company:"Kendrion N.V.",theme:"Sentiments-Valuation Mismatch",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:1,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[{date:"Q1 2026",event:"Q4/FY2025 results — confirm margin trajectory",type:"Soft",dim:"D1",urgency:"week3"}],questions:{critical:[{q:"Segment-level Brakes vs Actuators profitability split",resolved:false}],open:[{q:"Germany 38% revenue concentration risk",resolved:false}],resolved:0},debates:[],financials:{mcap:"~EUR 261M",ebitdaMargin:"15.5%",leverage:"2.1x",marginTarget:"15-18%",drawdown:"53% from peak",patternMatch:"26.5/35 (76%)"},variantViews:["Post-Oct 2024 auto divestment = fundamentally different business. Zero US/UK coverage."],recentNotes:[]},
+    TOI: {company:"Topicus.com Inc.",theme:"AI Disruption Opportunity",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"European VMS serial acquirer (CSU spin-off); ~14x EV/FCF; 52% off highs"},variantViews:[],recentNotes:[]},
+    APP: {company:"AppLovin Corporation",theme:"AI Disruption Opportunity",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"Pure-play AI-driven DSP+SSP; 40% YTD decline; monitor Meta competitive response"},variantViews:[],recentNotes:[]},
+    SPSC: {company:"SPS Commerce, Inc.",theme:"AI Disruption Opportunity",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"100-quarter compounder at trough; core EDI network moat + MAX AI optionality"},variantViews:[],recentNotes:[]},
+    SGE: {company:"The Sage Group plc",theme:"AI Disruption Opportunity",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:0,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"Defensive SaaS (97% recurring, 89% GM, 101% NRR); Intacct +23%; 37% off highs"},variantViews:[],recentNotes:[]},
+    TRI_AI: {company:"Thomson Reuters Corp.",theme:"AI Disruption Opportunity",status:"MONITORING",portfolioType:null,allocation:0,conviction:0,clusterA:0,clusterB:0,rc:3,dimensions:{D1:0,D2:0,D3:0,D4:0,D5:0,D6:0,D7:0,D8:0},currentPrice:null,priceHistory:[],scenarios:[],fairValue:null,catalysts:[],questions:{critical:[],open:[],resolved:0},debates:[],financials:{info:"AI content moat; CoCounsel 1M+ users; 28% GenAI ACV; prob-wtd FV $97; at $70: 38% upside. Entry below $70."},variantViews:[],recentNotes:[]}
   },
   themes: [
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR"],color:"#4ade80"},
     {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH"],color:"#f59e0b"},
-    {name:"Hidden Value SOTP",status:"DORMANT",impact:0,discovery:0,priority:0,tickers:[],color:"#8b9bb4",note:"DORMANT — Both tickers PASSED and archived to Case Studies (Mar 21). No active/monitoring tickers."},
+    {name:"Hidden Value SOTP",status:"DORMANT",impact:0,discovery:0,priority:0,tickers:[],color:"#8b9bb4",note:"DORMANT — Both tickers PASSED and archived."},
     {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["TOI","APP","SPSC","SGE","TRI_AI"],color:"#a78bfa",note:"5 tickers MONITORING. Entry below target prices."},
     {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],color:"#64748b"}
   ],
   candidates: [
-    {name:"Tanker/Shipping Supercycle",priority:12,persistence:5,status:"Persistence confirmed (5 briefings). Strong overlap with Hormuz theme. FRO Q1 VLCC $107K/day vs $25K breakeven."},
-    {name:"European Defense & Infrastructure Boom",priority:12,persistence:2,status:"Persistence confirmed. EUR 600B German spend. LMT ATH $692, +40% YTD. RTX backlog $268B."},
-    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in any consensus model. -20% to -30% healthcare sector if realized."},
-    {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:2,status:"Persistence confirmed. Pentagon 2027 deadline. China expanded licensing to samarium/gadolinium/lutetium."},
-    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Blue Owl -30% YTD. Contrarian angle."},
-    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. EU CBAM + ammonia spike. Discovery 2/5 (front-page news)."}
+    {name:"Tanker/Shipping Supercycle",priority:12,persistence:5,status:"Persistence confirmed (5 briefings). FRO Q1 VLCC $107K/day vs $25K breakeven."},
+    {name:"European Defense & Infrastructure Boom",priority:12,persistence:2,status:"Persistence confirmed. EUR 600B German spend. LMT ATH $692, +40% YTD."},
+    {name:"Pharma Tariff Tail Risk",priority:20,persistence:0,status:"WATCH only. Impact 4, Discovery 5. Not in any consensus model."},
+    {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:2,status:"Persistence confirmed. Pentagon 2027 deadline."},
+    {name:"Private Credit Dislocation",priority:9,persistence:1,status:"First appearance. $265B wipeout. Blue Owl -30% YTD."},
+    {name:"European Energy Crisis 2.0",priority:8,persistence:4,status:"Persistence confirmed. TTF 3-year high. Discovery 2/5 (front-page news)."}
   ],
   parked: [
     {ticker:"KIST",company:"Kistos Holdings",theme:"Hormuz Disruption",pm:"17/35",reason:"Pure directional TTF bet, no business quality",trigger:"Post-tax FCF model + Oman ramp + UK EPL reform"},
-    {ticker:"BLMN",company:"Bloomin' Brands",theme:"SVM",pm:"20/35",reason:"Casual dining, no moat, high leverage",trigger:"Q1 comps + leverage below 2.5x + covenant review"},
+    {ticker:"BLMN",company:"Bloomin' Brands",theme:"SVM",pm:"20/35",reason:"Casual dining, no moat, high leverage",trigger:"Q1 comps + leverage below 2.5x"},
     {ticker:"SMWH",company:"WH Smith PLC",theme:"SVM",pm:"25.5/35",reason:"6 analysts, high leverage, FCA investigation",trigger:"After Quinn has 2 quarters results (Oct 2026)"},
     {ticker:"MCB",company:"McCoy Global Inc.",theme:"SVM",pm:"24.5/35",reason:"Insider buying trivially small ($28K)",trigger:"Board/CEO meaningful open-market purchases"}
   ],
   priorityQueue: []
 };
 
-// Compute priority queue
+// ── Computed fields ──
 function computePriorityQueue() {
   var items = [];
   for (var sym in D.tickers) {
@@ -673,21 +597,15 @@ function computePriorityQueue() {
     var posW = t.allocation > 0 ? t.allocation / 10 : 1;
     if (t.catalysts) {
       t.catalysts.forEach(function(c) {
-        var urgMul = 1;
-        if (c.urgency === 'overdue') urgMul = 10;
-        else if (c.urgency === 'week2') urgMul = 8;
-        else if (c.urgency === 'week3') urgMul = 6;
-        else if (c.urgency === 'month2') urgMul = 4;
-        else if (c.urgency === 'month3') urgMul = 3;
-        else urgMul = 2;
+        var urgMul = c.urgency==='overdue'?10:c.urgency==='week2'?8:c.urgency==='week3'?6:c.urgency==='month2'?4:c.urgency==='month3'?3:2;
         var catW = t.allocation > 0 ? 1.5 : 1.0;
         var score = Math.round(posW * urgMul * catW * 10) / 10;
-        items.push({ticker:sym,event:c.event,date:c.date,score:score,type:'Catalyst',action:'Monitor and assess impact on thesis dimensions'});
+        items.push({ticker:sym,event:c.event,date:c.date,score:score,type:'Catalyst',action:'Monitor and assess impact'});
       });
     }
     if (t.conviction > 7 && t.rc < 4) {
       var score = Math.round(posW * 6 * 1.0 * 10) / 10;
-      items.push({ticker:sym,event:'RC gap: conviction '+t.conviction+' but RC '+t.rc+'/5 — resolve critical questions before conviction upgrade',date:'Now',score:score,type:'Research Gap',action:'Run filing-review or transcript-review on outstanding sources'});
+      items.push({ticker:sym,event:'RC gap: conviction '+t.conviction+' but RC '+t.rc+'/5',date:'Now',score:score,type:'Research Gap',action:'Run filing-review or transcript-review'});
     }
   }
   items.sort(function(a,b){return b.score - a.score});
@@ -695,6 +613,51 @@ function computePriorityQueue() {
 }
 computePriorityQueue();
 
+function daysSince(dateStr) {
+  var d = new Date(dateStr);
+  var now = new Date('2026-03-24');
+  return Math.floor((now - d) / 86400000);
+}
+
+function getStaleness(sym) {
+  var t = D.tickers[sym];
+  if (!t.recentNotes || t.recentNotes.length === 0) return 999;
+  return daysSince(t.recentNotes[0].date);
+}
+
+function parseFVNumber(fvStr) {
+  if (!fvStr) return null;
+  var m = fvStr.match(/([\d,.]+)/);
+  return m ? parseFloat(m[1].replace(',','')) : null;
+}
+
+function computeUpside(sym) {
+  var t = D.tickers[sym];
+  if (!t.fairValue || !t.currentPrice) return null;
+  var fv = parseFVNumber(t.fairValue.probWeightedFV);
+  if (!fv) return null;
+  return ((fv - t.currentPrice.price) / t.currentPrice.price * 100).toFixed(0);
+}
+
+// ── State ──
+var activeThemeFilter = 'All';
+var alertGroupState = {};
+var allAlertsOpen = false;
+var sectionState = {};
+
+// ── KPI Strip ──
+function renderKPI() {
+  var p = D.portfolio;
+  var nextCat = D.catalystTimeline.length > 0 ? D.catalystTimeline[0].date : '--';
+  document.getElementById('kpiStrip').innerHTML =
+    '<div class="kpi-item"><div class="kpi-label">Deployed</div><div class="kpi-value" style="color:#4ade80">'+p.deployedPct+'%</div></div>'+
+    '<div class="kpi-item"><div class="kpi-label">Cash</div><div class="kpi-value">'+p.cashPct+'%</div></div>'+
+    '<div class="kpi-item"><div class="kpi-label">Conviction</div><div class="kpi-value" style="color:#4ade80">'+p.wtdConviction+'/10</div></div>'+
+    '<div class="kpi-item"><div class="kpi-label">Slots</div><div class="kpi-value">'+p.slotsUsed+'/'+p.slotsMax+'</div></div>'+
+    '<div class="kpi-item"><div class="kpi-label">Next Catalyst</div><div class="kpi-value" style="color:#f87171;font-size:12px">'+nextCat+'</div></div>';
+}
+
+// ── Tab switching ──
 function switchTab(id) {
   document.querySelectorAll('.content').forEach(function(e){e.classList.remove('active')});
   document.querySelectorAll('.tab').forEach(function(e){e.classList.remove('active')});
@@ -710,28 +673,203 @@ function renderTab(id) {
   else if (id === 'pipeline') renderPipeline();
 }
 
+// ── Alert System ──
+function getAlertGroups() {
+  var groups = {};
+  D.alerts.forEach(function(a) {
+    var g = a.group || a.type;
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(a);
+  });
+  return groups;
+}
+
+function toggleAlertGroup(group) {
+  alertGroupState[group] = !alertGroupState[group];
+  renderAlertDrawer();
+}
+
+function toggleAllAlerts() {
+  allAlertsOpen = !allAlertsOpen;
+  var groups = getAlertGroups();
+  for (var g in groups) alertGroupState[g] = allAlertsOpen;
+  renderAlertDrawer();
+  var btn = document.getElementById('alertExpandBtn');
+  if (btn) btn.textContent = allAlertsOpen ? 'Collapse' : 'Expand';
+}
+
+function renderAlertDrawer() {
+  var groups = getAlertGroups();
+  var drawer = document.getElementById('alertDrawer');
+  if (!drawer) return;
+  var html = '';
+  for (var g in groups) {
+    if (!alertGroupState[g]) continue;
+    html += '<div class="alert-group"><div class="alert-group-header">'+g.toUpperCase()+' ('+groups[g].length+')</div>';
+    groups[g].forEach(function(a) {
+      html += '<div class="alert alert-'+a.type+'">'+a.text+'</div>';
+    });
+    html += '</div>';
+  }
+  drawer.innerHTML = html;
+  drawer.classList.toggle('open', html.length > 0);
+}
+
+// ── Collapsible Sections ──
+function toggleSection(id) {
+  sectionState[id] = !sectionState[id];
+  var title = document.querySelector('[data-section="'+id+'"]');
+  var content = document.getElementById('sec-'+id);
+  if (title) title.classList.toggle('collapsed', sectionState[id]);
+  if (content) content.classList.toggle('collapsed', sectionState[id]);
+}
+
+function sectionHtml(id, title) {
+  var collapsed = sectionState[id] ? ' collapsed' : '';
+  return '<div class="section-title'+collapsed+'" data-section="'+id+'" onclick="toggleSection(\''+id+'\')">'+title+'</div>';
+}
+
+function sectionContentStart(id) {
+  var collapsed = sectionState[id] ? ' collapsed' : '';
+  return '<div id="sec-'+id+'" class="section-content'+collapsed+'" style="max-height:9999px">';
+}
+
+function sectionContentEnd() { return '</div>'; }
+
+// ── Theme Filter ──
+function setThemeFilter(theme) {
+  activeThemeFilter = theme;
+  document.querySelectorAll('.theme-filter-pill').forEach(function(e){
+    e.classList.toggle('active', e.dataset.theme === theme);
+  });
+  renderTab(document.querySelector('.content.active').id);
+}
+
+function themeFilterHtml() {
+  var themes = ['All','Hormuz Disruption','Sentiments-Valuation Mismatch','AI Disruption Opportunity','Tariffs Refund'];
+  var labels = ['All','Hormuz','SVM','AI Disruption','Tariffs'];
+  return '<div class="theme-filter">'+themes.map(function(t,i){
+    return '<div class="theme-filter-pill'+(activeThemeFilter===t?' active':'')+'" data-theme="'+t+'" onclick="setThemeFilter(\''+t+'\')">'+labels[i]+'</div>';
+  }).join('')+'</div>';
+}
+
+function matchesFilter(sym) {
+  if (activeThemeFilter === 'All') return true;
+  var t = D.tickers[sym];
+  return t && t.theme === activeThemeFilter;
+}
+
+// ── Sortable Tables ──
+var sortState = {};
+function sortTable(tableId, col) {
+  var table = document.getElementById(tableId);
+  if (!table) return;
+  var rows = Array.from(table.querySelectorAll('tbody tr'));
+  var key = tableId+'-'+col;
+  sortState[key] = sortState[key] === 'asc' ? 'desc' : 'asc';
+  var dir = sortState[key] === 'asc' ? 1 : -1;
+  rows.sort(function(a,b) {
+    var va = a.cells[col].textContent.replace(/[^0-9.\-]/g,'');
+    var vb = b.cells[col].textContent.replace(/[^0-9.\-]/g,'');
+    var na = parseFloat(va), nb = parseFloat(vb);
+    if (!isNaN(na) && !isNaN(nb)) return (na - nb) * dir;
+    return a.cells[col].textContent.localeCompare(b.cells[col].textContent) * dir;
+  });
+  var tbody = table.querySelector('tbody');
+  rows.forEach(function(r){tbody.appendChild(r)});
+  table.querySelectorAll('th').forEach(function(th,i){
+    th.classList.toggle('sorted',i===col);
+    var arrow = th.querySelector('.sort-arrow');
+    if (arrow) arrow.textContent = i===col?(sortState[key]==='asc'?'\u25B2':'\u25BC'):'\u25BC';
+  });
+}
+
+// ── Search ──
+function handleSearch(val) {
+  var sr = document.getElementById('searchResults');
+  if (!val) { sr.classList.remove('active'); return; }
+  val = val.toUpperCase();
+  var matches = Object.keys(D.tickers).filter(function(s){
+    return s.toUpperCase().indexOf(val)>=0 || D.tickers[s].company.toUpperCase().indexOf(val)>=0;
+  }).slice(0,6);
+  if (matches.length===0) { sr.classList.remove('active'); return; }
+  sr.innerHTML = matches.map(function(s){
+    return '<div class="search-result" onmousedown="openOverlay(\''+s+'\')"><span class="sr-ticker">'+s+'</span><span class="sr-company">'+D.tickers[s].company+'</span></div>';
+  }).join('');
+  sr.classList.add('active');
+}
+
+// ── Sparkline helper ──
+function sparklineCanvas(id, data, color) {
+  return '<canvas id="'+id+'" width="80" height="28" class="sparkline-container"></canvas>';
+}
+function renderSparkline(id, data, color) {
+  var c = document.getElementById(id);
+  if (!c || !data || data.length < 2) return;
+  new Chart(c, {type:'line',data:{labels:data.map(function(_,i){return i}),datasets:[{data:data,borderColor:color||'#60a5fa',borderWidth:1.5,pointRadius:0,fill:false,tension:.3}]},options:{responsive:false,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}}}});
+}
+
+// ═══════════════════════════════════════════
+// TAB 1: PORTFOLIO
+// ═══════════════════════════════════════════
 function renderPortfolio() {
   var el = document.getElementById('portfolio');
   var p = D.portfolio;
-  var ptickers = Object.entries(D.tickers).filter(function(e){return e[1].allocation > 0});
+  var ptickers = Object.entries(D.tickers).filter(function(e){return e[1].allocation > 0 && matchesFilter(e[0])});
 
-  var alertsHtml = D.alerts.map(function(a){return '<div class="alert alert-'+a.type+'">'+a.text+'</div>'}).join('');
+  // Alert bar
+  var groups = getAlertGroups();
+  var badgeHtml = '';
+  var badgeColors = {critical:'red',hormuz:'hormuz',svm:'svm',tariff:'tariff',ai:'ai'};
+  for (var g in groups) {
+    var bc = badgeColors[g] || 'blue';
+    badgeHtml += '<div class="alert-badge alert-badge-'+bc+(alertGroupState[g]?' active':'')+'" onclick="toggleAlertGroup(\''+g+'\')">'+groups[g].length+' '+g.toUpperCase()+'</div>';
+  }
+  var alertBarHtml = '<div class="alert-bar">'+badgeHtml+'<button class="alert-expand" id="alertExpandBtn" onclick="toggleAllAlerts()">'+(allAlertsOpen?'Collapse':'Expand')+'</button></div><div class="alert-drawer'+(allAlertsOpen?' open':'')+'" id="alertDrawer"></div>';
 
-  var prioHtml = D.priorityQueue.slice(0,10).map(function(item){
-    return '<div class="priority-item"><span class="priority-score">'+item.score+'</span><strong><span class="ticker-link" onclick="openOverlay(\''+item.ticker+'\')">'+item.ticker+'</span></strong> &mdash; '+item.event+'<div class="priority-action">'+item.date+' &middot; '+item.type+'</div></div>';
-  }).join('');
-
+  // Positions table with price, upside, sparkline, staleness, next catalyst
   var posRows = ptickers.map(function(e){
     var s=e[0],t=e[1];
     var cwa = (t.allocation * t.conviction / 10).toFixed(2);
     var convColor = t.conviction>=9?'#4ade80':t.conviction>=8?'#60a5fa':'#fbbf24';
-    var aColor = t.clusterA>=100?'#4ade80':t.clusterA>=80?'#60a5fa':'#fbbf24';
-    var bColor = t.clusterB>=80?'#4ade80':t.clusterB>=70?'#60a5fa':'#fbbf24';
-    return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> <span class="badge badge-investment">INV</span></td><td>'+t.theme+'</td><td><strong>'+t.allocation+'%</strong></td><td style="color:'+convColor+'">'+t.conviction+'/10</td><td style="color:'+aColor+'">'+t.clusterA+'%</td><td style="color:'+bColor+'">'+t.clusterB+'%</td><td>'+t.rc+'/5</td><td>'+cwa+'</td><td>'+(t.fairValue?t.fairValue.probWeightedFV:'--')+'</td></tr>';
+    var priceStr = t.currentPrice ? t.currentPrice.price+' '+t.currentPrice.currency : '--';
+    var changeStr = t.currentPrice ? (t.currentPrice.change>=0?'+':'')+t.currentPrice.change.toFixed(1)+'%' : '';
+    var changeColor = t.currentPrice ? (t.currentPrice.change>=0?'#4ade80':'#f87171') : '#94a3b8';
+    var upside = computeUpside(s);
+    var upsideStr = upside !== null ? (upside>0?'+':'')+upside+'%' : '--';
+    var upsideColor = upside!==null ? (upside>=50?'#4ade80':upside>=20?'#60a5fa':'#fbbf24') : '#94a3b8';
+    var stale = getStaleness(s);
+    var staleDot = stale<=7?'staleness-fresh':stale<=14?'staleness-aging':'staleness-stale';
+    var nextCat = t.catalysts&&t.catalysts.length>0?t.catalysts[0].date:'--';
+    return '<tr><td><span class="staleness-dot '+staleDot+'" title="'+stale+'d since last note"></span><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> <span class="badge badge-investment">INV</span></td><td>'+t.allocation+'%</td><td style="color:'+convColor+'">'+t.conviction+'/10</td><td>'+priceStr+' <span style="color:'+changeColor+';font-size:11px">'+changeStr+'</span> '+sparklineCanvas('spark_'+s,t.priceHistory)+'</td><td style="color:'+upsideColor+';font-weight:600">'+upsideStr+'</td><td>'+t.rc+'/5</td><td>'+cwa+'</td><td style="font-size:12px">'+nextCat+'</td></tr>';
   }).join('');
 
-  el.innerHTML = '<div class="section-title">Alerts</div>'+alertsHtml+
-    '<div class="section-title">Summary</div><div class="grid"><div class="card"><h3>Capital Deployment</h3>'+
+  // Catalyst timeline
+  var timelineHtml = D.catalystTimeline.slice(0,8).map(function(c){
+    return '<div class="timeline-item"><div class="timeline-date">'+c.date+'</div><div class="timeline-dot timeline-dot-'+c.dot+'"></div><div class="timeline-event">'+c.event+'<span class="timeline-ticker">'+c.ticker+'</span></div></div>';
+  }).join('');
+
+  // Exposure analysis with visual bars
+  var hormuzPct = 37, nonHormuzPct = 40, cashPct = 23;
+  var exposureHtml = '<div class="grid">'+
+    '<div class="card"><h3>Geopolitical Exposure</h3>'+
+    '<div class="exposure-bar"><div class="exposure-segment" style="width:'+hormuzPct+'%;background:rgba(245,158,11,.3);color:#f59e0b">Hormuz '+hormuzPct+'%</div><div class="exposure-segment" style="width:'+nonHormuzPct+'%;background:rgba(74,222,128,.15);color:#4ade80">Non-Hormuz '+nonHormuzPct+'%</div><div class="exposure-segment" style="width:'+cashPct+'%;background:rgba(255,255,255,.06);color:#94a3b8">Cash '+cashPct+'%</div></div>'+
+    '<div class="exposure-toggle" onclick="this.nextElementSibling.classList.toggle(\'show\')">Details</div>'+
+    '<div class="exposure-detail">CF + GTT exposed to Hormuz. S3 base case 55%. Trump 48-hour ultimatum expires ~Mar 24. Binary: Iran opens (S1/S2) or US strikes (S4 35-40%). Iraq FM slashes 2.4 MMbpd. GTT correlation only ~3-4% of YTD move.</div></div>'+
+    '<div class="card"><h3>Concentration</h3>'+
+    '<div class="exposure-bar"><div class="exposure-segment" style="width:40%;background:rgba(34,197,94,.25);color:#4ade80">VOW 40%</div><div class="exposure-segment" style="width:20%;background:rgba(139,92,246,.25);color:#a78bfa">GTT 20%</div><div class="exposure-segment" style="width:17%;background:rgba(59,130,246,.25);color:#60a5fa">CF 17%</div><div class="exposure-segment" style="width:23%;background:rgba(255,255,255,.06);color:#94a3b8">Cash 23%</div></div>'+
+    '<div class="exposure-toggle" onclick="this.nextElementSibling.classList.toggle(\'show\')">Details</div>'+
+    '<div class="exposure-detail">77% deployed across 3 positions. VOW uncorrelated to Hormuz. CF-GTT correlated but diverge on mechanism. 3 currencies unhedged (NOK, EUR, USD). No recession hedge.</div></div>'+
+    '<div class="card"><h3>Key Risk</h3>'+
+    '<div class="metric"><span class="label">VOW Q1 (40% of portfolio)</span><span class="value" style="color:#fbbf24">May 20</span></div>'+
+    '<div class="metric"><span class="label">Hormuz binary (37%)</span><span class="value" style="color:#f87171">Now</span></div>'+
+    '<div class="metric"><span class="label">USDA Plantings (CF 17%)</span><span class="value" style="color:#fbbf24">Mar 31</span></div>'+
+    '<div class="metric"><span class="label">Currency hedge</span><span class="value" style="color:#f87171">None</span></div>'+
+    '</div></div>';
+
+  el.innerHTML = themeFilterHtml()+
+    sectionHtml('summary','Summary')+sectionContentStart('summary')+
+    '<div class="grid"><div class="card"><h3>Capital Deployment</h3>'+
     '<div class="metric"><span class="label">Deployed</span><span class="value" style="color:#4ade80">'+p.deployedPct+'%</span></div>'+
     '<div class="metric"><span class="label">Cash</span><span class="value">'+p.cashPct+'%</span></div>'+
     '<div class="metric"><span class="label">Slots</span><span class="value">'+p.slotsUsed+' / '+p.slotsMax+'</span></div>'+
@@ -741,31 +879,65 @@ function renderPortfolio() {
     '<div class="card"><h3>Conviction Metrics</h3>'+
     '<div class="metric"><span class="label">Wtd Avg Conviction</span><span class="value" style="color:#4ade80">'+p.wtdConviction+'/10</span></div>'+
     '<div class="metric"><span class="label">Total CWA</span><span class="value">'+p.totalCWA+'</span></div>'+
-    ptickers.map(function(e){return '<div class="metric"><span class="label">'+e[0]+' CWA</span><span class="value">'+(e[1].allocation*e[1].conviction/10).toFixed(2)+'</span></div>'}).join('')+
+    Object.entries(D.tickers).filter(function(e){return e[1].allocation>0}).map(function(e){return '<div class="metric"><span class="label">'+e[0]+' CWA</span><span class="value">'+(e[1].allocation*e[1].conviction/10).toFixed(2)+'</span></div>'}).join('')+
     '<div class="chart-container-sm"><canvas id="typeDoughnut"></canvas></div></div>'+
     '<div class="card"><h3>Conviction vs Allocation</h3><div class="chart-container"><canvas id="bubbleChart"></canvas></div></div></div>'+
-    '<div class="section-title">Priority Queue</div><div class="grid-2">'+prioHtml+'</div>'+
-    '<div class="section-title">Investment Positions</div><div class="card" style="overflow-x:auto"><table>'+
-    '<tr><th>Ticker</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>Cluster A</th><th>Cluster B</th><th>RC</th><th>CWA</th><th>Fair Value</th></tr>'+posRows+'</table></div>'+
-    '<div class="section-title">Exposure Analysis</div><div class="grid">'+
-    '<div class="card"><h3>Geopolitical (37%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">CF + GTT exposed to Hormuz. S3 base case 55%. <strong>Trump 48-hour ultimatum expires ~Mar 24.</strong> Binary: Iran opens (S1/S2) or US strikes -> full closure (S4 35-40%). Iraq FM slashes 2.4 MMbpd. Iran selective passage for friendly countries. Ras Laffan 17% destroyed (3-5yr repair). Back-channel ceasefire talks emerging (Witkoff/Kushner). GTT correlation only ~3-4% of YTD move — primarily structural, not geopolitical.</p></div>'+
-    '<div class="card"><h3>Micro-Execution (77%)</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">VOW: Maritime margin normalization (Q1 May 20). Q4 rev ATH NOK 347.4M. CF: Tampa settlement (imminent) + USDA Mar 31. NOLA ammonia -23.7% m/m (bearish for ammonia segment). GTT: Q1 activity update Apr 22; March orders 6 LNGCs. Concentration: VOW Q1 May 20 = 40% of portfolio. Hormuz binary event = 37%.</p></div>'+
-    '<div class="card"><h3>Concentration & Correlation</h3><p style="font-size:13px;color:#94a3b8;line-height:1.5">77% deployed across 3 positions. VOW uncorrelated to Hormuz (cruise wastewater). CF-GTT correlated but diverge on mechanism (CF immediate commodity, GTT lagged structural). Cash 23% buffer. 3 currencies unhedged (NOK, EUR, USD). No recession hedge. If Hormuz resolves: CF -10-20% immediately, GTT only ~3-4%. If S4 escalation: CF/GTT spike, VOW neutral.</p></div></div>';
+    sectionContentEnd()+
 
+    sectionHtml('alerts','Alerts')+sectionContentStart('alerts')+alertBarHtml+sectionContentEnd()+
+
+    sectionHtml('positions','Investment Positions')+sectionContentStart('positions')+
+    '<div class="card" style="overflow-x:auto"><table id="posTable"><thead><tr>'+
+    '<th onclick="sortTable(\'posTable\',0)">Ticker <span class="sort-arrow">\u25BC</span></th>'+
+    '<th onclick="sortTable(\'posTable\',1)">Alloc <span class="sort-arrow">\u25BC</span></th>'+
+    '<th onclick="sortTable(\'posTable\',2)">Conviction <span class="sort-arrow">\u25BC</span></th>'+
+    '<th>Price</th>'+
+    '<th onclick="sortTable(\'posTable\',4)">Upside <span class="sort-arrow">\u25BC</span></th>'+
+    '<th onclick="sortTable(\'posTable\',5)">RC <span class="sort-arrow">\u25BC</span></th>'+
+    '<th onclick="sortTable(\'posTable\',6)">CWA <span class="sort-arrow">\u25BC</span></th>'+
+    '<th>Next Catalyst</th></tr></thead><tbody>'+posRows+'</tbody></table></div>'+
+    sectionContentEnd()+
+
+    sectionHtml('timeline','Catalyst Timeline')+sectionContentStart('timeline')+
+    '<div class="card"><div class="timeline">'+timelineHtml+'</div></div>'+sectionContentEnd()+
+
+    sectionHtml('exposure','Exposure Analysis')+sectionContentStart('exposure')+exposureHtml+sectionContentEnd();
+
+  // Render charts and sparklines
   setTimeout(function(){
-    new Chart(document.getElementById('allocDoughnut'),{type:'doughnut',data:{labels:ptickers.map(function(e){return e[0]}).concat(['Cash']),datasets:[{data:ptickers.map(function(e){return e[1].allocation}).concat([p.cashPct]),backgroundColor:['#22c55e','#3b82f6','#8b5cf6','#475569'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#94a3b8',font:{size:11},padding:8}}}}});
+    var allPtickers = Object.entries(D.tickers).filter(function(e){return e[1].allocation > 0});
+    new Chart(document.getElementById('allocDoughnut'),{type:'doughnut',data:{labels:allPtickers.map(function(e){return e[0]}).concat(['Cash']),datasets:[{data:allPtickers.map(function(e){return e[1].allocation}).concat([p.cashPct]),backgroundColor:['#22c55e','#3b82f6','#8b5cf6','#475569'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#94a3b8',font:{size:11},padding:8}}}}});
     new Chart(document.getElementById('typeDoughnut'),{type:'doughnut',data:{labels:['INVESTMENT','Cash'],datasets:[{data:[p.deployedPct,p.cashPct],backgroundColor:['#22c55e','#475569'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#94a3b8',font:{size:11},padding:8}}}}});
-    var bds = ptickers.map(function(e,i){var s=e[0],t=e[1];return{label:s,data:[{x:t.conviction,y:t.allocation,r:t.clusterA/8}],backgroundColor:['rgba(34,197,94,.4)','rgba(59,130,246,.4)','rgba(139,92,246,.4)'][i],borderColor:['#22c55e','#3b82f6','#8b5cf6'][i],borderWidth:2}});
+    var bds = allPtickers.map(function(e,i){var s=e[0],t=e[1];return{label:s,data:[{x:t.conviction,y:t.allocation,r:t.clusterA/8}],backgroundColor:['rgba(34,197,94,.4)','rgba(59,130,246,.4)','rgba(139,92,246,.4)'][i],borderColor:['#22c55e','#3b82f6','#8b5cf6'][i],borderWidth:2}});
     new Chart(document.getElementById('bubbleChart'),{type:'bubble',data:{datasets:bds},options:{responsive:true,maintainAspectRatio:false,scales:{x:{title:{display:true,text:'Conviction',color:'#94a3b8'},min:6,max:11,grid:{color:'rgba(255,255,255,.06)'},ticks:{color:'#94a3b8'}},y:{title:{display:true,text:'Allocation %',color:'#94a3b8'},min:0,max:50,grid:{color:'rgba(255,255,255,.06)'},ticks:{color:'#94a3b8'}}},plugins:{legend:{labels:{color:'#94a3b8',font:{size:11}}}}}});
+    // Sparklines
+    allPtickers.forEach(function(e){
+      var s=e[0],t=e[1];
+      if (t.priceHistory && t.priceHistory.length>1) {
+        var color = t.priceHistory[t.priceHistory.length-1]>=t.priceHistory[0]?'#4ade80':'#f87171';
+        renderSparkline('spark_'+s, t.priceHistory, color);
+      }
+    });
   },50);
+
+  // Render alert drawer state
+  renderAlertDrawer();
 }
 
+// ═══════════════════════════════════════════
+// TAB 2: RESEARCH HEALTH
+// ═══════════════════════════════════════════
 function renderResearch() {
   var el = document.getElementById('research');
-  var activeTickers = Object.entries(D.tickers).filter(function(e){return e[1].status==='ACTIVE'||e[1].status==='MONITORING'});
+  var activeTickers = Object.entries(D.tickers).filter(function(e){return (e[1].status==='ACTIVE'||e[1].status==='MONITORING') && matchesFilter(e[0])});
   var scored = activeTickers.filter(function(e){return e[1].conviction>0});
 
-  var rcHtml = scored.map(function(e){var s=e[0],t=e[1];var gc=t.rc>=4?'gauge-green':t.rc>=3?'gauge-amber':'gauge-red';return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — RC '+t.rc+'/5</h3><div class="gauge"><div class="gauge-fill '+gc+'" style="width:'+t.rc*20+'%"></div></div><div style="font-size:12px;color:#94a3b8;margin-top:6px">'+(t.rc>=5?'All 5 criteria met':'RC '+t.rc+'/5 — '+(5-t.rc)+' criteria remaining')+'</div></div>'}).join('');
+  // Priority Queue (moved from Tab 1)
+  var prioHtml = D.priorityQueue.slice(0,10).map(function(item){
+    return '<div class="priority-item"><span class="priority-score">'+item.score+'</span><strong><span class="ticker-link" onclick="openOverlay(\''+item.ticker+'\')">'+item.ticker+'</span></strong> &mdash; '+item.event+'<div class="priority-action">'+item.date+' &middot; '+item.type+'</div></div>';
+  }).join('');
+
+  var rcHtml = scored.map(function(e){var s=e[0],t=e[1];var gc=t.rc>=4?'gauge-green':t.rc>=3?'gauge-amber':'gauge-red';var stale=getStaleness(s);var staleDot=stale<=7?'staleness-fresh':stale<=14?'staleness-aging':'staleness-stale';return '<div class="card"><h3><span class="staleness-dot '+staleDot+'" title="'+stale+'d ago"></span><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — RC '+t.rc+'/5</h3><div class="gauge"><div class="gauge-fill '+gc+'" style="width:'+t.rc*20+'%"></div></div><div style="font-size:12px;color:#94a3b8;margin-top:6px">'+(t.rc>=5?'All 5 criteria met':'RC '+t.rc+'/5 — '+(5-t.rc)+' remaining')+' &middot; '+stale+'d since update</div></div>'}).join('');
 
   var qHtml = scored.filter(function(e){return e[1].questions&&(e[1].questions.critical.length>0||e[1].questions.open.length>0||e[1].questions.resolved>0)}).map(function(e){var s=e[0],t=e[1];var crit=t.questions.critical.filter(function(q){return!q.resolved}).length;var open=t.questions.open.filter(function(q){return!q.resolved}).length;return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span></h3><div class="chart-container-sm"><canvas id="qChart_'+s+'"></canvas></div><div style="font-size:12px;color:#94a3b8">'+crit+' critical, '+open+' open, '+t.questions.resolved+' resolved</div></div>'}).join('');
 
@@ -773,10 +945,13 @@ function renderResearch() {
 
   var dimRows = scored.map(function(e){var s=e[0],t=e[1];var cells='';for(var d=1;d<=8;d++){var v=t.dimensions['D'+d];var c=v>=5?'#4ade80':v>=4?'#60a5fa':v>=3?'#fbbf24':'#f87171';cells+='<td style="color:'+c+';font-weight:600">'+(v>=6?v+'/5':v+'/5')+'</td>'}var ac=t.clusterA>=80?'#4ade80':'#fbbf24';var bc=t.clusterB>=80?'#4ade80':'#fbbf24';return '<tr><td><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span></td>'+cells+'<td style="color:'+ac+'">'+t.clusterA+'%</td><td style="color:'+bc+'">'+t.clusterB+'%</td></tr>'}).join('');
 
-  el.innerHTML = '<div class="section-title">Research Confidence</div><div class="grid">'+rcHtml+'</div>'+
-    '<div class="section-title">Questions Tracker</div><div class="grid">'+qHtml+'</div>'+
-    '<div class="section-title">Debates Tracker</div><div class="grid">'+dHtml+'</div>'+
-    '<div class="section-title">Conviction Dimensions Comparison</div><div class="card" style="overflow-x:auto"><table><tr><th>Ticker</th><th>D1</th><th>D2</th><th>D3</th><th>D4</th><th>D5</th><th>D6</th><th>D7</th><th>D8</th><th>A%</th><th>B%</th></tr>'+dimRows+'</table></div>';
+  el.innerHTML = themeFilterHtml()+
+    sectionHtml('prio','Priority Queue')+sectionContentStart('prio')+'<div class="grid-2">'+prioHtml+'</div>'+sectionContentEnd()+
+    sectionHtml('rc','Research Confidence')+sectionContentStart('rc')+'<div class="grid">'+rcHtml+'</div>'+sectionContentEnd()+
+    sectionHtml('questions','Questions Tracker')+sectionContentStart('questions')+'<div class="grid">'+qHtml+'</div>'+sectionContentEnd()+
+    sectionHtml('debates','Debates Tracker')+sectionContentStart('debates')+'<div class="grid">'+dHtml+'</div>'+sectionContentEnd()+
+    sectionHtml('dims','Conviction Dimensions')+sectionContentStart('dims')+
+    '<div class="card" style="overflow-x:auto"><table id="dimTable"><thead><tr><th>Ticker</th><th onclick="sortTable(\'dimTable\',1)">D1 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',2)">D2 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',3)">D3 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',4)">D4 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',5)">D5 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',6)">D6 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',7)">D7 <span class="sort-arrow">\u25BC</span></th><th onclick="sortTable(\'dimTable\',8)">D8 <span class="sort-arrow">\u25BC</span></th><th>A%</th><th>B%</th></tr></thead><tbody>'+dimRows+'</tbody></table></div>'+sectionContentEnd();
 
   setTimeout(function(){
     scored.filter(function(e){return e[1].questions&&(e[1].questions.critical.length>0||e[1].questions.open.length>0||e[1].questions.resolved>0)}).forEach(function(e){
@@ -792,6 +967,9 @@ function renderResearch() {
   },50);
 }
 
+// ═══════════════════════════════════════════
+// TAB 3: THEMES
+// ═══════════════════════════════════════════
 function renderThemes() {
   var el = document.getElementById('themes');
   var themeRows = D.themes.map(function(th,i){
@@ -819,22 +997,42 @@ function renderThemes() {
     return '<tr><td>'+p.ticker+'</td><td>'+p.company+'</td><td>'+p.theme+'</td><td>'+p.pm+'</td><td style="font-size:12px">'+p.reason+'</td><td style="font-size:12px">'+p.trigger+'</td></tr>';
   }).join('');
 
-  el.innerHTML = '<div class="section-title">Theme Priority Dashboard</div><div class="card" style="overflow-x:auto;margin-bottom:16px"><table><tr><th>#</th><th>Theme</th><th>Status</th><th>Impact</th><th>Discovery</th><th>Priority</th><th>Tickers</th></tr>'+themeRows+'</table></div>'+
-    '<div class="section-title">Theme Cards</div><div class="grid-2">'+themeCards+'</div>'+
-    '<div class="section-title">New Theme Candidates</div><div class="grid">'+candidateCards+'</div>'+
-    '<div class="section-title">Parked Tickers</div><div class="card" style="overflow-x:auto"><table><tr><th>Ticker</th><th>Company</th><th>Theme</th><th>PM Score</th><th>Reason</th><th>Re-evaluate Trigger</th></tr>'+parkedHtml+'</table></div>';
+  el.innerHTML =
+    sectionHtml('tpd','Theme Priority Dashboard')+sectionContentStart('tpd')+
+    '<div class="card" style="overflow-x:auto;margin-bottom:16px"><table><tr><th>#</th><th>Theme</th><th>Status</th><th>Impact</th><th>Discovery</th><th>Priority</th><th>Tickers</th></tr>'+themeRows+'</table></div>'+sectionContentEnd()+
+    sectionHtml('tcards','Theme Cards')+sectionContentStart('tcards')+'<div class="grid-2">'+themeCards+'</div>'+sectionContentEnd()+
+    sectionHtml('candidates','New Theme Candidates')+sectionContentStart('candidates')+'<div class="grid">'+candidateCards+'</div>'+sectionContentEnd()+
+    sectionHtml('parked','Parked Tickers')+sectionContentStart('parked')+
+    '<div class="card" style="overflow-x:auto"><table><tr><th>Ticker</th><th>Company</th><th>Theme</th><th>PM Score</th><th>Reason</th><th>Re-evaluate Trigger</th></tr>'+parkedHtml+'</table></div>'+sectionContentEnd();
 }
 
+// ═══════════════════════════════════════════
+// TAB 4: PIPELINE
+// ═══════════════════════════════════════════
 function renderPipeline() {
   var el = document.getElementById('pipeline');
-  var monitoring = Object.entries(D.tickers).filter(function(e){return e[1].status==='MONITORING'});
-  var activeNoPos = Object.entries(D.tickers).filter(function(e){return e[1].status==='ACTIVE'&&!e[1].portfolioType});
+  var monitoring = Object.entries(D.tickers).filter(function(e){return e[1].status==='MONITORING' && matchesFilter(e[0])});
+  var activeNoPos = Object.entries(D.tickers).filter(function(e){return e[1].status==='ACTIVE'&&!e[1].portfolioType && matchesFilter(e[0])});
 
   var activeCards = activeNoPos.map(function(e){
     var s=e[0],t=e[1];
     var nextAction = t.catalysts&&t.catalysts.length>0?t.catalysts[0].event:'No near-term catalyst defined';
-    var blocker = t.conviction>=7&&t.clusterA>=70?'Meets INVESTMENT threshold — ready for portfolio entry decision':'Conviction '+t.conviction+'/10, Cluster A '+t.clusterA+'%'+(t.clusterA<70&&t.conviction>0?' (needs >=70%)':'')+(t.conviction===0?' — unscored, needs conviction scoring':'');
-    return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-active">ACTIVE</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+(t.conviction>=7?'#60a5fa':'#fbbf24')+'">'+t.conviction+'/10</span></div><div class="metric"><span class="label">Cluster A / B</span><span class="value">'+(t.clusterA>0?t.clusterA+'% / '+t.clusterB+'%':'Unscored')+'</span></div><div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div><h4>RC Progress</h4><div class="gauge"><div class="gauge-fill '+(t.rc>=4?'gauge-green':t.rc>=2?'gauge-amber':'gauge-red')+'" style="width:'+t.rc*20+'%"></div></div><h4>Promotion Status</h4><div style="font-size:12px;color:'+(t.conviction>=7&&t.clusterA>=70?'#4ade80':'#f87171')+'">'+blocker+'</div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
+    var blocker = t.conviction>=7&&t.clusterA>=70?'Meets INVESTMENT threshold':'Conviction '+t.conviction+'/10, Cluster A '+t.clusterA+'%'+(t.conviction===0?' — unscored':'');
+    return '<div class="card card-featured"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-active">ACTIVE</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+(t.conviction>=7?'#60a5fa':'#fbbf24')+'">'+t.conviction+'/10</span></div><div class="metric"><span class="label">Cluster A / B</span><span class="value">'+(t.clusterA>0?t.clusterA+'% / '+t.clusterB+'%':'Unscored')+'</span></div><div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div><h4>RC Progress</h4><div class="gauge"><div class="gauge-fill '+(t.rc>=4?'gauge-green':t.rc>=2?'gauge-amber':'gauge-red')+'" style="width:'+t.rc*20+'%"></div></div><h4>Status</h4><div style="font-size:12px;color:'+(t.conviction>=7&&t.clusterA>=70?'#4ade80':'#f87171')+'">'+blocker+'</div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
+  }).join('');
+
+  // Price Alert Proximity for monitoring tickers
+  var alertProxHtml = D.priceAlerts.map(function(pa) {
+    var t = D.tickers[pa.ticker];
+    var company = t ? t.company : pa.ticker;
+    var pctBelow = pa.current ? ((pa.threshold - pa.current) / pa.threshold * 100).toFixed(1) : null;
+    var statusColor = pa.current && pa.current <= pa.threshold ? '#4ade80' : (pctBelow && pctBelow < 15 ? '#fbbf24' : '#94a3b8');
+    var statusText = pa.current && pa.current <= pa.threshold ? 'BELOW THRESHOLD' : (pa.current ? pctBelow+'% to threshold' : 'No price data');
+    return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+pa.ticker+'\')">'+pa.ticker+'</span> — '+company+'</h3>'+
+      '<div class="metric"><span class="label">Threshold</span><span class="value">'+pa.currency+' '+pa.threshold+'</span></div>'+
+      '<div class="metric"><span class="label">Current</span><span class="value">'+(pa.current?pa.currency+' '+pa.current:'--')+'</span></div>'+
+      '<div class="metric"><span class="label">Status</span><span class="value" style="color:'+statusColor+'">'+statusText+'</span></div>'+
+      '<div style="font-size:11px;color:#64748b;margin-top:6px">'+pa.rationale+'</div></div>';
   }).join('');
 
   var monCards = monitoring.map(function(e){
@@ -843,97 +1041,118 @@ function renderPipeline() {
     return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+s+'\')">'+s+'</span> — '+t.company+'</h3><div style="margin-bottom:8px"><span class="badge badge-monitoring">MONITORING</span> <span style="font-size:12px;color:#94a3b8">'+t.theme+'</span></div><div class="metric"><span class="label">Conviction</span><span class="value">'+t.conviction+'/10</span></div><h4>Next Action</h4><div style="font-size:12px;color:#94a3b8">'+nextAction+'</div></div>';
   }).join('');
 
-  el.innerHTML = '<div class="section-title">Promotion Readiness — Active (No Position)</div>'+
+  el.innerHTML = themeFilterHtml()+
+    sectionHtml('promo','Promotion Readiness — Active (No Position)')+sectionContentStart('promo')+
     (activeNoPos.length===0?'<div class="card"><p style="color:#94a3b8">No active tickers without positions.</p></div>':'')+
-    '<div class="grid">'+activeCards+'</div>'+
-    '<div class="section-title">Monitoring Tickers</div><div class="grid">'+monCards+'</div>';
+    '<div class="grid">'+activeCards+'</div>'+sectionContentEnd()+
+    sectionHtml('palerts','Price Alert Proximity')+sectionContentStart('palerts')+
+    '<div class="grid">'+alertProxHtml+'</div>'+sectionContentEnd()+
+    sectionHtml('mon','Monitoring Tickers')+sectionContentStart('mon')+'<div class="grid">'+monCards+'</div>'+sectionContentEnd();
 }
 
+// ═══════════════════════════════════════════
+// TICKER OVERLAY with Sub-Tabs
+// ═══════════════════════════════════════════
 function openOverlay(sym) {
   var t = D.tickers[sym];
   if (!t) return;
   var overlay = document.getElementById('tickerOverlay');
   var content = document.getElementById('overlayContent');
 
-  var fvHtml = '';
-  if (t.fairValue) {
-    fvHtml = '<div class="fv-box"><div class="fv-method">'+t.fairValue.methodology+' &middot; '+t.fairValue.thesisType+' &middot; Updated '+t.fairValue.lastUpdated+'</div><div class="fv-grid"><div class="fv-item"><div class="fv-label">Bear Case</div><div class="fv-value fv-bear">'+t.fairValue.bearCaseFV+'</div></div><div class="fv-item"><div class="fv-label">Base Case</div><div class="fv-value fv-base">'+t.fairValue.baseCaseFV+'</div></div><div class="fv-item"><div class="fv-label">Prob-Weighted</div><div class="fv-value fv-prob">'+t.fairValue.probWeightedFV+'</div></div><div class="fv-item"><div class="fv-label">Bull Case</div><div class="fv-value fv-bull">'+t.fairValue.bullCaseFV+'</div></div></div></div>';
-  } else {
-    fvHtml = '<div class="fv-box" style="border-color:rgba(255,255,255,.1)"><div style="color:#94a3b8;font-size:13px">No fair value estimate. Run fair-value-estimation skill to generate.</div></div>';
-  }
-
-  var scenarioHtml = '';
-  if (t.scenarios && t.scenarios.length > 0) {
-    scenarioHtml = '<h4>Scenarios</h4><table><tr><th>Scenario</th><th>Target</th><th>Probability</th></tr>'+t.scenarios.map(function(s){return '<tr><td>'+s.name+'</td><td style="font-weight:600">'+s.target+'</td><td>'+s.prob+'%</td></tr>'}).join('')+'</table>';
-  }
-
-  var catalystHtml = '';
-  if (t.catalysts && t.catalysts.length > 0) {
-    catalystHtml = '<h4>Catalysts</h4><table><tr><th>Date</th><th>Event</th><th>Type</th><th>Dim</th></tr>'+t.catalysts.map(function(c){return '<tr><td>'+c.date+'</td><td>'+c.event+'</td><td><span class="pill pill-'+(c.type==='Hard'?'blue':'amber')+'">'+c.type+'</span></td><td>'+c.dim+'</td></tr>'}).join('')+'</table>';
-  }
-
-  var questionsHtml = '';
-  if (t.questions && (t.questions.critical.length > 0 || t.questions.open.length > 0)) {
-    questionsHtml = '<h4>Open Questions</h4>';
-    if (t.questions.critical.length > 0) {
-      questionsHtml += '<div class="question-cat"><h5 style="color:#f87171">Critical Path</h5>'+t.questions.critical.map(function(q){return '<div class="question-item'+(q.resolved?' resolved':'')+'">'+q.q+'</div>'}).join('')+'</div>';
-    }
-    if (t.questions.open.length > 0) {
-      questionsHtml += '<div class="question-cat"><h5>Open Items</h5>'+t.questions.open.map(function(q){return '<div class="question-item'+(q.resolved?' resolved':'')+'">'+q.q+'</div>'}).join('')+'</div>';
-    }
-    questionsHtml += '<div style="font-size:12px;color:#64748b;margin-top:4px">'+t.questions.resolved+' items resolved</div>';
-  }
-
-  var debatesHtml = '';
-  if (t.debates && t.debates.length > 0) {
-    debatesHtml = '<h4>Debates</h4>'+t.debates.map(function(d){var pc=d.resolution==='RESOLVED'?'green':d.resolution==='OPEN'?'amber':'blue';return '<div class="debate-vector"><div class="dv-title">'+d.vector+' <span class="pill pill-'+pc+'" style="margin-left:8px">'+d.resolution+'</span></div><div class="dv-status">'+d.side+' challenged &middot; '+d.impact+'</div></div>'}).join('');
-  }
-
-  var variantHtml = '';
-  if (t.variantViews && t.variantViews.length > 0) {
-    variantHtml = '<h4>Variant Views</h4>'+t.variantViews.map(function(v){return '<div class="variant-view">'+v+'</div>'}).join('');
-  }
-
-  var notesHtml = '';
-  if (t.recentNotes && t.recentNotes.length > 0) {
-    notesHtml = '<h4>Recent Notes</h4>'+t.recentNotes.map(function(n){return '<div style="font-size:12px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04)"><strong>'+n.date+'</strong> &mdash; '+n.title+'</div>'}).join('');
-  }
-
-  var financialsHtml = '';
-  if (t.financials) {
-    financialsHtml = '<h4>Key Financials</h4>';
-    for (var k in t.financials) {
-      if (t.financials[k]) financialsHtml += '<div class="metric"><span class="label">'+k.replace(/([A-Z])/g,' $1').trim()+'</span><span class="value">'+t.financials[k]+'</span></div>';
-    }
-  }
-
-  var dimTable = '<h4>Conviction Scorecard</h4><table><tr><th>Dimension</th><th>Score</th><th>Cluster</th></tr>';
-  var dimNames = ['D1. Fundamentals Trajectory','D2. Valuation Mismatch','D3. Mispricing Reason','D4. Downside Protection','D5. Thesis Simplicity','D6. Upside Optionality','D7. Evidence Quality','D8. Catalyst Clarity'];
-  var dimClusters = ['A','A','A','B','B','B','B','B'];
-  for (var i=0;i<8;i++){
-    var score = t.dimensions['D'+(i+1)];
-    var c = score>=5?'#4ade80':score>=4?'#60a5fa':score>=3?'#fbbf24':score>0?'#f87171':'#64748b';
-    dimTable += '<tr><td>'+dimNames[i]+'</td><td style="color:'+c+';font-weight:700">'+(score>0?score+'/5':'--')+'</td><td>'+dimClusters[i]+'</td></tr>';
-  }
-  dimTable += '</table>';
-
   var badge = t.portfolioType?'<span class="badge badge-'+t.portfolioType.toLowerCase()+'">'+t.portfolioType+'</span>':'';
   var statusBadge = '<span class="badge badge-'+t.status.toLowerCase()+'">'+t.status+'</span>';
   var allocSpan = t.allocation>0?'<span style="font-size:13px;color:#4ade80;margin-left:8px;font-weight:600">'+t.allocation+'% allocation</span>':'';
   var convColor = t.conviction>=9?'#4ade80':t.conviction>=7?'#60a5fa':'#fbbf24';
-  var aColor = t.clusterA>=80?'#4ade80':t.clusterA>0?'#fbbf24':'#64748b';
-  var bColor = t.clusterB>=80?'#4ade80':t.clusterB>0?'#fbbf24':'#64748b';
+
+  // FV box
+  var fvHtml = '';
+  if (t.fairValue) {
+    fvHtml = '<div class="fv-box"><div class="fv-method">'+t.fairValue.methodology+' &middot; '+t.fairValue.thesisType+' &middot; Updated '+t.fairValue.lastUpdated+'</div><div class="fv-grid"><div class="fv-item"><div class="fv-label">Bear</div><div class="fv-value fv-bear">'+t.fairValue.bearCaseFV+'</div></div><div class="fv-item"><div class="fv-label">Base</div><div class="fv-value fv-base">'+t.fairValue.baseCaseFV+'</div></div><div class="fv-item"><div class="fv-label">Prob-Wtd</div><div class="fv-value fv-prob">'+t.fairValue.probWeightedFV+'</div></div><div class="fv-item"><div class="fv-label">Bull</div><div class="fv-value fv-bull">'+t.fairValue.bullCaseFV+'</div></div></div></div>';
+  } else {
+    fvHtml = '<div class="fv-box" style="border-color:rgba(255,255,255,.1)"><div style="color:#94a3b8;font-size:13px">No fair value estimate. Run fair-value-estimation skill.</div></div>';
+  }
+
+  // Scenarios
+  var scenarioHtml = '';
+  if (t.scenarios && t.scenarios.length > 0) {
+    scenarioHtml = '<table><tr><th>Scenario</th><th>Target</th><th>Prob</th></tr>'+t.scenarios.map(function(s){return '<tr><td>'+s.name+'</td><td style="font-weight:600">'+s.target+'</td><td>'+s.prob+'%</td></tr>'}).join('')+'</table>';
+  }
+
+  // Price info
+  var priceHtml = '';
+  if (t.currentPrice) {
+    var upside = computeUpside(sym);
+    priceHtml = '<div class="metric"><span class="label">Current Price</span><span class="value">'+t.currentPrice.price+' '+t.currentPrice.currency+' <span style="color:'+(t.currentPrice.change>=0?'#4ade80':'#f87171')+';font-size:12px">'+(t.currentPrice.change>=0?'+':'')+t.currentPrice.change.toFixed(1)+'%</span></span></div>';
+    if (upside !== null) priceHtml += '<div class="metric"><span class="label">Upside (Prob-Wtd)</span><span class="value" style="color:'+(upside>=50?'#4ade80':upside>=20?'#60a5fa':'#fbbf24')+'">'+(upside>0?'+':'')+upside+'%</span></div>';
+  }
+
+  // Summary panel
+  var summaryPanel = '<div class="overlay-panel active" id="ovPanel_summary">'+
+    '<div class="grid-2" style="margin-bottom:16px"><div>'+priceHtml+
+    '<div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+convColor+';font-size:20px">'+t.conviction+'/10</span></div>'+
+    '<div class="metric"><span class="label">Cluster A</span><span class="value">'+(t.clusterA>0?t.clusterA+'%':'--')+'</span></div>'+
+    '<div class="metric"><span class="label">Cluster B</span><span class="value">'+(t.clusterB>0?t.clusterB+'%':'--')+'</span></div>'+
+    '<div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div></div>'+
+    '<div><div class="radar-container"><canvas id="radarChart"></canvas></div></div></div>'+fvHtml+scenarioHtml+'</div>';
+
+  // Catalysts panel
+  var catalystHtml = '<div class="overlay-panel" id="ovPanel_catalysts">';
+  if (t.catalysts && t.catalysts.length > 0) {
+    catalystHtml += '<table><tr><th>Date</th><th>Event</th><th>Type</th><th>Dim</th></tr>'+t.catalysts.map(function(c){return '<tr><td>'+c.date+'</td><td>'+c.event+'</td><td><span class="pill pill-'+(c.type==='Hard'?'blue':'amber')+'">'+c.type+'</span></td><td>'+c.dim+'</td></tr>'}).join('')+'</table>';
+  } else { catalystHtml += '<p style="color:#94a3b8">No catalysts defined.</p>'; }
+  catalystHtml += '</div>';
+
+  // Research panel (questions, debates, variant views, notes)
+  var researchHtml = '<div class="overlay-panel" id="ovPanel_research">';
+  // Dim table
+  var dimNames = ['D1. Fundamentals','D2. Valuation','D3. Mispricing','D4. Downside','D5. Simplicity','D6. Optionality','D7. Evidence','D8. Catalyst'];
+  var dimClusters = ['A','A','A','B','B','B','B','B'];
+  researchHtml += '<h4>Conviction Scorecard</h4><table><tr><th>Dimension</th><th>Score</th><th>Cluster</th></tr>';
+  for (var i=0;i<8;i++){
+    var score = t.dimensions['D'+(i+1)];
+    var c = score>=5?'#4ade80':score>=4?'#60a5fa':score>=3?'#fbbf24':score>0?'#f87171':'#64748b';
+    researchHtml += '<tr><td>'+dimNames[i]+'</td><td style="color:'+c+';font-weight:700">'+(score>0?score+'/5':'--')+'</td><td>'+dimClusters[i]+'</td></tr>';
+  }
+  researchHtml += '</table>';
+  // Questions
+  if (t.questions && (t.questions.critical.length > 0 || t.questions.open.length > 0)) {
+    researchHtml += '<h4>Open Questions</h4>';
+    if (t.questions.critical.length > 0) researchHtml += '<div class="question-cat"><h5 style="color:#f87171">Critical Path</h5>'+t.questions.critical.map(function(q){return '<div class="question-item">'+q.q+'</div>'}).join('')+'</div>';
+    if (t.questions.open.length > 0) researchHtml += '<div class="question-cat"><h5>Open Items</h5>'+t.questions.open.map(function(q){return '<div class="question-item">'+q.q+'</div>'}).join('')+'</div>';
+    researchHtml += '<div style="font-size:12px;color:#64748b;margin-top:4px">'+t.questions.resolved+' resolved</div>';
+  }
+  // Debates
+  if (t.debates && t.debates.length > 0) {
+    researchHtml += '<h4>Debates</h4>'+t.debates.map(function(d){var pc=d.resolution==='RESOLVED'?'green':d.resolution==='OPEN'?'amber':'blue';return '<div class="debate-vector"><div class="dv-title">'+d.vector+' <span class="pill pill-'+pc+'" style="margin-left:8px">'+d.resolution+'</span></div><div class="dv-status">'+d.side+' challenged &middot; '+d.impact+'</div></div>'}).join('');
+  }
+  // Variant Views
+  if (t.variantViews && t.variantViews.length > 0) {
+    researchHtml += '<h4>Variant Views</h4>'+t.variantViews.map(function(v){return '<div class="variant-view">'+v+'</div>'}).join('');
+  }
+  // Notes
+  if (t.recentNotes && t.recentNotes.length > 0) {
+    researchHtml += '<h4>Recent Notes</h4>'+t.recentNotes.map(function(n){return '<div style="font-size:12px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04)"><strong>'+n.date+'</strong> &mdash; '+n.title+'</div>'}).join('');
+  }
+  researchHtml += '</div>';
+
+  // Financials panel
+  var financialsHtml = '<div class="overlay-panel" id="ovPanel_financials">';
+  if (t.financials) {
+    for (var k in t.financials) {
+      if (t.financials[k]) financialsHtml += '<div class="metric"><span class="label">'+k.replace(/([A-Z])/g,' $1').trim()+'</span><span class="value">'+t.financials[k]+'</span></div>';
+    }
+  }
+  financialsHtml += '</div>';
 
   content.innerHTML = '<button class="overlay-close" onclick="closeOverlay()">&times;</button>'+
     '<h2 style="font-size:20px;font-weight:700;color:#f1f5f9;margin-bottom:4px">'+sym+' &mdash; '+t.company+'</h2>'+
-    '<div style="margin-bottom:16px">'+badge+' '+statusBadge+' <span style="font-size:13px;color:#94a3b8;margin-left:8px">'+t.theme+'</span>'+allocSpan+'</div>'+
-    '<div class="grid-2" style="margin-bottom:16px"><div>'+
-    '<div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+convColor+';font-size:20px">'+t.conviction+'/10</span></div>'+
-    '<div class="metric"><span class="label">Cluster A</span><span class="value" style="color:'+aColor+'">'+(t.clusterA>0?t.clusterA+'%':'--')+'</span></div>'+
-    '<div class="metric"><span class="label">Cluster B</span><span class="value" style="color:'+bColor+'">'+(t.clusterB>0?t.clusterB+'%':'--')+'</span></div>'+
-    '<div class="metric"><span class="label">Research Confidence</span><span class="value">'+t.rc+'/5</span></div></div>'+
-    '<div><div class="radar-container"><canvas id="radarChart"></canvas></div></div></div>'+
-    fvHtml+scenarioHtml+dimTable+catalystHtml+questionsHtml+debatesHtml+financialsHtml+variantHtml+notesHtml;
+    '<div style="margin-bottom:8px">'+badge+' '+statusBadge+' <span style="font-size:13px;color:#94a3b8;margin-left:8px">'+t.theme+'</span>'+allocSpan+'</div>'+
+    '<div class="overlay-tabs">'+
+    '<div class="overlay-tab active" onclick="switchOverlayTab(\'summary\')">Summary</div>'+
+    '<div class="overlay-tab" onclick="switchOverlayTab(\'catalysts\')">Catalysts</div>'+
+    '<div class="overlay-tab" onclick="switchOverlayTab(\'research\')">Research</div>'+
+    '<div class="overlay-tab" onclick="switchOverlayTab(\'financials\')">Financials</div>'+
+    '</div>'+summaryPanel+catalystHtml+researchHtml+financialsHtml;
 
   overlay.classList.add('active');
 
@@ -949,10 +1168,40 @@ function openOverlay(sym) {
   },50);
 }
 
+function switchOverlayTab(tab) {
+  document.querySelectorAll('.overlay-tab').forEach(function(e){e.classList.remove('active')});
+  document.querySelectorAll('.overlay-panel').forEach(function(e){e.classList.remove('active')});
+  event.target.classList.add('active');
+  var panel = document.getElementById('ovPanel_'+tab);
+  if (panel) panel.classList.add('active');
+}
+
 function closeOverlay() {
   document.getElementById('tickerOverlay').classList.remove('active');
 }
 
+// ── Keyboard Shortcuts ──
+document.addEventListener('keydown', function(e) {
+  var help = document.getElementById('helpOverlay');
+  if (help.classList.contains('active')) { help.classList.remove('active'); return; }
+  if (e.target.tagName === 'INPUT') return;
+  var overlay = document.getElementById('tickerOverlay');
+  if (e.key === 'Escape' && overlay.classList.contains('active')) { closeOverlay(); return; }
+  if (e.key === '?') { help.classList.add('active'); return; }
+  if (e.key === '/') { e.preventDefault(); document.getElementById('searchBox').focus(); return; }
+  var tabs = ['portfolio','research','themes','pipeline'];
+  var num = parseInt(e.key);
+  if (num >= 1 && num <= 4) {
+    document.querySelectorAll('.content').forEach(function(el){el.classList.remove('active')});
+    document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('active')});
+    document.getElementById(tabs[num-1]).classList.add('active');
+    document.querySelectorAll('.tab')[num-1].classList.add('active');
+    renderTab(tabs[num-1]);
+  }
+});
+
+// ── Init ──
+renderKPI();
 renderPortfolio();
 </script>
 </body>
