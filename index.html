@@ -1292,6 +1292,39 @@ function openOverlay(sym) {
   }
   researchHtml += '</div>';
 
+  // Valuation panel
+  var valuationHtml = '<div class="overlay-panel" id="ovPanel_valuation">';
+  if (t.valuation) {
+    var v = t.valuation;
+    // Methodology & Rationale
+    valuationHtml += '<div style="margin-bottom:16px"><div style="font-size:12px;font-weight:600;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Methodology: '+v.methodology+'</div><div style="font-size:13px;color:#94a3b8;line-height:1.5;padding:12px 16px;border-radius:12px;background:rgba(59,130,246,.06);border-left:2px solid #3b82f6">'+v.rationale+'</div></div>';
+    // Key Assumptions
+    if (v.assumptions && v.assumptions.length > 0) {
+      valuationHtml += '<h4>Key Assumptions</h4><table><tr><th>Parameter</th><th>Value</th></tr>'+v.assumptions.map(function(a){return '<tr><td style="color:#94a3b8">'+a.label+'</td><td style="font-weight:600">'+a.value+'</td></tr>'}).join('')+'</table>';
+    }
+    // Fair Value Snapshot (reuse existing FV data)
+    if (t.fairValue) {
+      valuationHtml += '<h4>Fair Value Snapshot</h4>'+fvHtml;
+    }
+    // Scenarios (reuse)
+    if (t.scenarios && t.scenarios.length > 0) {
+      valuationHtml += '<h4>Scenario Outcomes</h4><table><tr><th>Scenario</th><th>Target</th><th>Probability</th></tr>'+t.scenarios.map(function(s){return '<tr><td>'+s.name+'</td><td style="font-weight:600">'+s.target+'</td><td>'+s.prob+'%</td></tr>'}).join('')+'</table>';
+    }
+    // Sensitivity Table
+    if (v.sensitivity) {
+      var s = v.sensitivity;
+      valuationHtml += '<h4>'+s.title+'</h4><table><tr><th></th>'+s.cols.map(function(c){return '<th>'+c+'</th>'}).join('')+'</tr>'+s.rows.map(function(r){return '<tr><td style="color:#94a3b8;font-weight:600">'+r.label+'</td>'+r.vals.map(function(val){return '<td style="font-weight:600">'+val+'</td>'}).join('')+'</tr>'}).join('')+'</table>';
+    }
+    // Peer Comparables
+    if (v.peers && v.peers.length > 0) {
+      valuationHtml += '<h4>Peer Comparables</h4><table><tr><th>Company</th><th>Multiple</th></tr>'+v.peers.map(function(p){return '<tr><td>'+p.name+'</td><td style="font-weight:600">'+p.multiple+'</td></tr>'}).join('')+'</table>';
+    }
+    valuationHtml += '<div style="font-size:11px;color:#64748b;margin-top:12px">Last updated: '+v.lastUpdated+'</div>';
+  } else {
+    valuationHtml += '<p style="color:#94a3b8">No valuation model available. Run fair-value-estimation skill to generate.</p>';
+  }
+  valuationHtml += '</div>';
+
   // Financials panel
   var financialsHtml = '<div class="overlay-panel" id="ovPanel_financials">';
   if (t.financials) {
