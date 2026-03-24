@@ -504,6 +504,34 @@ const D = {
       allocation:11, conviction:8.5, clusterA:87, clusterB:72, rc:5,
       businessBackground:"French engineering firm with 75-95% global market share in LNG containment systems (membrane technology). Asset-light royalty model — licenses technology to shipyards, collects per-vessel royalties. 2,466 active patents. FY2025: EUR 803M revenue, EUR 542M EBITDA (67.5% margin — 2.4x peer median). Net cash ~EUR 300M, zero financial risk. 288-unit order book. New CEO Francois Michel (Jan 2026).",
       thesisOverview:"Structural Growth + Event-Driven. Near-monopoly beneficiary of structural LNG supply deficit. Ras Laffan 17% (~13 mtpa) destroyed, requiring 3-5yr repair + 40-50 replacement vessels. 84 mtpa FID record in 2025 at 75-90% conversion = 105-135 vessels. Market conflates temporary geopolitical premium (3-4%) with structural LNG deficit premium that persists beyond ceasefire. FY2026 revenue trough (guided EUR 740-780M) vs consensus EUR 902.8M creates sentiment catalyst at Q1 update.",
+      valuation:{
+        methodology:"Peer-Anchored EV/EBITDA (22x adjusted)",
+        rationale:"Through-cycle normalized approach. Peer median 18.5x adjusted +3.5 turns for: margin quality +2.0 (67% vs peer 28%), competitive position +1.5 (75-95% share, 2,466 patents), net cash +0.5, earnings visibility +0.5, cyclical order flow -1.0.",
+        assumptions:[
+          {label:"Through-cycle EBITDA",value:"EUR 500-550M"},
+          {label:"Adjusted EV/EBITDA",value:"22x (peer median 18.5x + 3.5 turns)"},
+          {label:"Net cash",value:"~EUR 300M added to equity"},
+          {label:"Shares",value:"37.08M diluted"},
+          {label:"Cross-check P/E",value:"28x peer-adjusted (EUR 294/sh)"}
+        ],
+        peers:[
+          {name:"Rational AG",multiple:"19.5x (~90% share, combi-steamers)"},
+          {name:"Atlas Copco",multiple:"21.1x (dominant compressors)"},
+          {name:"Hexagon AB",multiple:"18.5x (measurement tech)"},
+          {name:"Spirax Group",multiple:"16.7x (steam, niche)"},
+          {name:"Dolby Labs",multiple:"15.7x (IP licensing monopoly)"}
+        ],
+        sensitivity:{
+          rows:[
+            {label:"EBITDA EUR 440M",vals:["€198","€246","€269","€305"]},
+            {label:"EBITDA EUR 520M",vals:["€232","€289","€317","€359"]},
+            {label:"EBITDA EUR 580M",vals:["€258","€321","€351","€399"]}
+          ],
+          cols:["16x","20x","22x","25x"],
+          title:"Fair Value (EUR/share) by EBITDA x EV/EBITDA multiple"
+        },
+        lastUpdated:"2026-03-21"
+      },
       dimensions:{D1:5,D2:4,D3:4,D4:3,D5:3,D6:4,D7:5,D8:3},
       currentPrice:{price:199.70,change:-1.33,currency:"EUR"},
       priceHistory:[198.50,199.40,203.60,203.40,204.40,204.00,213.20,203.80,203.80,199.70],
