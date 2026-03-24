@@ -1339,10 +1339,11 @@ function openOverlay(sym) {
     '<div style="margin-bottom:8px">'+badge+' '+statusBadge+' <span style="font-size:13px;color:#94a3b8;margin-left:8px">'+t.theme+'</span>'+allocSpan+'</div>'+
     '<div class="overlay-tabs">'+
     '<div class="overlay-tab active" onclick="switchOverlayTab(\'summary\')">Summary</div>'+
+    '<div class="overlay-tab" onclick="switchOverlayTab(\'valuation\')">Valuation</div>'+
     '<div class="overlay-tab" onclick="switchOverlayTab(\'catalysts\')">Catalysts</div>'+
     '<div class="overlay-tab" onclick="switchOverlayTab(\'research\')">Research</div>'+
     '<div class="overlay-tab" onclick="switchOverlayTab(\'financials\')">Financials</div>'+
-    '</div>'+summaryPanel+catalystHtml+researchHtml+financialsHtml;
+    '</div>'+summaryPanel+valuationHtml+catalystHtml+researchHtml+financialsHtml;
 
   overlay.classList.add('active');
 
