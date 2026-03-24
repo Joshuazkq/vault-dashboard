@@ -1099,7 +1099,16 @@ function openOverlay(sym) {
   }
 
   // Summary panel
-  var summaryPanel = '<div class="overlay-panel active" id="ovPanel_summary">'+
+  // Business background & thesis
+  var bgHtml = '';
+  if (t.businessBackground) {
+    bgHtml += '<div style="margin-bottom:16px"><div style="font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Business</div><div style="font-size:13px;color:#c4b5fd;line-height:1.5;padding:12px 16px;border-radius:12px;background:rgba(139,92,246,.06);border-left:2px solid #8b5cf6">'+t.businessBackground+'</div></div>';
+  }
+  if (t.thesisOverview) {
+    bgHtml += '<div style="margin-bottom:16px"><div style="font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Thesis</div><div style="font-size:13px;color:#a5d6a7;line-height:1.5;padding:12px 16px;border-radius:12px;background:rgba(22,163,74,.06);border-left:2px solid #22c55e">'+t.thesisOverview+'</div></div>';
+  }
+
+  var summaryPanel = '<div class="overlay-panel active" id="ovPanel_summary">'+bgHtml+
     '<div class="grid-2" style="margin-bottom:16px"><div>'+priceHtml+
     '<div class="metric"><span class="label">Conviction</span><span class="value" style="color:'+convColor+';font-size:20px">'+t.conviction+'/10</span></div>'+
     '<div class="metric"><span class="label">Cluster A</span><span class="value">'+(t.clusterA>0?t.clusterA+'%':'--')+'</span></div>'+
