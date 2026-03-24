@@ -1004,7 +1004,7 @@ function renderPortfolio() {
   }).join('');
 
   // Exposure analysis with visual bars
-  var hormuzPct = 21, nonHormuzPct = 40, cashPct = 39;
+  var hormuzPct = 21.28, nonHormuzPct = 40, cashPct = 38.72;
   var exposureHtml = '<div class="grid">'+
     '<div class="card"><h3>Geopolitical Exposure</h3>'+
     '<div class="exposure-bar"><div class="exposure-segment" style="width:'+hormuzPct+'%;background:rgba(245,158,11,.3);color:#f59e0b">Hormuz '+hormuzPct+'%</div><div class="exposure-segment" style="width:'+nonHormuzPct+'%;background:rgba(74,222,128,.15);color:#4ade80">Non-Hormuz '+nonHormuzPct+'%</div><div class="exposure-segment" style="width:'+cashPct+'%;background:rgba(255,255,255,.06);color:#94a3b8">Cash '+cashPct+'%</div></div>'+
