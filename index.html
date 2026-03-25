@@ -873,12 +873,23 @@ function renderKPI() {
     '<div class="kpi-item"><div class="kpi-label">Next Catalyst</div><div class="kpi-value" style="color:#f87171;font-size:12px">'+nextCat+'</div></div>';
 }
 
-// ── Tab switching ──
+// ── Tab switching (ARIA-compliant) ──
 function switchTab(id) {
-  document.querySelectorAll('.content').forEach(function(e){e.classList.remove('active')});
-  document.querySelectorAll('.tab').forEach(function(e){e.classList.remove('active')});
+  var tabs = ['portfolio','research','themes','pipeline'];
+  document.querySelectorAll('[role="tabpanel"]').forEach(function(e){e.classList.remove('active')});
+  document.querySelectorAll('[role="tab"]').forEach(function(e){
+    e.classList.remove('active');
+    e.setAttribute('aria-selected','false');
+    e.setAttribute('tabindex','-1');
+  });
   document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+  var tabBtn = document.getElementById('tab-'+id);
+  if (tabBtn) {
+    tabBtn.classList.add('active');
+    tabBtn.setAttribute('aria-selected','true');
+    tabBtn.setAttribute('tabindex','0');
+  }
+  try { localStorage.setItem('vaultActiveTab', id); } catch(e) {}
   renderTab(id);
 }
 
@@ -887,7 +898,26 @@ function renderTab(id) {
   else if (id === 'research') renderResearch();
   else if (id === 'themes') renderThemes();
   else if (id === 'pipeline') renderPipeline();
+  // Re-init Lucide icons for any newly rendered content
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
+
+// Arrow key navigation within tablist
+document.querySelector('[role="tablist"]').addEventListener('keydown', function(e) {
+  var tabs = ['portfolio','research','themes','pipeline'];
+  var current = tabs.indexOf(document.querySelector('[role="tab"][aria-selected="true"]').id.replace('tab-',''));
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+    e.preventDefault();
+    var next = (current + 1) % tabs.length;
+    switchTab(tabs[next]);
+    document.getElementById('tab-'+tabs[next]).focus();
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    var prev = (current - 1 + tabs.length) % tabs.length;
+    switchTab(tabs[prev]);
+    document.getElementById('tab-'+tabs[prev]).focus();
+  }
+});
 
 // ── Alert System ──
 function getAlertGroups() {
