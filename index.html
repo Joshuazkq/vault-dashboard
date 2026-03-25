@@ -1419,7 +1419,11 @@ function renderPortfolio() {
     sectionHtml('timeline','Catalyst Timeline')+sectionContentStart('timeline')+
     '<div class="card"><div class="timeline">'+timelineHtml+'</div></div>'+sectionContentEnd()+
 
-    sectionHtml('exposure','Exposure Analysis')+sectionContentStart('exposure')+exposureHtml+sectionContentEnd();
+    sectionHtml('exposure','Exposure Analysis')+sectionContentStart('exposure')+exposureHtml+sectionContentEnd()+
+
+    (D.indicatorBreaches > 0 ? sectionHtml('indicators','Leading Indicators')+sectionContentStart('indicators')+renderIndicatorSummary()+sectionContentEnd() : '')+
+
+    (D.changelog.unpropagated.length > 0 ? sectionHtml('changelog','Unpropagated Changes')+sectionContentStart('changelog')+renderChangelogAlerts()+sectionContentEnd() : '');
 
   // Render charts and sparklines
   setTimeout(function(){
