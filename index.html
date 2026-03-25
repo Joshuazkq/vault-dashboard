@@ -803,8 +803,103 @@ const D = {
     {ticker:"SMWH",company:"WH Smith PLC",theme:"SVM",pm:"25.5/35",reason:"6 analysts, high leverage, FCA investigation",trigger:"After Quinn has 2 quarters results (Oct 2026)"},
     {ticker:"MCB",company:"McCoy Global Inc.",theme:"SVM",pm:"24.5/35",reason:"Insider buying trivially small ($28K)",trigger:"Board/CEO meaningful open-market purchases"}
   ],
-  priorityQueue: []
+  priorityQueue: [],
+
+  // ═══ NEW AUDIT DATA (C1-C4, H1-H4) ═══
+
+  options: [
+    {ticker:"CF",leg:1,instrument:"Call",strike:"$90",expiry:"2026-06-18",alloc:10,moneyness:"Deep ITM (~$36 intrinsic at ~$126)",dte:85,thetaProfile:"Accelerates mid-May; delta ~0.85-0.95",thirtyDteMark:"2026-05-19",
+     catalystAlignment:[
+       {catalyst:"Tampa NH3 settlement",date:"Late Mar",dteAtCatalyst:80,zone:"green"},
+       {catalyst:"USDA Plantings",date:"Mar 31",dteAtCatalyst:79,zone:"green"},
+       {catalyst:"Q1 2026 earnings",date:"May 6",dteAtCatalyst:43,zone:"green"},
+       {catalyst:"30 DTE mark",date:"May 19",dteAtCatalyst:30,zone:"yellow"}
+     ]},
+    {ticker:"GTT",leg:1,instrument:"Call",strike:"€190",expiry:"2026-09-18",alloc:6.58,moneyness:"Near ATM (~€14 intrinsic at ~€204)",dte:177,thetaProfile:"Moderate; accelerates mid-Aug",thirtyDteMark:"2026-08-19",
+     catalystAlignment:[
+       {catalyst:"Q1 activity update",date:"Apr 22",dteAtCatalyst:149,zone:"green"},
+       {catalyst:"Q2 earnings",date:"Jul/Aug",dteAtCatalyst:60,zone:"green"},
+       {catalyst:"30 DTE mark",date:"Aug 19",dteAtCatalyst:30,zone:"yellow"}
+     ]},
+    {ticker:"GTT",leg:2,instrument:"Call",strike:"€190",expiry:"2026-12-18",alloc:4.70,moneyness:"Near ATM (~€14 intrinsic at ~€204)",dte:268,thetaProfile:"Low; accelerates mid-Nov",thirtyDteMark:"2026-11-18",
+     catalystAlignment:[
+       {catalyst:"Q1 activity update",date:"Apr 22",dteAtCatalyst:240,zone:"green"},
+       {catalyst:"Q2 earnings",date:"Jul/Aug",dteAtCatalyst:150,zone:"green"},
+       {catalyst:"30 DTE mark",date:"Nov 18",dteAtCatalyst:30,zone:"yellow"}
+     ]}
+  ],
+
+  changelog: {
+    unpropagated: [
+      {theme:"SVM",date:"2026-03-25",title:"TRI INVESTMENT entry — 5% allocation",tier:"MAJOR",pending:["portfolio.md — full refresh pending"]},
+      {theme:"AI Disruption",date:"2026-03-20",title:"TOI added MONITORING",tier:"MAJOR",pending:["Filing-review — awaiting TOI FY2025 annual report"]}
+    ],
+    recentMajor: [
+      {theme:"Hormuz",date:"2026-03-24",title:"China fertilizer export restrictions (40-75% constrained)"},
+      {theme:"Hormuz",date:"2026-03-24",title:"MEOH downgraded ACTIVE→PARKED"},
+      {theme:"SVM",date:"2026-03-25",title:"TRI INVESTMENT entry"},
+      {theme:"SVM",date:"2026-03-21",title:"VOW D1/D2 upgraded to 6/5"},
+      {theme:"SVM",date:"2026-03-22",title:"TRI added ACTIVE, 30.5/35 pattern-match"}
+    ]
+  },
+
+  intelligence: {
+    signalStats: {total:73,active:69,absorbed:0,expired:4,unmatched:15,
+      byCategory:{geopolitical:18,commodity:16,supplyChain:13,regulatory:8,company:7,macro:7,sector:4}},
+    patterns: [
+      {name:"Rare Earth Supply Chain Decoupling",status:"ESCALATING",signals:3,action:"new-theme-candidate",implication:"Policy-driven forced supply chain shift. Pentagon 2027 deadline. Archetype C (Event-Driven Dislocation)."},
+      {name:"Stagflation / CB Policy Divergence",status:"ESCALATING",signals:4,action:"monitor",implication:"US-Europe rate divergence. Energy-driven inflation. CF HH vs TTF spread advantage."},
+      {name:"Fertilizer → Food Price Cascade",status:"STABLE",signals:5,action:"extend-existing-theme",implication:"6-12 month lag fertilizer→food CPI. Not priced in grain futures. Flagged as blindspot 3x."},
+      {name:"Helium Supply → Semiconductor Risk",status:"STABLE",signals:2,action:"monitor",implication:"HBM4 ramp delay risk. Samsung/SK Hynix ~1mo buffer. Could delay AI infra."}
+    ],
+    crossConnections: [
+      {from:"Hormuz Disruption",to:"AI Disruption",via:"Qatar helium (30% global supply) disrupted → HBM4 ramp risk"},
+      {from:"Hormuz Disruption",to:"Stagflation Macro",via:"Energy surge → inflation → rate tightening. CF/GTT benefit from inflation that pressures market"}
+    ],
+    leads: [
+      {ticker:"MP",name:"MP Materials",theme:"Rare Earth",score:null,action:"pattern-match"},
+      {ticker:"LYC",name:"Lynas Rare Earths",theme:"Rare Earth",score:null,action:"opportunity-screen"},
+      {ticker:"MEOH",name:"Methanex",theme:"Hormuz",score:"7.5/10",action:"Check re-eval trigger"}
+    ],
+    lastSynthesis: "2026-03-25"
+  },
+
+  themeScoreHistory: {
+    "Hormuz Disruption":[
+      {date:"2026-03-16",impact:5,discovery:4,priority:20},
+      {date:"2026-03-24",impact:5,discovery:4,priority:20}
+    ],
+    "Sentiments-Valuation Mismatch":[
+      {date:"2026-03-16",impact:5,discovery:5,priority:25},
+      {date:"2026-03-24",impact:5,discovery:5,priority:25}
+    ],
+    "AI Disruption Opportunity":[
+      {date:"2026-03-16",impact:4,discovery:3,priority:12},
+      {date:"2026-03-24",impact:4,discovery:3,priority:12}
+    ],
+    "Tariffs Refund":[
+      {date:"2026-03-16",impact:3,discovery:2,priority:6},
+      {date:"2026-03-24",impact:3,discovery:2,priority:6}
+    ]
+  },
+
+  convictionBands: {5:10,6:15,7:25,8:30,9:40,10:40}
 };
+
+// Compute band violations
+for (var sym in D.tickers) {
+  var t = D.tickers[sym];
+  if (t.allocation > 0 && t.conviction > 0) {
+    var band = t.conviction <= 5 ? 10 : t.conviction === 6 ? 15 : t.conviction === 7 ? 25 : t.conviction === 8 ? 30 : 40;
+    t.maxAlloc = band;
+    t.bandViolation = t.allocation > band;
+  }
+}
+
+// Compute min DTE across options
+D.minDte = D.options.length > 0 ? Math.min.apply(null, D.options.map(function(o){return o.dte})) : null;
+D.indicatorBreaches = 0;
+for (var sym in D.tickers) { if (D.tickers[sym].indicators && D.tickers[sym].indicators.breaches) D.indicatorBreaches += D.tickers[sym].indicators.breaches.length; }
 
 // ── Computed fields ──
 function computePriorityQueue() {
