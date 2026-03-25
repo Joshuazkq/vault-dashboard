@@ -1523,17 +1523,51 @@ document.addEventListener('keydown', function(e) {
   var tabs = ['portfolio','research','themes','pipeline'];
   var num = parseInt(e.key);
   if (num >= 1 && num <= 4) {
-    document.querySelectorAll('.content').forEach(function(el){el.classList.remove('active')});
-    document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('active')});
-    document.getElementById(tabs[num-1]).classList.add('active');
-    document.querySelectorAll('.tab')[num-1].classList.add('active');
-    renderTab(tabs[num-1]);
+    switchTab(tabs[num-1]);
+    document.getElementById('tab-'+tabs[num-1]).focus();
   }
 });
 
+// ── Scroll-to-top visibility ──
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('scrollTop');
+  if (btn) btn.classList.toggle('visible', window.scrollY > 300);
+});
+
+// ── Restore state from localStorage ──
+try {
+  var savedSections = JSON.parse(localStorage.getItem('vaultSections'));
+  if (savedSections) sectionState = savedSections;
+} catch(e) {}
+try {
+  var savedTab = localStorage.getItem('vaultActiveTab');
+} catch(e) {}
+
+// ── PWA: Service Worker ──
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(function(reg) { reg.update(); })
+    .catch(function(err) { console.log('SW registration failed:', err); });
+  navigator.serviceWorker.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'UPDATE_AVAILABLE') showUpdateBanner();
+  });
+}
+function showUpdateBanner() {
+  if (document.getElementById('updateBanner')) return;
+  var b = document.createElement('div');
+  b.id = 'updateBanner';
+  b.className = 'update-banner';
+  b.innerHTML = 'New data available <button onclick="location.reload()" aria-label="Refresh dashboard">Refresh</button>';
+  document.body.appendChild(b);
+}
+var isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+if (isStandalone) document.body.classList.add('pwa-standalone');
+
 // ── Init ──
 renderKPI();
-renderPortfolio();
+var initTab = savedTab || 'portfolio';
+switchTab(initTab);
+// Init Lucide icons
+if (typeof lucide !== 'undefined') lucide.createIcons();
 </script>
 </body>
 </html>
