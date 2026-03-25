@@ -161,8 +161,10 @@ body {
 /* ── CTX TABS ── */
 .ctx-tabs {
   display: flex; gap: 0; border-bottom: 1px solid var(--border);
-  margin-bottom: 0; padding: 0 16px; overflow-x: auto;
+  margin-bottom: 0; padding: 0 12px; overflow-x: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
 }
+.ctx-tabs::-webkit-scrollbar { display: none; }
 .ctx-tab {
   padding: 8px 12px; border: none; background: none;
   color: var(--text-secondary); font-size: 12px; cursor: pointer;
