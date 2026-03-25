@@ -1035,19 +1035,42 @@ function sortTable(tableId, col) {
   });
 }
 
-// ── Search ──
+// ── Search (accessible listbox) ──
 function handleSearch(val) {
   var sr = document.getElementById('searchResults');
-  if (!val) { sr.classList.remove('active'); return; }
+  var searchBox = document.getElementById('searchBox');
+  var clearBtn = document.getElementById('searchClear');
+  var live = document.getElementById('searchLive');
+  clearBtn.classList.toggle('visible', val && val.length > 0);
+  if (!val) {
+    sr.classList.remove('active');
+    searchBox.setAttribute('aria-expanded', 'false');
+    if (live) live.textContent = '';
+    return;
+  }
   val = val.toUpperCase();
   var matches = Object.keys(D.tickers).filter(function(s){
     return s.toUpperCase().indexOf(val)>=0 || D.tickers[s].company.toUpperCase().indexOf(val)>=0;
   }).slice(0,6);
-  if (matches.length===0) { sr.classList.remove('active'); return; }
+  if (matches.length===0) {
+    sr.innerHTML = '<li class="search-result" style="color:#9aabbf;cursor:default">No results found</li>';
+    sr.classList.add('active');
+    searchBox.setAttribute('aria-expanded', 'true');
+    if (live) live.textContent = 'No results found';
+    return;
+  }
   sr.innerHTML = matches.map(function(s){
-    return '<div class="search-result" onmousedown="openOverlay(\''+s+'\')"><span class="sr-ticker">'+s+'</span><span class="sr-company">'+D.tickers[s].company+'</span></div>';
+    return '<li class="search-result" role="option" onmousedown="openOverlay(\''+s+'\')"><span class="sr-ticker">'+s+'</span><span class="sr-company">'+D.tickers[s].company+'</span><span style="font-size:11px;color:#7c8da4;margin-left:auto">'+D.tickers[s].theme+'</span></li>';
   }).join('');
   sr.classList.add('active');
+  searchBox.setAttribute('aria-expanded', 'true');
+  if (live) live.textContent = matches.length + ' result' + (matches.length===1?'':'s') + ' found';
+}
+function clearSearch() {
+  var searchBox = document.getElementById('searchBox');
+  searchBox.value = '';
+  handleSearch('');
+  searchBox.focus();
 }
 
 // ── Sparkline helper ──
