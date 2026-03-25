@@ -138,7 +138,12 @@ body {
   background: var(--bg-elevated); border-left: 1px solid var(--border);
   z-index: 200; transform: translateX(100%); transition: transform 0.3s ease;
   overflow-y: auto; overflow-x: hidden;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
 }
+.ctx-panel::-webkit-scrollbar { width: 6px; }
+.ctx-panel::-webkit-scrollbar-track { background: transparent; }
+.ctx-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.ctx-panel::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
 .ctx-panel.open { transform: translateX(0); }
 .ctx-panel-header {
   position: sticky; top: 0; background: var(--bg-elevated);
