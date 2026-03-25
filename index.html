@@ -21,7 +21,15 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,#0c1220,#131b2e,#0f1724);color:#e2e8f0;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,#0c1220,#131b2e,#0f1724);color:#e2e8f0;min-height:100dvh;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:16px;background:#3b82f6;color:#fff;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;z-index:9999;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:16px}
+/* Focus styles */
+:focus-visible{outline:2px solid #60a5fa;outline-offset:2px;border-radius:4px}
+:focus:not(:focus-visible){outline:none}
+/* Tabular numbers for financial data */
+.tabnum{font-variant-numeric:tabular-nums}
 .header{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .header h1{font-size:22px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px}
 .header .date{font-size:13px;color:#8b9bb4}
