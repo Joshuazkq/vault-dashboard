@@ -949,14 +949,15 @@ function renderCtxTab(tab) {
     h += '<div><span style="font-size:11px;color:var(--text-secondary)">Cluster B</span><div style="font-size:16px;font-weight:700">' + t.clusterB + '%</div></div>';
     h += '</div>';
     h += '<div class="radar-wrap"><canvas id="ctxRadar" role="img" aria-label="Conviction dimensions radar chart for ' + sym + '"></canvas></div>';
-    h += '<table style="font-size:11px;margin-bottom:12px"><tr>';
+    h += '<div class="dim-grid">';
+    var dimLabels = {D1:'Edge',D2:'Quality',D3:'MoS',D4:'Risk',D5:'Timing',D6:'Option',D7:'Liq',D8:'Catalyst'};
     ['D1','D2','D3','D4','D5','D6','D7','D8'].forEach(function(d) {
       var v = t.dimensions[d];
       var c = v >= 5 ? 'var(--accent-positive)' : v <= 2 ? 'var(--accent-negative)' : v === 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
-      var badge = (v >= 5) ? '<span class="badge-fact">FACT</span>' : (v <= 3) ? '<span class="badge-inf">INF.</span>' : '';
-      h += '<td style="text-align:center;padding:4px"><div style="color:var(--text-secondary);font-size:9px">' + badge + d + '</div><div style="font-size:14px;font-weight:700;color:' + c + '">' + v + '</div></td>';
+      var badge = (v >= 5) ? '<span class="badge-fact">FACT</span>' : (v <= 3) ? '<span class="badge-inf">INF.</span>' : '<span class="badge-fact" style="opacity:0">_</span>';
+      h += '<div class="dim-cell"><div class="dim-badge">' + badge + '</div><div class="dim-label">' + d + '</div><div class="dim-score" style="color:' + c + '">' + v + '</div></div>';
     });
-    h += '</tr></table></div>';
+    h += '</div></div>';
     if (t.fairValue) {
       h += '<div class="fv-box">';
       h += '<div style="font-size:12px;color:var(--accent-blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">' + t.fairValue.methodology + '</div>';
