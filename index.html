@@ -898,6 +898,103 @@ for (var sym in D.tickers) {
 
 // Compute min DTE across options
 D.minDte = D.options.length > 0 ? Math.min.apply(null, D.options.map(function(o){return o.dte})) : null;
+
+// Attach indicators to tickers
+D.tickers.CF.indicators = {
+  structural:[
+    {name:"Tampa ammonia ($/t)",current:"$615 (Mar); Apr pending >$700",threshold:">$700 = S3 confirm",direction:"↑",status:"approaching",lastUpdated:"2026-03-24"},
+    {name:"NOLA urea ($/st)",current:"$672.50/mt",threshold:">$600 = S3 floor",direction:"↑",status:"breached",lastUpdated:"2026-03-24"},
+    {name:"Henry Hub gas",current:"$2.92-3.09",threshold:">$5.50 = margin erosion",direction:"→",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"China fertilizer exports",current:"40-75% constrained",threshold:"Lifting = S1/S2 revert",direction:"↑ Tighter",status:"breached",lastUpdated:"2026-03-24"},
+    {name:"USDA corn acreage",current:"Pending Mar 31",threshold:"<88M = demand concern",direction:"Pending",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"India Kharif imports",current:"Emergency tenders emerging",threshold:"Below 5yr avg = destruction",direction:"↑",status:"approaching",lastUpdated:"2026-03-24"},
+    {name:"Hormuz status",current:"Effectively closed (95% reduction)",threshold:"Reopening = S1/S2",direction:"→ Fluid",status:"breached",lastUpdated:"2026-03-24"},
+    {name:"QAFCO production",current:"Offline (force majeure)",threshold:"3-5yr repair",direction:"Impaired",status:"breached",lastUpdated:"2026-03-24"}
+  ],
+  breaches:[
+    {date:"2026-03-24",indicator:"China export policy",assessment:"Triple supply constraint: Hormuz + Ras Laffan + China restrictions"},
+    {date:"2026-03-24",indicator:"NOLA urea >$600",assessment:"Above S3 floor threshold"},
+    {date:"2026-03-24",indicator:"QAFCO offline",assessment:"Force majeure, 3-5yr repair timeline"}
+  ],
+  noiseFilter:["Daily urea swings <5%","Analyst ratings without Hormuz-scenario models","Weather planting delays <2 weeks","Ceasefire rumors without operational confirmation","CF price drops on market-wide selloffs"],
+  blindspots:["Yazoo product mix","Chinese restart pace (2-4wk data lag)","India subsidy ceiling","US inland logistics capacity","Mine clearance timeline (no precedent)"],
+  staleDays:1
+};
+D.tickers.GTT.indicators = {
+  structural:[
+    {name:"Annual LNG FID (Mtpa)",current:"84 Mtpa (2025)",threshold:"<40 = bear",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"GTT order book",current:"288+ units (+8 Mar)",threshold:"<250 = concern",direction:"↑",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Korean yard cover",current:"3.5yr",threshold:"<2.5yr = softening",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"GTT market share",current:">90%",threshold:"<85% = threat",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"KC-1/KC-2 commercialization",current:"None",threshold:"Any delivery = risk",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"EU Russian LNG ban",current:"On track (Apr 2026)",threshold:"Reversal >12mo = negative",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"LNG newbuild price",current:"$245-255M/vessel",threshold:"<$200M = overcapacity",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"}
+  ],
+  breaches:[],
+  noiseFilter:["Single-quarter freight spikes","Individual yard contract announcements","LNG price moves <20%","Analyst PT revisions","FLNG one-off orders"],
+  blindspots:["Chinese yard membrane tech","USTR port fee timeline","FID-to-order conversion rate","Korean yard labor disputes"],
+  staleDays:1
+};
+D.tickers.VOW.indicators = {
+  structural:[
+    {name:"Cruise newbuild orderbook",current:"78 ships / ~$80B",threshold:"<60 = concern",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"VOW options outstanding",current:"NOK 400M",threshold:"<200M = pipeline risk",direction:"↑",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Ships being bid",current:"~45+",threshold:"<30 = market share concern",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"New-contract margin",current:"18.8% central est",threshold:"<15% for 2Q = broken",direction:"Improving",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Installed fleet count",current:"183+ ships",threshold:"Any YoY decline = loss",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Avg contract value",current:"~NOK 185-190M/ship",threshold:"<NOK 100M = downgrade",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"EVAC divestiture",current:"Pending",threshold:"Major buyer = threat",direction:"Neutral",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Covenant (ND/EBITDA)",current:"Monitored quarterly",threshold:"Q3 2026: 3.5x CRITICAL",direction:"Watch",status:"approaching",lastUpdated:"2026-03-24"}
+  ],
+  breaches:[],
+  noiseFilter:["Industrial backlog decline (deprioritized)","Single-quarter margin dips","Option expiry without conversion","Cruise booking softness headlines","Share price moves on thin volume"],
+  blindspots:["Cruise line credit conditions","Pyrolysis adoption rate","EVAC buyer identity","Yard slot constraints","IMO regulatory cadence"],
+  staleDays:1
+};
+D.tickers.TRI.indicators = {
+  structural:[
+    {name:"EBIT margin trajectory",current:"6.7%",threshold:">8% = on track; <6% for 2 periods = stall",direction:"Improving",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"UK/EU Manufacturing PMI",current:"~50",threshold:"<47 for 3mo = headwind",direction:"Neutral",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"European auto production",current:"Monitor",threshold:">5% YoY decline for 2Q = risk",direction:"Monitor",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Insider buying activity",current:"£1.03M across 4 insiders",threshold:"Any selling >£50K = negative",direction:"Positive",status:"ok",lastUpdated:"2026-03-24"},
+    {name:"Analyst coverage count",current:"3 analysts",threshold:"New initiation = catalyst",direction:"Stable",status:"ok",lastUpdated:"2026-03-24"}
+  ],
+  breaches:[],
+  noiseFilter:["AIM small-cap sentiment (structural outflows)","GBP/EUR moves <5%","Single-quarter revenue miss if margin trend intact","Peer share price moves"],
+  blindspots:["Chinese fastener competition","M&A interest from Bossard/Bufab/PE","Medical pipeline size","EV fastener content per vehicle"],
+  staleDays:1
+};
+
+// RC checklists
+D.tickers.CF.rcChecklist = [
+  {gate:"OVERVIEW from audited filing",met:true},
+  {gate:"≥4 transcripts reviewed (9)",met:true},
+  {gate:"All critical QUESTIONS resolved",met:false},
+  {gate:"Catalysts ascertained",met:true},
+  {gate:"Mispricing reasons myopic",met:true}
+];
+D.tickers.GTT.rcChecklist = [
+  {gate:"OVERVIEW from audited filing",met:true},
+  {gate:"≥4 transcripts reviewed (25)",met:true},
+  {gate:"All critical QUESTIONS resolved",met:true},
+  {gate:"Catalysts ascertained",met:true},
+  {gate:"Mispricing reasons myopic",met:true}
+];
+D.tickers.VOW.rcChecklist = [
+  {gate:"OVERVIEW from audited filing",met:true},
+  {gate:"≥4 transcripts reviewed (17)",met:true},
+  {gate:"All critical QUESTIONS resolved",met:true},
+  {gate:"Catalysts ascertained",met:true},
+  {gate:"Mispricing reasons myopic",met:true}
+];
+D.tickers.TRI.rcChecklist = [
+  {gate:"OVERVIEW from audited filing",met:true},
+  {gate:"≥4 transcripts reviewed (7)",met:true},
+  {gate:"All critical QUESTIONS resolved",met:true},
+  {gate:"Catalysts ascertained",met:true},
+  {gate:"Mispricing reasons myopic",met:true}
+];
+
 D.indicatorBreaches = 0;
 for (var sym in D.tickers) { if (D.tickers[sym].indicators && D.tickers[sym].indicators.breaches) D.indicatorBreaches += D.tickers[sym].indicators.breaches.length; }
 
