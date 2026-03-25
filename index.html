@@ -225,6 +225,8 @@ button.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 
 .search-clear.visible{display:block}
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.alert-badge-red{animation:none}}
+/* Desktop: hide tab icons */
+.tab .tab-icon{display:none}
 /* Responsive */
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
@@ -242,7 +244,6 @@ button.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 
   .alert-badge{min-height:44px;display:flex;align-items:center}
   .scroll-top{bottom:90px;right:16px}
 }
-.tab .tab-icon{display:none}
 /* Print stylesheet */
 @media print{body{background:#fff!important;color:#000!important;padding:0}.tabs,.search-box,.help-overlay,.update-banner,.skip-link,.scroll-top,.alert-bar,.alert-drawer,.search-wrap{display:none!important}.content{display:block!important;padding:16px 0}.card{background:#fff!important;border:1px solid #ccc!important;box-shadow:none!important;break-inside:avoid;color:#000}canvas{display:none}h1,h2,h3,h4{color:#000!important}.metric .label,.metric .value{color:#000!important}.header{padding:8px 0}.header .date{color:#666}}
 </style>
