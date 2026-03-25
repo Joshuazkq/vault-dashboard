@@ -1900,7 +1900,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === '/') { e.preventDefault(); document.getElementById('searchBox').focus(); return; }
   var tabs = ['portfolio','research','themes','pipeline','intelligence'];
   var num = parseInt(e.key);
-  if (num >= 1 && num <= 4) {
+  if (num >= 1 && num <= 5) {
     switchTab(tabs[num-1]);
     document.getElementById('tab-'+tabs[num-1]).focus();
   }
