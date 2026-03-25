@@ -1501,7 +1501,7 @@ function renderPortfolio() {
 
   // Options Monitor
   if (D.options && D.options.length) {
-    h += '<div class="card">';
+    h += '<div class="card portfolio-section">';
     h += '<h3><i data-lucide="clock" style="width:16px;height:16px;vertical-align:middle" aria-hidden="true"></i> Options Monitor</h3>';
     h += '<table>';
     h += '<caption style="text-align:left;font-size:12px;color:var(--text-secondary);margin-bottom:8px">Options positions with DTE tracking</caption>';
@@ -1513,12 +1513,12 @@ function renderPortfolio() {
       var statusText = o.dte >= 45 ? 'GREEN' : o.dte >= 30 ? 'AMBER' : 'RED';
       var nextCat = o.catalystAlignment && o.catalystAlignment.length ? o.catalystAlignment[0] : null;
       h += '<tr>';
-      h += '<td><button class="ticker-btn" onclick="openContextPanel(\'' + o.ticker + '\')">' + o.ticker + '</button></td>';
-      h += '<td class="mono">' + o.strike + (o.instrument === 'Call' ? 'C' : 'P') + ' ' + o.expiry + '</td>';
-      h += '<td><span class="dte-badge ' + dc + '">' + o.dte + '</span></td>';
-      h += '<td><span class="pill ' + statusPill + '" style="font-size:10px">' + statusText + '</span></td>';
-      h += '<td style="font-size:12px">' + (nextCat ? nextCat.catalyst + ' ' + nextCat.date : '\u2014') + '</td>';
-      h += '<td style="color:var(--accent-positive)">' + (nextCat ? '\u2705 Ample' : '\u2014') + '</td>';
+      h += '<td data-label="Ticker"><button class="ticker-btn" onclick="openContextPanel(\'' + o.ticker + '\')">' + o.ticker + '</button></td>';
+      h += '<td data-label="Strike/Expiry" class="mono">' + o.strike + (o.instrument === 'Call' ? 'C' : 'P') + ' ' + o.expiry + '</td>';
+      h += '<td data-label="DTE"><span class="dte-badge ' + dc + '">' + o.dte + '</span></td>';
+      h += '<td data-label="Status"><span class="pill ' + statusPill + '" style="font-size:10px">' + statusText + '</span></td>';
+      h += '<td data-label="Next Catalyst" style="font-size:12px">' + (nextCat ? nextCat.catalyst + ' ' + nextCat.date : '\u2014') + '</td>';
+      h += '<td data-label="Alignment" style="color:var(--accent-positive)">' + (nextCat ? '\u2705 Ample' : '\u2014') + '</td>';
       h += '</tr>';
     });
     h += '</tbody></table>';
