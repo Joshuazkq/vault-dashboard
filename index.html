@@ -2131,6 +2131,7 @@ function showUpdateBanner() {
   b.className = 'update-banner';
   b.innerHTML = 'New data available <button onclick="location.reload()">Refresh</button>';
   document.body.appendChild(b);
+  setTimeout(function() { b.style.transition = 'opacity 0.3s'; b.style.opacity = '0'; setTimeout(function() { b.remove(); }, 400); }, 4000);
 }
 </script>
 </body>
