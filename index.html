@@ -1383,7 +1383,7 @@ function openOverlay(sym) {
     '<div class="metric"><span class="label">Cluster A</span><span class="value">'+(t.clusterA>0?t.clusterA+'%':'--')+'</span></div>'+
     '<div class="metric"><span class="label">Cluster B</span><span class="value">'+(t.clusterB>0?t.clusterB+'%':'--')+'</span></div>'+
     '<div class="metric"><span class="label">RC</span><span class="value">'+t.rc+'/5</span></div></div>'+
-    '<div><div class="radar-container"><canvas id="radarChart"></canvas></div></div></div>'+fvHtml+scenarioHtml+'</div>';
+    '<div><div class="radar-container"><canvas id="radarChart" role="img" aria-label="Conviction dimensions radar chart"></canvas></div></div></div>'+fvHtml+scenarioHtml+'</div>';
 
   // Catalysts panel
   var catalystHtml = '<div class="overlay-panel" id="ovPanel_catalysts">';
