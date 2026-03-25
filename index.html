@@ -1004,9 +1004,23 @@ function renderCtxTab(tab) {
     h += '</div>';
 
   } else if (tab === 'valuation') {
-    if (t.fairValue) {
+    // Methodology header
+    if (t.valuation) {
+      h += '<div style="font-size:12px;color:var(--accent-blue);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:4px">' + t.valuation.methodology + '</div>';
+      if (t.fairValue) {
+        h += '<div style="font-size:11px;color:var(--text-secondary);margin-bottom:12px">' + t.fairValue.thesisType + ' \u2022 Updated ' + t.valuation.lastUpdated + '</div>';
+      }
+      // Rationale
+      if (t.valuation.rationale) {
+        h += '<div style="font-size:12px;line-height:1.5;color:var(--text-secondary);padding:10px 12px;background:rgba(74,158,255,.06);border-left:2px solid var(--accent-blue);border-radius:0 8px 8px 0;margin-bottom:16px">' + t.valuation.rationale + '</div>';
+      }
+    } else if (t.fairValue) {
       h += '<div style="font-size:12px;color:var(--accent-blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">' + t.fairValue.methodology + '</div>';
       h += '<div style="font-size:11px;color:var(--text-secondary);margin-bottom:12px">' + t.fairValue.thesisType + ' \u2022 Updated ' + t.fairValue.lastUpdated + '</div>';
+    }
+    // Fair Value snapshot
+    if (t.fairValue) {
+      h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Fair Value Snapshot</div>';
       h += '<div class="fv-grid" style="margin-bottom:16px">';
       h += '<div class="fv-item"><div class="fv-label">Bear</div><div class="fv-value" style="color:var(--accent-negative)">' + t.fairValue.bearCaseFV + '</div></div>';
       h += '<div class="fv-item"><div class="fv-label">Base</div><div class="fv-value">' + t.fairValue.baseCaseFV + '</div></div>';
@@ -1014,20 +1028,62 @@ function renderCtxTab(tab) {
       h += '<div class="fv-item"><div class="fv-label">Bull</div><div class="fv-value" style="color:var(--accent-amber)">' + t.fairValue.bullCaseFV + '</div></div>';
       h += '</div>';
     }
-    h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Scenario Distribution</div>';
+    // Key Assumptions
+    if (t.valuation && t.valuation.assumptions && t.valuation.assumptions.length) {
+      h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Key Assumptions</div>';
+      h += '<table style="font-size:12px;margin-bottom:16px">';
+      t.valuation.assumptions.forEach(function(a) {
+        h += '<tr><td style="color:var(--text-secondary);padding:3px 8px 3px 0;white-space:nowrap">' + a.label + '</td><td style="font-weight:600;padding:3px 0" class="mono">' + a.value + '</td></tr>';
+      });
+      h += '</table>';
+    }
+    // Scenario Distribution
+    h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Scenarios</div>';
     if (t.scenarios) {
       t.scenarios.forEach(function(s) {
         h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">';
-        h += '<span style="font-size:12px;min-width:90px">' + s.name + '</span>';
+        h += '<span style="font-size:12px;min-width:80px">' + s.name + '</span>';
         h += '<div class="gauge" style="flex:1"><div class="gauge-fill" style="width:' + (s.prob * 2) + '%;background:var(--accent-blue)"></div></div>';
         h += '<span class="mono" style="font-size:12px;min-width:70px;text-align:right">' + s.price + ' (' + s.prob + '%)</span>';
         h += '</div>';
       });
     }
+    // Sensitivity Table
+    if (t.valuation && t.valuation.sensitivity) {
+      var sens = t.valuation.sensitivity;
+      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
+      h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">' + sens.title + '</div>';
+      h += '<table style="font-size:11px;width:100%"><thead><tr><th style="text-align:left;padding:4px;font-size:10px"></th>';
+      sens.cols.forEach(function(c) { h += '<th style="text-align:center;padding:4px;font-size:10px;color:var(--accent-blue)">' + c + '</th>'; });
+      h += '</tr></thead><tbody>';
+      sens.rows.forEach(function(r) {
+        h += '<tr><td style="padding:4px;font-weight:600;color:var(--text-secondary);white-space:nowrap">' + r.label + '</td>';
+        r.vals.forEach(function(v) { h += '<td style="text-align:center;padding:4px" class="mono">' + v + '</td>'; });
+        h += '</tr>';
+      });
+      h += '</tbody></table></div>';
+    }
+    // Peer Comparables
+    if (t.valuation && t.valuation.peers && t.valuation.peers.length) {
+      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
+      h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Peer Comparables</div>';
+      h += '<table style="font-size:12px">';
+      t.valuation.peers.forEach(function(p) {
+        h += '<tr><td style="color:var(--text-secondary);padding:3px 8px 3px 0">' + p.name + '</td><td class="mono" style="font-weight:600;padding:3px 0">' + p.multiple + '</td></tr>';
+      });
+      h += '</table></div>';
+    }
+    // Current Price + Upside
     h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
-    h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px">Current Price</div>';
-    h += '<div style="font-size:12px;color:var(--text-secondary)"><span class="mono" style="font-size:16px;color:var(--text-primary)">' + t.price + '</span></div>';
-    h += '</div>';
+    h += '<div style="display:flex;justify-content:space-between;align-items:baseline">';
+    h += '<div><div style="font-size:11px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px">Current</div><span class="mono" style="font-size:18px;font-weight:700;color:var(--text-primary)">' + t.price + '</span></div>';
+    if (t.fairValue) {
+      var upside = computeUpside(sym);
+      if (upside !== null) {
+        h += '<div style="text-align:right"><div style="font-size:11px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px">Upside (Prob-Wtd)</div><span class="mono" style="font-size:18px;font-weight:700;color:' + (upside >= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)') + '">' + (upside >= 0 ? '+' : '') + upside + '%</span></div>';
+      }
+    }
+    h += '</div></div>';
 
   } else if (tab === 'catalysts') {
     h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Key Catalysts</div>';
