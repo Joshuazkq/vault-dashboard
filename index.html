@@ -225,8 +225,8 @@ button.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 
 .search-clear.visible{display:block}
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.alert-badge-red{animation:none}}
-/* Desktop: hide tab icons */
-.tab .tab-icon{display:none}
+/* Desktop: hide tab icons (low specificity so mobile media query wins) */
+.tab-icon{display:none}
 /* Responsive */
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
