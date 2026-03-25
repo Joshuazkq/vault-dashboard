@@ -1075,7 +1075,12 @@ function clearSearch() {
 
 // ── Sparkline helper ──
 function sparklineCanvas(id, data, color) {
-  return '<canvas id="'+id+'" width="80" height="28" class="sparkline-container"></canvas>';
+  var trend = '';
+  if (data && data.length >= 2) {
+    var pct = ((data[data.length-1] - data[0]) / data[0] * 100).toFixed(1);
+    trend = (pct >= 0 ? 'up ' : 'down ') + Math.abs(pct) + '%';
+  }
+  return '<canvas id="'+id+'" width="80" height="28" class="sparkline-container" role="img" aria-label="Price trend: '+trend+'"></canvas>';
 }
 function renderSparkline(id, data, color) {
   var c = document.getElementById(id);
