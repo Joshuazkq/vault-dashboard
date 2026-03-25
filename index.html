@@ -248,32 +248,41 @@ tr:hover td{background:rgba(255,255,255,.02)}
 </style>
 </head>
 <body>
-<div class="header">
+<a href="#portfolio" class="skip-link">Skip to main content</a>
+<header role="banner" class="header">
   <h1>Research Vault</h1>
   <div class="header-right" style="position:relative">
-    <input type="text" class="search-box" id="searchBox" placeholder="Search tickers..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" onblur="setTimeout(function(){document.getElementById('searchResults').classList.remove('active')},200)">
-    <div class="search-results" id="searchResults"></div>
+    <form role="search" aria-label="Search tickers" onsubmit="return false" class="search-wrap">
+      <input type="text" class="search-box" id="searchBox" placeholder="Search tickers..." autocomplete="off" aria-label="Search tickers" aria-controls="searchResults" aria-expanded="false" oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" onblur="setTimeout(function(){document.getElementById('searchResults').classList.remove('active');document.getElementById('searchBox').setAttribute('aria-expanded','false')},200)">
+      <button type="button" class="search-clear" id="searchClear" aria-label="Clear search" onclick="clearSearch()">&times;</button>
+    </form>
+    <ul class="search-results" id="searchResults" role="listbox" aria-label="Search results"></ul>
     <span class="date">Updated: 2026-03-25</span>
+    <div id="searchLive" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)"></div>
   </div>
+</header>
+<nav aria-label="Dashboard sections">
+<div class="tabs" role="tablist">
+  <button role="tab" class="tab active" id="tab-portfolio" aria-selected="true" aria-controls="portfolio" tabindex="0" onclick="switchTab('portfolio')"><span class="tab-icon" aria-hidden="true"><i data-lucide="briefcase" style="width:18px;height:18px"></i></span><span class="tab-label">Portfolio</span></button>
+  <button role="tab" class="tab" id="tab-research" aria-selected="false" aria-controls="research" tabindex="-1" onclick="switchTab('research')"><span class="tab-icon" aria-hidden="true"><i data-lucide="microscope" style="width:18px;height:18px"></i></span><span class="tab-label">Research</span></button>
+  <button role="tab" class="tab" id="tab-themes" aria-selected="false" aria-controls="themes" tabindex="-1" onclick="switchTab('themes')"><span class="tab-icon" aria-hidden="true"><i data-lucide="layers" style="width:18px;height:18px"></i></span><span class="tab-label">Themes</span></button>
+  <button role="tab" class="tab" id="tab-pipeline" aria-selected="false" aria-controls="pipeline" tabindex="-1" onclick="switchTab('pipeline')"><span class="tab-icon" aria-hidden="true"><i data-lucide="git-branch" style="width:18px;height:18px"></i></span><span class="tab-label">Pipeline</span></button>
 </div>
-<div class="tabs">
-  <div class="tab active" onclick="switchTab('portfolio')">Portfolio</div>
-  <div class="tab" onclick="switchTab('research')">Research</div>
-  <div class="tab" onclick="switchTab('themes')">Themes</div>
-  <div class="tab" onclick="switchTab('pipeline')">Pipeline</div>
-</div>
-<div class="kpi-strip" id="kpiStrip"></div>
+</nav>
+<div class="kpi-strip" id="kpiStrip" role="region" aria-label="Key metrics"></div>
 
-<div id="portfolio" class="content active"></div>
-<div id="research" class="content"></div>
-<div id="themes" class="content"></div>
-<div id="pipeline" class="content"></div>
+<main>
+<div id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio" tabindex="0" class="content active"></div>
+<div id="research" role="tabpanel" aria-labelledby="tab-research" tabindex="0" class="content"></div>
+<div id="themes" role="tabpanel" aria-labelledby="tab-themes" tabindex="0" class="content"></div>
+<div id="pipeline" role="tabpanel" aria-labelledby="tab-pipeline" tabindex="0" class="content"></div>
+</main>
 
-<div id="tickerOverlay" class="overlay" onclick="if(event.target===this)closeOverlay()">
+<div id="tickerOverlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title" onclick="if(event.target===this)closeOverlay()">
   <div class="overlay-content" id="overlayContent"></div>
 </div>
 
-<div id="helpOverlay" class="help-overlay">
+<div id="helpOverlay" class="help-overlay" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
   <h3 style="color:#f1f5f9">Keyboard Shortcuts</h3>
   <div class="help-row"><span class="help-key">1-4</span> Switch tabs</div>
   <div class="help-row"><span class="help-key">/</span> Focus search</div>
@@ -281,6 +290,8 @@ tr:hover td{background:rgba(255,255,255,.02)}
   <div class="help-row"><span class="help-key">?</span> Toggle this help</div>
   <div style="margin-top:12px;font-size:11px;color:#7c8da4">Press any key to close</div>
 </div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
 
 <script>
 const D = {
