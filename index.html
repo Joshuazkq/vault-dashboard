@@ -520,6 +520,26 @@ button:focus:not(:focus-visible) { outline: none; }
   .ctx-panel.open { transform: translateY(0); }
   .scroll-top { bottom: 72px; right: 16px; }
   .update-banner { top: max(48px, calc(4px + env(safe-area-inset-top, 48px))); right: 8px; }
+  /* Portfolio tables → stacked card layout */
+  .portfolio-section table { border-collapse: separate; border-spacing: 0; }
+  .portfolio-section table thead { display: none; }
+  .portfolio-section table tbody tr {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px 12px; padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .portfolio-section table tbody td {
+    padding: 2px 0; border-bottom: none;
+  }
+  .portfolio-section table tbody td::before {
+    content: attr(data-label);
+    display: block; font-size: 10px; color: var(--text-secondary);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .portfolio-section table tbody td:first-child {
+    grid-column: 1 / -1;
+  }
+  .portfolio-section .gauge { display: none; }
 }
 /* PWA standalone mode: ensure extra top padding for status bar */
 @media (display-mode: standalone) {
