@@ -1332,9 +1332,11 @@ function renderPipeline() {
 // ═══════════════════════════════════════════
 // TICKER OVERLAY with Sub-Tabs
 // ═══════════════════════════════════════════
+var _previousFocus = null;
 function openOverlay(sym) {
   var t = D.tickers[sym];
   if (!t) return;
+  _previousFocus = document.activeElement;
   var overlay = document.getElementById('tickerOverlay');
   var content = document.getElementById('overlayContent');
 
