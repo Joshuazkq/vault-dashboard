@@ -961,18 +961,23 @@ function renderAlertDrawer() {
   drawer.classList.toggle('open', html.length > 0);
 }
 
-// ── Collapsible Sections ──
+// ── Collapsible Sections (with localStorage persistence) ──
 function toggleSection(id) {
   sectionState[id] = !sectionState[id];
   var title = document.querySelector('[data-section="'+id+'"]');
   var content = document.getElementById('sec-'+id);
-  if (title) title.classList.toggle('collapsed', sectionState[id]);
+  if (title) {
+    title.classList.toggle('collapsed', sectionState[id]);
+    title.setAttribute('aria-expanded', !sectionState[id]);
+  }
   if (content) content.classList.toggle('collapsed', sectionState[id]);
+  try { localStorage.setItem('vaultSections', JSON.stringify(sectionState)); } catch(e) {}
 }
 
 function sectionHtml(id, title) {
   var collapsed = sectionState[id] ? ' collapsed' : '';
-  return '<div class="section-title'+collapsed+'" data-section="'+id+'" onclick="toggleSection(\''+id+'\')">'+title+'</div>';
+  var expanded = sectionState[id] ? 'false' : 'true';
+  return '<button class="section-title'+collapsed+'" data-section="'+id+'" aria-expanded="'+expanded+'" aria-controls="sec-'+id+'" onclick="toggleSection(\''+id+'\')">'+title+'</button>';
 }
 
 function sectionContentStart(id) {
