@@ -505,7 +505,7 @@ button:focus:not(:focus-visible) { outline: none; }
 @media (max-width: 767px) {
   .sidebar { display: none; }
   .mobile-nav { display: block; }
-  .main-content { margin-left: 0; padding: 16px; padding-top: calc(16px + env(safe-area-inset-top, 44px)); padding-bottom: 72px; }
+  .main-content { margin-left: 0; padding: 16px; padding-top: max(54px, calc(16px + env(safe-area-inset-top, 48px))); padding-bottom: 72px; }
   .main-content.panel-open { margin-right: 0; }
   .grid-2 { grid-template-columns: 1fr; }
   .section-title { margin-top: 0; }
@@ -516,8 +516,14 @@ button:focus:not(:focus-visible) { outline: none; }
   }
   .ctx-panel.open { transform: translateY(0); }
   .scroll-top { bottom: 72px; right: 16px; }
-  .update-banner { top: calc(4px + env(safe-area-inset-top, 44px)); right: 8px; }
+  .update-banner { top: max(48px, calc(4px + env(safe-area-inset-top, 48px))); right: 8px; }
 }
+/* PWA standalone mode: ensure extra top padding for status bar */
+@media (display-mode: standalone) {
+  .main-content { padding-top: max(54px, calc(16px + env(safe-area-inset-top, 48px))) !important; }
+}
+/* iOS standalone detection fallback */
+body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-area-inset-top, 48px))) !important; }
 </style>
 </head>
 <body>
