@@ -1831,7 +1831,8 @@ function openOverlay(sym) {
     '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'catalysts\')">Catalysts</button>'+
     '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'research\')">Research</button>'+
     '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'financials\')">Financials</button>'+
-    '</div>'+summaryPanel+valuationHtml+catalystHtml+researchHtml+financialsHtml;
+    (t.indicators ? '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'indicators\')">Indicators</button>' : '')+
+    '</div>'+summaryPanel+valuationHtml+catalystHtml+researchHtml+financialsHtml+renderOverlayIndicators(sym);
 
   overlay.classList.add('active');
   // Focus trap: move focus to close button
