@@ -442,16 +442,19 @@ tbody tr.row-clickable { cursor: pointer; }
 
 /* ── UPDATE BANNER ── */
 .update-banner {
-  position: fixed; top: 8px; right: 16px;
-  background: var(--bg-surface); color: var(--text-secondary); padding: 6px 14px;
-  border-radius: 8px; font-size: 12px; z-index: 9000;
-  display: flex; align-items: center; gap: 8;
-  border: 1px solid var(--border);
+  position: fixed; top: 10px; right: 16px;
+  background: var(--bg-surface); color: var(--text-secondary); padding: 5px 12px;
+  border-radius: 6px; font-size: 11px; z-index: 9000;
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--border); opacity: 0.85;
 }
+.update-banner:hover { opacity: 1; }
 .update-banner button {
-  border: none; background: var(--accent-blue); color: #fff;
-  padding: 3px 10px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 11px;
+  border: none; background: rgba(255,255,255,0.08); color: var(--text-secondary);
+  padding: 2px 8px; border-radius: 4px; cursor: pointer; font-weight: 500; font-size: 11px;
+  transition: background 0.15s, color 0.15s;
 }
+.update-banner button:hover { background: rgba(255,255,255,0.14); color: var(--text-primary); }
 
 /* ── SCROLL TOP ── */
 .scroll-top {
