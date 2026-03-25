@@ -1474,7 +1474,7 @@ function renderPortfolio() {
   var h = '<h2 class="section-title">Portfolio</h2>';
 
   // Position Table
-  h += '<div class="card">';
+  h += '<div class="card portfolio-section">';
   h += '<table>';
   h += '<caption style="text-align:left;font-size:12px;color:var(--text-secondary);margin-bottom:8px">Active portfolio positions as of ' + D.generated + '</caption>';
   h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>CWA</th><th>RC</th><th>Price</th></tr></thead>';
@@ -1486,17 +1486,17 @@ function renderPortfolio() {
     var cwa = (t.conviction * t.allocation / 100).toFixed(2);
     var instrClass = (t.instrument.includes('C ') || t.instrument.includes('Call')) ? 'pill-orange' : 'pill-blue';
     h += '<tr class="row-clickable" onclick="openContextPanel(\'' + sym + '\')">';
-    h += '<td><button class="ticker-btn" onclick="event.stopPropagation();openContextPanel(\'' + sym + '\')">' + sym + '</button></td>';
-    h += '<td><span class="pill ' + instrClass + '" style="font-size:10px">' + t.instrument + '</span></td>';
-    h += '<td style="font-size:12px">' + t.theme + '</td>';
-    h += '<td><div class="gauge" style="width:100px;display:inline-block;vertical-align:middle;margin-right:6px"><div class="gauge-fill" style="width:' + (t.allocation / 40 * 100) + '%;background:var(--accent-positive)"></div></div><span class="mono tabnum" style="font-size:12px">' + t.allocation + '%</span></td>';
-    h += '<td><strong>' + t.conviction + '/10</strong><br><span style="font-size:11px;color:var(--text-secondary)">A:' + t.clusterA + '% B:' + t.clusterB + '%</span></td>';
-    h += '<td class="mono tabnum">' + cwa + '</td>';
-    h += '<td><span style="color:' + (t.rc >= 5 ? 'var(--accent-positive)' : 'var(--accent-amber)') + '">' + t.rc + '/5</span></td>';
-    h += '<td class="mono tabnum">' + t.price + '</td>';
+    h += '<td data-label="Ticker"><button class="ticker-btn" onclick="event.stopPropagation();openContextPanel(\'' + sym + '\')">' + sym + '</button></td>';
+    h += '<td data-label="Instrument"><span class="pill ' + instrClass + '" style="font-size:10px">' + t.instrument + '</span></td>';
+    h += '<td data-label="Theme" style="font-size:12px">' + t.theme + '</td>';
+    h += '<td data-label="Allocation"><div class="gauge" style="width:100px;display:inline-block;vertical-align:middle;margin-right:6px"><div class="gauge-fill" style="width:' + (t.allocation / 40 * 100) + '%;background:var(--accent-positive)"></div></div><span class="mono tabnum" style="font-size:12px">' + t.allocation + '%</span></td>';
+    h += '<td data-label="Conviction"><strong>' + t.conviction + '/10</strong><br><span style="font-size:11px;color:var(--text-secondary)">A:' + t.clusterA + '% B:' + t.clusterB + '%</span></td>';
+    h += '<td data-label="CWA" class="mono tabnum">' + cwa + '</td>';
+    h += '<td data-label="RC"><span style="color:' + (t.rc >= 5 ? 'var(--accent-positive)' : 'var(--accent-amber)') + '">' + t.rc + '/5</span></td>';
+    h += '<td data-label="Price" class="mono tabnum">' + t.price + '</td>';
     h += '</tr>';
   });
-  h += '<tr style="opacity:.5"><td>CASH</td><td>\u2014</td><td>\u2014</td><td><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr>';
+  h += '<tr style="opacity:.5"><td data-label="Ticker">CASH</td><td data-label="Instrument">\u2014</td><td data-label="Theme">\u2014</td><td data-label="Allocation"><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></td><td data-label="Conviction">\u2014</td><td data-label="CWA">\u2014</td><td data-label="RC">\u2014</td><td data-label="Price">\u2014</td></tr>';
   h += '</tbody></table></div>';
 
   // Options Monitor
