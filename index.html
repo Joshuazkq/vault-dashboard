@@ -1095,12 +1095,18 @@ var sectionState = {};
 function renderKPI() {
   var p = D.portfolio;
   var nextCat = D.catalystTimeline.length > 0 ? D.catalystTimeline[0].date : '--';
+  var dteHtml = D.minDte !== null ? '<div class="kpi-item"><div class="kpi-label">Min DTE</div><div class="kpi-value"><span class="dte-badge dte-'+(D.minDte>=45?'green':D.minDte>=30?'yellow':'red')+'">'+D.minDte+'d</span></div></div>' : '';
+  var breachHtml = D.indicatorBreaches > 0 ? '<div class="kpi-item"><div class="kpi-label">Breaches</div><div class="kpi-value" style="color:#f87171">'+D.indicatorBreaches+'</div></div>' : '';
+  var escalating = D.intelligence.patterns.filter(function(p){return p.status==='ESCALATING'}).length;
+  var sigHtml = escalating > 0 ? '<div class="kpi-item"><div class="kpi-label">Signals</div><div class="kpi-value" style="color:#a78bfa">'+escalating+' escalating</div></div>' : '';
   document.getElementById('kpiStrip').innerHTML =
     '<div class="kpi-item"><div class="kpi-label">Deployed</div><div class="kpi-value" style="color:#4ade80">'+p.deployedPct+'%</div></div>'+
     '<div class="kpi-item"><div class="kpi-label">Cash</div><div class="kpi-value">'+p.cashPct+'%</div></div>'+
     '<div class="kpi-item"><div class="kpi-label">Conviction</div><div class="kpi-value" style="color:#4ade80">'+p.wtdConviction+'/10</div></div>'+
     '<div class="kpi-item"><div class="kpi-label">Slots</div><div class="kpi-value">'+p.slotsUsed+'/'+p.slotsMax+'</div></div>'+
-    '<div class="kpi-item"><div class="kpi-label">Next Catalyst</div><div class="kpi-value" style="color:#f87171;font-size:12px">'+nextCat+'</div></div>';
+    dteHtml+breachHtml+
+    '<div class="kpi-item"><div class="kpi-label">Next Catalyst</div><div class="kpi-value" style="color:#f87171;font-size:12px">'+nextCat+'</div></div>'+
+    sigHtml;
 }
 
 // ── Tab switching (ARIA-compliant) ──
