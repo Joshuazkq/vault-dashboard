@@ -1160,7 +1160,7 @@ function renderPortfolio() {
     '<div class="metric"><span class="label">Total CWA</span><span class="value">'+p.totalCWA+'</span></div>'+
     Object.entries(D.tickers).filter(function(e){return e[1].allocation>0}).map(function(e){return '<div class="metric"><span class="label">'+e[0]+' CWA</span><span class="value">'+(e[1].allocation*e[1].conviction/10).toFixed(2)+'</span></div>'}).join('')+
     '<div class="chart-container-sm"><canvas id="typeDoughnut" role="img" aria-label="Investment type breakdown chart"></canvas></div></div>'+
-    '<div class="card"><h3>Conviction vs Allocation</h3><div class="chart-container"><canvas id="bubbleChart"></canvas></div></div></div>'+
+    '<div class="card"><h3>Conviction vs Allocation</h3><div class="chart-container"><canvas id="bubbleChart" role="img" aria-label="Conviction vs allocation bubble chart"></canvas></div></div></div>'+
     sectionContentEnd()+
 
     sectionHtml('alerts','Alerts')+sectionContentStart('alerts')+alertBarHtml+sectionContentEnd()+
