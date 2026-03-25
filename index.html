@@ -1402,6 +1402,8 @@ function renderPortfolio() {
 
     sectionHtml('alerts','Alerts')+sectionContentStart('alerts')+alertBarHtml+sectionContentEnd()+
 
+    (D.options.length > 0 ? sectionHtml('optmon','Options Monitor')+sectionContentStart('optmon')+renderOptionsMonitor()+sectionContentEnd() : '')+
+
     sectionHtml('positions','Investment Positions')+sectionContentStart('positions')+
     '<div class="card" style="overflow-x:auto"><table id="posTable"><thead><tr>'+
     '<th onclick="sortTable(\'posTable\',0)">Ticker <span class="sort-arrow">\u25BC</span></th>'+
