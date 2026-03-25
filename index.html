@@ -1850,6 +1850,28 @@ function openOverlay(sym) {
   },50);
 }
 
+function renderOverlayIndicators(sym) {
+  var t = D.tickers[sym];
+  if (!t || !t.indicators) return '';
+  var ind = t.indicators;
+  var rows = ind.structural.map(function(i) {
+    var dotClass = i.status === 'breached' ? 'indicator-breached' : i.status === 'approaching' ? 'indicator-approaching' : 'indicator-ok';
+    return '<tr><td><span class="indicator-dot '+dotClass+'"></span>'+i.name+'</td><td style="font-size:12px">'+i.current+'</td><td style="font-size:12px">'+i.threshold+'</td><td>'+i.direction+'</td></tr>';
+  }).join('');
+  var breachHtml = ind.breaches.length > 0 ? '<h4 style="color:#f87171">Structural Breaches</h4>'+ind.breaches.map(function(b){
+    return '<div class="alert alert-red" style="font-size:12px"><strong>'+b.date+'</strong> — '+b.indicator+': '+b.assessment+'</div>';
+  }).join('') : '';
+  var noiseHtml = ind.noiseFilter.length > 0 ? '<h4>Noise Filter — Do NOT React To</h4>'+ind.noiseFilter.map(function(n){
+    return '<div class="noise-item">'+n+'</div>';
+  }).join('') : '';
+  var blindHtml = ind.blindspots.length > 0 ? '<h4>Blindspot Register</h4>'+ind.blindspots.map(function(b){
+    return '<div style="font-size:12px;padding:4px 0;color:#9aabbf;border-bottom:1px solid rgba(255,255,255,.03)">'+b+'</div>';
+  }).join('') : '';
+  return '<div class="overlay-panel" id="ovPanel_indicators">'+
+    '<table><tr><th>Indicator</th><th>Current</th><th>Threshold</th><th>Direction</th></tr>'+rows+'</table>'+
+    breachHtml+noiseHtml+blindHtml+'</div>';
+}
+
 function switchOverlayTab(tab) {
   document.querySelectorAll('.overlay-tab').forEach(function(e){
     e.classList.remove('active');
