@@ -1102,7 +1102,7 @@ function renderPortfolio() {
   var badgeColors = {critical:'red',hormuz:'hormuz',svm:'svm',tariff:'tariff',ai:'ai'};
   for (var g in groups) {
     var bc = badgeColors[g] || 'blue';
-    badgeHtml += '<div class="alert-badge alert-badge-'+bc+(alertGroupState[g]?' active':'')+'" onclick="toggleAlertGroup(\''+g+'\')">'+groups[g].length+' '+g.toUpperCase()+'</div>';
+    badgeHtml += '<button class="alert-badge alert-badge-'+bc+(alertGroupState[g]?' active':'')+'" aria-expanded="'+(alertGroupState[g]?'true':'false')+'" onclick="toggleAlertGroup(\''+g+'\')">'+groups[g].length+' '+g.toUpperCase()+'</button>';
   }
   var alertBarHtml = '<div class="alert-bar">'+badgeHtml+'<button class="alert-expand" id="alertExpandBtn" onclick="toggleAllAlerts()">'+(allAlertsOpen?'Collapse':'Expand')+'</button></div><div class="alert-drawer'+(allAlertsOpen?' open':'')+'" id="alertDrawer"></div>';
 
