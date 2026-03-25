@@ -1573,6 +1573,118 @@ function renderPipeline() {
 }
 
 // ═══════════════════════════════════════════
+// ═══════════════════════════════════════════
+// OPTIONS MONITOR (C1)
+// ═══════════════════════════════════════════
+function renderOptionsMonitor() {
+  return '<div class="grid">' + D.options.map(function(o) {
+    var dteClass = o.dte >= 45 ? 'green' : o.dte >= 30 ? 'yellow' : 'red';
+    var alignHtml = o.catalystAlignment.map(function(ca) {
+      return '<div class="metric"><span class="label">'+ca.catalyst+' ('+ca.date+')</span><span class="value"><span class="dte-badge dte-'+ca.zone+'">'+ca.dteAtCatalyst+'d</span></span></div>';
+    }).join('');
+    return '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+o.ticker+'\')">'+o.ticker+'</span> '+o.strike+' '+o.instrument+' '+o.expiry+'</h3>'+
+      '<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><span class="dte-badge dte-'+dteClass+'" style="font-size:20px;padding:8px 20px">'+o.dte+' DTE</span><span style="font-size:12px;color:#9aabbf">'+o.moneyness+'</span></div>'+
+      '<div class="metric"><span class="label">Allocation</span><span class="value">'+o.alloc+'%</span></div>'+
+      '<div class="metric"><span class="label">Theta</span><span class="value" style="font-size:12px">'+o.thetaProfile+'</span></div>'+
+      '<div class="metric"><span class="label">30 DTE Mark</span><span class="value" style="color:#fbbf24">'+o.thirtyDteMark+'</span></div>'+
+      '<h4>Catalyst-Expiry Alignment</h4>'+alignHtml+'</div>';
+  }).join('') + '</div>';
+}
+
+// ═══════════════════════════════════════════
+// INDICATOR SUMMARY (C4)
+// ═══════════════════════════════════════════
+function renderIndicatorSummary() {
+  var html = '<div class="grid">';
+  for (var sym in D.tickers) {
+    var t = D.tickers[sym];
+    if (!t.indicators || !t.indicators.structural) continue;
+    var rows = t.indicators.structural.map(function(ind) {
+      var dotClass = ind.status === 'breached' ? 'indicator-breached' : ind.status === 'approaching' ? 'indicator-approaching' : 'indicator-ok';
+      return '<div class="metric"><span class="label"><span class="indicator-dot '+dotClass+'"></span>'+ind.name+'</span><span class="value" style="font-size:11px">'+ind.current+'</span></div>';
+    }).join('');
+    var breachCount = t.indicators.breaches ? t.indicators.breaches.length : 0;
+    var breachBadge = breachCount > 0 ? ' <span class="tab-badge tab-badge-red">'+breachCount+'</span>' : '';
+    html += '<div class="card"><h3><span class="ticker-link" onclick="openOverlay(\''+sym+'\')">'+sym+'</span> Indicators'+breachBadge+'</h3>'+rows+'</div>';
+  }
+  return html + '</div>';
+}
+
+// ═══════════════════════════════════════════
+// CHANGELOG ALERTS (C3)
+// ═══════════════════════════════════════════
+function renderChangelogAlerts() {
+  return '<div class="grid-2">' + D.changelog.unpropagated.map(function(c) {
+    return '<div class="card" style="border-left:3px solid #ef4444"><h3><span class="pill pill-red">'+c.tier+'</span> '+c.theme+' — '+c.date+'</h3>'+
+      '<div style="font-size:13px;color:#e2e8f0;margin:8px 0">'+c.title+'</div>'+
+      '<h4 style="color:#f87171">Pending Propagation</h4>'+
+      c.pending.map(function(p){return '<div style="font-size:12px;color:#f87171;padding:4px 0">⬜ '+p+'</div>'}).join('')+'</div>';
+  }).join('') + '</div>';
+}
+
+// ═══════════════════════════════════════════
+// TAB 5: INTELLIGENCE (H1)
+// ═══════════════════════════════════════════
+function renderIntelligence() {
+  var el = document.getElementById('intelligence');
+  var ig = D.intelligence;
+
+  // Signal summary card
+  var catHtml = Object.entries(ig.signalStats.byCategory).map(function(e) {
+    return '<div class="metric"><span class="label">'+e[0]+'</span><span class="value">'+e[1]+'</span></div>';
+  }).join('');
+  var signalCard = '<div class="card"><h3>Signal Summary</h3>'+
+    '<div class="metric"><span class="label">Total Signals</span><span class="value">'+ig.signalStats.total+'</span></div>'+
+    '<div class="metric"><span class="label">Active</span><span class="value" style="color:#4ade80">'+ig.signalStats.active+'</span></div>'+
+    '<div class="metric"><span class="label">Unmatched</span><span class="value" style="color:#fbbf24">'+ig.signalStats.unmatched+'</span></div>'+
+    '<div class="metric"><span class="label">Expired</span><span class="value">'+ig.signalStats.expired+'</span></div>'+
+    '<h4>By Category</h4>'+catHtml+'</div>';
+
+  // Pattern cards
+  var patternHtml = ig.patterns.map(function(p) {
+    var statusClass = p.status === 'ESCALATING' ? 'pattern-escalating' : p.status === 'STABLE' ? 'pattern-stable' : 'pattern-fading';
+    var statusColor = p.status === 'ESCALATING' ? '#f87171' : p.status === 'STABLE' ? '#60a5fa' : '#9aabbf';
+    return '<div class="pattern-card '+statusClass+'">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center"><strong style="color:#f1f5f9">'+p.name+'</strong><span class="pill" style="background:rgba(255,255,255,.06);color:'+statusColor+'">'+p.status+'</span></div>'+
+      '<div style="font-size:12px;color:#9aabbf;margin-top:6px">'+p.signals+' signals &middot; Action: <span style="color:#60a5fa">'+p.action+'</span></div>'+
+      '<div style="font-size:12px;color:#e2e8f0;margin-top:8px;line-height:1.5">'+p.implication+'</div></div>';
+  }).join('');
+
+  // Cross-theme connections
+  var connHtml = ig.crossConnections.map(function(c) {
+    return '<div class="connection-line"><span style="color:#a78bfa;font-weight:600">'+c.from+'</span><span class="connection-arrow">↔</span><span style="color:#a78bfa;font-weight:600">'+c.to+'</span><span style="color:#9aabbf;margin-left:auto">via: '+c.via+'</span></div>';
+  }).join('');
+
+  // Opportunity leads
+  var leadRows = ig.leads.map(function(l) {
+    return '<tr><td style="font-weight:600;color:#60a5fa">'+l.ticker+'</td><td>'+l.name+'</td><td>'+l.theme+'</td><td>'+(l.score||'Unscored')+'</td><td><span class="pill pill-blue">'+l.action+'</span></td></tr>';
+  }).join('');
+
+  el.innerHTML =
+    sectionHtml('sigsum','Signal Summary')+sectionContentStart('sigsum')+
+    '<div class="grid-2">'+signalCard+'<div class="card"><h3>Signal Category Breakdown</h3><div class="chart-container"><canvas id="sigCatChart" role="img" aria-label="Signal category breakdown chart"></canvas></div></div></div>'+
+    sectionContentEnd()+
+
+    sectionHtml('patterns','Accumulation Patterns')+sectionContentStart('patterns')+
+    '<div class="grid-2">'+patternHtml+'</div>'+sectionContentEnd()+
+
+    sectionHtml('connections','Cross-Theme Connections')+sectionContentStart('connections')+
+    '<div class="card">'+connHtml+'</div>'+sectionContentEnd()+
+
+    sectionHtml('leads','Opportunity Leads')+sectionContentStart('leads')+
+    '<div class="card" style="overflow-x:auto"><table><tr><th>Ticker</th><th>Company</th><th>Theme</th><th>Score</th><th>Action</th></tr>'+leadRows+'</table></div>'+
+    sectionContentEnd();
+
+  // Render category chart
+  setTimeout(function() {
+    var cats = Object.entries(ig.signalStats.byCategory);
+    var canvas = document.getElementById('sigCatChart');
+    if (!canvas) return;
+    new Chart(canvas, {type:'bar',data:{labels:cats.map(function(c){return c[0]}),datasets:[{data:cats.map(function(c){return c[1]}),backgroundColor:['#ef4444','#f59e0b','#3b82f6','#a78bfa','#22c55e','#60a5fa','#9aabbf'],borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(255,255,255,.06)'},ticks:{color:'#9aabbf'}},y:{grid:{display:false},ticks:{color:'#9aabbf'}}}}});
+  }, 50);
+}
+
+// ═══════════════════════════════════════════
 // TICKER OVERLAY with Sub-Tabs
 // ═══════════════════════════════════════════
 var _previousFocus = null;
