@@ -225,6 +225,41 @@ button.section-title{font-size:18px;font-weight:700;color:#f1f5f9;margin:24px 0 
 .search-clear.visible{display:block}
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.alert-badge-red{animation:none}}
+/* Options DTE badges */
+.dte-badge{display:inline-block;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.dte-green{background:rgba(22,163,74,.15);color:#4ade80}
+.dte-yellow{background:rgba(217,119,6,.15);color:#fbbf24}
+.dte-red{background:rgba(220,38,38,.15);color:#f87171;animation:pulse 2s ease-in-out infinite}
+/* Indicator traffic lights */
+.indicator-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.indicator-ok{background:#22c55e}
+.indicator-approaching{background:#f59e0b}
+.indicator-breached{background:#ef4444}
+/* Band violation */
+.band-violation{color:#f87171;font-weight:700}
+.band-ok{color:#9aabbf}
+/* RC gate checklist */
+.rc-gate{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:12px}
+.rc-gate-met{color:#4ade80}
+.rc-gate-unmet{color:#f87171}
+/* Intelligence pattern cards */
+.pattern-card{padding:12px 16px;border-radius:14px;margin-bottom:8px;background:linear-gradient(145deg,#1a2435,#1e2a3d);border:1px solid rgba(255,255,255,.06)}
+.pattern-escalating{border-left:3px solid #ef4444}
+.pattern-stable{border-left:3px solid #3b82f6}
+.pattern-fading{border-left:3px solid #7c8da4}
+/* Alert action tiers */
+.alert-tier-decision{border-left:3px solid #ef4444;background:linear-gradient(90deg,rgba(220,38,38,.12),rgba(220,38,38,.04))}
+.alert-tier-monitoring{border-left:3px solid #f59e0b;background:linear-gradient(90deg,rgba(217,119,6,.12),rgba(217,119,6,.04))}
+.alert-tier-context{border-left:3px solid #7c8da4;background:linear-gradient(90deg,rgba(100,116,139,.08),rgba(100,116,139,.03))}
+/* Tab notification badge */
+.tab-badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;font-size:10px;font-weight:700;color:#fff;margin-left:6px}
+.tab-badge-red{background:#ef4444}
+.tab-badge-amber{background:#f59e0b}
+.tab-badge-blue{background:#3b82f6}
+/* Connection lines */
+.connection-line{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.15);margin-bottom:6px;font-size:12px}
+/* Noise filter item */
+.noise-item{font-size:12px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.03);margin-bottom:4px;color:#9aabbf;border-left:2px solid #7c8da4}
 /* Desktop: hide tab icons (low specificity so mobile media query wins) */
 .tab-icon{display:none}
 /* Responsive */
