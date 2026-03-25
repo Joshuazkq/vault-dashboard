@@ -455,6 +455,17 @@ tbody tr.row-clickable { cursor: pointer; }
   transition: background 0.15s, color 0.15s;
 }
 .update-banner button:hover { background: rgba(255,255,255,0.14); color: var(--text-primary); }
+.reload-btn {
+  position: fixed; top: 10px; right: 12px; z-index: 9001;
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg-surface);
+  color: var(--text-secondary); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.4; transition: opacity 0.15s, background 0.15s;
+}
+.reload-btn:hover { opacity: 1; background: var(--bg-elevated); }
+.reload-btn:active { opacity: 1; }
+.reload-btn svg { width: 14px; height: 14px; }
 
 /* ── SCROLL TOP ── */
 .scroll-top {
