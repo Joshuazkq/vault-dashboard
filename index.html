@@ -1185,8 +1185,72 @@ function renderCtxTab(tab) {
     h += '</div>';
 
   } else if (tab === 'financials') {
+    if (t.financials) {
+      var f = t.financials;
+      // Financial Snapshot header
+      h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">';
+      h += '<div style="font-size:13px;font-weight:600">Financial Snapshot</div>';
+      h += '<span style="font-size:11px;color:var(--text-secondary)">' + f.fy + '</span>';
+      h += '</div>';
+      // 2x3 metrics grid
+      h += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px 16px;margin-bottom:16px">';
+      var metrics = [
+        {label:'Revenue',value:f.revenue,sub:f.revenueGrowth},
+        {label:'EBITDA',value:f.ebitda,sub:f.ebitdaMargin},
+        {label:'Net Income',value:f.netIncome},
+        {label:'EPS',value:f.eps},
+        {label:'FCF',value:f.fcf},
+        {label:'Leverage',value:f.leverage}
+      ];
+      metrics.forEach(function(m) {
+        h += '<div>';
+        h += '<div style="font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px">' + m.label + '</div>';
+        h += '<div class="mono" style="font-size:14px;font-weight:700">' + m.value + '</div>';
+        if (m.sub) {
+          var subColor = m.sub.startsWith('-') ? 'var(--accent-negative)' : 'var(--accent-positive)';
+          h += '<div style="font-size:11px;color:' + subColor + '">' + m.sub + '</div>';
+        }
+        h += '</div>';
+      });
+      h += '</div>';
+      // Capital Structure
+      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
+      h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Capital Structure</div>';
+      // Summary row
+      var levColor = 'var(--text-primary)';
+      if (f.leverageNum > 5) levColor = 'var(--accent-red)';
+      else if (f.leverageNum > 3) levColor = 'var(--accent-amber)';
+      h += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:12px">';
+      h += '<div><div style="font-size:10px;color:var(--text-secondary);text-transform:uppercase">Total Debt</div><div class="mono" style="font-size:13px;font-weight:600;color:' + (f.totalDebt !== '$0' && f.totalDebt !== '\u20AC0' ? 'var(--accent-negative)' : 'var(--accent-positive)') + '">' + f.totalDebt + '</div></div>';
+      h += '<div><div style="font-size:10px;color:var(--text-secondary);text-transform:uppercase">Cash</div><div class="mono" style="font-size:13px;font-weight:600;color:var(--accent-positive)">' + f.cash + '</div></div>';
+      h += '<div><div style="font-size:10px;color:var(--text-secondary);text-transform:uppercase">Net Debt</div><div class="mono" style="font-size:13px;font-weight:600">' + f.netDebt + '</div></div>';
+      h += '<div><div style="font-size:10px;color:var(--text-secondary);text-transform:uppercase">Leverage</div><div class="mono" style="font-size:13px;font-weight:600;color:' + levColor + '">' + f.leverage + '</div></div>';
+      h += '</div>';
+      // Debt details table
+      if (f.debtDetails && f.debtDetails.length > 0) {
+        h += '<table style="font-size:11px;width:100%">';
+        h += '<thead><tr><th style="text-align:left;padding:4px 6px;font-size:10px;color:var(--text-secondary)">Facility</th><th style="text-align:right;padding:4px 6px;font-size:10px;color:var(--text-secondary)">Amount</th><th style="text-align:right;padding:4px 6px;font-size:10px;color:var(--text-secondary)">Rate</th><th style="text-align:right;padding:4px 6px;font-size:10px;color:var(--text-secondary)">Maturity</th></tr></thead>';
+        h += '<tbody>';
+        f.debtDetails.forEach(function(d) {
+          h += '<tr>';
+          h += '<td style="padding:3px 6px;color:var(--text-secondary)">' + d.facility + '</td>';
+          h += '<td style="padding:3px 6px;text-align:right" class="mono">' + d.amount + '</td>';
+          h += '<td style="padding:3px 6px;text-align:right" class="mono">' + d.rate + '</td>';
+          h += '<td style="padding:3px 6px;text-align:right" class="mono">' + d.maturity + '</td>';
+          h += '</tr>';
+        });
+        h += '</tbody></table>';
+      } else {
+        h += '<div style="font-size:12px;color:var(--accent-positive);padding:6px 0">No material financial debt</div>';
+      }
+      h += '</div>';
+    }
+    // Price History (kept below financials)
+    h += '<div style="border-top:1px solid var(--border);padding-top:12px">';
     h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Price History (7d)</div>';
     h += '<div style="height:120px"><canvas id="ctxSparkline" role="img" aria-label="7-day price chart for ' + sym + '"></canvas></div>';
+    h += '</div>';
+    // Portfolio metrics
     h += '<div style="margin-top:12px;font-size:12px;color:var(--text-secondary)">';
     h += '<div style="display:flex;justify-content:space-between;padding:4px 0"><span>Allocation</span><span class="mono">' + t.allocation + '% / ' + t.maxAlloc + '% max</span></div>';
     h += '<div style="display:flex;justify-content:space-between;padding:4px 0"><span>Band Violation</span><span style="color:' + (t.bandViolation ? 'var(--accent-red)' : 'var(--accent-positive)') + '">' + (t.bandViolation ? 'YES' : 'None') + '</span></div>';
