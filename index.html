@@ -1467,18 +1467,20 @@ function openOverlay(sym) {
   }
   financialsHtml += '</div>';
 
-  content.innerHTML = '<button class="overlay-close" onclick="closeOverlay()">&times;</button>'+
-    '<h2 style="font-size:20px;font-weight:700;color:#f1f5f9;margin-bottom:4px">'+sym+' &mdash; '+t.company+'</h2>'+
+  content.innerHTML = '<button class="overlay-close" onclick="closeOverlay()" aria-label="Close ticker detail">&times;</button>'+
+    '<h2 id="overlay-title" style="font-size:20px;font-weight:700;color:#f1f5f9;margin-bottom:4px">'+sym+' &mdash; '+t.company+'</h2>'+
     '<div style="margin-bottom:8px">'+badge+' '+statusBadge+' <span style="font-size:13px;color:#94a3b8;margin-left:8px">'+t.theme+'</span>'+allocSpan+'</div>'+
-    '<div class="overlay-tabs">'+
-    '<div class="overlay-tab active" onclick="switchOverlayTab(\'summary\')">Summary</div>'+
-    '<div class="overlay-tab" onclick="switchOverlayTab(\'valuation\')">Valuation</div>'+
-    '<div class="overlay-tab" onclick="switchOverlayTab(\'catalysts\')">Catalysts</div>'+
-    '<div class="overlay-tab" onclick="switchOverlayTab(\'research\')">Research</div>'+
-    '<div class="overlay-tab" onclick="switchOverlayTab(\'financials\')">Financials</div>'+
+    '<div class="overlay-tabs" role="tablist" aria-label="Ticker details">'+
+    '<button role="tab" class="overlay-tab active" aria-selected="true" onclick="switchOverlayTab(\'summary\')">Summary</button>'+
+    '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'valuation\')">Valuation</button>'+
+    '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'catalysts\')">Catalysts</button>'+
+    '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'research\')">Research</button>'+
+    '<button role="tab" class="overlay-tab" aria-selected="false" onclick="switchOverlayTab(\'financials\')">Financials</button>'+
     '</div>'+summaryPanel+valuationHtml+catalystHtml+researchHtml+financialsHtml;
 
   overlay.classList.add('active');
+  // Focus trap: move focus to close button
+  setTimeout(function(){ var closeBtn = content.querySelector('.overlay-close'); if (closeBtn) closeBtn.focus(); }, 50);
 
   setTimeout(function(){
     var dims = t.dimensions;
