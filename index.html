@@ -1256,6 +1256,16 @@ function dteClass(dte) {
   return dte >= 45 ? 'dte-green' : dte >= 30 ? 'dte-amber' : 'dte-red';
 }
 
+function computeUpside(sym) {
+  var t = D.tickers[sym];
+  if (!t || !t.fairValue || !t.fairValue.probWeightedFV || !t.price) return null;
+  var fvStr = t.fairValue.probWeightedFV.replace(/[^0-9.\-]/g, '');
+  var priceStr = t.price.replace(/[^0-9.\-]/g, '');
+  var fv = parseFloat(fvStr), price = parseFloat(priceStr);
+  if (isNaN(fv) || isNaN(price) || price === 0) return null;
+  return Math.round((fv / price - 1) * 100);
+}
+
 function todayStr() { return D.generated || '2026-03-25'; }
 
 function formatDate(ds) {
