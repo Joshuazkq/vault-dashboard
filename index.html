@@ -720,13 +720,13 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 // DATA MODEL
 // ═══════════════════════════════════════════
 const D = {
-  generated: "2026-03-27T15:37:00",
-  portfolio: {deployedPct:61.28, cashPct:38.72, slotsUsed:3, maxSlots:12, wtdConviction:9.3},
+  generated: "2026-03-27T16:50:00",
+  portfolio: {deployedPct:61.28, cashPct:38.72, slotsUsed:3, maxSlots:12, wtdConviction:9.2},
   tickers: {
     VOW: {
       company:"Vow ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:40, conviction:10, clusterA:107, clusterB:80, rc:5, instrument:"Shares", currency:"NOK",
-      price:"NOK 2.33", change:-1.06,
+      price:"NOK 2.33", change:0.65,
       dimensions:{D1:{score:6,type:"fact"},D2:{score:6,type:"fact"},D3:{score:4,type:"inference"},D4:{score:3,type:"fact"},D5:{score:5,type:"fact"},D6:{score:4,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
       costBasis:"NOK 2.58", entryDate:"2026-02-28", inceptionReturn:-10.1,
       fairValue:{baseCaseFV:"NOK 5.76",probWeightedFV:"NOK 7.54",bearCaseFV:"NOK 1.12",bullCaseFV:"NOK 9.01",methodology:"Unit Economics SOTP",thesisType:"Turnaround + SOTP",lastUpdated:"2026-03-15"},
@@ -744,8 +744,8 @@ const D = {
     },
     CF: {
       company:"CF Industries", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:10, conviction:8.5, clusterA:93, clusterB:84, rc:5, instrument:"$90C Jun 18 2026", currency:"USD",
-      price:"$132.56", change:2.88,
+      allocation:10, conviction:8, clusterA:93, clusterB:84, rc:5, instrument:"$90C Jun 18 2026", currency:"USD",
+      price:"$132.56", change:0.36,
       dimensions:{D1:{score:5,type:"fact"},D2:{score:4,type:"fact"},D3:{score:5,type:"inference"},D4:{score:3,type:"inference"},D5:{score:5,type:"fact"},D6:{score:4,type:"inference"},D7:{score:4,type:"fact"},D8:{score:5,type:"fact"}},
       costBasis:"$90.00", entryDate:"2026-03-05", inceptionReturn:41.0,
       fairValue:{baseCaseFV:"$158",probWeightedFV:"$169",bearCaseFV:"$103",bullCaseFV:"$234",methodology:"Scenario-Weighted P/E",thesisType:"Cyclical Inflection + Event-Driven",lastUpdated:"2026-03-21"},
@@ -765,7 +765,7 @@ const D = {
     GTT: {
       company:"Gaztransport & Technigaz", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:11.28, conviction:8.5, clusterA:87, clusterB:72, rc:5, instrument:"\u20AC190C Sep/Dec 2026", currency:"EUR",
-      price:"\u20AC204.80", change:0.49,
+      price:"\u20AC201.00", change:-1.47,
       dimensions:{D1:{score:5,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:3,type:"inference"},D5:{score:3,type:"inference"},D6:{score:4,type:"inference"},D7:{score:5,type:"fact"},D8:{score:3,type:"inference"}},
       costBasis:"\u20AC190.00", entryDate:"2026-03-10", inceptionReturn:6.2,
       fairValue:{baseCaseFV:"\u20AC317",probWeightedFV:"\u20AC305",bearCaseFV:"\u20AC152",bullCaseFV:"\u20AC399",methodology:"Peer-Anchored EV/EBITDA",thesisType:"Structural Growth + Event-Driven",lastUpdated:"2026-03-21"},
@@ -915,8 +915,8 @@ const D = {
     recentMajor:[
       {theme:"RE",date:"2026-03-26",title:"Rare Earths theme created; 14 tickers onboarded; MEI best candidate PM 27/35",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-26",title:"VOW erroneous auto-rescore reverted; 10/10 restored (D1 6/5, D2 6/5)",tier:"MAJOR"},
+      {theme:"Hormuz",date:"2026-03-27",title:"CF conviction 8.5\u21928/10 (binary nature discount). D4/D5/D6/D8 rationales refreshed.",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-25",title:"TRI downgraded ACTIVE\u2192MONITORING, conviction 8\u21927/10, position exited (macro timing)",tier:"MAJOR"},
-      {theme:"Hormuz",date:"2026-03-25",title:"Iran rejected 15-point ceasefire; IRGC hardline. Brent -5.9% to $98.28",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-21",title:"VOW D1 & D2 upgraded to 6/5; conviction 9\u219210/10",tier:"MAJOR"}
     ]
   },
@@ -941,8 +941,8 @@ function dimBadge(dim) {
 // Add D.commodities if not present
 if (!D.commodities) {
   D.commodities = {
-    brent: {price: 101.08, change: 2.67, unit: '$/bbl'},
-    hh: {price: 2.93, change: 1.23, unit: '$/MMBtu'},
+    brent: {price: 103.14, change: 2.25, unit: '$/bbl'},
+    hh: {price: 3.02, change: 2.93, unit: '$/MMBtu'},
     urea: {price: 673, change: 33, unit: '$/st FOB'},
     jkm: {price: 22.73, change: 0.8, unit: '$/MMBtu'},
     ttf: {price: 52, change: 0.5, unit: '\u20AC/MWh'},
