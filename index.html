@@ -169,9 +169,11 @@ body {
 .ctx-panel.open { transform: translateX(0); }
 .ctx-panel-header {
   position: sticky; top: 0; background: var(--bg-elevated);
-  padding: 16px; border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between; z-index: 1;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 4px; z-index: 1;
+  flex-wrap: wrap;
 }
+#ctx-title { display: flex; align-items: baseline; flex: 1; min-width: 0; gap: 4px; flex-wrap: wrap; }
 .ctx-close {
   width: 32px; height: 32px; border: none; background: var(--bg-surface);
   color: var(--text-secondary); border-radius: 8px; cursor: pointer;
@@ -517,6 +519,21 @@ tbody tr.row-clickable { cursor: pointer; }
 }
 .bnav-btn.active { color: var(--accent-blue); }
 .bnav-btn svg { width: 20px; height: 20px; }
+.more-menu {
+  display: none; position: absolute; bottom: 56px; right: 8px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: 10px; padding: 4px; min-width: 140px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+}
+.more-menu.open { display: block; }
+.more-item {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 10px 12px; border: none; background: none;
+  color: var(--text-primary); font-size: 14px; cursor: pointer;
+  border-radius: 8px; font-family: inherit;
+}
+.more-item:hover { background: var(--bg-surface); }
+.more-item svg { width: 18px; height: 18px; color: var(--text-secondary); }
 
 /* ── FOCUS ── */
 :focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
@@ -680,6 +697,18 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
       <i data-lucide="flask-conical" aria-hidden="true"></i>
       <span>Research</span>
     </button>
+    <button class="bnav-btn" id="bn-more" onclick="toggleMoreMenu()">
+      <i data-lucide="more-horizontal" aria-hidden="true"></i>
+      <span>More</span>
+    </button>
+  </div>
+  <div class="more-menu" id="moreMenu">
+    <button class="more-item" onclick="switchSection('themes');toggleMoreMenu()">
+      <i data-lucide="layers" aria-hidden="true"></i> Themes
+    </button>
+    <button class="more-item" onclick="switchSection('settings');toggleMoreMenu()">
+      <i data-lucide="settings" aria-hidden="true"></i> Settings
+    </button>
   </div>
 </nav>
 
@@ -691,14 +720,15 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 // DATA MODEL
 // ═══════════════════════════════════════════
 const D = {
-  generated: "2026-03-26",
-  portfolio: {deployedPct:61.28, cashPct:38.72, slotsUsed:3, maxSlots:12, wtdConviction:9.4},
+  generated: "2026-03-27T15:37:00",
+  portfolio: {deployedPct:61.28, cashPct:38.72, slotsUsed:3, maxSlots:12, wtdConviction:9.3},
   tickers: {
     VOW: {
       company:"Vow ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:40, conviction:10, clusterA:107, clusterB:80, rc:5, instrument:"Shares", currency:"NOK",
-      price:"NOK 2.32", change:-3.54,
-      dimensions:{D1:6,D2:6,D3:4,D4:3,D5:5,D6:4,D7:4,D8:4},
+      price:"NOK 2.33", change:-1.06,
+      dimensions:{D1:{score:6,type:"fact"},D2:{score:6,type:"fact"},D3:{score:4,type:"inference"},D4:{score:3,type:"fact"},D5:{score:5,type:"fact"},D6:{score:4,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
+      costBasis:"NOK 2.58", entryDate:"2026-02-28", inceptionReturn:-10.1,
       fairValue:{baseCaseFV:"NOK 5.76",probWeightedFV:"NOK 7.54",bearCaseFV:"NOK 1.12",bullCaseFV:"NOK 9.01",methodology:"Unit Economics SOTP",thesisType:"Turnaround + SOTP",lastUpdated:"2026-03-15"},
       scenarios:[{name:"Deep Bear",price:"NOK 1.12",prob:10},{name:"Base",price:"NOK 5.76",prob:35},{name:"Bull",price:"NOK 9.01",prob:40},{name:"Super Bull",price:"NOK 12.06",prob:15}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
@@ -714,45 +744,50 @@ const D = {
     },
     CF: {
       company:"CF Industries", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:10, conviction:8.5, clusterA:93, clusterB:84, rc:4, instrument:"$90C Jun 18 2026", currency:"USD",
-      price:"$126.92", change:6.53,
-      dimensions:{D1:5,D2:4,D3:5,D4:3,D5:5,D6:4,D7:4,D8:5},
+      allocation:10, conviction:8.5, clusterA:93, clusterB:84, rc:5, instrument:"$90C Jun 18 2026", currency:"USD",
+      price:"$132.56", change:2.88,
+      dimensions:{D1:{score:5,type:"fact"},D2:{score:4,type:"fact"},D3:{score:5,type:"inference"},D4:{score:3,type:"inference"},D5:{score:5,type:"fact"},D6:{score:4,type:"inference"},D7:{score:4,type:"fact"},D8:{score:5,type:"fact"}},
+      costBasis:"$90.00", entryDate:"2026-03-05", inceptionReturn:41.0,
       fairValue:{baseCaseFV:"$158",probWeightedFV:"$169",bearCaseFV:"$103",bullCaseFV:"$234",methodology:"Scenario-Weighted P/E",thesisType:"Cyclical Inflection + Event-Driven",lastUpdated:"2026-03-21"},
-      scenarios:[{name:"S1 (ceasefire)",price:"$103",prob:2},{name:"S2 (1Q)",price:"$104",prob:13},{name:"S3 (3mo BASE)",price:"$158",prob:58},{name:"S4 (FY)",price:"$234",prob:27}],
-      rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:false},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
+      scenarios:[{name:"S1 (ceasefire)",price:"$103",prob:2},{name:"S2 (1Q)",price:"$104",prob:13},{name:"S3 (3mo BASE)",price:"$158",prob:60},{name:"S4 (FY)",price:"$234",prob:27}],
+      rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
       maxAlloc:30, bandViolation:false,
-      catalysts:["USDA Plantings Mar 31","Tampa ammonia late Mar/early Apr","Q1 earnings May 6","30 DTE May 19","India Kharif Apr-Jun","Expiry Jun 18"],
+      catalysts:["USDA Plantings Mar 31","Tampa ammonia Apr settlement","Trump 10-day deadline Apr 6","Q1 earnings May 6","30 DTE May 19","India Kharif Apr-Jun","Expiry Jun 18"],
       premortem:["Rapid ceasefire: 15-20% drawdown","Gas spike >$5.50: margin erosion (de-risked)","Inflation re-acceleration: multiple compression","Demand destruction at $800+ urea"],
       variantViews:["Triple supply constraint (Hormuz + Ras Laffan + China policy) with no precedent. Market consensus hasn't modeled China export restrictions."],
-      recentNotes:["NOLA $673/st (+33% MTD)","China halted NK blend exports","4 insider sales ($3.2M, appears routine)","S3 58%, S4 27%"],
+      recentNotes:["NOLA $673/st (+33% MTD)","China halted NK blend exports","4 insider sales ($3.2M, appears routine)","S3 60%, S4 27%"],
       marketCap:"$19.5B",
       financials:{fy:"FY2025",revenue:"$7,084M",revenueGrowth:"+19.3%",ebitda:"$3,198M",ebitdaMargin:"45.1%",netIncome:"$1,455M",eps:"$8.97",fcf:"$1,802M",totalDebt:"$3,250M",cash:"$1,982M",netDebt:"$1,268M",leverage:"0.4x",leverageNum:0.4,debtDetails:[{facility:"Senior Notes 5.150%",amount:"$750M",rate:"5.150%",maturity:"2034"},{facility:"Senior Notes 5.300%",amount:"$1,000M",rate:"5.300%",maturity:"2035"},{facility:"Senior Notes 4.950%",amount:"$750M",rate:"4.950%",maturity:"2043"},{facility:"Senior Notes 5.375%",amount:"$750M",rate:"5.375%",maturity:"2044"}]},
       businessBackground:"World's largest ammonia producer and leading nitrogen fertilizer manufacturer. US gas-cost advantage (~$2-3/MMBtu vs European gas at $50+/MWh). Products: ammonia, granular urea, UAN, AN. Key beneficiary of Hormuz disruption via supply-side squeeze on competitors.",
-      valuation:{methodology:"Scenario-Weighted P/E",rationale:"Market underprices duration and magnitude of Hormuz-driven urea upcycle. Scenario EPS captures the cycle; probability weights express variant view on duration. Own-historical cycle match (FY2022 peak) is the primary anchor.",assumptions:[{label:"FY2025 EPS (baseline)",value:"$8.97"},{label:"EBITDA sensitivity",value:"~$680M per $50/ton urea"},{label:"S3 EPS (3mo, base)",value:"$26.3"},{label:"S4 EPS (FY duration)",value:"$46.7"},{label:"Cycle-matched P/E",value:"5\u20137x (decreasing as EPS rises)"},{label:"Cash / no debt",value:"$1.98B cash, no debt until 2034"}],peers:[{name:"CF (own, FY2022 peak)",multiple:"5.5\u20137x P/E"},{name:"Nutrien (NTR)",multiple:"10.6\u201315.7x P/E"},{name:"Mosaic (MOS)",multiple:"17\u201318x P/E"},{name:"LSB Industries (LXU)",multiple:"7.8x EV/EBITDA"}],sensitivity:{title:"Fair Value ($/share) by EPS \u00d7 P/E",cols:["5x P/E","6x P/E","7x P/E"],rows:[{label:"S2 EPS $13.0",vals:["$65","$78","$91"]},{label:"S3 EPS $26.3",vals:["$132","$158","$184"]},{label:"S4 EPS $46.7",vals:["$234","$280","$327"]}]},lastUpdated:"2026-03-24"}
+      valuation:{methodology:"Scenario-Weighted P/E",rationale:"Market underprices duration and magnitude of Hormuz-driven urea upcycle. Scenario EPS captures the cycle; probability weights express variant view on duration. Own-historical cycle match (FY2022 peak) is the primary anchor.",assumptions:[{label:"FY2025 EPS (baseline)",value:"$8.97"},{label:"EBITDA sensitivity",value:"~$680M per $50/ton urea"},{label:"S3 EPS (3mo, base)",value:"$26.3"},{label:"S4 EPS (FY duration)",value:"$46.7"},{label:"Cycle-matched P/E",value:"5\u20137x (decreasing as EPS rises)"},{label:"Cash / no debt",value:"$1.98B cash, no debt until 2034"}],peers:[{name:"CF (own, FY2022 peak)",multiple:"5.5\u20137x P/E"},{name:"Nutrien (NTR)",multiple:"10.6\u201315.7x P/E"},{name:"Mosaic (MOS)",multiple:"17\u201318x P/E"},{name:"LSB Industries (LXU)",multiple:"7.8x EV/EBITDA"}],sensitivity:{title:"Fair Value ($/share) by EPS \u00d7 P/E",cols:["5x P/E","6x P/E","7x P/E"],rows:[{label:"S2 EPS $13.0",vals:["$65","$78","$91"]},{label:"S3 EPS $26.3",vals:["$132","$158","$184"]},{label:"S4 EPS $46.7",vals:["$234","$280","$327"]}]},lastUpdated:"2026-03-24"},
+      indicators:{structural:[{id:1,name:"Tampa ammonia",current:"$615/t",threshold:">$700 S3 trigger",direction:"\u2191",status:"approaching",lastUpdated:"2026-03-24"},{id:2,name:"NOLA urea FOB",current:"$673/st",threshold:">$700/t demand destruction",direction:"\u2191",status:"approaching",lastUpdated:"2026-03-24"},{id:3,name:"Henry Hub nat gas",current:"$2.85/MMBtu",threshold:">$5.50 margin erosion",direction:"\u2193",status:"ok",lastUpdated:"2026-03-25"},{id:4,name:"China export policy",current:"40-75% restricted",threshold:"Full ban = S4",direction:"\u2191",status:"ok",lastUpdated:"2026-03-24"},{id:5,name:"Hormuz transit status",current:"~95% blocked",threshold:"Ceasefire = S1",direction:"\u2192",status:"ok",lastUpdated:"2026-03-25"}],breaches:[{date:"2026-03-24",indicator:"China export policy",assessment:"Triple supply constraint confirmed"}],noiseFilter:["Daily urea swings <5%","Routine insider sales (<$5M)","Short-term nat gas volatility"],blindspots:["Yazoo City product mix impact","Indian subsidy policy changes"],staleDays:2}
     },
     GTT: {
       company:"Gaztransport & Technigaz", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:11.28, conviction:8.5, clusterA:87, clusterB:72, rc:5, instrument:"\u20AC190C Sep/Dec 2026", currency:"EUR",
-      price:"\u20AC201.80", change:0.40,
-      dimensions:{D1:5,D2:4,D3:4,D4:3,D5:3,D6:4,D7:5,D8:3},
+      price:"\u20AC204.80", change:0.49,
+      dimensions:{D1:{score:5,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:3,type:"inference"},D5:{score:3,type:"inference"},D6:{score:4,type:"inference"},D7:{score:5,type:"fact"},D8:{score:3,type:"inference"}},
+      costBasis:"\u20AC190.00", entryDate:"2026-03-10", inceptionReturn:6.2,
       fairValue:{baseCaseFV:"\u20AC317",probWeightedFV:"\u20AC305",bearCaseFV:"\u20AC152",bullCaseFV:"\u20AC399",methodology:"Peer-Anchored EV/EBITDA",thesisType:"Structural Growth + Event-Driven",lastUpdated:"2026-03-21"},
       scenarios:[{name:"Deep Bear",price:"\u20AC152",prob:5},{name:"Bear",price:"\u20AC222",prob:20},{name:"Base",price:"\u20AC317",prob:50},{name:"Bull",price:"\u20AC399",prob:25}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
       maxAlloc:30, bandViolation:false,
-      catalysts:["Q1 Activity Update Apr 21","EU Russian LNG ban Apr 25","Ex-dividend Jun 17","Sep 18 option expiry","Dec 18 option expiry"],
+      catalysts:["Q1 Activity Update Apr 21","EU Russian LNG ban Apr 25","URD annual report late Apr","Q1 earnings May","Ex-dividend Jun 17 (\u20AC4.94)","Sep 18 option expiry","Dec 18 option expiry"],
       premortem:["Chinese indigenous membrane tech (5-8yr)","FID pipeline converts below 75%","Elogen drag worsens","Revenue trough deeper than guided"],
       variantViews:["Market conflates geopolitical premium (temporary) with structural deficit (Ras Laffan 13mtpa offline 3-5yr). Self-correcting via replacement FIDs."],
       recentNotes:["6 new orders March 2026","FY2025: \u20AC803M rev (+25%), \u20AC542M EBITDA (+40%)","Backlog 288 units","2026 guidance \u20AC740-780M (conservative)"],
       marketCap:"\u20AC7.6B",
       financials:{fy:"FY2025",revenue:"\u20AC803M",revenueGrowth:"+25.3%",ebitda:"\u20AC542M",ebitdaMargin:"67%",netIncome:"\u20AC414M",eps:"\u20AC11.12",fcf:"N/A",totalDebt:"\u20AC4.5M",cash:"\u20AC300M",netDebt:"Net cash",leverage:"0.0x",leverageNum:0,debtDetails:[]},
       businessBackground:"French engineering company with effective monopoly on LNG carrier membrane containment systems (~90% market share). Asset-light royalty model: earns per-unit fees on LNG carriers ordered globally. Structural demand driver: global LNG fleet expansion. Hormuz disruption accelerates replacement FIDs.",
-      valuation:{methodology:"Peer-Anchored EV/EBITDA",rationale:"Market undervalues durability of GTT\u2019s near-monopoly franchise (75\u201395% share, 2,466 patents) and structural LNG supply deficit from Ras Laffan destruction. Peer-anchored to European niche monopolists and IP licensing models.",assumptions:[{label:"Through-cycle EBITDA",value:"\u20ac520M (base)"},{label:"EBITDA margin",value:"67% (structural, royalty model)"},{label:"FY2026E EBITDA",value:"\u20ac490\u2013530M"},{label:"Net cash",value:"\u20ac300M (\u20ac8.1/share)"},{label:"Adjusted multiple",value:"22.0x (peer median + 3.5 turns)"},{label:"FID pipeline",value:"84 mtpa \u2192 ~150 vessels"}],peers:[{name:"Rational AG",multiple:"19.5x EV/EBITDA"},{name:"Atlas Copco",multiple:"21.1x EV/EBITDA"},{name:"Hexagon AB",multiple:"18.5x EV/EBITDA"},{name:"Dolby Labs",multiple:"15.7x EV/EBITDA"}],sensitivity:{title:"Fair Value (\u20ac/share) by EBITDA \u00d7 multiple",cols:["16x","20x","22x","25x"],rows:[{label:"EBITDA \u20ac440M",vals:["\u20ac198","\u20ac246","\u20ac269","\u20ac305"]},{label:"EBITDA \u20ac520M",vals:["\u20ac232","\u20ac289","\u20ac317","\u20ac359"]},{label:"EBITDA \u20ac580M",vals:["\u20ac258","\u20ac321","\u20ac351","\u20ac399"]}]},lastUpdated:"2026-03-21"}
+      valuation:{methodology:"Peer-Anchored EV/EBITDA",rationale:"Market undervalues durability of GTT\u2019s near-monopoly franchise (75\u201395% share, 2,466 patents) and structural LNG supply deficit from Ras Laffan destruction. Peer-anchored to European niche monopolists and IP licensing models.",assumptions:[{label:"Through-cycle EBITDA",value:"\u20ac520M (base)"},{label:"EBITDA margin",value:"67% (structural, royalty model)"},{label:"FY2026E EBITDA",value:"\u20ac490\u2013530M"},{label:"Net cash",value:"\u20ac300M (\u20ac8.1/share)"},{label:"Adjusted multiple",value:"22.0x (peer median + 3.5 turns)"},{label:"FID pipeline",value:"84 mtpa \u2192 ~150 vessels"}],peers:[{name:"Rational AG",multiple:"19.5x EV/EBITDA"},{name:"Atlas Copco",multiple:"21.1x EV/EBITDA"},{name:"Hexagon AB",multiple:"18.5x EV/EBITDA"},{name:"Dolby Labs",multiple:"15.7x EV/EBITDA"}],sensitivity:{title:"Fair Value (\u20ac/share) by EBITDA \u00d7 multiple",cols:["16x","20x","22x","25x"],rows:[{label:"EBITDA \u20ac440M",vals:["\u20ac198","\u20ac246","\u20ac269","\u20ac305"]},{label:"EBITDA \u20ac520M",vals:["\u20ac232","\u20ac289","\u20ac317","\u20ac359"]},{label:"EBITDA \u20ac580M",vals:["\u20ac258","\u20ac321","\u20ac351","\u20ac399"]}]},lastUpdated:"2026-03-21"},
+      indicators:{structural:[{id:1,name:"LNG FID pipeline",current:"84 mtpa",threshold:"<60 mtpa = order drought",direction:"\u2192",status:"ok",lastUpdated:"2026-03-21"},{id:2,name:"Ceasefire premium",current:"3-4% structural",threshold:"Full unwind = bear",direction:"\u2192",status:"ok",lastUpdated:"2026-03-24"},{id:3,name:"Chinese membrane tech",current:"5-8yr away",threshold:"Proven alternative = D3 collapse",direction:"\u2192",status:"ok",lastUpdated:"2026-03-15"},{id:4,name:"Ras Laffan replacement FIDs",current:"Pending",threshold:"First FID = thesis confirmation",direction:"\u2191",status:"ok",lastUpdated:"2026-03-21"}],breaches:[],noiseFilter:["Short-term oil price swings","Elogen quarterly losses"],blindspots:["Chinese FSRU membrane capability"],staleDays:6}
     },
     TRI: {
       company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:7, clusterA:80, clusterB:84, rc:5, instrument:"Shares", currency:"GBP",
       price:"60p", change:0,
-      dimensions:{D1:4,D2:4,D3:4,D4:4,D5:4,D6:5,D7:4,D8:4},
+      dimensions:{D1:{score:4,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:4,type:"fact"},D5:{score:4,type:"inference"},D6:{score:5,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
+      costBasis:"80p", entryDate:"2026-03-15", inceptionReturn:-25.0,
       fairValue:{baseCaseFV:"109p",probWeightedFV:"109p",bearCaseFV:"59p",bullCaseFV:"174p",methodology:"Peer-Anchored EV/EBIT",thesisType:"Turnaround + Margin Inflection",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"59p",prob:35},{name:"Base",price:"109p",prob:40},{name:"Bull",price:"174p",prob:25}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
@@ -768,30 +803,31 @@ const D = {
     }
   },
   options:[
-    {ticker:"CF",leg:1,instrument:"Call",strike:"$90",expiry:"2026-06-18",alloc:10,moneyness:"Deep ITM (~$36 intrinsic)",dte:84,thetaProfile:"Accelerates mid-May; delta ~0.85-0.95",thirtyDteMark:"2026-05-19",catalystAlignment:[{catalyst:"USDA Plantings",date:"Mar 31",dteAtCatalyst:78,zone:"green"},{catalyst:"Q1 earnings",date:"May 6",dteAtCatalyst:42,zone:"green"}]},
-    {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:6.58,moneyness:"Slightly ITM",dte:176,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Results",date:"Apr 21",dteAtCatalyst:149,zone:"green"}]},
-    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM",dte:267,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Results",date:"Apr 21",dteAtCatalyst:240,zone:"green"}]}
+    {ticker:"CF",leg:1,instrument:"Call",strike:"$90",expiry:"2026-06-18",alloc:10,moneyness:"Deep ITM (~$36 intrinsic)",dte:83,thetaProfile:"Accelerates mid-May; delta ~0.85-0.95",thirtyDteMark:"2026-05-19",catalystAlignment:[{catalyst:"USDA Plantings",date:"Mar 31",dteAtCatalyst:77,zone:"green"},{catalyst:"Q1 earnings",date:"May 6",dteAtCatalyst:41,zone:"green"}]},
+    {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:6.58,moneyness:"Slightly ITM",dte:175,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Results",date:"Apr 21",dteAtCatalyst:148,zone:"green"}]},
+    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM",dte:266,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Results",date:"Apr 21",dteAtCatalyst:239,zone:"green"}]}
   ],
   themes:[
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR"],activeCount:1,monitoringCount:4,parkedCount:3},
-    {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:4,priority:20,tickers:["CF","GTT","MEOH","KIST"],activeCount:2,monitoringCount:0,parkedCount:2},
-    {name:"Hidden Value SOTP",status:"DORMANT",impact:null,discovery:null,priority:null,tickers:["SLB","HON"],activeCount:0,monitoringCount:0,parkedCount:0},
+    {name:"Rare Earth Supply Chain",status:"ESCALATING",impact:4,discovery:4,priority:16,tickers:["MEI","NEO","UCU","DEFN","UUUU","ARA","PRE"],activeCount:0,monitoringCount:7,parkedCount:4},
+    {name:"Hormuz Disruption",status:"WEAKENING",impact:5,discovery:3,priority:15,tickers:["CF","GTT","MEOH","KIST"],activeCount:2,monitoringCount:0,parkedCount:2},
     {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["APP","TOI","SPSC","SGE","TRI"],activeCount:0,monitoringCount:5,parkedCount:0},
-    {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],activeCount:0,monitoringCount:2,parkedCount:0}
+    {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],activeCount:0,monitoringCount:2,parkedCount:0},
+    {name:"Hidden Value SOTP",status:"DORMANT",impact:null,discovery:null,priority:null,tickers:["SLB","HON"],activeCount:0,monitoringCount:0,parkedCount:0}
   ],
   candidates:[
     {name:"Tanker/Shipping Supercycle",priority:12,persistence:9,note:"Hormuz overlap"},
     {name:"European Energy Crisis 2.0",priority:8,persistence:8,note:"TTF \u20AC52/MWh"},
     {name:"European Defense & Infrastructure Boom",priority:12,persistence:3,note:"\u20AC600B German fiscal"},
     {name:"Private Credit Dislocation",priority:9,persistence:1,note:"$265B wipeout"},
-    {name:"Rare Earth Supply Chain Decoupling",priority:9,persistence:3,note:"MP & LYC leads",escalating:true}
+    {name:"Rare Earth Supply Chain Decoupling",priority:16,persistence:4,note:"PROMOTED TO THEME. MEI best candidate. Pentagon 2027 deadline.",escalating:true}
   ],
   parked:[
     {ticker:"MEOH",theme:"Hormuz",reason:"April methanol repricing pending",triggerCheck:"Early Apr"},
     {ticker:"KIST",theme:"Hormuz",reason:"Passed after deep dive",triggerCheck:null}
   ],
   intelligence:{
-    signalStats:{total:73,active:68,absorbed:0,expired:5,unmatched:18},
+    signalStats:{total:127,active:97,absorbed:20,expired:10,unmatched:33},
     patterns:[
       {name:"Rare Earth Supply Chain Decoupling",status:"ESCALATING",signals:3,action:"pattern-match",implication:"Policy-driven supply chain shift with Pentagon 2027 deadline"},
       {name:"Stagflation / CB Policy Divergence",status:"ESCALATING",signals:4,action:"monitor",implication:"Fed holds, ECB hikes \u2014 cross-theme amplifier"},
@@ -801,35 +837,36 @@ const D = {
     crossConnections:[{from:"Hormuz Disruption",to:"AI Disruption",via:"Qatar helium supply (30% global)"},{from:"Hormuz Disruption",to:"Stagflation",via:"Energy inflation \u2192 central bank tightening"}],
     leads:[{ticker:"MP",theme:"Rare Earth",score:null,action:"pattern-match"},{ticker:"LYC",theme:"Rare Earth",score:null,action:"opportunity-screen"},{ticker:"MEOH",theme:"Hormuz",score:7.5,action:"trigger-check"}],
     recentSignals:[
-      {impact:5,date:"Mar 24",text:"WTI plunged >10% to ~$87 on Trump 5-day pause de-escalation hope; Brent fell $113\u2192$99; Iran denied negotiations.",theme:"Hormuz"},
+      {impact:5,date:"Mar 25",text:"Iran rejected 15-point ceasefire; IRGC hardline response.",theme:"Hormuz"},
+      {impact:4,date:"Mar 25",text:"Brent fell below $100 to $98.28 (-5.9%).",theme:"Hormuz"},
+      {impact:4,date:"Mar 24",text:"GTT won 6 LNG carrier orders (Samsung, HD KSOE, Hudong).",theme:"Hormuz"},
+      {impact:5,date:"Mar 24",text:"Trump 5-day pause via Witkoff/Kushner; Hormuz ~95% reduction since Mar 1.",theme:"Hormuz"},
       {impact:5,date:"Mar 24",text:"Iran Defence Council: mine deployment across entire Persian Gulf if coasts struck.",theme:"Hormuz"},
-      {impact:5,date:"Mar 24",text:"Trump 5-day pause via Witkoff/Kushner; Hormuz transits: 99 since Mar 1 (~95% reduction).",theme:"Hormuz"},
-      {impact:5,date:"Mar 23",text:"Iraq FM on foreign oilfields; Basra slashed from 3.3M to 900K bpd.",theme:"Hormuz"},
-      {impact:5,date:"Mar 23",text:"QatarEnergy FM may cover LNG contracts 5 years; legal challenge brewing.",theme:"Hormuz"},
-      {impact:4,date:"Mar 24",text:"ECB 50-80% hike probability Apr-Jun; Bundesbank 'on the table'.",theme:"UNMATCHED"},
       {impact:4,date:"Mar 24",text:"China fertilizer restrictions: 40-75% constrained through August.",theme:"Hormuz"},
-      {impact:4,date:"Mar 24",text:"GTT won 6 new LNG carrier orders in March 2026.",theme:"Hormuz"},
       {impact:4,date:"Mar 24",text:"Korean semiconductor helium crisis: 90% from Qatar, 1-month buffer.",theme:"AI Disruption"},
-      {impact:4,date:"Mar 24",text:"CF $618.75/st NOLA urea (+33% MTD); rallied ~31% MTD to ATH.",theme:"Hormuz"}
+      {impact:4,date:"Mar 24",text:"ECB 50-80% hike probability Apr-Jun; Bundesbank 'on the table'.",theme:"UNMATCHED"},
+      {impact:3,date:"Mar 24",text:"Pearl GTL offline minimum 1yr; removes methanol supply.",theme:"Hormuz"},
+      {impact:4,date:"Mar 24",text:"Qatar NFE LNG delayed to 2027-2028.",theme:"Hormuz"}
     ],
-    lastSynthesis:"2026-03-25"
+    lastSynthesis:"2026-03-27"
   },
   alerts:[
-    {type:"red",text:"Trump 48hr Hormuz ultimatum EXPIRED (Mar 23). Binary outcome unresolved. CF+GTT = 21.28% portfolio. ASSESS IMMEDIATELY."},
-    {type:"red",text:"Hormuz transits: 99 since Mar 1 (~95% reduction). Iran threatens full Persian Gulf mining."},
-    {type:"hormuz",text:"5-day strike pause expires Mar 28. Binary: stall (45%), ceasefire (30%), or mining (25%)."},
-    {type:"svm",text:"VOW covenant waiver Q4+Q1. New framework Q2+ pending. Monitor burn rate."},
-    {type:"info",text:"TRI exited portfolio (5%\u21920%). Downgraded ACTIVE\u2192MONITORING, conviction 8\u21927/10 (macro timing)."},
-    {type:"info",text:"Intelligence synthesis complete: 4 patterns, 2 ESCALATING. Next: Rare Earth pattern-match."}
+    {type:"red",text:"Hormuz Day 28: ~95% transit reduction. Iran rejected 15-point ceasefire. IRGC hardline response. CF+GTT = 21.28% portfolio."},
+    {type:"red",text:"Trump 10-day Hormuz strike deadline Apr 6. Binary outcome pending. Monitor daily."},
+    {type:"hormuz",text:"Iran selective passage framework (21 transits in 23 days). Israel struck South Pars. S3 at 60% intact."},
+    {type:"svm",text:"VOW covenant waiver Q4+Q1. New framework Q2+ pending. Q3 2026 needs NOK 103M rolling EBITDA."},
+    {type:"info",text:"CF RC upgraded 4/5\u21925/5: all questions resolved (18/18). Gate 3 cleared."},
+    {type:"info",text:"Rare Earths theme promoted to ACTIVE (Priority 16). MEI best candidate (PM 27/35). Pattern-match pending."},
+    {type:"info",text:"Hormuz discovery downgraded 4\u21923 (alpha window narrowing). Priority 20\u219215."}
   ],
   catalystTimeline:[
-    {date:"2026-03-23",ticker:"CF/GTT",event:"Trump Hormuz ultimatum expired",type:"Hard",overdue:true},
-    {date:"2026-03-28",ticker:"CF/GTT",event:"5-day strike pause expires",type:"Hard",overdue:false},
+    {date:"2026-04-06",ticker:"CF/GTT",event:"Trump 10-day Hormuz strike deadline",type:"Hard",overdue:false},
     {date:"2026-03-31",ticker:"CF",event:"USDA Prospective Plantings",type:"Hard",overdue:false},
     {date:"2026-03-31",ticker:"CF",event:"Tampa ammonia April settlement",type:"Soft",overdue:false},
     {date:"2026-04-21",ticker:"GTT",event:"Q1 Activity Update",type:"Hard",overdue:false},
-    {date:"2026-04-23",ticker:"LCUT/HOFT",event:"CBP ACE refund go-live",type:"Hard",overdue:false},
+    {date:"2026-04-23",ticker:"LCUT/HOFT",event:"CBP ACE automated refund go-live",type:"Hard",overdue:false},
     {date:"2026-04-25",ticker:"GTT",event:"EU Russian LNG ban (short-term)",type:"Hard",overdue:false},
+    {date:"2026-04-29",ticker:"VOW",event:"FY2025 Annual Report",type:"Hard",overdue:false},
     {date:"2026-05-06",ticker:"CF",event:"Q1 2026 earnings",type:"Hard",overdue:false},
     {date:"2026-05-19",ticker:"CF",event:"$90C 30 DTE decision point",type:"Hard",overdue:false},
     {date:"2026-05-20",ticker:"VOW",event:"Q1 2026 results",type:"Hard",overdue:false},
@@ -841,11 +878,11 @@ const D = {
   ],
   priorityQueue:[
     {score:21.3,title:"Assess Trump ultimatum outcome (CF + GTT)",action:"Overdue \u00d7 21.28% weight \u00d7 1.5 (decision) = 21.3. Run thesis-revision."},
-    {score:12.8,title:"CF: USDA Plantings Mar 31 prep",action:"Catalyst in 6 days \u00d7 10% weight \u00d7 1.5 = 12.8. Prepare scenario response."},
+    {score:12.8,title:"CF: USDA Plantings Mar 31 prep",action:"Catalyst in 4 days \u00d7 10% weight \u00d7 1.5 = 12.8. Prepare scenario response."},
     {score:10.5,title:"Rare Earth theme promotion decision",action:"3 ESCALATING signals, PERSISTENCE CONFIRMED. Run pattern-match on MP."},
     {score:8.5,title:"CF: Tampa ammonia settlement monitoring",action:"Catalyst imminent. First war-conditions NH3 benchmark. 30.7% of CF revenue."},
-    {score:6.4,title:"GTT: Q1 Activity Update prep (Apr 21)",action:"Catalyst in 27 days \u00d7 11.28% weight = 6.4. Review order pipeline."},
-    {score:4.0,title:"VOW: Q1 results prep (May 20)",action:"Catalyst in 56 days \u00d7 40% weight \u00d7 maintenance. Key margin read."},
+    {score:6.4,title:"GTT: Q1 Activity Update prep (Apr 21)",action:"Catalyst in 25 days \u00d7 11.28% weight = 6.4. Review order pipeline."},
+    {score:4.0,title:"VOW: Q1 results prep (May 20)",action:"Catalyst in 54 days \u00d7 40% weight \u00d7 maintenance. Key margin read."},
     {score:3.5,title:"MEOH: Re-evaluate PARKED trigger",action:"Pearl GTL offline + analyst upgrades. Low cost check."}
   ],
   thresholdMonitors:[
@@ -857,43 +894,59 @@ const D = {
     {ticker:"MEOH",threshold:"April methanol repricing",current:"Pending",status:"approaching"}
   ],
   priceHistory:{
-    CF:[{ts:"2026-03-16",price:129.57},{ts:"2026-03-19",price:126.73},{ts:"2026-03-20",price:125.56},{ts:"2026-03-22",price:124.90},{ts:"2026-03-23",price:124.90},{ts:"2026-03-24",price:126.14},{ts:"2026-03-25",price:126.92}],
-    GTT:[{ts:"2026-03-16",price:199.40},{ts:"2026-03-19",price:204.40},{ts:"2026-03-20",price:207.40},{ts:"2026-03-22",price:203.80},{ts:"2026-03-23",price:203.80},{ts:"2026-03-24",price:201.20},{ts:"2026-03-25",price:201.80}],
-    VOW:[{ts:"2026-03-16",price:2.42},{ts:"2026-03-19",price:2.37},{ts:"2026-03-20",price:2.32},{ts:"2026-03-22",price:2.32},{ts:"2026-03-23",price:2.32},{ts:"2026-03-24",price:2.30},{ts:"2026-03-25",price:2.32}],
+    CF:[{ts:"2026-03-16",price:129.57},{ts:"2026-03-19",price:126.73},{ts:"2026-03-20",price:125.56},{ts:"2026-03-22",price:124.90},{ts:"2026-03-24",price:120.18},{ts:"2026-03-26",price:131.35},{ts:"2026-03-27",price:132.56}],
+    GTT:[{ts:"2026-03-16",price:199.40},{ts:"2026-03-19",price:204.40},{ts:"2026-03-20",price:207.40},{ts:"2026-03-22",price:203.80},{ts:"2026-03-24",price:199.70},{ts:"2026-03-26",price:203.60},{ts:"2026-03-27",price:204.80}],
+    VOW:[{ts:"2026-03-16",price:2.42},{ts:"2026-03-19",price:2.37},{ts:"2026-03-20",price:2.32},{ts:"2026-03-22",price:2.32},{ts:"2026-03-24",price:2.39},{ts:"2026-03-26",price:2.33},{ts:"2026-03-27",price:2.33}],
     commodities:{
-      Brent:[{ts:"2026-03-16",price:100.80},{ts:"2026-03-19",price:107.93},{ts:"2026-03-20",price:106.30},{ts:"2026-03-22",price:106.41},{ts:"2026-03-23",price:106.38},{ts:"2026-03-24",price:102.62},{ts:"2026-03-25",price:98.25}],
-      HenryHub:[{ts:"2026-03-16",price:3.11},{ts:"2026-03-19",price:3.16},{ts:"2026-03-20",price:3.16},{ts:"2026-03-22",price:3.10},{ts:"2026-03-23",price:3.03},{ts:"2026-03-24",price:2.89},{ts:"2026-03-25",price:2.85}],
-      WTI:[{ts:"2026-03-16",price:100.12},{ts:"2026-03-19",price:96.53},{ts:"2026-03-20",price:96.32},{ts:"2026-03-22",price:98.23},{ts:"2026-03-23",price:97.98},{ts:"2026-03-24",price:91.09},{ts:"2026-03-25",price:87.63}]
+      Brent:[{ts:"2026-03-16",price:100.80},{ts:"2026-03-19",price:107.72},{ts:"2026-03-22",price:106.41},{ts:"2026-03-24",price:101.20},{ts:"2026-03-26",price:101.81},{ts:"2026-03-27",price:101.08}],
+      HenryHub:[{ts:"2026-03-16",price:3.11},{ts:"2026-03-19",price:3.16},{ts:"2026-03-22",price:3.10},{ts:"2026-03-24",price:2.90},{ts:"2026-03-26",price:2.98},{ts:"2026-03-27",price:2.93}],
+      WTI:[{ts:"2026-03-16",price:100.12},{ts:"2026-03-19",price:96.45},{ts:"2026-03-22",price:98.23},{ts:"2026-03-24",price:90.22},{ts:"2026-03-26",price:94.57},{ts:"2026-03-27",price:93.57}]
     }
   },
   themeScoreHistory:{
     "Sentiments-Val Mismatch":[{date:"2026-03-16",impact:5,discovery:5,priority:25},{date:"2026-03-24",impact:5,discovery:5,priority:25}],
-    "Hormuz Disruption":[{date:"2026-03-16",impact:5,discovery:4,priority:20},{date:"2026-03-24",impact:5,discovery:4,priority:20}],
+    "Hormuz Disruption":[{date:"2026-03-16",impact:5,discovery:4,priority:20},{date:"2026-03-24",impact:5,discovery:4,priority:20},{date:"2026-03-27",impact:5,discovery:3,priority:15}],
+    "Rare Earth Supply Chain":[{date:"2026-03-26",impact:4,discovery:4,priority:16}],
     "AI Disruption Opportunity":[{date:"2026-03-16",impact:4,discovery:3,priority:12},{date:"2026-03-24",impact:4,discovery:3,priority:12}],
     "Tariffs Refund":[{date:"2026-03-16",impact:3,discovery:2,priority:6},{date:"2026-03-24",impact:3,discovery:2,priority:6}]
   },
   changelog:{
     unpropagated:[],
     recentMajor:[
+      {theme:"RE",date:"2026-03-26",title:"Rare Earths theme created; 14 tickers onboarded; MEI best candidate PM 27/35",tier:"MAJOR"},
+      {theme:"SVM",date:"2026-03-26",title:"VOW erroneous auto-rescore reverted; 10/10 restored (D1 6/5, D2 6/5)",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-25",title:"TRI downgraded ACTIVE\u2192MONITORING, conviction 8\u21927/10, position exited (macro timing)",tier:"MAJOR"},
-      {theme:"Hormuz",date:"2026-03-24",title:"China tightens fertilizer export restrictions (40-75%)",tier:"MAJOR"},
-      {theme:"Hormuz",date:"2026-03-23",title:"Trump 48hr ultimatum; Iran threatens full closure",tier:"MAJOR"},
-      {theme:"SVM",date:"2026-03-21",title:"VOW D1 & D2 upgraded to 6/5; conviction 9\u219210/10",tier:"MAJOR"},
-      {theme:"SVM",date:"2026-03-15",title:"VOW SOTP v2 revaluation; base NOK 5.76",tier:"MAJOR"}
+      {theme:"Hormuz",date:"2026-03-25",title:"Iran rejected 15-point ceasefire; IRGC hardline. Brent -5.9% to $98.28",tier:"MAJOR"},
+      {theme:"SVM",date:"2026-03-21",title:"VOW D1 & D2 upgraded to 6/5; conviction 9\u219210/10",tier:"MAJOR"}
     ]
   },
-  lastUpdated: "2026-03-26"
+  lastUpdated: "2026-03-27"
 };
+
+// ── Canonical dimension labels (from vault-scoring-portfolio.md) ──
+var DIM_LABELS = {D1:'Fundamentals Trajectory',D2:'Valuation Mismatch',D3:'Identifiable Mispricing',D4:'Downside Protection',D5:'Thesis Simplicity',D6:'Upside Optionality',D7:'Evidence Quality',D8:'Catalyst Clarity'};
+var DIM_SHORT = {D1:'Fund.',D2:'Val.',D3:'Mispr.',D4:'Prot.',D5:'Simpl.',D6:'Option.',D7:'Evid.',D8:'Catal.'};
+var DIM_KEYS = ['D1','D2','D3','D4','D5','D6','D7','D8'];
+
+// Helper: get dimension score (handles both old numeric and new object format)
+function dimScore(dim) { return typeof dim === 'object' ? dim.score : dim; }
+function dimType(dim) { return typeof dim === 'object' ? dim.type : null; }
+function dimBadge(dim) {
+  var t = dimType(dim);
+  if (t === 'fact') return '<span class="badge-fact">FACT</span>';
+  if (t === 'inference') return '<span class="badge-inf">INF.</span>';
+  return '';
+}
 
 // Add D.commodities if not present
 if (!D.commodities) {
   D.commodities = {
-    brent: {price: 126, change: 2.1, unit: '$/bbl'},
-    hh: {price: 3.10, change: -0.2, unit: '$/MMBtu'},
-    urea: {price: 720, change: 49, unit: '$/t FOB'},
+    brent: {price: 101.08, change: 2.67, unit: '$/bbl'},
+    hh: {price: 2.93, change: 1.23, unit: '$/MMBtu'},
+    urea: {price: 673, change: 33, unit: '$/st FOB'},
     jkm: {price: 22.73, change: 0.8, unit: '$/MMBtu'},
     ttf: {price: 52, change: 0.5, unit: '\u20AC/MWh'},
-    hormuzTransits: {daily: '5-6', day: 26}
+    hormuzTransits: {daily: '5-6', day: 28}
   };
 }
 
@@ -984,10 +1037,14 @@ function openContextPanel(sym) {
   _prevFocus = document.activeElement;
   _ctxSym = sym;
   _ctxTab = 'summary';
-  document.getElementById('ctx-title').textContent = sym + ' \u2014 ' + t.company;
+  var chgC = t.change >= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)';
+  var chgS = t.change >= 0 ? '+' : '';
+  document.getElementById('ctx-title').innerHTML = '<span>' + sym + '</span><span style="font-size:13px;font-weight:400;color:var(--text-secondary);margin-left:6px">' + t.company + '</span><span class="mono" style="font-size:14px;margin-left:auto;margin-right:8px">' + t.price + '</span><span class="mono" style="font-size:12px;color:' + chgC + '">' + chgS + t.change.toFixed(2) + '%</span>';
 
-  var tabs = ['summary', 'valuation', 'catalysts', 'research', 'financials'];
-  var tabLabels = ['Summary', 'Valuation', 'Catalysts', 'Research', 'Financials'];
+  var tabs = ['summary', 'valuation', 'catalysts', 'research'];
+  var tabLabels = ['Summary', 'Valuation', 'Catalysts', 'Research'];
+  if (t.indicators) { tabs.push('indicators'); tabLabels.push('Indicators'); }
+  tabs.push('financials'); tabLabels.push('Financials');
   var tabHtml = '';
   tabs.forEach(function(tab, i) {
     tabHtml += '<button class="ctx-tab' + (i === 0 ? ' active' : '') + '" data-ctx-tab="' + tab + '" onclick="switchCtxTab(\'' + tab + '\')">' + tabLabels[i] + '</button>';
@@ -1023,10 +1080,6 @@ function renderCtxTab(tab) {
     if (t.businessBackground) {
       h += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;line-height:1.5">' + t.businessBackground + '</div>';
     }
-    h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">';
-    h += '<span class="mono" style="font-size:22px;font-weight:700">' + t.price + '</span>';
-    h += '<span class="mono" style="font-size:14px;font-weight:600;color:' + (t.change >= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)') + '">' + (t.change >= 0 ? '+' : '') + t.change.toFixed(2) + '%</span>';
-    h += '</div>';
     h += '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">';
     h += '<span class="pill pill-green">' + t.portfolioType + '</span>';
     h += '<span class="pill ' + (t.instrument.includes('C ') || t.instrument.includes('Call') ? 'pill-orange' : 'pill-blue') + '">' + t.instrument + '</span>';
@@ -1040,44 +1093,20 @@ function renderCtxTab(tab) {
     h += '</div>';
     h += '<div class="radar-wrap"><canvas id="ctxRadar" role="img" aria-label="Conviction dimensions radar chart for ' + sym + '"></canvas></div>';
     h += '<div class="dim-grid">';
-    var dimLabels = {D1:'Edge',D2:'Quality',D3:'MoS',D4:'Risk',D5:'Timing',D6:'Option',D7:'Liq',D8:'Catalyst'};
-    ['D1','D2','D3','D4','D5','D6','D7','D8'].forEach(function(d) {
-      var v = t.dimensions[d];
+    DIM_KEYS.forEach(function(d) {
+      var dim = t.dimensions[d];
+      var v = dimScore(dim);
       var c = v >= 5 ? 'var(--accent-positive)' : v <= 2 ? 'var(--accent-negative)' : v === 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
-      var badge = (v >= 5) ? '<span class="badge-fact">FACT</span>' : (v <= 3) ? '<span class="badge-inf">INF.</span>' : '<span class="badge-fact" style="opacity:0">_</span>';
-      h += '<div class="dim-cell"><div class="dim-badge">' + badge + '</div><div class="dim-label">' + d + '</div><div class="dim-score" style="color:' + c + '">' + v + '</div></div>';
+      var badge = dimBadge(dim) || '<span class="badge-fact" style="opacity:0">_</span>';
+      h += '<div class="dim-cell"><div class="dim-badge">' + badge + '</div><div class="dim-label">' + DIM_SHORT[d] + '</div><div class="dim-score" style="color:' + c + '">' + v + '</div></div>';
     });
     h += '</div></div>';
-    if (t.fairValue) {
-      h += '<div class="fv-box">';
-      h += '<div style="font-size:12px;color:var(--accent-blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">' + t.fairValue.methodology + '</div>';
-      h += '<div class="fv-grid">';
-      h += '<div class="fv-item"><div class="fv-label">Bear</div><div class="fv-value" style="color:var(--accent-negative)">' + t.fairValue.bearCaseFV + '</div></div>';
-      h += '<div class="fv-item"><div class="fv-label">Base</div><div class="fv-value">' + t.fairValue.baseCaseFV + '</div></div>';
-      h += '<div class="fv-item"><div class="fv-label">Prob-Wtd</div><div class="fv-value" style="color:var(--accent-positive)">' + t.fairValue.probWeightedFV + '</div></div>';
-      h += '<div class="fv-item"><div class="fv-label">Bull</div><div class="fv-value" style="color:var(--accent-amber)">' + t.fairValue.bullCaseFV + '</div></div>';
-      h += '</div></div>';
-    }
-    if (t.scenarios && t.scenarios.length) {
-      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
-      h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px">Scenarios</div>';
-      t.scenarios.forEach(function(s) {
-        h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0"><span>' + s.name + '</span><span class="mono">' + s.price + ' (' + s.prob + '%)</span></div>';
-      });
-      h += '</div>';
-    }
     if (t.premortem && t.premortem.length) {
       h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
       h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px;color:var(--accent-red)">\u26A0 Pre-Mortem</div>';
       t.premortem.forEach(function(p) {
         h += '<div style="font-size:12px;padding:3px 0;color:var(--accent-negative)">\u2022 ' + p + '</div>';
       });
-      h += '</div>';
-    }
-    if (t.variantViews && t.variantViews.length) {
-      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
-      h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px">Variant View</div>';
-      t.variantViews.forEach(function(v) { h += '<div class="variant-view">' + v + '</div>'; });
       h += '</div>';
     }
     h += '<div style="border-top:1px solid var(--border);padding-top:12px">';
@@ -1208,13 +1237,13 @@ function renderCtxTab(tab) {
     }
 
   } else if (tab === 'research') {
-    h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Research Confidence: ' + t.rc + '/5</div>';
-    (t.rcChecklist || []).forEach(function(g, i) {
-      h += '<div style="display:flex;gap:8px;font-size:12px;padding:4px 0">';
-      h += '<span>' + (g.met ? '\u2705' : '\u274C') + '</span>';
-      h += '<span style="color:' + (g.met ? 'var(--text-primary)' : 'var(--accent-negative)') + '">Gate ' + (i + 1) + ': ' + g.gate + '</span>';
-      h += '</div>';
+    h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">';
+    h += '<span style="font-size:13px;font-weight:600">RC ' + t.rc + '/5</span>';
+    h += '<span style="display:flex;gap:3px" title="' + (t.rcChecklist || []).map(function(g,i){return 'G'+(i+1)+': '+g.gate+(g.met?' \u2713':' \u2717')}).join(', ') + '">';
+    (t.rcChecklist || []).forEach(function(g) {
+      h += '<span style="width:10px;height:10px;border-radius:50%;display:inline-block;background:' + (g.met ? 'var(--accent-positive)' : 'var(--accent-negative)') + '"></span>';
     });
+    h += '</span></div>';
     if (t.variantViews && t.variantViews.length) {
       h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
       h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px">Variant View</div>';
@@ -1224,17 +1253,64 @@ function renderCtxTab(tab) {
     // Dimensions detail
     h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
     h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Conviction Dimensions</div>';
-    var dimNames = {D1:'Upside', D2:'Quality', D3:'Margin of Safety', D4:'Downside Risk', D5:'Timing', D6:'Optionality', D7:'Liquidity', D8:'Informational Edge'};
-    ['D1','D2','D3','D4','D5','D6','D7','D8'].forEach(function(d) {
-      var v = t.dimensions[d];
+    DIM_KEYS.forEach(function(d) {
+      var dim = t.dimensions[d];
+      var v = dimScore(dim);
       var c = v >= 5 ? 'var(--accent-positive)' : v <= 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
-      var badge = v >= 5 ? '<span class="badge-fact">FACT</span>' : v <= 3 ? '<span class="badge-inf">INF.</span>' : '';
       h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">';
-      h += '<span>' + badge + d + ' ' + dimNames[d] + '</span>';
-      h += '<span class="mono" style="font-weight:700;color:' + c + '">' + v + '/6</span>';
+      h += '<span>' + dimBadge(dim) + d + ' ' + DIM_LABELS[d] + '</span>';
+      h += '<span class="mono" style="font-weight:700;color:' + c + '">' + v + '/5</span>';
       h += '</div>';
     });
     h += '</div>';
+
+  } else if (tab === 'indicators') {
+    if (t.indicators) {
+      var ind = t.indicators;
+      if (ind.staleDays > 30) {
+        h += '<div style="padding:8px 12px;background:rgba(255,149,0,.08);border-left:2px solid var(--accent-amber);border-radius:0 8px 8px 0;font-size:12px;margin-bottom:12px;color:var(--accent-amber)">\u26A0 Indicators ' + ind.staleDays + ' days stale</div>';
+      }
+      h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Structural Indicators</div>';
+      h += '<table style="font-size:12px;width:100%">';
+      h += '<thead><tr><th style="text-align:left;padding:4px 6px;font-size:10px">Indicator</th><th style="text-align:right;padding:4px 6px;font-size:10px">Current</th><th style="text-align:left;padding:4px 6px;font-size:10px">Threshold</th><th style="text-align:center;padding:4px 6px;font-size:10px">Status</th></tr></thead>';
+      h += '<tbody>';
+      ind.structural.forEach(function(s) {
+        var dotClass = s.status === 'ok' ? 'ind-ok' : s.status === 'approaching' ? 'ind-approaching' : 'ind-breach';
+        h += '<tr>';
+        h += '<td style="padding:3px 6px">' + s.name + '</td>';
+        h += '<td style="padding:3px 6px;text-align:right" class="mono">' + s.current + '</td>';
+        h += '<td style="padding:3px 6px;font-size:11px;color:var(--text-secondary)">' + s.threshold + '</td>';
+        h += '<td style="padding:3px 6px;text-align:center"><span class="ind-dot ' + dotClass + '"></span></td>';
+        h += '</tr>';
+      });
+      h += '</tbody></table>';
+      if (ind.breaches && ind.breaches.length) {
+        h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
+        h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px;color:var(--accent-red)">Recent Breaches</div>';
+        ind.breaches.forEach(function(b) {
+          h += '<div style="font-size:12px;padding:3px 0"><span class="mono" style="color:var(--text-secondary)">' + b.date + '</span> ' + b.indicator + ' \u2014 ' + b.assessment + '</div>';
+        });
+        h += '</div>';
+      }
+      if (ind.noiseFilter && ind.noiseFilter.length) {
+        h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
+        h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Noise Filter (do not react)</div>';
+        ind.noiseFilter.forEach(function(n) {
+          h += '<div style="font-size:12px;padding:2px 0;color:var(--text-secondary)">\u2022 ' + n + '</div>';
+        });
+        h += '</div>';
+      }
+      if (ind.blindspots && ind.blindspots.length) {
+        h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
+        h += '<div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Blindspots</div>';
+        ind.blindspots.forEach(function(b) {
+          h += '<div style="font-size:12px;padding:2px 0;color:var(--accent-amber)">\u26A0 ' + b + '</div>';
+        });
+        h += '</div>';
+      }
+    } else {
+      h += '<div style="text-align:center;padding:24px;color:var(--text-secondary);font-size:13px">No INDICATORS.md for this ticker</div>';
+    }
 
   } else if (tab === 'financials') {
     if (t.financials) {
@@ -1326,11 +1402,11 @@ function renderRadarChart(sym) {
   if (!canvas) return;
   var t = D.tickers[sym];
   var dims = t.dimensions;
-  var data = [dims.D1, dims.D2, dims.D3, dims.D4, dims.D5, dims.D6, dims.D7, dims.D8];
+  var data = DIM_KEYS.map(function(d) { return dimScore(dims[d]); });
   new Chart(canvas, {
     type: 'radar',
     data: {
-      labels: ['D1 Upside', 'D2 Quality', 'D3 MoS', 'D4 Risk', 'D5 Timing', 'D6 Option', 'D7 Liq', 'D8 Edge'],
+      labels: DIM_KEYS.map(function(d) { return d + ' ' + DIM_SHORT[d]; }),
       datasets: [{
         data: data,
         backgroundColor: 'rgba(74,158,255,0.15)',
@@ -1421,7 +1497,7 @@ function computeUpside(sym) {
   return Math.round((fv / price - 1) * 100);
 }
 
-function todayStr() { return D.generated || '2026-03-25'; }
+function todayStr() { return D.generated || '2026-03-27'; }
 
 function formatDate(ds) {
   if (!ds) return '';
@@ -1523,19 +1599,15 @@ function renderHome() {
     h += '</div>';
   }
 
-  // 5. Overdue Catalysts
+  // 5. Overdue Catalysts — count badge linking to Calendar (detail lives there)
   var overdue = (D.catalystTimeline || []).filter(function(c) { return c.overdue; });
   if (overdue.length) {
-    h += '<div class="card" style="border-color:rgba(255,59,48,.3)">';
-    h += '<h3 style="color:var(--accent-red)">\uD83D\uDEA8 Overdue Catalysts</h3>';
-    overdue.forEach(function(c) {
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date" style="color:var(--accent-red)">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:var(--accent-red)"></div>';
-      h += '<div class="timeline-event"><strong>' + esc(c.event) + '</strong> \u2014 ' + c.ticker + '</div>';
-      h += '</div>';
-    });
-    h += '</div>';
+    h += '<button class="card" style="border-color:rgba(255,59,48,.3);cursor:pointer;width:100%;text-align:left" onclick="switchSection(\'calendar\')">';
+    h += '<div style="display:flex;align-items:center;gap:8px">';
+    h += '<span class="pill pill-red">\uD83D\uDEA8 ' + overdue.length + ' Overdue</span>';
+    h += '<span style="font-size:12px;color:var(--text-secondary)">' + overdue.map(function(c){ return c.ticker + ': ' + esc(c.event); }).join(' \u00B7 ') + '</span>';
+    h += '<span style="margin-left:auto;color:var(--text-secondary);font-size:12px">\u2192 Calendar</span>';
+    h += '</div></button>';
   }
 
   // 6. Next 7 Days
@@ -1583,6 +1655,12 @@ function renderHome() {
   el.innerHTML = h;
 }
 
+function toggleMoreMenu() {
+  var m = document.getElementById('moreMenu');
+  m.classList.toggle('open');
+  if (m.classList.contains('open') && typeof lucide !== 'undefined') lucide.createIcons();
+}
+
 function toggleAlerts() {
   var d = document.getElementById('alertDrawer');
   d.classList.toggle('open');
@@ -1601,7 +1679,7 @@ function renderPortfolio() {
   h += '<div class="card portfolio-section">';
   h += '<table>';
   h += '<caption style="text-align:left;font-size:12px;color:var(--text-secondary);margin-bottom:8px">Active portfolio positions as of ' + D.generated + '</caption>';
-  h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>CWA</th><th>RC</th><th>Price</th></tr></thead>';
+  h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>CWA</th><th>RC</th><th>Price</th><th>P&L</th></tr></thead>';
   h += '<tbody>';
   var syms = Object.keys(D.tickers).sort(function(a, b) { return D.tickers[b].allocation - D.tickers[a].allocation; });
   syms.forEach(function(sym) {
@@ -1611,46 +1689,28 @@ function renderPortfolio() {
     var instrClass = (t.instrument.includes('C ') || t.instrument.includes('Call')) ? 'pill-orange' : 'pill-blue';
     h += '<tr class="row-clickable" onclick="openContextPanel(\'' + sym + '\')">';
     h += '<td data-label="Ticker"><button class="ticker-btn" onclick="event.stopPropagation();openContextPanel(\'' + sym + '\')">' + sym + '</button></td>';
-    h += '<td data-label="Instrument"><span class="pill ' + instrClass + '" style="font-size:10px">' + t.instrument + '</span></td>';
+    var instrHtml = '<span class="pill ' + instrClass + '" style="font-size:10px">' + t.instrument + '</span>';
+    var tickerOpts = (D.options || []).filter(function(o) { return o.ticker === sym; });
+    if (tickerOpts.length) {
+      var minDte = Math.min.apply(null, tickerOpts.map(function(o) { return o.dte; }));
+      instrHtml += ' <span class="dte-badge ' + dteClass(minDte) + '" style="font-size:10px">' + minDte + 'd</span>';
+    }
+    h += '<td data-label="Instrument">' + instrHtml + '</td>';
     h += '<td data-label="Theme" style="font-size:12px">' + t.theme + '</td>';
     h += '<td data-label="Allocation"><div class="gauge" style="width:100px;display:inline-block;vertical-align:middle;margin-right:6px"><div class="gauge-fill" style="width:' + (t.allocation / 40 * 100) + '%;background:var(--accent-positive)"></div></div><span class="mono tabnum" style="font-size:12px">' + t.allocation + '%</span></td>';
     h += '<td data-label="Conviction"><strong>' + t.conviction + '/10</strong><br><span style="font-size:11px;color:var(--text-secondary)">A:' + t.clusterA + '% B:' + t.clusterB + '%</span></td>';
     h += '<td data-label="CWA" class="mono tabnum">' + cwa + '</td>';
     h += '<td data-label="RC"><span style="color:' + (t.rc >= 5 ? 'var(--accent-positive)' : 'var(--accent-amber)') + '">' + t.rc + '/5</span></td>';
     h += '<td data-label="Price" class="mono tabnum">' + t.price + '</td>';
+    var plHtml = '<span style="color:' + changeColor(t.change) + '">' + changePrefix(t.change) + t.change.toFixed(1) + '%</span>';
+    if (t.inceptionReturn !== undefined && t.inceptionReturn !== null) {
+      plHtml += '<br><span style="font-size:11px;color:' + changeColor(t.inceptionReturn) + '">' + changePrefix(t.inceptionReturn) + t.inceptionReturn.toFixed(1) + '% incep.</span>';
+    }
+    h += '<td data-label="P&L" class="mono tabnum" style="font-size:12px">' + plHtml + '</td>';
     h += '</tr>';
   });
-  h += '<tr style="opacity:.5"><td data-label="Ticker">CASH</td><td data-label="Instrument">\u2014</td><td data-label="Theme">\u2014</td><td data-label="Allocation"><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></td><td data-label="Conviction">\u2014</td><td data-label="CWA">\u2014</td><td data-label="RC">\u2014</td><td data-label="Price">\u2014</td></tr>';
+  h += '<tr style="opacity:.5"><td data-label="Ticker">CASH</td><td data-label="Instrument">\u2014</td><td data-label="Theme">\u2014</td><td data-label="Allocation"><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></td><td data-label="Conviction">\u2014</td><td data-label="CWA">\u2014</td><td data-label="RC">\u2014</td><td data-label="Price">\u2014</td><td data-label="P&L">\u2014</td></tr>';
   h += '</tbody></table></div>';
-
-  // Options Monitor
-  if (D.options && D.options.length) {
-    h += '<div class="card portfolio-section">';
-    h += '<h3><i data-lucide="clock" style="width:16px;height:16px;vertical-align:middle" aria-hidden="true"></i> Options Monitor</h3>';
-    h += '<table>';
-    h += '<caption style="text-align:left;font-size:12px;color:var(--text-secondary);margin-bottom:8px">Options positions with DTE tracking</caption>';
-    h += '<thead><tr><th>Ticker</th><th>Strike/Expiry</th><th>DTE</th><th>Status</th><th>Next Catalyst</th><th>Alignment</th></tr></thead>';
-    h += '<tbody>';
-    D.options.forEach(function(o) {
-      var dc = dteClass(o.dte);
-      var statusPill = o.dte >= 45 ? 'pill-green' : o.dte >= 30 ? 'pill-amber' : 'pill-orange';
-      var statusText = o.dte >= 45 ? 'GREEN' : o.dte >= 30 ? 'AMBER' : 'RED';
-      var nextCat = o.catalystAlignment && o.catalystAlignment.length ? o.catalystAlignment[0] : null;
-      h += '<tr>';
-      h += '<td data-label="Ticker"><button class="ticker-btn" onclick="openContextPanel(\'' + o.ticker + '\')">' + o.ticker + '</button></td>';
-      h += '<td data-label="Strike/Expiry" class="mono">' + o.strike + (o.instrument === 'Call' ? 'C' : 'P') + ' ' + o.expiry + '</td>';
-      h += '<td data-label="DTE"><span class="dte-badge ' + dc + '">' + o.dte + '</span></td>';
-      h += '<td data-label="Status"><span class="pill ' + statusPill + '" style="font-size:10px">' + statusText + '</span></td>';
-      h += '<td data-label="Next Catalyst" style="font-size:12px">' + (nextCat ? nextCat.catalyst + ' ' + nextCat.date : '\u2014') + '</td>';
-      h += '<td data-label="Alignment" style="color:var(--accent-positive)">' + (nextCat ? '\u2705 Ample' : '\u2014') + '</td>';
-      h += '</tr>';
-    });
-    h += '</tbody></table>';
-    h += '<div style="font-size:12px;color:var(--text-secondary);margin-top:8px;padding:8px;background:rgba(255,149,0,.06);border-radius:8px;border-left:2px solid var(--accent-orange)">';
-    h += '<strong>Next decision point:</strong> CF $90C on May 19 (30 DTE). Action: roll/exercise/close. Q1 earnings May 6 is the last major catalyst before theta accelerates.';
-    h += '</div>';
-    h += '</div>';
-  }
 
   // Exposure Analysis
   h += '<div class="grid-2">';
@@ -2041,25 +2101,6 @@ function renderResearch() {
   h += '</tbody></table>';
   h += '<div style="font-size:11px;color:var(--text-secondary);margin-top:8px">Gates: (1) OVERVIEW from audited filing (2) \u22654 transcripts (3) Critical questions resolved (4) Catalysts ascertained (5) Mispricing understood</div>';
   h += '</div>';
-
-  h += '<div class="card">';
-  h += '<h3>Conviction Dimensions</h3>';
-  h += '<table>';
-  h += '<thead><tr><th>Ticker</th><th>Conv.</th><th>D1</th><th>D2</th><th>D3</th><th>D4</th><th>D5</th><th>D6</th><th>D7</th><th>D8</th><th>ClA</th><th>ClB</th></tr></thead>';
-  h += '<tbody>';
-  Object.keys(D.tickers).forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    var dims = t.dimensions;
-    h += '<tr><td class="mono">' + sym + '</td><td><strong>' + t.conviction + '</strong></td>';
-    ['D1','D2','D3','D4','D5','D6','D7','D8'].forEach(function(d) {
-      var v = dims[d];
-      var c = v >= 5 ? 'color:var(--accent-positive)' : v <= 3 ? 'color:var(--accent-amber)' : '';
-      h += '<td style="' + c + '">' + v + '</td>';
-    });
-    h += '<td><strong>' + t.clusterA + '%</strong></td><td>' + t.clusterB + '%</td></tr>';
-  });
-  h += '</tbody></table></div>';
 
   el.innerHTML = h;
 }
