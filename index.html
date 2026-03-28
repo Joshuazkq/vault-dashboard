@@ -2726,19 +2726,19 @@ function renderResearch() {
     h += '</div>';
   }
 
-  // Monitoring — mini cards
+  // Monitoring — full cards (same as active)
   if (monitoring.length) {
     h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Monitoring (' + monitoring.length + ')</button>';
     h += '<div class="section-body">';
-    h += '<div class="pipeline-grid-mini">';
+    h += '<div class="pipeline-grid">';
     monitoring.forEach(function(item) {
       if (item.hasData) {
-        h += renderMiniCard(item.sym, item.t);
+        h += renderTickerCard(item.sym, item.t);
       } else {
         // Minimal card for tickers only in themes
-        h += '<div class="ticker-card-mini" style="opacity:.6">';
-        h += '<div class="tcm-header"><span class="tcm-sym">' + item.sym + '</span></div>';
-        h += '<div class="tcm-meta"><span>' + esc(item.theme) + '</span></div>';
+        h += '<div class="ticker-card" style="opacity:.6">';
+        h += '<div class="tc-header"><span class="tc-sym">' + item.sym + '</span></div>';
+        h += '<div class="tc-meta"><span>' + esc(item.theme) + '</span></div>';
         h += '</div>';
       }
     });
