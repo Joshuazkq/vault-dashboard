@@ -895,7 +895,7 @@ const D = {
     },
     TRI: {
       company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:7, clusterA:80, clusterB:84, rc:5, instrument:"Shares", currency:"GBP",
+      allocation:0, conviction:7, clusterA:80, clusterB:84, patternMatch:30.5, rc:5, instrument:"Shares", currency:"GBP",
       price:"60p", change:0,
       dimensions:{D1:{score:4,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:4,type:"fact"},D5:{score:4,type:"inference"},D6:{score:5,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
       costBasis:"80p", entryDate:"2026-03-15", inceptionReturn:-25.0,
@@ -914,7 +914,7 @@ const D = {
     },
     ARR: {
       company:"Arribatec Group ASA", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:71, clusterB:0, rc:1, instrument:"Shares", currency:"NOK",
+      allocation:0, conviction:0, patternMatch:25, rc:1, instrument:"Shares", currency:"NOK",
       price:"NOK 7.98", change:0, inceptionReturn:0,
       fairValue:{baseCaseFV:"NOK 10",probWeightedFV:"NOK 9",bearCaseFV:"NOK 4",bullCaseFV:"NOK 15",methodology:"EV/EBITDA",thesisType:"Turnaround",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"NOK 4-5",prob:25},{name:"Base",price:"NOK 8-10",prob:50},{name:"Bull",price:"NOK 12-15",prob:25}],
@@ -927,7 +927,7 @@ const D = {
     },
     GO: {
       company:"Grocery Outlet", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:79, clusterB:0, rc:1, instrument:"Shares", currency:"USD",
+      allocation:0, conviction:0, patternMatch:27.5, rc:1, instrument:"Shares", currency:"USD",
       price:"$7.50", change:0, inceptionReturn:0,
       fairValue:{baseCaseFV:"$10",probWeightedFV:"$9",bearCaseFV:"$3",bullCaseFV:"$15",methodology:"EV/Revenue",thesisType:"Distressed Turnaround",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$3-4",prob:25},{name:"Base",price:"$8-10",prob:50},{name:"Bull",price:"$12-15",prob:25}],
@@ -940,7 +940,7 @@ const D = {
     },
     KENDR: {
       company:"Kendrion N.V.", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, clusterA:76, clusterB:0, rc:1, instrument:"Shares", currency:"EUR",
+      allocation:0, conviction:0, patternMatch:26.5, rc:1, instrument:"Shares", currency:"EUR",
       price:"\u20AC10.00", change:0, inceptionReturn:0,
       fairValue:{baseCaseFV:"\u20AC22",probWeightedFV:"\u20AC20",bearCaseFV:"\u20AC12",bullCaseFV:"\u20AC30",methodology:"Peer EV/EBITDA",thesisType:"Post-Divestment Re-rating",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"\u20AC12-14",prob:25},{name:"Base",price:"\u20AC20-22",prob:50},{name:"Bull",price:"\u20AC25-30",prob:25}],
@@ -953,7 +953,7 @@ const D = {
     },
     MEI: {
       company:"Meteoric Resources", theme:"Rare Earth Supply Chain", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:4, clusterA:53, clusterB:56, rc:3, instrument:"Shares", currency:"AUD",
+      allocation:0, conviction:4, patternMatch:27, rc:3, instrument:"Shares", currency:"AUD",
       price:"A$0.165", change:0, inceptionReturn:0,
       fairValue:{baseCaseFV:"A$0.30",probWeightedFV:"A$0.28",bearCaseFV:"A$0.06",bullCaseFV:"A$0.60",methodology:"NPV Discount",thesisType:"Development-Stage RE Miner",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"A$0.06-0.12",prob:25},{name:"Base",price:"A$0.22-0.35",prob:50},{name:"Bull",price:"A$0.40-0.60",prob:25}],
@@ -1070,7 +1070,7 @@ const D = {
     },
     SPSC: {
       company:"SPS Commerce", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:6, clusterA:67, clusterB:72, rc:2, instrument:"Shares", currency:"USD",
+      allocation:0, conviction:6, patternMatch:null, rc:2, instrument:"Shares", currency:"USD",
       price:"$55.10", change:0, inceptionReturn:0,
       fairValue:{baseCaseFV:"$70",probWeightedFV:"$65",bearCaseFV:"$45",bullCaseFV:"$110",methodology:"EV/EBITDA",thesisType:"EDI Network + AI Optionality",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$45",prob:20},{name:"Base",price:"$65-70",prob:55},{name:"Bull",price:"$85-110",prob:25}],
@@ -1472,19 +1472,24 @@ function renderCtxTab(tab) {
     h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
     h += '<div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-size:14px;font-weight:600">Conviction ' + t.conviction + '/10</span><span style="font-size:12px;color:var(--text-secondary)">RC ' + t.rc + '/5</span></div>';
     h += '<div style="display:flex;gap:16px;margin-bottom:12px">';
-    h += '<div><span style="font-size:11px;color:var(--text-secondary)">Cluster A</span><div style="font-size:16px;font-weight:700;color:var(--accent-positive)">' + t.clusterA + '%</div></div>';
-    h += '<div><span style="font-size:11px;color:var(--text-secondary)">Cluster B</span><div style="font-size:16px;font-weight:700">' + t.clusterB + '%</div></div>';
+    if (t.clusterA) h += '<div><span style="font-size:11px;color:var(--text-secondary)">Cluster A</span><div style="font-size:16px;font-weight:700;color:var(--accent-positive)">' + t.clusterA + '%</div></div>';
+    if (t.clusterB) h += '<div><span style="font-size:11px;color:var(--text-secondary)">Cluster B</span><div style="font-size:16px;font-weight:700">' + t.clusterB + '%</div></div>';
     h += '</div>';
-    h += '<div class="radar-wrap"><canvas id="ctxRadar" role="img" aria-label="Conviction dimensions radar chart for ' + sym + '"></canvas></div>';
-    h += '<div class="dim-grid">';
-    DIM_KEYS.forEach(function(d) {
-      var dim = t.dimensions[d];
-      var v = dimScore(dim);
-      var c = v >= 5 ? 'var(--accent-positive)' : v <= 2 ? 'var(--accent-negative)' : v === 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
-      var badge = dimBadge(dim) || '<span class="badge-fact" style="opacity:0">_</span>';
-      h += '<div class="dim-cell"><div class="dim-badge">' + badge + '</div><div class="dim-label">' + DIM_SHORT[d] + '</div><div class="dim-score" style="color:' + c + '">' + v + '</div></div>';
-    });
-    h += '</div></div>';
+    if (t.dimensions) {
+      h += '<div class="radar-wrap"><canvas id="ctxRadar" role="img" aria-label="Conviction dimensions radar chart for ' + sym + '"></canvas></div>';
+      h += '<div class="dim-grid">';
+      DIM_KEYS.forEach(function(d) {
+        var dim = t.dimensions[d];
+        var v = dimScore(dim);
+        var c = v >= 5 ? 'var(--accent-positive)' : v <= 2 ? 'var(--accent-negative)' : v === 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
+        var badge = dimBadge(dim) || '<span class="badge-fact" style="opacity:0">_</span>';
+        h += '<div class="dim-cell"><div class="dim-badge">' + badge + '</div><div class="dim-label">' + DIM_SHORT[d] + '</div><div class="dim-score" style="color:' + c + '">' + v + '</div></div>';
+      });
+      h += '</div>';
+    } else {
+      h += '<div style="text-align:center;padding:16px;color:var(--text-secondary);font-size:12px">No conviction dimensions scored yet</div>';
+    }
+    h += '</div>';
     if (t.premortem && t.premortem.length) {
       h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
       h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px;color:var(--accent-red)">\u26A0 Pre-Mortem</div>';
@@ -1637,15 +1642,19 @@ function renderCtxTab(tab) {
     // Dimensions detail
     h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-top:12px">';
     h += '<div style="font-size:13px;font-weight:600;margin-bottom:8px">Conviction Dimensions</div>';
-    DIM_KEYS.forEach(function(d) {
-      var dim = t.dimensions[d];
-      var v = dimScore(dim);
-      var c = v >= 5 ? 'var(--accent-positive)' : v <= 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
-      h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">';
-      h += '<span>' + dimBadge(dim) + d + ' ' + DIM_LABELS[d] + '</span>';
-      h += '<span class="mono" style="font-weight:700;color:' + c + '">' + v + '/5</span>';
-      h += '</div>';
-    });
+    if (t.dimensions) {
+      DIM_KEYS.forEach(function(d) {
+        var dim = t.dimensions[d];
+        var v = dimScore(dim);
+        var c = v >= 5 ? 'var(--accent-positive)' : v <= 3 ? 'var(--accent-amber)' : 'var(--text-primary)';
+        h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">';
+        h += '<span>' + dimBadge(dim) + d + ' ' + DIM_LABELS[d] + '</span>';
+        h += '<span class="mono" style="font-weight:700;color:' + c + '">' + v + '/5</span>';
+        h += '</div>';
+      });
+    } else {
+      h += '<div style="text-align:center;padding:12px;color:var(--text-secondary);font-size:12px">Not yet scored</div>';
+    }
     h += '</div>';
 
   } else if (tab === 'indicators') {
@@ -1785,6 +1794,7 @@ function renderRadarChart(sym) {
   var canvas = document.getElementById('ctxRadar');
   if (!canvas) return;
   var t = D.tickers[sym];
+  if (!t || !t.dimensions) return;
   var dims = t.dimensions;
   var data = DIM_KEYS.map(function(d) { return dimScore(dims[d]); });
   new Chart(canvas, {
@@ -2594,27 +2604,31 @@ function renderDimMini(t) {
   return h;
 }
 function renderTickerCard(sym, t) {
-  var ret = t.inceptionReturn || 0;
-  var retClass = ret >= 0 ? 'tc-return-pos' : 'tc-return-neg';
-  var borderClass = ret >= 0 ? 'ticker-card-positive' : 'ticker-card-negative';
-  var h = '<div class="ticker-card ' + borderClass + '">';
+  var hasPosition = t.allocation > 0;
+  var h = '<div class="ticker-card' + (hasPosition ? (t.inceptionReturn >= 0 ? ' ticker-card-positive' : ' ticker-card-negative') : '') + '" onclick="openContextPanel(\'' + sym + '\')" style="cursor:pointer">';
   // Header
   h += '<div class="tc-header">';
-  h += '<span class="tc-sym" onclick="openContextPanel(\'' + sym + '\')">' + sym + '</span>';
-  h += '<div style="text-align:right"><span class="tc-price">' + esc(t.price) + '</span> <span class="' + retClass + '">' + (ret >= 0 ? '+' : '') + ret.toFixed(1) + '%</span></div>';
-  h += '</div>';
-  // Meta: theme, conviction, RC, instrument
+  h += '<span class="tc-sym">' + sym + '</span>';
+  h += '<div style="text-align:right"><span class="tc-price">' + esc(t.price) + '</span>';
+  if (hasPosition && t.inceptionReturn) {
+    var ret = t.inceptionReturn;
+    h += ' <span class="' + (ret >= 0 ? 'tc-return-pos' : 'tc-return-neg') + '">' + (ret >= 0 ? '+' : '') + ret.toFixed(1) + '%</span>';
+  } else if (t.change && t.change !== 0) {
+    h += ' <span class="' + (t.change >= 0 ? 'tc-return-pos' : 'tc-return-neg') + '">' + (t.change >= 0 ? '+' : '') + t.change.toFixed(1) + '%</span>';
+  }
+  h += '</div></div>';
+  // Meta: theme, conviction, RC, instrument, pattern-match
   h += '<div class="tc-meta">';
   h += '<span>' + esc(t.theme) + '</span>';
-  h += '<span class="pill pill-amber" style="font-size:10px">Conv ' + t.conviction + '/10</span>';
+  if (t.conviction) h += '<span class="pill pill-amber" style="font-size:10px">Conv ' + t.conviction + '/10</span>';
   var rcDots = '';
   for (var i = 0; i < 5; i++) rcDots += (t.rcChecklist && t.rcChecklist[i] && t.rcChecklist[i].met) ? '<span style="color:var(--accent-positive)">&#9679;</span>' : '<span style="color:var(--text-secondary)">&#9675;</span>';
   h += '<span style="font-size:11px;letter-spacing:1px" title="RC ' + (t.rc||0) + '/5">' + rcDots + '</span>';
   h += '<span class="tc-instrument">' + esc(t.instrument || 'Shares') + '</span>';
-  if (t.clusterA) {
-    var pmPct = Math.round((t.clusterA + (t.clusterB || 0)) / (t.clusterB ? 2 : 1));
-    var pmColor = pmPct >= 80 ? 'var(--accent-positive)' : pmPct >= 60 ? 'var(--accent-blue)' : 'var(--accent-amber)';
-    h += '<span style="font-size:10px;color:' + pmColor + ';font-weight:600" title="Pattern-Match: A=' + t.clusterA + '% B=' + (t.clusterB||0) + '%">PM ' + t.clusterA + '%' + (t.clusterB ? '/' + t.clusterB + '%' : '') + '</span>';
+  if (t.patternMatch) {
+    var pmScore = t.patternMatch;
+    var pmColor = pmScore >= 28 ? 'var(--accent-positive)' : pmScore >= 22 ? 'var(--accent-blue)' : 'var(--accent-amber)';
+    h += '<span style="font-size:10px;color:' + pmColor + ';font-weight:600" title="Pattern-Match Score">PM ' + pmScore + '/35</span>';
   }
   h += '</div>';
   // Range bar
