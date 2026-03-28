@@ -2367,16 +2367,41 @@ function renderResearch() {
   var el = document.getElementById('sec-research');
   var h = '<h2 class="section-title">Research Pipeline</h2>';
 
-  // Group tickers by status
-  var active = [], monitoring = [], passed = [];
+  // Build complete watchlist from D.tickers + D.themes
+  var active = [], monitoring = [], parkedList = [], passedList = [];
+  var seen = {};
+
+  // First: tickers with full data
   Object.keys(D.tickers).forEach(function(sym) {
+    seen[sym] = true;
     var t = D.tickers[sym];
-    if (t.status === 'ACTIVE') active.push({sym:sym, t:t});
-    else if (t.status === 'MONITORING') monitoring.push({sym:sym, t:t});
-    else passed.push({sym:sym, t:t});
+    if (t.status === 'ACTIVE') active.push({sym:sym, t:t, hasData:true});
+    else if (t.status === 'MONITORING') monitoring.push({sym:sym, t:t, hasData:true});
+    else passedList.push({sym:sym, t:t, hasData:true});
   });
-  active.sort(function(a, b) { return (b.t.conviction || 0) - (a.t.conviction || 0); });
-  monitoring.sort(function(a, b) { return (b.t.conviction || 0) - (a.t.conviction || 0); });
+
+  // Second: tickers only in themes (no full data in D.tickers)
+  var parkedMap = {};
+  (D.parked || []).forEach(function(p) { parkedMap[p.ticker] = p; });
+  D.themes.forEach(function(theme) {
+    theme.tickers.forEach(function(tk) {
+      if (seen[tk]) return;
+      seen[tk] = true;
+      if (parkedMap[tk]) {
+        parkedList.push({sym:tk, theme:theme.name, reason:parkedMap[tk].reason, triggerCheck:parkedMap[tk].triggerCheck, hasData:false});
+      } else if (theme.status === 'DORMANT') {
+        passedList.push({sym:tk, theme:theme.name, hasData:false});
+      } else {
+        monitoring.push({sym:tk, theme:theme.name, hasData:false});
+      }
+    });
+  });
+
+  active.sort(function(a, b) { return ((b.t||{}).conviction || 0) - ((a.t||{}).conviction || 0); });
+  monitoring.sort(function(a, b) {
+    var ca = (a.t||{}).conviction || 0, cb = (b.t||{}).conviction || 0;
+    return cb - ca;
+  });
 
   // Active positions — full cards
   if (active.length) {
@@ -2386,14 +2411,43 @@ function renderResearch() {
     h += '</div>';
   }
 
-  // Monitoring — compact table
+  // Monitoring — compact table (includes tickers with and without full data)
   if (monitoring.length) {
-    h += '<button class="section-toggle" aria-expanded="false" onclick="toggleSection(this)">Monitoring (' + monitoring.length + ')</button>';
+    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Monitoring (' + monitoring.length + ')</button>';
+    h += '<div class="section-body">';
+    h += '<div class="card"><table class="monitoring-table">';
+    h += '<thead><tr><th>Ticker</th><th>Company / Theme</th><th>Conv</th><th>Price</th><th>Upside</th><th>Next Catalyst</th></tr></thead>';
+    h += '<tbody>';
+    monitoring.forEach(function(item) {
+      if (item.hasData) {
+        h += renderCompactRow(item.sym, item.t);
+      } else {
+        // Minimal row for tickers only in themes
+        h += '<tr>';
+        h += '<td class="mono"><span style="font-weight:600">' + item.sym + '</span></td>';
+        h += '<td style="font-size:12px;color:var(--text-secondary)">' + esc(item.theme) + '</td>';
+        h += '<td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td>';
+        h += '</tr>';
+      }
+    });
+    h += '</tbody></table></div></div>';
+  }
+
+  // Parked tickers
+  if (parkedList.length) {
+    h += '<button class="section-toggle" aria-expanded="false" onclick="toggleSection(this)">Parked (' + parkedList.length + ')</button>';
     h += '<div class="section-body" style="max-height:0;overflow:hidden">';
     h += '<div class="card"><table class="monitoring-table">';
-    h += '<thead><tr><th>Ticker</th><th>Company</th><th>Conv</th><th>Price</th><th>Upside</th><th>Next Catalyst</th></tr></thead>';
+    h += '<thead><tr><th>Ticker</th><th>Theme</th><th>Reason</th><th>Trigger Check</th></tr></thead>';
     h += '<tbody>';
-    monitoring.forEach(function(item) { h += renderCompactRow(item.sym, item.t); });
+    parkedList.forEach(function(item) {
+      h += '<tr style="opacity:.6">';
+      h += '<td class="mono">' + item.sym + '</td>';
+      h += '<td style="font-size:12px">' + esc(item.theme || (item.t ? item.t.theme : '')) + '</td>';
+      h += '<td style="font-size:12px">' + esc(item.reason || '') + '</td>';
+      h += '<td style="font-size:12px">' + esc(item.triggerCheck || '\u2014') + '</td>';
+      h += '</tr>';
+    });
     h += '</tbody></table></div></div>';
   }
 
