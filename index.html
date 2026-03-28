@@ -898,6 +898,7 @@ const D = {
       allocation:0, conviction:7, clusterA:80, clusterB:84, patternMatch:30.5, rc:5, instrument:"Shares", currency:"GBP",
       price:"60p", change:0,
       dimensions:{D1:{score:4,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:4,type:"fact"},D5:{score:4,type:"inference"},D6:{score:5,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
+      pm:{total:30.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-15",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"109p base vs 60p = +82% upside. Multi-legged: margin inflection + certification moat + insider buying."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"FY2026 results Jul 2026 + H1 FY2027 Nov 2026 force margin trajectory recognition."},{id:"U3",name:"Business Quality",score:3,max:5,rationale:"Industrial fastener distributor — stable but commodity. Certification moat provides some pricing power."},{id:"U4",name:"Balance Sheet & Torque",score:3.5,max:5,rationale:"Leverage 0.9x, adequate. RCF maturity Jul 2027 manageable."}],flex:[{id:"A1",name:"Management Change",score:4,max:5,rationale:"Mark Maybury (COO to CEO 2023) driving margin recovery. Executing measurable turnaround."},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:"Mills 16.3% + Percival 521K shares at 80p + CEO buy. Cluster buying at lows."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"2-3 analysts. Below institutional minimums at GBP 82M mkt cap."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"10-K reviewed, peer multiples verified"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+82% upside clears threshold"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"FY2026 results Jul 2026"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"Auto recession + margin stall + key shareholder exit correlated"}]},
       costBasis:"80p", entryDate:"2026-03-15", inceptionReturn:-25.0,
       fairValue:{baseCaseFV:"109p",probWeightedFV:"109p",bearCaseFV:"59p",bullCaseFV:"174p",methodology:"Peer-Anchored EV/EBIT",thesisType:"Turnaround + Margin Inflection",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"59p",prob:35},{name:"Base",price:"109p",prob:40},{name:"Bull",price:"174p",prob:25}],
@@ -916,6 +917,7 @@ const D = {
       company:"Arribatec Group ASA", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:0, patternMatch:25, rc:1, instrument:"Shares", currency:"NOK",
       price:"NOK 7.98", change:0, inceptionReturn:0,
+      pm:{total:25,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-22",universal:[{id:"U1",name:"Mispricing Assessment",score:3,max:5,rationale:"NOK 9 PW FV vs NOK 7.98 = +13% upside. Moderate gap but turnaround EBITDA NOK 65.3m confirmed."},{id:"U2",name:"Repricing Mechanism",score:3,max:5,rationale:"Q1 2026 results May 20 and FY2025 annual report. Catalyst exists but timing 2+ months."},{id:"U3",name:"Business Quality",score:3,max:5,rationale:"IT services/cloud mix. BizS genuine growth (+24%, 14.9% margins) but Cloud fragile (Q4 -3.7%)."},{id:"U4",name:"Balance Sheet & Torque",score:4,max:5,rationale:"Net cash NOK 73.8m, zero debt. Strong but dividend (NOK 69m) nearly depletes cash."}],flex:[{id:"A1",name:"Management Change",score:3,max:5,rationale:"Internal CEO, no external turnaround credentials. Executing but unproven."},{id:"A2",name:"Insider Conviction",score:3,max:5,rationale:"No cluster buying reported. 12.5% yield signals confidence but not insider purchases."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"Micro-cap, minimal analyst coverage. Norwegian micro-cap below institutional radar."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:true,note:"Corporate cost collapse source (53%) unverified as structural"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"May 20 results"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"Cloud losses + dividend depletion + FY2024 going concern correlated"}]},
       fairValue:{baseCaseFV:"NOK 10",probWeightedFV:"NOK 9",bearCaseFV:"NOK 4",bullCaseFV:"NOK 15",methodology:"EV/EBITDA",thesisType:"Turnaround",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"NOK 4-5",prob:25},{name:"Base",price:"NOK 8-10",prob:50},{name:"Bull",price:"NOK 12-15",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:false},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -929,6 +931,7 @@ const D = {
       company:"Grocery Outlet", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:0, patternMatch:27.5, rc:1, instrument:"Shares", currency:"USD",
       price:"$7.50", change:0, inceptionReturn:0,
+      pm:{total:27.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-20",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"$9 PW vs $7.50 = +20%. 85% off peak. IO franchise model (Morningstar narrow moat) deeply undervalued."},{id:"U2",name:"Repricing Mechanism",score:3,max:5,rationale:"Lead plaintiff May 2026 + Q2 comps. Catalyst exists but litigation timing uncertain."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"Unique IO franchise model. Morningstar narrow moat. Resilient through cycles but litigation overhang."},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Adequate liquidity. Covenant concerns if comps deteriorate further."}],flex:[{id:"A1",name:"Management Change",score:3.5,max:5,rationale:"CEO Jason Potter navigating crisis. Not new hire but showing conviction."},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:"CEO $1.69M personal buy (99% increase in holdings) 2 weeks after crisis. Maximum conviction signal."},{id:"A3",name:"Coverage/Structural Neglect",score:3,max:5,rationale:"9 analysts — not truly neglected. But market reflexively sold on litigation headline."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Lead plaintiff ruling May 2026"},{id:"FP-6",name:"Unlimited Single-Contract Downside",matched:false},{id:"FP-7",name:"Compound Fragility",matched:true,note:"Litigation + consumer headwinds + IO model doubts correlated"}]},
       fairValue:{baseCaseFV:"$10",probWeightedFV:"$9",bearCaseFV:"$3",bullCaseFV:"$15",methodology:"EV/Revenue",thesisType:"Distressed Turnaround",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$3-4",prob:25},{name:"Base",price:"$8-10",prob:50},{name:"Bull",price:"$12-15",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:false},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -942,6 +945,7 @@ const D = {
       company:"Kendrion N.V.", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:0, patternMatch:26.5, rc:1, instrument:"Shares", currency:"EUR",
       price:"\u20AC10.00", change:0, inceptionReturn:0,
+      pm:{total:26.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-20",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"EUR 20 base vs EUR 10 = +100% upside. 53% below 2021 peak despite better fundamentals post-divestment."},{id:"U2",name:"Repricing Mechanism",score:3,max:5,rationale:"Q4/FY2025 results confirm margin trajectory. Catalyst exists but no specific date yet."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"Pure-play electromagnetics. Safety-critical brakes for elevators, wind, robotics. Certification moat."},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Leverage 2.1x — manageable but constraining. European industrial cycle adds uncertainty."}],flex:[{id:"A1",name:"Management Change",score:2.5,max:5,rationale:"CEO since 2015, long-tenured. Not a new catalyst but executed auto divestment Oct 2024."},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:"SB member EUR 2.03M purchase (0.8% of company). Very large insider buy."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"2-3 analysts. Zero US/UK coverage. Below institutional radar entirely."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false},{id:"FP-3",name:"Operational Distress",matched:false,note:"15.5% EBITDA margin, healthy"},{id:"FP-4",name:"No Hard Catalyst",matched:true,note:"No dated forcing function — depends on results trajectory"},{id:"FP-7",name:"Compound Fragility",matched:false}]},
       fairValue:{baseCaseFV:"\u20AC22",probWeightedFV:"\u20AC20",bearCaseFV:"\u20AC12",bullCaseFV:"\u20AC30",methodology:"Peer EV/EBITDA",thesisType:"Post-Divestment Re-rating",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"\u20AC12-14",prob:25},{name:"Base",price:"\u20AC20-22",prob:50},{name:"Bull",price:"\u20AC25-30",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:false},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -955,6 +959,7 @@ const D = {
       company:"Meteoric Resources", theme:"Rare Earth Supply Chain", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:4, patternMatch:27, rc:3, instrument:"Shares", currency:"AUD",
       price:"A$0.165", change:0, inceptionReturn:0,
+      pm:{total:27,max:35,archetype:"Cyclical Inflection",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"A$0.28 base vs A$0.165 = +70%. NPV8 US$835M-1.3B vs A$490M mkt cap (50-55% discount)."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"DFS mid-2026 (Ausenco) + LI application/grant mid-2026. Hard-dated catalysts within 3-6 months."},{id:"U3",name:"Business Quality",score:2,max:5,rationale:"Pre-revenue development-stage miner. No cash flow. Binary outcome dependent on DFS and permitting."},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Funded through DFS. EXIM LOI provides pathway but not committed. Dilution risk material."}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Structural rare earth supply deficit. Pentagon 2027 deadline. HREE co-production (Dy/Tb 130 tpa) unique."},{id:"B2",name:"Cost Position",score:4,max:5,rationale:"C1 $22/kg NdPr — first quartile. Ionic clay = low-cost processing. Pilot 70% recovery confirmed."},{id:"B3",name:"Consensus Lag",score:3,max:5,rationale:"No sell-side coverage. Market treats as generic junior miner vs validated project with EXIM backing."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"PFS cross-checked, NdPr sensitivity modeled"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-5",name:"Placeholder Research Trap",matched:false,note:"3 filings processed, pilot results confirmed"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"DFS disappoints + LI denied + NdPr crash = correlated downside"}]},
       fairValue:{baseCaseFV:"A$0.30",probWeightedFV:"A$0.28",bearCaseFV:"A$0.06",bullCaseFV:"A$0.60",methodology:"NPV Discount",thesisType:"Development-Stage RE Miner",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"A$0.06-0.12",prob:25},{name:"Base",price:"A$0.22-0.35",prob:50},{name:"Bull",price:"A$0.40-0.60",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -1070,8 +1075,9 @@ const D = {
     },
     SPSC: {
       company:"SPS Commerce", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:6, patternMatch:null, rc:2, instrument:"Shares", currency:"USD",
+      allocation:0, conviction:6, patternMatch:32, rc:2, instrument:"Shares", currency:"USD",
       price:"$55.10", change:0, inceptionReturn:0,
+      pm:{total:32,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4.5,max:5,rationale:"$65 PW vs $55.10 = +18%. 50-100% upside over 18-24m. 8.3x EV/EBITDA vs 50-60x historical."},{id:"U2",name:"Repricing Mechanism",score:3.5,max:5,rationale:"Activists (Anson/Irenic) pushing sale. Organic reaccel H2 2026. But activist timing uncertain."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"100 consecutive quarters growth. 96% recurring. Core EDI network moat. But growth decelerating."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash $144M, FCF $152M, zero debt. Fortress."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:4.5,max:5,rationale:"120K+ EDI partners. 25+ years proprietary supply chain data. Network effect strengthens with scale."},{id:"F2",name:"AI Integration Maturity",score:2,max:5,rationale:"MAX AI launched Feb 2026, beta only. Zero AI revenue. Unproven monetization."},{id:"F3",name:"Disruption Misperception",score:3.5,max:5,rationale:"Market prices 'bad acquisition' narrative. Ignores AI-amplified network + activist catalyst."},{id:"F4",name:"Recession Armor",score:5,max:5,rationale:"25-year zero revenue decline streak. 96% recurring. EDI = non-discretionary supply chain infrastructure."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+18% near-term, 50-100% 18-24m"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-7",name:"Compound Fragility",matched:false}]},
       fairValue:{baseCaseFV:"$70",probWeightedFV:"$65",bearCaseFV:"$45",bullCaseFV:"$110",methodology:"EV/EBITDA",thesisType:"EDI Network + AI Optionality",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$45",prob:20},{name:"Base",price:"$65-70",prob:55},{name:"Bull",price:"$85-110",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -1096,8 +1102,9 @@ const D = {
     },
     DOCS: {
       company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, rc:2, instrument:"Shares", currency:"USD",
+      allocation:0, conviction:0, patternMatch:35, rc:2, instrument:"Shares", currency:"USD",
       price:"$24.31", change:0, inceptionReturn:0,
+      pm:{total:35,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"$33 PW vs $24.31 = +36%. Zero AI revenue in guidance = free optionality."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"H2 2026 commercial AI launch. DocsGPT 300K prescribers = measurable adoption."},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"Physician network monopoly (80%+ US docs). 38.9% op margin. 18-qtr beat streak."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$735M cash, zero debt. Fortress balance sheet."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"80%+ US physician network. Irreplaceable professional graph. 20+ years of clinical interaction data."},{id:"F2",name:"AI Integration Maturity",score:4,max:5,rationale:"DocsGPT shipped with 300K prescribers. Commercial AI launch H2 2026 not yet monetized."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"Market fears pharma ad cyclicality while ignoring AI monetization of physician network."},{id:"F4",name:"Recession Armor",score:4,max:5,rationale:"Healthcare non-discretionary. Pharma marketing budgets resilient through cycles."}],failurePatterns:[{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+36% upside"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"H2 2026 AI launch"}]},
       fairValue:{baseCaseFV:"$35",probWeightedFV:"$33",bearCaseFV:"$18",bullCaseFV:"$50",methodology:"EV/Revenue",thesisType:"AI-Fortress Monopoly",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$18",prob:20},{name:"Base",price:"$30-35",prob:55},{name:"Bull",price:"$45-50",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -1148,8 +1155,9 @@ const D = {
     },
     WK: {
       company:"Workiva Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, rc:1, instrument:"Shares", currency:"USD",
+      allocation:0, conviction:0, patternMatch:35.5, rc:1, instrument:"Shares", currency:"USD",
       price:"$59.41", change:0, inceptionReturn:0,
+      pm:{total:35.5,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4.5,max:6,rationale:"$80 PW vs $59.41 = +35%. 3.82x P/S at 38.8% off highs while growing 20%."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"Revenue crossing $1B psychological catalyst. Margin expansion mechanical as mix shifts."},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"97% GRR, 113% NRR. SEC/ESG compliance platform of record. Regulatory mandate = demand floor."},{id:"U4",name:"Balance Sheet & Torque",score:3.5,max:5,rationale:"Strong recurring revenue model. Exact FCF conversion data pending deeper review."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"Irreplaceable XBRL-linked compliance data. 20+ years of SEC filing history. Regulatory entrenchment."},{id:"F2",name:"AI Integration Maturity",score:4.5,max:5,rationale:"SEC Filing Intelligence + AI-enhanced GRC platform shipped and monetized as premium SKUs."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"38.8% off high while growing 20%. Not in AI ETFs despite being a clear AI beneficiary."},{id:"F4",name:"Recession Armor",score:5,max:5,rationale:"SEC filings mandated by law. Grew through 2020 and 2022 downturns. Non-discretionary spend."}],failurePatterns:[{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+35% upside"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"$1B revenue milestone + margin expansion"}]},
       fairValue:{baseCaseFV:"$85",probWeightedFV:"$80",bearCaseFV:"$45",bullCaseFV:"$120",methodology:"EV/Revenue",thesisType:"AI-Fortress Compliance",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$45",prob:20},{name:"Base",price:"$75-85",prob:55},{name:"Bull",price:"$100-120",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:false},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -1427,6 +1435,7 @@ function openContextPanel(sym) {
 
   var tabs = ['summary', 'valuation', 'catalysts', 'research'];
   var tabLabels = ['Summary', 'Valuation', 'Catalysts', 'Research'];
+  if (t.pm) { tabs.push('patternmatch'); tabLabels.push('Pattern Match'); }
   if (t.indicators) { tabs.push('indicators'); tabLabels.push('Indicators'); }
   tabs.push('financials'); tabLabels.push('Financials');
   var tabHtml = '';
@@ -1656,6 +1665,78 @@ function renderCtxTab(tab) {
       h += '<div style="text-align:center;padding:12px;color:var(--text-secondary);font-size:12px">Not yet scored</div>';
     }
     h += '</div>';
+
+  } else if (tab === 'patternmatch') {
+    var pm = t.pm;
+    // Header: total score, archetype, result
+    var pmTotal = pm.total;
+    var pmMax = pm.max || 35;
+    var pmPct = Math.round(pmTotal / pmMax * 100);
+    var pmResultColor = pmTotal >= 28 ? 'var(--accent-positive)' : pmTotal >= 22 ? 'var(--accent-blue)' : 'var(--accent-amber)';
+    var pmResult = pmTotal >= 28 ? 'STRONG' : pmTotal >= 25 ? 'INTERESTING-HIGH' : pmTotal >= 22 ? 'INTERESTING-LOW' : 'PASS';
+    h += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">';
+    h += '<div><span style="font-size:24px;font-weight:700;color:' + pmResultColor + '">' + pmTotal + '/' + pmMax + '</span>';
+    h += ' <span class="pill" style="font-size:10px;background:' + pmResultColor + ';color:#fff">' + pmResult + '</span></div>';
+    h += '<div style="text-align:right;font-size:11px;color:var(--text-secondary)">Archetype: <strong style="color:var(--text-primary)">' + esc(pm.archetype || 'N/A') + '</strong></div>';
+    h += '</div>';
+    // Score bar
+    h += '<div style="height:8px;background:var(--bg-elevated);border-radius:4px;overflow:hidden;margin-bottom:16px">';
+    h += '<div style="height:100%;width:' + pmPct + '%;background:' + pmResultColor + ';border-radius:4px"></div></div>';
+
+    // Universal dimensions
+    h += '<div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-secondary);margin-bottom:8px">Universal Dimensions</div>';
+    (pm.universal || []).forEach(function(d) {
+      var dMax = d.max || 5;
+      var dPct = Math.round(d.score / dMax * 100);
+      var dColor = dPct >= 80 ? 'var(--accent-positive)' : dPct >= 60 ? 'var(--accent-blue)' : dPct >= 40 ? 'var(--accent-amber)' : 'var(--accent-negative)';
+      h += '<div style="margin-bottom:10px">';
+      h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px">';
+      h += '<span style="font-size:12px;font-weight:600">' + esc(d.id) + ': ' + esc(d.name) + '</span>';
+      h += '<span class="mono" style="font-size:13px;font-weight:700;color:' + dColor + '">' + d.score + '/' + dMax + '</span>';
+      h += '</div>';
+      h += '<div style="height:4px;background:var(--bg-elevated);border-radius:2px;overflow:hidden;margin-bottom:4px">';
+      h += '<div style="height:100%;width:' + dPct + '%;background:' + dColor + ';border-radius:2px"></div></div>';
+      if (d.rationale) h += '<div style="font-size:11px;color:var(--text-secondary);line-height:1.4">' + esc(d.rationale) + '</div>';
+      h += '</div>';
+    });
+
+    // Flex dimensions
+    if (pm.flex && pm.flex.length) {
+      h += '<div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-secondary);margin:12px 0 8px;border-top:1px solid var(--border);padding-top:12px">Flex Dimensions (' + esc(pm.archetype || '') + ')</div>';
+      pm.flex.forEach(function(d) {
+        var dMax = d.max || 5;
+        var dPct = Math.round(d.score / dMax * 100);
+        var dColor = dPct >= 80 ? 'var(--accent-positive)' : dPct >= 60 ? 'var(--accent-blue)' : dPct >= 40 ? 'var(--accent-amber)' : 'var(--accent-negative)';
+        h += '<div style="margin-bottom:10px">';
+        h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px">';
+        h += '<span style="font-size:12px;font-weight:600">' + esc(d.id) + ': ' + esc(d.name) + '</span>';
+        h += '<span class="mono" style="font-size:13px;font-weight:700;color:' + dColor + '">' + d.score + '/' + dMax + '</span>';
+        h += '</div>';
+        h += '<div style="height:4px;background:var(--bg-elevated);border-radius:2px;overflow:hidden;margin-bottom:4px">';
+        h += '<div style="height:100%;width:' + dPct + '%;background:' + dColor + ';border-radius:2px"></div></div>';
+        if (d.rationale) h += '<div style="font-size:11px;color:var(--text-secondary);line-height:1.4">' + esc(d.rationale) + '</div>';
+        h += '</div>';
+      });
+    }
+
+    // Failure patterns
+    if (pm.failurePatterns && pm.failurePatterns.length) {
+      h += '<div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-secondary);margin:12px 0 8px;border-top:1px solid var(--border);padding-top:12px">Failure Pattern Check</div>';
+      pm.failurePatterns.forEach(function(fp) {
+        var fpColor = fp.matched ? 'var(--accent-negative)' : 'var(--accent-positive)';
+        var fpIcon = fp.matched ? '&#10060;' : '&#9989;';
+        h += '<div style="display:flex;gap:6px;padding:4px 0;font-size:12px">';
+        h += '<span>' + fpIcon + '</span>';
+        h += '<span><strong style="color:' + fpColor + '">' + esc(fp.id) + '</strong>: ' + esc(fp.name);
+        if (fp.note) h += ' <span style="color:var(--text-secondary)">— ' + esc(fp.note) + '</span>';
+        h += '</span></div>';
+      });
+    }
+
+    // Scored date
+    if (pm.scoredDate) {
+      h += '<div style="font-size:10px;color:var(--text-secondary);margin-top:12px;text-align:right">Scored: ' + pm.scoredDate + '</div>';
+    }
 
   } else if (tab === 'indicators') {
     if (t.indicators) {
