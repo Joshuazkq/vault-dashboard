@@ -475,11 +475,27 @@ tbody tr.row-clickable { cursor: pointer; }
 .dim-mini { display: flex; gap: 2px; margin-top: 10px; }
 .dim-mini-seg { width: 100%; height: 4px; border-radius: 2px; }
 
-/* Compact monitoring rows */
+/* Compact monitoring rows (legacy, kept for parked table) */
 .monitoring-table { width: 100%; }
 .monitoring-table th { text-align: left; font-size: 11px; color: var(--text-secondary); font-weight: 500; padding: 6px 8px; }
 .monitoring-table td { padding: 8px; font-size: 13px; border-top: 1px solid rgba(46,46,58,0.3); }
 .monitoring-table .mono { font-family: 'SF Mono','Fira Code',monospace; }
+
+/* Mini ticker cards (monitoring) */
+.pipeline-grid-mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; margin-bottom: 16px; }
+.ticker-card-mini {
+  background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px; transition: border-color 0.2s; cursor: default;
+}
+.ticker-card-mini:hover { border-color: var(--accent-blue); }
+.tcm-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.tcm-sym { font-size: 15px; font-weight: 700; cursor: pointer; color: var(--accent-blue); }
+.tcm-sym:hover { text-decoration: underline; }
+.tcm-price { font-family: 'SF Mono','Fira Code',monospace; font-size: 12px; }
+.tcm-meta { font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.tcm-range { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 2px; }
+.tcm-catalyst { font-size: 11px; color: var(--text-secondary); margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tcm-variant { font-size: 10px; color: var(--accent-blue); font-style: italic; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ── SIGNAL FILTER BAR ── */
 .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
@@ -2617,23 +2633,49 @@ function renderTickerCard(sym, t) {
   h += '</div>';
   return h;
 }
-function renderCompactRow(sym, t) {
-  var ret = t.inceptionReturn || 0;
-  var retClass = ret >= 0 ? 'tc-return-pos' : 'tc-return-neg';
+function renderMiniCard(sym, t) {
   var upPct = '';
   if (t.fairValue) {
     var pw = parsePrice(t.fairValue.probWeightedFV);
     var cur = parsePrice(t.price);
     if (pw > 0 && cur > 0) upPct = ((pw - cur) / cur * 100).toFixed(0);
   }
-  var h = '<tr>';
-  h += '<td class="mono"><button class="ticker-btn" onclick="openContextPanel(\'' + sym + '\')" style="margin:0">' + sym + '</button></td>';
-  h += '<td>' + esc(t.company || '') + '</td>';
-  h += '<td><span class="pill pill-amber" style="font-size:10px">' + (t.conviction || '?') + '</span></td>';
-  h += '<td class="mono">' + esc(t.price || '\u2014') + ' <span class="' + retClass + '">' + (ret !== 0 ? (ret >= 0 ? '+' : '') + ret.toFixed(1) + '%' : '') + '</span></td>';
-  h += '<td class="mono" style="color:var(--accent-positive)">' + (upPct ? '+' + upPct + '%' : '\u2014') + '</td>';
-  h += '<td style="font-size:12px">' + (t.catalysts && t.catalysts.length ? esc(t.catalysts[0]) : '\u2014') + '</td>';
-  h += '</tr>';
+  var h = '<div class="ticker-card-mini">';
+  // Header: sym + price + upside
+  h += '<div class="tcm-header">';
+  h += '<span class="tcm-sym" onclick="openContextPanel(\'' + sym + '\')">' + sym + '</span>';
+  h += '<div><span class="tcm-price">' + esc(t.price || '\u2014') + '</span>';
+  if (upPct) h += ' <span class="tc-return-pos" style="font-size:11px">+' + upPct + '%</span>';
+  h += '</div></div>';
+  // Meta: theme, conviction, RC
+  h += '<div class="tcm-meta">';
+  h += '<span>' + esc(t.theme || '') + '</span>';
+  if (t.conviction) h += '<span class="pill pill-amber" style="font-size:9px">Conv ' + t.conviction + '</span>';
+  if (t.rc !== undefined) {
+    var rcDots = '';
+    for (var i = 0; i < 5; i++) rcDots += (t.rcChecklist && t.rcChecklist[i] && t.rcChecklist[i].met) ? '<span style="color:var(--accent-positive)">&#9679;</span>' : '<span style="color:var(--text-secondary)">&#9675;</span>';
+    h += '<span style="font-size:10px;letter-spacing:1px" title="RC ' + (t.rc||0) + '/5">' + rcDots + '</span>';
+  }
+  h += '</div>';
+  // Range: bear → bull (compact single line)
+  if (t.fairValue && t.fairValue.bearCaseFV && t.fairValue.bullCaseFV) {
+    h += '<div class="tcm-range">';
+    h += '<span class="range-pct-down">' + esc(t.fairValue.bearCaseFV) + '</span>';
+    h += '<span style="color:var(--text-secondary)">\u2192</span>';
+    h += '<span style="font-weight:600;color:var(--accent-blue)">' + esc(t.fairValue.probWeightedFV || t.fairValue.baseCaseFV) + '</span>';
+    h += '<span style="color:var(--text-secondary)">\u2192</span>';
+    h += '<span class="range-pct-up">' + esc(t.fairValue.bullCaseFV) + '</span>';
+    h += '</div>';
+  }
+  // Catalyst
+  if (t.catalysts && t.catalysts.length) {
+    h += '<div class="tcm-catalyst">&#128197; ' + esc(t.catalysts[0]) + '</div>';
+  }
+  // Variant view (1 line)
+  if (t.variantViews && t.variantViews.length) {
+    h += '<div class="tcm-variant">' + esc(t.variantViews[0].substring(0, 120)) + (t.variantViews[0].length > 120 ? '...' : '') + '</div>';
+  }
+  h += '</div>';
   return h;
 }
 function renderResearch() {
@@ -2684,26 +2726,23 @@ function renderResearch() {
     h += '</div>';
   }
 
-  // Monitoring — compact table (includes tickers with and without full data)
+  // Monitoring — mini cards
   if (monitoring.length) {
     h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Monitoring (' + monitoring.length + ')</button>';
     h += '<div class="section-body">';
-    h += '<div class="card"><table class="monitoring-table">';
-    h += '<thead><tr><th>Ticker</th><th>Company / Theme</th><th>Conv</th><th>Price</th><th>Upside</th><th>Next Catalyst</th></tr></thead>';
-    h += '<tbody>';
+    h += '<div class="pipeline-grid-mini">';
     monitoring.forEach(function(item) {
       if (item.hasData) {
-        h += renderCompactRow(item.sym, item.t);
+        h += renderMiniCard(item.sym, item.t);
       } else {
-        // Minimal row for tickers only in themes
-        h += '<tr>';
-        h += '<td class="mono"><span style="font-weight:600">' + item.sym + '</span></td>';
-        h += '<td style="font-size:12px;color:var(--text-secondary)">' + esc(item.theme) + '</td>';
-        h += '<td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td>';
-        h += '</tr>';
+        // Minimal card for tickers only in themes
+        h += '<div class="ticker-card-mini" style="opacity:.6">';
+        h += '<div class="tcm-header"><span class="tcm-sym">' + item.sym + '</span></div>';
+        h += '<div class="tcm-meta"><span>' + esc(item.theme) + '</span></div>';
+        h += '</div>';
       }
     });
-    h += '</tbody></table></div></div>';
+    h += '</div></div>';
   }
 
   // Parked tickers
