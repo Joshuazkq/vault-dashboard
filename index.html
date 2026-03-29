@@ -726,15 +726,7 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
   <button class="sidebar-search" id="searchBtn" aria-label="Search tickers (Cmd+K)" onclick="openSearch()">
     <i data-lucide="search" aria-hidden="true"></i>
   </button>
-  <button class="sidebar-item active" data-section="home" id="sb-home" aria-current="page" onclick="switchSection('home')">
-    <i data-lucide="layout-dashboard" aria-hidden="true"></i>
-    <span class="sidebar-label">Home</span>
-  </button>
-  <button class="sidebar-item" data-section="portfolio" id="sb-portfolio" onclick="switchSection('portfolio')">
-    <i data-lucide="briefcase" aria-hidden="true"></i>
-    <span class="sidebar-label">Portfolio</span>
-  </button>
-  <button class="sidebar-item" data-section="themes" id="sb-themes" onclick="switchSection('themes')">
+  <button class="sidebar-item active" data-section="themes" id="sb-themes" aria-current="page" onclick="switchSection('themes')">
     <i data-lucide="layers" aria-hidden="true"></i>
     <span class="sidebar-label">Themes</span>
   </button>
@@ -766,9 +758,7 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 
 <!-- MAIN CONTENT -->
 <main id="main-content" class="main-content">
-  <section id="sec-home" class="section active"></section>
-  <section id="sec-portfolio" class="section"></section>
-  <section id="sec-themes" class="section"></section>
+  <section id="sec-themes" class="section active"></section>
   <section id="sec-signals" class="section"></section>
   <section id="sec-calendar" class="section"></section>
   <section id="sec-research" class="section"></section>
@@ -788,13 +778,9 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 <!-- MOBILE BOTTOM NAV -->
 <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
   <div class="mobile-nav-inner">
-    <button class="bnav-btn active" id="bn-home" onclick="switchSection('home')">
-      <i data-lucide="layout-dashboard" aria-hidden="true"></i>
-      <span>Home</span>
-    </button>
-    <button class="bnav-btn" id="bn-portfolio" onclick="switchSection('portfolio')">
-      <i data-lucide="briefcase" aria-hidden="true"></i>
-      <span>Portfolio</span>
+    <button class="bnav-btn active" id="bn-themes" onclick="switchSection('themes')">
+      <i data-lucide="layers" aria-hidden="true"></i>
+      <span>Themes</span>
     </button>
     <button class="bnav-btn" id="bn-signals" onclick="switchSection('signals')">
       <i data-lucide="radio" aria-hidden="true"></i>
@@ -814,9 +800,6 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
     </button>
   </div>
   <div class="more-menu" id="moreMenu">
-    <button class="more-item" onclick="switchSection('themes');toggleMoreMenu()">
-      <i data-lucide="layers" aria-hidden="true"></i> Themes
-    </button>
     <button class="more-item" onclick="switchSection('settings');toggleMoreMenu()">
       <i data-lucide="settings" aria-hidden="true"></i> Settings
     </button>
@@ -840,6 +823,7 @@ const D = {
       price:"NOK 2.36", change:1.73,
       dimensions:{D1:{score:6,type:"fact",rationale:"Multiple drivers: Maritime margin normalization, Aftersales compounding, legacy roll-off"},D2:{score:6,type:"fact",rationale:"Maritime alone >2x group EV; market prices thesis at negative value"},D3:{score:4,type:"inference",rationale:"Micro-cap screen-out, zero coverage, governance history, shareholder fatigue; all temporary"},D4:{score:3,type:"fact",rationale:"Balance sheet fragile: 21.3% equity ratio, covenant risk; but asymmetric risk/reward"},D5:{score:5,type:"fact",rationale:"One condition: signed Maritime backlog converts at contracted margins; already happening"},D6:{score:4,type:"inference",rationale:"Four paths: Industrial divestiture, Aftersales compounding, cruise orderbook, coverage initiation"},D7:{score:4,type:"fact",rationale:"7 filings, 17 transcripts; SOTP v2 cross-validated; 24% margin slide confirms bull case"},D8:{score:4,type:"inference",rationale:"Earnings ARE the catalyst; Q1-Q2 2026 mechanically reveal margin inflection; no amplifier yet"}},
       pm:{total:34,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:6,max:5,rationale:"Maritime alone >2x group EV; prob-weighted +225% upside; multi-legged with strong floor"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Dated quarterly earnings force mechanical repricing via contract mix shift (44%->68%->89%)"},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"~70% cruise wastewater monopoly; only competitor being divested; NOK 1.6B backlog to 2034"},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Net debt NOK 362M, 21.3% equity ratio, Q3 2026 covenant at 3.5x is critical gating event"}],flex:[{id:"A1",name:"Management Change",score:5,max:5,rationale:"Complete C-suite/board overhaul; Pedersen (Kongsberg Maritime), Hekneby (Spir/Self Storage)"},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:">7.6M shares cluster buying, zero sales; CFO 3.9M shares at NOK 1.68-2.10"},{id:"A3",name:"Coverage Gap",score:5,max:5,rationale:"Zero sell-side coverage; NOK 690M mcap; Discovery 5/5 confirmed"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified; comparable multiples sourced"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+123% base, +225% prob-weighted"},{id:"FP-3",name:"Operational Distress",matched:"partial",note:"Industrial segment distressed but being wound down; Maritime healthy"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 May 20, Q2 Aug, Q3 Nov — dated"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 5/5; 7 filings, 17 transcripts"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Project-based, no single contract >15%"},{id:"FP-7",name:"Compound Fragility",matched:"partial",note:"Balance sheet + Industrial drag correlated but diminishing as Industrial wound down"}]},
+      entryTiming:{signal:"GO",reviewDate:"2026-05-20",rationale:"No overhangs. Add up to conviction-band max (40% at 10/10)."},
       costBasis:"NOK 2.58", entryDate:"2026-02-28", inceptionReturn:-8.5,
       fairValue:{baseCaseFV:"NOK 5.26",probWeightedFV:"NOK 7.66",bearCaseFV:"NOK 0.83",bullCaseFV:"NOK 9.32",methodology:"Backlog-Anchored SOTP",thesisType:"Turnaround + SOTP",lastUpdated:"2026-03-28"},
       scenarios:[{name:"Deep Bear",price:"NOK 0.83",prob:10},{name:"Base",price:"NOK 5.26",prob:35},{name:"Bull",price:"NOK 9.32",prob:40},{name:"Super Bull",price:"NOK 13.39",prob:15}],
@@ -860,6 +844,7 @@ const D = {
       price:"$136.45", change:3.30,
       dimensions:{D1:{score:5,type:"fact",rationale:"S3 pricing confirmed; EBITDA inflecting from $808M toward $1.1-1.7B; gas cost moat $13+/MMBtu"},D2:{score:4,type:"fact",rationale:"Physical NOLA $673-675/st above trigger; scenario-weighted P/E 4.5x vs historical 5.5-7x"},D3:{score:5,type:"inference",rationale:"Triple supply constraint: no gov reserve, China exports halted, Hormuz blockade; self-correcting"},D4:{score:3,type:"inference",rationale:"Binary Hormuz risk; $1.98B cash, no debt until 2034; DOJ probe adds legal tail risk"},D5:{score:5,type:"fact",rationale:"Two conditions holding: Hormuz closed (Day 28, mines deployed) and nat gas $2.92 vs $5.50 cap"},D6:{score:4,type:"inference",rationale:"Five paths: S4 duration, India procurement, non-urea margins, buyback acceleration, Blue Point"},D7:{score:4,type:"fact",rationale:"Core pillars FACT-sourced from 10-K and 9 transcripts; inferential on S3 probability and EPS model"},D8:{score:5,type:"fact",rationale:"Three dated events within 7 days: Trump deadline 3/28, USDA plantings 3/31, Tampa ammonia Apr"}},
       pm:{total:36,max:35,archetype:"Cyclical Inflection + Misperceived Commodity",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:6,max:5,rationale:"Prob-weighted FV $174 vs $134.50 (+29%); multi-legged thesis (5 paths); strong floor at $90-100"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Weekly NOLA prints, Q1 earnings May 6, Tampa NH3 Apr, USDA Mar 31 — all dated, self-correcting"},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"#1 NA nitrogen producer, 97% util, $1.8B FCF, HH gas moat; not a monopoly (cyclical commodity)"},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$1.98B cash, net debt 0.5x EBITDA, no maturities until 2034, $4-5B S3 FCF potential"}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Triple supply constraint: Hormuz + Ras Laffan (structural) + China policy; 32-36% seaborne offline"},{id:"B2",name:"Cost Position",score:5,max:5,rationale:"HH $3.20 vs TTF $18+; $450+/t advantage widened; ME offline; LNG maxed = no transmission"},{id:"B3",name:"Consensus Lag",score:5,max:5,rationale:"Consensus EPS $9.01 vs thesis $30.7 (3.4x gap); PT $101.73 below current; 2/20 Buy"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified from filing data"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:">29% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net debt 0.5x, $1.98B cash"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Weekly NOLA, Q1 May 6, Tampa Apr"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 4/5; 10-K reviewed, 9 transcripts"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Spot commodity producer"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"Risks (ceasefire, gas, DOJ) largely uncorrelated"}]},
+      entryTiming:{signal:"GO",reviewDate:"2026-06-18",rationale:"No overhangs. Add up to conviction-band max (30% at 8/10)."},
       costBasis:"$90.00", entryDate:"2026-03-05", inceptionReturn:51.6,
       fairValue:{baseCaseFV:"$158",probWeightedFV:"$174",bearCaseFV:"$103",bullCaseFV:"$234",methodology:"Scenario-Weighted P/E",thesisType:"Cyclical Inflection + Event-Driven",lastUpdated:"2026-03-28"},
       scenarios:[{name:"S1 (ceasefire)",price:"$103",prob:1},{name:"S2 (1Q)",price:"$104",prob:10},{name:"S3 (3mo BASE)",price:"$158",prob:60},{name:"S4 (FY)",price:"$234",prob:29}],
@@ -881,6 +866,7 @@ const D = {
       price:"\u20AC199.20", change:-2.35,
       dimensions:{D1:{score:5,type:"fact",rationale:"FY2025 record revenue +25%, 67% EBITDA margin; Ras Laffan destruction bridges revenue trough"},D2:{score:5,type:"fact",rationale:"Bear case \u20AC222 exceeds current price; market gives zero credit for 120-140 incremental vessels; PW FV \u20AC342 (+68%)"},D3:{score:4,type:"inference",rationale:"Market conflates geopolitical premium with structural deficit; self-correcting via FIDs but 12-18mo lag"},D4:{score:3,type:"inference",rationale:"Asset-light, no debt, 4.5% dividend floor; but earnings trough + soft near-term floor"},D5:{score:3,type:"inference",rationale:"Three conditions: LNG demand (holding), monopoly (holding), FID conversion (partially resolved)"},D6:{score:4,type:"inference",rationale:"Five paths: FID >90%, ULEC ethane, LNG fuel adoption, dual chokepoint, naval escort corridors"},D7:{score:5,type:"fact",rationale:"Strongest evidence base; 25 transcripts, multiple filings, RC 5/5; all pillars FACT-sourced"},D8:{score:3,type:"inference",rationale:"Ras Laffan is forcing function but timing uncertain; Q1 update Apr 22 first signal"}},
       pm:{total:34,max:35,archetype:"Cyclical Inflection + Strategic Value",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"Prob-weighted FV \u20AC342 vs \u20AC201 (+70%); bear case \u20AC222 exceeds current; 4+ independent legs"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Q1 update Apr 21, quarterly earnings, FID announcements, monthly order data \u2014 all dated"},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"~100% monopoly in membrane LNG containment, 67% EBITDA margin, 2,466 patents"},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash \u20AC300M, zero debt, 4.5% dividend yield, no dilution"}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Structural vessel shortfall; 84 mtpa FID; Ras Laffan rebuild; 230+ scrapping"},{id:"B2",name:"Cost Position / Margin Protection",score:5,max:5,rationale:"Royalty model = zero marginal cost; 65-68% margin through trough; no competitor"},{id:"B3",name:"Consensus Lag",score:4,max:5,rationale:"PT \u20AC186 << FV \u20AC342; but 18 analysts, stock +80% from 52W low"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified from filings"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+72% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net cash, zero debt, 67% EBITDA margin"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Apr 21 Q1 update, quarterly earnings, FID announcements"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 5/5; 25 transcripts reviewed"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Royalty model, no physical delivery"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"Single-dimension risk (FID conversion)"}]},
+      entryTiming:{signal:"GO",reviewDate:"2026-06-29",rationale:"No overhangs. Add up to conviction-band max (30% at 8.5/10)."},
       costBasis:"\u20AC190.00", entryDate:"2026-03-10", inceptionReturn:4.8,
       fairValue:{baseCaseFV:"\u20AC354",probWeightedFV:"\u20AC342",bearCaseFV:"\u20AC152",bullCaseFV:"\u20AC426",methodology:"Peer-Anchored EV/EBITDA",thesisType:"Structural Growth + Event-Driven",lastUpdated:"2026-03-28"},
       scenarios:[{name:"Deep Bear",price:"\u20AC152",prob:5},{name:"Bear",price:"\u20AC222",prob:15},{name:"Base",price:"\u20AC354",prob:55},{name:"Bull",price:"\u20AC426",prob:25}],
@@ -902,6 +888,7 @@ const D = {
       price:"60p", change:-0.17,
       dimensions:{D1:{score:4,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:4,type:"fact"},D5:{score:4,type:"inference"},D6:{score:5,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
       pm:{total:30.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-15",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"109p base vs 60p = +82% upside. Multi-legged: margin inflection + certification moat + insider buying."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"FY2026 results Jul 2026 + H1 FY2027 Nov 2026 force margin trajectory recognition."},{id:"U3",name:"Business Quality",score:3,max:5,rationale:"Industrial fastener distributor — stable but commodity. Certification moat provides some pricing power."},{id:"U4",name:"Balance Sheet & Torque",score:3.5,max:5,rationale:"Leverage 0.9x, adequate. RCF maturity Jul 2027 manageable."}],flex:[{id:"A1",name:"Management Change",score:4,max:5,rationale:"Mark Maybury (COO to CEO 2023) driving margin recovery. Executing measurable turnaround."},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:"Mills 16.3% + Percival 521K shares at 80p + CEO buy. Cluster buying at lows."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"2-3 analysts. Below institutional minimums at GBP 82M mkt cap."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"10-K reviewed, peer multiples verified"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+82% upside clears threshold"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"FY2026 results Jul 2026"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"Auto recession + margin stall + key shareholder exit correlated"}]},
+      entryTiming:{signal:"WAIT",reviewDate:"2026-07-31",rationale:"Macro: UK stagflation + Hormuz oil shock. GO trigger: EBIT \u22656.7% through shock (FY2026 Jul 2026)."},
       costBasis:"80p", entryDate:"2026-03-15", inceptionReturn:-25.0,
       fairValue:{baseCaseFV:"128p",probWeightedFV:"120p",bearCaseFV:"70p",bullCaseFV:"173p",methodology:"Peer-Anchored EV/EBIT",thesisType:"Turnaround + Margin Inflection",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Recession Bear",price:"50p",prob:10},{name:"Stall Bear",price:"70p",prob:20},{name:"Base",price:"128p",prob:45},{name:"Bull",price:"173p",prob:25}],
@@ -1107,18 +1094,24 @@ const D = {
       marketCap:"\u00A39.2B"
     },
     DOCS: {
-      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, patternMatch:35, rc:2, instrument:"Shares", currency:"USD",
+      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:null,
+      allocation:0, conviction:7.5, clusterA:86.7, clusterB:84, patternMatch:34.5, rc:3, instrument:"Shares", currency:"USD",
       price:"$24.31", change:0, inceptionReturn:0,
-      pm:{total:35,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"$33 PW vs $24.31 = +36%. Zero AI revenue in guidance = free optionality."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"H2 2026 commercial AI launch. DocsGPT 300K prescribers = measurable adoption."},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"Physician network monopoly (80%+ US docs). 38.9% op margin. 18-qtr beat streak."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$735M cash, zero debt. Fortress balance sheet."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"80%+ US physician network. Irreplaceable professional graph. 20+ years of clinical interaction data."},{id:"F2",name:"AI Integration Maturity",score:4,max:5,rationale:"DocsGPT shipped with 300K prescribers. Commercial AI launch H2 2026 not yet monetized."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"Market fears pharma ad cyclicality while ignoring AI monetization of physician network."},{id:"F4",name:"Recession Armor",score:4,max:5,rationale:"Healthcare non-discretionary. Pharma marketing budgets resilient through cycles."}],failurePatterns:[{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+36% upside"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"H2 2026 AI launch"}]},
-      fairValue:{baseCaseFV:"$35",probWeightedFV:"$33",bearCaseFV:"$18",bullCaseFV:"$50",methodology:"EV/Revenue",thesisType:"AI-Fortress Monopoly",lastUpdated:"2026-03-25"},
-      scenarios:[{name:"Bear",price:"$18",prob:20},{name:"Base",price:"$30-35",prob:55},{name:"Bull",price:"$45-50",prob:25}],
-      rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
-      catalysts:["H2 2026 commercial AI launch","DocsGPT 300K prescribers adoption data"],
-      premortem:["Pharma ad budget cyclicality","AI monetization slower than expected","Competition from Epic/Cerner"],
-      variantViews:["AI-Fortress 35/40. Physician network monopoly (80%+ US docs). $735M cash / zero debt. ZERO AI revenue in guidance."],
-      businessBackground:"Physician network monopoly (80%+ US doctors). DocsGPT, 38.9% op margin, 18-qtr beat streak.",
-      marketCap:"$4.6B"
+      entryTiming:{signal:"LEAN",reviewDate:"2026-05-15",rationale:"MFN fading; AI launch timing active overhang. Bear case ($23) \u2248 current price (\u22123%). Expected return +39%."},
+      dimensions:{D1:{score:4,type:"fact",rationale:"Revenue re-accelerated to 20% FY2025; margins expanding; 300K AI prescribers at $0 revenue = genuine $0-to-something inflection. SBC grew 42% YoY; governance 2/5."},D2:{score:5,type:"fact",rationale:"Reverse DCF prices 2.7% growth for 20% grower. EV/FCF 13.7x cheapest in history. Bear $23 \u2248 current; expected return +39%."},D3:{score:4,type:"inference",rationale:"Category misclassification, $0 AI revenue = $0 AI value, Q4 MFN timing mask, post-COVID anchoring. Dual-class governance bounded as 9% discount."},D4:{score:5,type:"fact",rationale:"$735M cash = $3.97/share; distressed 10x floor $18.40. Bear DCF $23 \u2248 current. All failure modes bounded."},D5:{score:4,type:"inference",rationale:"Two conditions: core 10%+ growth (HOLDING), AI launch within 12mo (AT RISK). Even if #2 fails, bear \u2248 current."},D6:{score:5,type:"inference",rationale:"6 paths: pharma AI ($10-100M), hospital AI ($9-36M ARR), M3 ARPU convergence, buybacks (13% of shares), paid search TAM, Scribe enterprise."},D7:{score:3,type:"fact",rationale:"19 filings + 22 transcripts. Critical gap: AI pricing model rests on inference. Customer D unknown. PSU conditions not extracted."},D8:{score:4,type:"inference",rationale:"Q4 FY2026 earnings May 2026; AI launch H2 CY2026; $583M buyback. AI catalyst specific but 3-year deferral track record."}},
+      pm:{total:34.5,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-29",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"$33 PW FV vs $24 (+39%). Reverse DCF prices 2.7% growth for 20% grower. Bear $23 = \u22123%. 80% of scenarios deliver +38-69%."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"H2 2026 commercial AI launch. Q4 FY2026 earnings May 2026. DocsGPT 300K prescribers. 3-yr deferral history."},{id:"U3",name:"Business Quality",score:4.5,max:5,rationale:"90% GM, 47% FCF margin, 18-qtr beat streak. CFO on leave + Q4 deceleration + SBC 12.7% FY2025."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$735M cash, zero debt. $583M buyback. Fortress."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"85%+ US physicians. ASCO exclusive. 2x preferred vs nearest competitor. Irreplaceable."},{id:"F2",name:"AI Integration Maturity",score:3,max:5,rationale:"300K DocsGPT users, 100+ hospital contracts, Scribe 75%+ retention. ZERO revenue. H2 2026 launch."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"Absent from AI ETFs. Market prices AI at near-zero. Category = healthcare IT, not AI."},{id:"F4",name:"Recession Armor",score:4,max:5,rationale:"18-qtr beat streak. Pharma non-cyclical. Revenue never declined. Q4 decel is real risk."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"19 filings + 22 transcripts"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+39% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"$735M cash, zero debt"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q4 earnings May, AI launch H2"},{id:"FP-6",name:"Single-Contract Downside",matched:"partial",note:"Customer D at 11% of Q2 revenue"}]},
+      fairValue:{baseCaseFV:"$33",probWeightedFV:"$33",bearCaseFV:"$23",bullCaseFV:"$40",methodology:"Owner Earnings DCF (Method A)",thesisType:"AI-Fortress Monopoly",lastUpdated:"2026-03-29"},
+      scenarios:[{name:"Bear",price:"$23",prob:20},{name:"Base",price:"$33",prob:50},{name:"Bull",price:"$40",prob:30}],
+      rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:false},{gate:"Mispricing understood",met:false}],
+      maxAlloc:25, bandViolation:false,
+      catalysts:["Q4 FY2026 earnings May 2026","H2 CY2026 AI commercial launch","Q1 FY2027 earnings Aug 2026","$583M buyback ongoing","OpenEvidence litigation"],
+      premortem:["AI launch delay (H2 2026 \u2192 H1 2027+): \u22125-10%","Customer D churn (11% of Q rev): \u22128-12%","OpenEvidence displacement: \u221210-15% over 2-3yr","MFN structural pressure: \u221215-20%","CFO Bryson non-return: \u22123-5%","Dual-class misalignment: \u221215-30% tail"],
+      variantViews:["AI-Fortress 34.5/40. Physician monopoly (85%+ US docs). $735M cash / zero debt. ZERO AI revenue in guidance. Market prices 2.7% growth for 20% grower. SBC elevated near-term (17.1% FY2026) but buybacks overwhelm issuance 3x."],
+      recentNotes:["RC upgraded 2/5 \u2192 3/5 (RC3 deep research completed)","Valuation corrected: FV $36\u2192$33; bear $26\u2192$23 (SBC + math errors)","Conviction scored 7.5/10; Cluster A 86.7% / B 84.0%","SBC FY2025 = 12.7% ($72.4M), not 9.6%; FY2026E ~17.1% ($110M Pathway spike)","OpenEvidence $12B valuation; lawsuit: trade secrets dropped, CFAA surviving"],
+      businessBackground:"Largest US physician network (85%+ of doctors). Pharma digital marketing platform ($570M FY2025 rev, +20%). DocsGPT (300K prescribers, 4x/week), Scribe (75%+ retention), 100+ hospital AI contracts. $735M cash, zero debt, 90% GM, 47% FCF margin. AI commercial launch H2 2026.",
+      marketCap:"$4.4B",
+      financials:{fy:"FY2025",revenue:"$570M",revenueGrowth:"+20%",ebitda:"$314M (adj)",ebitdaMargin:"55%",netIncome:"$187M",eps:"$1.01",fcf:"$267M",totalDebt:"$0",cash:"$735M",netDebt:"-$735M",leverage:"0x",leverageNum:0},
+      valuation:{methodology:"Owner Earnings DCF (Method A: FCF \u2212 SBC, basic shares)",rationale:"FCF $267M minus SBC $72.4M = Owner Earnings $195M (FY2025). SBC elevated near-term (FY2026 ~$110M from Pathway RSUs). Terminal 7% SBC/rev by FY2030. Buybacks (8.3M shares/yr) overwhelm SBC issuance (2.75M/yr) by 3x.",assumptions:[{label:"WACC",value:"10.5%"},{label:"Terminal growth",value:"3.5%"},{label:"FY2025 Owner Earnings",value:"$195M (FCF $267M \u2212 SBC $72.4M)"},{label:"FY2026E SBC",value:"$110M (17.1%, Pathway peak)"},{label:"FY2027E AI revenue",value:"$35M (moderate scenario)"},{label:"Terminal SBC/rev",value:"7.0% by FY2030"},{label:"Method A/B gap",value:"8.4% (manageable)"}],peers:[{name:"Veeva (VEEV)",multiple:"~30x EV/FCF"},{name:"Evolent Health",multiple:"~20x EV/FCF"},{name:"DOCS own historical",multiple:"20-40x EV/FCF"}],sensitivity:{title:"FV ($/share) by AI revenue x growth",cols:["10% CAGR","14% CAGR","18% CAGR"],rows:[{label:"$10M AI",vals:["$28","$31","$37"]},{label:"$35M AI (base)",vals:["$30","$33","$40"]},{label:"$60M AI",vals:["$32","$36","$43"]}]},lastUpdated:"2026-03-29"}
     },
     WAY: {
       company:"Waystar Holding Corp.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
@@ -1217,6 +1210,7 @@ const D = {
       company:"Energy Recovery", theme:"Derived-Demand Monopoly", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:8, clusterA:86.7, clusterB:76, patternMatch:30.5, rc:4, instrument:"Shares", currency:"USD",
       price:"$9.87", change:-1.30, inceptionReturn:0,
+      entryTiming:{signal:"WAIT",reviewDate:"2026-05-31",rationale:"Company: mgmt credibility (M3/M5: 2.5/5). GO trigger: insider purchases + Saudi PO conversion. $6 \u2192 LEAN."},
       dimensions:{D1:{score:3,type:"fact"},D2:{score:5,type:"fact"},D3:{score:5,type:"inference"},D4:{score:4,type:"fact"},D5:{score:4,type:"inference"},D6:{score:4,type:"inference"},D7:{score:4,type:"fact"},D8:{score:3,type:"inference"}},
       pm:{total:30.5,max:35,archetype:"G (Derived-Demand Monopoly)",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"$525M mkt cap for 90% SWRO monopoly with 50% EBITDA margins and net cash $83.3M. Q4 miss caused 30% drawdown."},{id:"U2",name:"Repricing Mechanism",score:3,max:5,rationale:"Q1 2026 earnings (~May) + Saudi pipeline PO conversion. Revenue lumpy \u2014 no quarterly forcing function."},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"90% share; PX specified at design phase; 30-year life; single moving part; >$600K/employee."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash $83.3M, zero debt. Fortress \u2014 strongest in Archetype G pool."}],flex:[{id:"G1",name:"Derived-Demand Monopoly Position",score:5,max:5,rationale:"~90% large-scale SWRO share. PX specified by Veolia, IDE, Acciona at design phase."},{id:"G2",name:"Mechanical Revenue Linkage",score:3.5,max:5,rationale:"Each large SWRO plant = 20-50 PX units. NOT contracted multi-year like GTT/CDLR. Lumpy and FID-dependent."},{id:"G3",name:"Discovery Gap",score:5,max:5,rationale:"3-5 analysts vs Veolia 25+, ACWA 15+. Falls between water utility and industrial equipment silos."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"7 audited filings + 21 transcripts reviewed"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+97% PW upside, positive even in bear"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net cash $83.3M, zero debt"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 2026 earnings ~May 2026"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"FLEX + Saudi deferral correlated but both low-probability"}]},
       fairValue:{baseCaseFV:"$19.35",probWeightedFV:"$19.49",bearCaseFV:"$11.76",bullCaseFV:"$27.48",methodology:"EV/EBITDA peer-anchored",thesisType:"Derived-Demand Monopoly",lastUpdated:"2026-03-29"},
@@ -1503,7 +1497,7 @@ if (!D.commodities) {
 // ═══════════════════════════════════════════
 // NAVIGATION
 // ═══════════════════════════════════════════
-var _currentSection = 'home';
+var _currentSection = 'themes';
 var _renderedSections = {};
 
 function switchSection(id) {
@@ -1526,8 +1520,6 @@ function switchSection(id) {
 function renderSection(id) {
   if (_renderedSections[id]) return;
   switch (id) {
-    case 'home': renderHome(); break;
-    case 'portfolio': renderPortfolio(); break;
     case 'themes': renderThemes(); break;
     case 'signals': renderSignals(); break;
     case 'calendar': renderCalendar(); break;
@@ -1665,6 +1657,17 @@ function renderCtxTab(tab) {
       t.premortem.forEach(function(p) {
         h += '<div style="font-size:12px;padding:3px 0;color:var(--accent-negative)">\u2022 ' + p + '</div>';
       });
+      h += '</div>';
+    }
+    if (t.entryTiming) {
+      var etColor = t.entryTiming.signal === 'GO' ? 'var(--accent-positive)' : t.entryTiming.signal === 'LEAN' ? 'var(--accent-amber)' : 'var(--accent-negative)';
+      h += '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">';
+      h += '<div style="font-size:13px;font-weight:600;margin-bottom:6px">Entry Timing</div>';
+      h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">';
+      h += '<span class="pill" style="font-size:11px;background:' + etColor + ';color:#000;font-weight:700;padding:3px 10px">' + t.entryTiming.signal + '</span>';
+      h += '<span style="font-size:12px;color:var(--text-secondary)">Review: ' + t.entryTiming.reviewDate + '</span>';
+      h += '</div>';
+      h += '<div style="font-size:12px;color:var(--text-secondary);line-height:1.5">' + esc(t.entryTiming.rationale) + '</div>';
       h += '</div>';
     }
     h += '<div style="border-top:1px solid var(--border);padding-top:12px">';
@@ -2146,293 +2149,10 @@ function formatDate(ds) {
   return months[d.getMonth()] + ' ' + d.getDate();
 }
 
-// ═══════════════════════════════════════════
-// RENDER: HOME
-// ═══════════════════════════════════════════
-function renderHome() {
-  var el = document.getElementById('sec-home');
-  var h = '<h2 class="section-title">Session Boot</h2>';
-
-  // 1. Alert Banner
-  var alerts = D.alerts || [];
-  var critical = alerts.filter(function(a) { return a.type === 'red'; });
-  var warnings = alerts.filter(function(a) { return a.type === 'hormuz' || a.type === 'svm'; });
-  var infos = alerts.filter(function(a) { return a.type === 'info'; });
-
-  h += '<button class="alert-summary" onclick="toggleAlerts()" aria-expanded="false" aria-controls="alertDrawer">';
-  if (critical.length) h += '<span class="pill pill-red">\uD83D\uDEA8 ' + critical.length + ' Critical</span>';
-  if (warnings.length) h += '<span class="pill pill-amber">\u26A0 ' + warnings.length + ' Warning</span>';
-  if (infos.length) h += '<span class="pill pill-blue">\u2139 ' + infos.length + ' Info</span>';
-  h += '<span style="flex:1"></span><span style="font-size:12px;color:var(--text-secondary)">' + alerts.length + ' alerts \u25BC</span>';
-  h += '</button>';
-  h += '<div class="alert-drawer" id="alertDrawer">';
-  critical.forEach(function(a) {
-    h += '<div class="alert-item alert-critical">\uD83D\uDEA8 ' + esc(a.text) + '</div>';
-  });
-  warnings.forEach(function(a) {
-    h += '<div class="alert-item alert-warning">\u26A0 ' + esc(a.text) + '</div>';
-  });
-  infos.forEach(function(a) {
-    h += '<div class="alert-item alert-info">\u2139 ' + esc(a.text) + '</div>';
-  });
-  h += '</div>';
-
-  // 2. Portfolio Strip
-  h += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:6px;margin-top:8px;text-transform:uppercase;letter-spacing:.5px">Portfolio (' + D.portfolio.deployedPct + '% deployed, ' + D.portfolio.slotsUsed + '/' + D.portfolio.maxSlots + ' slots)</div>';
-  h += '<div class="portfolio-strip">';
-  Object.keys(D.tickers).forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    h += '<button class="pstrip-card" onclick="openContextPanel(\'' + sym + '\')">';
-    h += '<div class="pstrip-ticker">' + sym + '</div>';
-    h += '<div class="pstrip-price">' + t.price + '</div>';
-    h += '<div class="pstrip-change" style="color:' + changeColor(t.change) + '">' + changePrefix(t.change) + t.change.toFixed(1) + '%</div>';
-    h += '</button>';
-  });
-  h += '<div class="pstrip-card" style="opacity:0.6">';
-  h += '<div class="pstrip-ticker">CASH</div>';
-  h += '<div class="pstrip-price" style="font-size:16px;font-weight:700">' + D.portfolio.cashPct + '%</div>';
-  h += '</div>';
-  h += '</div>';
-
-  // 3. Commodity Strip
-  h += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Commodities</div>';
-  h += '<div class="commodity-strip">';
-  var comms = D.commodities;
-  var commItems = [
-    {label:'Brent', val:comms.brent.price, chg:comms.brent.change, unit:comms.brent.unit},
-    {label:'Henry Hub', val:comms.hh.price.toFixed(2), chg:comms.hh.change, unit:comms.hh.unit},
-    {label:'Urea', val:comms.urea.price, chg:comms.urea.change, unit:comms.urea.unit},
-    {label:'JKM', val:comms.jkm.price, chg:comms.jkm.change, unit:comms.jkm.unit},
-    {label:'TTF', val:comms.ttf.price, chg:comms.ttf.change, unit:comms.ttf.unit}
-  ];
-  commItems.forEach(function(c) {
-    h += '<div class="cstrip-card">';
-    h += '<div class="cstrip-label">' + c.label + '</div>';
-    h += '<div class="cstrip-value">' + c.val + ' <span style="font-size:10px;color:var(--text-secondary)">' + c.unit + '</span></div>';
-    h += '<div class="cstrip-change" style="color:' + changeColor(c.chg) + '">' + changePrefix(c.chg) + c.chg + '%</div>';
-    h += '</div>';
-  });
-  h += '<div class="cstrip-card" style="border-color:rgba(255,149,0,.3)">';
-  h += '<div class="cstrip-label">Hormuz</div>';
-  h += '<div class="cstrip-value">' + comms.hormuzTransits.daily + '/day</div>';
-  h += '<div class="cstrip-change" style="color:var(--accent-orange)">Day ' + comms.hormuzTransits.day + '</div>';
-  h += '</div>';
-  h += '</div>';
-
-  // 4. Intelligence Preview
-  if (D.intelligence) {
-    var intel = D.intelligence;
-    h += '<div class="card">';
-    h += '<h3><i data-lucide="radio" style="width:16px;height:16px" aria-hidden="true"></i> Intelligence</h3>';
-    h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">';
-    var esc_count = intel.patterns.filter(function(p) { return p.status === 'ESCALATING'; }).length;
-    var stab_count = intel.patterns.filter(function(p) { return p.status === 'STABLE'; }).length;
-    h += '<span class="pill pill-red">' + esc_count + ' ESCALATING</span>';
-    h += '<span class="pill pill-blue">' + stab_count + ' STABLE</span>';
-    h += '<span class="pill pill-amber">' + intel.signalStats.unmatched + ' Unmatched</span>';
-    h += '</div>';
-    if (intel.leads && intel.leads.length) {
-      var lead = intel.leads[0];
-      h += '<div style="font-size:13px;color:var(--text-secondary)">Top lead: <strong style="color:var(--text-primary)">' + lead.ticker + '</strong> (' + lead.theme + ') \u2014 ' + lead.action + ' recommended. ' + esc_count + ' ESCALATING signals.</div>';
-    }
-    h += '</div>';
-  }
-
-  // 5. Overdue Catalysts — count badge linking to Calendar (detail lives there)
-  var overdue = (D.catalystTimeline || []).filter(function(c) { return c.overdue; });
-  if (overdue.length) {
-    h += '<button class="card" style="border-color:rgba(255,59,48,.3);cursor:pointer;width:100%;text-align:left" onclick="switchSection(\'calendar\')">';
-    h += '<div style="display:flex;align-items:center;gap:8px">';
-    h += '<span class="pill pill-red">\uD83D\uDEA8 ' + overdue.length + ' Overdue</span>';
-    h += '<span style="font-size:12px;color:var(--text-secondary)">' + overdue.map(function(c){ return c.ticker + ': ' + esc(c.event); }).join(' \u00B7 ') + '</span>';
-    h += '<span style="margin-left:auto;color:var(--text-secondary);font-size:12px">\u2192 Calendar</span>';
-    h += '</div></button>';
-  }
-
-  // 6. Next 7 Days
-  var today = new Date(todayStr());
-  var weekLater = new Date(today); weekLater.setDate(weekLater.getDate() + 7);
-  var upcoming = (D.catalystTimeline || []).filter(function(c) {
-    if (c.overdue) return false;
-    var d = new Date(c.date);
-    return d >= today && d <= weekLater;
-  });
-  if (upcoming.length) {
-    h += '<div class="card">';
-    h += '<h3>Next 7 Days</h3>';
-    upcoming.forEach(function(c) {
-      var dotColor = c.type === 'Hard' ? 'var(--accent-amber)' : 'var(--accent-blue)';
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:' + dotColor + '"></div>';
-      h += '<div class="timeline-event">' + esc(c.event);
-      c.ticker.split('/').forEach(function(tk) {
-        tk = tk.trim();
-        if (D.tickers[tk]) {
-          h += ' <button class="ticker-btn" onclick="event.stopPropagation();openContextPanel(\'' + tk + '\')">' + tk + '</button>';
-        }
-      });
-      h += '</div></div>';
-    });
-    h += '</div>';
-  }
-
-  // Recent changelog
-  if (D.changelog && D.changelog.recentMajor && D.changelog.recentMajor.length) {
-    h += '<div class="card">';
-    h += '<h3>Recent Changes</h3>';
-    D.changelog.recentMajor.slice(0, 5).forEach(function(c) {
-      h += '<div style="display:flex;gap:8px;font-size:12px;padding:4px 0;border-bottom:1px solid rgba(46,46,58,.3)">';
-      h += '<span class="mono" style="color:var(--text-secondary);min-width:65px">' + c.date.slice(5) + '</span>';
-      h += '<span class="pill pill-grey" style="font-size:10px">' + c.theme + '</span>';
-      h += '<span>' + esc(c.title) + '</span>';
-      h += '</div>';
-    });
-    h += '</div>';
-  }
-
-  el.innerHTML = h;
-}
-
 function toggleMoreMenu() {
   var m = document.getElementById('moreMenu');
   m.classList.toggle('open');
   if (m.classList.contains('open') && typeof lucide !== 'undefined') lucide.createIcons();
-}
-
-function toggleAlerts() {
-  var d = document.getElementById('alertDrawer');
-  d.classList.toggle('open');
-  var btn = d.previousElementSibling;
-  btn.setAttribute('aria-expanded', d.classList.contains('open') ? 'true' : 'false');
-}
-
-// ═══════════════════════════════════════════
-// RENDER: PORTFOLIO
-// ═══════════════════════════════════════════
-function renderPortfolio() {
-  var el = document.getElementById('sec-portfolio');
-  var h = '<h2 class="section-title">Portfolio</h2>';
-
-  // Position Table
-  h += '<div class="card portfolio-section">';
-  h += '<table>';
-  h += '<caption style="text-align:left;font-size:12px;color:var(--text-secondary);margin-bottom:8px">Active portfolio positions as of ' + D.generated + '</caption>';
-  h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc</th><th>Conviction</th><th>CWA</th><th>RC</th><th>Price</th><th>P&L</th></tr></thead>';
-  h += '<tbody>';
-  var syms = Object.keys(D.tickers).sort(function(a, b) { return D.tickers[b].allocation - D.tickers[a].allocation; });
-  syms.forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    var cwa = (t.conviction * t.allocation / 100).toFixed(2);
-    var instrClass = (t.instrument.includes('C ') || t.instrument.includes('Call')) ? 'pill-orange' : 'pill-blue';
-    h += '<tr class="row-clickable" onclick="openContextPanel(\'' + sym + '\')">';
-    h += '<td data-label="Ticker"><button class="ticker-btn" onclick="event.stopPropagation();openContextPanel(\'' + sym + '\')">' + sym + '</button></td>';
-    var instrHtml = '<span class="pill ' + instrClass + '" style="font-size:10px">' + t.instrument + '</span>';
-    var tickerOpts = (D.options || []).filter(function(o) { return o.ticker === sym; });
-    if (tickerOpts.length) {
-      var minDte = Math.min.apply(null, tickerOpts.map(function(o) { return o.dte; }));
-      instrHtml += ' <span class="dte-badge ' + dteClass(minDte) + '" style="font-size:10px">' + minDte + 'd</span>';
-    }
-    h += '<td data-label="Instrument">' + instrHtml + '</td>';
-    h += '<td data-label="Theme" style="font-size:12px">' + t.theme + '</td>';
-    h += '<td data-label="Allocation"><div class="gauge" style="width:100px;display:inline-block;vertical-align:middle;margin-right:6px"><div class="gauge-fill" style="width:' + (t.allocation / 40 * 100) + '%;background:var(--accent-positive)"></div></div><span class="mono tabnum" style="font-size:12px">' + t.allocation + '%</span></td>';
-    h += '<td data-label="Conviction"><strong>' + t.conviction + '/10</strong><br><span style="font-size:11px;color:var(--text-secondary)">A:' + t.clusterA + '% B:' + t.clusterB + '%</span></td>';
-    h += '<td data-label="CWA" class="mono tabnum">' + cwa + '</td>';
-    h += '<td data-label="RC"><span style="color:' + (t.rc >= 5 ? 'var(--accent-positive)' : 'var(--accent-amber)') + '">' + t.rc + '/5</span></td>';
-    h += '<td data-label="Price" class="mono tabnum">' + t.price + '</td>';
-    var plHtml = '<span style="color:' + changeColor(t.change) + '">' + changePrefix(t.change) + t.change.toFixed(1) + '%</span>';
-    if (t.inceptionReturn !== undefined && t.inceptionReturn !== null) {
-      plHtml += '<br><span style="font-size:11px;color:' + changeColor(t.inceptionReturn) + '">' + changePrefix(t.inceptionReturn) + t.inceptionReturn.toFixed(1) + '% incep.</span>';
-    }
-    h += '<td data-label="P&L" class="mono tabnum" style="font-size:12px">' + plHtml + '</td>';
-    h += '</tr>';
-  });
-  h += '<tr style="opacity:.5"><td data-label="Ticker">CASH</td><td data-label="Instrument">\u2014</td><td data-label="Theme">\u2014</td><td data-label="Allocation"><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></td><td data-label="Conviction">\u2014</td><td data-label="CWA">\u2014</td><td data-label="RC">\u2014</td><td data-label="Price">\u2014</td><td data-label="P&L">\u2014</td></tr>';
-  h += '</tbody></table></div>';
-
-  // Exposure Analysis
-  h += '<div class="grid-2">';
-  h += '<div class="card">';
-  h += '<h3>Exposure by Theme</h3>';
-  var themeExposure = {};
-  Object.keys(D.tickers).forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    if (!themeExposure[t.theme]) themeExposure[t.theme] = { pct: 0, tickers: [] };
-    themeExposure[t.theme].pct += t.allocation;
-    themeExposure[t.theme].tickers.push(sym + ' ' + t.allocation + '%');
-  });
-  Object.keys(themeExposure).forEach(function(theme) {
-    var te = themeExposure[theme];
-    var color = theme.includes('Hormuz') ? 'var(--accent-orange)' : 'var(--accent-positive)';
-    h += '<div style="margin-bottom:8px">';
-    h += '<span style="font-size:12px;color:var(--text-secondary)">' + theme + '</span>';
-    h += '<div class="gauge"><div class="gauge-fill" style="width:' + (te.pct / D.portfolio.deployedPct * 100) + '%;background:' + color + '"></div></div>';
-    h += '<span class="mono tabnum" style="font-size:12px">' + te.pct.toFixed(1) + '% (' + te.tickers.join(' + ') + ')</span>';
-    h += '</div>';
-  });
-  h += '<div><span style="font-size:12px;color:var(--text-secondary)">Cash</span><div class="gauge"><div class="gauge-fill" style="width:' + (D.portfolio.cashPct) + '%;background:var(--text-secondary)"></div></div><span class="mono tabnum" style="font-size:12px">' + D.portfolio.cashPct + '%</span></div>';
-  h += '</div>';
-
-  var sharesPct = 0, optionsPct = 0;
-  Object.keys(D.tickers).forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    if (t.instrument === 'Shares') sharesPct += t.allocation;
-    else optionsPct += t.allocation;
-  });
-  h += '<div class="card">';
-  h += '<h3>Exposure by Instrument</h3>';
-  h += '<div class="exposure-bar">';
-  h += '<div class="exposure-seg" style="width:' + sharesPct + '%;background:rgba(74,158,255,.3);color:var(--accent-blue)">Shares ' + sharesPct + '%</div>';
-  h += '<div class="exposure-seg" style="width:' + optionsPct.toFixed(2) + '%;background:rgba(255,149,0,.3);color:var(--accent-orange)">Options ' + optionsPct.toFixed(2) + '%</div>';
-  h += '<div class="exposure-seg" style="width:' + D.portfolio.cashPct + '%;background:rgba(142,142,153,.2);color:var(--text-secondary)">Cash ' + D.portfolio.cashPct + '%</div>';
-  h += '</div>';
-  h += '<div style="font-size:12px;color:var(--text-secondary);margin-top:8px">';
-  var currExp = {};
-  Object.keys(D.tickers).forEach(function(sym) {
-    var t = D.tickers[sym];
-    if (t.allocation <= 0) return;
-    if (!currExp[t.currency]) currExp[t.currency] = 0;
-    currExp[t.currency] += t.allocation;
-  });
-  var currParts = [];
-  Object.keys(currExp).forEach(function(c) { currParts.push('<span class="mono">' + c + ' ' + currExp[c].toFixed(1) + '%</span>'); });
-  h += 'Currency: ' + currParts.join(' \u00B7 ');
-  h += '</div></div>';
-  h += '</div>';
-
-  // Allocation Chart
-  h += '<div class="card">';
-  h += '<h3>Allocation</h3>';
-  h += '<div class="chart-box"><canvas id="allocChart" role="img" aria-label="Portfolio allocation doughnut chart"></canvas></div>';
-  h += '</div>';
-
-  el.innerHTML = h;
-
-  setTimeout(function() {
-    var ctx = document.getElementById('allocChart');
-    if (!ctx) return;
-    var labels = [], data = [], colors = [];
-    var colorMap = { VOW: '#34D27A', GTT: '#FF9500', CF: '#FF9500', TRI: '#4A9EFF' };
-    Object.keys(D.tickers).forEach(function(sym) {
-      var t = D.tickers[sym];
-      if (t.allocation <= 0) return;
-      labels.push(sym + ' (' + t.allocation + '%)');
-      data.push(t.allocation);
-      colors.push(colorMap[sym] || '#4A9EFF');
-    });
-    labels.push('Cash (' + D.portfolio.cashPct + '%)');
-    data.push(D.portfolio.cashPct);
-    colors.push('#2E2E3A');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: { labels: labels, datasets: [{ data: data, backgroundColor: colors, borderWidth: 0, hoverOffset: 4 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { color: '#F0F0F5', font: { size: 12 }, padding: 12 } } } }
-    });
-  }, 50);
 }
 
 // ═══════════════════════════════════════════
@@ -2876,6 +2596,10 @@ function renderTickerCard(sym, t) {
     var pmColor = pmScore >= 28 ? 'var(--accent-positive)' : pmScore >= 22 ? 'var(--accent-blue)' : 'var(--accent-amber)';
     h += '<span style="font-size:10px;color:' + pmColor + ';font-weight:600" title="Pattern-Match Score">PM ' + pmScore + '/35</span>';
   }
+  if (t.entryTiming) {
+    var etC = t.entryTiming.signal === 'GO' ? 'var(--accent-positive)' : t.entryTiming.signal === 'LEAN' ? 'var(--accent-amber)' : 'var(--accent-negative)';
+    h += '<span class="pill" style="font-size:10px;background:' + etC + ';color:#000;font-weight:700" title="' + esc(t.entryTiming.rationale) + ' Review: ' + t.entryTiming.reviewDate + '">' + t.entryTiming.signal + '</span>';
+  }
   h += '</div>';
   // Range bar
   if (t.fairValue) h += renderRangeBar(t);
@@ -2920,6 +2644,10 @@ function renderMiniCard(sym, t) {
     var rcDots = '';
     for (var i = 0; i < 5; i++) rcDots += (t.rcChecklist && t.rcChecklist[i] && t.rcChecklist[i].met) ? '<span style="color:var(--accent-positive)">&#9679;</span>' : '<span style="color:var(--text-secondary)">&#9675;</span>';
     h += '<span style="font-size:10px;letter-spacing:1px" title="RC ' + (t.rc||0) + '/5">' + rcDots + '</span>';
+  }
+  if (t.entryTiming) {
+    var etC = t.entryTiming.signal === 'GO' ? 'var(--accent-positive)' : t.entryTiming.signal === 'LEAN' ? 'var(--accent-amber)' : 'var(--accent-negative)';
+    h += '<span class="pill" style="font-size:9px;background:' + etC + ';color:#000;font-weight:700">' + t.entryTiming.signal + '</span>';
   }
   h += '</div>';
   // Range: bear → bull (compact single line)
@@ -3115,10 +2843,10 @@ document.addEventListener('keydown', function(e) {
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof lucide !== 'undefined') lucide.createIcons();
   var saved = localStorage.getItem('activeSection');
-  if (saved && document.getElementById('sec-' + saved)) {
+  if (saved && saved !== 'home' && saved !== 'portfolio' && document.getElementById('sec-' + saved)) {
     switchSection(saved);
   } else {
-    renderSection('home');
+    switchSection('themes');
   }
 });
 
