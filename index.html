@@ -712,6 +712,35 @@ button:focus:not(:focus-visible) { outline: none; }
 }
 /* iOS standalone detection fallback */
 body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-area-inset-top, 48px))) !important; }
+
+/* ═══ Portfolio Tab Styles ═══ */
+.pf-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.pf-metric-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.pf-metric-card .pf-mv { font-size: 22px; font-weight: 700; color: var(--text-primary); }
+.pf-metric-card .pf-ml { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.pf-table-wrap { overflow-x: auto; margin-bottom: 16px; }
+.pf-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.pf-table th { text-align: left; font-size: 11px; color: var(--text-secondary); font-weight: 500; padding: 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.pf-table td { padding: 8px; border-bottom: 1px solid rgba(46,46,58,0.2); white-space: nowrap; }
+.pf-table .mono { font-family: 'SF Mono','Fira Code',monospace; font-weight: 600; }
+.pf-table .pf-pos { color: var(--accent-green); }
+.pf-table .pf-neg { color: var(--accent-red); }
+.pf-table .pf-neut { color: var(--accent-amber); }
+.pf-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; margin-left: 4px; vertical-align: middle; }
+.pf-badge-prov { background: rgba(255,183,77,0.15); color: var(--accent-amber); border: 1px solid rgba(255,183,77,0.3); }
+.pf-badge-band { background: rgba(239,83,80,0.15); color: var(--accent-red); border: 1px solid rgba(239,83,80,0.3); }
+.pf-badge-dte { background: rgba(74,158,255,0.15); color: var(--accent-blue); border: 1px solid rgba(74,158,255,0.3); }
+.pf-charts-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.pf-chart-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.pf-chart-card h4 { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 12px 0; }
+.pf-chart-card canvas { max-height: 260px; }
+.pf-wide-chart { grid-column: 1 / -1; }
+@media (max-width: 768px) {
+  .pf-metrics { grid-template-columns: repeat(3, 1fr); }
+  .pf-charts-row { grid-template-columns: 1fr; }
+  .pf-table { font-size: 12px; }
+  .pf-table th, .pf-table td { padding: 6px 4px; }
+}
 </style>
 </head>
 <body>
@@ -738,6 +767,10 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
     <i data-lucide="calendar" aria-hidden="true"></i>
     <span class="sidebar-label">Calendar</span>
   </button>
+  <button class="sidebar-item" data-section="portfolio" id="sb-portfolio" onclick="switchSection('portfolio')">
+    <i data-lucide="pie-chart" aria-hidden="true"></i>
+    <span class="sidebar-label">Portfolio</span>
+  </button>
   <button class="sidebar-item" data-section="research" id="sb-research" onclick="switchSection('research')">
     <i data-lucide="flask-conical" aria-hidden="true"></i>
     <span class="sidebar-label">Research</span>
@@ -761,6 +794,7 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
   <section id="sec-themes" class="section active"></section>
   <section id="sec-signals" class="section"></section>
   <section id="sec-calendar" class="section"></section>
+  <section id="sec-portfolio" class="section"></section>
   <section id="sec-research" class="section"></section>
   <section id="sec-settings" class="section"></section>
 </main>
@@ -790,6 +824,10 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
       <i data-lucide="calendar" aria-hidden="true"></i>
       <span>Calendar</span>
     </button>
+    <button class="bnav-btn" id="bn-portfolio" onclick="switchSection('portfolio')">
+      <i data-lucide="pie-chart" aria-hidden="true"></i>
+      <span>Portfolio</span>
+    </button>
     <button class="bnav-btn" id="bn-research" onclick="switchSection('research')">
       <i data-lucide="flask-conical" aria-hidden="true"></i>
       <span>Research</span>
@@ -815,7 +853,7 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 // ═══════════════════════════════════════════
 const D = {
   generated: "2026-03-31T23:00:00",
-  portfolio: {deployedPct:74.28, cashPct:25.72, slotsUsed:4, maxSlots:12, wtdConviction:9.3},
+  portfolio: {deployedPct:79.28, cashPct:20.72, slotsUsed:5, maxSlots:12, wtdConviction:9.1},
   tickers: {
     VOW: {
       company:"Vow ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:"INVESTMENT",
@@ -1099,16 +1137,16 @@ const D = {
       marketCap:"\u00A39.2B"
     },
     DOCS: {
-      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:null,
-      allocation:0, conviction:7.5, clusterA:86.7, clusterB:84, patternMatch:34.5, rc:3, instrument:"Shares", currency:"USD",
-      price:"$23.69", change:-4.86, inceptionReturn:0,
+      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:"INVESTMENT",
+      allocation:5, conviction:7.5, clusterA:86.7, clusterB:84, patternMatch:34.5, rc:3, instrument:"Shares", currency:"USD",
+      price:"$23.69", change:-4.86, inceptionReturn:0, costBasis:23.69, entryDate:"2026-03-31",
       entryTiming:{signal:"LEAN",reviewDate:"2026-05-15",rationale:"MFN fading; AI launch timing active overhang. Bear case ($23) \u2248 current price (\u22123%). Expected return +39%."},
       dimensions:{D1:{score:4,type:"fact",rationale:"Revenue re-accelerated to 20% FY2025; margins expanding; 300K AI prescribers at $0 revenue = genuine $0-to-something inflection. SBC grew 42% YoY; governance 2/5."},D2:{score:5,type:"fact",rationale:"Reverse DCF prices 2.7% growth for 20% grower. EV/FCF 13.7x cheapest in history. Bear $23 \u2248 current; expected return +39%."},D3:{score:4,type:"inference",rationale:"Category misclassification, $0 AI revenue = $0 AI value, Q4 MFN timing mask, post-COVID anchoring. Dual-class governance bounded as 9% discount."},D4:{score:5,type:"fact",rationale:"$735M cash = $3.97/share; distressed 10x floor $18.40. Bear DCF $23 \u2248 current. All failure modes bounded."},D5:{score:4,type:"inference",rationale:"Two conditions: core 10%+ growth (HOLDING), AI launch within 12mo (AT RISK). Even if #2 fails, bear \u2248 current."},D6:{score:5,type:"inference",rationale:"6 paths: pharma AI ($10-100M), hospital AI ($9-36M ARR), M3 ARPU convergence, buybacks (13% of shares), paid search TAM, Scribe enterprise."},D7:{score:3,type:"fact",rationale:"19 filings + 22 transcripts. Critical gap: AI pricing model rests on inference. Customer D unknown. PSU conditions not extracted."},D8:{score:4,type:"inference",rationale:"Q4 FY2026 earnings May 2026; AI launch H2 CY2026; $583M buyback. AI catalyst specific but 3-year deferral track record."}},
       pm:{total:34.5,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-29",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"$33 PW FV vs $24 (+39%). Reverse DCF prices 2.7% growth for 20% grower. Bear $23 = \u22123%. 80% of scenarios deliver +38-69%."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"H2 2026 commercial AI launch. Q4 FY2026 earnings May 2026. DocsGPT 300K prescribers. 3-yr deferral history."},{id:"U3",name:"Business Quality",score:4.5,max:5,rationale:"90% GM, 47% FCF margin, 18-qtr beat streak. CFO on leave + Q4 deceleration + SBC 12.7% FY2025."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$735M cash, zero debt. $583M buyback. Fortress."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"85%+ US physicians. ASCO exclusive. 2x preferred vs nearest competitor. Irreplaceable."},{id:"F2",name:"AI Integration Maturity",score:3,max:5,rationale:"300K DocsGPT users, 100+ hospital contracts, Scribe 75%+ retention. ZERO revenue. H2 2026 launch."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"Absent from AI ETFs. Market prices AI at near-zero. Category = healthcare IT, not AI."},{id:"F4",name:"Recession Armor",score:4,max:5,rationale:"18-qtr beat streak. Pharma non-cyclical. Revenue never declined. Q4 decel is real risk."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"19 filings + 22 transcripts"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+39% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"$735M cash, zero debt"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q4 earnings May, AI launch H2"},{id:"FP-6",name:"Single-Contract Downside",matched:"partial",note:"Customer D at 11% of Q2 revenue"}]},
       fairValue:{baseCaseFV:"$33",probWeightedFV:"$33",bearCaseFV:"$23",bullCaseFV:"$40",methodology:"Owner Earnings DCF (Method A)",thesisType:"AI-Fortress Monopoly",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Bear",price:"$23",prob:20},{name:"Base",price:"$33",prob:50},{name:"Bull",price:"$40",prob:30}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:false},{gate:"Mispricing understood",met:false}],
-      maxAlloc:10, bandViolation:false,
+      maxAlloc:10, bandViolation:true, provisional:true, provisionalGate:"RC 4/5 by May 15",
       catalysts:["Q4 FY2026 earnings May 2026","H2 CY2026 AI commercial launch","Q1 FY2027 earnings Aug 2026","$583M buyback ongoing","OpenEvidence litigation"],
       premortem:["AI launch delay (H2 2026 \u2192 H1 2027+): \u22125-10%","Customer D churn (11% of Q rev): \u22128-12%","OpenEvidence displacement: \u221210-15% over 2-3yr","MFN structural pressure: \u221215-20%","CFO Bryson non-return: \u22123-5%","Dual-class misalignment: \u221215-30% tail"],
       variantViews:["AI-Fortress 34.5/40. Physician monopoly (85%+ US docs). $735M cash / zero debt. ZERO AI revenue in guidance. Market prices 2.7% growth for 20% grower. SBC elevated near-term (17.1% FY2026) but buybacks overwhelm issuance 3x."],
@@ -1378,7 +1416,8 @@ const D = {
     {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:6.58,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:172,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:150,zone:"green"}]},
     {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:263,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:241,zone:"green"}]},
     {ticker:"CRTO",leg:1,instrument:"Shares",strike:"—",expiry:"—",alloc:10,moneyness:"Core position",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"—",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"}]},
-    {ticker:"CRTO",leg:2,instrument:"Call",strike:"$20",expiry:"2027-01-15",alloc:3,moneyness:"OTM (~$3 OTM)",dte:290,thetaProfile:"Minimal at this DTE; roll at DTE <30 (mid-Dec 2026)",thirtyDteMark:"2026-12-16",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Buyback acceleration",date:"Q3+ 2026",dteAtCatalyst:null,zone:"green"}]}
+    {ticker:"CRTO",leg:2,instrument:"Call",strike:"$20",expiry:"2027-01-15",alloc:3,moneyness:"OTM (~$3 OTM)",dte:290,thetaProfile:"Minimal at this DTE; roll at DTE <30 (mid-Dec 2026)",thirtyDteMark:"2026-12-16",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Buyback acceleration",date:"Q3+ 2026",dteAtCatalyst:null,zone:"green"}]},
+    {ticker:"DOCS",leg:1,instrument:"Shares",strike:"\u2014",expiry:"\u2014",alloc:5,moneyness:"Core position (provisional)",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"\u2014",catalystAlignment:[{catalyst:"Q4 FY2026 earnings",date:"May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"AI commercial launch",date:"H2 2026",dteAtCatalyst:null,zone:"green"}]}
   ],
   themes:[
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR","OSW","CHA"],activeCount:3,monitoringCount:4,parkedCount:4},
@@ -1452,7 +1491,8 @@ const D = {
     {type:"info",text:"Niche Industrial Monopolies theme created (Mar 29). OFLX: PM 30/35 (STRONG). Zero analysts. 82% family + insider buying."},
     {type:"info",text:"Hormuz discovery downgraded 4\u21923 (alpha window narrowing). Priority 20\u219215."},
     {type:"amber",text:"CRTO entered PORTFOLIO as INVESTMENT (Mar 31). Hybrid: 10% shares (~$17.46) + 3% Jan'27 $20C (~$4.70). 13% capital, ~17% effective. Conviction 8/10. RC 5/5. D2=6/6 Exceptional. Bear floor $33 = 92% above current."},
-    {type:"amber",text:"CRTO $20C Jan 15 2027: 290 DTE. Roll trigger mid-Dec 2026. ADD trigger: Q1 CeT >= $245M (~May). Next catalyst: Q1 earnings."}
+    {type:"amber",text:"CRTO $20C Jan 15 2027: 290 DTE. Roll trigger mid-Dec 2026. ADD trigger: Q1 CeT >= $245M (~May). Next catalyst: Q1 earnings."},
+    {type:"amber",text:"DOCS entered PORTFOLIO as INVESTMENT (Provisional, Mar 31). 5% shares at ~$23.69. RC 3/5 \u2014 trim to 4% if RC not 4/5 by May 15 Q4 earnings. Band violation: LEAN caps at 4%."}
   ],
   catalystTimeline:[
     {date:"2026-03-31",ticker:"CF",event:"USDA Prospective Plantings",type:"Hard",overdue:false},
@@ -1485,7 +1525,8 @@ const D = {
     {date:"2026-12-16",ticker:"CRTO",event:"$20C Jan 15 2027 — 30 DTE roll decision point",type:"Hard",overdue:false},
     {date:"2026-12-18",ticker:"GTT",event:"\u20AC190C Dec expiry",type:"Hard",overdue:false},
     {date:"2027-01-15",ticker:"CRTO",event:"$20C Jan expiry",type:"Hard",overdue:false},
-    {date:"2027-06-27",ticker:"CRTO",event:"Russell reconstitution (8-10% float passive buying)",type:"Hard",overdue:false}
+    {date:"2027-06-27",ticker:"CRTO",event:"Russell reconstitution (8-10% float passive buying)",type:"Hard",overdue:false},
+    {date:"2026-05-15",ticker:"DOCS",event:"Q4 FY2026 earnings \u2014 RC gate (4/5 required to maintain 5%)",type:"Hard",overdue:false}
   ],
   priorityQueue:[
     {score:25.0,title:"CF: USDA Plantings Mar 31 TOMORROW 11AM CDT",action:"Catalyst TOMORROW. Pre-report consensus 94.3-94.5M corn acres. CF threshold: >93M = demand intact, <92M = volume headwind. Log result immediately."},
@@ -1497,7 +1538,8 @@ const D = {
     {score:4.0,title:"VOW: FY2025 Annual Report (Apr 29) + Q1 results (May 20)",action:"Annual report in 30 days (audited impairment, covenant detail). Q1 in 51 days (first ~68% new-contract mix read)."},
     {score:3.5,title:"CDLR: FY2025 20-F monitoring",action:"Full onboarding complete. 20-F Q2 2026 for fuel pass-through + Hornsea 3 detail."},
     {score:5.0,title:"CRTO: Q1 2026 earnings (~May) — ADD trigger",action:"CeT >= $245M = ADD shares to 15-20%. First data point as INVESTMENT position. Monitor RM trough confirmation + PM trajectory."},
-    {score:3.0,title:"ERII: Monitor for inflection (entry blocked)",action:"Mgmt credibility block (M3+M5: 2.5/5). Value trap risk. Price alert $6. Watch insider purchases + guidance hits."}
+    {score:3.0,title:"ERII: Monitor for inflection (entry blocked)",action:"Mgmt credibility block (M3+M5: 2.5/5). Value trap risk. Price alert $6. Watch insider purchases + guidance hits."},
+    {score:7.5,title:"DOCS: RC 3/5 \u2192 4/5 gate at May 15 Q4 earnings",action:"Provisional 5% position. LEAN caps at 4%. Must advance RC to 4/5 by May 15 or trim to 4%. Key: catalysts ascertained + mispricing confirmed."}
   ],
   thresholdMonitors:[
     {ticker:"CF",threshold:"Tampa NH3 >$700/t",current:"$775/t",status:"breached"},
@@ -1606,6 +1648,7 @@ function renderSection(id) {
     case 'themes': renderThemes(); break;
     case 'signals': renderSignals(); break;
     case 'calendar': renderCalendar(); break;
+    case 'portfolio': renderPortfolio(); break;
     case 'research': renderResearch(); break;
     case 'settings': renderSettings(); break;
   }
@@ -2754,6 +2797,313 @@ function renderMiniCard(sym, t) {
   h += '</div>';
   return h;
 }
+// ═══════════════════════════════════════════
+// RENDER: PORTFOLIO
+// ═══════════════════════════════════════════
+var _pfCharts = {};
+function renderPortfolio() {
+  var el = document.getElementById('sec-portfolio');
+  var h = '<h2 class="section-title">Portfolio</h2>';
+
+  // ── Gather positions ──
+  var positions = [];
+  Object.keys(D.tickers).forEach(function(sym) {
+    var t = D.tickers[sym];
+    if (t.portfolioType) positions.push({sym:sym, t:t});
+  });
+  positions.sort(function(a,b) { return (b.t.allocation||0) - (a.t.allocation||0); });
+
+  // ── Helper: parse price string to number ──
+  function pn(s) { if (typeof s === 'number') return s; if (!s) return 0; return parseFloat(String(s).replace(/[^0-9.\-]/g,'')); }
+  function fmtPct(v) { return v >= 0 ? '+' + v.toFixed(1) + '%' : v.toFixed(1) + '%'; }
+  function pctCls(v) { return v > 0 ? 'pf-pos' : v < 0 ? 'pf-neg' : 'pf-neut'; }
+
+  // ── Compute portfolio-level metrics ──
+  var totalDeployed = D.portfolio.deployedPct;
+  var totalCash = D.portfolio.cashPct;
+  var wtdConv = D.portfolio.wtdConviction;
+  var wtdUpside = 0, wtdBearDown = 0, allocSum = 0;
+  var nearestDte = Infinity;
+  positions.forEach(function(p) {
+    var t = p.t, alloc = t.allocation || 0;
+    var cur = pn(t.price), pw = t.fairValue ? pn(t.fairValue.probWeightedFV) : cur;
+    var bear = t.fairValue ? pn(t.fairValue.bearCaseFV) : cur;
+    if (cur > 0 && pw > 0) wtdUpside += alloc * ((pw - cur) / cur);
+    if (cur > 0 && bear > 0) wtdBearDown += alloc * ((bear - cur) / cur);
+    allocSum += alloc;
+  });
+  if (allocSum > 0) { wtdUpside /= allocSum; wtdBearDown /= allocSum; }
+  (D.options||[]).forEach(function(o) { if (o.dte && o.dte < nearestDte) nearestDte = o.dte; });
+
+  // ── Summary Metrics Row ──
+  h += '<div class="pf-metrics">';
+  h += '<div class="pf-metric-card"><div class="pf-mv">' + totalDeployed.toFixed(1) + '%</div><div class="pf-ml">Deployed</div></div>';
+  h += '<div class="pf-metric-card"><div class="pf-mv">' + totalCash.toFixed(1) + '%</div><div class="pf-ml">Cash</div></div>';
+  h += '<div class="pf-metric-card"><div class="pf-mv">' + wtdConv.toFixed(1) + '</div><div class="pf-ml">Wtd Conviction</div></div>';
+  h += '<div class="pf-metric-card"><div class="pf-mv" style="color:var(--accent-green)">' + fmtPct(wtdUpside * 100) + '</div><div class="pf-ml">PW Upside (Wtd)</div></div>';
+  h += '<div class="pf-metric-card"><div class="pf-mv" style="color:var(--accent-red)">' + fmtPct(wtdBearDown * 100) + '</div><div class="pf-ml">Bear Drawdown (Wtd)</div></div>';
+  h += '<div class="pf-metric-card"><div class="pf-mv">' + (nearestDte === Infinity ? '\u2014' : nearestDte + 'd') + '</div><div class="pf-ml">Nearest DTE</div></div>';
+  h += '</div>';
+
+  // ── Position Summary Table ──
+  h += '<div class="card pf-table-wrap"><table class="pf-table">';
+  h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc %</th><th>Conv.</th><th>Cluster A/B</th><th>RC</th><th>Price</th><th>PW FV</th><th>Upside</th><th>Flags</th></tr></thead><tbody>';
+  positions.forEach(function(p) {
+    var t = p.t, sym = p.sym;
+    var cur = pn(t.price), pw = t.fairValue ? pn(t.fairValue.probWeightedFV) : 0;
+    var upside = cur > 0 && pw > 0 ? ((pw - cur) / cur) * 100 : 0;
+    var opts = (D.options||[]).filter(function(o) { return o.ticker === sym; });
+    var instruments = [];
+    opts.forEach(function(o) {
+      if (o.instrument === 'Shares') instruments.push('Shares');
+      else instruments.push(o.instrument + ' ' + o.strike + (o.dte != null ? ' <span class="pf-badge pf-badge-dte">' + o.dte + 'D</span>' : ''));
+    });
+    var instStr = instruments.length ? instruments.join(' + ') : (t.instrument || '\u2014');
+    var flags = '';
+    if (t.provisional) flags += '<span class="pf-badge pf-badge-prov">PROVISIONAL</span>';
+    if (t.bandViolation) flags += '<span class="pf-badge pf-badge-band">BAND</span>';
+    h += '<tr>';
+    h += '<td class="mono">' + sym + '</td>';
+    h += '<td>' + instStr + '</td>';
+    h += '<td style="font-size:12px">' + esc(t.theme||'') + '</td>';
+    h += '<td class="mono">' + (t.allocation||0) + '%</td>';
+    h += '<td class="mono">' + (t.conviction||'\u2014') + '</td>';
+    h += '<td class="mono" style="font-size:12px">' + (t.clusterA ? t.clusterA + '/' + t.clusterB : '\u2014') + '</td>';
+    h += '<td class="mono">' + (t.rc != null ? t.rc + '/5' : '\u2014') + '</td>';
+    h += '<td class="mono">' + esc(t.price||'') + '</td>';
+    h += '<td class="mono">' + (pw ? t.fairValue.probWeightedFV : '\u2014') + '</td>';
+    h += '<td class="mono ' + pctCls(upside) + '">' + fmtPct(upside) + '</td>';
+    h += '<td>' + (flags || '\u2014') + '</td>';
+    h += '</tr>';
+  });
+  h += '</tbody></table></div>';
+
+  // ── Asymmetry Table ──
+  h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Asymmetry Analysis (' + positions.length + ')</button>';
+  h += '<div class="section-body"><div class="card pf-table-wrap"><table class="pf-table">';
+  h += '<thead><tr><th>Ticker</th><th>Bear FV</th><th>Current</th><th>PW FV</th><th>Bull FV</th><th>Downside</th><th>Upside</th><th>Asym. Ratio</th><th>Margin of Safety</th></tr></thead><tbody>';
+  positions.forEach(function(p) {
+    var t = p.t, fv = t.fairValue;
+    if (!fv) return;
+    var cur = pn(t.price), bear = pn(fv.bearCaseFV), pw = pn(fv.probWeightedFV), bull = pn(fv.bullCaseFV);
+    var downside = cur > 0 ? ((bear - cur) / cur) * 100 : 0;
+    var upside = cur > 0 ? ((pw - cur) / cur) * 100 : 0;
+    var asym = Math.abs(downside) > 0 ? Math.abs(upside) / Math.abs(downside) : 99;
+    var mos = pw > 0 ? ((pw - cur) / pw) * 100 : 0;
+    var asymCls = asym >= 2 ? 'pf-pos' : asym >= 1 ? 'pf-neut' : 'pf-neg';
+    h += '<tr>';
+    h += '<td class="mono">' + p.sym + '</td>';
+    h += '<td class="mono">' + (fv.bearCaseFV || '\u2014') + '</td>';
+    h += '<td class="mono">' + esc(t.price||'') + '</td>';
+    h += '<td class="mono">' + (fv.probWeightedFV || '\u2014') + '</td>';
+    h += '<td class="mono">' + (fv.bullCaseFV || '\u2014') + '</td>';
+    h += '<td class="mono pf-neg">' + fmtPct(downside) + '</td>';
+    h += '<td class="mono pf-pos">' + fmtPct(upside) + '</td>';
+    h += '<td class="mono ' + asymCls + '">' + asym.toFixed(1) + 'x</td>';
+    h += '<td class="mono ' + pctCls(mos) + '">' + fmtPct(mos) + '</td>';
+    h += '</tr>';
+  });
+  h += '</tbody></table></div></div>';
+
+  // ── Options Monitor ──
+  var optLegs = (D.options||[]).filter(function(o) { return o.instrument !== 'Shares'; });
+  if (optLegs.length) {
+    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Options Monitor (' + optLegs.length + ')</button>';
+    h += '<div class="section-body"><div class="card pf-table-wrap"><table class="pf-table">';
+    h += '<thead><tr><th>Ticker</th><th>Strike</th><th>Expiry</th><th>DTE</th><th>Alloc %</th><th>Moneyness</th><th>Theta Zone</th><th>30D Mark</th><th>Next Catalyst</th></tr></thead><tbody>';
+    optLegs.forEach(function(o) {
+      var zone = o.dte > 60 ? 'pf-pos' : o.dte > 30 ? 'pf-neut' : 'pf-neg';
+      var zoneLabel = o.dte > 60 ? 'GREEN' : o.dte > 30 ? 'AMBER' : 'RED';
+      var nextCat = (o.catalystAlignment && o.catalystAlignment.length) ? o.catalystAlignment[0].catalyst + ' (' + o.catalystAlignment[0].date + ')' : '\u2014';
+      h += '<tr>';
+      h += '<td class="mono">' + o.ticker + '</td>';
+      h += '<td class="mono">' + o.strike + '</td>';
+      h += '<td>' + o.expiry + '</td>';
+      h += '<td class="mono ' + zone + '">' + (o.dte || '\u2014') + '</td>';
+      h += '<td class="mono">' + o.alloc + '%</td>';
+      h += '<td style="font-size:12px">' + esc(o.moneyness) + '</td>';
+      h += '<td class="' + zone + '" style="font-weight:600">' + zoneLabel + '</td>';
+      h += '<td>' + o.thirtyDteMark + '</td>';
+      h += '<td style="font-size:12px">' + esc(nextCat) + '</td>';
+      h += '</tr>';
+    });
+    h += '</tbody></table></div></div>';
+  }
+
+  // ── Chart containers ──
+  h += '<div class="pf-charts-row">';
+  h += '<div class="pf-chart-card"><h4>Allocation by Position</h4><canvas id="pfChartPos"></canvas></div>';
+  h += '<div class="pf-chart-card"><h4>Allocation by Theme</h4><canvas id="pfChartTheme"></canvas></div>';
+  h += '<div class="pf-chart-card"><h4>Allocation by Instrument</h4><canvas id="pfChartInstr"></canvas></div>';
+  h += '</div>';
+  h += '<div class="pf-charts-row">';
+  h += '<div class="pf-chart-card"><h4>Conviction vs Allocation</h4><canvas id="pfChartBubble"></canvas></div>';
+  h += '<div class="pf-chart-card"><h4>Upside / Downside Asymmetry</h4><canvas id="pfChartAsym"></canvas></div>';
+  h += '</div>';
+
+  el.innerHTML = h;
+
+  // ── Render charts after DOM is populated ──
+  setTimeout(function() { renderPfCharts(positions); }, 50);
+}
+
+function renderPfCharts(positions) {
+  // Destroy old charts
+  Object.keys(_pfCharts).forEach(function(k) { if (_pfCharts[k]) _pfCharts[k].destroy(); });
+  _pfCharts = {};
+
+  var pfColors = ['#4A9EFF','#FF6B6B','#4ECDC4','#FFD93D','#C084FC','#FF8A65','#81C784','#90CAF9'];
+  function pn(s) { if (typeof s === 'number') return s; if (!s) return 0; return parseFloat(String(s).replace(/[^0-9.\-]/g,'')); }
+
+  // ── 1. Allocation by Position (doughnut) ──
+  var posLabels = positions.map(function(p) { return p.sym; });
+  posLabels.push('Cash');
+  var posData = positions.map(function(p) { return p.t.allocation || 0; });
+  posData.push(D.portfolio.cashPct);
+  var posColors = pfColors.slice(0, positions.length);
+  posColors.push('rgba(142,142,153,0.4)');
+
+  var ctx1 = document.getElementById('pfChartPos');
+  if (ctx1) {
+    _pfCharts.pos = new Chart(ctx1, {
+      type: 'doughnut',
+      data: { labels: posLabels, datasets: [{ data: posData, backgroundColor: posColors, borderWidth: 0 }] },
+      options: {
+        responsive: true, maintainAspectRatio: true, cutout: '55%',
+        plugins: {
+          legend: { position: 'right', labels: { color: '#8E8E99', font: { size: 11 }, padding: 8, usePointStyle: true, pointStyle: 'circle' } },
+          tooltip: { callbacks: { label: function(c) { return c.label + ': ' + c.parsed.toFixed(1) + '%'; } } }
+        }
+      }
+    });
+  }
+
+  // ── 2. Allocation by Theme (doughnut) ──
+  var themeMap = {};
+  positions.forEach(function(p) {
+    var th = p.t.theme || 'Other';
+    // Shorten theme names
+    if (th.indexOf('Sentiments') > -1 || th.indexOf('Mismatch') > -1) th = 'Sentiment Mismatch';
+    else if (th.indexOf('Hormuz') > -1) th = 'Hormuz';
+    else if (th.indexOf('AI') > -1) th = 'AI Disruption';
+    else if (th.indexOf('Derived') > -1) th = 'Derived-Demand';
+    themeMap[th] = (themeMap[th] || 0) + (p.t.allocation || 0);
+  });
+  var themeLabels = Object.keys(themeMap);
+  themeLabels.push('Cash');
+  var themeData = themeLabels.map(function(l) { return l === 'Cash' ? D.portfolio.cashPct : themeMap[l]; });
+  var themeColors = pfColors.slice(0, themeLabels.length - 1);
+  themeColors.push('rgba(142,142,153,0.4)');
+
+  var ctx2 = document.getElementById('pfChartTheme');
+  if (ctx2) {
+    _pfCharts.theme = new Chart(ctx2, {
+      type: 'doughnut',
+      data: { labels: themeLabels, datasets: [{ data: themeData, backgroundColor: themeColors, borderWidth: 0 }] },
+      options: {
+        responsive: true, maintainAspectRatio: true, cutout: '55%',
+        plugins: {
+          legend: { position: 'right', labels: { color: '#8E8E99', font: { size: 11 }, padding: 8, usePointStyle: true, pointStyle: 'circle' } },
+          tooltip: { callbacks: { label: function(c) { return c.label + ': ' + c.parsed.toFixed(1) + '%'; } } }
+        }
+      }
+    });
+  }
+
+  // ── 3. Allocation by Instrument (doughnut) ──
+  var instrMap = { Shares: 0, Options: 0 };
+  (D.options||[]).forEach(function(o) {
+    if (o.instrument === 'Shares') instrMap.Shares += (o.alloc || 0);
+    else instrMap.Options += (o.alloc || 0);
+  });
+  var instrLabels = ['Shares', 'Options', 'Cash'];
+  var instrData = [instrMap.Shares, instrMap.Options, D.portfolio.cashPct];
+  var instrColors = ['#4A9EFF', '#C084FC', 'rgba(142,142,153,0.4)'];
+
+  var ctx3 = document.getElementById('pfChartInstr');
+  if (ctx3) {
+    _pfCharts.instr = new Chart(ctx3, {
+      type: 'doughnut',
+      data: { labels: instrLabels, datasets: [{ data: instrData, backgroundColor: instrColors, borderWidth: 0 }] },
+      options: {
+        responsive: true, maintainAspectRatio: true, cutout: '55%',
+        plugins: {
+          legend: { position: 'right', labels: { color: '#8E8E99', font: { size: 11 }, padding: 8, usePointStyle: true, pointStyle: 'circle' } },
+          tooltip: { callbacks: { label: function(c) { return c.label + ': ' + c.parsed.toFixed(1) + '%'; } } }
+        }
+      }
+    });
+  }
+
+  // ── 4. Conviction vs Allocation bubble ──
+  var bubbleData = positions.map(function(p, i) {
+    var t = p.t, cur = pn(t.price), pw = t.fairValue ? pn(t.fairValue.probWeightedFV) : cur;
+    var upside = cur > 0 && pw > 0 ? ((pw - cur) / cur) * 100 : 0;
+    return { x: t.conviction || 0, y: t.allocation || 0, r: Math.max(6, Math.min(30, Math.abs(upside) / 3)), label: p.sym, upside: upside };
+  });
+
+  var ctx4 = document.getElementById('pfChartBubble');
+  if (ctx4) {
+    _pfCharts.bubble = new Chart(ctx4, {
+      type: 'bubble',
+      data: {
+        datasets: bubbleData.map(function(d, i) {
+          return { label: d.label, data: [{ x: d.x, y: d.y, r: d.r }], backgroundColor: pfColors[i % pfColors.length] + '99', borderColor: pfColors[i % pfColors.length], borderWidth: 2 };
+        })
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        scales: {
+          x: { title: { display: true, text: 'Conviction', color: '#8E8E99' }, min: 0, max: 11, grid: { color: 'rgba(46,46,58,0.3)' }, ticks: { color: '#8E8E99' } },
+          y: { title: { display: true, text: 'Allocation %', color: '#8E8E99' }, min: 0, grid: { color: 'rgba(46,46,58,0.3)' }, ticks: { color: '#8E8E99' } }
+        },
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#8E8E99', font: { size: 11 }, usePointStyle: true, pointStyle: 'circle' } },
+          tooltip: { callbacks: { label: function(c) { var d = bubbleData[c.datasetIndex]; return d.label + ': Conv ' + d.x + ', Alloc ' + d.y + '%, Upside ' + d.upside.toFixed(1) + '%'; } } }
+        }
+      }
+    });
+  }
+
+  // ── 5. Upside/Downside asymmetry bar ──
+  var asymLabels = [], asymBear = [], asymPW = [], asymBull = [];
+  positions.forEach(function(p) {
+    var t = p.t, fv = t.fairValue;
+    if (!fv) return;
+    var cur = pn(t.price), bear = pn(fv.bearCaseFV), pw = pn(fv.probWeightedFV), bull = pn(fv.bullCaseFV);
+    asymLabels.push(p.sym);
+    asymBear.push(cur > 0 ? ((bear - cur) / cur) * 100 : 0);
+    asymPW.push(cur > 0 ? ((pw - cur) / cur) * 100 : 0);
+    asymBull.push(cur > 0 ? ((bull - cur) / cur) * 100 : 0);
+  });
+
+  var ctx5 = document.getElementById('pfChartAsym');
+  if (ctx5) {
+    _pfCharts.asym = new Chart(ctx5, {
+      type: 'bar',
+      data: {
+        labels: asymLabels,
+        datasets: [
+          { label: 'Bear Downside', data: asymBear, backgroundColor: 'rgba(239,83,80,0.7)', borderRadius: 4 },
+          { label: 'PW Upside', data: asymPW, backgroundColor: 'rgba(76,175,80,0.7)', borderRadius: 4 },
+          { label: 'Bull Upside', data: asymBull, backgroundColor: 'rgba(76,175,80,0.3)', borderRadius: 4 }
+        ]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: true,
+        scales: {
+          x: { grid: { color: 'rgba(46,46,58,0.3)' }, ticks: { color: '#8E8E99', callback: function(v) { return v + '%'; } } },
+          y: { grid: { display: false }, ticks: { color: '#8E8E99', font: { weight: '600' } } }
+        },
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#8E8E99', font: { size: 11 }, usePointStyle: true, pointStyle: 'rect' } },
+          tooltip: { callbacks: { label: function(c) { return c.dataset.label + ': ' + c.parsed.x.toFixed(1) + '%'; } } }
+        }
+      }
+    });
+  }
+}
+
 function renderResearch() {
   var el = document.getElementById('sec-research');
   var h = '<h2 class="section-title">Research Pipeline</h2>';
