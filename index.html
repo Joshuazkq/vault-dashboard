@@ -1331,17 +1331,18 @@ const D = {
       marketCap:"$6.5B"
     },
     CRTO: {
-      company:"Criteo S.A.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
-      allocation:0, conviction:0, patternMatch:26, rc:2, instrument:"Shares", currency:"USD",
-      price:"$17.18", change:0, inceptionReturn:0,
-      fairValue:null,
-      scenarios:[],
-      rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:false},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
-      catalysts:["Q1 2026 CeT >= $245M (trough confirm)","Insider buying signal","CapEx trajectory clarity"],
-      premortem:["PM deceleration +7%->+5%","No insider buying (CFO sold at peak)","Ad tech base rate dissolution"],
-      variantViews:["Commerce media platform; sole OpenAI ChatGPT ad partner; 1.2x EV/EBITDA (trailing), zero debt, $389M cash. Debate: 5 OPEN / 0 COUNTERED."],
-      businessBackground:"Commerce media platform. Sole OpenAI ChatGPT ad partner. Shopper Graph (720M daily shoppers). FY2026 FCF compressed.",
-      marketCap:"$980M"
+      company:"Criteo S.A.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:"INVESTMENT",
+      allocation:13, conviction:8, clusterA:100, clusterB:88, rc:5, instrument:"Hybrid", currency:"USD",
+      price:"$17.18", change:0, inceptionReturn:0, entryPrice:"$17.46",
+      dimensions:{D1:{score:5,type:"fact"},D2:{score:6,type:"fact"},D3:{score:4,type:"inference"},D4:{score:5,type:"fact"},D5:{score:4,type:"fact"},D6:{score:5,type:"inference"},D7:{score:4,type:"fact"},D8:{score:4,type:"inference"}},
+      fairValue:{baseCaseFV:"$70",probWeightedFV:"$79",bearCaseFV:"$33",bullCaseFV:"$111",methodology:"EV/EBITDA Peer-Anchored (FY2027E)",thesisType:"Type 2 Turnaround + Type 5 Event-Driven",lastUpdated:"2026-03-31"},
+      scenarios:[{name:"Bear",price:"$33",prob:15},{name:"Base",price:"$70",prob:50},{name:"Bull",price:"$111",prob:35}],
+      rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:true},{gate:"Mispricing",met:true}],
+      catalysts:["Q1 2026 earnings ~May (CeT >= $245M trough confirm)","Luxembourg redom Q3 2026","Russell reconstitution June 2027","$200M buyback (ongoing)","OpenAI/MCP scaling 2026-27"],
+      premortem:["Third RM client loss (secular pattern)","PM CeT decline >10% for 2+ quarters","US redom delayed past Apr 2027 rank day","OpenAI adds competing DSP integrations"],
+      variantViews:["Market conflates CRTO with commodity DSP. Shopper Graph validated by OpenAI (sole partner) + MCP (platform-agnostic commerce data for ALL LLMs). 1.2x EV/EBITDA ($502M EV) on $407M ATH EBITDA. Bear case floor ($33) = 92% above current price. Asymmetry 20:1."],
+      businessBackground:"Commerce media platform. MCP-based agentic commerce data layer for all LLMs. Shopper Graph: 720M daily shoppers, $1T transactions, 4.5B SKUs. $378M net cash, zero debt. FY2025: EBITDA $407M (ATH), OCF $311M (ATH).",
+      marketCap:"$880M"
     },
     CHA: {
       company:"Chagee Holdings", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
@@ -1373,14 +1374,16 @@ const D = {
   options:[
     {ticker:"CF",leg:1,instrument:"Call",strike:"$90",expiry:"2026-06-18",alloc:10,moneyness:"Deep ITM (~$46 intrinsic)",dte:80,thetaProfile:"Accelerates mid-May; delta ~0.85-0.95",thirtyDteMark:"2026-05-19",catalystAlignment:[{catalyst:"USDA Plantings",date:"Mar 31",dteAtCatalyst:79,zone:"green"},{catalyst:"Q1 earnings",date:"May 6",dteAtCatalyst:43,zone:"green"}]},
     {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:6.58,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:172,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:150,zone:"green"}]},
-    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:263,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:241,zone:"green"}]}
+    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:263,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:241,zone:"green"}]},
+    {ticker:"CRTO",leg:1,instrument:"Shares",strike:"—",expiry:"—",alloc:10,moneyness:"Core position",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"—",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"}]},
+    {ticker:"CRTO",leg:2,instrument:"Call",strike:"$20",expiry:"2027-01-15",alloc:3,moneyness:"OTM (~$3 OTM)",dte:290,thetaProfile:"Minimal at this DTE; roll at DTE <30 (mid-Dec 2026)",thirtyDteMark:"2026-12-16",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Buyback acceleration",date:"Q3+ 2026",dteAtCatalyst:null,zone:"green"}]}
   ],
   themes:[
     {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR","OSW","CHA"],activeCount:3,monitoringCount:4,parkedCount:4},
     {name:"Rare Earth Supply Chain",status:"STABLE",impact:4,discovery:4,priority:16,tickers:["MEI","NEO","UCU","DEFN","UUUU","ARA","PRE","BRE","ARU","VML"],activeCount:0,monitoringCount:10,parkedCount:4},
     {name:"Derived-Demand Monopoly",status:"STABLE",impact:4,discovery:4,priority:16,tickers:["ERII","CDLR"],activeCount:0,monitoringCount:2,parkedCount:3},
     {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:3,priority:15,tickers:["CF","GTT","NFE","MEOH","KIST"],activeCount:2,monitoringCount:1,parkedCount:2},
-    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["APP","TOI","SPSC","SGE","DOCS","WAY","PAYC","HSTM","WK","NICE","CRTO"],activeCount:7,monitoringCount:4,parkedCount:0},
+    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["APP","TOI","SPSC","SGE","DOCS","WAY","PAYC","HSTM","WK","NICE","CRTO"],activeCount:8,monitoringCount:3,parkedCount:0},
     {name:"Niche Industrial Monopolies",status:"NEW",impact:4,discovery:5,priority:20,tickers:["OFLX"],activeCount:0,monitoringCount:1,parkedCount:1},
     {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],activeCount:0,monitoringCount:2,parkedCount:0},
     {name:"Hidden Value SOTP",status:"DORMANT",impact:null,discovery:null,priority:null,tickers:["SLB","HON"],activeCount:0,monitoringCount:0,parkedCount:0}
@@ -1445,7 +1448,9 @@ const D = {
     {type:"info",text:"India Kharif procurement RESOLVED (Mar 30): domestic +23%, emergency imports 13.5 lakh tonnes, stocks +10 above prior year. Net slightly positive for CF demand."},
     {type:"info",text:"KENDR buyback EUR 10M completed Mar 24 (662,015 shares at avg \u20AC15.11). Q1 earnings ~May 20 = GO trigger gate."},
     {type:"info",text:"Niche Industrial Monopolies theme created (Mar 29). OFLX: PM 30/35 (STRONG). Zero analysts. 82% family + insider buying."},
-    {type:"info",text:"Hormuz discovery downgraded 4\u21923 (alpha window narrowing). Priority 20\u219215."}
+    {type:"info",text:"Hormuz discovery downgraded 4\u21923 (alpha window narrowing). Priority 20\u219215."},
+    {type:"amber",text:"CRTO entered PORTFOLIO as INVESTMENT (Mar 31). Hybrid: 10% shares (~$17.46) + 3% Jan'27 $20C (~$4.70). 13% capital, ~17% effective. Conviction 8/10. RC 5/5. D2=6/6 Exceptional. Bear floor $33 = 92% above current."},
+    {type:"amber",text:"CRTO $20C Jan 15 2027: 290 DTE. Roll trigger mid-Dec 2026. ADD trigger: Q1 CeT >= $245M (~May). Next catalyst: Q1 earnings."}
   ],
   catalystTimeline:[
     {date:"2026-03-31",ticker:"CF",event:"USDA Prospective Plantings",type:"Hard",overdue:false},
@@ -1460,6 +1465,7 @@ const D = {
     {date:"2026-04-29",ticker:"VOW",event:"FY2025 Annual Report \u2014 audited impairment, covenant detail",type:"Hard",overdue:false},
     {date:"2026-04-29",ticker:"OFLX",event:"Q1 FY2026 earnings \u2014 revenue inflection watch",type:"Hard",overdue:false},
     {date:"2026-05-05",ticker:"LCUT/HOFT",event:"USTR Section 301 public hearings begin",type:"Hard",overdue:false},
+    {date:"2026-05-01",ticker:"CRTO",event:"Q1 2026 earnings — CeT >= $245M trough confirm (ADD trigger)",type:"Hard",overdue:false},
     {date:"2026-05-06",ticker:"CF",event:"Q1 2026 earnings",type:"Hard",overdue:false},
     {date:"2026-05-19",ticker:"CF",event:"$90C 30 DTE decision point",type:"Hard",overdue:false},
     {date:"2026-05-20",ticker:"VOW",event:"Q1 2026 results \u2014 first ~68% new-contract mix",type:"Hard",overdue:false},
@@ -1472,8 +1478,12 @@ const D = {
     {date:"2026-08-19",ticker:"GTT",event:"€190C Sep 18 — 30 DTE decision point",type:"Hard",overdue:false},
     {date:"2026-09-18",ticker:"GTT",event:"\u20AC190C Sep expiry",type:"Hard",overdue:false},
     {date:"2026-09-30",ticker:"VOW",event:"EUR 27M cancellation rights expiry (vessels 3-4)",type:"Hard",overdue:false},
+    {date:"2026-09-30",ticker:"CRTO",event:"Luxembourg redomiciliation target (buyback unlock)",type:"Hard",overdue:false},
     {date:"2026-11-18",ticker:"GTT",event:"€190C Dec 18 — 30 DTE decision point",type:"Hard",overdue:false},
-    {date:"2026-12-18",ticker:"GTT",event:"\u20AC190C Dec expiry",type:"Hard",overdue:false}
+    {date:"2026-12-16",ticker:"CRTO",event:"$20C Jan 15 2027 — 30 DTE roll decision point",type:"Hard",overdue:false},
+    {date:"2026-12-18",ticker:"GTT",event:"\u20AC190C Dec expiry",type:"Hard",overdue:false},
+    {date:"2027-01-15",ticker:"CRTO",event:"$20C Jan expiry",type:"Hard",overdue:false},
+    {date:"2027-06-27",ticker:"CRTO",event:"Russell reconstitution (8-10% float passive buying)",type:"Hard",overdue:false}
   ],
   priorityQueue:[
     {score:25.0,title:"CF: USDA Plantings Mar 31 TOMORROW 11AM CDT",action:"Catalyst TOMORROW. Pre-report consensus 94.3-94.5M corn acres. CF threshold: >93M = demand intact, <92M = volume headwind. Log result immediately."},
@@ -1484,6 +1494,7 @@ const D = {
     {score:6.4,title:"GTT: Q1 Activity Update prep (Apr 21)",action:"Catalyst in 22 days \u00d7 11.28% weight = 6.4. New CEO first presentation. Nakilat 25-vessel charter confirms pipeline."},
     {score:4.0,title:"VOW: FY2025 Annual Report (Apr 29) + Q1 results (May 20)",action:"Annual report in 30 days (audited impairment, covenant detail). Q1 in 51 days (first ~68% new-contract mix read)."},
     {score:3.5,title:"CDLR: FY2025 20-F monitoring",action:"Full onboarding complete. 20-F Q2 2026 for fuel pass-through + Hornsea 3 detail."},
+    {score:5.0,title:"CRTO: Q1 2026 earnings (~May) — ADD trigger",action:"CeT >= $245M = ADD shares to 15-20%. First data point as INVESTMENT position. Monitor RM trough confirmation + PM trajectory."},
     {score:3.0,title:"ERII: Monitor for inflection (entry blocked)",action:"Mgmt credibility block (M3+M5: 2.5/5). Value trap risk. Price alert $6. Watch insider purchases + guidance hits."}
   ],
   thresholdMonitors:[
@@ -1501,6 +1512,7 @@ const D = {
     CF:[{ts:"2026-03-16",price:129.57},{ts:"2026-03-19",price:126.73},{ts:"2026-03-20",price:125.56},{ts:"2026-03-22",price:124.90},{ts:"2026-03-24",price:120.18},{ts:"2026-03-26",price:131.35},{ts:"2026-03-27",price:132.56},{ts:"2026-03-28",price:136.45},{ts:"2026-03-30",price:136.45}],
     GTT:[{ts:"2026-03-16",price:199.40},{ts:"2026-03-19",price:204.40},{ts:"2026-03-20",price:207.40},{ts:"2026-03-22",price:203.80},{ts:"2026-03-24",price:199.70},{ts:"2026-03-26",price:203.60},{ts:"2026-03-27",price:204.80},{ts:"2026-03-28",price:199.20},{ts:"2026-03-30",price:199.20}],
     VOW:[{ts:"2026-03-16",price:2.42},{ts:"2026-03-19",price:2.37},{ts:"2026-03-20",price:2.32},{ts:"2026-03-22",price:2.32},{ts:"2026-03-24",price:2.39},{ts:"2026-03-26",price:2.33},{ts:"2026-03-27",price:2.33},{ts:"2026-03-28",price:2.36},{ts:"2026-03-30",price:2.36}],
+    CRTO:[{ts:"2026-03-31",price:17.18}],
     commodities:{
       Brent:[{ts:"2026-03-16",price:100.80},{ts:"2026-03-19",price:107.72},{ts:"2026-03-22",price:106.41},{ts:"2026-03-24",price:101.20},{ts:"2026-03-26",price:101.81},{ts:"2026-03-27",price:101.08},{ts:"2026-03-28",price:112.57},{ts:"2026-03-30",price:108.11}],
       HenryHub:[{ts:"2026-03-16",price:3.11},{ts:"2026-03-19",price:3.16},{ts:"2026-03-22",price:3.10},{ts:"2026-03-24",price:2.90},{ts:"2026-03-26",price:2.98},{ts:"2026-03-27",price:2.93},{ts:"2026-03-28",price:3.10},{ts:"2026-03-30",price:2.94}],
@@ -1524,13 +1536,14 @@ const D = {
       {theme:"HOR",date:"2026-03-30",title:"Ras Laffan 3-5yr repair confirmed (WoodMac). QatarEnergy FM on long-term LNG contracts. Nakilat 25-vessel charter signed.",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-30",title:"TRI: Mills bought 1.5M shares at 59.75p (\u00a3896K). Holdings in Company RNS from unknown holder \u2014 DATA GAP.",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-30",title:"OSW added as MONITORING (Mar 28). Near-monopoly cruise spa operator, PM 27.5/35. Conditional on valuation pullback.",tier:"MINOR"},
+      {theme:"AID",date:"2026-03-31",title:"CRTO entered PORTFOLIO as INVESTMENT. Hybrid: 10% shares + 3% Jan'27 $20C (13% capital, ~17% effective). Conviction 8/10. D2=6/6 Exceptional. RC 2→5/5.",tier:"CRITICAL"},
       {theme:"AID",date:"2026-03-29",title:"HSTM first conviction scoring: 7/10. D1-D8 scored (3.5/3/4/4.5/4/3.5/4/2). Debate: 1 countered, 3 open, 1 conceded (D8=2). RC 3\u21924/5.",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-29",title:"KENDR entry timing LEAN, valuation refresh (PW FV \u20AC27.95, +63%), conviction 7/10, upgraded MONITORING\u2192ACTIVE.",tier:"MAJOR"},
       {theme:"DDM",date:"2026-03-29",title:"CDLR fully onboarded: 5 filings, 15 transcripts, D1-D8 scored, conviction 5/10, RC 4/5.",tier:"MAJOR"},
       {theme:"DDM",date:"2026-03-29",title:"ERII: 10-K reviewed, RC 3\u21924/5. Fair-value-estimation: PW FV $19.49 (+97%). Bear $11.76 > current $9.87.",tier:"MAJOR"}
     ]
   },
-  lastUpdated: "2026-03-30T22:00:00"
+  lastUpdated: "2026-03-31T12:00:00"
 };
 
 // ── Canonical dimension labels (from vault-scoring-portfolio.md) ──
