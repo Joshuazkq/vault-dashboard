@@ -31,8 +31,8 @@
   --accent-amber: #F5A623;
   --accent-red: #FF3B30;
   --accent-orange: #FF9500;
-  --text-fact: #A8V8A8;
-  --text-inference: #A8C0V8;
+  --text-fact: #A8D8A8;
+  --text-inference: #A8C0D8;
   --border: #2E2E3A;
 }
 
@@ -49,9 +49,9 @@
   --accent-amber: #C97F00;
   --accent-red: #D93025;
   --accent-orange: #C55A11;
-  --text-fact: #2V7A2D;
-  --text-inference: #2V5A7A;
-  --border: #D1D1V6;
+  --text-fact: #2D7A2D;
+  --text-inference: #2D5A7A;
+  --border: #D1D1D6;
 }
 [data-theme="light"] .sidebar-label { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 [data-theme="light"] .search-overlay { background: rgba(0,0,0,0.3); }
@@ -745,13 +745,13 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<div class="top-controls">
+<div class="top-controls" role="banner">
   <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark mode"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
   <button class="reload-btn" onclick="location.reload()" aria-label="Reload page"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></button>
 </div>
 
 <!-- SIDEBAR -->
-<nav class="sidebar" role="navigation" aria-label="Main navigation">
+<nav class="sidebar" role="tablist" aria-label="Main navigation">
   <button class="sidebar-search" id="searchBtn" aria-label="Search tickers (Cmd+K)" onclick="openSearch()">
     <i data-lucide="search" aria-hidden="true"></i>
   </button>
@@ -782,8 +782,9 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 </nav>
 
 <!-- SEARCH OVERLAY -->
-<div class="search-overlay" id="searchOverlay" onclick="closeSearch(event)">
-  <div class="search-box" onclick="event.stopPropagation()">
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Search" aria-modal="true" tabindex="-1">
+  <button class="search-overlay-backdrop" onclick="closeSearch(event)" aria-label="Close search" tabindex="-1" style="position:absolute;inset:0;background:transparent;border:0;cursor:default;"></button>
+  <div class="search-box">
     <input class="search-input" id="searchInput" type="text" placeholder="Search tickers... (Cmd+K)" autocomplete="off" oninput="handleSearch(this.value)">
     <ul class="search-results" id="searchResults" role="listbox" aria-label="Search results"></ul>
   </div>
@@ -852,14 +853,14 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 // DATA MODEL
 // ═══════════════════════════════════════════
 const D = {
-  generated: "2026-04-04T18:00:00",
-  portfolio: {deployedPct:76.28, cashPct:23.72, slotsUsed:5, maxSlots:12, wtdConviction:8.4},
+  generated: "2026-04-15T13:30:00",
+  portfolio: {deployedPct:60.00, cashPct:40.00, slotsUsed:3, maxSlots:12, wtdConviction:8.58},
   tickers: {
     VOW: {
       company:"Vow ASA", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:"INVESTMENT",
       allocation:40, conviction:9, clusterA:93.3, clusterB:76, patternMatch:34, rc:5, instrument:"Shares", currency:"NOK",
       price:"NOK 2.35", change:-0.42,
-      dimensions:{D1:{score:6,type:"fact",rationale:"Multiple drivers: Maritime margin normalization, Aftersales compounding, legacy roll-off"},D2:{score:6,type:"fact",rationale:"Maritime alone >2x group EV; market prices thesis at negative value"},D3:{score:4,type:"inference",rationale:"Micro-cap screen-out, zero coverage, governance history, shareholder fatigue; all temporary"},D4:{score:3,type:"fact",rationale:"Balance sheet fragile: 21.3% equity ratio, covenant risk; but asymmetric risk/reward"},V5:{score:5,type:"fact",rationale:"One condition: signed Maritime backlog converts at contracted margins; already happening"},V6:{score:4,type:"inference",rationale:"Four paths: Industrial divestiture, Aftersales compounding, cruise orderbook, coverage initiation"},V7:{score:4,type:"fact",rationale:"7 filings, 17 transcripts; SOTP v2 cross-validated; 24% margin slide confirms bull case"},V8:{score:4,type:"inference",rationale:"Earnings ARE the catalyst; Q1-Q2 2026 mechanically reveal margin inflection; no amplifier yet"}},
+      dimensions:{V1:{score:6,type:"fact",rationale:"Multiple drivers: Maritime margin normalization, Aftersales compounding, legacy roll-off"},V2:{score:6,type:"fact",rationale:"Maritime alone >2x group EV; market prices thesis at negative value"},V3:{score:4,type:"inference",rationale:"Micro-cap screen-out, zero coverage, governance history, shareholder fatigue; all temporary"},V4:{score:3,type:"fact",rationale:"Balance sheet fragile: 21.3% equity ratio, covenant risk; but asymmetric risk/reward"},V5:{score:5,type:"fact",rationale:"One condition: signed Maritime backlog converts at contracted margins; already happening"},V6:{score:4,type:"inference",rationale:"Four paths: Industrial divestiture, Aftersales compounding, cruise orderbook, coverage initiation"},V7:{score:4,type:"fact",rationale:"7 filings, 17 transcripts; SOTP v2 cross-validated; 24% margin slide confirms bull case"},V8:{score:4,type:"inference",rationale:"Earnings ARE the catalyst; Q1-Q2 2026 mechanically reveal margin inflection; no amplifier yet"}},
       pm:{total:34,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:6,max:5,rationale:"Maritime alone >2x group EV; prob-weighted +225% upside; multi-legged with strong floor"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Dated quarterly earnings force mechanical repricing via contract mix shift (44%->68%->89%)"},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"~70% cruise wastewater monopoly; only competitor being divested; NOK 1.6B backlog to 2034"},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Net debt NOK 362M, 21.3% equity ratio, Q3 2026 covenant at 3.5x is critical gating event"}],flex:[{id:"A1",name:"Management Change",score:5,max:5,rationale:"Complete C-suite/board overhaul; Pedersen (Kongsberg Maritime), Hekneby (Spir/Self Storage)"},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:">7.6M shares cluster buying, zero sales; CFO 3.9M shares at NOK 1.68-2.10"},{id:"A3",name:"Coverage Gap",score:5,max:5,rationale:"Zero sell-side coverage; NOK 690M mcap; Discovery 5/5 confirmed"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified; comparable multiples sourced"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+123% base, +225% prob-weighted"},{id:"FP-3",name:"Operational Distress",matched:"partial",note:"Industrial segment distressed but being wound down; Maritime healthy"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 May 20, Q2 Aug, Q3 Nov — dated"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 5/5; 7 filings, 17 transcripts"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Project-based, no single contract >15%"},{id:"FP-7",name:"Compound Fragility",matched:"partial",note:"Balance sheet + Industrial drag correlated but diminishing as Industrial wound down"}]},
       entryTiming:{signal:"GO",reviewDate:"2026-05-20",rationale:"No overhangs. Add up to conviction-band max (35% at 10/10, grandfathered at 40%)."},
       costBasis:"NOK 2.58", entryDate:"2026-02-28", inceptionReturn:-8.5,
@@ -877,18 +878,19 @@ const D = {
       valuation:{methodology:"Backlog-Anchored SOTP (v3)",rationale:"Anchors Maritime revenue to backlog delivery schedule (24% of Q4 2025 backlog + new intake + options), bottom-up Aftersales from fleet math (220 ships \u00d7 NOK 1.28M), dynamic net debt reflecting 18 months deleveraging, and decomposed haircut (execution 10% + time 16% + balance sheet 5% = 28% base).",assumptions:[{label:"New-contract Maritime margin",value:"18.8% central (15.2\u201319.6%)"},{label:"2027 Maritime revenue",value:"NOK 550M (backlog-anchored)"},{label:"Aftersales",value:"220 ships \u00d7 NOK 1.28M = NOK 280M"},{label:"Applied base multiple",value:"14x EV/EBITDA (16% discount to sector)"},{label:"Industrial divestiture",value:"NOK 130M (ETIA timing uncertain)"},{label:"Net debt",value:"NOK 310M (dynamic, 18mo deleveraging)"},{label:"Haircut",value:"28% decomposed (exec 10% + time 16% + BS 5%)"}],peers:[{name:"Alfa Laval",multiple:"14.5x EV/EBITDA"},{name:"W\u00e4rtsil\u00e4",multiple:"16.7x EV/EBITDA"},{name:"Kongsberg",multiple:"21.4x EV/EBITDA"},{name:"Sector median",multiple:"16.7x EV/EBITDA"}],sensitivity:{title:"Maritime EV (NOK M) by margin \u00d7 multiple",cols:["10x","12x","14x","16.7x"],rows:[{label:"15% margin",vals:["825","990","1,155","1,378"]},{label:"18.8% margin",vals:["1,034","1,241","1,448","1,727"]},{label:"24% margin",vals:["1,320","1,584","1,848","2,204"]}]},lastUpdated:"2026-03-28"}
     },
     CF: {
-      company:"CF Industries", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:10, conviction:8, clusterA:100, clusterB:92, patternMatch:36, rc:4, instrument:"$90C Jun 18 2026", currency:"USD",
-      price:"$137.60", change:0.84, prevClose:"$136.45",
-      dimensions:{D1:{score:5,type:"fact",rationale:"S3 pricing confirmed; EBITDA inflecting from $808M toward $1.1-1.7B; gas cost moat $13+/MMBtu"},D2:{score:4,type:"fact",rationale:"Physical NOLA $673-675/st above trigger; scenario-weighted P/E 4.5x vs historical 5.5-7x"},D3:{score:5,type:"inference",rationale:"Triple supply constraint: no gov reserve, China exports halted, Hormuz blockade; self-correcting"},D4:{score:4,type:"inference",rationale:"Dual chokepoint bounds binary ceasefire risk — Hormuz-only resolution no longer fully unwinds; $1.98B cash, no debt until 2034; DOJ probe adds legal tail risk"},V5:{score:5,type:"fact",rationale:"Two conditions holding: Hormuz closed (Day 28, mines deployed) and nat gas $2.92 vs $5.50 cap"},V6:{score:4,type:"inference",rationale:"Five paths: S4 duration, India procurement, non-urea margins, buyback acceleration, Blue Point"},V7:{score:4,type:"fact",rationale:"Core pillars FACT-sourced from 10-K and 9 transcripts; inferential on S3 probability and EPS model"},V8:{score:5,type:"fact",rationale:"Three dated events within 7 days: Trump deadline 3/28, USDA plantings 3/31, Tampa ammonia Apr"}},
+      company:"CF Industries", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:8, clusterA:93, clusterB:88, patternMatch:36, rc:4, instrument:"EXITED 2026-04-15 (~+120% gain)", currency:"USD",
+      price:"$121.32", change:0, prevClose:"$121.32",
+      exitDate:"2026-04-15", exitNote:"Full exit of $90C Jun 18 2026 at ~+120% gain on premium (cumulative Apr 14 trim + Apr 15 close). Status ACTIVE → MONITORING. Thesis intact (MIA AVERAGE/STRONG/STRONG → BASE; PW FV $186) but de-prioritized given binary geopolitical risk profile. Re-entry triggers: NOLA >$800 sustained / Q2 realized-pricing catch-up / cleaner options window / ceasefire collapse.",
+      dimensions:{V1:{score:5,type:"fact",rationale:"S3 pricing confirmed; EBITDA inflecting from $808M toward $1.1-1.7B; gas cost moat $13+/MMBtu"},V2:{score:4,type:"fact",rationale:"Physical NOLA $673-675/st above trigger; scenario-weighted P/E 4.5x vs historical 5.5-7x"},V3:{score:5,type:"inference",rationale:"Triple supply constraint: no gov reserve, China exports halted, Hormuz blockade; self-correcting"},V4:{score:4,type:"inference",rationale:"Dual chokepoint bounds binary ceasefire risk — Hormuz-only resolution no longer fully unwinds; $1.98B cash, no debt until 2034; DOJ probe adds legal tail risk"},V5:{score:5,type:"fact",rationale:"Two conditions holding: Hormuz closed (Day 38+, mines + US naval blockade Apr 12) and nat gas $3.10 vs $5.50 cap"},V6:{score:4,type:"inference",rationale:"Five paths: S4 duration, India procurement, non-urea margins, buyback acceleration, Blue Point"},V7:{score:4,type:"fact",rationale:"Core pillars FACT-sourced from 10-K and 9 transcripts; inferential on S3 probability and EPS model"},V8:{score:5,type:"fact",rationale:"Three dated events within 7 days: Trump deadline 3/28, USDA plantings 3/31, Tampa ammonia Apr"}},
       pm:{total:36,max:35,archetype:"Cyclical Inflection + Misperceived Commodity",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:6,max:5,rationale:"Prob-weighted FV $174 vs $134.50 (+29%); multi-legged thesis (5 paths); strong floor at $90-100"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Weekly NOLA prints, Q1 earnings May 6, Tampa NH3 Apr, USDA Mar 31 — all dated, self-correcting"},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"#1 NA nitrogen producer, 97% util, $1.8B FCF, HH gas moat; not a monopoly (cyclical commodity)"},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$1.98B cash, net debt 0.5x EBITDA, no maturities until 2034, $4-5B S3 FCF potential"}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Triple supply constraint: Hormuz + Ras Laffan (structural) + China policy; 32-36% seaborne offline"},{id:"B2",name:"Cost Position",score:5,max:5,rationale:"HH $3.20 vs TTF $18+; $450+/t advantage widened; ME offline; LNG maxed = no transmission"},{id:"B3",name:"Consensus Lag",score:5,max:5,rationale:"Consensus EPS $9.01 vs thesis $30.7 (3.4x gap); PT $101.73 below current; 2/20 Buy"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified from filing data"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:">29% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net debt 0.5x, $1.98B cash"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Weekly NOLA, Q1 May 6, Tampa Apr"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 4/5; 10-K reviewed, 9 transcripts"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Spot commodity producer"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"Risks (ceasefire, gas, DOJ) largely uncorrelated"}]},
       entryTiming:{signal:"GO",reviewDate:"2026-06-18",rationale:"No overhangs. Add up to conviction-band max (12.5% at 8/10)."},
-      costBasis:"$90.00", entryDate:"2026-03-05", inceptionReturn:51.6,
-      fairValue:{baseCaseFV:"$158",probWeightedFV:"$178",bearCaseFV:"$103",bullCaseFV:"$234",methodology:"Scenario-Weighted P/E",thesisType:"Cyclical Inflection + Event-Driven",lastUpdated:"2026-03-31"},
-      scenarios:[{name:"S1 (ceasefire)",price:"$103",prob:1},{name:"S2 (1Q)",price:"$104",prob:8},{name:"S3 (3mo BASE)",price:"$158",prob:58},{name:"S4 (FY)",price:"$234",prob:33}],
+      costBasis:"$90.00", entryDate:"2026-03-05", exitDate:"2026-04-15", inceptionReturn:120.0,
+      fairValue:{baseCaseFV:"$158",probWeightedFV:"$186",bearCaseFV:"$103",bullCaseFV:"$234",methodology:"Scenario-Weighted P/E",thesisType:"Cyclical Inflection + Event-Driven",lastUpdated:"2026-04-13"},
+      scenarios:[{name:"S1 (ceasefire)",price:"$103",prob:1},{name:"S2 (1Q)",price:"$104",prob:6},{name:"S3 (3mo BASE)",price:"$158",prob:53},{name:"S4 (FY)",price:"$234",prob:40}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:false},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
-      maxAlloc:12.5, bandViolation:false,
-      catalysts:["USDA Plantings Mar 31 TOMORROW","Tampa ammonia Apr RESOLVED $775/mt S3 CONFIRMED","Trump Hormuz strike deadline Apr 6 (3rd extension)","$12B Farm Aid enrollment deadline Apr 17","Q1 earnings May 6","30 DTE May 19","India Kharif Apr-Jun","Expiry Jun 18"],
+      maxAlloc:10, bandViolation:false,
+      catalysts:["USDA Plantings Mar 31 — RESOLVED 94.3M corn acres","Tampa ammonia Apr RESOLVED $775/mt S3 CONFIRMED","Trump Hormuz strike deadline Apr 6 (3rd extension)","$12B Farm Aid enrollment deadline Apr 17","Q1 earnings May 6","30 DTE May 19","India Kharif Apr-Jun","Expiry Jun 18"],
       premortem:["Rapid ceasefire: 15-20% drawdown","Gas spike >$5.50: margin erosion (de-risked)","Inflation re-acceleration: multiple compression","Demand destruction at $800+ urea"],
       variantViews:["Triple supply constraint (Hormuz + Ras Laffan + China policy) with no precedent. Market consensus hasn't modeled China export restrictions."],
       recentNotes:["Tampa NH3 April settled $775/mt (+$160) - S3 CONFIRMED","NOLA urea $625-687/t (+29-35%)","India Kharif procurement RESOLVED: domestic +23%, emergency imports, stocks +10 above prior yr","USDA Plantings Mar 31 TOMORROW - threshold >93M corn acres","China 40-75% fertilizer exports restricted through Aug","S3 60%, S4 29% (mine deployment + Zolghadr hardliner)"],
@@ -900,17 +902,17 @@ const D = {
     },
     GTT: {
       company:"Gaztransport & Technigaz", theme:"Hormuz Disruption", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:11.28, conviction:9, clusterA:100, clusterB:84, patternMatch:34, rc:5, instrument:"\u20AC190C Sep/Dec 2026", currency:"EUR",
-      price:"\u20AC198.20", change:-0.50, prevClose:"\u20AC199.20",
-      dimensions:{D1:{score:5,type:"fact",rationale:"FY2025 record revenue +25%, 67% EBITDA margin; Ras Laffan destruction bridges revenue trough"},D2:{score:5,type:"fact",rationale:"Bear case \u20AC222 exceeds current price; market gives zero credit for 120-140 incremental vessels; PW FV \u20AC342 (+68%)"},D3:{score:5,type:"inference",rationale:"Market conflates 3 layers (geo, structural deficit, dual chokepoint security premium); force majeure forcing function; all drawdown causes IRRATIONAL/TRANSIENT"},D4:{score:4,type:"fact",rationale:"Bear case \u20AC222 exceeds current price; net cash \u20AC300M; \u20AC8.94 dividend (4.5%); dual chokepoint reduces ceasefire risk to -5-8%; per A18 scarcity-asset structural floor"},V5:{score:3,type:"inference",rationale:"Three conditions: LNG demand (holding), monopoly (holding), FID conversion (partially resolved)"},V6:{score:5,type:"inference",rationale:"6 paths, 3+ showing early evidence: FID conversion pace, dual chokepoint reactivation, Nakilat 25-vessel charter, ULEC, LNG fuel, naval escort corridors"},V7:{score:5,type:"fact",rationale:"Strongest evidence base; 25 transcripts, multiple filings, RC 5/5; all pillars FACT-sourced"},V8:{score:4,type:"inference",rationale:"4 dated catalysts within 4 months: Q1 update Apr 21, EU Russian LNG ban Apr 25, Nakilat orders Q2-Q3, Q2 results Jul/Aug"}},
+      allocation:5.00, conviction:8.5, clusterA:80, clusterB:80, patternMatch:34, rc:5, instrument:"\u20AC190C Sep 18 2026 (2.92%) + \u20AC190C Dec 18 2026 (2.08%) — TRIMMED 2026-04-14 from 11.28%", currency:"EUR",
+      price:"\u20AC198.20", change:0, prevClose:"\u20AC198.20",
+      dimensions:{V1:{score:5,type:"fact",rationale:"FY2025 record revenue +25%, 67% EBITDA margin; Ras Laffan destruction bridges revenue trough"},V2:{score:5,type:"fact",rationale:"Bear case \u20AC222 exceeds current price; market gives zero credit for 120-140 incremental vessels; PW FV \u20AC342 (+68%)"},V3:{score:5,type:"inference",rationale:"Market conflates 3 layers (geo, structural deficit, dual chokepoint security premium); force majeure forcing function; all drawdown causes IRRATIONAL/TRANSIENT"},V4:{score:4,type:"fact",rationale:"Bear case \u20AC222 exceeds current price; net cash \u20AC300M; \u20AC8.94 dividend (4.5%); dual chokepoint reduces ceasefire risk to -5-8%; per A18 scarcity-asset structural floor"},V5:{score:3,type:"inference",rationale:"Three conditions: LNG demand (holding), monopoly (holding), FID conversion (partially resolved)"},V6:{score:5,type:"inference",rationale:"6 paths, 3+ showing early evidence: FID conversion pace, dual chokepoint reactivation, Nakilat 25-vessel charter, ULEC, LNG fuel, naval escort corridors"},V7:{score:5,type:"fact",rationale:"Strongest evidence base; 25 transcripts, multiple filings, RC 5/5; all pillars FACT-sourced"},V8:{score:4,type:"inference",rationale:"4 dated catalysts within 4 months: Q1 update Apr 21, EU Russian LNG ban Apr 25, Nakilat orders Q2-Q3, Q2 results Jul/Aug"}},
       pm:{total:34,max:35,archetype:"Cyclical Inflection + Strategic Value",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"Prob-weighted FV \u20AC342 vs \u20AC201 (+70%); bear case \u20AC222 exceeds current; 4+ independent legs"},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"Q1 update Apr 21, quarterly earnings, FID announcements, monthly order data \u2014 all dated"},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"~100% monopoly in membrane LNG containment, 67% EBITDA margin, 2,466 patents"},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash \u20AC300M, zero debt, 4.5% dividend yield, no dilution"}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Structural vessel shortfall; 84 mtpa FID; Ras Laffan rebuild; 230+ scrapping"},{id:"B2",name:"Cost Position / Margin Protection",score:5,max:5,rationale:"Royalty model = zero marginal cost; 65-68% margin through trough; no competitor"},{id:"B3",name:"Consensus Lag",score:4,max:5,rationale:"PT \u20AC186 << FV \u20AC342; but 18 analysts, stock +80% from 52W low"}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV verified from filings"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+72% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net cash, zero debt, 67% EBITDA margin"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Apr 21 Q1 update, quarterly earnings, FID announcements"},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 5/5; 25 transcripts reviewed"},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"Royalty model, no physical delivery"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"Single-dimension risk (FID conversion)"}]},
-      entryTiming:{signal:"GO",reviewDate:"2026-06-29",rationale:"No overhangs. Add up to conviction-band max (20% at 9/10)."},
+      entryTiming:{signal:"GO",reviewDate:"2026-06-29",rationale:"Trimmed to STARTER (5%) Apr 14. CORE band max 15% (MIA: STRONG/EXTREME/STRONG). 10% headroom available."},
       costBasis:"\u20AC190.00", entryDate:"2026-03-10", inceptionReturn:4.8,
       fairValue:{baseCaseFV:"\u20AC354",probWeightedFV:"\u20AC346",bearCaseFV:"\u20AC152",bullCaseFV:"\u20AC426",methodology:"Peer-Anchored EV/EBITDA",thesisType:"Structural Growth + Event-Driven",lastUpdated:"2026-03-31"},
       scenarios:[{name:"Deep Bear",price:"\u20AC152",prob:5},{name:"Bear",price:"\u20AC222",prob:13},{name:"Base",price:"\u20AC354",prob:55},{name:"Bull",price:"\u20AC426",prob:27}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
-      maxAlloc:20, bandViolation:false,
-      catalysts:["Q1 Activity Update Apr 21","EU Russian LNG ban Apr 25","URD annual report late Apr","Q1 earnings May","Ex-dividend Jun 17 (\u20AC4.94)","Sep 18 option expiry","Dec 18 option expiry"],
+      maxAlloc:15, bandViolation:false,
+      catalysts:["Q1 Activity Update Apr 22 (7 days)","EU Russian LNG ban Apr 25","URD annual report late Apr","Q1 earnings May","Ex-dividend Jun 17 (\u20AC4.94)","Sep 18 option expiry","Dec 18 option expiry"],
       premortem:["Chinese indigenous membrane tech (5-8yr)","FID pipeline converts below 75%","Elogen drag worsens","Revenue trough deeper than guided"],
       variantViews:["Market conflates geopolitical premium (temporary) with structural deficit (Ras Laffan 13mtpa offline 3-5yr). Self-correcting via replacement FIDs."],
       recentNotes:["Nakilat 25 x 174K cbm LNG carriers on 15yr charters \u2014 direct GTT royalty pipeline (~$125-175M)","QatarEnergy force majeure on long-term LNG contracts (Mar 24)","Ras Laffan 3-5yr repair confirmed (WoodMac)","6 new orders March 2026","FY2025: \u20AC803M rev (+25%), \u20AC542M EBITDA (+40%)","Backlog 288 units"],
@@ -918,13 +920,13 @@ const D = {
       financials:{fy:"FY2025",revenue:"\u20AC803M",revenueGrowth:"+25.3%",ebitda:"\u20AC542M",ebitdaMargin:"67%",netIncome:"\u20AC414M",eps:"\u20AC11.12",fcf:"N/A",totalDebt:"\u20AC4.5M",cash:"\u20AC300M",netDebt:"Net cash",leverage:"0.0x",leverageNum:0,debtDetails:[]},
       businessBackground:"French engineering company with effective monopoly on LNG carrier membrane containment systems (~90% market share). Asset-light royalty model: earns per-unit fees on LNG carriers ordered globally. Structural demand driver: global LNG fleet expansion. Hormuz disruption accelerates replacement FIDs.",
       valuation:{methodology:"Peer-Anchored EV/EBITDA",rationale:"Market undervalues durability of GTT\u2019s near-monopoly franchise (75\u201395% share, 2,466 patents) and structural LNG supply deficit from Ras Laffan destruction. Peer-anchored to European niche monopolists and IP licensing models. Updated Mar 28: through-cycle EBITDA revised upward on quantified 120-140 incremental vessels.",assumptions:[{label:"Through-cycle EBITDA",value:"\u20ac570M (base, revised from \u20ac520M)"},{label:"EBITDA margin",value:"67% (structural, royalty model)"},{label:"FY2026E EBITDA",value:"\u20ac490\u2013530M"},{label:"Net cash",value:"\u20ac300M (\u20ac8.1/share)"},{label:"Adjusted multiple",value:"22.5x (peer median 18.5x + 4.0 turns)"},{label:"FID pipeline",value:"84 mtpa + 120-140 incremental vessels"}],peers:[{name:"Rational AG",multiple:"19.5x EV/EBITDA"},{name:"Atlas Copco",multiple:"21.1x EV/EBITDA"},{name:"Hexagon AB",multiple:"18.5x EV/EBITDA"},{name:"Dolby Labs",multiple:"15.7x EV/EBITDA"}],sensitivity:{title:"Fair Value (\u20ac/share) by EBITDA \u00d7 multiple",cols:["18x","20x","22.5x","25x"],rows:[{label:"EBITDA \u20ac440M",vals:["\u20ac222","\u20ac246","\u20ac275","\u20ac305"]},{label:"EBITDA \u20ac570M",vals:["\u20ac285","\u20ac316","\u20ac354","\u20ac393"]},{label:"EBITDA \u20ac620M",vals:["\u20ac309","\u20ac343","\u20ac383","\u20ac426"]}]},lastUpdated:"2026-03-28"},
-      indicators:{structural:[{id:1,name:"LNG FID pipeline",current:"84 mtpa",threshold:"<60 mtpa = order drought",direction:"\u2192",status:"ok",lastUpdated:"2026-03-21"},{id:2,name:"Ceasefire premium",current:"3-4% structural",threshold:"Full unwind = bear",direction:"\u2192",status:"ok",lastUpdated:"2026-03-24"},{id:3,name:"Chinese membrane tech",current:"5-8yr away",threshold:"Proven alternative = D3 collapse",direction:"\u2192",status:"ok",lastUpdated:"2026-03-15"},{id:4,name:"Ras Laffan replacement FIDs",current:"Pending",threshold:"First FID = thesis confirmation",direction:"\u2191",status:"ok",lastUpdated:"2026-03-21"}],breaches:[],noiseFilter:["Short-term oil price swings","Elogen quarterly losses"],blindspots:["Chinese FSRU membrane capability"],staleDays:6}
+      indicators:{structural:[{id:1,name:"LNG FID pipeline",current:"84 mtpa",threshold:"<60 mtpa = order drought",direction:"\u2192",status:"ok",lastUpdated:"2026-03-21"},{id:2,name:"Ceasefire premium",current:"3-4% structural",threshold:"Full unwind = bear",direction:"\u2192",status:"ok",lastUpdated:"2026-03-24"},{id:3,name:"Chinese membrane tech",current:"5-8yr away",threshold:"Proven alternative = V3 collapse",direction:"\u2192",status:"ok",lastUpdated:"2026-03-15"},{id:4,name:"Ras Laffan replacement FIDs",current:"Pending",threshold:"First FID = thesis confirmation",direction:"\u2191",status:"ok",lastUpdated:"2026-03-21"}],breaches:[],noiseFilter:["Short-term oil price swings","Elogen quarterly losses"],blindspots:["Chinese FSRU membrane capability"],staleDays:6}
     },
     TRI: {
       company:"Trifast PLC", theme:"Sentiments-Valuation Mismatch", status:"ACTIVE", portfolioType:null,
       allocation:0, conviction:7, clusterA:80, clusterB:84, patternMatch:30.5, rc:5, instrument:"Shares", currency:"GBP",
       price:"60p", change:-0.17, prevClose:"60.1p",
-      dimensions:{D1:{score:4,type:"fact"},D2:{score:4,type:"fact"},D3:{score:4,type:"inference"},D4:{score:4,type:"fact"},V5:{score:4,type:"inference"},V6:{score:5,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
+      dimensions:{V1:{score:4,type:"fact"},V2:{score:4,type:"fact"},V3:{score:4,type:"inference"},V4:{score:4,type:"fact"},V5:{score:4,type:"inference"},V6:{score:5,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
       pm:{total:30.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-15",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"109p base vs 60p = +82% upside. Multi-legged: margin inflection + certification moat + insider buying."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"FY2026 results Jul 2026 + H1 FY2027 Nov 2026 force margin trajectory recognition."},{id:"U3",name:"Business Quality",score:3,max:5,rationale:"Industrial fastener distributor — stable but commodity. Certification moat provides some pricing power."},{id:"U4",name:"Balance Sheet & Torque",score:3.5,max:5,rationale:"Leverage 0.9x, adequate. RCF maturity Jul 2027 manageable."}],flex:[{id:"A1",name:"Management Change",score:4,max:5,rationale:"Mark Maybury (COO to CEO 2023) driving margin recovery. Executing measurable turnaround."},{id:"A2",name:"Insider Conviction",score:5,max:5,rationale:"Mills 16.3% + Percival 521K shares at 80p + CEO buy. Cluster buying at lows."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"2-3 analysts. Below institutional minimums at GBP 82M mkt cap."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"10-K reviewed, peer multiples verified"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+82% upside clears threshold"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"FY2026 results Jul 2026"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"Auto recession + margin stall + key shareholder exit correlated"}]},
       entryTiming:{signal:"WAIT",reviewDate:"2026-07-31",rationale:"Macro: UK stagflation + Hormuz oil shock. GO trigger: EBIT \u22656.7% through shock (FY2026 Jul 2026)."},
       costBasis:"80p", entryDate:"2026-03-15", inceptionReturn:-25.0,
@@ -975,7 +977,7 @@ const D = {
       allocation:0, conviction:7, clusterA:80, clusterB:76, patternMatch:29.5, rc:4, instrument:"Shares", currency:"EUR",
       price:"\u20AC16.64", change:-2.69, inceptionReturn:0,
       entryTiming:{signal:"LEAN",reviewDate:"2026-05-20",rationale:"Iran conflict demand risk (3.0x op leverage). Tier 2 peer compression (7.4x = parity). Q1 uncertainty. GO trigger: Q1 confirms momentum + conflict de-escalation. Scale in 50% of band (~3.5%) at EUR 16-17."},
-      pm:{total:29.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-29",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"FY2025 delivered 15.5% EBITDA + 24.6% ROI, achieving 2027 targets 2 years early. Q4 +7% growth. Confirmed new company value creation."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"Q1 2026 earnings (~May), EUR 10M buyback completed, M&A pipeline reactivated, coverage expanding (ODDO BHF new). Multiple dated catalysts."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"Certification moat on safety-critical EM brakes. 30-35% wind market share. 20+ year incumbency. IEC 61400 certification lock-in."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net debt EUR 30.3M (0.8x leverage) vs 2.7x at pattern-match. EUR 92M total liquidity. Fortress."}],flex:[{id:"A1",name:"Management Change",score:2,max:5,rationale:"CEO since 2015, not a new broom. But executed fundamental transformation. Quality captured in D1."},{id:"A2",name:"Insider Conviction",score:4,max:5,rationale:"SB member EUR 2.03M purchase (Dec 2025, 0.8% of company). Additional SB purchases ~EUR 475K (2024). Total ~EUR 2.5M."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"5-7 analysts (was 2-3). Netherlands-centric. No UK/US initiation. Gap narrowing but still significant."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"FY2022 Annual Report + FY2023 Prelim + 13 transcripts"},{id:"FP-3",name:"Operational Distress",matched:false,note:"15.5% EBITDA, 0.8x leverage"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 2026 ~May, M&A pipeline, buyback completed"},{id:"FP-7",name:"Compound Fragility",matched:false}]},
+      pm:{total:29.5,max:35,archetype:"Turnaround + Hidden Franchise",scoredDate:"2026-03-29",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"FY2025 delivered 15.5% EBITDA + 24.6% ROI, achieving 2027 targets 2 years early. Q4 +7% growth. Confirmed new company value creation."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"Q1 2026 earnings (~May), EUR 10M buyback completed, M&A pipeline reactivated, coverage expanding (ODDO BHF new). Multiple dated catalysts."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"Certification moat on safety-critical EM brakes. 30-35% wind market share. 20+ year incumbency. IEC 61400 certification lock-in."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net debt EUR 30.3M (0.8x leverage) vs 2.7x at pattern-match. EUR 92M total liquidity. Fortress."}],flex:[{id:"A1",name:"Management Change",score:2,max:5,rationale:"CEO since 2015, not a new broom. But executed fundamental transformation. Quality captured in V1."},{id:"A2",name:"Insider Conviction",score:4,max:5,rationale:"SB member EUR 2.03M purchase (Dec 2025, 0.8% of company). Additional SB purchases ~EUR 475K (2024). Total ~EUR 2.5M."},{id:"A3",name:"Coverage/Structural Neglect",score:4,max:5,rationale:"5-7 analysts (was 2-3). Netherlands-centric. No UK/US initiation. Gap narrowing but still significant."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"FY2022 Annual Report + FY2023 Prelim + 13 transcripts"},{id:"FP-3",name:"Operational Distress",matched:false,note:"15.5% EBITDA, 0.8x leverage"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 2026 ~May, M&A pipeline, buyback completed"},{id:"FP-7",name:"Compound Fragility",matched:false}]},
       fairValue:{baseCaseFV:"\u20AC28.40",probWeightedFV:"\u20AC27.95",bearCaseFV:"\u20AC13.50",bullCaseFV:"\u20AC41.50",methodology:"EV/EBITDA Peer-Anchored (Tier 1 40% + Tier 2 60%)",thesisType:"Type 1+3: Transformation-driven Margin Expansion + Structural Re-rating",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Bear",price:"\u20AC11-14",prob:25},{name:"Base",price:"\u20AC24-29",prob:50},{name:"Bull",price:"\u20AC35-42",prob:25}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:true},{gate:"Mispricing understood",met:true}],
@@ -993,7 +995,7 @@ const D = {
       company:"Meteoric Resources", theme:"Rare Earth Supply Chain", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:4, clusterA:53, clusterB:56, patternMatch:27, rc:3, instrument:"Shares", currency:"AUD",
       price:"A$0.17", change:3.13, inceptionReturn:0,
-      dimensions:{D1:{score:2,type:"fact"},D2:{score:3,type:"fact"},D3:{score:3,type:"inference"},D4:{score:2,type:"fact"},V5:{score:2,type:"fact"},V6:{score:4,type:"inference"},V7:{score:3,type:"fact"},V8:{score:3,type:"fact"}},
+      dimensions:{V1:{score:2,type:"fact"},V2:{score:3,type:"fact"},V3:{score:3,type:"inference"},V4:{score:2,type:"fact"},V5:{score:2,type:"fact"},V6:{score:4,type:"inference"},V7:{score:3,type:"fact"},V8:{score:3,type:"fact"}},
       pm:{total:27,max:35,archetype:"Cyclical Inflection",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"A$0.28 base vs A$0.165 = +70%. NPV8 US$835M-1.3B vs A$490M mkt cap (50-55% discount)."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"DFS mid-2026 (Ausenco) + LI application/grant mid-2026. Hard-dated catalysts within 3-6 months."},{id:"U3",name:"Business Quality",score:2,max:5,rationale:"Pre-revenue development-stage miner. No cash flow. Binary outcome dependent on DFS and permitting."},{id:"U4",name:"Balance Sheet & Torque",score:3,max:5,rationale:"Funded through DFS. EXIM LOI provides pathway but not committed. Dilution risk material."}],flex:[{id:"B1",name:"Supply/Demand Setup",score:5,max:5,rationale:"Structural rare earth supply deficit. Pentagon 2027 deadline. HREE co-production (Dy/Tb 130 tpa) unique."},{id:"B2",name:"Cost Position",score:4,max:5,rationale:"C1 $22/kg NdPr — first quartile. Ionic clay = low-cost processing. Pilot 70% recovery confirmed."},{id:"B3",name:"Consensus Lag",score:3,max:5,rationale:"No sell-side coverage. Market treats as generic junior miner vs validated project with EXIM backing."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"PFS cross-checked, NdPr sensitivity modeled"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-5",name:"Placeholder Research Trap",matched:false,note:"3 filings processed, pilot results confirmed"},{id:"FP-7",name:"Compound Fragility",matched:true,note:"DFS disappoints + LI denied + NdPr crash = correlated downside"}]},
       fairValue:{baseCaseFV:"A$0.30",probWeightedFV:"A$0.28",bearCaseFV:"A$0.06",bullCaseFV:"A$0.60",methodology:"NPV Discount",thesisType:"Development-Stage RE Miner",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"A$0.06-0.12",prob:25},{name:"Base",price:"A$0.22-0.35",prob:50},{name:"Bull",price:"A$0.40-0.60",prob:25}],
@@ -1112,7 +1114,7 @@ const D = {
       company:"SPS Commerce", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:6, clusterA:66.7, clusterB:72, patternMatch:32, rc:2, instrument:"Shares", currency:"USD",
       price:"$54.49", change:-0.53, inceptionReturn:0,
-      dimensions:{D1:{score:3,type:"inference"},D2:{score:4,type:"inference"},D3:{score:3,type:"inference"},D4:{score:3,type:"fact"},V5:{score:3,type:"fact"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"fact"}},
+      dimensions:{V1:{score:3,type:"inference"},V2:{score:4,type:"inference"},V3:{score:3,type:"inference"},V4:{score:3,type:"fact"},V5:{score:3,type:"fact"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"fact"}},
       pm:{total:32,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-26",universal:[{id:"U1",name:"Mispricing Assessment",score:4.5,max:5,rationale:"$65 PW vs $55.10 = +18%. 50-100% upside over 18-24m. 8.3x EV/EBITDA vs 50-60x historical."},{id:"U2",name:"Repricing Mechanism",score:3.5,max:5,rationale:"Activists (Anson/Irenic) pushing sale. Organic reaccel H2 2026. But activist timing uncertain."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"100 consecutive quarters growth. 96% recurring. Core EDI network moat. But growth decelerating."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash $144M, FCF $152M, zero debt. Fortress."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:4.5,max:5,rationale:"120K+ EDI partners. 25+ years proprietary supply chain data. Network effect strengthens with scale."},{id:"F2",name:"AI Integration Maturity",score:2,max:5,rationale:"MAX AI launched Feb 2026, beta only. Zero AI revenue. Unproven monetization."},{id:"F3",name:"Disruption Misperception",score:3.5,max:5,rationale:"Market prices 'bad acquisition' narrative. Ignores AI-amplified network + activist catalyst."},{id:"F4",name:"Recession Armor",score:5,max:5,rationale:"25-year zero revenue decline streak. 96% recurring. EDI = non-discretionary supply chain infrastructure."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+18% near-term, 50-100% 18-24m"},{id:"FP-3",name:"Operational Distress",matched:false},{id:"FP-7",name:"Compound Fragility",matched:false}]},
       fairValue:{baseCaseFV:"$70",probWeightedFV:"$65",bearCaseFV:"$45",bullCaseFV:"$110",methodology:"EV/EBITDA",thesisType:"EDI Network + AI Optionality",lastUpdated:"2026-03-25"},
       scenarios:[{name:"Bear",price:"$45",prob:20},{name:"Base",price:"$65-70",prob:55},{name:"Bull",price:"$85-110",prob:25}],
@@ -1137,16 +1139,17 @@ const D = {
       marketCap:"\u00A39.2B"
     },
     DOCS: {
-      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:5, conviction:7.5, clusterA:86.7, clusterB:86, patternMatch:34.5, rc:3, instrument:"Shares", currency:"USD",
-      price:"$23.69", change:-4.86, inceptionReturn:0, costBasis:23.69, entryDate:"2026-03-31",
+      company:"Doximity Inc.", theme:"AI Disruption Opportunity", status:"PASSED", portfolioType:null,
+      allocation:0, conviction:7.5, clusterA:80, clusterB:78, patternMatch:34.5, rc:3, instrument:"EXITED 2026-04-07 (~breakeven)", currency:"USD",
+      price:"$23.50", change:0, inceptionReturn:-0.8, costBasis:23.69, entryDate:"2026-03-31", exitDate:"2026-04-07",
+      exitNote:"Full exit at ~$23.50 (~breakeven from $23.69 cost). Held 7 days. Reason: low conviction after council update — bear case too gentle ($16-20 owner-earnings vs formal $23), RC 3/5 below INVESTMENT gate, management-discretionary AI catalyst with 3-year deferral pattern. WATCHLIST → PASSED.",
       entryTiming:{signal:"LEAN",reviewDate:"2026-05-15",rationale:"MFN fading; AI launch timing active overhang. Bear case ($23) \u2248 current price (\u22123%). Expected return +39%."},
-      dimensions:{D1:{score:4,type:"fact",rationale:"Revenue re-accelerated to 20% FY2025; margins expanding; 300K AI prescribers at $0 revenue = genuine $0-to-something inflection. SBC grew 42% YoY; governance 2/5."},D2:{score:5,type:"fact",rationale:"Reverse DCF prices 2.7% growth for 20% grower. EV/FCF 13.7x cheapest in history. Bear $23 \u2248 current; expected return +39%."},D3:{score:4,type:"inference",rationale:"Category misclassification, $0 AI revenue = $0 AI value, Q4 MFN timing mask, post-COVID anchoring. Dual-class governance bounded as 9% discount."},D4:{score:5,type:"fact",rationale:"$735M cash = $3.97/share; distressed 10x floor $18.40. Bear DCF $23 \u2248 current. All failure modes bounded."},V5:{score:4,type:"inference",rationale:"Two conditions: core 10%+ growth (HOLDING), AI launch within 12mo (AT RISK). Even if #2 fails, bear \u2248 current."},V6:{score:5,type:"inference",rationale:"6 paths: pharma AI ($10-100M), hospital AI ($9-36M ARR), M3 ARPU convergence, buybacks (13% of shares), paid search TAM, Scribe enterprise."},V7:{score:3,type:"fact",rationale:"19 filings + 22 transcripts. Critical gap: AI pricing model rests on inference. Customer D unknown. PSU conditions not extracted."},V8:{score:4,type:"inference",rationale:"Q4 FY2026 earnings May 2026; AI launch H2 CY2026; $583M buyback. AI catalyst specific but 3-year deferral track record."}},
+      dimensions:{V1:{score:4,type:"fact",rationale:"Revenue re-accelerated to 20% FY2025; margins expanding; 300K AI prescribers at $0 revenue = genuine $0-to-something inflection. SBC grew 42% YoY; governance 2/5."},V2:{score:5,type:"fact",rationale:"Reverse DCF prices 2.7% growth for 20% grower. EV/FCF 13.7x cheapest in history. Bear $23 \u2248 current; expected return +39%."},V3:{score:4,type:"inference",rationale:"Category misclassification, $0 AI revenue = $0 AI value, Q4 MFN timing mask, post-COVID anchoring. Dual-class governance bounded as 9% discount."},V4:{score:5,type:"fact",rationale:"$735M cash = $3.97/share; distressed 10x floor $18.40. Bear DCF $23 \u2248 current. All failure modes bounded."},V5:{score:4,type:"inference",rationale:"Two conditions: core 10%+ growth (HOLDING), AI launch within 12mo (AT RISK). Even if #2 fails, bear \u2248 current."},V6:{score:5,type:"inference",rationale:"6 paths: pharma AI ($10-100M), hospital AI ($9-36M ARR), M3 ARPU convergence, buybacks (13% of shares), paid search TAM, Scribe enterprise."},V7:{score:3,type:"fact",rationale:"19 filings + 22 transcripts. Critical gap: AI pricing model rests on inference. Customer D unknown. PSU conditions not extracted."},V8:{score:4,type:"inference",rationale:"Q4 FY2026 earnings May 2026; AI launch H2 CY2026; $583M buyback. AI catalyst specific but 3-year deferral track record."}},
       pm:{total:34.5,max:40,archetype:"AI-Fortress",scoredDate:"2026-03-29",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"$33 PW FV vs $24 (+39%). Reverse DCF prices 2.7% growth for 20% grower. Bear $23 = \u22123%. 80% of scenarios deliver +38-69%."},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"H2 2026 commercial AI launch. Q4 FY2026 earnings May 2026. DocsGPT 300K prescribers. 3-yr deferral history."},{id:"U3",name:"Business Quality",score:4.5,max:5,rationale:"90% GM, 47% FCF margin, 18-qtr beat streak. CFO on leave + Q4 deceleration + SBC 12.7% FY2025."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$735M cash, zero debt. $583M buyback. Fortress."}],flex:[{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"85%+ US physicians. ASCO exclusive. 2x preferred vs nearest competitor. Irreplaceable."},{id:"F2",name:"AI Integration Maturity",score:3,max:5,rationale:"300K DocsGPT users, 100+ hospital contracts, Scribe 75%+ retention. ZERO revenue. H2 2026 launch."},{id:"F3",name:"Disruption Misperception",score:4,max:5,rationale:"Absent from AI ETFs. Market prices AI at near-zero. Category = healthcare IT, not AI."},{id:"F4",name:"Recession Armor",score:4,max:5,rationale:"18-qtr beat streak. Pharma non-cyclical. Revenue never declined. Q4 decel is real risk."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"19 filings + 22 transcripts"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+39% prob-weighted upside"},{id:"FP-3",name:"Operational Distress",matched:false,note:"$735M cash, zero debt"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q4 earnings May, AI launch H2"},{id:"FP-6",name:"Single-Contract Downside",matched:"partial",note:"Customer D at 11% of Q2 revenue"}]},
       fairValue:{baseCaseFV:"$33",probWeightedFV:"$33",bearCaseFV:"$23",bullCaseFV:"$40",methodology:"Owner Earnings DCF (Method A)",thesisType:"AI-Fortress Monopoly",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Bear",price:"$23",prob:20},{name:"Base",price:"$33",prob:50},{name:"Bull",price:"$40",prob:30}],
       rcChecklist:[{gate:"OVERVIEW from audited filing",met:true},{gate:">=4 transcripts reviewed",met:true},{gate:"Critical questions resolved",met:true},{gate:"Catalysts ascertained",met:false},{gate:"Mispricing understood",met:false}],
-      maxAlloc:10, bandViolation:true, provisional:true, provisionalGate:"RC 4/5 by May 15",
+      maxAlloc:0, bandViolation:false, provisional:false,
       catalysts:["Q4 FY2026 earnings May 2026","H2 CY2026 AI commercial launch","Q1 FY2027 earnings Aug 2026","$583M buyback ongoing","OpenEvidence litigation"],
       premortem:["AI launch delay (H2 2026 \u2192 H1 2027+): \u22125-10%","Customer D churn (11% of Q rev): \u22128-12%","OpenEvidence displacement: \u221210-15% over 2-3yr","MFN structural pressure: \u221215-20%","CFO Bryson non-return: \u22123-5%","Dual-class misalignment: \u221215-30% tail"],
       variantViews:["AI-Fortress 34.5/40. Physician monopoly (85%+ US docs). $735M cash / zero debt. ZERO AI revenue in guidance. Market prices 2.7% growth for 20% grower. SBC elevated near-term (17.1% FY2026) but buybacks overwhelm issuance 3x."],
@@ -1259,7 +1262,7 @@ const D = {
       allocation:0, conviction:8, clusterA:86.7, clusterB:76, patternMatch:30.5, rc:4, instrument:"Shares", currency:"USD",
       price:"$9.87", change:-1.30, prevClose:"$10.00", inceptionReturn:0,
       entryTiming:{signal:"WAIT",reviewDate:"2026-05-31",rationale:"Company: mgmt credibility (M3/M5: 2.5/5). GO trigger: insider purchases + Saudi PO conversion. $6 \u2192 LEAN."},
-      dimensions:{D1:{score:3,type:"fact"},D2:{score:5,type:"fact"},D3:{score:5,type:"inference"},D4:{score:4,type:"fact"},V5:{score:4,type:"inference"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:3,type:"inference"}},
+      dimensions:{V1:{score:3,type:"fact"},V2:{score:5,type:"fact"},V3:{score:5,type:"inference"},V4:{score:4,type:"fact"},V5:{score:4,type:"inference"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:3,type:"inference"}},
       pm:{total:30.5,max:35,archetype:"G (Derived-Demand Monopoly)",scoredDate:"2026-03-28",universal:[{id:"U1",name:"Mispricing Assessment",score:4,max:5,rationale:"$525M mkt cap for 90% SWRO monopoly with 50% EBITDA margins and net cash $83.3M. Q4 miss caused 30% drawdown."},{id:"U2",name:"Repricing Mechanism",score:3,max:5,rationale:"Q1 2026 earnings (~May) + Saudi pipeline PO conversion. Revenue lumpy \u2014 no quarterly forcing function."},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"90% share; PX specified at design phase; 30-year life; single moving part; >$600K/employee."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"Net cash $83.3M, zero debt. Fortress \u2014 strongest in Archetype G pool."}],flex:[{id:"G1",name:"Derived-Demand Monopoly Position",score:5,max:5,rationale:"~90% large-scale SWRO share. PX specified by Veolia, IDE, Acciona at design phase."},{id:"G2",name:"Mechanical Revenue Linkage",score:3.5,max:5,rationale:"Each large SWRO plant = 20-50 PX units. NOT contracted multi-year like GTT/CDLR. Lumpy and FID-dependent."},{id:"G3",name:"Discovery Gap",score:5,max:5,rationale:"3-5 analysts vs Veolia 25+, ACWA 15+. Falls between water utility and industrial equipment silos."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"7 audited filings + 21 transcripts reviewed"},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+97% PW upside, positive even in bear"},{id:"FP-3",name:"Operational Distress",matched:false,note:"Net cash $83.3M, zero debt"},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"Q1 2026 earnings ~May 2026"},{id:"FP-7",name:"Compound Fragility",matched:false,note:"FLEX + Saudi deferral correlated but both low-probability"}]},
       fairValue:{baseCaseFV:"$19.35",probWeightedFV:"$19.49",bearCaseFV:"$11.76",bullCaseFV:"$27.48",methodology:"EV/EBITDA peer-anchored",thesisType:"Derived-Demand Monopoly",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Bear",price:"$11.76",prob:25},{name:"Base",price:"$19.35",prob:50},{name:"Bull",price:"$27.48",prob:25}],
@@ -1279,7 +1282,7 @@ const D = {
       allocation:0, conviction:5, patternMatch:28, rc:4, instrument:"Shares", currency:"EUR",
       price:"\u20AC22.12", change:-1.65, inceptionReturn:0,
       clusterA:66.7, clusterB:76,
-      dimensions:{D1:{score:4,type:"fact"},D2:{score:3,type:"inference"},D3:{score:3,type:"inference"},D4:{score:3,type:"inference"},V5:{score:4,type:"fact"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
+      dimensions:{V1:{score:4,type:"fact"},V2:{score:3,type:"inference"},V3:{score:3,type:"inference"},V4:{score:3,type:"inference"},V5:{score:4,type:"fact"},V6:{score:4,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
       fairValue:{baseCaseFV:"\u20AC32",probWeightedFV:"\u20AC29",bearCaseFV:"\u20AC18",bullCaseFV:"\u20AC42",methodology:"EV/EBITDA",thesisType:"Derived-Demand Monopoly",lastUpdated:"2026-03-29"},
       scenarios:[{name:"Bear",price:"\u20AC18",prob:25},{name:"Base",price:"\u20AC32",prob:50},{name:"Bull",price:"\u20AC42",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:true},{gate:"Mispricing",met:false}],
@@ -1358,7 +1361,7 @@ const D = {
       company:"NICE Ltd.", theme:"AI Disruption Opportunity", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:3, clusterA:46.7, clusterB:60, rc:3, instrument:"Shares", currency:"USD",
       price:"$108.35", change:-0.87, inceptionReturn:0,
-      dimensions:{D1:{score:3,type:"fact"},D2:{score:2,type:"fact"},D3:{score:2,type:"inference"},D4:{score:3,type:"fact"},V5:{score:2,type:"fact"},V6:{score:4,type:"inference"},V7:{score:3,type:"fact"},V8:{score:3,type:"fact"}},
+      dimensions:{V1:{score:3,type:"fact"},V2:{score:2,type:"fact"},V3:{score:2,type:"inference"},V4:{score:3,type:"fact"},V5:{score:2,type:"fact"},V6:{score:4,type:"inference"},V7:{score:3,type:"fact"},V8:{score:3,type:"fact"}},
       fairValue:{baseCaseFV:"$150",probWeightedFV:"$140",bearCaseFV:"$80",bullCaseFV:"$200",methodology:"Fwd EV/EBITDA",thesisType:"AI-Fortress Dual Moat",lastUpdated:"2026-03-28"},
       scenarios:[{name:"Bear",price:"$80",prob:25},{name:"Base",price:"$140-155",prob:50},{name:"Bull",price:"$180-200",prob:25}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:false},{gate:"Mispricing",met:false}],
@@ -1370,15 +1373,15 @@ const D = {
     },
     CRTO: {
       company:"Criteo S.A.", theme:"AI Disruption Opportunity", status:"ACTIVE", portfolioType:"INVESTMENT",
-      allocation:10, conviction:7.5, patternMatch:33.5, clusterA:87, clusterB:80, rc:5, instrument:"Shares", currency:"USD",
-      price:"$17.18", change:-1.60, inceptionReturn:-1.6, entryPrice:"$17.46",
+      allocation:15, conviction:7.5, patternMatch:33.5, clusterA:80, clusterB:76, rc:5, instrument:"Shares (added to CORE band ceiling 2026-04-14)", currency:"USD",
+      price:"$17.18", change:0, inceptionReturn:-1.6, entryPrice:"$17.46",
       pm:{total:33.5,max:35,archetype:"Mixed A+F — Turnaround + Hidden Data Franchise + AI Disruption Beneficiary",scoredDate:"2026-03-31",universal:[{id:"U1",name:"Mispricing Assessment",score:6,max:5,rationale:"1.2x EV/EBITDA vs 15x peer median (92% discount); bear floor $33 = +92% above current; PW FV $79 = +359% upside; 6 independent legs; 20:1 asymmetry. All 5 drawdown causes TRANSIENT."},{id:"U2",name:"Repricing Mechanism",score:5,max:5,rationale:"7 dated catalysts: Q1 earnings ~May, Luxembourg Q3, Russell June 2027 (mechanical 8-10% float passive buying). SP-2 pattern — self-correcting regardless of analyst attention."},{id:"U3",name:"Business Quality",score:4,max:5,rationale:"Shopper Graph (720M DAU, $1T transactions, 4.5B SKUs) validated by OpenAI as sole partner. 35% EBITDA margin best-in-class. PM secular headwind (78% of CeT) caps at 4."},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$378M net cash, zero debt, $890M total liquidity, 42% of market cap in cash. $200M buyback = 23% float retirement. GATE: PASS."}],flex:[{id:"A2",name:"Insider Conviction",score:3.5,max:5,rationale:"Chairman van der Kooi: $423K across 3 purchases Nov 2025–Mar 2026, sustained buying into -63% drawdown. Single insider (not cluster); CFO sold at Oct 2024 peak; CEO no open-market purchases."},{id:"F1",name:"Data/Network Moat Depth",score:5,max:5,rationale:"Shopper Graph irreplaceable: 18+ years of commerce data, 720M DAU. OpenAI sole partner validation. MCP architecture extends to ALL LLMs (Claude, Gemini, Perplexity). 33 patents."},{id:"F3",name:"Disruption Misperception",score:5,max:5,rationale:"Market prices CRTO as permanent decline (1.2x). Filings prove ATH EBITDA ($407M) + ATH OCF ($311M). OpenAI selected CRTO over TTD/Amazon/Google — AI is accelerant, not threat."}],failurePatterns:[{id:"FP-1",name:"Unverified Core Inputs",matched:false,note:"EV independently verified $502M (corrected from $663M error). Peers from current trading Mar 2026."},{id:"FP-2",name:"Insufficient Materiality",matched:false,note:"+307% to base, +359% to prob-weighted. Well above threshold."},{id:"FP-3",name:"Operational Distress",matched:false,note:"$378M net cash, ATH EBITDA, zero debt. Opposite of distress."},{id:"FP-4",name:"No Hard Catalyst",matched:false,note:"7 dated catalysts. Russell June 2027 = mechanical. Q1 earnings = scheduled."},{id:"FP-5",name:"Placeholder Research",matched:false,note:"RC 5/5; 8 filings, 18 transcripts, full conviction scoring."},{id:"FP-6",name:"Single-Contract Downside",matched:false,note:"N/A — not EPC/lump-sum business."},{id:"FP-7",name:"Compound Fragility",matched:"partial",note:"RM loss + domicile friction partially correlated; both independently addressed (RM trough H1, domicile Q3 2026)."}]},
-      dimensions:{D1:{score:5,type:"fact"},D2:{score:6,type:"fact"},D3:{score:4,type:"inference"},D4:{score:5,type:"fact"},V5:{score:4,type:"fact"},V6:{score:5,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
+      dimensions:{V1:{score:5,type:"fact"},V2:{score:6,type:"fact"},V3:{score:4,type:"inference"},V4:{score:5,type:"fact"},V5:{score:4,type:"fact"},V6:{score:5,type:"inference"},V7:{score:4,type:"fact"},V8:{score:4,type:"inference"}},
       fairValue:{baseCaseFV:"$70",probWeightedFV:"$79",bearCaseFV:"$33",bullCaseFV:"$111",methodology:"EV/EBITDA Peer-Anchored (FY2027E)",thesisType:"Type 2 Turnaround + Type 5 Event-Driven",lastUpdated:"2026-03-31"},
       scenarios:[{name:"Bear",price:"$33",prob:15},{name:"Base",price:"$70",prob:50},{name:"Bull",price:"$111",prob:35}],
       rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:true},{gate:"Mispricing",met:true}],
-      maxAlloc:12.5, bandViolation:true,
-      catalysts:["Q1 2026 earnings ~May (CeT >= $245M trough confirm)","Luxembourg redom Q3 2026","Russell reconstitution June 2027","$200M buyback (ongoing)","OpenAI/MCP scaling 2026-27"],
+      maxAlloc:15, bandViolation:false, bandNote:"At CORE ceiling (15%). MIA: STRONG/AVERAGE/EXTREME → CORE. Council MIA: STRONG/AVERAGE/STRONG → BASE. Tension: legacy §12 advisory caps 7.5/10 at 12.5%; MIA framework supersedes per Apr 5 migration. No further headroom without conviction upgrade.",
+      catalysts:["Q1 2026 earnings ~May 8 (CeT >= $245M validation)","Luxembourg redom Q3 2026","Russell reconstitution June 2027","$200M buyback (ongoing)","OpenAI/MCP scaling 2026-27"],
       premortem:["Third RM client loss (secular pattern)","PM CeT decline >10% for 2+ quarters","US redom delayed past Apr 2027 rank day","OpenAI adds competing DSP integrations"],
       variantViews:["Market conflates CRTO with commodity DSP. Shopper Graph validated by OpenAI (sole partner) + MCP (platform-agnostic commerce data for ALL LLMs). 1.2x EV/EBITDA ($502M EV) on $407M ATH EBITDA. Bear case floor ($33) = 92% above current price. Asymmetry 20:1."],
       businessBackground:"Commerce media platform. MCP-based agentic commerce data layer for all LLMs. Shopper Graph: 720M daily shoppers, $1T transactions, 4.5B SKUs. $378M net cash, zero debt. FY2025: EBITDA $407M (ATH), OCF $311M (ATH).",
@@ -1397,6 +1400,38 @@ const D = {
       businessBackground:"China's fastest-growing premium tea chain. 7,300+ stores, 97% franchised, capital-light. Net cash $1.17B.",
       marketCap:"$1.8B"
     },
+    BKTI: {
+      company:"BK Technologies", theme:"Niche Industrial Monopolies", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, patternMatch:29, rc:4, instrument:"Shares", currency:"USD",
+      price:"$75.83", change:0, inceptionReturn:0,
+      pm:{total:29,max:35,archetype:"Niche Industrial Monopoly",scoredDate:"2026-04-07",universal:[{id:"U1",name:"Mispricing Assessment",score:5,max:5,rationale:"PWV $91.75 (+21%); serial guidance raiser FY2025 $2.40\u2192$3.44 GAAP ($4.32 adj); Vision 2030 $13 EPS"},{id:"U2",name:"Repricing Mechanism",score:4,max:5,rationale:"Q1 2026 earnings May; BKR 9500 FCC submission H2 2026; serial beat pattern"},{id:"U3",name:"Business Quality",score:5,max:5,rationale:"90% wildland fire radio monopoly (NIFC approved); 48.8% GM; CEO Suzuki turnaround track record"},{id:"U4",name:"Balance Sheet & Torque",score:5,max:5,rationale:"$22.8M cash, zero debt, $18.4M FCF; debt eliminated under Suzuki"}],flex:[],failurePatterns:[]},
+      dimensions:{},
+      fairValue:{baseCaseFV:"$91.75",probWeightedFV:"$91.75",bearCaseFV:"$64",bullCaseFV:"$170",methodology:"Vision 2030 anchored",thesisType:"Quality Compounder Turnaround",lastUpdated:"2026-04-07"},
+      scenarios:[],
+      rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:true},{gate:"Mispricing",met:false}],
+      maxAlloc:5, bandViolation:false,
+      catalysts:["Q1 2026 earnings (May 2026) \u2014 serial beat verification","BKR 9500 FCC submission H2 2026","BKR 9500 shipping H1 2027"],
+      premortem:["BKR 9500 FCC delay","Wildfire season impact","Single-customer NIFC concentration"],
+      variantViews:["Market prices BKTI as commodity radio supplier despite 90% wildland fire monopoly + Vision 2030 path to $13 EPS"],
+      businessBackground:"90% wildland fire radio monopoly (NIFC approved). CEO Suzuki turnaround: rev $45M\u219286M, EBITDA 3.5%\u219220.5%, debt eliminated. Vision 2030: $170M rev, 60% GM, $55M FCF, $13 EPS.",
+      marketCap:"$320M"
+    },
+    MAGN: {
+      company:"Magnera Corporation", theme:"Sentiments-Valuation Mismatch", status:"MONITORING", portfolioType:null,
+      allocation:0, conviction:0, patternMatch:27, rc:4, instrument:"Shares", currency:"USD",
+      price:"$9.00", change:0, inceptionReturn:0,
+      pm:{total:27,max:35,archetype:"Spin-off Orphan / Cluster Insider Buying",scoredDate:"2026-04-01",universal:[],flex:[],failurePatterns:[]},
+      dimensions:{},
+      fairValue:{baseCaseFV:"$15",probWeightedFV:"$13",bearCaseFV:"$7.82",bullCaseFV:"$22",methodology:"Spin-off NAV",thesisType:"Spin-off Orphan",lastUpdated:"2026-04-01"},
+      scenarios:[],
+      rcChecklist:[{gate:"OVERVIEW",met:true},{gate:"Transcripts",met:true},{gate:"Questions",met:true},{gate:"Catalysts",met:true},{gate:"Mispricing",met:false}],
+      maxAlloc:5, bandViolation:false,
+      catalysts:["Q2 2026 synergy tracking","Leverage <3.5x","Conviction scoring (V1-V8)"],
+      premortem:["Synergies miss","Leverage stays >3.5x","ICFR weaknesses persist"],
+      variantViews:["World's largest nonwovens company; spin-off orphan with cluster insider buying ($1.4M+); 58% decline from $21.50"],
+      businessBackground:"World's largest nonwovens company (Berry HHS + Glatfelter RMT, Nov 2024). FY2025 rev $3.2B, EBITDA $362M. Net debt ~$1.65B (3.8x). CEO + 6 directors >$1.4M cluster buying.",
+      marketCap:"$320M"
+    },
     NFE: {
       company:"New Fortress Energy", theme:"Hormuz Disruption", status:"MONITORING", portfolioType:null,
       allocation:0, conviction:0, rc:0, instrument:"Shares", currency:"USD",
@@ -1412,20 +1447,18 @@ const D = {
     }
   },
   options:[
-    {ticker:"CF",leg:1,instrument:"Call",strike:"$90",expiry:"2026-06-18",alloc:10,moneyness:"Deep ITM (~$46 intrinsic)",dte:80,thetaProfile:"Accelerates mid-May; delta ~0.85-0.95",thirtyDteMark:"2026-05-19",catalystAlignment:[{catalyst:"USDA Plantings",date:"Mar 31",dteAtCatalyst:79,zone:"green"},{catalyst:"Q1 earnings",date:"May 6",dteAtCatalyst:43,zone:"green"}]},
-    {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:6.58,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:172,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:150,zone:"green"}]},
-    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:4.70,moneyness:"Slightly ITM (~\u20AC9 intrinsic)",dte:263,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 21",dteAtCatalyst:241,zone:"green"}]},
-    {ticker:"CRTO",leg:1,instrument:"Shares",strike:"—",expiry:"—",alloc:10,moneyness:"Core position",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"—",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"}]},
-    {ticker:"CRTO",leg:2,instrument:"Call",strike:"$20",expiry:"2027-01-15",alloc:3,moneyness:"OTM (~$3 OTM)",dte:290,thetaProfile:"Minimal at this DTE; roll at DTE <30 (mid-Dec 2026)",thirtyDteMark:"2026-12-16",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"Buyback acceleration",date:"Q3+ 2026",dteAtCatalyst:null,zone:"green"}]},
-    {ticker:"DOCS",leg:1,instrument:"Shares",strike:"\u2014",expiry:"\u2014",alloc:5,moneyness:"Core position (provisional)",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"\u2014",catalystAlignment:[{catalyst:"Q4 FY2026 earnings",date:"May 2026",dteAtCatalyst:null,zone:"green"},{catalyst:"AI commercial launch",date:"H2 2026",dteAtCatalyst:null,zone:"green"}]}
+    {ticker:"VOW",leg:1,instrument:"Shares",strike:"\u2014",expiry:"\u2014",alloc:40,moneyness:"Core position",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"\u2014",catalystAlignment:[{catalyst:"Q1 2026 results",date:"May 20",dteAtCatalyst:null,zone:"green"},{catalyst:"FY2025 Annual Report",date:"Apr 29",dteAtCatalyst:null,zone:"green"}]},
+    {ticker:"GTT",leg:1,instrument:"Call",strike:"\u20AC190",expiry:"2026-09-18",alloc:2.92,moneyness:"Near ATM (trimmed Apr 14 from 6.58%)",dte:156,thetaProfile:"Minimal theta at this DTE",thirtyDteMark:"2026-08-19",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 22",dteAtCatalyst:149,zone:"green"}]},
+    {ticker:"GTT",leg:2,instrument:"Call",strike:"\u20AC190",expiry:"2026-12-18",alloc:2.08,moneyness:"Near ATM (trimmed Apr 14 from 4.70%)",dte:247,thetaProfile:"Minimal theta",thirtyDteMark:"2026-11-18",catalystAlignment:[{catalyst:"Q1 Activity Update",date:"Apr 22",dteAtCatalyst:240,zone:"green"}]},
+    {ticker:"CRTO",leg:1,instrument:"Shares",strike:"\u2014",expiry:"\u2014",alloc:15,moneyness:"At CORE band ceiling (added Apr 14 from 10%)",dte:null,thetaProfile:"N/A (shares)",thirtyDteMark:"\u2014",catalystAlignment:[{catalyst:"Q1 earnings",date:"~May 8",dteAtCatalyst:null,zone:"green"},{catalyst:"Luxembourg redom",date:"Q3 2026",dteAtCatalyst:null,zone:"green"}]}
   ],
   themes:[
-    {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR","OSW","CHA"],activeCount:3,monitoringCount:4,parkedCount:4},
-    {name:"Rare Earth Supply Chain",status:"STABLE",impact:4,discovery:4,priority:16,tickers:["MEI","NEO","UCU","DEFN","UUUU","ARA","PRE","BRE","ARU","VML"],activeCount:0,monitoringCount:10,parkedCount:4},
+    {name:"Sentiments-Valuation Mismatch",status:"STABLE",impact:5,discovery:5,priority:25,tickers:["VOW","TRI","ARR","GO","KENDR","OSW","CHA","MAGN"],activeCount:3,monitoringCount:5,parkedCount:5},
+    {name:"Rare Earth Supply Chain",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["MEI","NEO","UCU","DEFN","UUUU","ARA","PRE","BRE","ARU","VML"],activeCount:0,monitoringCount:10,parkedCount:4},
     {name:"Derived-Demand Monopoly",status:"STABLE",impact:4,discovery:4,priority:16,tickers:["ERII","CDLR"],activeCount:0,monitoringCount:2,parkedCount:3},
-    {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:3,priority:15,tickers:["CF","GTT","NFE","MEOH","KIST"],activeCount:2,monitoringCount:1,parkedCount:2},
-    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["APP","TOI","SPSC","SGE","DOCS","WAY","PAYC","HSTM","WK","NICE","CRTO"],activeCount:8,monitoringCount:3,parkedCount:0},
-    {name:"Niche Industrial Monopolies",status:"NEW",impact:4,discovery:5,priority:20,tickers:["OFLX"],activeCount:0,monitoringCount:1,parkedCount:1},
+    {name:"Hormuz Disruption",status:"STABLE",impact:5,discovery:3,priority:15,tickers:["GTT","CF","NFE","MEOH","KIST"],activeCount:1,monitoringCount:2,parkedCount:2},
+    {name:"AI Disruption Opportunity",status:"STABLE",impact:4,discovery:3,priority:12,tickers:["APP","TOI","SPSC","SGE","WAY","PAYC","HSTM","WK","NICE","CRTO","TTD","PUBM"],activeCount:7,monitoringCount:5,parkedCount:1},
+    {name:"Niche Industrial Monopolies",status:"STABLE",impact:4,discovery:5,priority:20,tickers:["OFLX","BKTI"],activeCount:0,monitoringCount:2,parkedCount:1},
     {name:"Tariffs Refund",status:"STABLE",impact:3,discovery:2,priority:6,tickers:["LCUT","HOFT"],activeCount:0,monitoringCount:2,parkedCount:0},
     {name:"Hidden Value SOTP",status:"DORMANT",impact:null,discovery:null,priority:null,tickers:["SLB","HON"],activeCount:0,monitoringCount:0,parkedCount:0}
   ],
@@ -1464,7 +1497,15 @@ const D = {
     crossConnections:[{from:"Hormuz Disruption",to:"AI Disruption",via:"Qatar helium supply (30% global)"},{from:"Hormuz Disruption",to:"Stagflation",via:"Energy inflation \u2192 central bank tightening"}],
     leads:[{ticker:"MP",theme:"Rare Earth",score:null,action:"pattern-match"},{ticker:"LYC",theme:"Rare Earth",score:null,action:"opportunity-screen"},{ticker:"MEOH",theme:"Hormuz",score:7.5,action:"trigger-check"}],
     recentSignals:[
-      {impact:5,date:"Mar 30",text:"Tampa NH3 April settled ~$775/mt (+$160/mt from March $615). S3 confirmation threshold BREACHED. D1/V6 upgrade candidates activated.",theme:"Hormuz"},
+      {impact:5,date:"Apr 13",text:"Trump ordered USN Hormuz blockade. CENTCOM declared effective immediately. CF S4 probability raised 33→40%; PW FV $178→$186.",theme:"Hormuz"},
+      {impact:5,date:"Apr 13",text:"VLCC TD3C surged WS444/$444K/day (up from $356K). 800 tankers stranded. Dated Brent physical $132 vs futures $96 = $36/bbl unprecedented spread.",theme:"Hormuz"},
+      {impact:5,date:"Apr 12",text:"Islamabad talks collapsed after 21 hours. Iran: no alteration in Hormuz status until US consents to fair agreement. Ceasefire effectively dead.",theme:"Hormuz"},
+      {impact:5,date:"Apr 12",text:"Australian Cyclone Narelle knocked out ~30MT/yr LNG (8% of global). Gorgon, Wheatstone, NW Shelf offline. Compounds Qatar Ras Laffan. GTT structural thesis reinforced.",theme:"Hormuz"},
+      {impact:4,date:"Apr 13",text:"Urea $838 retail (+34% MoM); anhydrous ammonia $1,060 (above $1,000 first since 2023). Food inflation lag building.",theme:"Hormuz"},
+      {impact:4,date:"Apr 13",text:"US yttrium imports down 95% in 8 months. Lynas Japan deal. Serra Verde $565M DFC. Rare Earth theme escalating.",theme:"Rare Earth"},
+      {impact:4,date:"Apr 12",text:"ECB rate hike >60% probability Apr 17 — first since 2022. BoE pricing 4 hikes. BOJ hiking to 1995 levels. Impact on KENDR/TRI.",theme:"Sentiments-Val Mismatch"},
+      {impact:3,date:"Apr 10",text:"CIT Section 122 tariff oral arguments Apr 10 — judges skeptical; ruling within weeks. Tariff Refund theme alive.",theme:"Tariffs"},
+      {impact:5,date:"Mar 30",text:"Tampa NH3 April settled ~$775/mt (+$160/mt from March $615). S3 confirmation threshold BREACHED. V1/V6 upgrade candidates activated.",theme:"Hormuz"},
       {impact:5,date:"Mar 30",text:"India Kharif procurement RESOLVED: domestic +23% (67,000 MT/day), emergency import 13.5L tonnes, stocks 62L tonnes (+10). Demand NOT destroyed.",theme:"Hormuz"},
       {impact:5,date:"Mar 30",text:"Islamabad 4-nation summit: Iran rejected US 15-point plan, counter-demands Hormuz sovereignty recognition (non-starter). No ceasefire path.",theme:"Hormuz"},
       {impact:4,date:"Mar 30",text:"Ras Laffan 3-5yr repair timeline confirmed (Wood Mackenzie). QatarEnergy force majeure on long-term LNG contracts.",theme:"Hormuz"},
@@ -1478,21 +1519,22 @@ const D = {
     lastSynthesis:"2026-03-30"
   },
   alerts:[
-    {type:"red",text:"CRITICAL TOMORROW: USDA Prospective Plantings Mar 31 11AM CDT. CF threshold: >93M corn acres = demand intact, <92M = volume headwind."},
-    {type:"red",text:"Tampa NH3 April SETTLED $775/mt (+$160/mt). S3 confirmation threshold BREACHED. Largest single-month jump in years. D1/V6 upgrade candidates activated."},
-    {type:"red",text:"Hormuz Day 31: ~95% transit reduction. Mines CONFIRMED (Maham 3/7). Strait at ~5% of pre-war transit. CF+GTT = 21.28% portfolio."},
-    {type:"red",text:"Trump Hormuz strike deadline Apr 6 (7 days, 3rd extension). Islamabad 4-nation summit (Mar 29-30): Iran rejected US 15-point plan, demands Hormuz sovereignty."},
-    {type:"amber",text:"CF $90C Jun 18: 80 DTE. Deep ITM ($46 intrinsic). Q1 earnings May 6 (37 DTE). Decision point May 19."},
-    {type:"amber",text:"TRI: Holdings in Company RNS Mar 30 at 7:00 AM UNREAD. TR-1 notification from unknown holder. Potential new 5%+ institutional holder."},
+    {type:"red",text:"CF FULL EXIT (Apr 15 — user-directed, ~+120% gain on premium). $90C Jun 18 2026 closed cumulative Apr 14 trim + Apr 15 full close. Status ACTIVE \u2192 MONITORING. Thesis intact (MIA AVERAGE/STRONG/STRONG \u2192 BASE; PW FV $186). Cash 35.00\u219240.00%. Slots 4\u21923 of 12. Re-entry conditional on NOLA >$800 sustained / Q2 realized-pricing catch-up / cleaner options window / ceasefire collapse."},
+    {type:"red",text:"Trump ordered USN Hormuz blockade (Apr 13). CENTCOM declared effective immediately. Islamabad talks collapsed after 21 hours (Apr 12). Iran: \"no alteration in Hormuz status until US consents to fair agreement.\" Ceasefire effectively dead. IRGC warned forceful response."},
+    {type:"red",text:"VLCC TD3C surged WS444/$444K/day (up from $356K). 800 tankers stranded. 400+ oil-laden at anchor. Dated Brent physical $132 vs futures $96 = $36/bbl unprecedented spread \u2014 clearest physical scarcity signal."},
+    {type:"red",text:"Australian Cyclone Narelle knocked out ~30MT/yr LNG (8% of global) \u2014 Gorgon, Wheatstone, NW Shelf offline. Compounding Qatar (Ras Laffan). GTT structural thesis reinforced."},
+    {type:"amber",text:"CRTO ADDED 10\u219215% (Apr 14 \u2014 user-directed). At MIA CORE band ceiling. No conviction or thesis change. Tension: legacy \u00a712 advisory caps 7.5/10 at 12.5%; MIA framework (post-Apr 5) supersedes with CORE ceiling 15%. No further headroom without conviction upgrade. Q1 earnings ~May 8 = validation event."},
+    {type:"amber",text:"GTT TRIMMED to 5% STARTER (Apr 14). \u20ac190C Sep 18 2.92% + \u20ac190C Dec 18 2.08%. From 11.28%. CORE band max remains 15% (10% headroom). No conviction or thesis change. Q1 Activity Update Apr 22 (7 days) is key catalyst \u2014 new CEO first presentation."},
+    {type:"red",text:"Urea $838 retail (+34% MoM); anhydrous ammonia $1,060 (above $1,000 first since 2023). Food inflation lag: 1 ton urea = 126 bushels corn (from 75 in Dec). CF thesis tail intact despite position exit."},
     {type:"svm",text:"VOW covenant waiver Q4+Q1. Q1 results May 20 (first ~68% new-contract mix read). FY2025 Annual Report Apr 29. Q3 2026 needs NOK 103M rolling EBITDA."},
-    {type:"amber",text:"ERII: Entry BLOCKED \u2014 mgmt credibility (M3+M5: 2.5/5). Value trap risk despite +97% PW upside. Price alert: $6. Monitor for insider purchases + inflection."},
-    {type:"info",text:"India Kharif procurement RESOLVED (Mar 30): domestic +23%, emergency imports 13.5 lakh tonnes, stocks +10 above prior year. Net slightly positive for CF demand."},
-    {type:"info",text:"KENDR buyback EUR 10M completed Mar 24 (662,015 shares at avg \u20AC15.11). Q1 earnings ~May 20 = GO trigger gate."},
-    {type:"info",text:"Niche Industrial Monopolies theme created (Mar 29). OFLX: PM 30/35 (STRONG). Zero analysts. 82% family + insider buying."},
-    {type:"info",text:"Hormuz discovery downgraded 4\u21923 (alpha window narrowing). Priority 20\u219215."},
-    {type:"amber",text:"CRTO entered PORTFOLIO as INVESTMENT (Mar 31). Hybrid: 10% shares (~$17.46) + 3% Jan'27 $20C (~$4.70). 13% capital, ~17% effective. Conviction 8/10. RC 5/5. V2 = 6/6 Exceptional. Bear floor $33 = 92% above current."},
-    {type:"amber",text:"CRTO $20C Jan 15 2027: 290 DTE. Roll trigger mid-Dec 2026. ADD trigger: Q1 CeT >= $245M (~May). Next catalyst: Q1 earnings."},
-    {type:"amber",text:"DOCS entered PORTFOLIO as INVESTMENT (Provisional, Mar 31). 5% shares at ~$23.69. RC 3/5 \u2014 trim to 4% if RC not 4/5 by May 15 Q4 earnings. Band violation: LEAN caps at 4%."}
+    {type:"amber",text:"ECB rate hike >60% probability Apr 17 \u2014 first since 2022. BoE pricing 4 hikes. BOJ hiking to 1995 levels. Impact on KENDR/TRI (European industrials)."},
+    {type:"red",text:"US yttrium imports down 95% in 8 months (Rare Earth deepening). Lynas Japan deal. Serra Verde $565M DFC. Theme escalating."},
+    {type:"amber",text:"CIT Section 122 tariff oral arguments Apr 10 \u2014 judges skeptical; ruling within weeks. Tariff Refund theme alive."},
+    {type:"info",text:"DOCS EXITED Apr 7 (~breakeven $23.50 vs $23.69 entry). Low conviction post-council. WATCHLIST \u2192 PASSED. Cash 23.72\u219228.72%."},
+    {type:"info",text:"IBEX archived Apr 8: MONITORING \u2192 PASSED. Insufficient upside vs portfolio alternatives. BPO low barriers, digital acq. opacity unresolved, zero insider buying."},
+    {type:"info",text:"ERII ranked #1 undeployed candidate. 8/10 conviction, +97% PW upside, bear case above current price, genuinely uncorrelated (Saudi SWPC desal). Pre-sized 5-7% INVESTMENT. Entry gate: Q1 2026 earnings (~May 2026). Cash 40% \u2014 ample for entry."},
+    {type:"info",text:"KENDR MIA pending. LEAN entry signal active, GO trigger ~May 20. Conviction-scoring run scheduled (Step 6 of Apr 15 session)."},
+    {type:"info",text:"Nuclear Energy candidate at 12th briefing \u2014 exceeds promotion threshold. Still lacks direct nuclear pricing/policy data. User decision needed."}
   ],
   catalystTimeline:[
     {date:"2026-03-31",ticker:"CF",event:"USDA Prospective Plantings",type:"Hard",overdue:false},
@@ -1500,21 +1542,21 @@ const D = {
     {date:"2026-03-31",ticker:"VOW",event:"FuelEU Maritime verification deadline (tangential)",type:"Hard",overdue:false},
     {date:"2026-04-06",ticker:"CF/GTT",event:"Trump 10-day Hormuz strike deadline (3rd extension)",type:"Hard",overdue:false},
     {date:"2026-04-17",ticker:"CF",event:"$12B Farm Aid Package enrollment deadline",type:"Hard",overdue:false},
-    {date:"2026-04-21",ticker:"GTT",event:"Q1 Activity Update — new CEO first presentation",type:"Hard",overdue:false},
+    {date:"2026-04-22",ticker:"GTT",event:"Q1 Activity Update \u2014 new CEO first presentation (7 DAYS)",type:"Hard",overdue:false},
     {date:"2026-04-23",ticker:"LCUT/HOFT",event:"CBP ACE automated refund go-live",type:"Soft",overdue:false},
     {date:"2026-04-25",ticker:"GTT",event:"EU Russian LNG ban (short-term contracts)",type:"Hard",overdue:false},
     {date:"2026-04-27",ticker:"HSTM",event:"Q1 2026 earnings",type:"Hard",overdue:false},
     {date:"2026-04-29",ticker:"VOW",event:"FY2025 Annual Report \u2014 audited impairment, covenant detail",type:"Hard",overdue:false},
     {date:"2026-04-29",ticker:"OFLX",event:"Q1 FY2026 earnings \u2014 revenue inflection watch",type:"Hard",overdue:false},
     {date:"2026-05-05",ticker:"LCUT/HOFT",event:"USTR Section 301 public hearings begin",type:"Hard",overdue:false},
-    {date:"2026-05-01",ticker:"CRTO",event:"Q1 2026 earnings — CeT >= $245M trough confirm (ADD trigger)",type:"Hard",overdue:false},
+    
     {date:"2026-05-06",ticker:"CF",event:"Q1 2026 earnings",type:"Hard",overdue:false},
-    {date:"2026-05-19",ticker:"CF",event:"$90C 30 DTE decision point",type:"Hard",overdue:false},
+    {date:"2026-05-19",ticker:"CF",event:"$90C 30 DTE decision point \u2014 POSITION EXITED Apr 15",type:"Resolved",overdue:false},
     {date:"2026-05-20",ticker:"VOW",event:"Q1 2026 results \u2014 first ~68% new-contract mix",type:"Hard",overdue:false},
     {date:"2026-05-20",ticker:"KENDR",event:"Q1 2026 earnings \u2014 GO trigger gate for full position",type:"Hard",overdue:false},
     {date:"2026-05-27",ticker:"VOW",event:"AGM",type:"Hard",overdue:false},
     {date:"2026-06-17",ticker:"GTT",event:"Ex-dividend (\u20AC4.94/share)",type:"Hard",overdue:false},
-    {date:"2026-06-18",ticker:"CF",event:"$90C Expiry",type:"Hard",overdue:false},
+    {date:"2026-06-18",ticker:"CF",event:"$90C Expiry \u2014 POSITION EXITED Apr 15",type:"Resolved",overdue:false},
     {date:"2026-06-30",ticker:"VOW",event:"FuelEU Maritime penalty deadline",type:"Hard",overdue:false},
     {date:"2026-07-01",ticker:"TRI",event:"FY2026 Final Results (MONITORING — re-entry gate)",type:"Soft",overdue:false},
     {date:"2026-08-19",ticker:"GTT",event:"€190C Sep 18 — 30 DTE decision point",type:"Hard",overdue:false},
@@ -1526,30 +1568,35 @@ const D = {
     {date:"2026-12-18",ticker:"GTT",event:"\u20AC190C Dec expiry",type:"Hard",overdue:false},
     {date:"2027-01-15",ticker:"CRTO",event:"$20C Jan expiry",type:"Hard",overdue:false},
     {date:"2027-06-27",ticker:"CRTO",event:"Russell reconstitution (8-10% float passive buying)",type:"Hard",overdue:false},
-    {date:"2026-05-15",ticker:"DOCS",event:"Q4 FY2026 earnings \u2014 RC gate (4/5 required to maintain 5%)",type:"Hard",overdue:false}
+    {date:"2026-05-15",ticker:"DOCS",event:"Q4 FY2026 earnings \u2014 POSITION EXITED Apr 7",type:"Resolved",overdue:false},
+    {date:"2026-05-08",ticker:"CRTO",event:"Q1 2026 earnings \u2014 CeT validation (band ceiling sizing)",type:"Hard",overdue:false},
+    {date:"2026-04-17",ticker:"_macro",event:"ECB rate decision \u2014 first hike since 2022 (>60% prob)",type:"Hard",overdue:false},
+    {date:"2026-04-22",ticker:"_macro",event:"Iran ceasefire expiry \u2014 hard deadline, no renewal framework",type:"Hard",overdue:false}
   ],
   priorityQueue:[
-    {score:25.0,title:"CF: USDA Plantings Mar 31 TOMORROW 11AM CDT",action:"Catalyst TOMORROW. Pre-report consensus 94.3-94.5M corn acres. CF threshold: >93M = demand intact, <92M = volume headwind. Log result immediately."},
-    {score:21.3,title:"Assess Trump Apr 6 deadline outcome (CF + GTT)",action:"Binary event in 7 days \u00d7 21.28% weight \u00d7 1.5 (decision) = 21.3. Islamabad summit failed. Iran demands sovereignty. Prepare for escalation vs extension."},
-    {score:10.0,title:"CF: Tampa NH3 S3 confirmation \u2014 evaluate V1/V6 upgrade",action:"RESOLVED: $775/mt (+$160). >$700/t S3 threshold breached. Evaluate conviction dimension upgrades."},
-    {score:8.0,title:"OFLX: FY2025 10-K review",action:"New STRONG candidate (PM 30/35). 10-K filed, available now. CSST market share + competitive positioning."},
-    {score:7.5,title:"TRI: Read Holdings in Company RNS (Mar 30)",action:"DATA GAP. TR-1 notification at 7:00 AM from unknown holder. Potential new 5%+ institutional holder. Read on Investegate immediately."},
-    {score:6.4,title:"GTT: Q1 Activity Update prep (Apr 21)",action:"Catalyst in 22 days \u00d7 11.28% weight = 6.4. New CEO first presentation. Nakilat 25-vessel charter confirms pipeline. Conviction 9/10 (Mar 31)."},
-    {score:4.0,title:"VOW: FY2025 Annual Report (Apr 29) + Q1 results (May 20)",action:"Annual report in 30 days (audited impairment, covenant detail). Q1 in 51 days (first ~68% new-contract mix read)."},
-    {score:3.5,title:"CDLR: FY2025 20-F monitoring",action:"Full onboarding complete. 20-F Q2 2026 for fuel pass-through + Hornsea 3 detail."},
-    {score:5.0,title:"CRTO: Q1 2026 earnings (~May) — ADD trigger",action:"CeT >= $245M = ADD shares to 15-20%. First data point as INVESTMENT position. Monitor RM trough confirmation + PM trajectory."},
-    {score:3.0,title:"ERII: Monitor for inflection (entry blocked)",action:"Mgmt credibility block (M3+M5: 2.5/5). Value trap risk. Price alert $6. Watch insider purchases + guidance hits."},
-    {score:7.5,title:"DOCS: RC 3/5 \u2192 4/5 gate at May 15 Q4 earnings",action:"Provisional 5% position. LEAN caps at 4%. Must advance RC to 4/5 by May 15 or trim to 4%. Key: catalysts ascertained + mispricing confirmed."}
+    {score:30.0,title:"GTT: Q1 Activity Update Apr 22 (7 DAYS) \u2014 prep brief required",action:"Catalyst in 7 days \u00d7 5% weight \u00d7 1.5 (decision) = 30.0 (urgency override). New CEO first presentation. Key: order count, gross vs net, new CEO tone. Run event-prep skill."},
+    {score:22.5,title:"KENDR: Conviction-scoring + MIA \u2014 LEAN entry signal active",action:"GO trigger ~May 20 Q1. Needs formal allocation band before capital deployment. Scheduled as Step 6 of Apr 15 session. Cash 40% available."},
+    {score:18.0,title:"CRTO: Q1 earnings ~May 8 \u2014 band ceiling validation",action:"15% allocation \u00d7 1.5 (decision) = 22.5. At MIA CORE ceiling \u2014 no further headroom. Pre-define trim trigger if Q1 disappoints (CeT < $200M)."},
+    {score:15.0,title:"CF: Define re-entry triggers explicitly (post-exit)",action:"Document: NOLA >$800 sustained / Q2 realized-pricing catch-up / cleaner options window / ceasefire collapse. Continue INDICATORS.md monitoring."},
+    {score:12.0,title:"VOW: FY2025 Annual Report (Apr 29) + Q1 results (May 20)",action:"40% position. Annual report 14 days (audited impairment, covenant detail). Q1 in 35 days (first ~68% new-contract mix read). Silent period active."},
+    {score:10.0,title:"ERII: Q1 earnings ~May 2026 entry gate (#1 undeployed)",action:"8/10 conviction, +97% PW upside, bear above current. Pre-size 5-7%. Cash 40% \u2014 ample for entry."},
+    {score:8.0,title:"Iran ceasefire expiry Apr 22 \u2014 hard deadline",action:"7 days. No renewal framework exists. Direct GTT/Hormuz impact. Monitor for naval incidents (first boarding = VIX spike, oil +5-15%)."},
+    {score:7.5,title:"ECB rate decision Apr 17 \u2014 first hike since 2022 (>60% prob)",action:"Impact on KENDR/TRI (European industrials). 2 days."},
+    {score:6.0,title:"CF + DOCS case-study-review",action:"Both positions exited. Lessons to extract for Case Studies/. CF: ~+120% gain vs DOCS: ~breakeven."},
+    {score:5.0,title:"OFLX: FY2025 10-K review",action:"New STRONG candidate (PM 30/35). 10-K filed. CSST market share + competitive positioning."},
+    {score:4.0,title:"Nuclear Energy candidate \u2014 promotion decision",action:"12th consecutive briefing of persistence \u2014 exceeds standard threshold. Still lacks direct nuclear pricing/policy data. User decision needed."}
   ],
   thresholdMonitors:[
-    {ticker:"CF",threshold:"Tampa NH3 >$700/t",current:"$775/t",status:"breached"},
-    {ticker:"CF",threshold:"HH >$5.50/mmBtu",current:"$2.94",status:"ok"},
-    {ticker:"CF",threshold:"Hormuz+Red Sea reopen",current:"Active conflict + mines",status:"ok"},
-    {ticker:"CF",threshold:"Ceasefire (both)",current:"Iran rejected; Zolghadr hardliner",status:"ok"},
-    {ticker:"CF",threshold:"NOLA urea >$700/t",current:"$625-687/st ($689-757/t)",status:"approaching"},
-    {ticker:"CF",threshold:"US ammonia >$900/t",current:"$998/t",status:"breached"},
-    {ticker:"CF",threshold:"Tampa NH3 >$700/t S3",current:"$775/t SETTLED",status:"breached"},
-    {ticker:"GTT",threshold:"Ceasefire premium unwind",current:"3-4% structural",status:"ok"},
+    {ticker:"CF",threshold:"Re-entry: NOLA urea >$800/t sustained",current:"$757-838/t retail",status:"approaching"},
+    {ticker:"CF",threshold:"Re-entry: Q2 realized-pricing catch-up",current:"Pending (Aug 2026)",status:"ok"},
+    {ticker:"CF",threshold:"Re-entry: cleaner options window",current:"Position closed Apr 15",status:"ok"},
+    {ticker:"CF",threshold:"Tampa NH3 >$700/t S3",current:"$1060/t (anhydrous, breached)",status:"breached"},
+    {ticker:"CF",threshold:"HH >$5.50/mmBtu",current:"$3.10",status:"ok"},
+    {ticker:"CF",threshold:"Hormuz+Red Sea reopen",current:"USN blockade Apr 12; talks collapsed",status:"ok"},
+    {ticker:"GTT",threshold:"Ceasefire premium unwind",current:"3-4% structural; dual chokepoint locks in",status:"ok"},
+    {ticker:"GTT",threshold:"Q1 Activity Update Apr 22",current:"7 days",status:"approaching"},
+    {ticker:"CRTO",threshold:"Q1 earnings ~May 8 (CeT validation)",current:"23 days",status:"approaching"},
+    {ticker:"VOW",threshold:"Q1 results May 20 (margin inflection)",current:"35 days",status:"approaching"},
     {ticker:"VOW",threshold:"Q3 covenant 3.5x NIBD/EBITDA",current:"Neg. EBITDA (FY2025)",status:"approaching"}
   ],
   priceHistory:{
@@ -1564,19 +1611,19 @@ const D = {
     }
   },
   themeScoreHistory:{
-    "Sentiments-Val Mismatch":[{date:"2026-03-16",impact:5,discovery:5,priority:25},{date:"2026-03-24",impact:5,discovery:5,priority:25}],
-    "Hormuz Disruption":[{date:"2026-03-16",impact:5,discovery:4,priority:20},{date:"2026-03-24",impact:5,discovery:4,priority:20},{date:"2026-03-27",impact:5,discovery:3,priority:15}],
-    "Rare Earth Supply Chain":[{date:"2026-03-26",impact:4,discovery:4,priority:16}],
-    "AI Disruption Opportunity":[{date:"2026-03-16",impact:4,discovery:3,priority:12},{date:"2026-03-24",impact:4,discovery:3,priority:12}],
-    "Tariffs Refund":[{date:"2026-03-16",impact:3,discovery:2,priority:6},{date:"2026-03-24",impact:3,discovery:2,priority:6}],
-    "Niche Industrial Monopolies":[{date:"2026-03-29",impact:4,discovery:5,priority:20}],
-    "Derived-Demand Monopoly":[{date:"2026-03-28",impact:4,discovery:4,priority:16}]
+    "Sentiments-Val Mismatch":[{date:"2026-03-16",impact:5,discovery:5,priority:25},{date:"2026-03-24",impact:5,discovery:5,priority:25},{date:"2026-04-04",impact:5,discovery:5,priority:25},{date:"2026-04-12",impact:5,discovery:5,priority:25},{date:"2026-04-13",impact:5,discovery:5,priority:25}],
+    "Hormuz Disruption":[{date:"2026-03-16",impact:5,discovery:4,priority:20},{date:"2026-03-24",impact:5,discovery:4,priority:20},{date:"2026-03-27",impact:5,discovery:3,priority:15},{date:"2026-04-04",impact:5,discovery:3,priority:15},{date:"2026-04-12",impact:5,discovery:3,priority:15},{date:"2026-04-13",impact:5,discovery:3,priority:15}],
+    "Rare Earth Supply Chain":[{date:"2026-03-26",impact:4,discovery:4,priority:16},{date:"2026-04-04",impact:4,discovery:3,priority:12},{date:"2026-04-12",impact:4,discovery:3,priority:12},{date:"2026-04-13",impact:4,discovery:3,priority:12}],
+    "AI Disruption Opportunity":[{date:"2026-03-16",impact:4,discovery:3,priority:12},{date:"2026-03-24",impact:4,discovery:3,priority:12},{date:"2026-04-04",impact:4,discovery:3,priority:12},{date:"2026-04-12",impact:4,discovery:3,priority:12},{date:"2026-04-13",impact:4,discovery:3,priority:12}],
+    "Tariffs Refund":[{date:"2026-03-16",impact:3,discovery:2,priority:6},{date:"2026-03-24",impact:3,discovery:2,priority:6},{date:"2026-04-04",impact:3,discovery:2,priority:6},{date:"2026-04-12",impact:3,discovery:2,priority:6},{date:"2026-04-13",impact:3,discovery:2,priority:6}],
+    "Niche Industrial Monopolies":[{date:"2026-03-29",impact:4,discovery:5,priority:20},{date:"2026-04-04",impact:4,discovery:5,priority:20},{date:"2026-04-12",impact:4,discovery:5,priority:20}],
+    "Derived-Demand Monopoly":[{date:"2026-03-28",impact:4,discovery:4,priority:16},{date:"2026-04-04",impact:4,discovery:4,priority:16},{date:"2026-04-12",impact:4,discovery:4,priority:16}]
   },
   changelog:{
     unpropagated:[],
     recentMajor:[
-      {theme:"HOR",date:"2026-03-31",title:"GTT conviction rescored 8.5\u219210/10. D3 4\u21925, D4 3\u21924, V6 4\u21925, V8 3\u21924. Cluster A 100%, B 84%. Max alloc 30%\u219240%.",tier:"MAJOR"},
-      {theme:"HOR",date:"2026-03-30",title:"Tampa NH3 April settled $775/mt (+$160). S3 confirmation threshold BREACHED. D1/V6 upgrade candidates activated. CHANGELOG logged.",tier:"CRITICAL"},
+      {theme:"HOR",date:"2026-03-31",title:"GTT conviction rescored 8.5\u219210/10. V3 4\u21925, V4 3\u21924, V6 4\u21925, V8 3\u21924. Cluster A 100%, B 84%. Max alloc 30%\u219240%.",tier:"MAJOR"},
+      {theme:"HOR",date:"2026-03-30",title:"Tampa NH3 April settled $775/mt (+$160). S3 confirmation threshold BREACHED. V1/V6 upgrade candidates activated. CHANGELOG logged.",tier:"CRITICAL"},
       {theme:"HOR",date:"2026-03-30",title:"India Kharif procurement RESOLVED: domestic supply secured. Net slightly positive for CF demand thesis.",tier:"MAJOR"},
       {theme:"HOR",date:"2026-03-30",title:"Ras Laffan 3-5yr repair confirmed (WoodMac). QatarEnergy FM on long-term LNG contracts. Nakilat 25-vessel charter signed.",tier:"MAJOR"},
       {theme:"SVM",date:"2026-03-30",title:"TRI: Mills bought 1.5M shares at 59.75p (\u00a3896K). Holdings in Company RNS from unknown holder \u2014 DATA GAP.",tier:"MAJOR"},
@@ -1588,13 +1635,13 @@ const D = {
       {theme:"DDM",date:"2026-03-29",title:"ERII: 10-K reviewed, RC 3\u21924/5. Fair-value-estimation: PW FV $19.49 (+97%). Bear $11.76 > current $9.87.",tier:"MAJOR"}
     ]
   },
-  lastUpdated: "2026-03-31T12:00:00"
+  lastUpdated: "2026-04-15T13:30:00"
 };
 
 // ── Canonical dimension labels (from vault-scoring-portfolio.md) ──
-var DIM_LABELS = {D1:'Fundamentals Trajectory',D2:'Valuation Mismatch',D3:'Identifiable Mispricing',D4:'Downside Protection',V5:'Thesis Simplicity',V6:'Upside Optionality',V7:'Evidence Quality',V8:'Catalyst Clarity'};
-var DIM_SHORT = {D1:'Fund.',D2:'Val.',D3:'Mispr.',D4:'Prot.',V5:'Simpl.',V6:'Option.',V7:'Evid.',V8:'Catal.'};
-var DIM_KEYS = ['D1','D2','D3','D4','V5','V6','V7','V8'];
+var DIM_LABELS = {V1:'Fundamentals Trajectory',V2:'Valuation Mismatch',V3:'Identifiable Mispricing',V4:'Downside Protection',V5:'Thesis Simplicity',V6:'Upside Optionality',V7:'Evidence Quality',V8:'Catalyst Clarity'};
+var DIM_SHORT = {V1:'Fund.',V2:'Val.',V3:'Mispr.',V4:'Prot.',V5:'Simpl.',V6:'Option.',V7:'Evid.',V8:'Catal.'};
+var DIM_KEYS = ['V1','V2','V3','V4','V5','V6','V7','V8'];
 
 // Helper: get dimension score (handles both old numeric and new object format)
 function dimScore(dim) { return typeof dim === 'object' ? dim.score : dim; }
@@ -1609,13 +1656,13 @@ function dimBadge(dim) {
 // Add D.commodities if not present
 if (!D.commodities) {
   D.commodities = {
-    brent: {price: 112.57, change: 11.6, unit: '$/bbl'},
-    hh: {price: 2.94, change: -3.19, unit: '$/MMBtu'},
-    urea: {price: 687, change: 5.4, unit: '$/st NOLA'},
-    tampaNH3: {price: 775, change: 26.0, unit: '$/mt S3 CONFIRMED'},
-    jkm: {price: 22.73, change: 0.8, unit: '$/MMBtu'},
-    ttf: {price: 52, change: 0.5, unit: '\u20AC/MWh'},
-    hormuzTransits: {daily: '5-6', day: 31}
+    brent: {price: 109.0, change: -3.2, unit: '$/bbl (Brent futures; physical $132)'},
+    hh: {price: 3.10, change: 5.4, unit: '$/MMBtu'},
+    urea: {price: 838, change: 34.0, unit: '$/t retail (+34% MoM)'},
+    tampaNH3: {price: 1060, change: 36.8, unit: '$/t (anhydrous; first >$1000 since 2023)'},
+    jkm: {price: 24.5, change: 7.8, unit: '$/MMBtu'},
+    ttf: {price: 56, change: 7.7, unit: '\u20AC/MWh'},
+    hormuzTransits: {daily: '4-5', day: 38}
   };
 }
 
@@ -2530,7 +2577,7 @@ function renderCalendar() {
     h += '<div class="card">';
     h += '<h3>\u23F0 Options Expiry</h3>';
     h += '<table>';
-    h += '<thead><tr><th>Ticker</th><th>Expiry</th><th>DTE</th><th>30-DTE Mark</th><th>Next Catalyst</th></tr></thead>';
+    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Expiry</th><th>DTE</th><th>30-DTE Mark</th><th>Next Catalyst</th></tr></thead>';
     h += '<tbody>';
     D.options.forEach(function(o) {
       var dc = dteClass(o.dte);
@@ -2549,7 +2596,7 @@ function renderCalendar() {
   var overdue = (D.catalystTimeline || []).filter(function(c) { return c.overdue; });
   if (overdue.length) {
     h += '<div class="card" style="border-color:rgba(255,59,48,.2)">';
-    h += '<h3 style="color:var(--accent-red)">\uV83D\uDEA8 Overdue</h3>';
+    h += '<h3 style="color:var(--accent-red)">\uD83D\uDEA8 Overdue</h3>';
     overdue.forEach(function(c) {
       h += '<div class="timeline-item">';
       h += '<div class="timeline-date" style="color:var(--accent-red)">' + formatDate(c.date) + '</div>';
@@ -2622,7 +2669,7 @@ function renderCalendar() {
     h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Threshold Monitors (' + D.thresholdMonitors.length + ')</button>';
     h += '<div class="section-body"><div class="card" style="margin-top:8px">';
     h += '<table>';
-    h += '<thead><tr><th>Ticker</th><th>Threshold</th><th>Current</th><th>Status</th></tr></thead>';
+    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Threshold</th><th>Current</th><th>Status</th></tr></thead>';
     h += '<tbody>';
     D.thresholdMonitors.forEach(function(t) {
       var dotClass = t.status === 'ok' ? 'ind-ok' : t.status === 'approaching' ? 'ind-approaching' : 'ind-breach';
@@ -2686,7 +2733,7 @@ function renderScenarioStrip(t) {
 }
 function renderDimMini(t) {
   if (!t.dimensions) return '';
-  var dims = ['D1','D2','D3','D4','V5','V6','V7','V8'];
+  var dims = ['V1','V2','V3','V4','V5','V6','V7','V8'];
   var h = '<div class="dim-mini">';
   dims.forEach(function(d) {
     var score = t.dimensions[d] ? t.dimensions[d].score : 0;
@@ -2847,7 +2894,7 @@ function renderPortfolio() {
 
   // ── Position Summary Table ──
   h += '<div class="card pf-table-wrap"><table class="pf-table">';
-  h += '<thead><tr><th>Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc %</th><th>Conv.</th><th>Cluster A/B</th><th>RC</th><th>Price</th><th>PW FV</th><th>Upside</th><th>Flags</th></tr></thead><tbody>';
+  h += '<thead><tr><th aria-sort="none">Ticker</th><th>Instrument</th><th>Theme</th><th>Alloc %</th><th>Conv.</th><th>Cluster A/B</th><th>RC</th><th>Price</th><th>PW FV</th><th>Upside</th><th>Flags</th></tr></thead><tbody>';
   positions.forEach(function(p) {
     var t = p.t, sym = p.sym;
     var cur = pn(t.price), pw = t.fairValue ? pn(t.fairValue.probWeightedFV) : 0;
@@ -2881,7 +2928,7 @@ function renderPortfolio() {
   // ── Asymmetry Table ──
   h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Asymmetry Analysis (' + positions.length + ')</button>';
   h += '<div class="section-body"><div class="card pf-table-wrap"><table class="pf-table">';
-  h += '<thead><tr><th>Ticker</th><th>Bear FV</th><th>Current</th><th>PW FV</th><th>Bull FV</th><th>Downside</th><th>Upside</th><th>Asym. Ratio</th><th>Margin of Safety</th></tr></thead><tbody>';
+  h += '<thead><tr><th aria-sort="none">Ticker</th><th>Bear FV</th><th>Current</th><th>PW FV</th><th>Bull FV</th><th>Downside</th><th>Upside</th><th>Asym. Ratio</th><th>Margin of Safety</th></tr></thead><tbody>';
   positions.forEach(function(p) {
     var t = p.t, fv = t.fairValue;
     if (!fv) return;
@@ -2910,7 +2957,7 @@ function renderPortfolio() {
   if (optLegs.length) {
     h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Options Monitor (' + optLegs.length + ')</button>';
     h += '<div class="section-body"><div class="card pf-table-wrap"><table class="pf-table">';
-    h += '<thead><tr><th>Ticker</th><th>Strike</th><th>Expiry</th><th>DTE</th><th>Alloc %</th><th>Moneyness</th><th>Theta Zone</th><th>30D Mark</th><th>Next Catalyst</th></tr></thead><tbody>';
+    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Strike</th><th>Expiry</th><th>DTE</th><th>Alloc %</th><th>Moneyness</th><th>Theta Zone</th><th>30D Mark</th><th>Next Catalyst</th></tr></thead><tbody>';
     optLegs.forEach(function(o) {
       var zone = o.dte > 60 ? 'pf-pos' : o.dte > 30 ? 'pf-neut' : 'pf-neg';
       var zoneLabel = o.dte > 60 ? 'GREEN' : o.dte > 30 ? 'AMBER' : 'RED';
@@ -3176,7 +3223,7 @@ function renderResearch() {
     h += '<button class="section-toggle" aria-expanded="false" onclick="toggleSection(this)">Parked (' + parkedList.length + ')</button>';
     h += '<div class="section-body" style="max-height:0;overflow:hidden">';
     h += '<div class="card"><table class="monitoring-table">';
-    h += '<thead><tr><th>Ticker</th><th>Theme</th><th>Reason</th><th>Trigger Check</th></tr></thead>';
+    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Theme</th><th>Reason</th><th>Trigger Check</th></tr></thead>';
     h += '<tbody>';
     parkedList.forEach(function(item) {
       h += '<tr style="opacity:.6">';
@@ -3197,7 +3244,7 @@ function renderResearch() {
     D.priorityQueue.forEach(function(p) {
       h += '<div class="priority-item">';
       h += '<div class="priority-score">' + p.score.toFixed(1) + '</div>';
-      h += '<div class="priority-body"><div class="p-title">' + (p.score >= 20 ? '\uV83D\uDEA8 ' : '') + esc(p.title) + '</div><div class="p-action">' + esc(p.action) + '</div></div>';
+      h += '<div class="priority-body"><div class="p-title">' + (p.score >= 20 ? '\uD83D\uDEA8 ' : '') + esc(p.title) + '</div><div class="p-action">' + esc(p.action) + '</div></div>';
       h += '</div>';
     });
     h += '</div></div>';
