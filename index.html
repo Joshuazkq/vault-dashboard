@@ -388,32 +388,13 @@ tbody tr.row-clickable { cursor: pointer; }
 }
 
 /* ── PATTERNS ── */
-.pattern-card {
-  background: var(--bg-surface); border: 1px solid var(--border);
-  border-radius: 10px; padding: 12px; margin-bottom: 8px;
-}
-.pattern-escalating { border-left: 3px solid var(--accent-red); }
-.pattern-stable { border-left: 3px solid var(--accent-blue); }
-.pattern-fading { border-left: 3px solid var(--text-secondary); }
 .connection-card {
   background: var(--bg-surface); border: 1px solid var(--border);
   border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; font-size: 13px;
 }
 
 /* ── SIGNAL ROWS ── */
-.signal-row {
-  padding: 8px 0; border-bottom: 1px solid rgba(46,46,58,0.3); font-size: 13px;
-}
 .signal-row:last-child { border-bottom: none; }
-.s-impact {
-  display: inline-block; width: 22px; height: 22px; border-radius: 6px;
-  text-align: center; line-height: 22px; font-size: 11px; font-weight: 700;
-  margin-right: 6px;
-}
-.impact-5 { background: rgba(255,59,48,0.15); color: var(--accent-red); }
-.impact-4 { background: rgba(255,149,0,0.15); color: var(--accent-orange); }
-.impact-3 { background: rgba(245,166,35,0.15); color: var(--accent-amber); }
-
 /* ── THEME CARD ── */
 .theme-card {
   background: var(--bg-surface); border: 1px solid var(--border);
@@ -506,7 +487,6 @@ tbody tr.row-clickable { cursor: pointer; }
 }
 .filter-chip:hover { border-color: var(--accent-blue); color: var(--text-primary); }
 .filter-chip.active { background: rgba(74,158,255,0.15); color: var(--accent-blue); border-color: var(--accent-blue); font-weight: 600; }
-.filter-chip-clear { font-size: 10px; color: var(--accent-negative); cursor: pointer; margin-left: 4px; }
 .filter-chip-clear:hover { text-decoration: underline; }
 .filter-group-label { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-right: 2px; }
 
@@ -741,6 +721,23 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
   .pf-table { font-size: 12px; }
   .pf-table th, .pf-table td { padding: 6px 4px; }
 }
+
+/* Calendar tab additions */
+.dim-chip { display: inline-block; padding: 1px 5px; font-size: 10px; font-weight: 600; background: rgba(74,158,255,0.10); color: var(--accent-blue); border: 1px solid rgba(74,158,255,0.25); border-radius: 3px; margin-right: 2px; cursor: help; font-family: 'SF Mono','Fira Code',monospace; }
+.wt-badge { display: inline-block; padding: 1px 6px; font-size: 10px; font-weight: 700; background: rgba(245,166,35,0.12); color: var(--accent-amber); border-radius: 3px; margin-right: 2px; }
+.prep-icon { font-size: 12px; margin-left: 2px; cursor: help; }
+.prep-ok { filter: hue-rotate(0deg); }
+.prep-missing { filter: none; }
+.cal-action-icon { font-size: 11px; margin-left: 2px; cursor: help; opacity: 0.6; }
+.pill-purple { background: rgba(167,139,250,0.12); color: #a78bfa; }
+.cal-section { margin-bottom: 14px; }
+.cal-filter-bar { padding: 10px 12px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 12px; position: sticky; top: 8px; z-index: 5; }
+.timeline-item.held { background: rgba(74,158,255,0.04); padding-left: 8px; margin-left: -8px; border-left: 2px solid var(--accent-blue); }
+.timeline-item.held .ticker-btn { font-weight: 700; }
+.trigger-row.state-approaching { animation: trigger-pulse 1.5s ease-in-out infinite; }
+@keyframes trigger-pulse { 0%, 100% { background-color: transparent; } 50% { background-color: rgba(245,166,35,0.08); } }
+@media (prefers-reduced-motion: reduce) { .trigger-row.state-approaching { animation: none; background-color: rgba(245,166,35,0.06); } }
+
 </style>
 </head>
 <body>
@@ -758,10 +755,6 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
   <button class="sidebar-item active" data-section="themes" id="sb-themes" aria-current="page" onclick="switchSection('themes')">
     <i data-lucide="layers" aria-hidden="true"></i>
     <span class="sidebar-label">Themes</span>
-  </button>
-  <button class="sidebar-item" data-section="signals" id="sb-signals" onclick="switchSection('signals')">
-    <i data-lucide="radio" aria-hidden="true"></i>
-    <span class="sidebar-label">Signals</span>
   </button>
   <button class="sidebar-item" data-section="calendar" id="sb-calendar" onclick="switchSection('calendar')">
     <i data-lucide="calendar" aria-hidden="true"></i>
@@ -793,7 +786,6 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
 <!-- MAIN CONTENT -->
 <main id="main-content" class="main-content">
   <section id="sec-themes" class="section active"></section>
-  <section id="sec-signals" class="section"></section>
   <section id="sec-calendar" class="section"></section>
   <section id="sec-portfolio" class="section"></section>
   <section id="sec-research" class="section"></section>
@@ -816,10 +808,6 @@ body.pwa-standalone .main-content { padding-top: max(54px, calc(16px + env(safe-
     <button class="bnav-btn active" id="bn-themes" onclick="switchSection('themes')">
       <i data-lucide="layers" aria-hidden="true"></i>
       <span>Themes</span>
-    </button>
-    <button class="bnav-btn" id="bn-signals" onclick="switchSection('signals')">
-      <i data-lucide="radio" aria-hidden="true"></i>
-      <span>Signals</span>
     </button>
     <button class="bnav-btn" id="bn-calendar" onclick="switchSection('calendar')">
       <i data-lucide="calendar" aria-hidden="true"></i>
@@ -1517,38 +1505,6 @@ const D = {
     {ticker:"INSP",theme:"Sentiments-Valuation Mismatch",reason:"PM 22/35 (63%). GLP-1 substitute threat partially structural. C1=2 (unbounded), C2=2.5 (demand impacted).",triggerCheck:"Q2/Q3 2026 earnings \u2265 guidance + insider buying by Herbert + GLP-1 compliance <20% OSA resolution at 2yr + new CFO hired"},
     {ticker:"MX",theme:"Sentiments-Valuation Mismatch",reason:"PASSED. PM 21/35 (60%). Cash > market cap but loss-making, interim CEO, no mechanical recovery.",triggerCheck:"\u2014"}
   ],
-  intelligence:{
-    signalStats:{total:145,active:103,absorbed:24,expired:14,unmatched:13},
-    patterns:[
-      {name:"Rare Earth Supply Chain Decoupling",status:"ESCALATING",signals:3,action:"pattern-match",implication:"Policy-driven supply chain shift with Pentagon 2027 deadline"},
-      {name:"Stagflation / CB Policy Divergence",status:"ESCALATING",signals:4,action:"monitor",implication:"Fed holds, ECB hikes \u2014 cross-theme amplifier"},
-      {name:"Fertilizer \u2192 Food Price Cascade",status:"STABLE",signals:5,action:"extend-theme",implication:"6-12mo lag to food CPI, extends Hormuz V6"},
-      {name:"Helium Supply \u2192 Semiconductor Risk",status:"STABLE",signals:2,action:"monitor",implication:"Hormuz \u2194 AI cross-connection, HBM4 ramp risk"}
-    ],
-    crossConnections:[{from:"Hormuz Disruption",to:"AI Disruption",via:"Qatar helium supply (30% global)"},{from:"Hormuz Disruption",to:"Stagflation",via:"Energy inflation \u2192 central bank tightening"}],
-    leads:[{ticker:"MP",theme:"Rare Earth",score:null,action:"pattern-match"},{ticker:"LYC",theme:"Rare Earth",score:null,action:"opportunity-screen"},{ticker:"MEOH",theme:"Hormuz",score:7.5,action:"trigger-check"}],
-    recentSignals:[
-      {impact:5,date:"Apr 13",text:"Trump ordered USN Hormuz blockade. CENTCOM declared effective immediately. CF S4 probability raised 33→40%; PW FV $178→$186.",theme:"Hormuz"},
-      {impact:5,date:"Apr 13",text:"VLCC TD3C surged WS444/$444K/day (up from $356K). 800 tankers stranded. Dated Brent physical $132 vs futures $96 = $36/bbl unprecedented spread.",theme:"Hormuz"},
-      {impact:5,date:"Apr 12",text:"Islamabad talks collapsed after 21 hours. Iran: no alteration in Hormuz status until US consents to fair agreement. Ceasefire effectively dead.",theme:"Hormuz"},
-      {impact:5,date:"Apr 12",text:"Australian Cyclone Narelle knocked out ~30MT/yr LNG (8% of global). Gorgon, Wheatstone, NW Shelf offline. Compounds Qatar Ras Laffan. GTT structural thesis reinforced.",theme:"Hormuz"},
-      {impact:4,date:"Apr 13",text:"Urea $838 retail (+34% MoM); anhydrous ammonia $1,060 (above $1,000 first since 2023). Food inflation lag building.",theme:"Hormuz"},
-      {impact:4,date:"Apr 13",text:"US yttrium imports down 95% in 8 months. Lynas Japan deal. Serra Verde $565M DFC. Rare Earth theme escalating.",theme:"Rare Earth"},
-      {impact:4,date:"Apr 12",text:"ECB rate hike >60% probability Apr 17 — first since 2022. BoE pricing 4 hikes. BOJ hiking to 1995 levels. Impact on KENDR/TRI.",theme:"Sentiments-Val Mismatch"},
-      {impact:3,date:"Apr 10",text:"CIT Section 122 tariff oral arguments Apr 10 — judges skeptical; ruling within weeks. Tariff Refund theme alive.",theme:"Tariffs"},
-      {impact:5,date:"Mar 30",text:"Tampa NH3 April settled ~$775/mt (+$160/mt from March $615). S3 confirmation threshold BREACHED. V1/V6 upgrade candidates activated.",theme:"Hormuz"},
-      {impact:5,date:"Mar 30",text:"India Kharif procurement RESOLVED: domestic +23% (67,000 MT/day), emergency import 13.5L tonnes, stocks 62L tonnes (+10). Demand NOT destroyed.",theme:"Hormuz"},
-      {impact:5,date:"Mar 30",text:"Islamabad 4-nation summit: Iran rejected US 15-point plan, counter-demands Hormuz sovereignty recognition (non-starter). No ceasefire path.",theme:"Hormuz"},
-      {impact:4,date:"Mar 30",text:"Ras Laffan 3-5yr repair timeline confirmed (Wood Mackenzie). QatarEnergy force majeure on long-term LNG contracts.",theme:"Hormuz"},
-      {impact:4,date:"Mar 30",text:"Nakilat signed 25 x 174K cbm LNG carrier charters (15yr) \u2014 direct GTT royalty pipeline (~$125-175M when ordered).",theme:"Hormuz"},
-      {impact:3,date:"Mar 30",text:"TRI: Nicholas Mills (NED/Harwood Capital) bought 1.5M shares at 59.75p (~\u00a3896K). Adds to 17.4% controlling stake.",theme:"Sentiments-Val Mismatch"},
-      {impact:3,date:"Mar 30",text:"TRI: Holdings in Company RNS at 7:00 AM \u2014 UNREAD. TR-1 notification from unknown holder. Potential new 5%+ institutional holder.",theme:"Sentiments-Val Mismatch"},
-      {impact:3,date:"Mar 28",text:"SPSC: MAX AI customer webinar held. Three features: Chat, Monitor, Connect (MCP). Beta enrollment underway.",theme:"AI Disruption"},
-      {impact:5,date:"Mar 28",text:"Brent surges to $112.57 (+11.6%). 5,000 Marines deploying. Trump Mar 28 deadline expires.",theme:"Hormuz"},
-      {impact:4,date:"Mar 27",text:"HSTM: Vanguard 13G/A filed \u2014 exit to 0% ownership. Index rebalancing, not fundamental.",theme:"AI Disruption"}
-    ],
-    lastSynthesis:"2026-03-30"
-  },
   alerts:[
     {type:"red",text:"RST INVESTMENT 10% ENTRY (2026-04-25) \u2014 MULTI-RULE USER OVERRIDE. Council all 2026-04-24 STRONG/AVG/STRONG \u2192 BASE band (7-10%); user entered at TOP 10%. Three explicit gate overrides: Rule 6 RC 4/5 (RST at 3/5), Rule 10 theme concentration 5% cap (55% post-entry), \u00a712 numerical conviction-score gate. Council PW-FV 404.9p vs 254p spot = +59%. V1-V8 qualitative: 5 STRONG / 3 AVG. Pattern-match 30/35 STRONG. Compounded permanent-loss probability 14% per council bear. Primary validation: H1 2026 interim \u223cmid-Sep 2026 (resolves C2/C3/C4; RC 3/5\u21924/5 conditional). Cash 38\u219228%. Slots 4\u21925 of 12."},
     {type:"info",text:"MYR INVESTMENT ENTRY 5% (2026-04-21) \u2014 STARTER sizing within BASE band (10% max). Conviction 7/10, RC 4/5, MIA STRONG/AVERAGE/STRONG. Entry A$0.282, user-directed override of 2026-04-21 Full Portfolio Evaluation verdict (C) HOLD. Funded cash 45\u219240%. Slots 2\u21923 of 12. Sizing discipline: do NOT scale to full BASE 10% without (a) Lew on-market purchase post-board-join AND (b) VOW Q3 2026 covenant test clean. Primary catalyst: Sep 2026 FY26 full-year result (synergy >= A$25M run-rate + OGP stabilisation + capital return)."},
@@ -1572,46 +1528,128 @@ const D = {
     {type:"info",text:"Nuclear Energy candidate at 12th briefing \u2014 exceeds promotion threshold. Still lacks direct nuclear pricing/policy data. User decision needed."}
   ],
   catalystTimeline:[
-    {date:"2026-03-31",ticker:"CF",event:"USDA Prospective Plantings",type:"Hard",overdue:false},
-    {date:"2026-03-28",ticker:"CF",event:"Tampa ammonia April SETTLED $775/mt (+$160) \u2014 S3 CONFIRMED",type:"Resolved",overdue:false},
-    {date:"2026-03-31",ticker:"VOW",event:"FuelEU Maritime verification deadline (tangential)",type:"Hard",overdue:false},
-    {date:"2026-04-06",ticker:"CF/GTT",event:"Trump 10-day Hormuz strike deadline (3rd extension)",type:"Hard",overdue:false},
-    {date:"2026-04-17",ticker:"CF",event:"$12B Farm Aid Package enrollment deadline",type:"Hard",overdue:false},
-    {date:"2026-04-22",ticker:"GTT",event:"Q1 Activity Update \u2014 new CEO first presentation (7 DAYS)",type:"Hard",overdue:false},
-    {date:"2026-04-23",ticker:"LCUT/HOFT",event:"CBP ACE automated refund go-live",type:"Soft",overdue:false},
-    {date:"2026-04-25",ticker:"GTT",event:"EU Russian LNG ban (short-term contracts)",type:"Hard",overdue:false},
-    {date:"2026-04-27",ticker:"HSTM",event:"Q1 2026 earnings",type:"Hard",overdue:false},
-    {date:"2026-04-29",ticker:"VOW",event:"FY2025 Annual Report \u2014 audited impairment, covenant detail",type:"Hard",overdue:false},
-    {date:"2026-04-29",ticker:"OFLX",event:"Q1 FY2026 earnings \u2014 revenue inflection watch",type:"Hard",overdue:false},
-    {date:"2026-05-05",ticker:"LCUT/HOFT",event:"USTR Section 301 public hearings begin",type:"Hard",overdue:false},
-    
-    {date:"2026-05-06",ticker:"CF",event:"Q1 2026 earnings",type:"Hard",overdue:false},
-    {date:"2026-05-19",ticker:"CF",event:"$90C 30 DTE decision point \u2014 POSITION EXITED Apr 15",type:"Resolved",overdue:false},
-    {date:"2026-05-20",ticker:"VOW",event:"Q1 2026 results \u2014 first ~68% new-contract mix",type:"Hard",overdue:false},
-    {date:"2026-05-20",ticker:"KENDR",event:"Q1 2026 earnings \u2014 GO trigger gate for full position",type:"Hard",overdue:false},
-    {date:"2026-05-27",ticker:"VOW",event:"AGM",type:"Hard",overdue:false},
-    {date:"2026-06-17",ticker:"GTT",event:"Ex-dividend (\u20AC4.94/share)",type:"Hard",overdue:false},
-    {date:"2026-06-18",ticker:"CF",event:"$90C Expiry \u2014 POSITION EXITED Apr 15",type:"Resolved",overdue:false},
-    {date:"2026-06-30",ticker:"VOW",event:"FuelEU Maritime penalty deadline",type:"Hard",overdue:false},
-    {date:"2026-07-01",ticker:"TRI",event:"FY2026 Final Results (MONITORING — re-entry gate)",type:"Soft",overdue:false},
-    {date:"2026-08-19",ticker:"GTT",event:"€190C Sep 18 — 30 DTE decision point",type:"Hard",overdue:false},
-    {date:"2026-09-18",ticker:"GTT",event:"\u20AC190C Sep expiry",type:"Hard",overdue:false},
-    {date:"2026-09-30",ticker:"VOW",event:"EUR 27M cancellation rights expiry (vessels 3-4)",type:"Hard",overdue:false},
-    {date:"2026-09-30",ticker:"CRTO",event:"Luxembourg redomiciliation target (buyback unlock)",type:"Hard",overdue:false},
-    {date:"2026-11-18",ticker:"GTT",event:"€190C Dec 18 — 30 DTE decision point",type:"Hard",overdue:false},
-    {date:"2026-12-16",ticker:"CRTO",event:"$20C Jan 15 2027 — 30 DTE roll decision point",type:"Hard",overdue:false},
-    {date:"2026-12-18",ticker:"GTT",event:"\u20AC190C Dec expiry",type:"Hard",overdue:false},
-    {date:"2027-01-15",ticker:"CRTO",event:"$20C Jan expiry",type:"Hard",overdue:false},
-    {date:"2026-04-30",ticker:"MYR",event:"Lew Group board join April 2026 (imminent, no disclosed date) \u2014 Form 604/605 watch",type:"Soft",overdue:false},
-    {date:"2026-05-21",ticker:"MYR",event:"Interim dividend pay (1.5c; 50.1% payout ratio)",type:"Hard",overdue:false},
-    {date:"2026-05-31",ticker:"MYR",event:"Mirakl marketplace launch May 2026 (EVIDENTIAL)",type:"Soft",overdue:false},
-    {date:"2026-07-26",ticker:"MYR",event:"H2 FY26 trading update pre-close (A$60M H2 EBIT soft-guide test)",type:"Soft",overdue:false},
-    {date:"2026-09-25",ticker:"MYR",event:"FY26 full-year result (PRIMARY \u2014 synergy run-rate + AB goodwill test + FY27 guidance + capital return commentary)",type:"Hard",overdue:false},
-    {date:"2027-06-27",ticker:"CRTO",event:"Russell reconstitution (8-10% float passive buying)",type:"Hard",overdue:false},
-    {date:"2026-05-15",ticker:"DOCS",event:"Q4 FY2026 earnings \u2014 POSITION EXITED Apr 7",type:"Resolved",overdue:false},
-    {date:"2026-05-08",ticker:"CRTO",event:"Q1 2026 earnings \u2014 CeT validation (band ceiling sizing)",type:"Hard",overdue:false},
-    {date:"2026-04-17",ticker:"_macro",event:"ECB rate decision \u2014 first hike since 2022 (>60% prob)",type:"Hard",overdue:false},
-    {date:"2026-04-22",ticker:"_macro",event:"Iran ceasefire expiry \u2014 hard deadline, no renewal framework",type:"Hard",overdue:false}
+    {date:null,dateLabel:"Evening (18:15 GMT+2)",bucket:"today",ticker:"GTT",tickers:["GTT"],event:"Q1 2026 Activity Update + earnings call. New CEO Francois Michel's first major presentation. 6+ vessels confirmed in March alone. Key GTT re-entry data point.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:"Read release post-publication; if strong order intake + FY guide intact → consider GTT re-entry conviction-scoring",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"PM (Washington time)",bucket:"today",ticker:"Hormuz theme",tickers:["Hormuz theme"],event:"US-Iran ceasefire deadline — LAPSE HIGHLY LIKELY. Trump called extension \"highly unlikely\" (Mon 4/20). Affects CF/GTT re-entry probability + TRI indicator #13.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V1","V4"],portfolioWt:0.0,action:"Re-check Apr 23 AM; if lapse confirmed → strengthens CF + GTT re-entry theses",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"—",bucket:"today",ticker:"SKM",tickers:["SKM"],event:"TRADE ENTRY 2% — Rule §19 OVERRIDE HELD. First live Rule §19 override in framework history. Sub-cap sizing (2% vs 3% cap). Discretionary bet on Anthropic re-valuation momentum despite Setup Score 15/25 gate-fail. Next re-score unforgiving.",type:"Intraday",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:"Monitor daily until first Rule §20 trigger fires",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Any",bucket:"today",ticker:"KENDR",tickers:["KENDR"],event:"Dividend payment date. Q1 results May 20 is the downgrade-reversal trigger.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:0.0,action:"Log only",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Dec 2025",bucket:"overdue",ticker:"TRI-LSE",tickers:["TRI-LSE"],event:"Saudi Arabia facility launch — no RNS confirming launch despite Q3 FY2026 plan (Oct-Dec 2025). Pre-close statement imminent (late April).",type:"Hard",overdue:true,daysOverdue:142,expectedBy:"Dec 2025",dimensions:["V6"],portfolioWt:0.0,action:"Debate-session on V6 if pre-close RNS does not address Saudi status",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr 7, 2026",bucket:"overdue",ticker:"CF",tickers:["CF"],event:"April Tampa ammonia contract settlement — first war-conditions benchmark.",type:"Hard",overdue:true,daysOverdue:15,expectedBy:"Apr 7, 2026",dimensions:["V1"],portfolioWt:0.0,action:"Debate-session on V1 if Q1 earnings call (May 6) fails to provide clear ammonia realized-price datapoint",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Apr 30, 2026",bucket:"overdue",ticker:"MYR",tickers:["MYR"],event:"Lew Group board join — management guided April 2026; end-April target per AGM-stated rationale.",type:"Hard",overdue:true,daysOverdue:0,expectedBy:"~Apr 30, 2026",dimensions:["V2","V7"],portfolioWt:5.0,action:"If delayed past Q2 CY26 → thesis-revision trigger per THESIS.md entry condition. Monitor ASX daily through end-April.",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr 30, 2026",bucket:"overdue",ticker:"MEI",tickers:["MEI"],event:"Q3 FY2026 quarterly update — DFS progress, LI status, offtake conversion, BNDES feedback.",type:"Hard",overdue:true,daysOverdue:0,expectedBy:"Apr 30, 2026",dimensions:["V1","V7","V8"],portfolioWt:0.0,action:"If no filing by May 10, debate-session on V1 + V7",prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr 30, 2026",bucket:"overdue",ticker:"KENDR",tickers:["KENDR"],event:"FY2025 audited annual report publication (management guided H1-H2 2026; Apr window). Re-entry trigger.",type:"Hard",overdue:true,daysOverdue:0,expectedBy:"Apr 30, 2026",dimensions:["V7"],portfolioWt:0.0,action:"If no filing by mid-May, flag as execution-slippage signal",prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-23",dateLabel:"2026-04-23",bucket:"next-2-weeks",ticker:"SKM",tickers:["SKM"],event:"EXPRESS 24h finalize deadline (23:59 local). Status: COMPLETED 2026-04-22 same-day; Rule §19 verdict reached with override held. Line retained for audit-trail.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-23",dateLabel:"2026-04-23",bucket:"next-2-weeks",ticker:"TRI-LSE",tickers:["TRI-LSE"],event:"ACEA EU March auto registrations — TRI indicator #3 (~38% revenue exposure).",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-23",dateLabel:"~2026-04-23",bucket:"next-2-weeks",ticker:"LCUT",tickers:["LCUT","HOFT"],event:"CBP automated ACE refund system go-live. §1592 may delay LCUT-specific refund.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-25",dateLabel:"2026-04-25",bucket:"next-2-weeks",ticker:"GTT",tickers:["GTT"],event:"EU Russian LNG ban effective. Re-entry data point.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Late Apr",bucket:"next-2-weeks",ticker:"TRI-LSE",tickers:["TRI-LSE"],event:"FY2026 Pre-close Trading Statement — first RNS post-Iran escalation.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Late Apr",bucket:"next-2-weeks",ticker:"GTT",tickers:["GTT"],event:"Universal Registration Document (FY2024) filing.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Late Apr",bucket:"next-2-weeks",ticker:"TTD",tickers:["TTD"],event:"Proxy Statement (FY2025).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-28",dateLabel:"~2026-04-28",bucket:"next-2-weeks",ticker:"CF",tickers:["CF"],event:"Annual Meeting (virtual). DEF 14A proxy filed. Re-entry data point.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-28",dateLabel:"~2026-04-28",bucket:"next-2-weeks",ticker:"CRTO",tickers:["CRTO"],event:"Q1 press-release date confirmation — mildly bearish signal if not confirmed on IR wire by this date.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V8"],portfolioWt:15.0,action:null,prepBriefPath:null,prepBriefMissing:true},
+    {date:"2026-04-29",dateLabel:"2026-04-29",bucket:"next-2-weeks",ticker:"VOW",tickers:["VOW"],event:"FY2025 Audited Annual Report — resolves contract-asset decomposition, audited impairment test, WC release DATA GAP. Critical for covenant bridge model.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4","V7"],portfolioWt:40.0,action:null,prepBriefPath:"Themes/Sentiment Mismatch/Tickers/VOW/Prep/2026-04-29-FY2025-annual-report.md",prepBriefMissing:false},
+    {date:"2026-04-29",dateLabel:"2026-04-29",bucket:"next-2-weeks",ticker:"OFLX",tickers:["OFLX"],event:"Q1 2026 earnings release. Census housing starts March print also posts on this date.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-04-30",dateLabel:"2026-04-30",bucket:"next-2-weeks",ticker:"MAGN",tickers:["MAGN"],event:"Russell 3000 2026 reconstitution rank day.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr-May",bucket:"next-2-weeks",ticker:"TOI",tickers:["TOI"],event:"Asseco Poland FY2025 annual report (WSE).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr-May",bucket:"next-2-weeks",ticker:"CHA",tickers:["CHA"],event:"FY2025 20-F filing.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Early May 2026",bucket:"next-2-weeks",ticker:"SKM",tickers:["SKM"],event:"Q1 2026 earnings (Korean reporting cadence) — first SKM-specific dated catalyst per S3 table. Possible Anthropic stake fair-value disclosure (depends on SKM accounting treatment — [DATA GAP] OCI vs P&L). Any explicit stake value disclosure would trigger mark-to-market on SKM share price. Prob 60%, magnitude +3-8%. Rule §20 trigger: catalyst firing → mandatory mid-trade re-score regardless of price.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-05",dateLabel:"~2026-05-05 – 2026-05-08",bucket:"next-2-weeks",ticker:"CRTO",tickers:["CRTO"],event:"Q1 2026 earnings (date TBD) — first quarter post-ChatGPT ad partnership revenue. Pre-defined trim trigger if CeT < $200M. At CORE band ceiling.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5","V8"],portfolioWt:15.0,action:null,prepBriefPath:"Themes/AI Disruption/Tickers/CRTO/Prep/2026-05-08-Q1-2026-earnings.md",prepBriefMissing:false},
+    {date:"2026-05-05",dateLabel:"2026-05-05",bucket:"next-2-weeks",ticker:"TOI",tickers:["TOI"],event:"Q1 2026 press release (after close). First clean quarter post-Asseco one-off.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-06",dateLabel:"2026-05-06",bucket:"next-2-weeks",ticker:"CF",tickers:["CF"],event:"Q1 2026 earnings — consensus $2.19 EPS. Re-entry data point.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V2","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-07",dateLabel:"2026-05-07",bucket:"weeks-3-4",ticker:"ORGO",tickers:["ORGO"],event:"Q1 2026 earnings — CRITICAL validation gate for MONITORING promotion.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-05",dateLabel:"2026-05-05",bucket:"weeks-3-4",ticker:"LCUT",tickers:["LCUT","HOFT"],event:"USTR Section 301 public hearings begin.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May 8-14",bucket:"weeks-3-4",ticker:"TTD",tickers:["TTD"],event:"Q1 2026 earnings.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Early May",bucket:"weeks-3-4",ticker:"MAGN",tickers:["MAGN"],event:"Q2 2026 earnings (date not yet announced). Synergy-gate trigger.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-10",dateLabel:"~2026-05-10",bucket:"weeks-3-4",ticker:"PGC",tickers:["PGC"],event:"Infinity administration update — first post-debate-session signal.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6","V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-12",dateLabel:"2026-05-12",bucket:"weeks-3-4",ticker:"BKTI",tickers:["BKTI"],event:"Q1 FY2026 earnings.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"SPSC",tickers:["SPSC"],event:"Q1 2026 earnings.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"WAY",tickers:["WAY"],event:"Q1 2026 earnings — first full quarter post-CMS Prior Auth Rule.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"PAYC",tickers:["PAYC"],event:"Q1 2026 earnings + FY2026 guidance.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"HSTM",tickers:["HSTM"],event:"Q1 2026 earnings.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V3","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"ERII",tickers:["ERII"],event:"Q1 2026 earnings (May 6) — entry gate for 5-7% INVESTMENT pre-sizing. ENTRY BLOCKED (M3: 2.5/5) until insider purchases + Saudi PO conversion.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"NICE",tickers:["NICE"],event:"Q1 2026 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"ZM",tickers:["ZM"],event:"Q1 FY27 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"GO",tickers:["GO"],event:"Securities class action lead plaintiff deadline.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~May",bucket:"weeks-3-4",ticker:"CHA",tickers:["CHA"],event:"Q1 2026 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Mid-May",bucket:"weeks-3-4",ticker:"LCUT",tickers:["LCUT"],event:"Q1 2026 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Mid-May",bucket:"weeks-3-4",ticker:"Theme (Rare Earths)",tickers:["Theme (Rare Earths)"],event:"Trump-Xi Summit (postponed from Apr 1-2). Rare earth export restriction suspension is headline deliverable.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V3"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-15",dateLabel:"2026-05-15",bucket:"weeks-3-4",ticker:"TOI",tickers:["TOI"],event:"CSU AGM — joint hybrid CSU+TOI+Lumine. RC 2→3/5 gate.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V3","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-20",dateLabel:"2026-05-20",bucket:"weeks-3-4",ticker:"VOW",tickers:["VOW"],event:"Q1 2026 earnings — 40% of portfolio. Indicators #2/#3/#4/#6 first prints. Pre-committed decision rules.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:40.0,action:null,prepBriefPath:"Themes/Sentiment Mismatch/Tickers/VOW/Prep/2026-05-20-Q1-2026-earnings.md",prepBriefMissing:false},
+    {date:"2026-05-20",dateLabel:"2026-05-20",bucket:"weeks-3-4",ticker:"ARR",tickers:["ARR"],event:"Q1 2026 earnings.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-20",dateLabel:"~2026-05-20",bucket:"weeks-3-4",ticker:"KENDR",tickers:["KENDR"],event:"Q1 2026 earnings. Downgrade-reversal trigger.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-21",dateLabel:"2026-05-21",bucket:"weeks-3-4",ticker:"MYR",tickers:["MYR"],event:"Interim dividend payment date (1.5c/share).",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2"],portfolioWt:5.0,action:null,prepBriefPath:null,prepBriefMissing:true},
+    {date:null,dateLabel:"May 2026",bucket:"weeks-3-4",ticker:"MYR",tickers:["MYR"],event:"Mirakl marketplace launch — Bull-case item #3.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:5.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-05-27",dateLabel:"2026-05-27",bucket:"month-2-3",ticker:"VOW",tickers:["VOW"],event:"AGM — key shareholder vote.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"May-Jun",bucket:"month-2-3",ticker:"SPSC",tickers:["SPSC"],event:"Activist proxy season.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Late May – early Jun 2026",bucket:"month-2-3",ticker:"ANG",tickers:["ANG"],event:"Pre-registered evidence-conversion check (per epistemic-audit 2026-04-21). 4-item review.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4","V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Jun 2026",bucket:"month-2-3",ticker:"Theme (Rare Earths)",tickers:["Theme (Rare Earths)"],event:"UUUU ASM acquisition close target.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-06-16",dateLabel:"2026-06-16",bucket:"month-2-3",ticker:"GTT",tickers:["GTT"],event:"Annual General Meeting. Re-entry data point.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V5"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-06-17",dateLabel:"2026-06-17",bucket:"month-2-3",ticker:"GTT",tickers:["GTT"],event:"Ex-dividend date (EUR 4.94/share). Payment Jun 19.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Late Jun",bucket:"month-2-3",ticker:"CF",tickers:["CF"],event:"USDA Acreage Report — demand-destruction checkpoint.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4","V5"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Mid-2026",bucket:"month-2-3",ticker:"MEI",tickers:["MEI"],event:"DFS completion (Ausenco).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Mid-2026",bucket:"month-2-3",ticker:"MEI",tickers:["MEI"],event:"Construction licence (LI) application/grant decision.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Mid-2026",bucket:"month-2-3",ticker:"ERII",tickers:["ERII"],event:"Goodwill impairment from CO2 exit realized in Q1 10-Q.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Jul 2026",bucket:"month-2-3",ticker:"Theme (Rare Earths)",tickers:["Theme (Rare Earths)"],event:"MKA EXIM NTP target + Songwe EIA approval window.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Jul 2026",bucket:"month-2-3",ticker:"TRI-LSE",tickers:["TRI-LSE"],event:"FY2026 Final Results — GO trigger for re-entry.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-07-26",dateLabel:"~2026-07-26",bucket:"month-2-3",ticker:"MYR",tickers:["MYR"],event:"FY26 trading update (pre-close) — first read on H2 FY26.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5"],portfolioWt:5.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-07-24",dateLabel:"~2026-07-24",bucket:"month-2-3",ticker:"LCUT",tickers:["LCUT","HOFT"],event:"USTR Section 301 tariff determination deadline.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-07-24",dateLabel:"2026-07-24",bucket:"month-2-3",ticker:"Tariff theme",tickers:["Tariff theme"],event:"Section 122 replacement tariff expires.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-08-15",dateLabel:"2026-08-15",bucket:"beyond-3-months",ticker:"VOW",tickers:["VOW"],event:"Q2 2026 results — first reporting under new covenant (6.75x test).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4"],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-09-30",dateLabel:"2026-09-30",bucket:"beyond-3-months",ticker:"VOW",tickers:["VOW"],event:"EUR 27M contract cancellation rights expiry (vessels 3-4).",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Oct 2026",bucket:"beyond-3-months",ticker:"VOW",tickers:["VOW"],event:"IMO MEPC extraordinary session (Net-Zero Framework).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"2026-11",bucket:"beyond-3-months",ticker:"VOW",tickers:["VOW"],event:"Q3 2026 covenant test (3.5x NIBD/EBITDA). HIGHEST-PROBABILITY FAILURE MODE.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q3 2026",bucket:"beyond-3-months",ticker:"CRTO",tickers:["CRTO"],event:"Luxembourg redomiciliation target.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V5"],portfolioWt:15.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"H2 2026",bucket:"beyond-3-months",ticker:"CRTO",tickers:["CRTO"],event:"OpenAI/MCP self-serve launch.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6"],portfolioWt:15.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-12-31",dateLabel:"2026-12-31",bucket:"beyond-3-months",ticker:"LCUT",tickers:["LCUT"],event:"KitchenAid license expiry.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q1 2027",bucket:"beyond-3-months",ticker:"CRTO",tickers:["CRTO"],event:"US redomiciliation target.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V5"],portfolioWt:15.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"2027-06",bucket:"beyond-3-months",ticker:"CRTO",tickers:["CRTO"],event:"Russell 3000 reconstitution — 8-10% of float passive buying.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V6"],portfolioWt:15.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"2027",bucket:"beyond-3-months",ticker:"VOW",tickers:["VOW"],event:"Full new-contract Maritime mix (~89%). Margin normalization complete.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:40.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q2 2027",bucket:"beyond-3-months",ticker:"CDLR",tickers:["CDLR"],event:"Wind Apex delivery — FCF inflection.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q3 2026",bucket:"beyond-3-months",ticker:"CDLR",tickers:["CDLR"],event:"H1 2026 results.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q3 2026",bucket:"beyond-3-months",ticker:"CDLR",tickers:["CDLR"],event:"Wind Ace delivery — dividend unlock trigger.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Q2-Q3 2026",bucket:"beyond-3-months",ticker:"SKM",tickers:["SKM"],event:"Anthropic secondary transaction at ≥$600B — Rule §20 trigger (S3 catalyst firing). VC offers at $800B+ declined Apr 15 2026 (TechCrunch). Any transacted print ≥$600B would force SKM mark-to-market. Prob 40%, magnitude +5-15%.",type:"Conditional",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Q4 2026 – Q1 2027",bucket:"beyond-3-months",ticker:"SKM",tickers:["SKM"],event:"Anthropic IPO filing and/or pricing — PRIMARY SKM CATALYST. Prob 35% by YE 2026 / 70% by Q2 2027 (Polymarket 97.2% NO by Jun 30 2026; FutureSearch median Mar 2027 filing). Magnitude +10 to +25% on SKM mkt cap. Rule §20 trigger on filing: mandatory mid-trade re-score. Trigger on pricing: thesis-exit review per S5 profit ladder.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-10-22",dateLabel:"2026-10-22",bucket:"beyond-3-months",ticker:"SKM",tickers:["SKM"],event:"MID-TRADE CHECK-IN (MANDATORY per Rule §20). 6 months from entry; S5 default 50% of time-stop. Re-run trade-assessment --mode mid-trade: re-verify S3 catalyst table, re-run S4 scenario matrix at then-current price, re-check T4 failure modes. If Setup Score < 16/25 → non-negotiable exit. Next re-score is unforgiving per Rule §19 override terms.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2027-04-22",dateLabel:"2027-04-22",bucket:"beyond-3-months",ticker:"SKM",tickers:["SKM"],event:"TIME-STOP (HARD). 12-month limit from entry per Rule §11 Discipline Rule 3. No rolling without re-score. If setup hasn't played out → exit or explicit re-evaluate with new Setup Score.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:2.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Aug 2026",bucket:"beyond-3-months",ticker:"ANG",tickers:["ANG"],event:"H2 FY26 / FY26 full-year result — PRIMARY RE-EVALUATION GATE. Full council re-run.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4","V5","V7","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-08-31",dateLabel:"~2026-08-31",bucket:"beyond-3-months",ticker:"PGC",tickers:["PGC"],event:"FY26 full-year results — authoritative on ALL 5 debate-session OPEN vectors.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V2","V5","V6","V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Aug 2026",bucket:"beyond-3-months",ticker:"TTD",tickers:["TTD"],event:"Q2 2026 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Aug 2026",bucket:"beyond-3-months",ticker:"ORGO",tickers:["ORGO"],event:"Q2 2026 earnings.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Jul-Aug 2026",bucket:"beyond-3-months",ticker:"GTT",tickers:["GTT"],event:"Q2 2026 earnings (estimated). Re-entry data point.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V2"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Jul-Aug 2026",bucket:"beyond-3-months",ticker:"CF",tickers:["CF"],event:"Q2 2026 earnings. Re-entry data point.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V2"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2026-09-25",dateLabel:"~2026-09-25",bucket:"beyond-3-months",ticker:"MYR",tickers:["MYR"],event:"FY26 full-year result — PRIMARY MYR CATALYST. RC 4/5 → 5/5 upgrade gate.",type:"Hard",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V5","V7","V8"],portfolioWt:5.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Oct 2026",bucket:"beyond-3-months",ticker:"SMWH",tickers:["SMWH"],event:"Quinn 2-quarter results review.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:[],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Oct 2026",bucket:"beyond-3-months",ticker:"ZM",tickers:["ZM"],event:"Anthropic IPO S-1 rumored filing — PRIMARY ZM catalyst; also cross-impacts SKM (would trigger SKM Rule §20 mid-trade re-score). Upgrades self-correction CONDITIONAL → EVIDENTIAL.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Oct 2026",bucket:"beyond-3-months",ticker:"HSTM",tickers:["HSTM"],event:"Credit facility renewal.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"~Nov 2026",bucket:"beyond-3-months",ticker:"MYR",tickers:["MYR"],event:"FY26 AGM.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V2","V7"],portfolioWt:5.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Nov 2026",bucket:"beyond-3-months",ticker:"ORGO",tickers:["ORGO"],event:"Q3 2026 earnings + CY2027 PFS final rule.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V4","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Nov 2026",bucket:"beyond-3-months",ticker:"KENDR",tickers:["KENDR"],event:"Q3 2026 results.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Nov 2026",bucket:"beyond-3-months",ticker:"TRI-LSE",tickers:["TRI-LSE"],event:"H1 FY2027 Interim Results.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Nov 2026",bucket:"beyond-3-months",ticker:"ANG",tickers:["ANG"],event:"HSBC facility extension (A$57M).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"H2 2026",bucket:"beyond-3-months",ticker:"MEI",tickers:["MEI"],event:"Neo MOU to binding offtake conversion decision.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4","V5"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"H2 2026",bucket:"beyond-3-months",ticker:"ERII",tickers:["ERII"],event:"PX Q650 commercial deployments begin.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1","V6"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"H2 2026",bucket:"beyond-3-months",ticker:"KENDR",tickers:["KENDR"],event:"FY2025 Annual Report (audited).",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V7"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Feb 2027",bucket:"beyond-3-months",ticker:"ANG",tickers:["ANG"],event:"H1 FY27 result — first half with both Chile + NA fully stabilised.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Feb 2027",bucket:"beyond-3-months",ticker:"ORGO",tickers:["ORGO"],event:"Q4 2026 + FY2026 print.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V1"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Feb 2027",bucket:"beyond-3-months",ticker:"LCUT",tickers:["LCUT"],event:"ABL refinancing window.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:"2027-02-28",dateLabel:"~2027-02-28",bucket:"beyond-3-months",ticker:"PGC",tickers:["PGC"],event:"1H FY27 Half-Year Results — FIRST CLEAN HALF POST-INFINITY. V5 Consensus Pricing convergence trigger.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V5"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Apr 2027",bucket:"beyond-3-months",ticker:"KENDR",tickers:["KENDR"],event:"Credit facility maturity.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V4"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false},
+    {date:null,dateLabel:"Q3 2026",bucket:"beyond-3-months",ticker:"BKTI",tickers:["BKTI"],event:"BKR 9500 FCC submission target.",type:"Soft",overdue:false,daysOverdue:0,expectedBy:null,dimensions:["V6","V8"],portfolioWt:0.0,action:null,prepBriefPath:null,prepBriefMissing:false}
+  ],
+  conditionalTriggers:[
+    {ticker:"SKM",triggerType:"MTM",description:"±15% MTM from $38.62 entry ref · Upper $44.41 / Lower $32.83",entryRef:38.62,upperBound:44.41,lowerBound:32.83,currentPx:null,state:"armed",actionOnFire:"Mandatory mid-trade re-score via `trade-assessment --mode mid-trade`. Hold/trim/exit/rebucket verdict. Override rules from Rule §19 carry through."},
+    {ticker:"SKM",triggerType:"S3-catalyst",description:"Any S3 catalyst firing (SKM Q1 earnings · Anthropic ≥$600B secondary · Anthropic IPO filing/pricing)",entryRef:null,upperBound:null,lowerBound:null,currentPx:null,state:"armed",actionOnFire:"Mandatory mid-trade re-score regardless of price level."},
+    {ticker:"SKM",triggerType:"T4-failure-mode",description:"T4 failure-mode structural change (exact current stake % disclosure materially different from current estimate; Anthropic down-round <$350B; SKM announced non-participation in future round; etc.)",entryRef:null,upperBound:null,lowerBound:null,currentPx:null,state:"armed",actionOnFire:"Mandatory mid-trade re-score; Trade-Stress V3 resolution may shift from OPEN to CONCEDED."}
+  ],
+  tradeTimeStops:[
+    {ticker:"SKM",entryDate:"2026-04-22",midTradeCheck:"2026-10-22",timeStop:"2027-04-22",daysToMidTradeCheck:180,daysToTimeStop:362,currentSetupScore:"15/25 (FAILS gate)",setupGatePassing:false,statusNote:"Rule §19 override held (Option B). Next re-score unforgiving."}
+  ],
+  expressDeadlines:[
+    {ticker:"SKM",enteredAt:"2026-04-22",finalizeBy:"2026-04-23T23:59",status:"completed",hoursRemaining:null}
+  ],
+  overhangWindows:[],
+  prepBriefGaps:[
+    {ticker:"CRTO",date:"2026-04-28",event:"Q1 press-release date confirmation — mildly bearish signal if not confirmed on IR wire by this date.",daysAway:3,portfolioType:"INVESTMENT",portfolioWt:15.0,prepDir:"Themes/AI Disruption/Tickers/CRTO/Prep/"},
+    {ticker:"MYR",date:"2026-05-21",event:"Interim dividend payment date (1.5c/share).",daysAway:26,portfolioType:"INVESTMENT",portfolioWt:5.0,prepDir:"Themes/?/Tickers/MYR/Prep/"}
   ],
   priorityQueue:[
     {score:30.0,title:"GTT: Q1 Activity Update Apr 22 (7 DAYS) \u2014 prep brief required",action:"Catalyst in 7 days \u00d7 5% weight \u00d7 1.5 (decision) = 30.0 (urgency override). New CEO first presentation. Key: order count, gross vs net, new CEO tone. Run event-prep skill."},
@@ -1748,7 +1786,6 @@ function renderSection(id) {
   if (_renderedSections[id]) return;
   switch (id) {
     case 'themes': renderThemes(); break;
-    case 'signals': renderSignals(); break;
     case 'calendar': renderCalendar(); break;
     case 'portfolio': renderPortfolio(); break;
     case 'research': renderResearch(); break;
@@ -2497,142 +2534,206 @@ function renderThemes() {
 }
 
 // ═══════════════════════════════════════════
-// RENDER: SIGNALS
-// ═══════════════════════════════════════════
-function renderSignals() {
-  var el = document.getElementById('sec-signals');
-  var h = '<h2 class="section-title">Signals & Intelligence</h2>';
-
-  if (!D.intelligence) {
-    h += '<div class="card" style="text-align:center;padding:40px"><div style="color:var(--text-secondary)">Run intelligence-synthesis to populate this screen.</div></div>';
-    el.innerHTML = h;
-    return;
-  }
-
-  var intel = D.intelligence;
-
-  h += '<div class="kpi-strip">';
-  h += '<div class="kpi-item"><div class="kpi-label">Total</div><div class="kpi-value">~' + intel.signalStats.total + '</div></div>';
-  h += '<div class="kpi-item"><div class="kpi-label">Active</div><div class="kpi-value" style="color:var(--accent-positive)">' + intel.signalStats.active + '</div></div>';
-  h += '<div class="kpi-item"><div class="kpi-label">Absorbed</div><div class="kpi-value">~' + intel.signalStats.absorbed + '</div></div>';
-  h += '<div class="kpi-item"><div class="kpi-label">Expired</div><div class="kpi-value">' + intel.signalStats.expired + '</div></div>';
-  h += '<div class="kpi-item"><div class="kpi-label">Unmatched</div><div class="kpi-value" style="color:var(--accent-amber)">' + intel.signalStats.unmatched + '</div></div>';
-  h += '</div>';
-
-  h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Accumulation Patterns (' + intel.patterns.length + ')</button>';
-  h += '<div class="section-body">';
-  intel.patterns.forEach(function(p) {
-    var pClass = p.status === 'ESCALATING' ? 'pattern-escalating' : p.status === 'STABLE' ? 'pattern-stable' : 'pattern-fading';
-    var sPill = p.status === 'ESCALATING' ? 'pill-red' : p.status === 'STABLE' ? 'pill-blue' : 'pill-grey';
-    h += '<div class="pattern-card ' + pClass + '">';
-    h += '<div style="display:flex;justify-content:space-between;align-items:center"><strong>' + esc(p.name) + '</strong><span class="pill ' + sPill + '">' + p.status + '</span></div>';
-    h += '<div style="font-size:12px;color:var(--text-secondary);margin-top:4px">' + p.signals + ' signals \u00B7 ' + esc(p.implication) + '</div>';
-    h += '<div style="font-size:12px;margin-top:4px">Action: <span class="pill pill-green" style="font-size:10px">' + p.action.toUpperCase() + '</span></div>';
-    h += '</div>';
-  });
-  h += '</div>';
-
-  if (intel.crossConnections && intel.crossConnections.length) {
-    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Cross-Theme Connections (' + intel.crossConnections.length + ')</button>';
-    h += '<div class="section-body">';
-    intel.crossConnections.forEach(function(c) {
-      h += '<div class="connection-card"><strong style="color:var(--accent-orange)">' + esc(c.from) + '</strong> \u2194 <strong style="color:#a78bfa">' + esc(c.to) + '</strong> \u2014 ' + esc(c.via) + '</div>';
-    });
-    h += '</div>';
-  }
-
-  if (intel.leads && intel.leads.length) {
-    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Opportunity Leads (' + intel.leads.length + ')</button>';
-    h += '<div class="section-body">';
-    intel.leads.forEach(function(l) {
-      h += '<div class="pattern-card">';
-      h += '<div style="display:flex;justify-content:space-between;align-items:center">';
-      h += '<strong class="mono">' + l.ticker + '</strong>';
-      h += '<span class="pill pill-blue" style="font-size:10px">' + l.action.toUpperCase() + '</span>';
-      h += '</div>';
-      h += '<div style="font-size:12px;color:var(--text-secondary);margin-top:4px">Theme: ' + l.theme + (l.score ? ' \u00B7 Score: ' + l.score : '') + '</div>';
-      h += '</div>';
-    });
-    h += '</div>';
-  }
-
-  if (intel.recentSignals && intel.recentSignals.length) {
-    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Recent Signals (' + intel.recentSignals.length + ')</button>';
-    h += '<div class="section-body">';
-
-    // Filter bar
-    var impacts = {}, themes = {};
-    intel.recentSignals.forEach(function(s) {
-      impacts[s.impact] = true;
-      themes[s.theme] = true;
-    });
-    h += '<div class="filter-bar" id="signal-filters">';
-    h += '<span class="filter-group-label">Impact</span>';
-    Object.keys(impacts).sort(function(a,b){return b-a}).forEach(function(imp) {
-      h += '<span class="filter-chip" data-filter-type="impact" data-filter-val="' + imp + '" onclick="toggleSignalFilter(this)">' + imp + '</span>';
-    });
-    h += '<span class="filter-group-label" style="margin-left:8px">Theme</span>';
-    Object.keys(themes).sort().forEach(function(th) {
-      h += '<span class="filter-chip" data-filter-type="theme" data-filter-val="' + esc(th) + '" onclick="toggleSignalFilter(this)">' + esc(th) + '</span>';
-    });
-    h += '<span class="filter-chip-clear" onclick="clearSignalFilters()">Clear all</span>';
-    h += '</div>';
-
-    h += '<div class="card" id="signal-rows-container">';
-    intel.recentSignals.forEach(function(s) {
-      var iClass = s.impact >= 5 ? 'impact-5' : s.impact >= 4 ? 'impact-4' : 'impact-3';
-      var tPill = s.theme === 'UNMATCHED' ? 'pill-grey' : s.theme === 'AI Disruption' ? 'pill-blue' : 'pill-amber';
-      h += '<div class="signal-row" data-impact="' + s.impact + '" data-theme="' + esc(s.theme) + '">';
-      h += '<span class="s-impact ' + iClass + '">' + s.impact + '</span>';
-      h += '<span style="color:var(--text-secondary)">' + s.date + '</span> \u00B7 ';
-      h += esc(s.text);
-      h += ' <span class="pill ' + tPill + '" style="font-size:10px">' + s.theme + '</span>';
-      h += '</div>';
-    });
-    h += '</div></div>';
-  }
-
-  el.innerHTML = h;
-}
-
-var _signalFilters = {impact: [], theme: []};
-function toggleSignalFilter(chip) {
-  var type = chip.getAttribute('data-filter-type');
-  var val = chip.getAttribute('data-filter-val');
-  var idx = _signalFilters[type].indexOf(val);
-  if (idx >= 0) { _signalFilters[type].splice(idx, 1); chip.classList.remove('active'); }
-  else { _signalFilters[type].push(val); chip.classList.add('active'); }
-  applySignalFilters();
-}
-function clearSignalFilters() {
-  _signalFilters = {impact: [], theme: []};
-  var chips = document.querySelectorAll('#signal-filters .filter-chip');
-  chips.forEach(function(c) { c.classList.remove('active'); });
-  applySignalFilters();
-}
-function applySignalFilters() {
-  var rows = document.querySelectorAll('#signal-rows-container .signal-row');
-  rows.forEach(function(row) {
-    var imp = row.getAttribute('data-impact');
-    var th = row.getAttribute('data-theme');
-    var showImpact = _signalFilters.impact.length === 0 || _signalFilters.impact.indexOf(imp) >= 0;
-    var showTheme = _signalFilters.theme.length === 0 || _signalFilters.theme.indexOf(th) >= 0;
-    row.style.display = (showImpact && showTheme) ? '' : 'none';
-  });
-}
-
-// ═══════════════════════════════════════════
 // RENDER: CALENDAR
 // ═══════════════════════════════════════════
 function renderCalendar() {
   var el = document.getElementById('sec-calendar');
+  if (!el) return;
   var h = '<h2 class="section-title">Catalyst Calendar</h2>';
 
-  if (D.options && D.options.length) {
-    h += '<div class="card">';
-    h += '<h3>\u23F0 Options Expiry</h3>';
+  // ─── Filter bar (sticky) ───
+  h += '<div class="filter-bar cal-filter-bar">';
+  h += '<span class="filter-group-label">Type</span>';
+  ['Hard','Soft','Conditional','Express','Overdue'].forEach(function(t) {
+    var active = _calendarFilters.type.indexOf(t) >= 0 ? ' active' : '';
+    h += '<span class="filter-chip' + active + '" onclick="toggleCalendarFilter(\'type\', \'' + t + '\')">' + t + '</span>';
+  });
+  h += '<span class="filter-group-label" style="margin-left:8px">Position</span>';
+  [['Held','Held only'],['INVESTMENT','INV'],['TRADE','TRADE'],['MONITORING','MON']].forEach(function(p) {
+    var active = _calendarFilters.position.indexOf(p[0]) >= 0 ? ' active' : '';
+    h += '<span class="filter-chip' + active + '" onclick="toggleCalendarFilter(\'position\', \'' + p[0] + '\')">' + p[1] + '</span>';
+  });
+  h += '<span class="filter-group-label" style="margin-left:8px">Dim</span>';
+  ['V1','V2','V3','V4','V5','V6','V7','V8'].forEach(function(d) {
+    var active = _calendarFilters.dimension.indexOf(d) >= 0 ? ' active' : '';
+    h += '<span class="filter-chip' + active + '" onclick="toggleCalendarFilter(\'dimension\', \'' + d + '\')">' + d + '</span>';
+  });
+  h += '<span class="filter-group-label" style="margin-left:8px">Wt&ge;</span>';
+  [['all','All'],['1','1%'],['5','5%'],['10','10%']].forEach(function(w) {
+    var active = _calendarFilters.weight === w[0] ? ' active' : '';
+    h += '<span class="filter-chip' + active + '" onclick="toggleCalendarFilter(\'weight\', \'' + w[0] + '\')">' + w[1] + '</span>';
+  });
+  h += '<span class="filter-chip-clear" onclick="resetCalendarFilters()">Reset</span>';
+  h += '</div>';
+
+  // ─── Filtered timeline rows ───
+  var allRows = (D.catalystTimeline || []).filter(_calMatchRow);
+  var todayCount = (D.catalystTimeline || []).filter(function(r) { return r.bucket === 'today'; }).length;
+  var overdueCount = (D.catalystTimeline || []).filter(function(r) { return r.overdue; }).length;
+  var triggersArmed = (D.conditionalTriggers || []).filter(function(t) { return t.state === 'armed' || t.state === 'approaching'; }).length;
+  var expressPending = (D.expressDeadlines || []).filter(function(d) { return d.status === 'pending' || d.status === 'breached'; }).length;
+  var n7 = (D.catalystTimeline || []).filter(function(r) { return r.date && _daysFromToday(r.date) >= 0 && _daysFromToday(r.date) <= 7; }).length;
+  var n14 = (D.catalystTimeline || []).filter(function(r) { return r.date && _daysFromToday(r.date) >= 0 && _daysFromToday(r.date) <= 14; }).length;
+  var prepGaps = (D.prepBriefGaps || []).length;
+
+  // ─── 1. Action Banner KPI strip ───
+  h += '<div class="kpi-strip">';
+  h += '<div class="kpi-item"><div class="kpi-label">Overdue</div><div class="kpi-value" style="color:var(--accent-red)">' + overdueCount + '</div></div>';
+  h += '<div class="kpi-item"><div class="kpi-label">Express pending</div><div class="kpi-value" style="color:' + (expressPending ? 'var(--accent-red)' : 'var(--text-secondary)') + '">' + expressPending + '</div></div>';
+  h += '<div class="kpi-item"><div class="kpi-label">Triggers armed</div><div class="kpi-value" style="color:var(--accent-amber)">' + triggersArmed + '</div></div>';
+  h += '<div class="kpi-item"><div class="kpi-label">Next 7d</div><div class="kpi-value">' + n7 + '</div></div>';
+  h += '<div class="kpi-item"><div class="kpi-label">Next 14d</div><div class="kpi-value">' + n14 + '</div></div>';
+  h += '<div class="kpi-item"><div class="kpi-label">Prep gaps</div><div class="kpi-value" style="color:' + (prepGaps ? 'var(--accent-amber)' : 'var(--text-secondary)') + '">' + prepGaps + '</div></div>';
+  h += '</div>';
+
+  var sectionsRendered = 0;
+
+  // ─── 2. TODAY ───
+  var todayRows = allRows.filter(function(r) { return r.bucket === 'today'; });
+  if (todayRows.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section" style="border-color:rgba(255,59,48,.3)">';
+    h += '<h3 style="color:var(--accent-red)">🚨 TODAY</h3>';
+    h += _renderCalRows(todayRows);
+    h += '</div>';
+  }
+
+  // ─── 3. Overdue ───
+  var overdueRows = allRows.filter(function(r) { return r.overdue; });
+  if (overdueRows.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section" style="border-color:rgba(255,59,48,.2)">';
+    h += '<h3 style="color:var(--accent-red)">⚠️ Overdue (' + overdueRows.length + ')</h3>';
+    h += _renderOverdueTable(overdueRows);
+    h += '</div>';
+  }
+
+  // ─── 4. Express-Entry Deadlines (pending/breached only) ───
+  var expressRows = (D.expressDeadlines || []).filter(function(d) { return d.status === 'pending' || d.status === 'breached'; });
+  if (expressRows.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section" style="border-color:rgba(255,59,48,.3)">';
+    h += '<h3 style="color:var(--accent-red)">⚡ Express-Entry Deadlines (' + expressRows.length + ')</h3>';
+    expressRows.forEach(function(d) {
+      var stateLbl = d.status === 'breached' ? 'BREACHED' : (d.hoursRemaining !== null ? d.hoursRemaining + 'h remaining' : 'pending');
+      h += '<div class="timeline-item">';
+      h += '<div class="timeline-date">' + esc(d.finalizeBy || '') + '</div>';
+      h += '<div class="timeline-dot" style="background:var(--accent-red)"></div>';
+      h += '<div class="timeline-event"><strong>' + esc(d.ticker) + '</strong> &middot; ' + esc(stateLbl) + ' &middot; <span style="font-size:11px;color:var(--text-secondary)">Run <code>trade-assessment --mode entry --finalize</code></span></div>';
+      h += '</div>';
+    });
+    h += '</div>';
+  }
+
+  // ─── 5. Prep-Brief Gaps ───
+  var gaps = D.prepBriefGaps || [];
+  if (gaps.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section" style="border-color:rgba(245,166,35,.3)">';
+    h += '<h3 style="color:var(--accent-amber)">📋 Prep-Brief Gaps (' + gaps.length + ')</h3>';
+    h += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">Held positions with catalysts within 30 days, no <code>{Ticker}/Prep/{date}-*.md</code> file.</div>';
+    gaps.forEach(function(g) {
+      h += '<div class="timeline-item">';
+      h += '<div class="timeline-date">' + esc(g.date) + ' (D-' + g.daysAway + ')</div>';
+      h += '<div class="timeline-dot" style="background:var(--accent-amber)"></div>';
+      h += '<div class="timeline-event"><strong>' + esc(g.ticker) + '</strong> &middot; ' + esc(g.event) + '<br>';
+      h += '<span style="font-size:11px;color:var(--text-secondary)">Run <code>event-prep ' + esc(g.ticker) + '</code> &rarr; ' + esc(g.prepDir) + '</span>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // ─── 6. Rule §20 Conditional Triggers ───
+  var triggers = D.conditionalTriggers || [];
+  if (triggers.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section">';
+    h += '<h3>🎯 Rule §20 Conditional Triggers (' + triggers.length + ')</h3>';
     h += '<table>';
-    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Expiry</th><th>DTE</th><th>30-DTE Mark</th><th>Next Catalyst</th></tr></thead>';
+    h += '<thead><tr><th>Ticker</th><th>Type</th><th>Trigger</th><th>Bounds</th><th>Current</th><th>State</th><th>Action on Fire</th></tr></thead>';
+    h += '<tbody>';
+    triggers.forEach(function(t) {
+      var pulseClass = (t.state === 'approaching') ? ' state-approaching' : '';
+      h += '<tr class="trigger-row' + pulseClass + '">';
+      h += '<td class="mono">' + esc(t.ticker) + '</td>';
+      h += '<td><span class="pill pill-purple" style="font-size:10px">' + esc(t.triggerType) + '</span></td>';
+      h += '<td style="font-size:12px;max-width:280px">' + esc(t.description) + '</td>';
+      var bounds = (t.upperBound !== null && t.lowerBound !== null) ? '$' + t.lowerBound + ' / $' + t.upperBound : '—';
+      h += '<td class="mono">' + bounds + '</td>';
+      h += '<td class="mono">' + (t.currentPx !== null ? '$' + t.currentPx : '—') + '</td>';
+      var stateColor = t.state === 'fired' ? 'var(--accent-red)' : t.state === 'approaching' ? 'var(--accent-amber)' : 'var(--text-secondary)';
+      h += '<td><span class="pill" style="background:rgba(0,0,0,0);color:' + stateColor + ';font-size:10px;border:1px solid ' + stateColor + '">' + (t.state || 'armed').toUpperCase() + '</span></td>';
+      h += '<td style="font-size:11px;max-width:240px">' + esc(t.actionOnFire || '') + '</td>';
+      h += '</tr>';
+    });
+    h += '</tbody></table></div>';
+  }
+
+  // ─── 7-10. Chronological buckets ───
+  var buckets = [
+    {kind:'next-2-weeks', title:'📅 Action Zone (Next 2 Weeks)', expanded:true},
+    {kind:'weeks-3-4', title:'📅 Weeks 3–4', expanded:false},
+    {kind:'month-2-3', title:'📅 Month 2–3', expanded:false},
+    {kind:'beyond-3-months', title:'📅 Beyond 3 Months', expanded:false}
+  ];
+  buckets.forEach(function(b) {
+    var rows = allRows.filter(function(r) { return r.bucket === b.kind; });
+    if (!rows.length) return;
+    sectionsRendered++;
+    h += '<button class="section-toggle' + (b.expanded ? '' : ' collapsed') + '" aria-expanded="' + b.expanded + '" onclick="toggleSection(this)">' + b.title + ' (' + rows.length + ')</button>';
+    h += '<div class="section-body"' + (b.expanded ? '' : ' style="display:none"') + '><div class="card" style="margin-top:8px">';
+    h += _renderCalRows(rows);
+    h += '</div></div>';
+  });
+
+  // ─── 11. Overhang Resolution Windows ───
+  var overhang = D.overhangWindows || [];
+  if (overhang.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section">';
+    h += '<h3>🚪 Overhang Resolution Windows (' + overhang.length + ')</h3>';
+    overhang.forEach(function(o) {
+      h += '<div class="timeline-item">';
+      h += '<div class="timeline-date">' + esc(o.resolveBy || '') + '</div>';
+      h += '<div class="timeline-dot" style="background:var(--accent-blue)"></div>';
+      h += '<div class="timeline-event"><strong>' + esc(o.ticker) + '</strong> &middot; ' + esc(o.description || '') + '</div>';
+      h += '</div>';
+    });
+    h += '</div>';
+  }
+
+  // ─── 12. TRADE Time-Stops & Mid-Trade Check-ins ───
+  var ts = D.tradeTimeStops || [];
+  if (ts.length) {
+    sectionsRendered++;
+    h += '<div class="card cal-section">';
+    h += '<h3>🔚 TRADE Time-Stops &amp; Mid-Trade Check-ins (' + ts.length + ')</h3>';
+    h += '<table>';
+    h += '<thead><tr><th>Ticker</th><th>Entry</th><th>Mid-Trade Check (Rule §20)</th><th>Time-Stop (Rule §11)</th><th>Setup Score</th><th>Status</th></tr></thead>';
+    h += '<tbody>';
+    ts.forEach(function(t) {
+      var gateColor = t.setupGatePassing ? 'var(--accent-positive)' : 'var(--accent-red)';
+      h += '<tr>';
+      h += '<td class="mono">' + esc(t.ticker) + '</td>';
+      h += '<td class="mono">' + esc(t.entryDate || '—') + '</td>';
+      var mid = (t.midTradeCheck || '—') + (t.daysToMidTradeCheck !== null && t.daysToMidTradeCheck !== undefined ? ' (D-' + t.daysToMidTradeCheck + ')' : '');
+      h += '<td class="mono">' + esc(mid) + '</td>';
+      var stop = (t.timeStop || '—') + (t.daysToTimeStop !== null && t.daysToTimeStop !== undefined ? ' (D-' + t.daysToTimeStop + ')' : '');
+      h += '<td class="mono">' + esc(stop) + '</td>';
+      h += '<td class="mono" style="color:' + gateColor + '">' + esc(t.currentSetupScore || '—') + '</td>';
+      h += '<td style="font-size:11px;max-width:280px">' + esc(t.statusNote || '') + '</td>';
+      h += '</tr>';
+    });
+    h += '</tbody></table></div>';
+  }
+
+  // ─── 13. Options Expiry ───
+  if (D.options && D.options.length) {
+    sectionsRendered++;
+    h += '<div class="card">';
+    h += '<h3>📊 Options Expiry</h3>';
+    h += '<table>';
+    h += '<thead><tr><th>Ticker</th><th>Expiry</th><th>DTE</th><th>30-DTE Mark</th><th>Next Catalyst</th></tr></thead>';
     h += '<tbody>';
     D.options.forEach(function(o) {
       var dc = dteClass(o.dte);
@@ -2642,89 +2743,19 @@ function renderCalendar() {
       h += '<td class="mono">' + o.expiry + '</td>';
       h += '<td><span class="dte-badge ' + dc + '">' + o.dte + '</span></td>';
       h += '<td class="mono">' + o.thirtyDteMark + '</td>';
-      h += '<td style="font-size:12px">' + (nextCat ? nextCat.catalyst + ' (' + nextCat.dteAtCatalyst + ' DTE)' : '\u2014') + '</td>';
+      h += '<td style="font-size:12px">' + (nextCat ? nextCat.catalyst + ' (' + nextCat.dteAtCatalyst + ' DTE)' : '—') + '</td>';
       h += '</tr>';
     });
     h += '</tbody></table></div>';
   }
 
-  var overdue = (D.catalystTimeline || []).filter(function(c) { return c.overdue; });
-  if (overdue.length) {
-    h += '<div class="card" style="border-color:rgba(255,59,48,.2)">';
-    h += '<h3 style="color:var(--accent-red)">\uD83D\uDEA8 Overdue</h3>';
-    overdue.forEach(function(c) {
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date" style="color:var(--accent-red)">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:var(--accent-red)"></div>';
-      h += '<div class="timeline-event"><strong>' + esc(c.event) + '</strong> \u2014 ' + c.ticker + '</div>';
-      h += '</div>';
-    });
-    h += '</div>';
-  }
-
-  var nonOverdue = (D.catalystTimeline || []).filter(function(c) { return !c.overdue; });
-  var today = new Date(todayStr());
-  var twoWeeks = new Date(today); twoWeeks.setDate(twoWeeks.getDate() + 14);
-  var next2w = nonOverdue.filter(function(c) { return new Date(c.date) <= twoWeeks; });
-  if (next2w.length) {
-    h += '<div class="card">';
-    h += '<h3>Next 2 Weeks</h3>';
-    next2w.forEach(function(c) {
-      var dotColor = c.type === 'Hard' ? 'var(--accent-amber)' : 'var(--accent-blue)';
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:' + dotColor + '"></div>';
-      h += '<div class="timeline-event">' + esc(c.event) + ' ';
-      c.ticker.split('/').forEach(function(tk) {
-        tk = tk.trim();
-        if (D.tickers[tk]) {
-          h += '<button class="ticker-btn" onclick="openContextPanel(\'' + tk + '\')">' + tk + '</button> ';
-        } else {
-          h += '<span class="mono" style="font-size:12px">' + tk + '</span> ';
-        }
-      });
-      h += '</div></div>';
-    });
-    h += '</div>';
-  }
-
-  var fourWeeks = new Date(today); fourWeeks.setDate(fourWeeks.getDate() + 28);
-  var w34 = nonOverdue.filter(function(c) { var d = new Date(c.date); return d > twoWeeks && d <= fourWeeks; });
-  if (w34.length) {
-    h += '<div class="card">';
-    h += '<h3>Weeks 3\u20134</h3>';
-    w34.forEach(function(c) {
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:var(--accent-blue)"></div>';
-      h += '<div class="timeline-event">' + esc(c.event) + ' <span class="mono" style="font-size:12px">' + c.ticker + '</span></div>';
-      h += '</div>';
-    });
-    h += '</div>';
-  }
-
-  var beyond = nonOverdue.filter(function(c) { return new Date(c.date) > fourWeeks; });
-  if (beyond.length) {
-    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Beyond 4 Weeks (' + beyond.length + ')</button>';
-    h += '<div class="section-body"><div class="card" style="margin-top:8px">';
-    beyond.forEach(function(c) {
-      var dotColor = 'var(--accent-blue)';
-      if (c.event.includes('Expiry') || c.event.includes('expiry') || c.event.includes('DTE')) dotColor = 'var(--accent-orange)';
-      if (c.event.includes('dividend')) dotColor = 'var(--accent-positive)';
-      h += '<div class="timeline-item">';
-      h += '<div class="timeline-date">' + formatDate(c.date) + '</div>';
-      h += '<div class="timeline-dot" style="background:' + dotColor + '"></div>';
-      h += '<div class="timeline-event">' + esc(c.event) + ' <span class="mono" style="font-size:12px">' + c.ticker + '</span></div>';
-      h += '</div>';
-    });
-    h += '</div></div>';
-  }
-
+  // ─── 14. Threshold Monitors ───
   if (D.thresholdMonitors && D.thresholdMonitors.length) {
-    h += '<button class="section-toggle" aria-expanded="true" onclick="toggleSection(this)">Threshold Monitors (' + D.thresholdMonitors.length + ')</button>';
-    h += '<div class="section-body"><div class="card" style="margin-top:8px">';
+    sectionsRendered++;
+    h += '<button class="section-toggle collapsed" aria-expanded="false" onclick="toggleSection(this)">📈 Threshold Monitors (' + D.thresholdMonitors.length + ')</button>';
+    h += '<div class="section-body" style="display:none"><div class="card" style="margin-top:8px">';
     h += '<table>';
-    h += '<thead><tr><th aria-sort="none">Ticker</th><th>Threshold</th><th>Current</th><th>Status</th></tr></thead>';
+    h += '<thead><tr><th>Ticker</th><th>Threshold</th><th>Current</th><th>Status</th></tr></thead>';
     h += '<tbody>';
     D.thresholdMonitors.forEach(function(t) {
       var dotClass = t.status === 'ok' ? 'ind-ok' : t.status === 'approaching' ? 'ind-approaching' : 'ind-breach';
@@ -2739,7 +2770,167 @@ function renderCalendar() {
     h += '</tbody></table></div></div>';
   }
 
+  if (sectionsRendered === 0) {
+    h += '<div class="card" style="text-align:center;color:var(--text-secondary);padding:40px">No matching catalysts under the current filters. <a href="#" onclick="resetCalendarFilters();return false;">Reset filters</a></div>';
+  }
+
   el.innerHTML = h;
+}
+
+// ─── Calendar render helpers ───
+function _daysFromToday(iso) {
+  if (!iso) return null;
+  var t = new Date(iso);
+  var now = new Date(todayStr());
+  return Math.round((t - now) / 86400000);
+}
+
+function _calRowDot(c) {
+  if (c.type === 'Hard') return 'var(--accent-amber)';
+  if (c.type === 'Soft') return 'var(--accent-blue)';
+  if (c.type === 'Conditional') return '#a78bfa';
+  if (c.type === 'Intraday') return 'var(--accent-red)';
+  return 'var(--text-secondary)';
+}
+
+function _calRowTypePill(c) {
+  if (c.type === 'Hard') return 'pill-amber';
+  if (c.type === 'Soft') return 'pill-blue';
+  if (c.type === 'Conditional') return 'pill-purple';
+  if (c.type === 'Intraday') return 'pill-red';
+  return 'pill-grey';
+}
+
+function _renderCalRows(rows) {
+  var h = '';
+  rows.forEach(function(c) {
+    var heldClass = c.portfolioWt > 0 ? ' held' : '';
+    h += '<div class="timeline-item' + heldClass + '">';
+    h += '<div class="timeline-date">' + esc(c.dateLabel || c.date || '') + '</div>';
+    h += '<div class="timeline-dot" style="background:' + _calRowDot(c) + '"></div>';
+    h += '<div class="timeline-event">';
+    var tickerList = c.tickers && c.tickers.length ? c.tickers : [c.ticker];
+    tickerList.forEach(function(tk) {
+      tk = tk.trim();
+      if (D.tickers && D.tickers[tk]) {
+        h += '<button class="ticker-btn" onclick="openContextPanel(\'' + tk + '\')">' + tk + '</button> ';
+      } else {
+        h += '<span class="mono" style="font-size:12px;margin-right:4px">' + esc(tk) + '</span>';
+      }
+    });
+    h += '<span class="pill ' + _calRowTypePill(c) + '" style="font-size:10px">' + esc(c.type || '') + '</span> ';
+    var ev = c.event || '';
+    var evShort = ev.length > 80 ? ev.slice(0, 77) + '…' : ev;
+    var evAttr = ev.replace(/"/g, '&quot;');
+    h += '<span title="' + evAttr + '">' + esc(evShort) + '</span>';
+    if (c.dimensions && c.dimensions.length) {
+      h += ' ';
+      c.dimensions.forEach(function(d) {
+        var lbl = (typeof DIM_LABELS !== 'undefined' && DIM_LABELS[d]) ? DIM_LABELS[d] : d;
+        h += '<span class="dim-chip" title="' + esc(lbl) + '">' + d + '</span>';
+      });
+    }
+    if (c.portfolioWt > 0) {
+      h += ' <span class="wt-badge">' + c.portfolioWt + '%</span>';
+    }
+    if (c.prepBriefPath) {
+      h += ' <span class="prep-icon prep-ok" title="Prep brief: ' + esc(c.prepBriefPath) + '">📋</span>';
+    } else if (c.prepBriefMissing) {
+      h += ' <span class="prep-icon prep-missing" title="No prep brief found — run event-prep">⚠️</span>';
+    }
+    if (c.action) {
+      h += ' <span class="cal-action-icon" title="' + esc(c.action).replace(/"/g, '&quot;') + '">ℹ️</span>';
+    }
+    h += '</div></div>';
+  });
+  return h;
+}
+
+function _renderOverdueTable(rows) {
+  var h = '<table>';
+  h += '<thead><tr><th>Ticker</th><th>Event</th><th>Expected By</th><th>Days Overdue</th><th>Dim</th><th>Wt</th><th>Action</th></tr></thead>';
+  h += '<tbody>';
+  rows.forEach(function(c) {
+    h += '<tr>';
+    var primary = c.ticker;
+    if (D.tickers && D.tickers[primary]) {
+      h += '<td class="mono"><button class="ticker-btn" onclick="openContextPanel(\'' + primary + '\')">' + primary + '</button></td>';
+    } else {
+      h += '<td class="mono">' + esc(primary) + '</td>';
+    }
+    h += '<td style="font-size:12px;max-width:340px">' + esc(c.event || '') + '</td>';
+    h += '<td style="font-size:12px">' + esc(c.expectedBy || '—') + '</td>';
+    h += '<td style="color:var(--accent-red)">' + (c.daysOverdue || '—') + (c.daysOverdue ? ' days' : '') + '</td>';
+    var dims = (c.dimensions || []).map(function(d) { return '<span class="dim-chip">' + d + '</span>'; }).join(' ');
+    h += '<td>' + (dims || '—') + '</td>';
+    h += '<td class="mono">' + (c.portfolioWt > 0 ? c.portfolioWt + '%' : '—') + '</td>';
+    h += '<td style="font-size:11px;max-width:300px">' + esc(c.action || '—') + '</td>';
+    h += '</tr>';
+  });
+  h += '</tbody></table>';
+  return h;
+}
+
+// ─── Calendar filter state ───
+var _calendarFilters = (function() {
+  try {
+    var stored = localStorage.getItem('_calendarFilters');
+    if (stored) return JSON.parse(stored);
+  } catch (e) {}
+  return {type:[], position:[], dimension:[], weight:'all'};
+})();
+
+function _saveCalFilters() {
+  try { localStorage.setItem('_calendarFilters', JSON.stringify(_calendarFilters)); } catch (e) {}
+}
+
+function toggleCalendarFilter(group, val) {
+  if (group === 'weight') {
+    _calendarFilters.weight = (_calendarFilters.weight === val) ? 'all' : val;
+  } else {
+    var arr = _calendarFilters[group];
+    var idx = arr.indexOf(val);
+    if (idx >= 0) arr.splice(idx, 1);
+    else arr.push(val);
+  }
+  _saveCalFilters();
+  renderCalendar();
+}
+
+function resetCalendarFilters() {
+  _calendarFilters = {type:[], position:[], dimension:[], weight:'all'};
+  _saveCalFilters();
+  renderCalendar();
+}
+
+function _calMatchRow(row) {
+  var f = _calendarFilters;
+  if (f.type && f.type.length) {
+    var t = row.type || '';
+    var match = (f.type.indexOf(t) >= 0) || (row.overdue && f.type.indexOf('Overdue') >= 0);
+    if (!match) return false;
+  }
+  if (f.position && f.position.length) {
+    var pType = (D.tickers && D.tickers[row.ticker]) ? (D.tickers[row.ticker].portfolioType || '') : '';
+    var pStatus = (D.tickers && D.tickers[row.ticker]) ? (D.tickers[row.ticker].status || '') : '';
+    var ok = false;
+    if (f.position.indexOf('Held') >= 0 && row.portfolioWt > 0) ok = true;
+    if (f.position.indexOf('INVESTMENT') >= 0 && pType === 'INVESTMENT') ok = true;
+    if (f.position.indexOf('TRADE') >= 0 && pType === 'TRADE') ok = true;
+    if (f.position.indexOf('MONITORING') >= 0 && pStatus === 'MONITORING') ok = true;
+    if (!ok) return false;
+  }
+  if (f.dimension && f.dimension.length) {
+    var hit = false;
+    var rowDims = row.dimensions || [];
+    f.dimension.forEach(function(d) { if (rowDims.indexOf(d) >= 0) hit = true; });
+    if (!hit) return false;
+  }
+  if (f.weight && f.weight !== 'all') {
+    var minW = parseFloat(f.weight);
+    if (!isNaN(minW) && (row.portfolioWt || 0) < minW) return false;
+  }
+  return true;
 }
 
 // ═══════════════════════════════════════════
@@ -3332,7 +3523,7 @@ function renderSettings() {
   h += '<h3>Dashboard Info</h3>';
   h += '<div style="font-size:13px;color:var(--text-secondary)">';
   h += 'Generated: ' + (D.lastUpdated || D.generated) + '<br>';
-  h += 'Data sources: 7 WATCHLIST.md, 7 THESIS.md, 7 CHANGELOG.md, 4 INDICATORS.md, catalyst-calendar.md, signal-ledger.md, intelligence-digest.md, price-history.csv, theme-watchlist.md<br>';
+  h += 'Data sources: 7 WATCHLIST.md, 7 THESIS.md, 7 CHANGELOG.md, 4 INDICATORS.md, catalyst-calendar.md, price-history.csv, theme-watchlist.md<br>';
   h += 'Positions: ' + D.portfolio.slotsUsed + ' INVESTMENT (' + Object.keys(D.tickers).join(', ') + ') + Cash<br>';
   h += 'Themes: ' + D.themes.length + ' (' + D.themes.filter(function(t){return t.priority>=20}).length + ' high-priority, ' + D.themes.filter(function(t){return t.status==="DORMANT"}).length + ' dormant)';
   h += '</div></div>';
