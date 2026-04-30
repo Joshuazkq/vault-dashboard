@@ -1,0 +1,466 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "VOW",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Multiple independent drivers accelerating: Maritime margin normalization (44% new Q4→68% Q1→89% 2027 — quantified by 9M 2025 → Q4 2025 Adj EBITDA margin step-up: 3.2% [9M implied, depressed by Q2 NOK ~31.6M legacy catch-up; ~11.1% ex-catch-up] → 13.1% [Q4 audited]. Aftersales 16.7% → 20.8%. Source: NOTES.md 2026-04-30 derivation), Aftersales compounding at 20%+ margins on 200-ship fleet, legacy drag rolling off, NOK ~1.7B backlog to 2034. Management alignment locked in structurally (DNB covenants force deleveraging) + confirmed by insider buying (~9.1M shares all current insiders, CEO+CFO+Board, no sales — REVISED UP from prior 7.6M tracking via 2026-04-29 Remuneration Report disclosure: Hekneby holds 6.15M shares not 4.08M). Only ONE clean quarter (Q4 2025) supports the inflection — STRONG requires directional inflection with real but unproven duration, not proven multi-quarter trajectory. Per A16: leverage compression is the primary re-rating catalyst in post-distress stories. (Sources: Q4 2025 Presentation; Q4 2025 call; OVERVIEW.md; Remuneration Report 2025 p.10; LESSONS.md A16)",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "Prob-weighted FV NOK 7.66 vs price NOK 2.37 = +223% mismatch. Segment SOTP: Maritime alone (NOK 1,448M at base) exceeds group EV (~NOK 1,040M) by 39%. Per A4: check what market HAS priced — EV ~NOK 1,040M implies NOK 87-104M sustainable EBITDA at 10-12x; market IS pricing moderate recovery but gives minimal credit for segment-level margin normalization + Aftersales compounding. Council FV NOK 3.52 still implies +49%. Not EXTREME because: (1) some recovery priced, (2) 18.8% margin model-derived not proven, (3) council 54% divergence shows SOTP assumptions carry meaningful uncertainty. M-v-M diagnostic (Mar 26): ~0% of thesis value priced in, Discovery 5/5. (Sources: vow_sotp_v3.py; council fair-value; M-v-M diagnostic)",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "Consensus bear case: \"Failed turnaround, 5 covenant breaches, loss-making Industrial, accounting restatements, unproven new management.\" Drawdown Diagnosis: (1) B1 credibility tax — TRANSIENT, addressing (C-suite overhaul, Q4 clean quarter, insider buying; resolve by Nov 2026, reclassify STRUCTURAL if another restatement/breach without margin improvement); (2) A1 mandate screen-out — IRRATIONAL (size irrelevant to intrinsic value); (3) A3 zero coverage — IRRATIONAL (coverage follows performance, SpareBank 1 initiated); (4) C2 shareholder fatigue — TRANSIENT, partially addressing (97% off peak, DNB sold equity; resolve when stock >NOK 3.50, reclassify STRUCTURAL if 3 consecutive positive ERs without repricing). All IRRATIONAL or TRANSIENT-and-addressed → V3 uncapped. No hard forcing function (no activist, no index event) keeps at STRONG not EXTREME. M-v-M diagnostic Q3=ARTICULABLE, Q4=CONDITIONAL → no diagnostic caps. (Sources: DEBATES.md; NOTES.md; M-v-M diagnostic)",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "Sub-archetype B (Balance Sheet as Torque) — torque mechanism intact. Pre-mortem (revised post Q4 2025 Interim filing-review 2026-04-25): 6 failure modes (see below — incl. new IBD composition flag). Covenant math: Q2 2026 6.75x (~NOK 53M, achievable), **Q3 2026 3.5x — base case NOW PLAUSIBLY CLEARS at ~3.4x** (was 3.8x BORDERLINE BREACH pre-WC-confirmation). **Filing-confirmed WC release: contract assets NOK 297.5M → NOK 154.0M (-NOK 143.5M, -48%) in FY2025 — exceeds council's NOK 120M bridge requirement by 20%.** NCOA also released NOK 135.9M (group corroboration). Q4'25 OCF NOK 129.4M demonstrates cash conversion. Balance sheet still fragile: 21.3% equity ratio, NOK 362M net debt, intangibles 2.0x equity (post-impairment), liquidity NOK 136M. **IBD composition shift flag (NEW failure mode):** DNB term -NOK 78M offset by overdraft +NOK 77M = liability migration not pure deleveraging; overdraft 61% utilization (NOK 164.4M / NOK 270M facility). Floor unchanged: bear SOTP NOK 0.83 (-66%) but Maritime+Aftersales franchise retains NOK 723M EV in all scenarios. Binary risks: covenant default → forced dilution (now **15-20% P**, was 25-30%); ~NOK 79M further Industrial impairment breaches equity ratio. Not EXTREME because: (1) equity ratio still 21.3%, (2) overdraft dependence increased, (3) Q3 2026 covenant test still upcoming Nov 2026 (one filing, not two clean quarters), (4) bear case still implies -66% downside if it realizes. Per A6: leverage absorbs catalyst upside; mechanism intact. Per B3: correlated vulnerabilities quantum shrinking. **Reversal triggers attached** (see Conviction History 2026-04-25). (Sources: Q4 2025 Interim Report 25 Feb 2026 Note 3 + Financial Position p.16 + APM p.27; NOTES.md 2026-04-25 filing review; LESSONS.md A6, B3; council bear-case Apr 6)",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "STRONG",
+      "name": "Thesis Simplicity",
+      "rationale": "Two independent conditions, both observable: (1) Maritime/Aftersales earnings improvement — **HOLDING** (Q4 13.1% at 44% new mix vs 9M 2025 3.2% (~11.1% ex-Q2 catch-up), 8-quarter monotonic trajectory through Q4 2025); (2) financing survival through Q3 2026 covenant — **HOLDING with caveat** (core Maritime+Aftersales delivered +NOK 76M EBITDA in FY2025 and accelerating; the -NOK 49M headline is an artifact of aggressive Industrial kitchen-sinking — NOK 119.3M impairment + NOK 102M segment loss are non-recurring accounting choices that inflate the apparent gap to the 3.5x test). Market reads consolidated EBITDA at face value, which is itself part of the mispricing. Council agrees at STRONG: many apparent risks (Industrial, WC, impairment, customer timing) are subcomponents of one financing condition, not separate conditions. (Sources: OVERVIEW.md; council conviction agent; council bear-case dependency_correlation)",
+      "score": 4,
+      "type": null
+    },
+    "V6": {
+      "level": "EXTREME",
+      "name": "Upside Optionality",
+      "rationale": "Seven credible independent paths, 3 showing early evidence: (1) Industrial divestiture — mgmt voiced intent, ETIA strategic review initiated (early evidence: YES). (2) Aftersales compounding — 200-ship fleet at 20%+ margins, growing with 74-ship orderbook (early evidence: YES, FY2025 +14% YoY). (3) New cruise orderbook wins — FY2025 intake NOK 1,399M +94% YoY (early evidence: YES). (4) Coverage initiation — SpareBank 1 initiated (early evidence: EARLY). (5) IMO MEPC 84 retrofit mandate — ~300 vessels may need AWP upgrades, 20-25% prob, 25% FV uplift (INVISIBLE). **UPDATE Apr 6:** MEPC 84 confirmed Annex IV NOT on agenda; near-term regulatory catalyst pushed to future MEPC session. Long-term optionality intact. (6) WC release from contract-asset unwind — ~NOK 150M cash, 60% prob (PENDING). (7) Strategic take-out post-divestiture — 30% prob, 25% premium (SPECULATIVE). Plus council NEW (Apr 3): cash conversion reset (58% prob), shipyard concentration moat (48% prob), backlog credit quality (52% prob). Plus council NEW (Apr 6): **(8) Retrofit/dry-dock cash bridge** — 40% signing terms vs 5-10% newbuild, 9 FY2024 retrofits, Royal Caribbean 3 dry-docks 2026 (45% prob, HIGH, INVISIBLE). **(9) Higher Aftersales ARPU on newer ships** — content density 50M→185-190M/ship, system count 1,700+ vs 200 ships (55% prob, MODERATE, INVISIBLE). **(10) Pre-divestiture Scanship purification** — cleaner segment disclosure + ETIA exit can rerate before full Industrial disposal (40% prob, HIGH, MENTIONED). (Sources: Q4 2025 call; council bull-optionality Apr 3 and Apr 6; OVERVIEW.md)",
+      "score": 5,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Research base unusually deep for a micro-cap: 7 audited filings, 17 transcripts, SOTP cross-validated against 3 independent data points (filing segment data, management commentary, external analyst estimate). Core risk nodes directly documented from primary sources: 5 covenant breaches + restructured terms, facility-level debt detail, goodwill allocation (NOK 120.8M Industrial), backlog delivery schedule to 2034, customer concentration 46.6%. Core thesis rests on mostly [FACT]-labeled data with well-grounded inferences filling specific gaps. Remaining gaps identified and dated for resolution: (1) 18.8% margin model-derived, (2) contract-asset legacy/new split unknown, (3) WC intensity undisclosed, (4) installed base 200 vs 250+, (5) FY2025 audited impairment pending. Not EXTREME because thesis-critical bridge variables (margin precision, WC dynamics) remain inferred. Council (gpt-5.4) independently scored STRONG. V7 caps: STRONG → no caps on V1/V2/V4. (Sources: OVERVIEW.md; QUESTIONS.md; NOTES.md Sources Processed; council conviction V7)",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "EXTREME",
+      "name": "Catalyst Clarity",
+      "rationale": "Five dated catalysts in next 7 months, 3 with ARITHMETIC self-correction: (1) **MEPC 84 vote** (Apr 27-May 1) — CONDITIONAL regulatory catalyst. **UPDATE Apr 6:** Annex IV sewage NOT on agenda; downgraded to monitoring-only for this session. BWM Convention amendments and Annex VI focus instead. (2) **Q1 2026 results** (May 20) — ARITHMETIC, first read on 68% new-mix margins, the single most important data point. (3) **Q2 2026 covenant test** (Aug) — EVIDENTIAL, 6.75x low bar. (4) **EUR 27M cancellation rights expiry** (Sep 30) — ARITHMETIC backlog de-risking. (5) **Q3 2026 covenant cliff** (Nov) — ARITHMETIC/BINARY, 3.5x NIBD/EBITDA, THE gating event. Each quarterly ER at higher new-contract share mechanically demonstrates margin improvement (SP-2 pattern). Per B4: phase 1 catalyst density is exceptionally high — unusual for post-distress position. (Sources: Catalyst timeline; Q4 2025 call; LESSONS.md B4; PATTERNS.md SP-2)",
+      "score": 5,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**Cruise line credit conditions** — No direct visibility into credit facility terms for MSC (private), RCL, CCL. If lending tightens, newbuild orders slow before it shows in public orderbook data. Proxy: monitor cruise operator interest expense and leverage ratios quarterly. A >1.0x increase in net debt/EBITDA across 2+ operators would be an early warning.",
+      "**Pyrolysis system adoption rate on newbuilds** — Limited disclosure. Each ship that includes pyrolysis = larger per-ship contract value (from ~NOK 100M to NOK 185-190M). VOW doesn't break out pyrolysis penetration rate. Proxy: track average contract value trend. If rising, pyrolysis is penetrating.",
+      "**Solix Group AB post-acquisition strategy for Wärtsilä Water & Waste** — Solix (financial acquirer) confirmed buyer, Q3 2026 completion. Financial acquirers typically optimize for cash extraction, not R&D investment — mild positive for VOW. But if Solix later flips to a strategic industrial buyer, competitive threat re-emerges. Note: EVAC Group is a separate Norwegian competitor (NOT a Wärtsilä brand) — monitor independently.",
+      "**Shipyard slot constraints for cruise** — Korean/European yards have limited cruise-capable berths. If slots tighten, it could delay cruise newbuilds (bad for near-term order volume) but also create urgency to order early (good for pipeline). Net effect ambiguous. Monitor Clarksons cruise orderbook and delivery schedule.",
+      "**IMO MEPC regulatory cadence** — New wastewater/emissions standards drive mandatory system upgrades. But IMO timelines are notoriously slow and subject to political negotiation. A delay in MARPOL Annex IV tightening would remove a structural demand driver. **MEPC 84 (Apr 27–May 1, 2026) is imminent:** will decide whether to resume MEPC ES.2 (Oct 2026) for NZF adoption. US submitted formal opposition (Mar 22) calling for NZF to be scrapped. PPR 13 agreed marine plastic litter strategy; mandatory plastic pellet code under MEPC 84 consideration. NZF outcome affects Industrial thesis (GHG pricing) but NOT Maritime core (MARPOL Annex IV wastewater already in force). Monitor semi-annually via MEPC meeting outcomes. **COUNCIL ADDITION (2026-04-03):** If MEPC 84 tightens Annex IV discharge limits or mandates plastic-pellet capture, ~300 cruise vessels without advanced AWP + solid-waste treatment would need to upgrade. This is an unmodelled retrofit revenue leg (council estimates 25% FV uplift at 20-25% probability, INVISIBLE to market). Retrofit TAM sizing needs verification — exact number of non-compliant vessels is unknown. This is the highest-conviction NEW finding from the bull-optionality council. Watch: MEPC 84 communique (May 2026) for Annex IV amendment language."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Lumpy; judge on rolling 4Q basis. Annual >NOK 1B = healthy",
+        "current": "NOK 551M (Q4 2025); FY2025 total NOK 1,399M (+94% YoY). Backlog NOK 1,587M + NOK 400M options = NOK 1,987M extending to 2034",
+        "lastUpdated": "2026-03-28",
+        "name": "Quarterly order intake (NOK M)",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Follows booking cycles. **VOW implication: all three operators expanding fleets with record financial results. Combined newbuild capex $5-6B+ in 2026. Orderbook structurally secured through 2036.**",
+        "current": "**Record strong across all three majors.** **RCL FY2025:** Adj EPS $15.64 (+35%), $17.9B revenue, $4.3B net income. 2026 guide: EPS $17.70-18.10 (+13%), double-digit rev growth, record WAVE bookings. Discovery class + 10 Celebrity river ships ordered. **CCL FY2025:** Record $26.6B revenue, $7.2B adj EBITDA (record, +$1B YoY), Q1 2026 record $6.2B revenue, adj EPS $0.20 (+50%). 2026E: ~$3.5B adj net income. Newbuild capex ~$0.6B, non-newbuild ~$2.5B. **NCLH FY2025:** $9.8B rev (+3.7%), $2.73B EBITDA (+11%), 2026 newbuild capex ~$2.8B. Elliott activist >10%. Weakest of three but still expanding fleet. Iran substitution effect confirmed and ongoing. Brent >$100 = fuel drag but NOT slowing newbuild commitments.",
+        "lastUpdated": "2026-04-06",
+        "name": "Cruise operator capex guidance",
+        "num": 10
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Revenue/costs heavily EUR; EUR appreciation = positive for NOK-reported backlog but not economics",
+        "current": "~11.5",
+        "lastUpdated": "2026-03-28",
+        "name": "EUR/NOK exchange rate",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Should trend up with fleet age and complexity. FY2025: NOK 236M (+14% YoY) on ~200 ships",
+        "current": "~NOK 1.18M/vessel (FY2025); Q4 2025 Aftersales EBITDA margin 20.8% (exceptional)",
+        "lastUpdated": "2026-03-28",
+        "name": "Aftersales revenue per installed ship",
+        "num": 12
+      }
+    ],
+    "noiseFilter": [
+      "**Industrial Solutions backlog decline** — Already deprioritized per Q4 2025 strategic reset. NOK 112M backlog (↓54%) is expected. C.H. Evensen (heat treatment) is the only retained business worth tracking. Do not extrapolate Industrial trends to Maritime.",
+      "**Single-quarter margin dips** — Legacy contract burn-off creates temporary drag. Q4 2025 blended Maritime EBITDA margin was 13.1% at 44% new / 56% legacy. Margins will be choppy until legacy fully burns off (~Q3 2027). Track the mix-shift trajectory, not individual quarter margins.",
+      "**Option expiry without conversion** — Some options always expire. Track conversion *rate* (options converted / options signed), not absolute expiry numbers. A healthy rate is >60%.",
+      "**Cruise line booking \"softness\" headlines** — Booking data is noisy and seasonally adjusted. Only act on sustained (2+ quarters) booking declines that show up in operator capex guidance revisions. Headlines about \"slower bookings\" are usually seasonal noise.",
+      "**VOW share price moves on low volume** — Micro-cap (NOK ~690M market cap), thin float. 5-10% daily moves on <NOK 1M volume are noise. Only volume >NOK 5M signals institutional interest.",
+      "**\"VOW subsequent equity offering\" (retracted 2026-04-20)** — A prior daily briefing draft attributed a MarketScreener \"Final result of subsequent offering and allocation of offer shares\" (17 Apr 2026) to VOW ASA. That notice was issued by **Golden Energy Offshore Services ASA**, NOT VOW ASA. Fully retracted. No VOW equity issuance is live. Last VOW equity raise on record remains the Dec 2024 rights issue (NOK 250M gross, 166.67M new shares at NOK 1.50). Thesis-breaker (e) \"forced dilutive raise\" is NOT triggered. Indicator #8 covenant status reverts to pre-bridge severity (no equity cure funded). Documented here to prevent reactive thesis revision if the misattribution resurfaces. (Source: Daily Intelligence Brief 2026-04-20, Double-Check Log item 1.)"
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/VOW/INDICATORS.md",
+    "staleDays": 1,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**80-100 ships on order (industry trackers, Apr 2026).** Originally 74 entering 2026; updated to 80-100 with new orders from MSC (4 New Frontier from Meyer Werft, delivery 2030-2033), NCLH (4 at 226,000 GT from Fincantieri, 3 additional Mar 2026 for 2036-2037 = 17 total on order), RCL (2 Discovery class + options on 5th/6th Icon). **74 ships on order entering 2026** (~$80B+), highest since pre-pandemic (CruiseIndustryNews Jan 2026). 15 ocean ships delivering in 2026 alone (+30,000 berths, >$11B capex). European yards (Fincantieri/Meyer Werft/Chantiers) hold EUR 57B orderbook 2024-2036, 80%+ cruise. Fincantieri backlog EUR 63.2B through 2037. Meyer Werft: EUR 10B MSC order (4-6 ships to 2033); MSC 4+2 LOI at Meyer Werft confirmed Dec 2025. RCL capacity growth: +6.7%/+4%/+6%/+7% through 2029; options on 5th-6th Icon-class; 2 Discovery-class from Chantiers (Jan 2026, 2029-2030 delivery). MSC \"New Frontier\" class: 4 ships from Meyer Werft (Dec 2025, 2030-2033). **NCLH: 3 ships from Fincantieri (Mar 2026, 2036-2037); now 17 on order.** **Princess Cruises (Carnival Corp) Voyager Class: 3 ships × 183,000 GT / 4,700 pax confirmed 15 Apr 2026 from Fincantieri Monfalcone, delivery late 2035 / 2038 / 2039, LNG dual-fuel (Carnival's 19th-21st LNG vessels). Carnival Corp also has 7 additional ships under contract delivering 2027-2033 (10 total Carnival-side beyond Voyager Class).** VIK: options for 2 additional ocean ships (2034 delivery).",
+        "direction": "↑ Strong",
+        "lastUpdated": "2026-04-27",
+        "name": "Global cruise newbuild orderbook (ships)",
+        "num": 1,
+        "source": "Daily Intelligence Brief v2 Apr 27 (Princess press release 15 Apr 2026, Fincantieri); prior 2026-04-20 update; cruise-substitution-2026.md; CruiseIndustryNews",
+        "threshold": "<60 ships = peak concern; <45 = structural demand decline"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "NOK 400M (Q4 2025, +55% from NOK 258M at Q4 2024); next print 20 May 2026",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-04-20",
+        "name": "VOW options outstanding (NOK M)",
+        "num": 2,
+        "source": "VOW Q4 2025 presentation; confirmed unchanged per Daily Brief 2026-04-20",
+        "threshold": "<200M = pipeline drying up; <100M = thesis risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~45+ (Q4 2024 ref); Q1 2026 update expected May 20",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-20",
+        "name": "Ships \"currently being bid\" count",
+        "num": 3,
+        "source": "VOW quarterly presentation; confirmed unchanged per Daily Brief 2026-04-20",
+        "threshold": "<30 = market share concern; <20 = competitive loss"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "18.8% central est (constrained model); 9M 2025 implied 3.2% (depressed by Q2 NOK ~31.6M legacy catch-up; ~11.1% ex-catch-up); Q4 2025 actual 13.1% blended at 44% new / 56% legacy (audit confirmed = preliminary, zero adjustment); Q1 2026E ~68% new mix → first clean read on margin trajectory (20 May 2026 print decisive). Quarterly arc: 3.2% (9M) → 13.1% (Q4) = +9.9pp step-up at 44% mix.",
+        "direction": "⚠ WATCH — decisive on 20 May (mix shifts 44%→68%)",
+        "lastUpdated": "2026-04-30",
+        "name": "New-contract EBITDA margin (Maritime)",
+        "num": 4,
+        "source": "VOW Q4 2025 + Annual Report 2025 + vow_sotp_v3.py; work-backwards derivation 2026-04-30 (NOTES.md)",
+        "threshold": "<15% for 2 consecutive Qs = margin thesis broken; <12% = bear case"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~200 ships (↑ from 183 est; FY2025 Aftersales: NOK 236M / ~NOK 1.18M per vessel)",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-04-20",
+        "name": "Scanship installed fleet count",
+        "num": 5,
+        "source": "VOW FY2025 results; confirmed unchanged per Daily Brief 2026-04-20",
+        "threshold": "Any YoY decline = competitive loss (must be monotonically increasing)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~NOK 185-190M (2024 contracts)",
+        "direction": "Positive",
+        "lastUpdated": "2026-04-20",
+        "name": "Average contract value (NOK M/ship)",
+        "num": 6,
+        "source": "VOW H2 2024 earnings call; confirmed unchanged per Daily Brief 2026-04-20",
+        "threshold": "<NOK 100M = system complexity downgrade (losing pyrolysis/integration)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Divestiture to Solix Group AB (financial acquirer) expected Q3 2026. Note: EVAC Group is a SEPARATE Norwegian competitor, not a Wärtsilä brand",
+        "direction": "↑ Mild positive (financial buyer)",
+        "lastUpdated": "2026-04-20",
+        "name": "Wärtsilä Water & Waste → Solix Group AB",
+        "num": 7,
+        "source": "Wärtsilä press release Feb 2026; confirmed unchanged per Daily Brief 2026-04-20",
+        "threshold": "Strategic acquirer with R&D investment = competitive threat; Financial acquirer (Solix) = likely mild positive for VOW monopoly (less aggressive competition)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "5th consecutive waiver (Q4 2024–Q1 2026); new structure from Q2 2026. Net debt NOK 362M, equity NOK 227M (21.3%), available liquidity NOK 136M. **No equity cure funded.** Most fragile structural indicator.",
+        "direction": "⚠ Critical — Q3 test is gating event; status reconfirmed post-retraction of prior equity-issuance misattribution",
+        "lastUpdated": "2026-04-20",
+        "name": "Covenant compliance (net debt / EBITDA)",
+        "num": 8,
+        "source": "VOW THESIS.md, FY2025 results; reconfirmed per Daily Brief 2026-04-20 (Golden Energy Offshore offering was misattributed to VOW; retracted in full)",
+        "threshold": "Q2 2026: 6.75x test; **Q3 2026: 3.5x CRITICAL** (requires ~NOK 103M rolling EBITDA vs FY2025 -NOK 49M)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "NOK 298M (FY 2024); FY 2025 figure pending Annual Report **due on/around 29 Apr 2026**. Legacy contracts recognized revenue ahead of cash — completion releases WC. Council estimates 50% unwind by YE 2026 could free ~NOK 150M, cutting net debt ~40%.",
+        "direction": "↕ Pending first read (FY2025 Annual Report ~29 Apr 2026)",
+        "lastUpdated": "2026-04-20",
+        "name": "Contract assets balance (NOK M)",
+        "num": 9,
+        "source": "Council bull-optionality agent; OVERVIEW.md balance sheet; Daily Brief 2026-04-20",
+        "threshold": "Declining >NOK 40M/half-year = WC release thesis confirmed; flat/rising = new contracts building offsetting WC"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action needed",
+        "assessment": "Confirmed on track. No new stock exchange notices this week (quiet). Recent contract pipeline healthy (EUR 27M Feb 23, EUR 29.6M Dec 25). Insider Gorbani bought 105K shares at NOK 2.58 (Feb 26) — stock now at NOK 2.39 (below insider price). No structural changes.",
+        "date": "2026-03-24",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No breach — positive update, supports aftersales growth thesis",
+        "assessment": "Installed base larger than prior estimate. Aftersales FY2025: NOK 236M (+14%), Q4 margin 20.8%. Revenue/ship ~NOK 1.18M tracking well.",
+        "date": "2026-03-28",
+        "indicator": "Installed fleet / Aftersales",
+        "new": "~200 ships confirmed (FY2025 results)",
+        "old": "~183 ships est."
+      },
+      {
+        "action": "No action — valuation refinement, not thesis change",
+        "assessment": "v3 haircut decomposed: execution 10% + time 16% + balance sheet 5% = 28% total. Maritime anchored to 24% backlog delivery (NOK 550M). Net debt modeled at NOK 310M (18-month deleveraging).",
+        "date": "2026-03-28",
+        "indicator": "SOTP valuation",
+        "new": "v3 (backlog-anchored): NOK 5.26 base / NOK 7.66 prob-wtd",
+        "old": "v2: NOK 5.76 base / NOK 7.54 prob-wtd"
+      },
+      {
+        "assessment": "**No breach — POSITIVE for VOW.** Substitution demand adds to, not replaces, existing cruise growth. Orderbook pipeline structurally secured through 2036. VOW's addressable market (new IMO-compliant ships) expanding. Cross-ref: cruise-substitution-2026.md playbook scored 8 tickers — see _Screening/.",
+        "date": "2026-03-28",
+        "indicator": "Cruise orderbook / Operator capex (#1, #10)",
+        "new": "Updated: 73 ocean ships through 2036, 15 in 2026, EUR 57B European yard orderbook, Fincantieri EUR 63B backlog. Iran substitution effect CONFIRMED via Hays Travel (+11% Med, +9% Caribbean), Virgin Voyages (+20%), operator earnings calls. Fleet redeployments from Gulf to Western routes.",
+        "old": "Prior: general \"78 ships / ~$80B\""
+      },
+      {
+        "action": "No action — timestamp refresh + retraction log to Noise Filter #6",
+        "assessment": "Confirmed on track. Daily Intelligence Brief 2026-04-20 reports NO 24h breach across all 9 structural rows. Rows #4, #8, #9 remain WATCH (non-breach). Prior-draft misattribution of Golden Energy Offshore Services subsequent offering to VOW is retracted; thesis-breaker (e) NOT triggered; Indicator #8 status reconfirmed at pre-bridge severity (most fragile indicator, no equity cure funded). Upcoming catalysts: FY2025 Annual Report ~29 Apr 2026 (row #9 first read); Q1 2026 results 20 May 2026 (rows #2, #3, #4 decisive prints).",
+        "date": "2026-04-20",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No action — confirmation of EXTREME V6 framing; no thesis change",
+        "assessment": "**No breach — POSITIVE reinforcement of V6 path #3.** Threshold (<60 = peak concern) remains far above. \"Third wave\" of cruise ordering Badin flagged in H2 2024 (\"third wave 2025-2026\") materializing on schedule (NCLH Feb 2026 + Princess Apr 2026). Fincantieri Monfalcone is a Scanship partner yard. Adds 3 LNG-dual-fuel newbuilds to Scanship's bidding pipeline ~2027-2030 window.",
+        "date": "2026-04-27",
+        "indicator": "#1 Cruise newbuild orderbook",
+        "new": "80-100 ships + Princess Voyager Class 3 ships × 183,000 GT confirmed 15 Apr 2026 (Fincantieri Monfalcone, delivery 2035/2038/2039, LNG dual-fuel; Carnival's 19th-21st LNG vessels). Also: brief surfaces 7 additional Carnival ships under contract 2027-2033.",
+        "old": "80-100 ships (Apr 2026)"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "A",
+    "archetypeName": "Turnaround + Hidden Franchise",
+    "failurePatterns": [
+      {
+        "evidence": "EV independently verified (NOK 690M mcap + NOK 362M net debt = ~NOK 1,050M). Comparable multiples sourced from current trading (Scanship Comparable Analysis, Mar 15).",
+        "id": "FP-1",
+        "match": "NO",
+        "name": "Unverified Core Inputs"
+      },
+      {
+        "evidence": "Base case +123% upside; prob-weighted +225%. Well above 25% threshold.",
+        "id": "FP-2",
+        "match": "NO",
+        "name": "Insufficient Materiality"
+      },
+      {
+        "evidence": "Industrial segment is operationally distressed (-NOK 102M EBITDA FY2025). However, Maritime + Aftersales are healthy and improving. Management strategy is to wind down/divest Industrial. The distress is contained to a segment being exited, not the core franchise.",
+        "id": "FP-3",
+        "match": "PARTIAL FLAG",
+        "name": "Operational Distress Absorbs Value"
+      },
+      {
+        "evidence": "Q1 results May 20 (dated), Q2 Aug, Q3 Nov. Mechanical mix shift is the forcing function.",
+        "id": "FP-4",
+        "match": "NO",
+        "name": "No Hard Catalyst"
+      },
+      {
+        "evidence": "RC 5/5. 7 filings, 17 transcripts, SOTP v3 model. Full research completed.",
+        "id": "FP-5",
+        "match": "NO",
+        "name": "Placeholder Research Trap"
+      },
+      {
+        "evidence": "Maritime contracts are project-based (NOK 100-190M/ship) across multiple shipyards and cruise lines. No single contract >15% of revenue.",
+        "id": "FP-6",
+        "match": "NO",
+        "name": "Single-Contract Downside"
+      },
+      {
+        "evidence": "Balance sheet + Industrial drag are correlated risks (Industrial losses weaken balance sheet, which tightens covenant, which limits flexibility). However: (1) Industrial losses are shrinking as segment is wound down, (2) covenant structure has been restructured with DNB cooperation, (3) Maritime/Af…",
+        "id": "FP-7",
+        "match": "PARTIAL FLAG",
+        "name": "Compound Fragility"
+      }
+    ],
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change",
+        "rationale": "Complete overhaul; Pedersen (Kongsberg Maritime), Hekneby (Spir/Self Storage); <18mo tenure",
+        "score": 5
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": ">7.6M shares cluster buying, zero sales; CFO 3.9M shares at NOK 1.68-2.10",
+        "score": 5
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage Gap",
+        "rationale": "Zero sell-side coverage; NOK 690M mcap; no indices; Discovery 5/5 confirmed",
+        "score": 5
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_VOW_pattern_match.md",
+    "total": 34,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Maritime alone >2x group EV; prob-weighted +225% upside; multi-legged with strong floor",
+        "score": 6
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Dated quarterly earnings force mechanical repricing via contract mix shift (44%->68%->89%)",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "~70% cruise wastewater monopoly; only competitor being divested; NOK 1.6B backlog to 2034",
+        "score": 5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Net debt NOK 362M, 21.3% equity ratio, Q3 2026 covenant at 3.5x is critical; DNB supportive",
+        "score": 3
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 17 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 21+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-25",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

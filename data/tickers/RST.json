@@ -1,0 +1,255 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "RST",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Multi-vector trajectory filing-evidenced: IM margin 27.3% → 28.1% (FY24 → FY25), Datashred 8.6% → 10.3% → 12.3% → 15%+E, Tech -£1.4m → £2.8m → double-digit-E, Synertec accretion + £5m+ digital savings (vs £3m plan). FY26 PBT guided ahead of £46.6m consensus. **Management alignment (Step 1 — structural):** filing-disclosed 1.5-2.0x leverage covenant + capital allocation framework (invest > dividend > leverage > buyback) + DC-only pension. **Step 2 (signals):** CEO Skinner +11,001 sh @ 272.69p Dec 2025; CFO Baker +25k @ 271.43p Aug 2024 + £5k Q2 2025 (pattern); £20m buyback running, 170k cancelled @ 242.71–245.75p Apr 13–17 2026 (primary-source corrected 2026-04-27); Harrow Green disposal (anti-empire-building). EXTREME held back: FY25 organic growth broadly flat (mostly acquisitions); statutory PBT £7.7m vs adj £40.6m structurally noisy via Synertec earn-out.",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "Claude PW-FV 406p / council PW-FV 404.9p / spot 254p = **+59-60% mismatch** (independent derivations match within 0.3%). Multi-method stress test: P/E 381p (+50%), SOTP 393p (+55%), thesis-independent generalist 392.4p (+54%) — every reasonable upside-anchored method 50-60% above spot. Implied scenario: market prices ~83-86% Bear-case weight despite filing-disclosed FY25 delivery + ahead-of-consensus FY26 guide. Market-vs-Me Q2 (2026-04-25): ~50% priced (box stability + partial FY26 guide), ~50% unpriced (Datashred 15%+, Tech double-digit, Synertec ex-postage, Hidden RE, multiple recovery). EXTREME held back: Bear FV 210p / 221.6p sit BELOW spot; no method shows mismatch >100% nor bear-case ≥ current price.",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "AVERAGE",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "Bear case ARTICULABLE (AIM-listed mature roll-up + statutory-vs-adjusted noise + wasting-asset narrative + UK B2B consolidator track record). Drawdown Diagnosis: 5 enumerated causes — 4/5 TRANSIENT and addressed/in-motion (IHT-flow → buyback; statutory-noise → Synertec earn-out compression 4-yr window; wasting-asset → 22m box stability disclosed; sell-side modelling lag → FY26 management guidance). 1/5 STRUCTURAL (AIM-listing-derate-persistence) UNADDRESSED — softer reading: venue/liquidity discount not fundamental impairment, so V3 not capped at WEAK. Council MIA Lens 2: V3 ALREADY_PRICED at 5x EV/EBITDA. DEBATES \"Consensus Pricing\" OPEN 2026-04-22 pending H1 2026 interim re-test. STRONG ruled out: AIM-derate persistence genuinely unresolved.",
+      "score": 3,
+      "type": null
+    },
+    "V4": {
+      "level": "AVERAGE",
+      "name": "Downside Protection",
+      "rationale": "Pre-mortem: 9 failure modes enumerated. Highest-probability bounded (#1 IM organic decline 25-30% / -25-35% damage; #2 IM margin compression 15-20% / -15-20%; #8 IHT forced selling 20-25% / -15-25%). Tail risk #9 compound-failure ~14% probability / -35-50% damage (council-quantified, kill case). **Hard asset floor: NONE** — intangibles £310.0m > equity £219.7m → negative tangible equity ~£(90.3)m; freehold £37.9m + Hidden RE +£37m at upper bound = small vs £344m mcap. **Cash-flow floor: REAL** — FCF £42.9m / 12.5% yield at current price; even at -20% revenue stress ≥£25m / 7.3% yield. Lender behavior (Oct 2025 RCF refinance with 5-bank syndicate) inconsistent with distress. **DATA GAP: covenant trigger ratio + headroom % undisclosed** — binding constraint, council MIA explicitly cited as keeping V4 AVERAGE not STRONG. STRONG requires hard floor. EXTREME structurally out of reach (net debt £123.8m, not net cash).",
+      "score": 3,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "Required conditions enumeration: 3 core (IM volume + IM margin + covenant headroom) all HOLDING + observable; 2 conditional value-add (Datashred 15%+, Tech double-digit) HOLDING-in-motion; 1 unconfirmed (multiple re-rate, structural). Council bear's null hypothesis lists 5 bull-required conditions (last one — AIM discount narrows — structural). Council bull thesis enumerated 4 conditions per council conviction agent. Q4 (market-vs-me 2026-04-25) specific binary path requires 3 simultaneous events at joint ~21%; broader path ~70%. STRONG requires 2 conditions both observable and HOLDING — collapsing IM-economics to single condition is loose; covenant headroom is a binary continuous-monitoring trigger. WEAK ruled out: all enumerated conditions HOLDING + observable, multiple supporting data points.",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "7-8 conservatively-counted independent paths (independence-tested): #1 multiple re-rate 5x → 7-8x peer median (+35-45%), #2 Datashred margin doubling (+5-7%), #3 Tech double-digit (+3-5%), #4 Synertec ex-postage convergence + NHS Notify (+5-8%), #5 Hidden RE £55-75m vs £37.9m NBV (+10-15%, web-inference), #6 buyback compounding 6%/yr (mechanical), #7 M&A take-private (+30-50% premium, no public signal), #9 AI/digitisation revenue (aspirational). 3 paths show STRONG early evidence (Datashred, Tech, Buyback); 2 show MEDIUM (Synertec, property consolidation). Bull case 565p / +122% (incl Hidden RE) demonstrates torque. Council bull-optionality: 6 non-trivial vectors. EXTREME held back: operational paths (#2/#3/#4) correlated via public-sector demand-driver concentration (\"public sector is both moat and correlation risk\" per council MIA Lens 4); Hidden RE web-inference rather than filing-confirmed; M&A and AI aspirational.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Core thesis rests almost entirely on [FACT]-labeled audited filing data + verbatim management quotes: FY25 Annual Report 164pp + FY25 RNS prelim 42pp (bulk-filing-review 2026-04-22, within 12mo); 5 transcripts inline-cited; 22m box stability VERBATIM (Full-Year-Results-2025.md p.12); 20.8% adj op margin / 28.1% IM margin / FCF £42.9m / 1.9x leverage all OVERVIEW-table-cited; insider buys + buyback execution RNS-verified; council fair-value PW-FV 404.9p derived from filing-disclosed segment economics; Claude independent PW-FV 406p matches within 0.3%. **Critical DATA GAPs:** (1) RCF covenant trigger ratio + headroom % — bounded for V4 specifically; (2) H1 2026 forward items (organic IM, DWP run-rate, Synertec NHS conversion) — these are validation tests, not core-thesis assumptions; (3) Hidden RE precise £55-75m range is web-inference. EXTREME held back by covenant DATA GAP + Hidden-RE inference quality. No V1/V2/V4 caps fire.",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "AVERAGE",
+      "name": "Catalyst Clarity",
+      "rationale": "Multiple specific dated catalysts: H1 2026 trading update ~Jul-Aug, **H1 2026 interim ~mid-Sep 2026 (PRIMARY)**, FY26 results ~Mar 2027, FY25 statutory accounts ~Jun-Sep 2026, £20m buyback over 12mo. Operational catalysts EVIDENTIAL (preconditions in motion: Datashred trajectory 8.6 → 12.3 → 15%E, Tech turnaround printed FY25, NHS Notify framework won Dec 2025, buyback executing). Buyback + dividend ARITHMETIC (~9% pa combined). **CONDITIONAL cap (per Q4 self-correction CONDITIONAL classification, joint specific path ~21%) applies** — additional mechanical catalysts (buyback) lift V8 above WEAK but dominant repricing magnitude (multiple re-rate +35-45%) is CONDITIONAL territory. Council scored STRONG; one notch lower here because V8 measures whether catalyst will FORCE repricing, and AIM-derate-persistence is the wedge that makes the operational catalyst's repricing response uncertain.",
+      "score": 3,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**£150M RCF covenant headroom (Indicator #7 DATA GAP)** — FY25 Annual Report uses \"operates well within\" language without quantification. Could be 50% headroom or 32%. Resolution: H1 2026 interim disclosure OR FY25 statutory accounts at Companies House (~Jun-Sep 2026). Until quantified, an unexpected weak quarter could trigger covenant pressure that's not visible in the dashboard. Proxy: net debt / adj EBITDA trajectory (Indicator #8).",
+      "**Public-sector procurement reform timing** — 40% revenue exposure to HMRC + DWP + HM Land Registry + NHS. UK fiscal pressure could trigger contract re-tendering, framework consolidation, or unit-pricing reductions. No reliable forward signal — only retrospective contract-loss announcements. Watch UK Treasury Spending Review windows + HMT efficiency reviews. **2026-04-27 ADDITIONS:** (a) **Cabinet Office Public Interest Test 25 March 2026** — gov departments must assess in-house delivery for contracts ≥£1m before outsourcing (>95% of central gov spend); described as \"biggest wave of insourcing in a generation.\" Direct policy risk for HMRC inbound mailroom, DWP digital mailroom, Synertec NHS Notify framework, HMLR, NHS Foundation Trust scanning. The argument that records storage is \"rarely feasible to insource given specialist infrastructure and Restore's existing custody\" is INFERENCE not statutory carve-out. (b) **Two-tier workforce / Employment Rights Act effective October 2026** — \"no less favourable treatment\" rules for outsourced public-sector workers will raise bid costs for 2nd-generation outsourcing. (c) **SR25 admin-budget cuts 11%/16% real-terms 2028-29/2029-30 + £150m civil-service exit schemes** — ambiguous (could accelerate scanning demand OR compress contract pricing).",
+      "**Customer cloud-migration intent (forward-looking box withdrawals)** — Today's 22M stable box count is snapshot, not forward. Customer 2027-2029 digital-maturity tipping points are not yet in withdrawal data. Iron Mountain pre-REIT pattern (2018-2022 contraction before pivot) is the bear analogue. Proxy: NEW box intake rate by industry vertical (financial services vs NHS vs legal) — RST does not disclose.",
+      "**Hidden RE realizable value** — Freehold L&B £37.9m NBV vs ~£55-75m estimated market value (web-informed triangulation). Resolution requires either: (a) RICS valuation publication, (b) sale-and-leaseback transaction, (c) strategic-buyer due diligence. None scheduled. Bull-case-only optionality (+13-27p/share).",
+      "**Skinner / Baker key-person risk** — 2-year track record (appointed late 2023). Through-cycle resilience untested. Proxy: NED stability + buyback discipline + earn-out completion behavior.",
+      "**AIM-derate structural vs cyclical** — DEBATES \"Consensus Pricing\" left OPEN. If H1 2026 interim delivers IM organic ≥0% / margin ≥21% / Datashred ≥13% AND multiple stays <5.5x, AIM-listing-derate is structural (V8 stays AVG indefinitely). If multiple expands to ≥6x post-delivery, derate was cyclical/lag (V8 → STRONG, MIA Clarity → STRONG, band → CORE 15%)."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Mismatch is the thesis. Daily moves of 2-5% are AIM-noise. Track 30-day MA + relative-to-AIM-100",
+        "current": "~254p (entry ref); Bear 221.6p / Base 414.2p / Bull 495.2p / Super-Bull 594.4p; PW-FV 404.9p (+59%)",
+        "lastUpdated": "2026-04-25",
+        "name": "RST share price (LON: RST)",
+        "num": 14
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Watch for sector-wide multiple compression or expansion that pulls RST with it (correlation, not idiosyncratic signal)",
+        "current": "Mitie / Serco / Capita / Babcock — quarterly trading updates affect peer multiples",
+        "lastUpdated": "2026-04-25",
+        "name": "UK B2B services peer earnings season",
+        "num": 15
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "<1.20 cable = mild headwind for IRM-anchored multiple comp; >1.30 = mild tailwind",
+        "current": "RST is UK-domestic; FX exposure minimal but affects translated multiple comps (Iron Mountain peer in USD)",
+        "lastUpdated": "2026-04-25",
+        "name": "GBP / USD",
+        "num": 16
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Adjusting items will compress as Synertec earn-out unwinds (FY26-FY28); statutory will converge upward to adj. Headlines that emphasize statutory weakness are noise unless adjusting items expand.",
+        "current": "FY25 statutory £7.7m vs adj £40.6m; £32.9m adjusting items (legal restructuring + Synertec acquisition costs)",
+        "lastUpdated": "2026-04-25",
+        "name": "Statutory vs Adjusted PBT noise",
+        "num": 17
+      }
+    ],
+    "noiseFilter": [
+      "**Daily AIM share-price moves on thin volume** — RST is AIM-listed with thin sell-side coverage and IHT-related forced-selling overhang. 5-10% daily moves on <£500k volume are noise. Only volume >£2M signals institutional interest. AIM derate persistence is itself the wedge — track over 6+ months, not daily.",
+      "**Statutory PBT headlines** — FY25 statutory £7.7m vs adj £40.6m = £32.9m adjusting items (legal restructuring + Synertec acquisition costs). Adjusting items mechanically compress as Synertec earn-out unwinds. Headlines emphasizing statutory weakness are noise unless adjusting items EXPAND beyond £35m or new categories appear.",
+      "**Iron Mountain (NYSE: IRM) US-business commentary** — IRM's data-center pivot and US commercial trends are NOT a leading indicator for RST UK B2B. The 22M box count at RST is anchored to UK regulated industries (financial services + legal + NHS records-retention statutes) with different demand dynamics than IRM US.",
+      "**AIM-100 / FTSE Small Cap index moves** — Sector-wide AIM weakness on macro headlines (sterling, gilts, retail-investor sentiment) drags RST without thesis implication. Only act when RST drifts >1.5σ from the index over 2+ weeks.",
+      "**Sell-side broker PT changes without segment modeling** — Most UK small-cap brokers (Liberum, Numis, Peel Hunt) do not separately model IM box count + Datashred margin path + Technology turnaround + Synertec accretion. PT changes that don't reference these segments are noise. Only react to PT changes that explicitly cite ≥2 of these 4 levers.",
+      "**Synertec earn-out absolute magnitude** — £10m earn-out remaining is self-mitigating (RST pays less if Synertec under-delivers). Headlines about earn-out level are not signal — what matters is the underlying NHS share trajectory (25% → 35% target)."
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/RST/INDICATORS.md",
+    "staleDays": 6,
+    "trendLog": [
+      {
+        "action": "No action — baseline log only",
+        "assessment": "All 13 structural indicators at thesis-consistent baseline. No breach. Pivotal print: H1 2026 interim ~mid-Sep 2026 (resolves #1, #2, #3, #4, #5). Indicator #7 (covenant headroom) flagged DATA GAP — to be resolved at H1 2026 interim or via FY25 statutory accounts (Companies House DUE 30 June 2026, refined 2026-04-27).",
+        "date": "2026-04-27",
+        "indicator": "INDICATORS.md created",
+        "new": "Initial baseline post-entry (10% INVESTMENT 2026-04-25)",
+        "old": "—"
+      },
+      {
+        "action": "Refresh complete; track Harwood TR-1 forward",
+        "assessment": "**NO BREACH** — multi-vector strengthening: 3-yr LTIP equity alignment + largest single holder accumulation in IHT-flow window are both bull signals. No exit trigger. Note: Harwood concentration creates dependency risk if ever forced seller.",
+        "date": "2026-04-27",
+        "indicator": "#11 Insider/holder",
+        "new": "+ LTIP grants Skinner 367,035 / Baker 269,652 vest 2029 (RNS 9 Apr); Harwood Capital crossed 15.087% TR-1 (RNS 23 Apr); board change Davy → Butcher (RNS 9 Apr)",
+        "old": "Skinner Dec 2025 buy + Baker pattern"
+      },
+      {
+        "action": "Track AGM resolution; flag if pace drops <£0.30m/week for 2 consecutive weeks",
+        "assessment": "**NO BREACH** — pace ~£300–420k/week is borderline vs ≥£1.5m/month threshold (~£0.35m/week). Recent 13–17 Apr acceleration to £416k. AGM 12 May 2026 buyback authority renewal is gate — without renewal, max purchasable falls to 13,692,406 shares.",
+        "date": "2026-04-27",
+        "indicator": "#12 Buyback pace",
+        "new": "Cumulative ~£1.38m / £18.6m remaining; T1 Investec £8.6m left, T2 Canaccord pending; T1 completion projected Aug–Oct 2026; 136,357,876 shares-in-issue post 17 Apr",
+        "old": "Active 12mo programme; latest 13–17 Apr week (figure prev. 160k corrected to 170k via primary RNS)"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "E",
+    "archetypeName": "Post-Restructuring Torque",
+    "max": 35,
+    "scoredDate": "2026-04-22",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-22_RST_pattern_match.md",
+    "total": 30
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 30.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 5 files in Transcripts/; 5 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 6+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-25",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=BASE; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

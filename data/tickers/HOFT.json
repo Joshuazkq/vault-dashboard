@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "HOFT",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "AVERAGE",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Positive but modest inflection: Q4 profitability, $26.3M cost out, 3 consecutive quarters of order growth, $123M debt paydown, GM +410 bps. BUT FY26 revenue -12.4%, Sidoti cut Q1 FY27, near-term weak conditions. Management alignment AVERAGE: structural constraints WEAK (low leverage, no founder, diffuse ownership, token buyback), signals AVERAGE (equity-linked comp, GVIC oversight, governance refresh, but <1% insider direct holdings and token open-market buys).",
+      "score": 3,
+      "type": null
+    },
+    "V2": {
+      "level": "AVERAGE",
+      "name": "Valuation Mismatch",
+      "rationale": "No formal fair-value-estimation on file → cap applies per §10. Multi-method: book value $15.72 ≈ price $15.25 (+3%), Sidoti EPS × 12x = $3.96 (-74%), EV/Sales + refund = $16.68 (+9%). Prob-weighted FV vs price = ambiguous, 0-15% without refund, 9-20% with. Market has +38% re-rated YTD, partially pricing thesis. Cap lifted upon fair-value-estimation.",
+      "score": 3,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "Consensus bear: \"small-cap furniture, cyclical weakness, slow turnaround, tariff tailwind unmodelable.\" Drawdown Diagnosis: 6 causes, all TRANSIENT or IRRATIONAL, 4 being actively addressed. Self-correction ARITHMETIC on refund (CIT + CAPE mechanical); EVIDENTIAL on turnaround (Q1 FY27); CONDITIONAL on Margaritaville. No STRUCTURAL unaddressed → uncapped.",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "Sub-archetype A (Balance Sheet as Weapon). Book value $15.72 ≈ price (marginal floor, not exceeding). Net cash positive: $12M cash + $0 revolver outstanding - $3.2M LTD. $64M undrawn revolver. Current ratio 3.37x. No dilution risk. Pre-mortem: 5 failure modes, all bounded. Max drawdown ~-25% (cycle extends + Sec 301 severe + Margaritaville miss), recoverable.",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "4 core conditions (refund $15-35M, HMI IOR retained, cost sustainability, Margaritaville H2 FY27). Conditions 1/3/4 HOLDING, #2 UNCONFIRMED (inference-dependent). 2 soft conditions (cycle, Section 301) UNCONFIRMED. Not simple.",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "10 paths: refund midpoint, refund upside, Margaritaville beat, margin expansion, DU reversal, GVIC governance catalyst, cycle recovery, buyback expansion, licensing pipeline, multiple expansion. 4 paths with early evidence. Not EXTREME: most paths thesis-contingent.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Post-web-research foundation: audited FY25 10-K + GlobeNewswire primary-source Feb 1 balance sheet + Q4 FY26 transcript + Section 122/301 legal analysis + aggregated Form 4 ownership data. Key inferences (HMI IOR, Sec 122 forward cost, refund BS treatment) are well-grounded. Core DATA GAPs (refund $, 10-K) dated and imminent. Not EXTREME: refund $ still inferred, not management-disclosed.",
+      "score": 4,
+      "type": null
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "7 dated catalysts: CAPE Apr 20, 10-K late Apr-early May, Q1 FY27 June, Jul 24 Sec 122 expiry, Margaritaville Aug+, AM summer, Sec 301 pre-Jul. Refund = ARITHMETIC self-correction. Turnaround = EVIDENTIAL. Margaritaville = CONDITIONAL. Not EXTREME: refund is one-time cash/P&L event, may not trigger sustained operating multiple re-rating.",
+      "score": 4,
+      "type": null
+    }
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "run pattern-match",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "run filing-review on latest audited 10-K / 20-F / Annual Report",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 4 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation (Bull/Base/Bear PW-FV)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

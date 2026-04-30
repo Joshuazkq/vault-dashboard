@@ -1,0 +1,311 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "KENDR",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Business inflecting upward. FY2025 EBITDA 15.5% (up from 10.2% consolidated FY2023). ROI 24.6%. Revenue stable at EUR 260M with Q4 +7% recovery. FCF EUR 25.6M (67% conversion). Management alignment composite **4.2/5** (M4 capital allocation 5/5 exceptional; M1 upgraded to 4/5 with full comp data: LTI = 40% TSR vs 20-company peer group incl. IMI/Aalberts + 40% EPS + 20% ESG; CEO 100% base salary ownership guideline). Balance sheet at 0.8x leverage mechanically limits misallocation risk (EUR 75M revolving facility with covenants). Deducted from 5 because through-cycle margin sustainability has only 1 year of evidence (FY2025). (Source: Q4 2025 call p.7-8; NOTES.md management assessment; Perplexity Deep Research Mar 2026)",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "Stock at EUR 17.20 trades at 7.4x EV/EBITDA. Dual-anchor peer analysis: 50% discount vs Tier 1 aspirational peers (14.9x median — IMI, Spirax, Rotork, Halma) but IN LINE with Tier 2 small-cap Dutch peers (7.4x median — Aalberts, TKH, Phoenix Mecano), which compressed from 8-9x in the Iran/macro environment. Altra/Stromag (EM brake) acquired at ~13x (2022) — 43% discount to transaction comp. Prob-weighted fair value EUR 27.95 = 63% upside. FCF yield 10.1% for a 5-8% grower with 0.8x leverage. Consensus PT EUR 19.20 (3 analysts) implies only 12% upside — confirms sell-side has not re-modeled the pure-play transformation. Not 5/5 because Tier 2 discount has closed (7.4x vs 7.4x) — upside depends on re-rating toward Tier 1 territory, which requires time and coverage expansion (Aalberts precedent: 4-6 years). (Source: Valuation section; dual-anchor methodology with Mar 2026 peer multiples)",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "AVERAGE",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "**Council downgrade STRONG → AVERAGE.** The three specific causes (conglomerate hangover, NL-only coverage, German cycle pessimism) are real and partly uncorrected, BUT KENDR already trades at ~7.4x EV/EBITDA = the cited Tier 2 peer median. The easy \"old conglomerate discount\" portion is largely consumed; residual gap is now about whether KENDR deserves a premium-quality multiple (harder, slower) rather than an obviously wrong classification. Coverage void reclassified from TRANSIENT to **STRUCTURAL** (12-36mo resolution timeline). Council Drawdown Diagnosis confirms market has already discounted easy part but not necessarily mix-quality + narrative-cleanup upside (PARTIALLY_PRICED). [Pre-council Claude scoring: 4/5 STRONG — preserved below for reference.] (Source: Drawdown Diagnosis; DEBATES.md; Perplexity Deep Research Mar 2026; COUNCIL_CONVICTION 2026-04-15 V3)",
+      "score": 3,
+      "type": null
+    },
+    "V4": {
+      "level": "AVERAGE",
+      "name": "Downside Protection",
+      "rationale": "**Council downgrade STRONG → AVERAGE.** Net debt EUR 30.3M / 0.8x / EUR 92M liquidity is excellent — but **balance sheet protects survival, NOT mark-to-market equity downside.** Council fair-value bear FV EUR 12.5 (-27%); Iran S2 conflict EUR 7.20 (-58%); Iran S3 EUR 2.85 (-83%). Council pre-mortem failure modes: industrial downturn repeats H2 2023 → -25/-35% equity; macro/geopolitical S2 shock → -50/-60% equity. Council classification: PARTIALLY_PRICED (current price only ~38% above bear FV, doesn't price severe macro tails). Lesson T1 applied: A6 (deleveraging-cushion) framework correct, NOT A16/A17/A18 (deleveraging-rerating) — FCF conversion 67% not >80%, revenue cyclical not contracted. Lesson B3: main risks are correlated (Germany/wind/automation → IB volumes → margin → re-rating failure all share root driver). [Pre-council Claude scoring: 4/5 STRONG — preserved below for reference.] (Source: Q4 2025 call; valuation section; Iran stagflation simulation; COUNCIL_CONVICTION 2026-04-15 V4; COUNCIL_BEAR_CASE 2026-04-15 failure_modes)",
+      "score": 3,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "**User downgrade STRONG → AVERAGE during interactive walkthrough.** The \"two independent conditions\" framing is broken under macro stress: Iran overlay reveals demand and margin failure are **correlated** in severe scenarios (3.0x operating leverage → both conditions fail simultaneously). Conviction council confirmed AVERAGE on V5: required conditions = (1) margin durability HOLDING (one year only); (2) demand doesn't relapse into H2 2023-style synchronized Germany/China slowdown — **AT RISK**; (3) market values above plain Tier 2 cyclical parity — **UNCONFIRMED**. THESIS_FRAMING_BRIEF Field 10 explicitly named V5 as the dimensional weakness. [Pre-walkthrough Claude scoring: 4/5 STRONG — preserved below for reference.] (Source: DEBATES.md; Q4 2025 call; THESIS_FRAMING_BRIEF section 10; COUNCIL_CONVICTION 2026-04-15 V5)",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "**Council confirmed STRONG and added 5 NEW findings** (probability + value impact in parentheses): **(7) Capex-light recovery (65%, MODERATE — HIGHEST CONVICTION):** Spare capacity exists (\"two shifts/5 days\" can move to \"three shifts/5 days\" or \"six days/3 shifts\"); 2025 capex EUR 9.3M vs depreciation EUR 15.3M; 2026 guide EUR 11M still below depreciation. 3-5% revenue recovery → outsized FCF accretion. **(8) Reshoring as demand tailwind not just risk mitigation (45%, MODERATE):** Management explicitly cites \"supply chain resilience efforts and reshoring initiatives\" as automation order driver; local-for-local approach makes regional footprint a commercial asset. **(9) Automation platform exposure broader than wind-centric frame (45%, MODERATE — INVISIBLE):** Siemens servo-motor channel embeds KENDR in robotics + AGVs + broad automation; named customers Lenze/Bosch/SEW/Toyota; FY2025 ex-Mobility split is ~50% robotics/automation, ~25% safety, ~10% medical, only ~7% energy/transmission. **(10) Share scarcity microstructure (40%, MODERATE — INVISIBLE):** EUR 10M buyback completed Mar 2026 (662,015 shares at EUR 15.11); top 5 holders ~47%; ~14.7M shares post-buyback can amplify discovery events disproportionately. **(11) 2026 non-cyclical margin tailwinds from ERP simplification + dis-synergy cleanup (60%, MODERATE):** Management said ERP indirect benefits \"kick in gradually toward end of 2025 and mostly from 2026\"; China dis-synergies \"fully mitigated in Q4... no net impact in '26\". Original 6 paths (cobots/IAC products/M&A/coverage/Mobility runoff/acquisition target) preserved. **EXPANDED finding from council: backlog quality implies 15-18% may be a waypoint, not the ceiling — CEO said management's >20% EBITDA / >10% growth project screen \"ultimately ends up at 20% EBITDA with 10% growth... way beyond '27\" (35% prob, HIGH impact).** Council dismissed share scarcity as fundamental V6 driver (path-to-price not business optionality). Conviction council kept V6 at STRONG (not EXTREME) because management admits >20% project contribution still limited + 4-8 quarter conversion + R&D engineering bottleneck. (Source: Analyst Day Sep 2024; Q4 2025 call; Perplexity Deep Research Mar 2026; COUNCIL_BULL_OPTIONALITY 2026-04-15 findings 1-7; COUNCIL_CONVICTION 2026-04-15 V6)",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Core thesis rests on [FACT]-labeled data from FY2022 audited annual report + 13 S&P Global transcripts + Perplexity deep research (11 questions, 50 source citations). FY2025 EBITDA 15.5% confirmed by management on earnings call (pending audited annual report H2 2026). Deep research resolved: management comp structure, credit facility update, competitive landscape, goodwill estimate. Remaining DATA GAPs narrowed to: IB vs IAC individual margins (management does not disclose; deep research estimates IB ~17-20%, IAC ~12-14%), exact wind revenue % (management declines to break out; deep research estimates 38-60% of IB). Neither is thesis-gating. Binding constraint: FY2025 audited annual report not yet published. (Source: OVERVIEW.md; QUESTIONS.md; Perplexity Deep Research Mar 2026)",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "AVERAGE",
+      "name": "Catalyst Clarity",
+      "rationale": "Q1 2026 earnings (~May 2026) is specific and dated. FY2025 annual report (H2 2026) provides first audited pure-play dataset. EUR 10M buyback completed Mar 25, 2026. German PMI expansion (50.9 Feb, 51.7 Mar 2026 — first >50 since June 2022) supports IB recovery. But thesis-realizing catalysts (re-rating to industrial multiples, coverage expansion, M&A) are unscheduled. No hard forcing function — no index event (AMX requires ~EUR 400-500M mkt cap), no activist (top holders are patient Dutch value funds), no spin-off. Aalberts precedent suggests 4-6 year re-rating timeline. Discovery is organic. This remains the main drag on the score. (Source: Catalyst Timeline; Perplexity Deep Research Mar 2026)",
+      "score": 3,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**Wind revenue as % of IB revenue** — Deep research estimates 38-60% of IB revenue (EUR 36-56M). Management has declined to disclose. If at upper end, IB has dangerous single-end-market concentration in a policy-dependent sector. Monitor via: Q1 2026 earnings (ask directly), FY2025 annual report segment detail.",
+      "**IB vs IAC individual EBITDA margins** — Only combined Industrial segment margins disclosed. Deep research estimates IB ~17-20%, IAC ~12-14% (blended check: 57% IAC × 13% + 43% IB × 19% = 15.6% ≈ reported 15.5%). If IB margins are much higher than IAC, the business quality is more concentrated in the cyclical segment. Monitor via: FY2025 audited annual report.",
+      "**Post-divestment customer concentration** — Pre-divestment, no customer >10%. Post-divestment, only Siemens named >5%. But IB is selling to wind turbine OEMs (Vestas, Siemens Gamesa, Goldwind) — if one OEM is >15% of IB, concentration risk exists. Monitor via: FY2025 audited annual report customer disclosure.",
+      "**KEB Automation competitive positioning** — Most direct competitor overlap (brakes + drives + controls, EUR 360M revenue, private, partnered with Siemens). No public data on relative market share trends. Monitor via: KLAS-equivalent reports, industry conferences, management commentary.",
+      "**Cobot/humanoid robot brake adoption** — Slim-line PM brake launched at SPS Nuremberg. EUR 5-10M by 2027 from cobots is bull-case optionality. Zero revenue today. Monitor via: quarterly earnings commentary, trade show order announcements."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Judge on rolling 4Q, not individual quarters. IB demand is driven by capex cycles, not recurring revenue. Operating leverage ~3.0x per 1% revenue move",
+        "current": "FY2025 -1% but Q4 +7%. IB is lumpy — H2 2023 saw -30% Q3 YoY",
+        "lastUpdated": "2026-03-29",
+        "name": "Quarterly revenue volatility",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Direct energy cost only ~EUR 3M (1.2% of revenue). Raw material surcharges passed to customers with 1-2 quarter lag. Demand impact matters more than input cost",
+        "current": "Key inputs: copper (1,811 tonnes FY2022), steel, aluminum, plastics",
+        "lastUpdated": "2026-03-29",
+        "name": "Copper / raw material costs",
+        "num": 10
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "\"Local for local\" limits direct FX translation. Competitive impact if EUR strengthens significantly vs USD (makes German exports expensive)",
+        "current": "Americas ~17% of revenue by customer location. Atlanta + Mishawaka manufacturing",
+        "lastUpdated": "2026-03-29",
+        "name": "EUR/USD exchange rate",
+        "num": 11
+      }
+    ],
+    "noiseFilter": [
+      "**Single-quarter IB revenue decline <10%** — IB is inherently lumpy (capex cycles, wind installation timing). H2 2023 showed a -30% quarter followed by recovery. Only react to sustained multi-quarter deterioration or structural demand shift.",
+      "**mayr dual-technology claim** — mayr also offers spring-applied and PM brakes for wind. This weakens one marketing claim but does NOT change Kendrion's 30-35% market share, 20+ year incumbency, or IEC 61400 certification lock-in. Track competitive displacement data, not marketing claims.",
+      "**Retained Mobility segment noise** — Mobility (~21% of revenue) is a managed, profitable run-off. FY2025 Mobility grew +4% with +850bps EBITDA improvement. CBU wind-down to KB by Dec 2028 is on track. Do not treat as a \"purity\" discount.",
+      "**Small-cap liquidity events** — EUR 261M market cap with Netherlands-centric coverage = thin float. 5-10% daily moves on low volume are noise. Only volume spikes coinciding with fundamental news signal institutional activity.",
+      "**Iran conflict short-term price action** — Conflict creates asymmetric risk (prob-weighted EUR 9.43 under conflict scenarios) but is a MACRO event, not KENDR-specific. Balance sheet (0.8x leverage, EUR 92M liquidity) survives even S3 Severe. Medium-term: conflict may ACCELERATE wind demand (EU EUR 75B EIB mandate)."
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/KENDR/INDICATORS.md",
+    "staleDays": 25,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "15.5% (FY2025); achieved 2027 floor target 2 years early",
+        "direction": "↑ Positive (at target)",
+        "lastUpdated": "2026-03-29",
+        "name": "Normalized EBITDA margin",
+        "num": 1,
+        "source": "Q4 2025 call",
+        "threshold": "<13% for 2 consecutive quarters = structural margin compression (exit trigger); sustained >17% = bull case confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "-1% FY2025 (trough); Q4 +7% recovery across all segments",
+        "direction": "↑ Recovering (Q4 +7%)",
+        "lastUpdated": "2026-03-29",
+        "name": "IB revenue growth (YoY)",
+        "num": 2,
+        "source": "Q4 2025 call",
+        "threshold": "<-10% for 2+ quarters = cyclical downturn repeating H2 2023; >+5% sustained = recovery confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "EUR 30.3M net debt, 0.8x leverage. EUR 92M total liquidity",
+        "direction": "↑ Positive (fortress)",
+        "lastUpdated": "2026-03-29",
+        "name": "Net debt / leverage",
+        "num": 3,
+        "source": "Q4 2025 call",
+        "threshold": ">2.0x from M&A overpayment or operational deterioration = thesis risk; <0.5x = excess cash deployment expected"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "5-7 analysts (ABN AMRO ODDO, Kepler, Degroof Petercam, ING, Idea-Driven, Edison, ODDO BHF). Netherlands-only",
+        "direction": "↑ Expanding (was 2-3 at screen)",
+        "lastUpdated": "2026-03-29",
+        "name": "Analyst coverage count",
+        "num": 4,
+        "source": "Transcript participant lists",
+        "threshold": "Any UK/US initiation = major re-rating catalyst; loss to <4 = liquidity risk; 8+ = discovery thesis materializing"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**50.9 (Feb), 51.7 (Mar 2026).** First expansion since Jun 2022 — now 2 consecutive months >50. Business confidence at 4-year high. Led by intermediate + capital goods. German infrastructure investment + defence spending uplift supporting. **Germany tendered 12 GW additional onshore wind** (Climate Action Program 2026, Mar 25) — direct pipeline for Kendrion wind brakes.",
+        "direction": "↑ **Expansion confirmed** (2 months)",
+        "lastUpdated": "2026-04-06",
+        "name": "German Manufacturing PMI",
+        "num": 5,
+        "source": "Reuters/BNP Paribas; German Climate Action Program",
+        "threshold": "<47 for 2+ months = IB demand risk (H2 2023 repeat); sustained >52 = German industrial recovery confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~30-35% of EM brake market for wind turbines; 9-12 brakes per turbine",
+        "direction": "→ Stable (incumbent)",
+        "lastUpdated": "2026-03-29",
+        "name": "IB wind market share",
+        "num": 6,
+        "source": "Analyst Day Sep 2024",
+        "threshold": "Documented loss at major wind OEM (Vestas, Siemens Gamesa, Goldwind) = moat erosion; mayr gains >35% = parity threat"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Reactivated at CMD Sep 2024. Criteria: ≥15% EBITDA, ≥5% growth, strategic fit. Balance sheet supports EUR 50-60M",
+        "direction": "→ Pending",
+        "lastUpdated": "2026-03-29",
+        "name": "M&A pipeline activation",
+        "num": 7,
+        "source": "CMD Sep 2024; Q4 2025 call",
+        "threshold": "Deal announced at >10x EV/EBITDA or <12% target EBITDA = overpayment risk; accretive deal = bull catalyst"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "SB member EUR 2.03M (Dec 2025); EUR 10M buyback completed Mar 2026; EUR 0.70 dividend (61% payout) + EUR 1.00 special",
+        "direction": "↑ Positive (strong signals)",
+        "lastUpdated": "2026-03-29",
+        "name": "Insider buying / capital returns",
+        "num": 8,
+        "source": "AFM disclosures; Q4 2025 call",
+        "threshold": "New insider sales at open market = bearish signal; additional insider purchases = continued conviction"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — monitor Q1 2026 earnings for recovery continuation",
+        "assessment": "All indicators positive. FY2025 EBITDA 15.5% at target floor. Balance sheet transformed (0.8x vs 2.7x two years ago). German PMI in expansion for first time since 2022. Analyst coverage expanding. Q4 revenue recovery +7%. Key unknown: wind revenue concentration within IB.",
+        "date": "2026-03-29",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No action — all on track. Next: Q1 2026 earnings (~May).",
+        "assessment": "All indicators confirmed on track. Q4 +8% revenue validates recovery trend (#2). EBITDA 15.5% at 2027 floor target 2 years early (#1). Balance sheet transformation complete. Wind pipeline expanding via German tender. No new analyst initiations.",
+        "date": "2026-04-06",
+        "indicator": "Q4/FY2025 confirmation + PMI",
+        "new": "Q4: Rev €61.5M (+8%), EBITDA €9.7M (+73%), margin 15.8%. FY2025: Rev €245.5M (-1%), EBITDA €38.1M (+15%), margin 15.5%, FCF €25.6M (turnaround from -€3M), net debt €30.3M (0.8x, from 2.7x). Special div €1.00 + €0.70 proposed + €10M buyback. German PMI Mar 51.7 (2nd expansion month). 12 GW wind tendered.",
+        "old": "—"
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR 35.6% from situation-screen 2026-04-30 (RC v2 backfill)",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 26.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "FY2025 Q4/Annual Results PR (Feb 27 2026) reviewed + Annual Integrated Report 2025 fetched (conversion in progress)",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 13 files in Transcripts/; 13 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 8+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-15",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "TTD",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Kokai at 100% adoption drives take-rate expansion (20.3% → 21.6% FY2025); CEO Performance Option fully amortizes Q1 2026 → SBC/rev mechanically compresses 16.9% → ~12-13%, creating GAAP EPS step-function (+$0.11-0.14/sh); FY2025 FCF $796M; international +35% vs US +16%. Governance yellow flag (3 CFOs in 18 months) limits to 4/5. Management alignment: $148M Green open-market purchase Mar 2026; net diluted share reduction -8.3M FY2025 (first meaningful shrinkage); dual-class limits external accountability but founder capital at risk alongside shareholders.",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "Market at 6.9x fwd EBITDA prices TTD below every non-distressed ad-tech peer (peer range 11.3x–29.6x, median 12.7x). Blended prob-weighted FV $38 vs ~$22 market price (+73%). Even bear case ($23) is above current. EV/EBITDA-only FV $46; Owner Earnings-only FV $25. Market appears to price near-structural-decline scenario. 29 analysts with consensus PTs $43-51 limit informational edge, capping at 4; however, our FV is BELOW consensus because of Owner Earnings application — the analytical edge (SBC cliff timing) is not reflected in any sell-side model found.",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "AVERAGE",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "CPG/auto cyclical drag (~25% of revenue) over-extrapolated by market; two guidance disappointments collapsed sentiment; governance overhang adds to selling pressure. All causes TRANSIENT but self-correcting mechanism (Q1 2026 earnings beat + guide) has timing uncertainty. Drawdown Diagnosis:",
+      "score": 3,
+      "type": null
+    },
+    "V4": {
+      "level": "AVERAGE",
+      "name": "Downside Protection",
+      "rationale": "$1.3B net cash (zero debt) + $796M annual FCF provides hard liquidity floor; securities litigation ($400M-$1.3B speculative settlement) absorbed in 6-18 months of FCF. No non-distressed ad-tech peer trades below 10x EV/EBITDA. Soft floor at 7x current fwd EBITDA (~current price) — not hard-asset backed. Binary risk (UID2 adverse privacy ruling) is existential but ~3% probability. Jeff Green MNPI discovery would break thesis.",
+      "score": 3,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "2-3 conditions required. (1) Q1 2026 beat + constructive guide — UNCONFIRMED (pending May); (2) CPG/auto weakness remains bounded and cyclical, not spreading — UNCONFIRMED; (3) SBC/rev compression post-CEO option cliff — HOLDING (final tranche confirmed Q1 2026). Thesis is thesis-gated at Q1 — concentration risk explicitly flagged.",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "4-5 independent paths: (1) Q1 beat + guide raise → multiple re-rating toward 17x; (2) SBC cliff → GAAP EPS uplift $0.11-0.14/sh, no sell-side models this; (3) Ventura tier-1 OEM (Samsung/LG/MVPD) → +$5-10/sh in bull; (4) OpenAI partnership → new demand channel; (5) Permanent CFO with strong credentials → governance discount narrows. Three of five paths are already partially in motion (SBC cliff confirmed, Ventura launched, CFO search active).",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "AVERAGE",
+      "name": "Evidence Quality",
+      "rationale": "10 filings reviewed (FY2021-FY2025 10-K + FY2023-FY2025 10-Q) + 20 transcripts + pre-debate research (48 citations from SEC filings, Form 4, court records). Core financial inputs [FACT] from audited filings. Key DATA GAPs: UID2 adoption %, OpenAI status, Ventura OEM pipeline, take-rate driver breakdown (not disclosed by company), securities settlement range speculative. Mix of facts and inferences — RC 2/5 reflects unresolved critical questions.",
+      "score": 3,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "Catalysts specific and dated: Q1 2026 earnings May 8-14 (critical gate); proxy late April 2026 (CEO option details, board composition); NewFronts May 2026 (Ventura CTV strategy); Cannes Lions June 2026 (leadership visibility); Q2 2026 earnings August. Permanent CFO and OpenAI decision TBD — introduces minor timing uncertainty. Three of five debate vectors converge at Q1 — concentration risk but also strong convergence clarity.",
+      "score": 4,
+      "type": null
+    }
+  },
+  "pm": {
+    "archetype": "Mixed F+C",
+    "archetypeName": "AI/Tech Disruption Beneficiary (primary) + Event-Driven Dislocation (secondary).",
+    "max": 35,
+    "scoredDate": "2026-04-17",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_TTD_pattern_match.md",
+    "total": 28.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Prob-weighted FV $38 (+73% from $22); bear case $23 above current; 3-4 legs; floor near current; Parts A-E all TRANSIENT/PARTIALLY-STRUCTURAL-addressable — no cap. 29 analysts compress variant edge.",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q1 2026 May 8-14 earnings (EVIDENTIAL tier — 4 consecutive beats precedent) + mechanical SBC cliff (ARITHMETIC tier, $0.11-0.14 GAAP EPS uplift); proxy, NewFronts, Cannes additional catalysts. No full-year guide.",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "95%+ retention 12yr, 26% indie DSP share, 79% GM, rising take-rate 20.3→21.6%, Kokai shipped 100%. SSP-disintermediation long-tail risk noted. Two holdcos >10% (up from one). Platform ops cost rising 17.8→21.4%.",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash $1,303M (13% mcap), $796M FCF FY2025, $1.4B buybacks FY2025 (net SO -8.3M, first meaningful shrink), zero debt, $445M undrawn revolver, fortress.",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 28.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: The Trade Desk Inc._10-K_2025-12-31_English.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 20 files in Transcripts/; 10 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 5 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-05",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

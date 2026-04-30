@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "NWFL",
+    "version": "2.0.0"
+  },
+  "pm": {
+    "archetype": "A",
+    "archetypeName": "Turnaround + Hidden Franchise",
+    "max": 35,
+    "scoredDate": "2026-04-07",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-07_NWFL_pattern_match.md",
+    "total": 25.5
+  }
+}

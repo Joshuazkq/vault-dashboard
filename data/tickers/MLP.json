@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "MLP",
+    "version": "2.0.0"
+  },
+  "pm": {
+    "archetype": "D",
+    "archetypeName": "Strategic Value Emergence",
+    "flex": [
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "2-insider cluster at/near lows; Case dominant ($120K); meaningful size",
+        "score": 4.5
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-28_MLP_pattern_match.md",
+    "total": 30,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "+103% PW upside; 5 legs; floor sensitive to discount; structural-being-addressed slow-monetization",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Undated but identifiable; BRE2-pattern + Q1 earnings + ongoing Case buying",
+        "score": 3.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Irreplaceable Maui assets + lumpy CF; Hawaii scarcity = quasi-monopoly",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash flat; no covenant pressure; asset-base self-funded",
+        "score": 4
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 30.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: MLP_10-K_FY2025_2026-04-01.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "but pre-dates major thesis events (Honokohau lawsuit Aug 2025, pension termination Sept 2025, Case open-market buying Sep 2025-Mar 2026, agave venture launch 2025) and lacks Q&A or quantitative forward guidance. Future B2 evidence would come from 2025/2026 annual meeting transcripts if/when sourced.)",
+      "reason": "No Q-cadence transcript cadence",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "; 4+ months post-Nov 25 2025 hearing silent in public press = no thesis-material ruling (would be 8-K disclosed); macro damages range bounded by Perplexity 2026-04-28 (HRS §480 trebling + course restoration + Hawaii precedents Olowalu/Ohana Best/Waiāhole; bear -60M); insurance carrier accepted defense per 10-K Note 9. Re-evaluation triggers: (1) Q1 2026 10-Q ~May 15 MD&A; (2) Annual Meeting May 27 2026 management commentary; (3) any 8-K disclosure of material litigation outcome; (4) future paid eCourt subscription if user opts in. Applies to BLOCKING items: Honokohau counterclaim/scheduling/discovery/Nov-25-outcome + KRA Annexations docket + Honokohau insurance policy limits.)",
+      "reason": "Hawaii eCourt Kokua direct programmatic access blocked (403/timeout",
+      "since": "",
+      "stage": "C",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 12+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=STARTER; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

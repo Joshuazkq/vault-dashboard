@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "M7T",
+    "version": "2.0.0"
+  },
+  "pm": {
+    "archetype": "E",
+    "archetypeName": "Post-Restructuring Torque",
+    "flex": [
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "(DATA GAP) **Evidence:** SS notes \"Chairman + MD + Director multi-month accumulation Nov 2025 - Mar 2026 (SEDI transaction-level detail outstanding — DATA GAP).\" Three-insider cluster claimed but transaction-level not verified. Cluster size, prices, dates not pulled at express tier. **Score rationa…",
+        "score": 4
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-28_M7T_pattern_match.md",
+    "total": 30,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "+74% PW; 5+ legs; real cash floor; Q3 leading indicators stabilizing",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q4 FY26 update Jul + FY26 results Aug + mechanical ARR organic inflection",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "85% recurring, sticky enterprise; sub-scale vs GE-Intelerad",
+        "score": 3.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash $19.2M (30% of mcap); zero debt; Q3 OCF positive",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 30.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Mach7_H1_FY26_Half_Yearly_Report_2026-02-26.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 6 files in Transcripts/",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 6+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-28",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=BASE; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

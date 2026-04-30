@@ -1,0 +1,425 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "MYR",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "AVERAGE",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Pro forma EBIT -17.2% in 1H FY26 reflects investment-phase compression, not inflection. Synergies A$30M+ + AB margin-mix tailwind + Value Creation Program (A$8M FY26 / A$16M FY27 quantified 1H FY26 call) + post-finance cash flow A$120M H1 FY26 are real forward levers. **Management alignment sub-assessment (updated post bulk-transcript-review):** (1) Structural — net cash A$287M = **NO leverage-driven discipline**; governance constraint strengthens materially when Lew joins Board April 2026 but NOT YET on Board; Premier-linked management extends beyond Board (Josh Malloy ex-Premier head of property); (2) Alignment signals — **mgmt delivery track record 10 of 12 commitments delivered or on-track across 4 reporting events (M3 upgrades 3.0 DATA-GAP → 3.75 ADEQUATE-STRONG)**; Wirth LTI approved 98.72% AGM; FY25 STI 0% paid (McCartney \"disappointed we couldn't pay\" — genuine discipline); Wirth 0 ordinary shares (rights only); **no buyback despite A$287M net cash + A$120M/half FCF at 0.4x EV/EBITDA = single largest capital-allocation misalignment**; Exec-Chair using CEO-exemption to avoid annual re-election. M1-M6 composite 3.46 ADEQUATE. Currently AVERAGE, upgrades to STRONG trigger: (a) pro-forma EBIT visibly inflects FY26 result + (b) Lew on Board with continued buying + (c) buyback authorisation.",
+      "score": 3,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "**Capiq-sourced peer median EV/EBITDA FY27 = 5.38x** (was rule-of-thumb 7x). MYR FY27 3.44x = 36% discount to median unadjusted; 21-56% discount under MYR-specific haircuts -0.5x to -1.5x. **§10b V2 quant-comparison mandate now satisfied**: mismatch crosses 20% threshold under all credible adjustment depths ≤ -1.0x. Revised PW-FV (undiscounted, weights 5/25/50/20 on cat/bear/base/bull at -1.0x adj): **A$0.501/share = +78% vs A$0.282**; time-discounted 10%×1.75yr = **A$0.426 = +51%**. Bear @ -1.0x adj 4.38x × FY27 EBITDA A$420M = **A$0.288 = +2%**. Generalist cross-check A$0.775 = +175% on current-state financials × peer median (no thesis premium). **New evidence (1H FY26 call): post-finance cash flow A$120M/half = 25% mcap in one half; run-rate FCF A$150-200M/yr = 30-40% FCF yield at current price.** Does not reach EXTREME because: (a) catastrophic FV A$0.116 and hard floor A$0.166 both below current A$0.282 = §10b \"floor-case exceeds current\" condition mechanically unmet; (b) revised peer-adjusted base FV A$0.516 is LOWER than prior rule-of-thumb A$0.846, compressing absolute upside. EXTREME trigger: price decline toward ~A$0.17 zone OR material upward revision of bear/catastrophic EBITDA assumption.",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "**Bear case articulated in market's own framing** (\"dying dept store + overpriced AB acquisition + margin pressure + Perpetual selling + governance questions\"). **5 causes enumerated**: scrip dilution (TRANSIENT), FY25 A$213M goodwill impairment (TRANSIENT), H1 FY26 pro forma EBIT compression (TRANSIENT-addressed), Perpetual sell-down (TRANSIENT-RESOLVED 24 Mar 2026), dept-store secular decline (STRUCTURAL-BUT-ADDRESSED via AB diversification + MYER one B2B + brand refresh). **Plus new (bulk-transcript-review): information asymmetry between analyst audience (focused on operations) and AGM audience (where governance/RPT/buyback concerns surface)** — institutional underwriting is pure-execution story, creating 6th explanatory layer. Self-correcting mechanisms: ARITHMETIC (Perpetual cleared), EVIDENTIAL (Lew board April 2026, Mirakl May 2026, MEB live Feb 2026). V3 uncapped — no STRUCTURAL-unaddressed cause.",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "**Sub-archetype A (Balance Sheet as Weapon):** net cash A$287M = 58.9% of mcap; zero drawn debt; A$150M undrawn revolver to May 2028. **Floor is DYNAMIC, not static — H1 FY26 post-finance cash flow A$120M = floor grows A$0.07-0.11/share annually.** 10 failure modes enumerated, all bounded; no unlimited-downside binary. Bear-case FV A$0.317 > current A$0.282 (+12%) — positive absolute return even in thesis disappointment. Catastrophic (5%) modeled A$0.116 (floor minus burn). Not EXTREME because catastrophic FV A$0.116 and hard floor A$0.166 both below current A$0.282 = two of three EXTREME conditions mechanically unmet.",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "4 core conditions: (1) AB synergies ≥A$25M run-rate 1H FY27 [HOLDING partial], (2) pro forma OGP stabilises [HOLDING], (3) no AB goodwill re-impairment >A$100M [HOLDING], (4) no capital allocation misstep [HOLDING]. All observable at FY26 result Sep 2026. Multiple partial-substitution levers (AB mix-effect, MEB relaunch, Mirakl) reduce single-point fragility. Too many for STRONG (2 conditions); fewer than WEAK threshold (5+).",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "6+ independent paths to outperformance: (1) AB value extraction (A$40M synergy + mix-effect), (2) capital return/LBO optionality (A$287M cash + A$150M revolver + A$90.4M franking), (3) MYER one B2B loyalty monetisation (JD Sports + The Dom first external adoption, CBA 5-year renewal), (4) Mirakl marketplace scale (May 2026), (5) merchandise refresh (MEB relaunch Feb-Apr-May 2026 + Topshop/GAP/La Mer/Fenty Beauty/MAC exclusive), (6) operational leverage (NDC Ravenhall A$20M/yr target + Value Creation Program A$16M/yr FY27), plus passive multiple re-rate. At least 6 paths show early evidence materializing. Base-case disappointment still preserves multiple independent paths. Does not reach EXTREME because 3 paths have execution uncertainty or DATA GAPs (NDC slip post-Jan-2027).",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "**Evidence triangle now complete**: (a) 4 audited/reviewed filings processed (FY25 AR PwC, 1H FY26 PwC reviewed, AGM materials, Form 604/605 notices); (b) 4 earnings call transcripts processed via bulk-transcript-review (H1 FY25, FY25, AGM, 1H FY26 — ~52k words / 18-month longitudinal); (c) management credibility track record **10 of 12 commitments delivered or on-track** across 4 consecutive reporting events (only 2 slips, both NDC workstream, quantum unchanged). **DATA GAPs remaining**: peer multiples rule-of-thumb (capiq-data-pull pending — soft-disqualifiable for V2), bank facility covenants, property schedule, AB residual goodwill DCF inputs. Does not reach EXTREME because peer multiples remain rule-of-thumb and structural DATA GAPs persist. V7 = STRONG triggers no caps on V1/V2/V4 (gate condition V7 ≥ AVERAGE met).",
+      "score": 4,
+      "type": null
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "**5 dated catalysts in next 5 months:** Lew joins Board April 2026 (EVIDENTIAL, ~1-2 weeks), interim dividend 21 May 2026 (ARITHMETIC), Mirakl launch May 2026 (EVIDENTIAL), H2 FY26 trading update ~Jul 2026 (EVIDENTIAL), **FY26 result ~Sep 2026 (ARITHMETIC, primary catalyst — synergy run-rate + AB goodwill test + FY27 guidance)**. **New post bulk-review: NDC full implementation slipped to post-Jan-2027 peak** — extends catalyst timeline but doesn't remove it. Mixed ARITHMETIC + EVIDENTIAL. Does not reach EXTREME because most imminent (Lew board) is EVIDENTIAL not ARITHMETIC.",
+      "score": 4,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**CBA bank facility covenants (Jun 2026 maturity)** — `[DATA GAP]` per THESIS RC roadmap. Specific covenant trip-points not publicly disclosed; would affect bear-case if tight. Proxy: monitor net-debt/EBITDA headline and any refinancing announcement.",
+      "**Property schedule — owned-vs-leased split** — `[DATA GAP]`. Myer Bourke St flagship + select metro stores may contain embedded real-estate value (sale-leaseback optionality). Not broken out in FY25 AR. Only partial disclosure via AASB 16 ROU assets A$1,130.7M / lease liabilities A$1,629.9M.",
+      "**Apparel Brands residual goodwill per-brand carrying value** — `[DATA GAP]` post FY25 A$213.3M impairment. Per-brand sensitivity to H2 FY26 / FY27 discount-rate changes is not disclosed. Drives catastrophic-scenario probability.",
+      "**NDC Ravenhall fatality litigation exposure** — `[DATA GAP — partial]`. Referenced in AGM 2025 governance discussion. Quantum, timing, insurance coverage all undisclosed.",
+      "**MYER one B2B commercial terms (JD Sports / The Dom / CBA)** — `[DATA GAP]`. Licence fee / rev share / data-access structure not disclosed. Determines whether this is margin-accretive or margin-neutral volume."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Single-quarter swings noisy; judge on rolling 4-quarter",
+        "current": "AB segment 59.6% OGP vs Myer Retail 35.9% (FY25); blended ~38-39%",
+        "lastUpdated": "2026-04-21",
+        "name": "Quarterly comp sales (Myer Retail vs Apparel Brands split)",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Apparel is seasonally sensitive; H1 generally higher than H2",
+        "current": "FY25 inventory A$556M; markdown % not separately disclosed",
+        "lastUpdated": "2026-04-21",
+        "name": "Inventory turns + clearance markdown depth",
+        "num": 12
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Monthly MHSI release; trend-line proxy for category demand. **+YoY in both relevant categories supports soft-landing thesis (not recession).**",
+        "current": "**Feb 2026 MHSI (replacement series, 6 Apr 2026 release): total household spend +0.3% MoM / +4.6% YoY to A$79.1B. Clothing, footwear & personal accessory +4.93% YoY (A$2.84B → A$2.98B); Department stores + large online +3.70% YoY (A$1.58B → A$1.64B). [FACT]** Series changed — 8501.0 ceased 31 Jul 2025; MHSI is ABS replacement. Next release 5 May 2026.",
+        "lastUpdated": "2026-04-21",
+        "name": "ABS Retail Trade 8501.0 (Department stores + Clothing, footwear & personal accessory retailing)",
+        "num": 13
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "JD Sports + The Dom + CBA 5-yr renewal = B2B adoption signal; watch partner-count growth. **Glamour adds marketing/channel reach not direct B2B redemption**",
+        "current": "5.1M (1H FY26). **Partner expansion 14-15 Apr: News Corp / Glamour Australia signed as MYR multi-year exclusive beauty partner (launch mid-2026, social-first, Gen Z/Millennial target). [FACT]** JD Sports, CBA, The Dom — no new updates in window.",
+        "lastUpdated": "2026-04-21",
+        "name": "MYER one active members (M)",
+        "num": 14
+      }
+    ],
+    "noiseFilter": [
+      "**Daily volume <A$1M moves** — MYR float is thin (1,728M shares, A$493M mcap); intra-day 5-10% moves on sub-A$1M volume = retail noise, not institutional signal. Only volume >A$5M signals institutional repositioning.",
+      "**Single-month comp sales swings** — Dept-store / apparel comps are weather-, event-, and Easter/Mother's-Day-shift sensitive. Require 2+ consecutive halves of deterioration before treating as structural.",
+      "**Analyst PT moves** — Rule 17: analyst price targets are market-output data. Do NOT anchor FV to them. Consensus PT A$0.77 (Canaccord A$0.79) is tracked as \"market-state context\" only, NEVER as an upward-confidence adjustment.",
+      "**Single-director single-day trades** — Only cluster signals (3+ directors within 30 days) or Lew Group Form 604/605 moves carry thesis weight. Isolated A$10-50k director trades are PR noise.",
+      "**Short-term ASX queries on disclosure** — ASX can issue queries on any disclosure. Response within 10 business days = operational noise. Only unresolved / escalated queries touching financial-statements integrity are structural.",
+      "**Sass&bide / Marcs / David Lawrence individual-brand margin swings** — These three brands are ~A$10M synergy target combined; individual brand performance is noise vs the aggregated A$40M total synergy pool. Only aggregate tracking matters.",
+      "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6)"
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/MYR/INDICATORS.md",
+    "staleDays": 10,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "Target A$30M AB + A$10M sass&bide-Marcs-DL = A$40M total (FY26 target; no disclosed run-rate at 1H FY26)",
+        "direction": "↕ Pending 1H-FY27 print",
+        "lastUpdated": "2026-04-21",
+        "name": "Apparel Brands synergy run-rate (A$M annualised, incl. sass&bide / Marcs / David Lawrence)",
+        "num": 1,
+        "source": "MYR FY25 AR + 1H FY26 results (Source: MYR 1H FY26 Appendix 4D, 24 Mar 2026)",
+        "threshold": "<A$25M at 1H FY27 = STARTER gate fails; <A$15M 2 halves = thesis break (EXIT)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "38.9% (1H FY26 pro-forma, flat vs PCP)",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-21",
+        "name": "Pro-forma OGP margin (%)",
+        "num": 2,
+        "source": "MYR 1H FY26 Results Announcement p.1-2",
+        "threshold": "-50bps/half cumulative = breach; sustained trend to <38.0% = bear case activating"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Myer Retail \"broadly in line with 1H FY23 post-COVID peak\" (1H FY26); AB comps not separately disclosed",
+        "direction": "↕ Awaiting H2 FY26 trading update ~Jul 2026",
+        "lastUpdated": "2026-04-21",
+        "name": "Myer Retail + Apparel Brands comparable sales (YoY %)",
+        "num": 3,
+        "source": "MYR 1H FY26 call, 24 Mar 2026",
+        "threshold": "H2 FY26 -5% or worse YoY = EXIT trigger (per THESIS Exit criteria)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "A$287M (31 Dec 2025) = A$0.166/share = 58.9% of 2026-04-21 price",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-21",
+        "name": "Net cash balance (A$M)",
+        "num": 4,
+        "source": "MYR 1H FY26 Balance Sheet, 24 Mar 2026",
+        "threshold": "Cash deployed on new acquisition >A$100M with no strategic-rationale disclosure = EXIT trigger"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP] residual post FY25 A$213.3M impairment — not separately broken out",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "Apparel Brands residual goodwill carrying value (A$M)",
+        "num": 5,
+        "source": "MYR FY25 AR Note C2",
+        "threshold": "Further impairment >A$100M in any half = EXIT"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "26.77% at 1 July 2025 (Form 603/604); creep provisions allow +3%/6mo. **[DATA GAP] No new Form 603/604/605 in 14-21 Apr window; no ASX confirmation of formal Lew board commencement sighted.**",
+        "direction": "↕ Watch (creep window open; **board-join confirmation overdue vs AGM target Apr 2026**)",
+        "lastUpdated": "2026-04-21",
+        "name": "Lew Group (Premier Investments + associates) ownership (% of issued capital)",
+        "num": 6,
+        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B8) + ASX Form 604 / MYR FY25 AR Directors' Report",
+        "threshold": "Net seller during 2026 = REDUCE to 2-3%; any on-market buy post-Apr-2026 board join = up-size gate to 6-7%"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP — first print pending]",
+        "direction": "—",
+        "lastUpdated": "2026-04-21",
+        "name": "ASX consumer discretionary credit spread / iTraxx Australia Sub-IG",
+        "num": 7,
+        "source": "Bloomberg/CapIQ/Markit (Rule 10 §3.3.3 standard)",
+        "threshold": ">50bps widening in 30d = macro-stress signal (Rule 10 standard)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**5.39% (13 Apr 2026) — up ~0.95pp from ~4.44% at 31 Mar 2026 (~30d). [FACT]**",
+        "direction": "↑ **BREACH — >5% absolute threshold crossed; 30d delta +0.95pp (<2x, partial)**",
+        "lastUpdated": "2026-04-21",
+        "name": "Short interest (% of float)",
+        "num": 8,
+        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B6, ShortMan.com.au / ASIC, 13 Apr 2026; Fintel at 31 Mar 2026)",
+        "threshold": ">5% absolute or >2x increase in 30d (Rule 10 standard)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "MEB relaunch Feb 2026 delivered; **MEB redesign of 5 owned labels (Blaq, Basque, Grab, There After, Regatta) underway per Ragtrader 9 Apr 2026 [FACT]**; Mirakl May 2026 confirmed live w/ Samsung partner [FACT]; transitional services in-housed (disclosed 1H FY26)",
+        "direction": "→ On track (Mirakl live date ~May 2026, confirmed in scan window)",
+        "lastUpdated": "2026-04-21",
+        "name": "Apparel Brands integration execution milestones (MEB relaunch / Mirakl / transitional services in-housing)",
+        "num": 9,
+        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B3; Ragtrader 9 Apr 2026; Michael West Media HY26 briefing 23 Mar 2026)",
+        "threshold": "Mirakl launch slippage >Q4 CY2026 OR MEB abandoned = integration execution failure signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "27.9% (1H FY26 pro-forma); FY26 guide ~29%; base-case target 28.5% FY27",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "CODB ratio (% of revenue)",
+        "num": 10,
+        "source": "MYR 1H FY26 Results p.1-2",
+        "threshold": "Sustained >30% for 2+ halves = operating leverage thesis broken"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — baseline",
+        "assessment": "**Baseline established** concurrent with INVESTMENT 5% STARTER entry @ A$0.282. RC 4/5 gate cleared via 2026-04-20 bulk-transcript-review. Dashboard values sourced from MYR FY25 AR (PwC audited, 9 Nov 2025) + 1H FY26 Appendix 4D (PwC reviewed, 24 Mar 2026) + AGM 2025 address (11 Dec 2025).",
+        "date": "2026-04-21",
+        "indicator": "ALL",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "**CHANGELOG eval required** — see §MYR CHANGELOG 2026-04-21 (new file). Not yet thesis-breaking; flag as \"market stress\" signal rather than \"thesis broken\" signal. Continue to monitor weekly.",
+        "assessment": "**STRUCTURAL BREACH — absolute >5% threshold crossed.** 30d delta (+0.95pp) is partial (<2x increase). **[INFERENCE]** Short build coincides with 52-wk low A$0.28 (13 Apr). Plausible drivers: (a) Perpetual substantial-holder exit 24 Mar 2026 creating short-term selling pressure + shorts piggy-backing; (b) AB H2 margin / Lew board-timing anxiety; (c) MYR-specific thesis contest. **Not yet a 2x jump** — 30d change requires monitoring. Note Rule §10 threshold is OR — absolute >5% alone triggers evaluation.",
+        "date": "2026-04-21",
+        "indicator": "#8 Short Interest",
+        "new": "**5.39% (13 Apr 2026); up ~0.95pp from ~4.44% 31 Mar 2026**",
+        "old": "[DATA GAP] baseline"
+      },
+      {
+        "action": "No action — within thesis",
+        "assessment": "Confirmed on track. No breach — this is positive evidence for integration execution.",
+        "date": "2026-04-21",
+        "indicator": "#9 AB Integration",
+        "new": "\"MEB redesign 5 owned labels (Blaq/Basque/Grab/There After/Regatta) underway; Mirakl May 2026 confirmed live w/ Samsung partner\"",
+        "old": "\"MEB relaunch Feb 2026 delivered\""
+      },
+      {
+        "action": "No action",
+        "assessment": "Cyclical — soft-landing signal supports base case (neither structural tailwind nor deterioration).",
+        "date": "2026-04-21",
+        "indicator": "#13 MHSI proxy (was 8501.0)",
+        "new": "Feb 2026 MHSI: Clothing/footwear +4.93% YoY; Dept stores + large online +3.70% YoY",
+        "old": "[DATA GAP]"
+      },
+      {
+        "action": "No action — within thesis",
+        "assessment": "Marketing/channel expansion; not a direct B2B loyalty-redemption partner but supports MYER one flywheel thesis. Modestly positive.",
+        "date": "2026-04-21",
+        "indicator": "#14 MYER one partners",
+        "new": "\"+News Corp / Glamour Australia multi-year exclusive beauty (mid-2026 launch, Gen Z/Millennial, social-first)\"",
+        "old": "\"5.1M, JD Sports+CBA+The Dom\""
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "Mixed A+C",
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change",
+        "rationale": "**Evidence:** - `[FACT]` Olivia Wirth appointed Executive Chair & CEO of Myer Group (prior: CEO Qantas Loyalty) (Source: businessnewsaustralia, thenightly.com.au). In Year 1 of 3–5-year transformation (2025-09 AGM commentary). - `[FACT]` Wirth has overhauled executive team (\"to become leading retai…",
+        "score": 3.5
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "**Evidence:** - `[FACT]` Solomon Lew's personal stake ≈30% (up from 26.8% at deal completion Jan 2025) (Source: ragtrader, channelnews, 2025-10). - `[FACT]` On-market purchases: 51.7M shares in Oct 2025 + ~35M shares subsequently (Source: channelnews \"Solomon Lew Boosts Myer Stake With 35M Shares\",…",
+        "score": 5
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage / Structural Neglect",
+        "rationale": "**Evidence:** - `[FACT]` ~5 analysts publishing (Canaccord Genuity, Barrenjoey, Bell Potter, Morgan Stanley, 1 other) (Source: fool.com.au 2025-12, investing.com consensus estimates). - `[FACT]` Canaccord PT A$0.79 (as of 2025-12), consensus avg A$0.77, range A$0.60–0.86 (noted for market-state con…",
+        "score": 2
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-20",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-20_MYR_pattern_match.md",
+    "total": 27,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "**Parts A–C (valuation range, current price, gap):** - `[FACT]` Current price A$0.282 (20 Apr 2026); mcap A$493.26M; net cash A$287M (H1 FY26); therefore EV ≈ A$206M (Source: stockanalysis.com 2026-04-20; investing.com H1 FY26 slides). - `[FACT]` Revenue ttm A$3.42B (+24% YoY from Apparel Brands fu…",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "**Evidence:** - `[FACT]` FY26 full-year result (for 52 weeks ended 26 Jul 2026) expected ~Sep 2026 — dated calendar catalyst with read on: (a) synergy delivery vs A$30M target; (b) H2 FY26 margin trajectory post-transformation investments; (c) net cash trajectory. - `[FACT]` H1 FY26 already printed…",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "**Evidence:** - `[FACT]` Myer holds ~15% share of Australian department-store market; David Jones ~10%; discount competitors Wesfarmers (~50%) and Woolworths (~25%) dominate mass market (Source: IBISWorld, PitchGrade 2025). - `[INFERENCE - STRONG]` Department store is a structurally pressured forma…",
+        "score": 2.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "**Evidence:** - `[FACT]` **Net cash A$287.0M** at end H1 FY26 (24 Jan 2026), up A$118.9M from FY25's A$168.1M (Source: investing.com H1 FY26 summary, 2026-03). - `[FACT]` Ratio: net cash / mcap = A$287M / A$493M = **58.2% of mcap is net cash**. - `[INFERENCE - STRONG]` On a A$487M mcap the enterpri…",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR 32.8% from situation-screen 2026-04-30 (RC v2 backfill)",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 27.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Myer_Holdings_Limited-Half_Yearly_Report(Mar-23-2026).md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 4 files in Transcripts/; 4 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-20",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

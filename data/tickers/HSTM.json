@@ -1,0 +1,281 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "HSTM",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**hStream AI platform development timeline** — No public roadmap. This is the offensive AI thesis. If it ships with measurable features, HSTM re-rates from compliance vendor to AI-enabled platform. If cancelled, growth ceiling is 5-7% blended. Monitor via: product announcements, earnings call commentary.",
+      "**Epic credentialing module (EpicOps) — CONFIRMED 2027 TARGET.** Epic announced credentialing module within EpicOps ERP suite at 2025 UGM. Source: LinkedIn posts by UGM attendees (not official Epic press release). Same source said Epic \"will NOT be the silver bullet.\" Mitigants: HSTM has 25+ years of primary source verification, HITRUST r2, evidence-based privileging; Epic implementation 12-36 months → production 2029-2030 earliest; Epic covers ~28% inpatient beds; KLAS Best in KLAS 2025 Credentialing = MD-Staff (ASM), not Epic. **This is a long-term structural watch item, not a 2026 risk.** Monitor via: Epic product announcements, KLAS credentialing reports, HSTM management commentary on Q1 2026 call.",
+      "**HLX revenue contribution** — Acquired business, limited separate disclosure. If HLX is growing faster than legacy, it supports the platform expansion thesis. Monitor via: segment commentary on earnings calls.",
+      "**OBBBA / Medicaid policy impact** — Potential changes to Medicaid funding could affect hospital training budgets. Not quantified. Monitor via: CMS policy announcements, state-level Medicaid enrollment data."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Severe recession could delay non-mandated modules (ShiftWizard, analytics). Core compliance training protected",
+        "current": "Stable; healthcare compliance is non-discretionary (Joint Commission, CMS mandate)",
+        "lastUpdated": "2026-03-28",
+        "name": "Hospital IT budget environment",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Mechanical revenue uplift as escalators roll through contract base. Slow but predictable",
+        "current": "3-year rollout confirmed in 10-K FY2025 filing language",
+        "lastUpdated": "2026-03-28",
+        "name": "Price escalator compounding",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Expected to become immaterial by FY2026-2027. Don't react to legacy-driven blended deceleration",
+        "current": "Legacy crossover completed; legacy drag diminishing each quarter",
+        "lastUpdated": "2026-03-28",
+        "name": "Legacy product drag",
+        "num": 9
+      }
+    ],
+    "noiseFilter": [
+      "**Blended revenue growth rate (4.6%)** — Masks CredentialStream +21% and ShiftWizard +31%. Legacy drag is mechanical and diminishing. Always decompose by product line.",
+      "**Frist family governance criticism** — CEO is family founder. Known factor. Only matters if governance blocks value-maximizing decisions. Monitor for board independence trends.",
+      "**Small-cap liquidity events** — $630M mcap with 4 analysts = thin float. 5-10% daily moves on low volume are noise. Only volume spikes signal institutional interest.",
+      "**Q4 earnings beat magnitude** — Q4 beat +12.5% is positive but partially seasonal. Judge earnings quality on annual trends."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/HSTM/INDICATORS.md",
+    "staleDays": 8,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "+21% (FY2025); credentialing system of record for millions of caregivers",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "CredentialStream growth (YoY)",
+        "num": 1,
+        "source": "HSTM 10-K, earnings calls",
+        "threshold": "<10% for 2+ quarters = growth engine stalling; >20% = structural demand confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+31% (FY2025); hospital scheduling demand",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "ShiftWizard growth (YoY)",
+        "num": 2,
+        "source": "HSTM earnings calls",
+        "threshold": "<15% = normalizing; >25% = sustained structural shift in workforce management"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "4.63% (FY2025 reported); FY2026 guidance raised to $323-330M (+8%)",
+        "direction": "↑ Accelerating (guide raise)",
+        "lastUpdated": "2026-03-28",
+        "name": "Blended revenue growth",
+        "num": 3,
+        "source": "HSTM 10-K",
+        "threshold": "<3% for 2+ quarters = stagnation; >7% = high-growth products dominating mix"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Aspirational — no shipping product yet",
+        "direction": "→ Pending",
+        "lastUpdated": "2026-03-28",
+        "name": "hStream AI platform status",
+        "num": 4,
+        "source": "HSTM product announcements",
+        "threshold": "Platform ships with measurable features = bull catalyst; cancelled/indefinitely delayed = growth ceiling confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+15% CAGR vs 4% revenue CAGR — bookings accelerating ahead of recognized revenue",
+        "direction": "↑ Positive (leading indicator)",
+        "lastUpdated": "2026-03-28",
+        "name": "Deferred contract costs growth",
+        "num": 5,
+        "source": "HSTM 10-K",
+        "threshold": "Deceleration to <revenue growth = forward demand slowing; sustained premium = pipeline healthy"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "4 analysts on $630M business with regulatory moat",
+        "direction": "Stable (extreme undercoverage)",
+        "lastUpdated": "2026-03-28",
+        "name": "Analyst coverage count",
+        "num": 6,
+        "source": "Bloomberg",
+        "threshold": "Any new initiation = re-rating catalyst; loss to <3 = liquidity risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+8.2% (Q4 2025); the TRUE growth rate of the business ex legacy drag",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-29",
+        "name": "Core subscription growth (ex-legacy)",
+        "num": 7,
+        "source": "Q4 2025 earnings call",
+        "threshold": "<5% for 2+ quarters = underlying deceleration; >8% = thesis validated that blended 4% is reporting artifact"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**Early 2026 release confirmed** (web-search 2026-04-16) — timeline accelerated ~1 year vs prior \"2027 target\" framing. Source: confirmed UGM 2025 announcement via post-event attendee commentary; KLAS 2025 Best-in-KLAS Credentialing still MD-Staff (ASM), not Epic. Implementation 12-36 months → customer production ramp 2027-2028 even for committed adopters. Epic covers ~28% of inpatient beds, not full market.",
+        "direction": "⚠ Watch (near-term — Q1 2026 call on 2026-04-27 is decisive disclosure window)",
+        "lastUpdated": "2026-04-23",
+        "name": "Epic EpicOps credentialing module",
+        "num": 8,
+        "source": "Epic product announcements, KLAS reports, QUESTIONS.md Q4 (Apr 16 web-search validation)",
+        "threshold": "First named HSTM-customer Epic migration = downgrade F1/U3; management Q1 2026 silence on Apr 27 call = escalate to RED FLAG; cancelled/delayed = threat removed"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — monitor next quarterly earnings for product mix confirmation",
+        "assessment": "All indicators positive. CredentialStream +21%, ShiftWizard +31% hidden by 4.6% blended. Deferred costs growing 15% CAGR = bookings pipeline strong. 4 analysts = extreme coverage gap. hStream AI is the key unknown.",
+        "date": "2026-03-28",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_HSTM_pattern_match.md",
+    "total": 31.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "2x P/S on ~96% subscription healthcare SaaS with regulatory moat; deferred commissions 15% CAGR vs 4% revenue; 40-65% upside",
+        "score": 3.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Price escalators confirmed in 10-K; deferred commissions leading indicator; RPO $691M with conversion schedule; no hard-dated catalyst",
+        "score": 3.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "System of record for 4.8M healthcare workers; regulatory mandate; G&A leverage 630bps; zero debt 7yr+; but only 4.3% organic growth",
+        "score": 3.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Zero debt across ALL filings (7yr+), $57M cash, $63.3M OCF, $50M revolver, audited by E&Y since 1998",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: HealthStream, Inc._10-K_2025-12-31_English_256007959_1.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 8 files in Transcripts/",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 5 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

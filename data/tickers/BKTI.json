@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "BKTI",
+    "version": "2.0.0"
+  },
+  "pm": {
+    "archetype": "A",
+    "archetypeName": "Turnaround + Hidden Franchise",
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change / Quality",
+        "rationale": "Suzuki 8/8 beats, Vision 2025 achieved, $44M→$86M revenue, debt elimination; one-person risk is deduction.",
+        "score": 4.5
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "CEO net +9,297 shares, but modest vs comp; 3,000-share sale at $70 unverified; no cluster-at-lows.",
+        "score": 3
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage / Structural Neglect",
+        "rationale": "(down 0.5 from 5) **Evidence:** - [FACT] 1 analyst covering (Lake Street, Schmidt, PT $74). [FACT] Institutional ownership has risen to 55% (top: AIGH 7.5%, Fundamental Global 6.1%, Askeladden 5.6%, Bard 4.0%, Vanguard 3.9%). Passive Vanguard presence suggests partial index inclusion. - [FACT] NYSE…",
+        "score": 4.5
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-17",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_BKTI_pattern_match.md",
+    "total": 28,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "(was 3.5) **Evidence:** - **Parts A-C (Mispricing Size):** PWV $86.25 vs current ~$95.28 = **-9% downside to PWV**. Base case alone ($100 FV, 40% prob) = +5% upside. Prob-weighted upside is now NEGATIVE. The serial-beat optionality remains (if FY2026 adj EPS prints ~$5.00-5.30 vs $3.55 guide, impli…",
+        "score": 3
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "May 12 Q1 earnings dated forcing function; BKR 9500 FCC H2 2026 binary; 8-of-8 beat pattern verified; 1-analyst expansion path.",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "90% wildland LMR (claimed, not independently verified); 48.8% GM; zero-debt; ROE 36%; single-product + tariff margin dependency are deductions.",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "$22.8M cash, zero debt, $18.4M FCF, zero covenant exposure. Fortress (no torque).",
+        "score": 5
+      }
+    ]
+  }
+}

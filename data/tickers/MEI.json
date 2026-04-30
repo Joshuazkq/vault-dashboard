@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "MEI",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "WEAK",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Pre-revenue explorer with no earnings/revenue. First production 2028+. Project milestones advancing (EL, PFS, DFS awarded, pilot confirmed) but no fundamental inflection yet. Management alignment moderate — Gale comp 81% equity-linked, insider ownership ~3.2%, no structural constraints on capital allocation. (Source: Annual Report Mar 2026, PFS Jul 2025)",
+      "score": 2,
+      "type": null
+    },
+    "V2": {
+      "level": "AVERAGE",
+      "name": "Valuation Mismatch",
+      "rationale": "~50-55% discount to interpolated PFS NPV8 (~A$500M mkt cap vs ~A$1.05B at current NdPr). But standard PFS-stage discounts are 40-60% — some of this is rational, not mispricing. Market has partially repriced (+90% 1yr). 2-3 analysts covering. Partial mismatch, not full. (Source: PFS 4-scenario data, presentations Feb 2026)",
+      "score": 3,
+      "type": null
+    },
+    "V3": {
+      "level": "AVERAGE",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "Specific reasons: thin coverage (2-3 analysts), pre-revenue exclusion from fund mandates, Brazil jurisdiction discount, serial dilution overhang. Coverage gap and pre-revenue exclusion are demonstrably temporary (resolve with DFS/production). Brazil discount and dilution pattern are partially structural. Mix of temporary + structural = 3. (Source: NOTES.md, Risk Assessment)",
+      "score": 3,
+      "type": null
+    },
+    "V4": {
+      "level": "WEAK",
+      "name": "Downside Protection",
+      "rationale": "No hard asset floor — net assets A$53.9M vs ~A$500M mkt cap (<11%). Stock demonstrated -79% peak-to-trough volatility. Multiple failure modes (DFS disappoints, permitting delay, NdPr collapse, funding gap, IXR pattern). Pre-revenue explorers have inherently weak downside protection. (Source: Annual Report Mar 2026, Risk Assessment)",
+      "score": 2,
+      "type": null
+    },
+    "V5": {
+      "level": "WEAK",
+      "name": "Thesis Simplicity",
+      "rationale": "Five conditions required: (1) DFS confirms economics — UNCONFIRMED; (2) LI granted — UNCONFIRMED (applied); (3) Project financing secured — UNCONFIRMED (non-binding LOIs only); (4) Binding offtake — UNCONFIRMED; (5) NdPr prices supportive — HOLDING at ~$115-120/kg. All must eventually be met.",
+      "score": 2,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "Five independent paths: (1) NdPr price spike (each $10/kg = US$145-185M NPV); (2) HREE premium expansion (Dy/Tb supply gap); (3) MagBras/BNDES strategic partnership (VP Alckmin engagement); (4) Resource expansion (1.5Bt, only 7% in reserves); (5) Downstream integration (MTM separation demo). Base case is conservative relative to optionality.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "AVERAGE",
+      "name": "Evidence Quality",
+      "rationale": "Strong factual base for what exists: audited financials, published PFS, pilot plant confirmed, permitting verified from 14 quarterlies + annual report. But thesis critically depends on prospective events (DFS, financing, offtake) that are genuinely uncertain. Mix of strong facts + inferential forward assumptions. (Source: Annual Report, PFS, ASX announcements)",
+      "score": 3,
+      "type": null
+    },
+    "V8": {
+      "level": "AVERAGE",
+      "name": "Catalyst Clarity",
+      "rationale": "Two near-term dated catalysts: DFS mid-2026 (Ausenco, in progress) and LI target Jun 2026 (submitted Mar 9). Beyond those, timing is uncertain: offtake conversion unknown, financing post-DFS with no date, production 2028+. Know WHAT should reprice; only roughly know WHEN for nearest two. (Source: ASX announcements, Quarterly Dec 2025)",
+      "score": 3,
+      "type": null
+    }
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 25.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Meteoric_Resources_NL_-_Form_Annual_Report(Mar-26-2026).md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "no Transcripts/ folder, zero transcript rows, no inline citation",
+      "reason": "no-transcripts-available",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation (Bull/Base/Bear PW-FV)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-05",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

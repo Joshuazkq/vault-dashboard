@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "SGE",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**Intuit QuickBooks upmarket penetration** — 3M+ customers on AI; multi-year Anthropic partnership. If Intuit's AI genuinely closes the gap on Intacct's mid-market ERP capabilities, pricing power erodes. No direct tracking possible. Proxy: Intacct win rate commentary on earnings calls.",
+      "**Finance Intelligence Agent monetization** — Nov 2025 launch, but no disclosure on adoption or pricing. This is the next pricing lever after Copilot. Monitor via: FY2026 interim results commentary.",
+      "**CEO succession planning** — Steve Hare is 64. No public succession plan. Mishandled transition could impact execution. Monitor via: annual report governance section.",
+      "**SDMO (manufacturing/distribution) TAM capture** — Largest US vertical TAM for Intacct. Early innings. No public metrics on SDMO-specific growth. Monitor via: earnings call product commentary."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "SGE customer base is 6M+ SMBs. Net adds driven by macro conditions. Countercyclical argument: compliance needs persist",
+        "current": "Monitor — UK GDP flat Q1 2026; oil-driven stagflation risk",
+        "lastUpdated": "2026-03-28",
+        "name": "SMB formation/failure rates (UK/EU)",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Intacct US revenue in USD; group reports in GBP. Translation effects",
+        "current": "~1.26",
+        "lastUpdated": "2026-03-28",
+        "name": "GBP/USD exchange rate",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Tracks management confidence. Pace should be sustainable at 60-70% of FCF",
+        "current": "£1.6B returned FY22-25 (~20% of mcap); £300M FY26 buyback; £498M FCF",
+        "lastUpdated": "2026-03-28",
+        "name": "Capital returns",
+        "num": 9
+      }
+    ],
+    "noiseFilter": [
+      "**Legacy desktop revenue decline** — Expected as cloud transition progresses. Only matters if cloud growth doesn't offset.",
+      "**Sage 50 churn headlines** — Sage 50 is mature product. Churn is recycled into Intacct/cloud. Net effect on group revenue is managed.",
+      "**Quarterly ARR fluctuations <3%** — Seasonal patterns in SMB buying. Judge on semi-annual trends.",
+      "**Intuit competitive announcements** — Intuit talks about moving upmarket every year. Actual Intacct displacement data is what matters, not press releases."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/SGE/INDICATORS.md",
+    "staleDays": 34,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "+23% (FY2025); international ~50% growth; US ~$600M ARR",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "Intacct cloud-native growth (YoY)",
+        "num": 1,
+        "source": "SGE annual/interim results",
+        "threshold": "<15% = law of large numbers slowing; <10% = structural deceleration; >25% = bull case"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "9-10% (FY2025)",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "Organic revenue growth",
+        "num": 2,
+        "source": "SGE annual results",
+        "threshold": "<7% for 2+ halves = growth engine weakening; >12% = re-acceleration"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~35% of total ARR (£2.6B total)",
+        "direction": "↑ Improving",
+        "lastUpdated": "2026-03-28",
+        "name": "Cloud-native ARR mix",
+        "num": 3,
+        "source": "SGE annual results",
+        "threshold": "<30% = cloud transition stalling; >45% = operating leverage inflection"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "23.9% (FY2025, up from 17.7% FY2021)",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "Operating margin trajectory",
+        "num": 4,
+        "source": "SGE annual results",
+        "threshold": "<22% = margin regression; >27% = medium-term target in sight (27-30%)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+5.5% pricing (FY2025), \"particularly helped by AI and Copilot in UK market\"",
+        "direction": "↑ Positive — early evidence",
+        "lastUpdated": "2026-03-28",
+        "name": "AI pricing uplift",
+        "num": 5,
+        "source": "SGE earnings calls",
+        "threshold": "Sustained >4% = AI monetization confirmed; <2% = commoditization risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "101% (FY2025)",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "Net revenue retention (NRR)",
+        "num": 6,
+        "source": "SGE annual results",
+        "threshold": "<100% for 2+ periods = customer quality concern; >105% = expansion flywheel working"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — research deepening needed",
+        "assessment": "All indicators on track. Intacct +23%, operating margin 23.9% (6yr trend up), AI pricing +5.5%. RC 0/5 — needs filing + transcript review.",
+        "date": "2026-03-28",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_SGE_pattern_match.md",
+    "total": 31.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "40% off ATH; 13x EV/EBITDA; 45-65% bull upside; but well-covered (19 analysts)",
+        "score": 3.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Quarterly earnings mechanically demonstrate thesis; SP-2 pattern",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "93% GM, 97% recurring, 101% NRR, 110% FCF conversion, 2% SBC",
+        "score": 4.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Net debt 1.7x EBITDA; FCF £487M; £300M buyback; comfortable",
+        "score": 4
+      }
+    ]
+  }
+}

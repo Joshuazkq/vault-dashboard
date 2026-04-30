@@ -1,0 +1,260 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "PAYC",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**IWant revenue impact quantification** — 100% of clients have access but no revenue disclosure. Is it a retention tool (free), a pricing tool (embedded in price increases), or a revenue driver (separate SKU)? This is the single biggest unknown. Monitor via: earnings call language on AI monetization.",
+      "**Trust Bank impact on client economics** — Paycom operates a Trust Bank for client funds. Regulatory and interest rate sensitivity. Limited disclosure on economics. Monitor via: 10-K banking subsidiary disclosures.",
+      "**Mid-market TAM saturation** — 50-5,000 employee segment. Limited data on total addressable accounts vs penetrated. If saturation is approaching, growth ceiling is lower. Proxy: new client adds trend.",
+      "**CapEx trajectory** — $275M capital deployment. No clear breakdown between maintenance and growth. If growth CapEx decelerates, it signals management sees fewer opportunities. Monitor via: 10-K property/equipment disclosures."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Separates at ~$100M annual. Decline is cyclical, not structural. Will stabilize when rate cycle ends",
+        "current": "Declining as rates fall; masks underlying recurring revenue growth",
+        "lastUpdated": "2026-03-28",
+        "name": "Float income",
+        "num": 6
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Recession = fewer employees = lower per-employee rev. BUT payroll is legally mandated = volume floor. Counter-cyclical angle: IWant replaces HR headcount",
+        "current": "Paycom serves 50-5,000 employee companies",
+        "lastUpdated": "2026-03-28",
+        "name": "Mid-market employment trends",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "One-time benefit to margins; don't extrapolate sustained margin expansion from restructuring alone",
+        "current": "Restructuring flowing to margins starting FY2026",
+        "lastUpdated": "2026-03-28",
+        "name": "~540 employee restructuring impact",
+        "num": 8
+      }
+    ],
+    "noiseFilter": [
+      "**Headline revenue growth rate (6-7%)** — Masks recurring ex-float growing ~10%. Float income decline is cyclical, not structural. Always decompose.",
+      "**Chad Richison compensation headlines** — CEO compensation is controversial but has been for years. Not a new thesis risk. $117.5M SBC reversal in FY2024 was one-time and distorted margins.",
+      "**Analyst PT revisions** — 22 analysts cover PAYC. Consensus view is well-formed. Our edge is IWant impact assessment, not consensus tracking.",
+      "**Single-quarter retention dips** — 91% retention can fluctuate ±1% quarterly. Only sustained 2+ quarter trends matter.",
+      "**Share price moves on rate expectations** — Float income sensitivity to rates is known. Stock moves on Fed commentary are mechanical, not fundamental."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/PAYC/INDICATORS.md",
+    "staleDays": 25,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**+10.3% (FY2025 actual).** Recurring rev $1,938.7M (+10.3%). Total rev $2,051.7M (+9%). Q4: recurring +11.2%. Headline depressed by float income ($103M guided FY2026). 2026 guide: recurring 7-8% (below consensus $2.228B). Stock -7.9% on below-consensus guide.",
+        "direction": "↑ **Confirmed at 10%+** — thesis intact",
+        "lastUpdated": "2026-04-06",
+        "name": "Recurring revenue growth ex-float (YoY)",
+        "num": 1,
+        "source": "PAYC Q4 2025 earnings (Feb 11, 2026)",
+        "threshold": "<5% for 2+ quarters = structural deceleration confirmed; >10% = re-acceleration thesis intact"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**91% (FY2025 confirmed).** Improving from 90%. IWant productivity gains translating to stickiness per management. Largest new customer adds since 2022.",
+        "direction": "↑ Improving (IWant driving stickiness)",
+        "lastUpdated": "2026-04-06",
+        "name": "Client retention rate",
+        "num": 2,
+        "source": "PAYC Q4 2025 earnings",
+        "threshold": "<88% = competitive loss; >93% = fortress moat confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "100% client base has access. **80% usage growth in Jan 2026** vs Q4 2025 baseline. Forrester study: composite orgs achieve **431% 3-year ROI**, 600 manager hrs/yr saved, 3,600 total employee hrs/yr saved. H3 HR Advisors Signals Award (2026). Globee Award 2025 (AI in HR Mgmt). No revenue quantification yet.",
+        "direction": "↑ **Adoption accelerating** — 80% usage growth is first quantitative signal; monetization still unknown",
+        "lastUpdated": "2026-04-06",
+        "name": "IWant AI adoption / traction",
+        "num": 3,
+        "source": "PAYC Q4 2025 earnings call; Forrester Consulting; H3 HR Advisors",
+        "threshold": "Measurable revenue contribution disclosed = bull trigger; management declares failed = bear case"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Management guides conservatively (raised 3x each of last 2 years)",
+        "direction": "→ Stable (awaiting FY2026 guidance updates)",
+        "lastUpdated": "2026-03-28",
+        "name": "Revenue guidance trajectory",
+        "num": 4,
+        "source": "PAYC earnings calls",
+        "threshold": "Guidance raise = thesis confirmation; guidance cut = structural concern"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~43% adj EBITDA; 95% recurring revenue; zero debt",
+        "direction": "→ Stable (fortress)",
+        "lastUpdated": "2026-03-28",
+        "name": "EBITDA margin stability",
+        "num": 5,
+        "source": "PAYC 10-K",
+        "threshold": "<38% = cost structure concern; >45% = operating leverage expanding"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — awaiting FY2026 guidance updates",
+        "assessment": "All indicators stable. Headline growth deceptively low (6-7%) due to float decline; recurring ex-float ~10%. IWant has 100% adoption but no monetization data. 22 analysts means no discovery edge — variant must be about magnitude of IWant impact.",
+        "date": "2026-03-28",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No structural breach. IWant 80% growth is material positive — adoption confirmed, monetization pathway strengthening. Monitor Q1 2026 (~May) for IWant revenue contribution disclosure.",
+        "assessment": "Recurring ex-float ~10% confirmed. Retention 91% improving. EBITDA 43-44% stable. **IWant: 80% usage growth in Jan 2026** — first quantitative adoption signal. Forrester: 431% 3-yr ROI. 2026 guidance below consensus but EBITDA in-line — revenue miss is float-driven.",
+        "date": "2026-04-06",
+        "indicator": "FY2025 / Q4 2025 results",
+        "new": "Q4: Rev $544.3M (+10.2%), recurring $517.1M (+11.2%), EBITDA 43.4%. FY2025: Rev $2,051.7M (+9%), recurring $1,938.7M (+10.3%), retention 91%. 2026 guide: $2.175-2.195B (below $2.228B consensus), recurring 7-8%, float ~$103M, EBITDA ~44%. Stock -7.9% on below-consensus guide.",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_PAYC_pattern_match.md",
+    "total": 30.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "6.6x fwd EBITDA on zero-debt 43%-margin SaaS; 18-63% upside range; FY2024 margin inflated by $117.5M SBC reversal",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Conservative guidance pattern (raised 3x in each of last 2 years), IWant adoption +80%, $1.22B buyback, restructuring → margins",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Legally mandated payroll, single-database, 95% recurring, 43% EBITDA, 22% CAGR FY19-24; no patents, gross margin compressing",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Zero debt (filed across 18 quarterly/annual reports), $375M cash, $404M FCF, $1.0B revolver, $1.22B buyback auth",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "run pattern-match",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Paycom Software, Inc._10-Q_2025-09-30_English_251305338_1.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 13 files in Transcripts/; 25 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation (Bull/Base/Bear PW-FV)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 0 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

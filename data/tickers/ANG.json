@@ -1,0 +1,359 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "ANG",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**Chile new-contract absolute margin** — `[DATA GAP]` per THESIS. Renegotiation direction is positive (improved pricing + payment terms) but absolute segment-EBITDA margin under new terms is NOT disclosed. Will first be visible in Q4 FY26 segment reporting (Aug 2026 FY result).",
+      "**Canadian top-customer identity** — `[DATA GAP — inferred]`. Customer with A$510M new-truck-capex program that reduced body orders 22 → 42 → 0 across FY24-FY26. Inferred Suncor/CNRL/Imperial/Syncrude; not publicly confirmed. Affects concentration-risk assessment.",
+      "**Schlam / USCO ITR pricing vs ANG on live tenders** — `[DATA GAP]`. Competitive pressure is known, but tender-level pricing not disclosed. Proxy: any ANG share-loss commentary on H2 FY26 call.",
+      "**Hidden subcontractor exposure in NA** — `[DATA GAP — partial]`. FY25 subcontractor costs doubled A$30.5M → A$73.4M. Permanent-staff transition hiring underway; absolute-dollar trajectory in H2 FY26 is the proof point.",
+      "**Singleton 5.3% NED stake intent** — `[DATA GAP]`. Former chair retained 5.3% post-handover; intent (long-term hold / gradual sell) unclear. Not currently a forced-seller, but a >1% reduction would be a watch-item."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Order intake is lumpy; judge on rolling 4-quarter. H1 FY25 peak A$224M → H2 FY25 A$147M → H1 FY26 A$111M is the degradation arc",
+        "current": "H1 FY26 A$111M + A$51M new orders post-period (Jan 2026 onward) = A$162M working pipeline",
+        "lastUpdated": "2026-04-21",
+        "name": "Order book balance (A$M)",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Discretionary; watch for cancellation (would breach #3)",
+        "current": "FY25 final 0.9c (yield ~4.6% at A$0.195); interim cut 0.6c → 0.3c (thesis-supportive discipline, not cut signal)",
+        "lastUpdated": "2026-04-21",
+        "name": "Dividend maintenance",
+        "num": 12
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Multi-year replacement + new-fleet tailwind; monitor for regime change",
+        "current": "[to be populated at first weekly scan — Parker Bay Mining Equipment database / Caterpillar fleet deliveries / electric-truck adoption curve]",
+        "lastUpdated": "2026-04-21",
+        "name": "Mining fleet age / replacement cycle indices",
+        "num": 13
+      }
+    ],
+    "noiseFilter": [
+      "**Single-month iron ore / copper price moves** — ANG revenue is truck-body capex exposure, which is 6-24 month lagged to commodity prices. Only sustained (2+ quarters) directional commodity moves that show up in Rio/BHP/FMG capex-guidance revisions (#4) are structural.",
+      "**<A$500k daily volume moves** — ANG is illiquid micro-cap (AUD ~121M mcap at A$0.195). Intra-day 5-10% moves on <A$500k volume = retail + microcap-fund noise. Only volume >A$2M or sustained 5-day flow signals institutional repositioning.",
+      "**Wilson Asset Management residual selling** — Wilson AM exited A$15.66M / 54.4M shares Aug 2025 at ~A$0.31. Cross-check 2026-04-20: Wilson AM also ceased Gentrack, PointsBet, Australian Clinical Labs, AI-Media, EML in 2025 = broader microcap rotation pattern, NOT an ANG-specific thesis break. Only a new large institutional seller (not Wilson) crossing >3% would be structural.",
+      "**Individual customer deferrals below Grasberg-scale** — Orders from any single mine-site customer can be deferred 1-2 quarters on routine operational or safety issues. Only an event on Grasberg's scale (forced outage + FM + deaths) or a top-5 customer deferring >A$15M = structural.",
+      "**Analyst PT moves** — Rule 17: Bell Potter PT A$0.45 tracked as \"market-state context\" only. Do NOT anchor FV to it. Own FV A$0.282 PW comes from destination-state × peer multiples.",
+      "**COO D'Rozario option expiry behavior (Apr 2026)** — 5M options @ A$0.35 strike expire 12 Apr 2026; most tranches likely worthless at current A$0.195. Expiry is mechanical. Not an insider-sell signal."
+    ],
+    "sourceFile": "Themes/Niche Industrial Monopolies/Tickers/ANG/INDICATORS.md",
+    "staleDays": 10,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "Initial PO A$6.7M received (19 Mar 2026); first deliveries May 2026",
+        "direction": "↕ Pending first delivery print",
+        "lastUpdated": "2026-04-21",
+        "name": "Chile renegotiated contract order intake + delivery cadence",
+        "num": 1,
+        "source": "ASX announcement, ANG, 19 Mar 2026 \"Chile Contract Update\"",
+        "threshold": "Force-majeure reset / counterparty cancellation / delivery slippage >3 months = breach; Q4 FY26 profitability miss = bear-case activation"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "70% (Jan 2026); +8pts from 62% (Jul 2025)",
+        "direction": "↑ Improving",
+        "lastUpdated": "2026-04-21",
+        "name": "NA workshop efficiency (%)",
+        "num": 2,
+        "source": "ANG H1 FY26 Investor Presentation (Feb 2026)",
+        "threshold": "<65% in any month = bear case activating; ≥80% sustained 2+ quarters = bull-case proof"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "A$14-16M (2x-cut from original A$40-46M)",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "FY26 EBITDA guidance (A$M)",
+        "num": 3,
+        "source": "ANG H1 FY26 Results Announcement (Feb 2026)",
+        "threshold": "Any further cut = thesis break (EXIT trigger)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+3.8% 2026 (S&P Global Mining Intelligence); Rio 2026 capex ~A$11B; BHP maintained A$11B FY26+FY27; FMG taking first deliveries of ~400 battery-electric haul trucks",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-04-21",
+        "name": "Top-20 miner capex direction (YoY %)",
+        "num": 4,
+        "source": "S&P Global; Rio/BHP/FMG Q-results (Apr 2026)",
+        "threshold": "-5%+ YoY guided by 2+ of Rio/BHP/FMG = STRUCTURAL U1 cap fires"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Facility in place through Nov 2026; 2-yr extension plan referenced by management Feb 2026",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "HSBC A$57M facility (mat Nov 2026) refinance status",
+        "num": 5,
+        "source": "ANG H1 FY26 call, Feb 2026",
+        "threshold": "Not renewed by Q3 FY26 OR terms materially worse than prior (spread +100bps, covenants added) = breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Van Dyk bought A$101k @ A$0.195 (Mar 2026); director cluster +A$161k total Feb-Mar 2026",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-04-21",
+        "name": "Insider trades cluster",
+        "num": 6,
+        "source": "ASX Appx 3Y filings Feb-Mar 2026",
+        "threshold": "Van Dyk NET seller OR director cluster net-sell in any 60-day window = breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Schlam delivered 300th Hercules Xeroline truck bed to Fortescue (Jan 2026); USCO ITR acquired Schlam Sep 2025; shipping to Rio Tinto Borates NA since Oct 2024",
+        "direction": "↕ Watch (slow-moving competitive pressure)",
+        "lastUpdated": "2026-04-21",
+        "name": "Schlam Payload / USCO ITR competitive activity",
+        "num": 7,
+        "source": "Mining Monthly; Australian Mining; Fortescue IR",
+        "threshold": "Material ANG tender loss disclosed OR management share-loss commentary on H2 FY26 call = breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Sep 8 2025 mud rush (800k t, 7 deaths, Force Majeure); restart targeted Q2 2026; ~85% production H2 2026; full return 2027",
+        "direction": "↕ Improving (on track per April 2026 press)",
+        "lastUpdated": "2026-04-21",
+        "name": "PT Freeport Indonesia Grasberg Block Cave restart",
+        "num": 8,
+        "source": "Freeport-McMoRan 10-K + Indonesian mining press",
+        "threshold": "Slippage past Q4 2026 = deferred order window extends"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP — first print pending]",
+        "direction": "—",
+        "lastUpdated": "2026-04-21",
+        "name": "AU mining services sector credit spread / CDS",
+        "num": 9,
+        "source": "Bloomberg/CapIQ (Rule 10 standard)",
+        "threshold": ">50bps widening in 30d (Rule 10 §3.3.3 standard)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP — first print pending]",
+        "direction": "—",
+        "lastUpdated": "2026-04-21",
+        "name": "Short interest (% of float)",
+        "num": 10,
+        "source": "ASX short-report (Rule 10 standard)",
+        "threshold": ">5% absolute OR >2x in 30d (Rule 10 §3.3.3 standard)"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — baseline",
+        "assessment": "**Baseline established** under Rule 10 override (user-directed). RC 3/5 post 2026-04-20 bulk-filing-review (7 filings FY23→H1 FY26) + bulk-transcript-review (9 transcripts Aug 2023→Feb 2026). Key dashboard sources: ANG FY25 AR (BDO audited, 26 Aug 2025), H1 FY26 Results Feb 2026, Chile Contract Update ASX 19 Mar 2026.",
+        "date": "2026-04-21",
+        "indicator": "ALL",
+        "new": "—",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "A",
+    "archetypeName": "Turnaround + Hidden Franchise",
+    "failurePatterns": [
+      {
+        "evidence": "Shares outstanding, SBC, H1 cash flow need verification at filing-review",
+        "id": "FP-1",
+        "match": "PARTIAL",
+        "name": "Unverified Core Inputs"
+      },
+      {
+        "evidence": "Prob-weighted upside ~31% clears 25% threshold; vs portfolio opportunity cost to be assessed at new-ticker",
+        "id": "FP-2",
+        "match": "NO",
+        "name": "Insufficient Materiality After Corrections"
+      },
+      {
+        "evidence": "ANG is NOT in active restructuring; debt not distressed (0.76× on guided EBITDA); dividend maintained. Operational issues bounded and being addressed",
+        "id": "FP-3",
+        "match": "NO",
+        "name": "Operational Distress Absorbs Thesis Value"
+      },
+      {
+        "evidence": "H2 FY26 result ~Aug 2026 (dated), FY26 FY result (dated), Chile renegotiation already executed. Mechanical self-correction pattern (SP-2) applies",
+        "id": "FP-4",
+        "match": "NO",
+        "name": "No Hard Catalyst"
+      },
+      {
+        "evidence": "Chile OEM matched but resolved; needs standing monitoring for new contract underwriting",
+        "id": "FP-6",
+        "match": "WEAK HISTORICAL",
+        "name": "Unlimited Single-Contract Downside"
+      }
+    ],
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change",
+        "rationale": "- [FACT] Sybrandt (Sy) Van Dyk appointed CEO & Managing Director effective 1 July 2025, following 2-month handover from predecessor David Singleton commencing 1 May 2025 (Source: ASX announcement 23 Jul 2024) - [FACT] Van Dyk served as Non-Executive Director of ANG since March 2018 (7+ years board…",
+        "score": 4
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "Cluster buying post-H1 FY26 crash (Feb-Mar 2026): | Date | Name | Role | AUD amount | Shares | Approx price | |---|---|---|---:|---:|---:| | 27 Feb 2026 | Sybrandt Van Dyk | CEO/MD | $101,400 | 520,000 | ~$0.195 | | 27 Feb 2026 | James Walker | Director | $25,000 | 125,000 | ~$0.20 | | 10 Mar 2026…",
+        "score": 3.5
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage / Structural Neglect",
+        "rationale": "- [UNVERIFIED — from 2026-03-22 screen] Active sell-side coverage: 2 analysts (Bell Potter + Shaw & Partners). Web search surfaced Bell Potter 25 June 2025 note [FACT] and Bell Potter's online presence on ANG, consistent with active coverage. Shaw & Partners coverage not directly re-verified via we…",
+        "score": 3.5
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-20",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-20_ANG_pattern_match.md",
+    "total": 26.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "**Parts A-C (mispricing size):** **Part A — Valuation range by outcome (own-modeled, all figures AUD):** | Scenario | FY27 EBITDA | Multiple | EV | Mcap (− net debt $18M) | Price/share (620M shares est.) | Probability | |---|---:|---:|---:|---:|---:|---:| | Bull | $50M (recovery to FY25 level on NA…",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "- [FACT] Dated proof points on schedule: H2 FY26 result ~Aug 2026 (first clean half with Chile new-terms deliveries from May); FY26 full-year result late Aug 2026; FY27 H1 result ~Feb 2027 - [INFERENCE - STRONG] Mechanical self-correction (matches SP-2): each result narrows gap between price and un…",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "- [FACT] \"World leader in customised design, build and sustainment of mine site haul truck trays\" — delivers ~600 truck bodies annually across 4 manufacturing regions (Australia, Indonesia, North America, South America) (Source: austineng.com) - [FACT] Brand portfolio includes Westech, Westech PREM…",
+        "score": 3.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque",
+        "rationale": "(GATE PASSED) - [FACT] Net debt AUD $18.2M at 31 Dec 2025 (H1 FY26 balance sheet, Source: H1 FY26 results) - [INFERENCE - STRONG] ND/EBITDA ratio: on H1 FY26 annualised EBITDA of $16M → 1.14×; on FY26 guided EBITDA ~$24M → 0.76×; on FY25 EBITDA ~$50M → 0.36×. Leverage is manageable on trough earnin…",
+        "score": 4
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 26.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 7 Sources Processed rows; 9 files in Transcripts/; 9 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 5+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-20",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "CF",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "**UPGRADED 2026-03-21 (4→5).** S3 pricing confirmed: NOLA physical $673-675/st ($742-745/t equiv) sustained above $636/st trigger. EBITDA inflecting from $808M toward $1,100-1,700M at S3 pricing. Gas cost moat widened to $13+/MMBtu vs Europe (HH $2.92 vs TTF $16.7). 97% utilization at nameplate ~10.4M tons. Revenue/earnings growth accelerating. Margin expansion visible and confirmed by commodity pricing. Management alignment: $4.78B buybacks over 4 years (95% of FCF returned); DNB-analog constraint via capital return discipline. Insider ownership 0.53% is low but offset by buyback commitment and structural gas cost advantage. (Sources: Argus Mar 18-19; EIA; Q4 2025 call; 10-K FY2025)",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "**DOWNGRADED 2026-04-05 (5→4). [COUNCIL: all, gpt-5.4, 2026-04-05] Council rescore: equity +59% YTD, above ALL analyst PTs including UBS $140. BofA explicitly argues benefits reflected. Market HAS partially priced thesis — event/momentum buyers embedded war premium even though sell-side consensus frozen at $9.01. No longer \"zero credit\" per 5/5 rubric.** Prior: April Tampa settlement confirmed at ~$775/mt CFR (+$160/mt from March $615/mt), breaching the pre-defined >$700 S3 confirmation threshold. Physical NOLA urea $673–675/st ($742–745/t equiv) sustained above $636/st trigger. Both primary commodity benchmarks (urea + ammonia) now confirm S3 pricing. Equity mismatch is extreme: sell-side consensus EPS frozen at $7.65 — gives **zero credit** to S3/S4 scenarios. Prob-weighted EPS ~$30.7 (updated for Tampa) implies P/E ~4.0x at $122. Historical peak-cycle range 5.5-7x. Agricultural cascade (corn planting reduction at $700/t urea) not yet reflected in equity valuations. UBS $140 PT (Mar 26) is first broker within range but still only 5.3x on S3 EPS — consensus has not moved. Meets 5/5: \"Market gives zero credit for the thesis. Consensus estimates reflect no awareness of the catalyst or trajectory change.\" *(Sources: Argus Tampa April settlement ~$775/mt; NOLA physical barge Mar 18-19; CBOT JCH26; CHANGELOG Mar 19, Mar 30)*",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "**UPGRADED 2026-03-24 (4→5).** Triple supply constraint removes the market's last expected safety valve. Mispricing reason now fully specific, verifiable, and demonstrably temporary: (1) No strategic fertilizer reserve — government cannot intervene (confirmed Mar 17, no mechanism exists); (2) **Chinese supply response foreclosed by policy (Mar 24)** — Beijing halted NK blend exports, reiterated urea restrictions, 40-75% of China's total fertilizer exports constrained through August minimum; (3) Hormuz physical blockade + Ras Laffan structural damage (QAFCO 5.6 Mt/y offline) = no ME supply pathway; (4) Self-correcting mechanism: time passing with no alternative supply source forces commodity repricing → equity repricing follows. Meets 5/5: \"Mispricing reason specific, verifiable, demonstrably temporary.\" *(Sources: Intel Brief Mar 11 Evening; CHANGELOG Mar 15; CHANGELOG Mar 24 — China fertilizer restrictions)*",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "**UPGRADED 2026-03-31 (3→4). Dual chokepoint reactivation bounds binary ceasefire risk.** Houthi formally entered war (Mar 28), threatening Bab el-Mandeb independently of Hormuz. Hormuz-only ceasefire no longer fully unwinds thesis — Red Sea independently hostile. Max headline drawdown reduced from 20-30% to 15-20% (only one of two chokepoints resolves). Business floor strong: $1.98B cash, no debt until 2034, $1.8B FCF, $2/share dividend, $1.7B buyback authorization. Mine deployment (Maham 3/7) creates physical disruption floor weeks-months post any ceasefire. Gas risk reduced: HH $2.92; LNG near-maxed. DOJ probe: civil class action (no grand jury evidence); 2008 precedent = manageable. Meets 4/5 rubric: \"Limited failure modes. Binary risks bounded but with some uncertainty. Floor exists and is reasonably hard. Drawdown recoverable.\" *(Sources: CHANGELOG Mar 31 dual chokepoint entry; 10-K FY2025 p.68; NOTES.md Mar 25-26; QUESTIONS.md Mar 26)*",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "EXTREME",
+      "name": "Thesis Simplicity",
+      "rationale": "**Refreshed 2026-03-27.** Two conditions: (1) Hormuz remains closed — **HOLDING, Day 28. Physically reinforced by Maham 3/7 mine deployment (Mar 26). Zolghadr hardliner SNSC appointment. Iran 5-point counter demands Hormuz sovereignty (US non-starter). 5,000 Marines deploying. Both sides at maximalist positions.** Mine clearance weeks-months post any ceasefire = condition 1 physically locked. (2) Nat gas stays below $5.50 — **HOLDING at $2.92/MMBtu (Mar 24). Headroom: 85%.** EIA storage 1,883 Bcf, 47 Bcf above 5-yr avg. Both conditions holding with condition 1 now physically reinforced. *(Sources: THESIS.md Mar 26; NOTES.md Mar 25)*",
+      "score": 5,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "**UPGRADED 2026-03-30 (4→5). Tampa confirmation de-weakens ammonia path; all 5 paths confirmed active.** Five paths: (1) S4 duration extension (29% probability) — EPS +$12-20; (2) India emergency procurement — gas cut 30%, IFFCO+3 FM, $28/MMBtu emergency LNG, domestic production +23% to 67,000 MT/day (demand NOT destroyed — India applying maximum supply levers); (3) Non-urea margin expansion — **ammonia path restored**: Tampa $775/mt CFR (+$160/mt) confirms export ammonia pricing diverged upward from domestic NOLA weakness. Tampa is the benchmark for 30.7% of CF revenue; domestic NOLA ammonia softness is irrelevant to CF's export-weighted ammonia margins. UAN/AN intact; (4) buyback acceleration on elevated FCF ($4-5B S3 FCF vs $1.3B FY2025 pace); (5) Blue Point/low-carbon re-rating ($3B mid-cycle EBITDA by 2030, CBAM premiums $100+/ton). All 5 paths confirmed active with no weakened sub-components. Meets 5/5: \"5+ independent ways to win. Base case is conservative; multiple scenarios deliver outsized returns.\" *(Sources: Tampa April settlement ~$775/mt; NOTES.md Mar 23, Mar 30; 10-K FY2025 Note 4; Q4 2025 call)*",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Core pillars [FACT]-sourced: cost structure (10-K audited), supply disruption magnitude (management + shipping data), urea pricing (observable market — NOLA physical $673-675/st confirmed Day 20), Indian cascade (force majeures confirmed), Polska Azoty halt (European cost squeeze). Inferential elements: S3 probability (60%), EPS accretion model ($24-33), nat gas staying below threshold. Several QUESTIONS.md items resolved since Mar 15 (gas seasonal confirmed, spot-to-realized lag quantified, demand destruction threshold resolved). Research Confidence 4/5 (upgraded Mar 17). *(Sources: 10-K FY2025; 9 transcripts reviewed; QUESTIONS.md; NOTES.md Mar 17)*",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "**DOWNGRADED 2026-04-05 (5→4). [COUNCIL: all, gpt-5.4, 2026-04-05] Council rescore: Q1 earnings (May 6) only partially captures March spike due to 10-20% spot-to-realized lag — March pricing flows primarily into Q2. Q1 consensus at $2.39 means even a beat may underwhelm vs war narrative. Decisive forcing function is Q2 (late July), not Q1 — creates timing uncertainty that distinguishes 4/5 from 5/5.** Prior: (1) Trump Mar 28 deadline expiry (binary escalation/capitulation); (2) USDA Prospective Plantings Mar 31 (consensus 94-95M corn acres, >92M demand threshold); (3) April Tampa ammonia settlement (imminent, first war-conditions NH3 benchmark, V1/V6 trigger at >$700). Plus: Q1 earnings May 6 (consensus $2.19, likely significant beat); India Kharif Apr-Jun; mine clearance timeline as new physically-grounded forcing function. All dated, observable, independently price-moving. *(Sources: NOTES.md Mar 23-26; CF IR calendar; QUESTIONS.md Mar 26)*",
+      "score": 4,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**Yazoo product mix granularity** — CF's Yazoo City complex produces UAN, DEF, and other products alongside urea. Exact mix not disclosed quarterly. Matters because UAN and DEF have different price dynamics than granular urea. Proxy: segment revenue per ton implied from quarterly disclosure.",
+      "**Real-time Chinese coal-to-methanol/urea restart pace** — Argus Media data lags 2-4 weeks. Chinese producers announced 3.3 MMT restarts but POSTPONED pending ceasefire clarity. Actual restart pace determines how quickly supply responds if Hormuz reopens. No real-time tracking available. Monitor via: monthly Argus/ICIS China fertilizer reports.",
+      "**India government fertilizer subsidy budget ceiling** — India subsidizes fertilizer imports. If the budget ceiling is hit, import volumes cap regardless of farmer demand. Budget details are opaque and politically sensitive. Proxy: track IFFCO import tender volumes and government procurement announcements.",
+      "**US inland logistics capacity** — CF ships by barge on the Mississippi. Spring flood/drought conditions affect logistics and pricing spreads (NOLA vs. inland). Not trackable in advance; emerges as USACE lock reports.",
+      "**Post-Hormuz mine clearance timeline** — No historical precedent at this scale in a major shipping lane. US Navy estimates \"weeks to months.\" This is the physical floor on disruption duration regardless of diplomatic outcome. Monitor via: NAVCENT/C5F public advisories."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "4-8 week revision lag historically. Our edge = scenario analysis, not consensus tracking. Discovery compressed 4→3; revision cycle now underway",
+        "current": "UBS raised PT to $140 (from $97); others to $120 (from $100). Consensus beginning to move. Previously only 2/16 bullish; consensus was frozen at pre-Hormuz ~$7.65.",
+        "lastUpdated": "2026-04-06",
+        "name": "Analyst estimate revisions (consensus EPS)",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Benchmark for non-US pricing. Above $700/t fob globally. +10-25 sailing days + 20-30% higher freight",
+        "current": "$710-720/t (Egypt FOB); Nigeria (Dangote) $700/t for Apr loading; replacement supply (Egypt, Nigeria, Russia, Algeria, Malaysia, Brunei) insufficient to replace ~22 Mt/yr Gulf exports",
+        "lastUpdated": "2026-03-28",
+        "name": "Global urea FOB Egypt ($/t)",
+        "num": 10
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "High = European producers squeezed out. CF cost advantage ~$450/t+ vs EU",
+        "current": "TTF Apr '26 ~$16.9/MMBtu (+52% since war onset); European ammonia site costs ~$660/t. LAT Nitrogen + Duslo at technical minimum",
+        "lastUpdated": "2026-03-28",
+        "name": "European TTF natural gas",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Proxy for ME producer cost. EU proposed suspending ammonia (5.5%) + urea (6.5%) duties + duty-free TRQs",
+        "current": "$600/t (up $115/t or +24% from $495 on Feb 27); ~1M tonnes fertilizer undeliverable since late Feb",
+        "lastUpdated": "2026-03-28",
+        "name": "Ammonia FOB Middle East ($/t)",
+        "num": 12
+      }
+    ],
+    "noiseFilter": [
+      "**Daily urea spot price swings (<5%)** — NOLA barge market trades on thin volume. Day-to-day moves of $10-20/st are noise. Only weekly trends matter.",
+      "**Analyst rating changes without new modeling** — Most sell-side analysts haven't published Hormuz-scenario models. A \"downgrade\" based on pre-Hormuz numbers is meaningless. Only react to analysts who publish updated scenario analysis.",
+      "**Weather-related planting delays (<2 weeks)** — Normal spring variation. Only delays >3 weeks that compress the application window are material (force lower-quality substitution or reduced total application).",
+      "**Ceasefire rumors without operational confirmation** — Witkoff/Kushner back-channel generates headlines. Until insurance underwriters resume transit coverage AND mine clearance begins, physical disruption persists regardless of diplomatic statements. Test: Lloyd's List shipping traffic data, not Reuters headlines.",
+      "**CF share price moves on market-wide selloffs** — CF correlates with energy/materials in risk-off. If urea prices hold while CF drops, that's a buying opportunity, not a thesis challenge."
+    ],
+    "sourceFile": "Themes/Hormuz/Tickers/CF/INDICATORS.md",
+    "staleDays": 25,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**$775/t CFR (April settlement CONFIRMED, Mar 27-28, +$160/mt from March $615/t)**. S3 confirmation threshold BREACHED. V1/V6 upgrade candidates activated.",
+        "direction": "↑ **S3 CONFIRMED** — CHANGELOG entry logged Mar 30",
+        "lastUpdated": "2026-03-30",
+        "name": "Tampa ammonia settlement ($/t)",
+        "num": 1,
+        "source": "QCI (Quantum Commodity Intelligence), Mar 27-28 2026",
+        "threshold": "<$500 = no Hormuz premium; >$700 = **S3 confirmation** ✅ CROSSED; >$900 = S4 territory"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**~$717.50/mt NOLA/US Gulf (Apr 2).** +16.5% MoM, +74% YoY (vs ~$412 Apr 2025). Green Markets/Fertecon midpoint $717-727/mt. Global granular CFD ~$687.50/mt. CoBank N. American index ~$810/st (mid-Mar). DTN inland/retail still elevated. Anhydrous ammonia inland $1,035/t. Global FOB: Egypt $710-720/t, Nigeria $700/t, SE Asia/Turkey $700-740/t, NW Europe $750+/t.",
+        "direction": "↑ Above S3 floor ($600), approaching S3 confirmed ($800). **Gap: ~$83/mt (12%).** Direction sustained upward.",
+        "lastUpdated": "2026-04-06",
+        "name": "NOLA urea ($/st)",
+        "num": 2,
+        "source": "CBOT/CME futures, Green Markets/Fertecon, CoBank, Perplexity Apr 6",
+        "threshold": "<$400 = bear (S1 reversion); >$600 = S3 floor; >$800 = S3 confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**$2.81-2.84 (May front-month NGK26, Apr 1-4).** Apr contract (NGJ26) last ~$3.095 (Mar 27). EIA 2026 avg forecast ~$3.50 (STEO Apr 2026, ↓ from $3.76 Mar est); 2027E ~$4.60. Pressured by above-avg storage builds (+36 Bcf vs seasonal norm) and warm forecasts.",
+        "direction": "↑ Very positive (low cost, declining)",
+        "lastUpdated": "2026-04-06",
+        "name": "Henry Hub natural gas ($/MMBtu)",
+        "num": 3,
+        "source": "NYMEX/CME NGK26, EIA STEO Apr 2026",
+        "threshold": ">$5.50 = margin erosion concern (but urea overwhelms 5:1 at S3); >$7 = bear case 2"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**De facto comprehensive fertilizer export ban** (Reuters, 5 industry sources, Mar 18-20). Only ammonium sulphate exportable. Not formally published by MOFCOM but operationally enforced. Half to three-quarters of China's $13B annual exports (~40 MMT) restricted. Expected to persist **until at least August 2026.** India formally requested China issue urea export quotas due to Hormuz supply disruption.",
+        "direction": "↑ **Near-total ban** — tighter than prior assessment",
+        "lastUpdated": "2026-04-06",
+        "name": "China fertilizer export policy",
+        "num": 4,
+        "source": "Reuters, Business Times (Mar 18-20); Shanghai conference; Perplexity Apr 6",
+        "threshold": "Lifting restrictions = supply valve reopens (S1/S2 reversion); Extension past Aug = S3 strengthened"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**95.338M acres** (Mar 31 Plantings, ACTUAL). -3.45M from 2025 (98.8M). Above trade avg 94.5M. 4th-highest since WWII. Soy 84.7M (below estimate). Corn stocks 9.024B bu (slightly below est = mildly bullish). Historical bias: NASS understates corn by 1.6M → actual may be ~97M. Survey predated full Hormuz price impact. Next: WASDE Apr 9, June Acreage Jun 30.",
+        "direction": "✅ **Demand intact** (95.3M >> 92M threshold)",
+        "lastUpdated": "2026-04-01",
+        "name": "USDA planted acreage — corn (M acres)",
+        "num": 5,
+        "source": "USDA NASS Prospective Plantings, Mar 31, 2026",
+        "threshold": "<88M = demand destruction concern; >92M = strong application demand"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Lost ~800K t/month urea from ME supply; domestic gas constraints cut production to 70-75% utilization; emergency procurement likely",
+        "direction": "↑ Supply crisis deepening",
+        "lastUpdated": "2026-03-28",
+        "name": "India Kharif season fertilizer imports",
+        "num": 6,
+        "source": "Industry sources, daily intelligence brief",
+        "threshold": "Below 5-year avg = demand destruction; Emergency tenders = extreme pull"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Effectively closed; mine deployment confirmed (Maham 3/7 types); 44+ minelaying vessels destroyed; IRGC toll corridor: 26 vessels since Mar 13 vs normal 130-150/day; 1,900-2,000+ vessels stranded; Trump ultimatum expired Mar 27 with no deal",
+        "direction": "↑ Hardening — mines create physical floor",
+        "lastUpdated": "2026-03-28",
+        "name": "Hormuz operational status",
+        "num": 7,
+        "source": "Reuters, Fitch, Lloyd's List, NAVCENT",
+        "threshold": "Reopening = S1/S2 reversion; Continued closure = S3/S4; Mine clearance = physical floor weeks-months beyond ceasefire"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Offline (Ras Laffan halted, force majeure on urea deliveries); 5.6 Mt/y capacity offline; repair 4-5 months minimum",
+        "direction": "Impaired",
+        "lastUpdated": "2026-03-28",
+        "name": "QAFCO urea production status",
+        "num": 8,
+        "source": "QatarEnergy, Lloyd's List",
+        "threshold": "Repair timeline 3-5yr for full complex. Any earlier restart = supply restoration. Permanent impairment = S3+ base strengthened"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "CHANGELOG entry logged (Mar 20)",
+        "assessment": "Ras Laffan destruction + multi-state attacks. Approaching S3 confirmation zone.",
+        "date": "2026-03-20",
+        "indicator": "Tampa ammonia",
+        "new": "Implied $700-750",
+        "old": "~$500 (pre-Hormuz)"
+      },
+      {
+        "action": "Monitor April Tampa settlement",
+        "assessment": "March settlement preceded the escalation. April settlement will be first war-conditions benchmark — ME fob ammonia already at $600/t (+$115). April likely >$700. Not yet a confirmed S3 breach.",
+        "date": "2026-03-24",
+        "indicator": "Tampa ammonia (correction)",
+        "new": "Actual March settlement: $615/t CFR (pre-Hormuz, -$10 from Feb)",
+        "old": "\"Implied $700-750\""
+      },
+      {
+        "action": "CHANGELOG entry logged (Mar 24)",
+        "assessment": "Triple supply constraint unprecedented. Tighter than prior assessment. S3 probability maintained at 58%.",
+        "date": "2026-03-24",
+        "indicator": "China export policy",
+        "new": "NK blend halted + urea restricted + only ammonium sulphate free (Reuters confirmed)",
+        "old": "Partial restrictions"
+      },
+      {
+        "action": "No action — within threshold",
+        "assessment": "Above $600/st S3 floor threshold. Pullback consistent with Noise Filter #4 (ceasefire rumors).",
+        "date": "2026-03-24",
+        "indicator": "NOLA urea",
+        "new": "$672.50/mt CFD (slight pullback on Trump 5-day halt)",
+        "old": "$645+/st"
+      },
+      {
+        "action": "Logged — supports CF cost moat thesis",
+        "assessment": "European ammonia production being squeezed out at TTF >$18.5/MMBtu. Structural positive for CF competitive position.",
+        "date": "2026-03-24",
+        "indicator": "European plant shutdowns",
+        "new": "LAT Nitrogen (FR/AT) + Duslo (Slovakia) cut to technical minimum",
+        "old": "Operating"
+      },
+      {
+        "action": "Monitor — no threshold breach",
+        "assessment": "Policy response confirming structural supply stress. Net neutral for CF (improves import economics but also competitors).",
+        "date": "2026-03-24",
+        "indicator": "EU duty suspension",
+        "new": "EC proposed suspending ammonia (5.5%) + urea (6.5%) duties, duty-free TRQs (300K t ammonia, 890K t urea)",
+        "old": "Standard duties"
+      },
+      {
+        "action": "CHANGELOG evaluation — duration floor extended",
+        "assessment": "Mine deployment creates **physical floor weeks-months beyond any ceasefire**. No historical precedent at this scale. S1 probability → 1% (↓ from 5%).",
+        "date": "2026-03-28",
+        "indicator": "Hormuz — mine deployment",
+        "new": "Maham 3/7 mines confirmed; 44+ minelaying vessels destroyed; IRGC toll corridor at $2M/vessel in yuan",
+        "old": "Conventional blockade"
+      },
+      {
+        "action": "Monitor — nearing S3 confirmed",
+        "assessment": "Approaching $800 S3-confirmed threshold. Multi-region confirmation at $700+. S3 probability maintained 58-60%.",
+        "date": "2026-03-28",
+        "indicator": "NOLA urea",
+        "new": "~$695-700/t CFD; global benchmarks $700-750/t across multiple regions",
+        "old": "$672.50/mt CFD"
+      },
+      {
+        "assessment": "CHANGELOG entry logged. Await V1/V6 rescore decision in next interactive session.",
+        "date": "2026-03-30",
+        "indicator": "Tampa ammonia",
+        "new": "April confirmed ~$775/mt CFR (+$160/mt). **S3 confirmation threshold (>$700/t) BREACHED.** First war-conditions benchmark. V1/V6 upgrade candidates per THESIS.md pre-defined triggers.",
+        "old": "April settlement pending ($615/mt March)"
+      },
+      {
+        "action": "No action — threshold passed with margin. V4 stable.",
+        "assessment": "**Demand destruction bear case de-risked.** V4 (Demand Strength) confirmed. Price effect dominates 6-9% volume headwind. Next: WASDE Apr 9, June Acreage.",
+        "date": "2026-04-01",
+        "indicator": "USDA corn acreage (#5)",
+        "new": "**95.338M acres (ACTUAL).** >93M threshold = DEMAND INTACT. Above trade avg 94.5M. Soy 84.7M (below est). Historical bias: NASS understates corn by 1.6M.",
+        "old": "Pending"
+      },
+      {
+        "action": "Logged — supports triple constraint thesis",
+        "assessment": "Broadening beyond nitrogen to phosphate. Supply constraint more comprehensive than previously assessed.",
+        "date": "2026-03-28",
+        "indicator": "China — phosphate restrictions",
+        "new": "Phosphate export restrictions added (Mar 13+); triple constraint now covers urea + NK + phosphate",
+        "old": "NK blend + urea restrictions"
+      },
+      {
+        "action": "CHANGELOG entry logged (Mar 31). S4 probability increased.",
+        "assessment": "Reverses Mar 16 \"NOT ACTIVE\" assessment. Iran signalled proxy activation. Cape must handle BOTH Hormuz and Bab el-Mandeb diversions simultaneously. S4 probability ↑ 29%→33%. Full normalization now requires BOTH chokepoints resolving.",
+        "date": "2026-03-31",
+        "indicator": "Dual chokepoint status",
+        "new": "**ACTIVE** — Houthi formally entered war Mar 28, threatening Bab el-Mandeb (12% world trade)",
+        "old": "NOT ACTIVE (Mar 16)"
+      },
+      {
+        "action": "Monitor — NOLA approaching but not at $800. No CHANGELOG required. Tampa NH3 remains the confirmed S3 signal.",
+        "assessment": "NOLA wholesale ~$690 — slightly BELOW late March ($695-700), still well above $600 S3 floor. DTN inland/retail at $826 has crossed $800 but this reflects distribution bottlenecks, not FOB pricing. **NOLA $800 threshold NOT YET breached.** Tampa NH3 $775 remains the lead S3 confirmation signal. Anhydrous ammonia at $1,035 inland is a new ATH. Global FOB benchmarks ($700-720 Egypt/ME/Black Sea) tightening toward NOLA.",
+        "date": "2026-04-03",
+        "indicator": "NOLA urea (#2)",
+        "new": "**~$684-690/t NOLA/CBOT (Apr 1); DTN inland/retail $826/t (+35% WoW, +94% YoY).** Anhydrous ammonia inland $1,035/t (+20% MoM).",
+        "old": "~$695-700/t (Mar 26-27)"
+      },
+      {
+        "action": "Monitor — NOLA moving directionally toward $800. No CHANGELOG required yet.",
+        "assessment": "NOLA at $717.50 — UP from $690, approaching $800 S3 confirmed threshold but **NOT YET breached.** Tampa NH3 $775 remains the lead S3 signal. Gap to $800: ~$83/mt (~12%). Direction sustained upward. UBS raised CF PT to $140 (from $97).",
+        "date": "2026-04-06",
+        "indicator": "NOLA urea (#2)",
+        "new": "**~$717.50/mt NOLA/US Gulf (Apr 2).** +16.5% MoM, +74% YoY. Green Markets/Fertecon midpoint $717-727/mt. Global granular CFD ~$687.50/mt. CoBank N. American index ~$810/st (mid-March).",
+        "old": "~$684-690/t (Apr 1)"
+      },
+      {
+        "action": "No CHANGELOG required — directionally consistent with existing S3 assessment.",
+        "assessment": "Tighter than prior assessment. Near-total ban vs previous \"triple constraint.\" Supply valve more firmly shut.",
+        "date": "2026-04-06",
+        "indicator": "China export policy (#4)",
+        "new": "**De facto comprehensive fertilizer export ban** (Reuters, 5 industry sources). Only ammonium sulphate exportable. Expected to persist **until at least August 2026.** Half to three-quarters of China's $13B annual fertilizer exports (~40 MMT) now restricted. India formally requested China issue urea export quotas.",
+        "old": "NK blend + urea + phosphate restricted"
+      },
+      {
+        "action": "Logged — supports CF cost moat. No threshold breach.",
+        "assessment": "Major European producer effectively idled. Reduces supply competition for CF into European market. Consistent with S3 competitive advantage thesis.",
+        "date": "2026-04-06",
+        "indicator": "European plant activity",
+        "new": "**Grupa Azoty (Poland) halted new orders** — Europe's largest state-owned nitrogen producer. European ammonia prices +7.9% MoM (March). Broad margin pressure from elevated TTF post-Hormuz.",
+        "old": "Operating (with pressure)"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "B",
+    "archetypeName": "Cyclical Inflection + Misperceived Commodity Exposure",
+    "max": 35,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_CF_pattern_match.md",
+    "total": 35,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Prob-weighted FV $174 vs $134.50 (+29%); multi-legged thesis; strong floor at $90-100; S3 commodity pricing validated",
+        "score": 6
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Weekly NOLA prints, Q1 earnings May 6, Tampa NH3 Apr, USDA Mar 31 — all dated, self-correcting",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "#1 NA nitrogen producer, 97% utilization, $1.8B FCF, HH gas moat; not a monopoly (cyclical commodity)",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "$1.98B cash, net debt 0.5x EBITDA, no maturities until 2034, $4-5B S3 FCF potential",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR 70.3% from situation-screen 2026-04-30 (RC v2 backfill)",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "FY2025 10-K filed Feb 25 2026 retrieved from EDGAR to Filings/; bulk-filing-review of Mar 30 + filing-review backfill 2026-04-30",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 25 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 7+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-06",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

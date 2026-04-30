@@ -1,0 +1,379 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "TRI-LSE",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "EBIT margin trajectory now **5 consecutive periods** delivered THROUGH macro shock: 4.9% → 5.1% → 6.8% → 7.2% ex-FX → **7.8% (FY26 pre-close, 29 Apr 2026)** above the 6.7% re-entry gate. Pricing-power empirically validated (margin held with Brent $96-99 + Hormuz impaired + Saudi disruption + £8M Malaysia closure drag). Bufab Q1 2026 record gross 32.9% / adj-EBITDA 15.3% corroborates fastener-distribution sector pricing/mix discipline. Revenue declining (FY26 £207M, -7% YoY, £7M below consensus) but deliberate — low-margin customer exits + Malaysia closure transition. \"Strongest commercial pipeline in two years\" + reaffirmed >10% medium-term EBIT target. ACEA Q1 +4% YoY (Mar +12.5% six-year high) supports H2 FY27 demand. **Management alignment sub-assessment:** (1) Structural — leverage 0.9x (well below 3.0x covenant); £73.4M undrawn; IC ladder 3.25 → 3.50 → 4.00x effective 31 Dec 2026; Mills bloc 17.41% de-facto governance overlay. (2) Signals — ~£1.03M insider buying across 5 insiders incl. Mills £896K @ 59.75p Mar absorbing Slater 207bps distribution same-day; Percival buying *below* his Feb cost basis; no insider selling. **Not EXTREME:** revenue in deliberate decline (not \"all three accelerating\"); 220bps margin gap to 10% target remains; pipeline language qualitative not quantified backlog. **Not AVERAGE:** prior \"easy wins done\" debate hypothesis materially refuted by margin held through shock. **DATA GAPs:** auto OEM/aftermarket split + mfg/dist margin differential remain open (could compress V1 to AVERAGE if aftermarket <20%).",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "**PW-FV 129p vs current 63.40p = +103% mismatch** (revised 2026-04-30 from 120p/+71% on prob shift Bull 25→30 / Base 45→50 / Stall 20→15 / Recession 10→5; price drop 70p → 63.40p widened mismatch). Multi-method stress test: PW-FV +103%; generalist FV (thesis-independent peer-median) 121p +91%; peer half-gap close 127p +100%; M&A EV/Sales midpoint 130p +105%; M&A premium-based midpoint 118p +86%; FCF yield ~17.5% on FY26E £19M. ALL non-bear methods cluster +86-105% (>50% STRONG threshold). Bossard ONWC 46.7% reconciliation invalidates the \"TRI WC bloated\" sub-anchor in the bear narrative. Bufab Q1 record margins prove margin-walk runway is real (not just TRI accounting). Diagnostic reference: market-vs-me-diagnostic 2026-04-21 (~9 days, within 30-day window) verdict aligns with \"market likely wrong.\" **Not EXTREME:** recession bear modelled FV 50p < current 63.40p (-21%) — fails \"floor-case FV > current across every reasonable parameterization\" anchor. **Not AVERAGE:** every non-floor method >85% mismatch; consensus PTs are market-positioning data per Foundational Principle 1, not V2 input.",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "4|—|Five reasons, all temporary: (1) £81M micro-cap limits some mandates despite **FTSE Small Cap / All-Share membership** — passive index funds must hold, partially answering \"incremental buyer\" question. (2) Coverage gap: 3 analysts but Peel Hunt sole broker — Zeus/Panmure NOT confirmed as covering (bookrunner claim retracted). Active distribution mechanism narrow. (3) 81% drawdown narrative anchoring. (4) Auto narrative anchoring at 35% while smart infra growing to 18%. (5) FY2024 statutory loss screening distortion. FTSE membership is the strongest positive finding since original scoring — it proves a passive buying mechanism exists. Not 5 — no hard forcing function with known date. Closest: FY2026 results Jul 2026.",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "AVERAGE",
+      "name": "Downside Protection",
+      "rationale": "**Type B — Balance Sheet as Torque** (covenant gates + leverage). Trades at ~0.71x book value (£122.7M book vs ~£86M mcap at 63.40p). Leverage 0.9x vs 3.0x covenant; £73.4M undrawn. **Covenant math:** IC schedule 3.25 → 3.50x (effective 31 Dec 2025–30 Sep 2026) → **4.00x effective 31 Dec 2026**. At current low drawings (£2-3M finance cost), FY26 EBIT ~£16M = ~83% IC headroom on 3.50x. Stress (£30-40M acquisition + EBIT 7%): finance cost £4.5M → minimum EBIT £15.75M = marginal (FY25 was £15.6M); but 29 Apr pre-close 7.8% margin proof materially de-risks. **Pre-mortem mode updates 2026-04-30:** auto recession DE-RISKED (ACEA Q1 +4% YoY; Bufab record margins); margin-stall hypothesis MATERIALLY WEAKENED (5th consecutive margin period through shock); oil-driven inflation FADING (Brent $96-99 vs $124 peak); banking renewal RESOLVED (£70M RCF Jul 2027/2028 + £50M UKEF EDG 2028); Saudi REFRAMED (named drag, force-majeure not invoked, bounded in £8M FY27 envelope). **Persistent concerns:** council \"asset-floor illusion\" stands (inventory £74.2M + receivables £52.5M of £232M total); transient overshoot 25-35p possible in compound-failure thin liquidity; auto OEM/aftermarket split + inventory reserve methodology + Saudi capex quantum still UNRESOLVED. **Floor analysis:** tangible book ~74p > current 63.40p (+17% cushion); M&A floor 82-118p > current; Slater/Mills/Ruffer ~34% concert-party-adjacent register would resist takeout below tangible book. Recession bear modelled 50p < current (-21%, 5% prob). **Not STRONG:** STRONG anchor requires \"few identifiable failure modes, all bounded\" — 7+ failure modes remain (acquisition misstep, cyberattack, FTSE relegation, UK CGU impairment, transient overshoot, Saudi capex, WC-heavy floor quality); compound-failure 25-35p transient is not \"modest and recoverable.\" **Not WEAK:** solvency risk genuinely low; Primary Bear (stall, 70p) now ABOVE current (+10%) — protected floor on most-likely bear path.",
+      "score": 3,
+      "type": null
+    },
+    "V5": {
+      "level": "STRONG",
+      "name": "Thesis Simplicity",
+      "rationale": "4|—|Two conditions, both currently **HOLDING**: (1) Margin improvement continues via self-help — 4 consecutive periods confirmed (4.9%→5.1%→6.7%→7.2% ex-FX). Under increased pressure from freight/oil but no reversal yet. **BREACH TRIGGER: FY2026 full-year EBIT margin <6.5% (i.e. below FY2025's 6.7%).** (2) Revenue stays above ~£190M — FY26E £214M consensus, substantial headroom. Revenue growth NOT required. Auto recovery NOT required. M&A NOT required. Not 5 — genuinely two conditions, and Condition 1 is under more near-term pressure than at inception.",
+      "score": 4,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "5|—|Seven independent paths, at least 3 showing early evidence: (1) Margin reaches 10%+ — FY2019 achieved 11.6%, proving it's possible. (2) Analyst coverage initiation — uncertain (Zeus/Panmure not confirmed); Peel Hunt sole broker. (3) M&A takeout by Bossard/Bufab/PE — TRI at 0.53x EV/Sales vs industry M&A at 0.6-1.2x; sub-£100M EV for global platform. (4) Smart infra grows to 30% of revenue — currently 18%, growing at 11.5%. (5) NA bolt-on acquisition — active pipeline, balance sheet supports. (6) Saudi Arabia expansion — planned launch OVERDUE (Q3 FY2026), status unknown; GCC data center investment NOT cancelled ($13.5B+ pipeline); conditional optionality with modest downside. (7) FTSE Small Cap weighting increases as market cap grows → reflexive passive buying. Still 5 — even with Saudi uncertainty, 6 other paths remain viable. Multiple independent catalysts with early evidence on at least 3.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "AVERAGE",
+      "name": "Evidence Quality",
+      "rationale": "OVERVIEW.md sourced from audited FY2024 AR (236pp); FY2025 AR data integrated; H1 FY2026 interim (Sep 2025); 7+ transcripts reviewed; Q3 Trading Statement; **29 Apr 2026 pre-close trading statement** (NEW). Banking facility fully resolved + IC covenant schedule confirmed. Insider purchases tracked across 5 insiders (~£1.03M cumulative, RNS-sourced). Mills bloc 17.41% TR-1 disclosed; Slater 10.98%→8.91% disclosed. **Council 5-gap status (refreshed 2026-04-30):** (1) Auto aftermarket vs new-production split — STILL OPEN (industry benchmark 92.56% OEM / 7.44% aftermarket inferred; TRI-specific undisclosed); (2) Interest cover EBIT-breach floor — PARTIALLY RESOLVED (covenant schedule confirmed; EBIT floor inferred ~£15.75M at 3.50x); (3) Saudi facility capex/status — PARTIALLY RESOLVED (29 Apr disruption named, force-majeure NOT invoked, drag bounded in £8M FY27 envelope; capex quantum still undisclosed); (4) Manufactured vs distributed margin differential — STILL OPEN; (5) Inventory reserve methodology — STILL OPEN. **Quantitative read: 1.5 of 5 gaps closed; 3 of 5 remain OPEN with thesis-relevant impact.** **Not STRONG:** STRONG anchor requires \"no critical DATA GAPs\"; three remain. **Not WEAK:** primary evidence base is deep and fact-checked; FY26 pre-close added incremental fact-base; 7 transcripts reviewed cumulatively. **Path to STRONG:** Jul 2026 audited finals + Saudi capex disclosure + auto OEM/aftermarket Q&A. **V7 = AVERAGE triggers no caps on V1/V2/V4** per §10 gating rule.",
+      "score": 3,
+      "type": null
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "4|—|Hard-dated: Late April 2026 pre-close statement (~1 month — first RNS post-Iran conflict, will address Saudi/freight/FY26 outlook). FY2026 Final Results Jul 2026 (~4 months — decisive for margin trajectory). H1 FY2027 Nov 2026 (~8 months). Semi-annual reporting = natural forcing function. Soft-dated: analyst initiation (uncertain — Peel Hunt sole broker limits distribution); M&A (speculative but valuation supports); Saudi operational confirmation (overdue). Not 5 — highest-impact catalyst (coverage initiation) lacks specific date and the active distribution mechanism is narrower than previously assumed.",
+      "score": 4,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**Chinese fastener import competition pricing** — Chinese fasteners are a low-cost threat, particularly in non-critical applications. TRI's moat is in certified/safety-critical fasteners (automotive, aerospace, medical). But if Chinese competitors begin achieving certifications, the moat narrows. No reliable tracking source for Chinese fastener certification progress in European/UK markets.",
+      "**M&A interest from Bossard/Bufab/PE** — At sub-£100M EV, TRI is an attractive acquisition target for larger fastener distributors or PE. But there's no public signal until a formal approach or leak. Proxy: insider buying patterns (management may resist selling if they see value; or may sell if approach is attractive).",
+      "**Medical/smart infrastructure pipeline size** — TRI is growing these segments but provides limited quantitative disclosure on pipeline or order book. Success here validates the diversification thesis away from auto. Monitor via: management commentary in interim reports.",
+      "**Automotive EV fastener content per vehicle** — Key bull thesis element: EVs need MORE fasteners per vehicle than ICE (battery pack, thermal management, structural). But quantification is sparse. Industry estimates range from 1.0x to 1.5x ICE content. If closer to 1.0x, the \"EV transition is positive for fasteners\" argument weakens."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Guided flat to modest growth. Automotive weakness offset by smart infrastructure/medical",
+        "current": "~£210M annual run rate; smart infra 18% (+11.5%), medical +32% NA",
+        "lastUpdated": "2026-04-20",
+        "name": "Quarterly/semi-annual revenue",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "TRI has significant EUR revenue. GBP weakness = translation benefit. Partially hedged",
+        "current": "~1.17; H1 FY2026 FX impact was 100bps on EBIT margin (6.2% reported vs 7.2% CER)",
+        "lastUpdated": "2026-04-20",
+        "name": "GBP/EUR exchange rate",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Industry-wide, not TRI-specific. TRI is FTSE Small Cap / All-Share constituent — passive funds required to hold",
+        "current": "Weak (structural outflows from UK small-caps); no specific FTSE Small Cap rebalance catalyst in 2026-04-13–20 window",
+        "lastUpdated": "2026-04-20",
+        "name": "LSE small-cap fund flows",
+        "num": 10
+      }
+    ],
+    "noiseFilter": [
+      "**UK small-cap sentiment** — Structural outflows from UK small-caps affect broadly. TRI is LSE Main Market (FTSE Small Cap constituent) — passive inclusion provides baseline demand, but discretionary small-cap flows still matter.",
+      "**GBP/EUR moves <5%** — TRI has natural hedging from EUR-denominated costs. Small FX moves don't affect economics; only translation of reported numbers.",
+      "**Single-quarter revenue miss if margin trend intact** — The thesis is margin recovery, not revenue growth. A revenue miss with improving margins is consistent with the Rebuild strategy (exiting low-margin business).",
+      "**Peer share price moves (Bossard, Bufab)** — These are much larger, more liquid, better-covered companies. Their share price dynamics are driven by different factors (institutional flows, index inclusion). Not informative for TRI."
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/TRI-LSE/INDICATORS.md",
+    "staleDays": 11,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**6.3% reported (7.1% CER) — H1 FY2026** (trading statement Mar 31). Rev -6.4% YoY. Gross margin +144bps to 28.8%. UK Automotive weak; Smart Infra (NA) partially offsets. Board FY expectations unchanged, 10% target maintained. No new data in 2026-04-13–20 window; next disclosure FY26 YE trading update (expected Apr/May 2026).",
+        "direction": "⚠ **Declining — 6.3% (30bps above structural floor).** CER 7.1% suggests FX drag, not operational failure.",
+        "lastUpdated": "2026-04-20",
+        "name": "EBIT margin trajectory",
+        "num": 1,
+        "source": "TRI H1 FY2026 trading statement (Mar 31, 2026); 2026-04-20 Daily Briefing (no new data)",
+        "threshold": "<6% for 2 semi-annual periods = stall (Rebuild failing); >8% = on track to 10% target; >10% = thesis validated"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**UK 51.0 (Mar final, revised ↓ from 51.4).** 5th month expansion but deteriorating: output fell first time in 6 months, input prices 41-month high, supplier deliveries worst since mid-2022, confidence 6-month low. Feb was 51.7. Expansion fragile. No Apr flash print yet in 2026-04-20 window.",
+        "direction": "⚠ Above threshold but deteriorating internals",
+        "lastUpdated": "2026-04-20",
+        "name": "UK/EU Manufacturing PMI",
+        "num": 2,
+        "source": "S&P Global/CIPS Mar 2026; 2026-04-20 Daily Briefing (no new print)",
+        "threshold": "<47 for 3+ consecutive months = structural headwind; <45 = recession signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**EU car registrations -1.2% YTD (Feb 2026).** 2026 forecast revised to +0.1% (from +1.7%) by Autovista24/EV Volumes — ~160K units removed on GDP downgrades + ME conflict. BEV share 18.8%. **ACEA Mar data confirmed release 2026-04-23 (binary catalyst, 3 days out).**",
+        "direction": "↓ Negative but not at threshold",
+        "lastUpdated": "2026-04-20",
+        "name": "European auto production volumes (YoY)",
+        "num": 3,
+        "source": "ACEA registrations Feb 2026; Autovista24/EV Volumes; 2026-04-20 Daily Briefing",
+        "threshold": ">5% YoY decline for 2+ quarters = fastener demand risk (~38% TRI revenue)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**~£1.03M cumulative open-market across Mills-bloc + management.** Most recent: CEO Percival buy **4,621 shares @ 67.6p on 2026-04-16** (~£3.1k; RNS 2026-04-17). Below his prior avg (123,757 @ 80.0p Feb-16-2026; 63,529 @ 77.72p Feb-4-2025) — marginal signal-strength positive. **Mills-bloc formal disclosure 2026-04-16: 17.41% (23.71m shares) following 1.5m buy @ 59.75p on 2026-03-26** (aggregating Harwood/Oryx/Rockwood + direct). No sells >£50k. Director Watson 973 @ 71.4p on Apr-14 is DRIP — mechanical, excluded from conviction signal.",
+        "direction": "**↑ Positive continuation** (CEO buys below prior avg; Mills-bloc formally entrenched at 17.41%)",
+        "lastUpdated": "2026-04-20",
+        "name": "Insider buying/selling activity",
+        "num": 4,
+        "source": "LSE RNS 2026-04-17 (Percival); RNS 2026-04-16 (Mills aggregation); 2026-04-20 Daily Briefing",
+        "threshold": "Cessation of buying after sustained period = insider confidence waning; Any selling >£50K = negative signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "3 (Peel Hunt Buy 140p, Berenberg Buy 130p, +1). TRI is LSE Main Market (NOT AIM) — eligible for FTSE indices, ISA mandates, passive funds. No new initiations / no drops in 2026-04-13–20 window.",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-20",
+        "name": "Analyst coverage count",
+        "num": 5,
+        "source": "Bloomberg, broker reports; 2026-04-20 Daily Briefing",
+        "threshold": "Any new initiation = re-rating catalyst; Loss of coverage to 1 = liquidity/discovery risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Steps 3.25x (Jun24–Sep25) → **3.50x (31 Dec 2025–30 Sep 2026) → 4.00x from 31 Dec 2026 onward** [2026-04-18 correction from \"Sep 2026\"]. At 0.97x leverage with £73M+ facility headroom. Breach-EBIT estimate: ~£15.75M at 3.50x if finance cost rises to £4.5M (acquisition scenario); ~£8.75M if finance cost stays £2.5M. FY25 EBIT £15.6M. No new data in 2026-04-13–20 window.",
+        "direction": "⚠ Watch — tightening schedule",
+        "lastUpdated": "2026-04-20",
+        "name": "Interest cover covenant",
+        "num": 6,
+        "source": "FY2025 AR final results RNS via Shares Mag/Research Tree/MarketScreener; 2026-04-20 Daily Briefing (no change)",
+        "threshold": "Breach = restructuring risk. Binding constraint only if RCF drawn £30-40M for M&A AND EBIT margin <7%."
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "41% (FY2025). Target 30% medium-term (33-36% realistic). No new data in 2026-04-13–20 window.",
+        "direction": "Improving (slow)",
+        "lastUpdated": "2026-04-20",
+        "name": "Working capital % of sales",
+        "num": 7,
+        "source": "TRI interim/annual reports; 2026-04-20 Daily Briefing (no change)",
+        "threshold": ">45% = cash consumption concern; <35% = cash release supporting deleveraging"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "CHANGELOG evaluation: bear probability revised 25%→35%. Monitor for pass-through pricing lag in H2 FY2026 results.",
+        "assessment": "**BREACH — structural threshold exceeded.** Oil >$100 sustained. Input cost inflation risk activated.",
+        "date": "2026-03-25",
+        "indicator": "Brent crude (#9)",
+        "new": "$112/bbl (Mar 2026)",
+        "old": "~$70/bbl (Feb 2026)"
+      },
+      {
+        "action": "Monitor Hormuz reopening signals. If closed >3 months, margin bridge to 10% materially delayed.",
+        "assessment": "**BREACH — structural threshold exceeded.** Estimated 50-100bps GM headwind for H2 FY2026.",
+        "date": "2026-03-25",
+        "indicator": "Asia-Europe freight (#10)",
+        "new": "$2,400-8,500/FEU",
+        "old": "~$1,200/FEU (pre-Hormuz)"
+      },
+      {
+        "action": "First-order impact: freight costs. Second-order: container availability, delivery delays to European customers.",
+        "assessment": "**BREACH — unprecedented.** TRI sources 70% from Asia. Cape of Good Hope rerouting +10-14 days/voyage.",
+        "date": "2026-03-25",
+        "indicator": "Strait of Hormuz (#11)",
+        "new": "Effectively closed",
+        "old": "Open"
+      },
+      {
+        "action": "⚠ Watch — reported 6.3% is only 30bps above 6% structural floor. FY2026 full results (Jul 2026) will be decisive. If CER trend holds at ~7%, underlying trajectory intact despite headline pressure.",
+        "assessment": "**Declining toward <6% structural threshold** but not yet breached. CER figure (7.1%) suggests FX headwind, not operational deterioration. Gross margin improvement (+144bps) is encouraging — operational Rebuild progressing. Revenue decline driven by UK automotive weakness + tariff disruption. Smart Infra (NA) partially offsets.",
+        "date": "2026-04-06",
+        "indicator": "EBIT margin (#1)",
+        "new": "**6.3% reported (7.1% CER) — H1 FY2026** (ended Sep 2025, reported Mar 31 trading statement). Revenue -6.4% YoY. Gross margin +144bps to 28.8%. Net debt £17.4M (£78M+ undrawn). Board FY expectations unchanged. 10% target maintained.",
+        "old": "6.7% (last reported)"
+      },
+      {
+        "action": "No breach — but fragile expansion. Monitor April PMI for sub-50 risk.",
+        "assessment": "Above 47 threshold but quality of expansion deteriorating. Supply-side stress (Hormuz freight/costs) driving PMI internals negative while headline holds.",
+        "date": "2026-04-06",
+        "indicator": "UK PMI (#2)",
+        "new": "**51.0 (March final, revised down from 51.4).** 5th month of expansion but deteriorating internals: output fell first time in 6 months, input price inflation at 41-month high, supplier delivery times worst since mid-2022, business confidence 6-month low.",
+        "old": "~50 area"
+      },
+      {
+        "action": "No breach — monitor ACEA Mar data (Apr 23).",
+        "assessment": "Not yet at >5% decline threshold. Flat-to-negative vs prior modest growth expectation. Headwind for TRI's ~38% auto revenue but not structural breach.",
+        "date": "2026-04-06",
+        "indicator": "EU auto (#3)",
+        "new": "**EU car registrations -1.2% YTD (Feb 2026).** 2026 forecast revised to +0.1% (from +1.7%, Autovista24/EV Volumes). ~160K units removed from forecast on GDP downgrades + ME conflict. BEV share 18.8%.",
+        "old": "Monitor"
+      },
+      {
+        "action": "Monitor 22 Apr ceasefire expiry. If holds, V6 vector permanently resolves favorably; V1 candidate for rescore 4→5 if FY26 margin ≥6.7%.",
+        "assessment": "**CLEARED structural threshold** (conditional on 2026-04-22 ceasefire holding). Acute oil-shock variant of V6 debate vector largely unwound in 3 weeks.",
+        "date": "**2026-04-18**",
+        "indicator": "Brent crude (#11)",
+        "new": "**$86.52/bbl (2026-04-17 close, −22%).** Single-day plunge 12.95% on Iran FM \"Hormuz completely open\" statement. Pre-plunge intraday path: $124→$103→$100→$96→$94→$86. EIA 2026 annual avg $96.",
+        "old": "$112/bbl"
+      },
+      {
+        "action": "Monitor 22 Apr ceasefire expiry. Silence from TRI on Saudi (154d overdue) still requires pre-close resolution.",
+        "assessment": "**CLEARED structural threshold — FRAGILE.** Vault 2026-03-25 \"closed\" reading fully reversed within 23 days. Binary on Apr 22 ceasefire.",
+        "date": "**2026-04-18**",
+        "indicator": "Strait of Hormuz (#13)",
+        "new": "**\"Completely open\" per Iran FM 2026-04-17.** Ceasefire 2026-04-08 to 2026-04-22 (4 days). US port blockade remains.",
+        "old": "Effectively closed"
+      },
+      {
+        "action": "Monitor May-01 PSS impact; ACEA / Drewry weekly; freight normalization to <$2,000/FEU = full clear.",
+        "assessment": "**WATCH — easing but still elevated.** H2 FY2026 GM headwind narrowed to 20-70bps (from 50-100bps).",
+        "date": "**2026-04-18**",
+        "indicator": "Asia-Europe freight (#12)",
+        "new": "**Shanghai-Rotterdam $2,229 / Shanghai-Genoa $3,343 (Drewry WCI 2026-04-16, −3%).** 6-week rally broken. May-01 PSS +$2,000/FEU looms. Cape routing persists.",
+        "old": "$2,400-8,500/FEU"
+      },
+      {
+        "action": "—",
+        "assessment": "Correction only — no structural breach. Scheduled tightening on same path.",
+        "date": "**2026-04-18**",
+        "indicator": "Interest cover covenant (#6)",
+        "new": "Interest cover 4.00x step effective date corrected to **31 Dec 2026** (was \"Sep 2026\" in vault shorthand). FY25 breach-EBIT estimate ~£15.75M at 3.50x if finance cost £4.5M.",
+        "old": "—"
+      },
+      {
+        "action": "—",
+        "assessment": "All structural thresholds intact.",
+        "date": "**2026-04-20**",
+        "indicator": "Confirmed on track — Daily Briefing cycle. Insider #4 positive continuation (CEO Percival 4,621 @ 67.6p Apr-16; Mills-bloc formally at 17.41% per Apr-16 RNS). Brent #11 retracing up ($86.52 → $90.38 → $95.19) but still below $100 threshold. Hormuz #13 unchanged (\"completely open\"); 2026-04-22 ceasefire expiry 2 days out — binary watch. Freight #12 unchanged (Drewry Apr-16 ref). No breach.",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "Ceasefire expiry 22 Apr is binary gate. If no deal, 28 May = formal Indicator #13 structural breach → CHANGELOG evaluation trigger. (Source: 2026-04-21_MAGN-TRI-Daily.md §4 #13)",
+        "assessment": "**BREACH EMERGING — Hormuz effectively closed since ~Feb 28; if sustained 3+ months from close = ~May 28.** Previous 2026-04-18 \"cleared\" reading superseded.",
+        "date": "**2026-04-21**",
+        "indicator": "Strait of Hormuz (#13)",
+        "new": "**Re-closed per Iran 18 Apr after ceasefire breakdown.** US seized Iranian vessel (Touska) 19 Apr. Maritime traffic standstill 19-20 Apr per Windward (35 vessel reversals, 5 VLCCs among them). Ceasefire expires 22 Apr.",
+        "old": "\"Completely open\" (Apr 17)"
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 30.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 26 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 12+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-21",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "TOI",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**Asseco subsidiary-level performance** — TOI owns ~23% of Asseco but Asseco has 30+ subsidiaries across CEE/Israel. No visibility into which subsidiaries drive value or how CSU playbook is being applied. Monitor via: Asseco annual report (Apr-May).",
+      "**Acquisition IRR by vintage** — TOI doesn't disclose returns by acquisition cohort. Aggregate FCFA2S growth is the proxy. If FCFA2S growth decelerates despite high M&A pace, IRRs may be declining.",
+      "**AI adoption depth across 180+ BUs** — 27-61% of BUs \"using AI\" but no disclosure on revenue impact or cost savings. Monitor via: management commentary in annual FS.",
+      "**Competitive dynamics in European VMS** — Fragmented market with limited public data on win rates or pricing pressure. Proxy: organic growth stability."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Should trend up with SaaS mix. >75% = positive; <68% = quality concern",
+        "current": "70.7% (FY2025, +120bps YoY)",
+        "lastUpdated": "2026-03-28",
+        "name": "Recurring revenue %",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Revenue in EUR; stock priced in CAD. FX translation affects reported multiples",
+        "current": "~1.59",
+        "lastUpdated": "2026-03-28",
+        "name": "EUR/CAD exchange rate",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Multiple compression driven by rate environment + acquisition sentiment. Tracks rate expectations",
+        "current": "~14x (vs 25-40x historical range)",
+        "lastUpdated": "2026-03-28",
+        "name": "EV/FCFA2S multiple",
+        "num": 9
+      }
+    ],
+    "noiseFilter": [
+      "**Quarterly FCFA2S variability** — Acquisitions create lumpiness. Judge on rolling 4-quarter or annual basis only.",
+      "**Individual acquisition announcements** — TOI does 40-50 acquisitions/year. No single deal is thesis-altering. Track aggregate pace and quality.",
+      "**CSU share price moves** — TOI is operationally independent. CSU sentiment affects TOI stock but not TOI fundamentals.",
+      "**Netherlands revenue concentration commentary** — 44.4% is known. Gradual diversification expected. Don't react to country-level revenue shifts <5pp."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/TOI/INDICATORS.md",
+    "staleDays": 14,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "EUR 218.7M (+23% YoY, FY2025); FCFA2S/share EUR 2.63",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "FCFA2S growth (YoY)",
+        "num": 1,
+        "source": "TOI annual FS + MD&A",
+        "threshold": "<10% for 2 consecutive years = compounding thesis broken; >20% = bull case confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "4% (FY2025, stable 8 quarters)",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "Organic revenue growth",
+        "num": 2,
+        "source": "TOI MD&A disclosure",
+        "threshold": "<0% for 2+ quarters = demand deterioration; >6% = re-acceleration"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "25.5% (FY2025, ↓90bps from 26.4%)",
+        "direction": "→ Stable (slight compression)",
+        "lastUpdated": "2026-03-28",
+        "name": "EBITDA margin",
+        "num": 3,
+        "source": "TOI annual FS",
+        "threshold": "<23% = acquisition dilution concern; >28% = operating leverage thesis validated"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "EUR 1,039M FV vs EUR 524M cost (2x). Van Poelje absent from CSU calls — CRITICAL GAP",
+        "direction": "⚠ Unknown — awaiting signal",
+        "lastUpdated": "2026-03-28",
+        "name": "Asseco relationship health",
+        "num": 4,
+        "source": "CSU/TOI investor comms",
+        "threshold": "Any public friction, write-down, or forced divestiture = thesis impairment. CSU AGM May 15 = first read"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**~1.0–1.2x.** Net debt €742.4M minus Asseco investment (€524M cost / €489.9M carrying) = €218–253M operating net debt / €218.7M FCFA2S. Within thesis.",
+        "direction": "✓ OK",
+        "lastUpdated": "**2026-04-17**",
+        "name": "**Operating** leverage (net debt ex-Asseco / FCFA2S)",
+        "source": "Bifurcation per CHANGELOG 2026-04-17",
+        "threshold": ">2.0x = operating M&A pace unsustainable"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**3.4x (EUR 742.4M net debt).** ⚠️ **Above prior >3.0x threshold.** Driven by €384.9M net Asseco investment + €390M VMS acquisitions. Net debt/CFO = 1.8x. FY2025 CFO €412.7M. **Revised interpretation:** Asseco is strategic equity investment (mark-to-market €1,039M); the debt-like 3.4x figure misrepresents operational risk. Revised total-leverage thresholds: >3.5x = operational concern, >4.0x = balance-sheet risk. **Resolution: CHANGELOG MINOR (see Themes/AI Disruption/CHANGELOG.md 2026-04-17).**",
+        "direction": "✓ OK (under revised threshold)",
+        "lastUpdated": "**2026-04-17**",
+        "name": "**Total** leverage (incl Asseco) (net debt / FCFA2S)",
+        "source": "TOI FY2025 annual FS; CHANGELOG resolution 2026-04-17",
+        "threshold": "Revised: >3.5x operational concern; >4.0x balance-sheet risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$800M+ closed/pending early 2026",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "M&A deployment pace",
+        "num": 6,
+        "source": "TOI press releases, MD&A",
+        "threshold": "<$200M annual = growth engine stalling; pipeline visibility is leading indicator of future FCFA2S"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — monitor CSU AGM May 15",
+        "assessment": "All indicators on track. FCFA2S +23%, organic 4% stable, leverage elevated but manageable at 1.67x. Asseco relationship is key unknown.",
+        "date": "2026-03-28",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "**CHANGELOG evaluation required.** Recommend: (1) verify €742.4M vs THESIS.md figure, (2) consider bifurcating threshold into \"operating leverage\" (ex-Asseco) and \"total leverage\" (incl Asseco), (3) assess whether 3.4x constrains further M&A pace or signals increased risk. CSU AGM May 15 remains highest-priority catalyst.",
+        "assessment": "FY2025 annual FS (reported Feb 25) shows EUR 742.4M net debt. Increase driven by: EUR 384.9M net Asseco investment + EUR 390.4M VMS acquisitions = ~EUR 662M total deployed in FY2025. Net debt/CFO = 1.8x (CFO €412.7M) — less alarming on cash flow basis. FCFA2S +23% provides deleveraging runway. **Key question: is Asseco (strategic equity stake in publicly traded company) fundamentally different from typical VMS bolt-on debt?** Asseco FV €1,039M vs €524M cost = 2x marks. If Asseco marked-to-market, \"economic\" leverage much lower. However, the debt is real and the threshold is defined. Prior figure (€365.9M) was likely from interim period or excluded Asseco financing.",
+        "date": "2026-04-06",
+        "indicator": "Net debt / FCFA2S (#5)",
+        "new": "**3.4x (EUR 742.4M net debt).** ⚠️ **BREACH of >3.0x threshold** (\"balance sheet risk\").",
+        "old": "1.67x (EUR 365.9M)"
+      },
+      {
+        "action": "No action on FCFA2S/organic — on track. Leverage breach requires separate CHANGELOG evaluation (above).",
+        "assessment": "FCFA2S +23% confirms >20% bull case. Organic 4% stable (8 quarters). Q4 FCFA2S +40% is exceptional. Net income decline is non-operational (Asseco accounting). EBITDA margin not explicitly updated — prior 25.5%.",
+        "date": "2026-04-06",
+        "indicator": "FY2025 results confirmation",
+        "new": "FY2025: Rev €1,552M (+20%), FCFA2S €218.7M (+23%), organic 4%, net income -53% (Asseco €221.7M expense). Q4: Rev €436.8M (+20%), FCFA2S €51.2M (+40%), EPS €0.59 (+48%).",
+        "old": "—"
+      },
+      {
+        "action": "**CHANGELOG MINOR written (Themes/AI Disruption/CHANGELOG.md 2026-04-17).** No thesis revision. No conviction rescore.",
+        "assessment": "Apr 6 breach resolved via methodology refinement: the 3.0x threshold conflated operating M&A debt with strategic minority-equity-investment financing. Bifurcated into operating leverage (ex-Asseco) and total leverage (incl Asseco) with distinct thresholds. Asseco stake carries a €1,039M fair-value mark vs €524M cost (2x); the \"debt\" funding it is economically offset by a marketable security. V4 (Financial Health) scoring unchanged. Q1 2026 (May 5) will provide first mid-year FCFA2S + leverage trajectory read; CSU AGM (May 15) Q&A may elicit van Poelje on leverage trajectory target.",
+        "date": "2026-04-17",
+        "indicator": "Indicator #5 bifurcation (operating vs total leverage)",
+        "new": "5a Operating ~1.0–1.2x (OK); 5b Total 3.4x (revised threshold >3.5x operational / >4.0x BS-risk; OK)",
+        "old": "3.4x blended breach (flagged Apr 6)"
+      },
+      {
+        "action": "**CHANGELOG MINOR.** No thesis revision. Indicator #4 (Asseco relationship health) — **slightly strengthened, still ⚠ Unknown** pending May 15 AGM van Poelje commentary.",
+        "assessment": "PEMS is the strategic frame justifying Topicus's Asseco deal — architect-level continuity at the moment Topicus executes its first major PEMS-style deployment. Governance impact on TOI is structurally nil (Leonard not on TOI board). Scenario probability shift <2pp (bull +1pp, bear -1pp); below 5pp CHANGELOG-MAJOR threshold.",
+        "date": "2026-04-17",
+        "indicator": "Web research — CSU governance signal",
+        "new": "Mark Leonard not standing for CSU board re-election post May 15 AGM; continues as **PEMS advisor**.",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_TOI_pattern_match.md",
+    "total": 30,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "51% drawdown driven by EPS optics; FCFA2S +23%; ~15x EV/FCF vs 25-40x historical; multi-legged",
+        "score": 4.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q1 2026 normalized results + CSU AGM May 15 + Asseco results — all dated catalysts",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "70%+ recurring, CSU playbook, zero SBC, 4yr CFO CAGR 26.7%",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Net debt/FCFA2S 1.67x, interest coverage 9.46x, EUR 700M RCF",
+        "score": 4
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "run pattern-match",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Topicuscom_Inc_-_Form_Interim_Financial_Statements(Nov-04-2025).md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 5 Sources Processed rows; 5 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "ERII",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "AVERAGE",
+      "name": "Fundamentals Trajectory",
+      "rationale": "Core water OI growing ~13% CAGR ($42.7M→$62.0M), but FY2026 revenue declining to $127.5M midpoint. CO2 exit adds ~$7M savings. Gross margin recovery to 67-68% post-CO2 (compression was fixed-cost dilution + CO2 drag, not structural). Management credibility 3/5 (CO2 reversal). CEO Moon open-market purchase May 2024. No structural capital allocation constraints (zero debt = full discretion). (Source: 10-K FY2022-2025 segment data; Perplexity Round 2 Section 3)",
+      "score": 3,
+      "type": null
+    },
+    "V2": {
+      "level": "EXTREME",
+      "name": "Valuation Mismatch",
+      "rationale": "Stock at $9.87 trades **$1.89 BELOW bear case FV** ($11.76). Prob-weighted FV $19.49 (+97%). Base FV $19.35 (+96%). Market gives negative credit for monopoly persistence. Cross-check P/E confirms ($19.93, 2% convergence). Asymmetry: infinite (positive return in all scenarios). (Source: Models/2026-03-29_ERII_valuation_analysis.md, updated)",
+      "score": 5,
+      "type": null
+    },
+    "V3": {
+      "level": "EXTREME",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "All Drawdown causes confirmed IRRATIONAL or TRANSIENT-and-addressed. **SWPC vs SWA resolved** (SWPC IWP dominant; Saudi de-risked). Self-correcting mechanism now visible: Amundi +323% QoQ accumulation = institutional discovery starting. Q1 2026 earnings = dated forcing function. All analysts Buy (avg PT ~$15, lowest $12 = +22%). Short interest 2.8% (benign). Not in water ETFs = no passive pressure. Pure expectations reset by generalist holders. (Source: Perplexity Round 2 Sections 1, 4)",
+      "score": 5,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "Pre-mortem below. Net cash $83.3M ($1.54/share) = hard floor. Aftermarket $20.2M provides ~$10-12/share standalone floor. Bear FV $11.76 > current $9.87. ~~SWPC vs SWA binary unknown~~ — **RESOLVED** (SWPC dominant). (Source: 10-K FY2025 p.46, p.35; valuation model; Perplexity Round 2 Section 1)",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "STRONG",
+      "name": "Thesis Simplicity",
+      "rationale": "2 conditions: (1) Global SWRO demand continues — HOLDING (IDA 14.8M m³/day new capacity through 2030); (2) ERII maintains 85%+ PX share — HOLDING (zero displacement in 21 transcripts, FLEX at zero wins). Everything else is optionality.",
+      "score": 4,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "5 paths: Saudi pipeline acceleration, PX Q650 adoption, aftermarket/replacement wave (~2030), analyst discovery (3-5→8-10, Northcoast initiated), wastewater expansion (India/US/S. America). 2 showing early evidence (Saudi contract in hand, Northcoast initiation).",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "7 audited SEC filings + 21 transcripts + 3 Perplexity reports (62+52+52 source citations). Core thesis on [FACT] data. ~~SWPC vs SWA~~ resolved. Remaining minor DATA GAPs: manufacturing location (mid-2026), goodwill impairment amount (Q1 10-Q), FLEX traction (monitoring). No critical gaps in financial baseline or thesis assumptions.",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "AVERAGE",
+      "name": "Catalyst Clarity",
+      "rationale": "Q1 2026 earnings (~May 2026) is dated and specific. But thesis-realizing catalysts (Saudi pipeline execution, Q650 adoption, analyst discovery) are unscheduled. No hard forcing function (no index event, no activist).",
+      "score": 3,
+      "type": null
+    }
+  },
+  "pm": {
+    "archetype": "G",
+    "archetypeName": "Derived-Demand Monopoly",
+    "max": 35,
+    "scoredDate": "2026-04-17",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_ERII_pattern_match.md",
+    "total": 32
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 32.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 2 Sources Processed rows; 25 files in Transcripts/; 21 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 7+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-05",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

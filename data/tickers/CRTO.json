@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "CRTO",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "AVERAGE",
+      "name": "Fundamentals Trajectory",
+      "rationale": "[COUNCIL: all, gpt-5.4, 2026-04-05] [EPISTEMIC: 2026-04-07] FY2025 EBITDA ATH ($407M), but FY2026 guide is flat-to-+2% CeT, 32-34% EBITDA margin (down from 35%), CapEx ~$190M (nearly doubled), FCF conversion ~40%. CFO explicitly flagged take-rate compression in both PM (social/CTV mix) and RM (large retailer contract + display). This is stabilization, not inflection. **Earnings quality caveat:** FY2025 ATH margins partially flattered by non-recurring tailwinds: (1) server useful-life extension 5→6 years (Jan 2025) reduced depreciation [FACT: 10-Q Q3 2025 Note 1 p.9]; (2) Iponweb LUS roll-off reduced SBC $103M→$58M (-44%); (3) lower CPMs on purchased inventory reduced TAC [FACT: 10-Q Q3 2025 pp.27-28]. Normalized sustainable EBITDA may be $380-400M rather than $407M. Do not anchor on $407M as the repeatable baseline — 3 council agents independently flagged this. Management alignment decent (chairman $423K buying, $200M buyback) but not structurally locked. Score reduced from 4→3: council bear-case take-rate/CapEx warnings persuasive; bull-optionality prevented drop to 2/5.",
+      "score": 3,
+      "type": null
+    },
+    "V2": {
+      "level": "EXTREME",
+      "name": "Valuation Mismatch",
+      "rationale": "Market prices CRTO at ~1.56x EV/EBITDA (~$637M EV on $407M EBITDA) — massive discount to 12-15x peer band. Price $18.50 vs council FV $50.5 = +173% upside; vs Claude FV $74.9 = +305%. Multi-method confirms: P/E at 15x peer-median = $40.8 (+120%); Owner Earnings cap @ 8% = $60.6 (+228%); trailing FCF yield 33%. Direction overwhelmingly clear. Score capped at 5 (not EXTREME) because vault documents conflicting EV/EBITDA figures (1.2x, 1.56x, 2.5x) and MGNI peer multiples (~6x, 18x, 22.2x) — valuation GAP is massive but precision is weaker.",
+      "score": 5,
+      "type": null
+    },
+    "V3": {
+      "level": "EXTREME",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "All 5 drawdown causes classified TRANSIENT (see table). Mispricing reasons are specific and verifiable: (1) RM client losses misread as secular trend (actually 2 idiosyncratic clients, quantified headwind); (2) French domicile blocking institutional/index access (being addressed, 15-month timeline); (3) sub-$1B market cap triggering mandate-driven forced selling (Cadian -50%, Voya -100%, Lord Abbett -100%). Self-correcting mechanism: redomiciliation + Russell inclusion + buyback mechanically address barriers. **[2026-04-16]:** Prior 4/5 cap (RM-PM flywheel \"credible structural alternative\") removed — flywheel COUNTERED in DEBATES.md: PM CeT grew every year through RM headwind (FY2024-2025); largest lost client's data integration intact under multiyear contract; Shopper Graph DAU 685M→720M; OpenAI sole-partner selection validates data quality. All causes TRANSIENT with active remediation and dated self-correcting mechanism. (Sources: DEBATES.md 2026-04-16 counter; Q1-Q4 2025 Earnings Calls; 10-K FY2021/FY2025; Criteo PR Mar 2, 2026)",
+      "score": 5,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "Net cash $389M on ~$940M market cap = ~41% of market cap backed by cash. Zero debt. ~$475M undrawn facilities. Total liquidity ~$891M. FY2025 FCF $210M. No covenant risk, no refinancing risk. BUT: council Model A thesis-failure probability 11-15% (permanent capital loss) and 35-45% dead-money/value-trap probability. Balance sheet is fortress but operating franchise can deteriorate without triggering distress. Score unchanged at 4.",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "[COUNCIL: all, gpt-5.4, 2026-04-05] Two top-level conditions: (1) $400M+ EBITDA durable; (2) multiple re-rates from ~1.4x to 3x+. But Condition 1 hides correlated sub-risks that bear-case agent clearly mapped: RM retailer-control pressure, PM targeting/take-rate quality, CapEx normalization, and unresolved data-rights dependency. Condition 2 depends on 15-month redomiciliation/index chain. Neither condition secure enough for 4/5. Score reduced from 4→3.",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "EXTREME",
+      "name": "Upside Optionality",
+      "rationale": "8+ independent paths with early evidence: (1) RM headwind trough → growth reacceleration; (2) OpenAI ChatGPT ad scaling; (3) MCP adoption by other LLMs; (4) Russell index inclusion; (5) buyback retiring shares at trough; (6) M&A exit; (7) Commerce GO! self-service at 80%+ margin; (8) SA360 search-to-shelf budget unlock (600% ROAS, ~2 growth points guided) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04]; (9) auction-based display wallet-share expansion (49 retailers, 21% of on-site spend) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04]; (10) agency holdco standardization (38% of RM, 3/4 products) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04].",
+      "score": 5,
+      "type": null
+    },
+    "V7": {
+      "level": "AVERAGE",
+      "name": "Evidence Quality",
+      "rationale": "Core thesis rests on audited 10-K data (4 annual + 4 quarterly filings reviewed). 18 transcripts reviewed. EBITDA, OCF, balance sheet, CeT trajectory are all [FACT]-labeled from filings. Score reduced from 4→3 because critical gaps ARE thesis-critical: OpenAI revenue-share terms/exclusivity undisclosed, Shopper Graph data-source decomposition unanswered (key to RM-PM flywheel risk), FY2027 capex normalization unknown, MGNI peer-multiple unreconciled (affects V2 precision). These require resolution before upgrading.",
+      "score": 3,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "7 dated catalysts with estimated impact, clear sequencing. Key dates: Q1 2026 earnings (~May 2026), Luxembourg (Q3 2026), Russell (June 2027). All are specific and observable. Score 4 (not 5) because the full re-rating requires 15 months and 7 sequential events — timing uncertainty on US redomiciliation (must hit April 2027 rank day) could delay Russell by a full year.",
+      "score": 4,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**RM-PM Negative Flywheel** — If RM clients in-house, does Shopper Graph data flow continue under technology-only arrangements? If not, PM targeting quality degrades, creating correlated revenue decline across both segments. QUESTIONS.md has open item on Shopper Graph data source decomposition. Key question: what % of Shopper Graph comes from RM integrations vs publisher-side vs first-party? [COUNCIL: bear-case, o3, 2026-04-04]",
+      "**Publisher Fee-Share Retaliation** — As TAC/revenue falls (benefit to CRTO), publishers may demand higher floor pricing or switch supply paths, reversing margin gains. Second-order effect not tracked by any current indicator. Monitor: TAC ratio stabilization or reversal in FY2026 filings. [COUNCIL: bear-case, o3 updated-model, 2026-04-04]",
+      "**Litigation Tail Risk** — GoodRx settlement DENIED by court (Jan 2026); AlmondNet patent pending; CNIL EUR 40M appeal pending Conseil d'Etat (ruling expected 2026-27). Aggregate worst-case $15-20M (above $7M GAAP accrual). Precedent risk: if tracking pixel class actions succeed on merits, Criteo's data methodology may require restructuring. [QUESTIONS.md Filing Review; COUNCIL: bear-case, o3 v2]",
+      "**Ad Tech Base Rate Gap** — No sector-specific case study in vault. Historical base rate for profitable ad tech at sub-2x EV/EBITDA re-rating within 24 months is undefined. Council estimates range 15-30% depending on adjustment factors. DEBATES.md Vector 1 (Base Rate Attack) remains OPEN. [DEBATES.md 2026-03-30]",
+      "**SA360 Search Budget Diversion** — First SA360 campaign delivered 600% ROAS [FACT: Q4-25 transcript p.7]. If SA360 channels meaningful search budgets ($170-200B global market) into Retail Media, this is a material NEW growth vector not in thesis V6. No indicator currently tracks SA360-sourced CeT. Monitor Q1/Q2 2026 earnings for any disclosure. [COUNCIL: bull-optionality, o3 updated-model, 2026-04-04]",
+      "**DoorDash/Delivery Platform Exposure** — DoorDash acquired Symbiosys ($175M) for in-house ad-tech. Uber Eats US exited. What % of RM CeT comes from delivery/marketplace platforms vs traditional retail? Not disclosed. Delivery platforms have stronger in-housing incentives than traditional retailers. [DEBATES.md Vector 2]"
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Backward-looking; masks scope reductions (service-to-SaaS). Judge on rolling 4Q. <95% for 2+ Qs = escalate to STRUCTURAL.",
+        "current": "99-120% (FY2024-25, ex-largest client). 110% including mid-tier.",
+        "lastUpdated": "2026-04-04",
+        "name": "Same-Retailer RM CeT Retention (%)",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Track direction post-Q1 2026. Coverage expansion post-Luxembourg = positive. Discovery gap IS the thesis.",
+        "current": "4 analysts (sparse). Consensus reflects trough narrative.",
+        "lastUpdated": "2026-04-04",
+        "name": "Analyst Estimate Revisions / Coverage Count",
+        "num": 12
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Growing share = TAC margin tailwind (fewer hops). ANA SPO pressure accelerates this trend.",
+        "current": "~30% of commerce media buys through Commerce Grid (Q2 2025 call). BidSwitch: 600B+ daily ad requests.",
+        "lastUpdated": "2026-04-04",
+        "name": "Commerce Grid / SSP Adoption (% of commerce buys)",
+        "num": 13
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Reversal above 45% = mix shift reversing, negative. Continued decline to <38% = margin thesis strengthened. Council flagged publisher fee-share retaliation as second-order risk.",
+        "current": "40% FY2025 (down from 59% FY2021). Structural decline from gross-to-net shift + RM mix.",
+        "lastUpdated": "2026-04-04",
+        "name": "TAC/Revenue Ratio",
+        "num": 14
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Structural DSO improvement = cash release for buyback. DSO >65 days = WC release thesis falsified. Council estimates ~$80M incremental cash from WC release in FY2026.",
+        "current": "Record-low DSO (CFO commentary Q4-25). Trade receivables $569M (down from $801M YoY Q3-25, revenue flat).",
+        "lastUpdated": "2026-04-04",
+        "name": "DSO / Working Capital",
+        "num": 15
+      }
+    ],
+    "noiseFilter": [
+      "**Daily stock price / sector correlation moves** — CRTO is sub-$1B, thinly traded (4 analysts), moves with ad tech sentiment. Daily moves are noise. Only act on sustained (>10%) multi-week divergence from fundamentals.",
+      "**Analyst ratings without updated financial models** — Initiation or reiteration at current targets without revised EBITDA/CeT estimates adds no information. Only act on estimate revisions with explicit methodology change.",
+      "**OpenAI headline noise (TTD/Amazon partnership rumors, \"ChatGPT ads\" articles)** — Market conflates \"OpenAI adds partners\" with \"Criteo loses.\" Thesis framing brief clarifies: Smartly = creative optimization (different function), NOT commerce demand. Criteo = sole commerce demand partner as of April 2026. Only act on CONFIRMED competing commerce DSP integration announcement with live ad inventory.",
+      "**Cookie deprecation narrative resurgence** — Google officially abandoned deprecation July 2024. Any revival is recycled bearish framing. Retargeting ~40% of PM but Criteo proactively diversified. Safari/Firefox already blocked — that's priced. Only act on ACTUAL new browser policy changes.",
+      "**Single-quarter CeT miss in Q1 2026** — Q1 is the GUIDED TROUGH ($245-250M). Missing by $5-10M is noise within the guided range. Only a miss below $230M with negative H2 commentary would be structural.",
+      "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
+    "staleDays": 27,
+    "trendLog": [
+      {
+        "action": "No action needed",
+        "assessment": "Confirmed on track. CRTO onboarded as INVESTMENT 2026-03-31. INDICATORS.md created with full indicator set. All thresholds sourced from audited FY2025 data + Q4 2025 guidance. No threshold breaches. CapEx spike ($190M vs $101M) is GUIDED and EXPECTED within thesis — not a breach, but highest-priority structural indicator (#6). Next decisive data: Q1 2026 earnings (~May 2026).",
+        "date": "2026-04-04",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No breach — positive development. V6 (AI optionality) de-risked. Monitor Q1 2026 earnings (May 6) for pipeline/revenue commentary.",
+        "assessment": "First-mover advantage secured. Revenue contribution: $0 currently (FY2026 guide excludes). Monetization timeline: H2 2026 earliest. 1.5x conversion rate is strong validation of commerce-in-LLM thesis. TTD as second partner would validate the channel without displacing Criteo's commerce intelligence positioning (TTD = programmatic display, Criteo = commerce demand).",
+        "date": "2026-04-06",
+        "indicator": "OpenAI partnership (#7)",
+        "new": "**Criteo announced as inaugural ChatGPT advertising technology partner (Mar 2, 2026).** Integration rolling out (US, Free + Go versions). LLM-referred users convert at 1.5x rate vs other channels. ACRS launched. TTD reportedly in talks as second partner.",
+        "old": "ChatGPT pilot live"
+      },
+      {
+        "action": "No action — price decline creates buyback opportunity per thesis.",
+        "assessment": "Stock near trough. Buyback at these levels highly accretive. Chairman buying pattern (3 purchases, $423K Nov-Mar) intact. CFO grant/sale is routine RSU vesting, not directional signal.",
+        "date": "2026-04-06",
+        "indicator": "Stock price / valuation",
+        "new": "52-week low $16.15 (Feb 17). YTD -29%. Forward P/E ~6.9x. Market cap ~$1.9B. CFO received 83,502 share grant (vesting conditional on Luxembourg). CFO scheduled resale of 45,677 vested shares.",
+        "old": "~$18.50 (Apr 2)"
+      },
+      {
+        "action": "No breach — data gap closed. Continue to monitor semi-monthly.",
+        "assessment": "[FACT] 2.12% well below 5% absolute threshold. [FACT] +12.8% MoM far below 2x increase threshold. [INFERENCE] Benign short positioning consistent with discovery-gap thesis — no active short thesis priced into the name. DATA GAP resolved.",
+        "date": "2026-04-14",
+        "indicator": "Short Interest (#10)",
+        "new": "1.07M shares / 2.12% float (Apr 14, 2026). +12.8% MoM (from 948,594). Days to cover 1.57-2.23. [FACT: Finviz, StockAnalysis.com, Apr 14 2026]",
+        "old": "DATA GAP"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "Mixed A+F",
+    "archetypeName": "Turnaround with Hidden Data Franchise + AI Disruption Beneficiary",
+    "max": 35,
+    "scoredDate": "2026-04-17",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_CRTO_pattern_match.md",
+    "total": 32.5
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 33.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Criteo S.A._10-K_2025-12-31_English.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 18 Sources Processed rows; 18 files in Transcripts/; 18 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 13+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-16",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

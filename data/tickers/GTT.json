@@ -1,0 +1,421 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "GTT",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "**DOWNGRADED Apr 3 (5→4, council concession).** [COUNCIL: all, o3, 2026-04-03] Council scored 4/5 — conceded after adversarial review. Rubric 5 requires \"Business inflecting meaningfully upward\" but FY2026 revenue is guided DOWN 3-8% (€740-780M vs €803M). Order book declined 342→288 units. The inflection is forward-looking (FID pipeline, Q1 ordering pace), not current. Leading indicators are exceptional: 84 mtpa FID record, 14 LNGC orders YTD 2026, Ras Laffan structural catalyst (17% capacity destroyed, 3-5yr repair), force majeure on long-term contracts. But the trough IS happening now — rubric says \"inflecting\" (present tense). 4/5 is the honest score until reported numbers confirm re-acceleration (expected FY2027). *(Prior: 5/5 from Mar 20. Sources: FY2025 Earnings Call; Ras Laffan Impact Assessment; Council validation 2026-04-03)*",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "**UPGRADED Apr 7 (AVERAGE→STRONG, user override).** EV/EBITDA is the appropriate primary methodology for an asset-light, net-cash royalty business where P/E structurally understates value (net cash ~€300M drags earnings yield; royalty model has no capital-intensive denominator). PW FV €346 vs €203.60 = +70% mismatch (EV/EBITDA). Council o3 FV €309 = +52% (also STRONG territory). Council gpt-5.4 P/E-based FV €247 = +21% (AVERAGE territory) — methodologically disadvantaged for this capital structure. Multi-method stress test: weakest method (P/E at €247) sits at AVERAGE/STRONG boundary; disqualified as primary on capital-structure grounds, not ignored. **All-STRONG checkpoint (Apr 7): V2 flagged as most vulnerable dimension — two independent council runs scored AVERAGE. Retained at STRONG per user judgment; noted as skepticism point.** *(Prior: AVERAGE from Apr 4. Sources: Fair-value-estimation Mar 28; Council validations Apr 3-4)*",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "**MAINTAINED Apr 3 (council scored 4/5 — pushed back).** [COUNCIL: all, o3, 2026-04-03] Council scored 4/5 citing \"one STRUCTURAL watch-item (competing membrane).\" Pushed back: competing membrane is a V5/V7 competitive risk, not a V3 mispricing identification issue. The mispricing reason IS specific, verifiable, and demonstrably temporary. Market conflates 3 distinct layers: (a) temporary geopolitical premium (~3-4%), (b) structural LNG deficit premium (Ras Laffan 17% destroyed, 3-5yr repair), (c) dual chokepoint energy security premium (Bab el-Mandeb reactivated Mar 28). Force majeure on long-term contracts creates contractual forcing function. Self-correcting mechanism is arithmetic: replacement FIDs → vessel orders → GTT revenue. *(Sources: CHANGELOG Mar 31; Council validation 2026-04-03)*",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "**UPGRADED 2026-03-31 (3→4).** Rubric 4: \"Limited failure modes. Binary risks bounded but with some uncertainty. Floor exists and is reasonably hard.\" Bear case €222 exceeds current price (~€198-204) — even under FID disappointment + margin compression, the stock is undervalued. Net cash ~€300M. €8.94 dividend (4.5% yield) provides income floor. Dual chokepoint reduces ceasefire-unwind risk to -5-8% (previously -€6-8/share). Per A18 (LESSONS.md), scarcity-asset with contracted backlog provides structural floor distinct from generic cyclicals. Asset-light royalty model = no physical asset risk, no debt. FY2026 EBITDA guided €490-530M (65-68% margin) — margin resilience confirmed. Elogen drag bounded -€15-20M/yr (gigafactory halted). *(Sources: Fair-value-estimation Mar 28; Filings; Bear Case risk scenarios; Resolution Report Mar 19; LESSONS.md A18)*",
+      "score": 4,
+      "type": null
+    },
+    "V5": {
+      "level": "STRONG",
+      "name": "Thesis Simplicity",
+      "rationale": "**UPGRADED Apr 5 (AVERAGE→STRONG).** One genuine condition with real uncertainty: LNG structural demand continues — HOLDING (consensus 4.5% growth, 84 mtpa FID record, force majeure urgency). Monopoly position (2,466 patents, all yards licensed, no commercial-scale competitor) and FID conversion (75-90% historical base rate, Q1 pace validating) are not real thesis dependencies — monopoly has no credible challenger at commercial scale (5-8yr minimum), and conversion is a \"how much\" question, not an \"if.\" Effectively 1 condition, firmly holding. *(Sources: Bull Case; QUESTIONS.md; Resolution Report Mar 19)*",
+      "score": 4,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "**UPGRADED 2026-03-31 (4→5).** Rubric 5: \"5+ independent ways to win. Base case is conservative; multiple scenarios deliver outsized returns.\" 5 independent paths to outperformance, 2+ showing early evidence: (1) FID conversion pace — Q1 ordering acceleration (45-50+ vessels annualized 180-200 vs. Clarksons 115); (2) dual chokepoint reactivation (Mar 28 — Houthi entered war, Cape handles BOTH diversions, +15-30 vessels); (3) ULEC ethane carriers (12 orders, 100% GTT share); (4) LNG fuel adoption (€7M→€65M, growing); (5) Allied naval coalition escort corridors highlighting LNGC scarcity. Base case conservative given Q1 ordering acceleration and force majeure urgency. *(Nakilat 25-vessel charter removed Apr 2 — 2024 deal already in backlog, not a 2026 catalyst. See NOTES.md correction.)* *(Sources: CHANGELOG Mar 31; Daily Intelligence Briefing Mar 31; Transcripts; Bull Case)*",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "EXTREME",
+      "name": "Evidence Quality",
+      "rationale": "**UPGRADED Apr 7 (STRONG→EXTREME).** Two of three DATA GAPs that drove the Apr 3 council downgrade are now LARGELY RESOLVED via deep research: (1) **Patent expiry: RESOLVED** — 15 patents mapped across 6 generations (1995-2023). Foundational 1960s patents expired 35+ years ago, market share unchanged. Current-gen (Mark III Flex, NO96 Super+) covered by post-2014 families expiring 2034-2043. Filing pace accelerating (55→68/yr, 2021-2025). Non-patent moat (60yr know-how, classification approvals, yard tooling, safety record) is the primary barrier. KFTC ruling bounded as latent yard leverage, not a cliff. (Source: Patent Portfolio report Apr 7) (2) **Royalty structure: RESOLVED** — definitively a flat rate per m² indexed to French labour cost (~€335/m² as of Oct 2015 base), NOT % of ship price. Volume discount for series orders. Council's \"7% FV upside\" from vessel-price-linked royalty DISCONFIRMED. (Source: Data Gap Analysis Apr 7 citing GTT investor presentations 2013-2016) Remaining DATA GAPs: (3) IPCEI €86M clawback — OPEN but bounded (€17M bank guarantee anchor; €17-86M range vs €347M cash; headline > financial risk; resolves URD late Apr); (4) Foam supply — OPEN but indirect (Dongsung FINETEC + Hankuk Carbon ~90% share; risk is shipyard-level revenue timing, not revenue loss). Core thesis rests on [FACT]-labeled data from 25 transcripts, audited filings, patent registry analysis, and investor presentation primary sources. RC 5/5. Remaining gaps are non-thesis-altering and bounded. *(Prior: STRONG from Apr 3 council. Sources: 25 transcripts; Filings; Patent Portfolio report Apr 7; Data Gap Analysis Apr 7; Council validation 2026-04-03)*",
+      "score": 5,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "**UPGRADED 2026-03-31 (3→4).** Rubric 4: \"Catalysts are specific and dated, with minor timing uncertainty.\" 3 dated catalysts within 4 months: (1) Q1 activity update Apr 21 — new CEO first presentation, order flow data; (2) EU Russian LNG ban Apr 25 — short-term contracts; (3) Q2 results Jul/Aug — first full-quarter post-dual-chokepoint. Dual chokepoint shipping repricing is near-term observable (insurance/freight for Bab el-Mandeb immediate). Minor timing uncertainty on whether catalysts trigger GTT-specific repricing vs. broader LNG sector move. *(Nakilat orders removed Apr 2 — 2024 deal, not a forward catalyst. See NOTES.md correction.)* *(Sources: CHANGELOG Mar 31; GTT IR calendar; Daily Intelligence Briefing Mar 31)*",
+      "score": 4,
+      "type": null
+    }
+  },
+  "indicators": {
+    "blindspots": [
+      "**Chinese yard indigenous technology (CSSC/Hudong)** — Opaque. No reliable English-language tracking of membrane tech development outside GTT licensing. Monitor via: CSSC annual reports (April), Lloyd's Register technology approvals (annual). Risk: a commercial delivery without GTT license would be thesis-altering.",
+      "**USTR port fee legislation timeline** — Fees proposed ($1.5M/call for Chinese-operated; $18/net ton for Chinese-built non-Chinese-owned) but **suspended Nov 10, 2025 – Nov 9, 2026** per US-China trade agreement. Currently no impact. Monitor USTR docket for post-Nov 2026 reinstatement. If reinstated, Chinese-built LNG carriers serving US trade face penalties → demand redistribution to Korean yards (positive for GTT).",
+      "**2025 FID cohort → order conversion rate** — 84 Mtpa sanctioned in 2025, but actual conversion to shipyard orders won't be visible until 2027-2028. Historical conversion: 75-90%. A sustained drop below 70% would signal structural change in project economics. No real-time tracking possible.",
+      "**Korean yard labor disputes** — Periodic strikes at HD KSOE/Hanwha can delay deliveries and shift ordering patterns. Monitor via: Korean business press. Usually short-lived (weeks) but can cause order bunching."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Spikes >$100k signal urgency but revert. Current level unprecedented — sustained >$200K = structural not cyclical",
+        "current": "Post-Hormuz intelligence: ~$300K/day Atlantic & Pacific (Mar 27, +650% from pre-war). Note: Spark public platform shows $47.5K/$52K indicative — likely stale or pre-war cached data (subscription required for live rates). Verify via Spark subscription or broker",
+        "lastUpdated": "2026-03-28",
+        "name": "Spark LNG freight rates (Spark25S/30S)",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Wide = positive for FIDs, but volatile QoQ. Tracks arb economics",
+        "current": "JKM $20.40/MMBtu (May '26 futures, Mar 27, +68.5% from pre-war); TTF Apr '26 ~$16.9/MMBtu (+52%)",
+        "lastUpdated": "2026-03-28",
+        "name": "JKM-HH natural gas spread",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Lumpy by nature. Judge on rolling 4Q basis only. Annual >60 units = healthy",
+        "current": "**Q1 2026 OFFICIAL: 32 orders** (29 LNG carriers + 2 VLECs + 1 onshore 10,000 m³ tank) vs Q1 2025 16 orders = **DOUBLE YoY; 2nd best Q1 ever per CEO Michel**. LNGC annualized pace = **116/yr** (vs 60/yr tracking estimate Apr 6 — yard-level tracking undercounted by ~50% due to 0-4 week disclosure lag). Total commercial orders annualized = **128/yr**. Deliveries Q1: 22 LNGC + 1 FSRU + 2 LNG-as-fuel.",
+        "lastUpdated": "2026-04-22",
+        "name": "Quarterly GTT order intake",
+        "num": 10
+      }
+    ],
+    "noiseFilter": [
+      "**Single-quarter freight rate spikes** — Hormuz disruption caused Spark25S to $161k/day (+163% in one day). These revert within weeks. Not indicative of structural ordering trends.",
+      "**Individual shipyard contract announcements** — Already priced; GTT confirms on ~1-month lag from yard announcement. The yard filing is lead; GTT press release is definitive.",
+      "**Short-term LNG price moves** — JKM/TTF moves <20% and <3 months are cyclical. Only sustained spread widening over 2+ quarters indicates structural arb shift.",
+      "**Analyst PT revisions** — GTT is well-covered; consensus moves reflect backward-looking models. Our edge is forward FID pipeline, not consensus tracking.",
+      "**FLNG/FSRU one-off orders** — Each is valuable but lumpy. Don't extrapolate one FLNG order into a trend."
+    ],
+    "sourceFile": "Themes/Hormuz/Tickers/GTT/INDICATORS.md",
+    "staleDays": 9,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "84 Mtpa (2025, 9 FIDs). **Q1 2026: 7 projects sanctioned (>$40B, 8B boe).** WoodMac revised upward: ~25 total sanctions expected 2026 (↑ from 4-5 Jan estimate). CP2 Phase 2 FID ($8.6B, Mar 12). ME projects delayed (QatarEnergy NFW disrupted). Ras Laffan damage (17% / ~13 mtpa, 3-5yr repair) tightens long-term supply outlook.",
+        "direction": "↑ **Strongly positive** — Q1 pace exceeds full-year 2025",
+        "lastUpdated": "2026-04-06",
+        "name": "Annual LNG FID Mtpa sanctioned",
+        "num": 1,
+        "source": "WoodMac Q1 2026 tracker; Venture Global PR; Perplexity Apr 6",
+        "threshold": "<40 Mtpa/yr = bear trigger; <55 Mtpa = weakening"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**297 core units (Mar 31 2026 official)** — 268 LNGC + 23 ethane + 2 FSRU + 3 FLNG + 1 onshore; + 46 LNG-as-fuel. First net increase since H1 2024 peak (342→288 Dec 2025→297 Mar 2026 = +9). FY2024 backlog €2,016M through 2028+.",
+        "direction": "↑↑ **INFLECTED** — order book has bottomed and reversed",
+        "lastUpdated": "2026-04-22",
+        "name": "GTT order book units",
+        "num": 2,
+        "source": "GTT Q1 2026 Activity Update (Apr 22 press release)",
+        "threshold": "<250 = revenue concern; <220 = thesis risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "3.5yr",
+        "direction": "Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "Korean yard forward cover (years)",
+        "num": 3,
+        "source": "NH Investment Securities",
+        "threshold": "<2.5yr = demand softening; <2.0yr = structural risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": ">90% (Mark III Flex confirmed on Sonangol order)",
+        "direction": "Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "GTT market share (membrane containment)",
+        "num": 4,
+        "source": "GTT press release 12-Mar-2026",
+        "threshold": "<85% = competitive threat; <80% = thesis broken"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "None to date",
+        "direction": "Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "KC-1/KC-2 commercialization",
+        "num": 5,
+        "source": "Korean shipyard filings",
+        "threshold": "Any commercial delivery = market share risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "On track (Apr 2026 short-term, Jan 2027 long-term)",
+        "direction": "Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "EU Russian LNG ban status",
+        "num": 6,
+        "source": "EU Council, HFW analysis",
+        "threshold": "Reversal or delay >12mo = negative structural shift"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~$245-255M/vessel (SHI: $253M, HD KSOE: $245M Sonangol)",
+        "direction": "Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "LNG newbuild price index (174k m³)",
+        "num": 7,
+        "source": "SHI/HD KSOE contract disclosures",
+        "threshold": "<$200M = overcapacity signal; >$300M = demand-pull"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action needed",
+        "assessment": "Confirmed on track. 8+ orders in Mar alone; Mark III Flex confirmed on new orders; no KC-1/KC-2 developments.",
+        "date": "2026-03-24",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No structural breach in freight (cyclical), but Ras Laffan timeline is STRUCTURAL — extends LNG supply deficit thesis significantly",
+        "assessment": "+650% from pre-war baseline. Note: Spark public platform still shows $47.5K/$52K indicative — discrepancy likely stale cached data vs live subscription rates. QatarEnergy force majeure on LT LNG contracts; Ras Laffan repair **3-5 years** per QatarEnergy CEO (NOT months — Rystad confirms turbine delivery delays of 2-4 years).",
+        "date": "2026-03-28",
+        "indicator": "LNG freight rates",
+        "new": "~$300K/day (post-Hormuz intelligence, Mar 27)",
+        "old": "~$47-52K/day (pre-war)"
+      },
+      {
+        "action": "CHANGELOG entry logged (Mar 31). GTT V3, V6, V8 rescore candidates.",
+        "assessment": "Reverses Mar 16 \"NOT ACTIVE\" assessment. Iran signalled proxy activation. Cape must handle BOTH Hormuz and Bab el-Mandeb diversions simultaneously. Energy security FID case now has two independent chokepoint justifications. Bear probability ↓ 15%→13%, bull ↑ 25%→27%.",
+        "date": "2026-03-31",
+        "indicator": "Dual chokepoint status",
+        "new": "**ACTIVE** — Houthi formally entered war Mar 28, threatening Bab el-Mandeb (12% world trade)",
+        "old": "NOT ACTIVE (Mar 16)"
+      },
+      {
+        "action": "No breach — on track. Monitor GTT Q1 activity update (Apr 22) for official confirmation.",
+        "assessment": "Healthy ordering pace. 60 annualized exceeds the >60/yr \"healthy\" cyclical threshold. 100% GTT Mark III Flex share maintained. Chinese yards now receiving meaningful volume (8/15 = 53% of Q1 orders).",
+        "date": "2026-04-06",
+        "indicator": "Q1 2026 order intake (#2, #10)",
+        "new": "**15 LNGC orders in Q1 2026** (60/yr annualized). All Mark III Flex. Mix: Korean 6, Chinese 8, HD Samho 1. No KC-1/KC-2 developments.",
+        "old": "288+ base (Q4 2025)"
+      },
+      {
+        "action": "No breach — positive for order pipeline. FID→order conversion lag: 12-24 months. Q1 FIDs will drive 2027-2028 orders.",
+        "assessment": "Q1 activity tracking well above initial WoodMac pessimistic forecast. CP2 Phase 2 is the largest single US LNG FID. 7 sanctions in Q1 vs 9 in all of 2025 suggests accelerating pace. BUT ME delays (QatarEnergy NFW disrupted by Ras Laffan) partially offset.",
+        "date": "2026-04-06",
+        "indicator": "LNG FID activity (#1)",
+        "new": "**7 projects sanctioned in Q1 2026** (>$40B, 8 boe). CP2 Phase 2 ($8.6B, Mar 12). WoodMac now expects ~25 total 2026 sanctions (↑ from 4-5 Jan estimate). ME projects delayed.",
+        "old": "4-5 FIDs expected 2026 (WoodMac Jan)"
+      },
+      {
+        "action": "Logged — supports long-term thesis. No immediate action.",
+        "assessment": "Clarksons data confirms robust multi-year orderbook. 234 carriers may not be sufficient for 229 Mtpa capacity — supports continued ordering. Spark30S normalized to ~$52K/day from $278K spike.",
+        "date": "2026-04-06",
+        "indicator": "LNG carrier orderbook (Clarksons)",
+        "new": "**234 newbuild LNG carriers** scheduled for delivery 2026-2030. 2026 is record delivery year. Fleet growth may lag 229 Mtpa new liquefaction capacity → structural shortfall possible.",
+        "old": "—"
+      },
+      {
+        "assessment": "**Branch A (BULL) on 3/3 quantitative signals.** Order book inflected — first net quarterly rise since H1 2024. Thesis validation. Re-entry conditions 2 and 3 (ordering pace + guidance hold) MET. Rule 11 not triggered (no WATCHLIST/conviction/portfolio/scenario change — position MONITORING).",
+        "date": "2026-04-22",
+        "indicator": "GTT Q1 2026 Activity Update (#2, #10)",
+        "new": "**Official: 297 core units Mar 31 2026 (+9 net; first increase since H1 2024). Q1 orders: 32 total (29 LNGC + 2 VLEC + 1 onshore). FY2026 guidance reaffirmed €740-780M / €490-530M. CEO Michel: \"2nd best Q1 commercial performance.\"** Annualized LNGC pace 116/yr — exceeds Clarksons 115 full-year forecast in a single quarter. Deliveries Q1: 22 LNGC + 1 FSRU + 2 LNG-as-fuel. Middle East: \"no direct impact\" (management non-attribution maintained). Petrobras 120-vessel weather-routing contract + HD Hyundai 102K m³ VLEC JDP = GTT Marine / new-IP optionality validation. Patents: GTT #1 French mid-cap filer 2025 (68 applications).",
+        "old": "288 core units Dec 2025; Q1 tracking 15 LNGC"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "Mixed B+D",
+    "archetypeName": "Cyclical Inflection (LNG vessel ordering super-cycle) + Strategic Value (monopoly franchise undervalued at trough)",
+    "failurePatterns": [
+      {
+        "evidence": "EV verified (€7.08B EV = €7.38B mcap - €300M net cash). Peer multiples sourced current.",
+        "id": "FP-1",
+        "match": "NO",
+        "name": "Unverified Core Inputs"
+      },
+      {
+        "evidence": "+72% prob-weighted upside, well above 25% threshold.",
+        "id": "FP-2",
+        "match": "NO",
+        "name": "Insufficient Materiality"
+      },
+      {
+        "evidence": "Net cash, zero debt, 67% EBITDA margin. Opposite of distress.",
+        "id": "FP-3",
+        "match": "NO",
+        "name": "Operational Distress"
+      },
+      {
+        "evidence": "Multiple dated catalysts (Apr 21 Q1 update, quarterly earnings, FID announcements).",
+        "id": "FP-4",
+        "match": "NO",
+        "name": "No Hard Catalyst"
+      },
+      {
+        "evidence": "RC 5/5. 25 transcripts reviewed. Multiple filings processed.",
+        "id": "FP-5",
+        "match": "NO",
+        "name": "Placeholder Research"
+      },
+      {
+        "evidence": "Royalty model — no contracts, no physical delivery, no cost overruns.",
+        "id": "FP-6",
+        "match": "NO",
+        "name": "Unlimited Contract Downside"
+      },
+      {
+        "evidence": "Single-dimension risk profile (FID conversion uncertainty). No correlated vulnerabilities.",
+        "id": "FP-7",
+        "match": "NO",
+        "name": "Compound Fragility"
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_GTT_pattern_match.md",
+    "total": 34,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Prob-weighted FV €342 (+72%); bear case €222 > current; 4+ independent legs; strong floor",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q1 update Apr 21, quarterly earnings, FID announcements, monthly order data — all dated",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "~100% monopoly, 67% EBITDA margin, 2,466 patents, 4yr guidance beat streak",
+        "score": 5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Net cash €300M, zero debt, 4.5% dividend yield, no dilution",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "FY2025 Annual Results PR (Feb 19 2026) reviewed; URD pending publication on gtt.fr",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 25 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 16+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-07",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

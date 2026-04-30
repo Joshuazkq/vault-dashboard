@@ -1,0 +1,277 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "SPSC",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**Organic vs. inorganic revenue split** — SPSC doesn't cleanly disclose. Core EDI growth rate is inferred, not stated. Proxy: recurring revenue growth ex-acquisition cohorts.",
+      "**MAX AI adoption rate** — No public metrics on MAX penetration across 54,600 customers. $2K-5K/year per customer = $100-250M incremental ARR at scale. Monitor via: earnings call commentary on AI attach rates.",
+      "**1P/3P seller breakdown for recovery segment** — Amazon/Walmart seller dynamics drive recovery revenue. No reliable external tracking of SPSC's specific client mix.",
+      "**ERP vendor AI roadmap (SAP S/4HANA, Oracle)** — These are building AI-native supply chain modules. If they internalize EDI, SPSC's moat weakens. Monitor via: SAP/Oracle product announcements."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Tracks upsell + MAX AI adoption. Slow and steady expected",
+        "current": "~$14K/customer. Target runway to $40-45K",
+        "lastUpdated": "2026-03-28",
+        "name": "ARPU trend",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "At $55, buyback highly accretive. Pace signals management confidence",
+        "current": "$114M in FY2025; $185M auth remaining",
+        "lastUpdated": "2026-03-28",
+        "name": "Buyback activity",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Monitor for further headwinds or normalization. Platform risk is structural for recovery segment",
+        "current": "Amazon policy changes impacted SupplyPike/Carbon6",
+        "lastUpdated": "2026-03-28",
+        "name": "Amazon/Walmart platform policy",
+        "num": 9
+      }
+    ],
+    "noiseFilter": [
+      "**Headline revenue growth rate (7%)** — Masks core EDI growing ~20%. Headline is depressed by acquisition segment drag. Track core and recovery separately.",
+      "**C-suite departures** — 4 in 12 months is concerning but partly driven by activist pressure + acquisition integration. Judge by operational metrics, not personnel news.",
+      "**Daily share price volatility** — $55 is near multi-year trough. Low-volume swings are amplified.",
+      "**Analyst PT revisions without new modeling** — Most estimates don't separate core vs. recovery. Only react to analysts who model segment-level dynamics."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/SPSC/INDICATORS.md",
+    "staleDays": 16,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "~20-22% (FY2025 est, ex-recovery segment)",
+        "direction": "↑ Positive (hidden by headline)",
+        "lastUpdated": "2026-03-28",
+        "name": "Core EDI fulfillment growth (YoY)",
+        "num": 1,
+        "source": "SPSC 10-K, earnings calls",
+        "threshold": "<15% = moat weakening; <10% = structural threat from ERP vendors; >20% = healthy"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "-350 net (Q4 2025; entirely 3P Carbon6 by design). Organic 1P ~1,100 through Q1-Q3 2025 per Analyst Day; Q4 2025 1P flat sequentially (enablement timing)",
+        "direction": "⚠ Watch mandate (2026-04-15) — pivotal pattern-match input",
+        "lastUpdated": "2026-04-15",
+        "name": "Net customer adds — **Q1 2026 organic 1P adds ⭐ PIVOTAL**",
+        "num": 2,
+        "source": "SPSC quarterly filings, Analyst Day",
+        "threshold": "**Q1 2026 1P adds ≥1,000 annualized = TRANSIENT-by-design confirmed (thesis intact); <800 annualized = STRUCTURAL churn → triggers U1 Part E cap → pattern-match flips to PASS.** Negative 2+ consecutive total quarters in 1P = structural churn signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Dragging headline growth to 7% (FY2026 guide)",
+        "direction": "↓ At risk",
+        "lastUpdated": "2026-03-28",
+        "name": "Revenue recovery segment trajectory",
+        "num": 3,
+        "source": "SPSC earnings calls",
+        "threshold": "Stabilization = trough confirmed; continued decline = SupplyPike/Carbon6 impaired"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "31% (FY2025, 18x EV/EBITDA trailing)",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "EBITDA margin",
+        "num": 4,
+        "source": "SPSC 10-K",
+        "threshold": "<28% = cost structure concern; >33% = operating leverage thesis validated"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Anson Funds pushing for CEO change/sale; Irenic Capital Q4 2025 position; 4 independent directors added",
+        "direction": "→ In progress",
+        "lastUpdated": "2026-03-28",
+        "name": "Activist campaign progress",
+        "num": 5,
+        "source": "SEC filings, press",
+        "threshold": "Proxy contest filed = near-term catalyst; settlement = moderate catalyst; activist exits = negative signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Historical: CEO Collins consistent net SELLER across all price points ($170→$147→$59, all 10b5-1). CFO Nelson (outgoing) also seller. Zero open-market purchases by any insider. Total insider ownership ~1.6%. Pattern-match A2 scored 2/5.",
+        "direction": "⚠ Watch mandate (2026-04-15)",
+        "lastUpdated": "2026-04-15",
+        "name": "**Insider purchase activity ⭐ WATCH MANDATE**",
+        "num": 6,
+        "source": "SEC Form 4 filings, secform4.com",
+        "threshold": "**Any open-market insider PURCHASE at/near $52.55 trough = material signal; cluster buying (≥2 insiders) → upgrades A2 from 2 to 4-5/5 and re-opens conviction assessment. Continued selling at trough = bearish confirmation; stop of selling = neutral.** Monitor: SEC Form 4 filings; secform4.com aggregator"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "Watch — not yet confirmed structural. Q1 2026 earnings (~May) is resolution point",
+        "assessment": "**First negative quarter.** Could be acquisition integration noise or structural churn. Must monitor Q1 2026 for confirmation.",
+        "date": "2026-03-28",
+        "indicator": "Net customer adds (#2)",
+        "new": "-350 (Q4 2025)",
+        "old": "Positive (historical)"
+      },
+      {
+        "action": "No structural breach. Net customer adds (#2) still awaiting Q1 2026 confirmation (~May). MAX AI adoption is next key catalyst.",
+        "assessment": "Core EDI growth ~20% confirmed (hidden by headline). EBITDA 31% within threshold range (28-33%). MAX AI in beta — no adoption metrics yet. CFO transition is planned succession. 7% headline guidance masks segment dynamics.",
+        "date": "2026-04-06",
+        "indicator": "FY2025 / Q4 2025 results",
+        "new": "FY2025: Rev $751.5M (+18%), recurring +20%, fulfillment +22%, EBITDA $231.4M (+24%, 31% margin), ~54,600 customers, ARPU ~$14,350 (+5-6%). **100th consecutive quarter of revenue growth.** Buyback expanded +$200M to $300M total (76% FCF returned). MAX AI launched in beta Q4 2025. CFO Kim Nelson retiring; Joseph Del Preto named (Mar 2026). FY2026 guide: ~7% rev growth, +2pp EBITDA margin. No Anson/Irenic updates.",
+        "old": "—"
+      },
+      {
+        "action": "Monitor Q1 2026 earnings (~May); monitor SEC Form 4 filings continuously via `edgar-monitor.sh SPSC`. Scorecard file: `_Screening/CapIQ Screeners/2026-04-15_SPSC_pattern_match.md`",
+        "assessment": "Indicator #2 tightened with specific Q1 2026 threshold; new indicator #6 (Insider Purchase Activity) added as STRUCTURAL watch mandate. Both gate-level inputs to any future conviction reassessment.",
+        "date": "2026-04-15",
+        "indicator": "Watch mandate activated (#2 + #6)",
+        "new": "Entry price alert fired ($52.55 < $55 threshold). Pattern-match re-run under Mixed F+A archetype: 29.5/35 STRONG, U1=5 (Override C Interesting-High floor fired, upgraded to Strong via total-score). RC 2/5 blocks WATCHLIST conviction upgrade per Rule 6. User watch mandate: (a) **Q1 2026 organic 1P customer adds** — pivotal input; <800 annualized fires U1 Part E cap and flips scorecard to PASS. (b) **Insider purchase activity** — any open-market buy at/near trough is a material signal; cluster buying upgrades A2 from 2 → 4-5.",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_SPSC_pattern_match.md",
+    "total": 32,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "74% off ATH; 8.7x EV/adj EBITDA vs 50-60x hist; multi-legged (organic, activist, AI, buyback)",
+        "score": 4.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Two activists pushing sale; organic reaccel in H2 2026; but activist timing uncertain",
+        "score": 3.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "100-qtr compounder; 96% recurring; but growth decelerating, CEO under fire",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Net cash $144M; FCF $152M; zero debt; $300M buyback",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: SPS_Commerce_Inc_-_Form_10-K(Feb-19-2026).md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 19 files in Transcripts/; 19 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 1 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

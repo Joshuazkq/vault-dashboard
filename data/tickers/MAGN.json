@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "MAGN",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "China softening but not Magnera's primary market; tangential signal",
+        "current": "8,483 CNY/T (Apr 27, +1.28% day, -10.65% month)",
+        "lastUpdated": "2026-04-28",
+        "name": "China PP futures (CNY/T)",
+        "num": 1
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Mfg-side strength supports European nonwovens demand; mixed signal vs services contraction",
+        "current": "52.2 in April 2026 (8-month high; Mar 51.6); Eurozone composite 48.6 (services dragging)",
+        "lastUpdated": "2026-04-28",
+        "name": "Eurozone Manufacturing PMI",
+        "num": 2
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Tangential — automotive nonwovens secondary end-market for MAGN; more directly material for TRI-LSE peer-context",
+        "current": "Q1 2026 +4% YoY (ACEA, March surge + EV incentives); BEV share 19.4%. Reverses Feb YTD -1.2%",
+        "lastUpdated": "2026-04-28",
+        "name": "EU auto registrations (% YoY)",
+        "num": 3
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Forced-selling-from-BERY-divestiture overhang resolved; sympathetic-reading-through catalyst removed (neutral)",
+        "current": "BERY-Amcor merger complete; no MAGN-specific repatriation commentary in past 7 days",
+        "lastUpdated": "2026-04-21",
+        "name": "Berry Global (BERY) parent activity",
+        "num": 4
+      }
+    ],
+    "noiseFilter": [
+      "**Wells Fargo PT changes without model revision** — PT path $22→$14→$12 over ~6 months without public Q1 FY2026 model rebuild. Per Rule §17, treat as market-state indicator only. Do NOT use as FV anchor or thesis input.",
+      "**Daily MAGN price moves on thin volume (~244K-372K shares vs 352K 20-day avg)** ahead of scheduled Q2 7 May earnings. Float behaviour, not thesis signal.",
+      "**CR Report (Apr 22) ESG credentialing** in isolation — no financial catalyst. Adjacent to V3 institutional discovery pathway but does NOT trigger thesis revision on its own.",
+      "**Berry Global (BERY) quarterly result reads** when no MAGN-specific commentary — passive cross-reference, not signal.",
+      "**Director RSU grants (e.g., Mary Dean Hall 12,998 RSU 10 Mar 2026)** — non-cash compensation, not insider conviction signal.",
+      "**Routine supply-chain reshuffling commentary on tariffs** — Magnera management views direct tariff cost as limited; only escalation to confirmed margin compression matters."
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/MAGN/INDICATORS.md",
+    "staleDays": 3,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "~$0.62/lb (March/April 2026), **+34% YoY**. PDH unit outages sustaining feedstock pressure.",
+        "direction": "⚠ Surging",
+        "lastUpdated": "2026-04-28",
+        "name": "**Polypropylene cost (US PGP spot, $/lb)**",
+        "num": 1,
+        "source": "BusinessAnalytiq Apr 2026 [^26]; Plastics Today Apr 2026 [^28]; ResinSmart [^27]",
+        "threshold": "Sustained >$0.65/lb for 2 consecutive quarters with Americas EBITDA margin compression >100bps = structural cost-pass-through gap"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "€1,465/t April 2026, **+€465/t MoM (\"unprecedented\" per ResinSmart)**",
+        "direction": "⚠ Surging",
+        "lastUpdated": "2026-04-28",
+        "name": "**EU April propylene contract (MCP, €/t)**",
+        "num": 2,
+        "source": "ResinSmart April 2026 [^27]; Plastics Today [^28]",
+        "threshold": "Sustained >€1,400/t for 2 consecutive quarters with RoW EBITDA margin <8% = European cost-pass-through gap"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "13.1% FY2025; 13.2% Q1 FY2026. Magnera's strongest region.",
+        "direction": "Stable / Watch",
+        "lastUpdated": "2026-04-28",
+        "name": "**Americas Adj EBITDA margin (%)**",
+        "num": 3,
+        "source": "MAGN 10-K p.28 + Q1 FY2026 10-Q p.8; brief reframes as Q2 7 May watch-item",
+        "threshold": "<12% for 2 consecutive quarters = cost-shock structural; <10% = bear-case validation"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "8.2% FY2025; 9.9% Q1 FY2026. Improving but still below Americas.",
+        "direction": "Improving",
+        "lastUpdated": "2026-04-28",
+        "name": "**RoW Adj EBITDA margin (%)**",
+        "num": 4,
+        "source": "MAGN 10-K p.28 + Q1 FY2026 10-Q p.8",
+        "threshold": "<7% for 2 consecutive quarters = European softness structural; >12% = synergy delivery validated"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "3.8x at Q1 FY2026; guided 3.0x by FY-end. Net debt $1.65B / EBITDA $362M (FY2025). $264M cash; $550M available liquidity.",
+        "direction": "↓ Improving (target)",
+        "lastUpdated": "2026-04-28",
+        "name": "**Leverage (Net Debt / EBITDA)**",
+        "num": 5,
+        "source": "MAGN 10-K + Q1 FY2026 10-Q; FY2026 guide $380-410M EBITDA reaffirmed",
+        "threshold": ">3.5x by Q3 2026 = trajectory miss; >4.0x = thesis-altering"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Mid-teens realised FY2025; $25M FY2026 target (of $55M total program). Q1 FY2026 \"tracking\" per management; no precise quarterly $ disclosed.",
+        "direction": "Tracking (per mgmt)",
+        "lastUpdated": "2026-04-28",
+        "name": "**Synergy capture pace (cumulative $M, FY2026 vs $25M target)**",
+        "num": 6,
+        "source": "Q1 FY2026 transcript Feb 5 2026; brief §3",
+        "threshold": "<$15M FY2026 cumulative by Q3 = miss; <$10M = thesis stress"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$15-20M FY2026 target; ramping through FY2026 with full realisation Q3-Q4. Slight benefit Q1 FY2026.",
+        "direction": "Ramping (per mgmt)",
+        "lastUpdated": "2026-04-28",
+        "name": "**Project CORE annual savings ($M, FY2026 ramp)**",
+        "num": 7,
+        "source": "Q1 FY2026 transcript; brief §3",
+        "threshold": "<$10M realised by Q3 = ramp miss"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$27M repaid in Q1 FY2026 (on pace for $100M FY target)",
+        "direction": "On pace",
+        "lastUpdated": "2026-04-28",
+        "name": "**Debt repayment pace (cumulative $M vs $100M FY2026 target)**",
+        "num": 8,
+        "source": "Q1 FY2026 results; brief §3",
+        "threshold": "<$60M FY cumulative by Q3 = trajectory miss"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**2 ratings** on MarketWatch (vs Benzinga's prior 1, unconfirmed whether new initiation). Confirmed coverage: Wells Fargo Hold, BofA, Barclays, Vertical Research, Mizuho per IR page (2026-04-08 fact-check). MarketBeat consensus PT $14.",
+        "direction": "⚠ Watch — possible new initiation pre-Q2",
+        "lastUpdated": "2026-04-28",
+        "name": "**Active analyst coverage count**",
+        "num": 9,
+        "source": "MarketWatch; brief §3; Wells Fargo (Hajde) Apr 13-14 reaffirm Hold $12 [^16][^17][^18]",
+        "threshold": "New buy initiation = entry-trigger candidate per THESIS §Entry conditions; loss to 0 = discovery risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Investigation in progress; ~May 2026 conclusion estimate (management). Specific tariff rates not yet available.",
+        "direction": "Pending ruling",
+        "lastUpdated": "2026-04-28",
+        "name": "**South America antidumping case (Brazil SECEX Ord. 86/2025, China/Egypt/Israel imports)**",
+        "num": 10,
+        "source": "Q1 FY2026 transcript; Global Trade Alert; SECEX Ord. 86/2025 (28 Oct 2025)",
+        "threshold": "Tariff imposed on Asian imports = SA volume tailwind; Investigation dismissed = structural import competition risk persists"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "FY2026 guide $380-410M reaffirmed Q1 (Feb 5). Q1 EBITDA $93M (annualised ~$372M, low end of range). Bear trigger $340M for thesis stress.",
+        "direction": "On track for low end",
+        "lastUpdated": "2026-04-28",
+        "name": "**EBITDA floor (FY2026 actuals vs $380M low end + $340M bear trigger)**",
+        "num": 11,
+        "source": "Q1 FY2026 results; THESIS.md §Bear case",
+        "threshold": "<$340M FY2026 actual = bear case validated; >$410M = bull-case"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "IT platform migration + control standardization expected through FY2026. Q2/Q3 FY2026 monitoring window.",
+        "direction": "In progress",
+        "lastUpdated": "2026-04-28",
+        "name": "**Material weakness remediation (3 ICFR weaknesses identified)**",
+        "num": 12,
+        "source": "MAGN 10-K pp.27-28 + Q1 FY2026 10-Q p.12",
+        "threshold": "Any new material weakness disclosed = thesis-altering; existing 3 remediated by Q4 FY2026 = positive"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "Stub creation; no breach assessment yet — baseline for forward monitoring",
+        "assessment": "Initial stub from MAGN+TRI-LSE 28 Apr daily brief structural risk list. To be enriched on next dedicated indicator-update run with fresh Perplexity export.",
+        "date": "2026-04-28",
+        "indicator": "INDICATORS.md created",
+        "new": "—",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "C",
+    "archetypeName": "Event-Driven Dislocation",
+    "max": 35,
+    "scoredDate": "2026-04-07",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-07_MAGN_pattern_match.md",
+    "total": 26
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 27.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: Magnera Corporation_10-Q_2025-12-27_English.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 5 files in Transcripts/",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 5 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

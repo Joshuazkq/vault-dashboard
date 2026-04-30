@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "MTO-ASX",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "[FACT, H1 FY26 prelim p.5] Multi-quarter inflection: H1 +20.9% rev / +21% EBITDA / +28.7% UL NPAT / +320bps share / -32% net debt YoY despite $9.9M PSHH cash; Oct YTD organic +6.2% accelerating from H1 +4.8%, share 22.0% (per 25 Nov 2025 AGM). Counter-cyclical share-gain proven (FY24 trough +120bps despite -39% NPAT). Mgmt alignment: structural (0.1x leverage = fortress; immaterial dilution) + signals (Cassen NED on-market BUYS 100K @ $3.15+$2.20 [Appendix 3Y]; Pinnacle 5.36% NEW Mar 2026; Hamish Douglass 10.45% UNCHANGED 8mo; 100% STI all 3 senior execs FY25; LTI = TSR + EPS CAGR ≥10%/3yr). Not EXTREME: margins mixed (Retail compressed by PSHH transient), sector-tailwind FAILED (FCAI 2024 -1.8%), RBA hiking creates real H2 demand risk.",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "STRONG",
+      "name": "Valuation Mismatch",
+      "rationale": "**PW-FV AUD $5.10 vs current $2.37 = +115% mismatch.** Multi-method: generalist FV $6.03 (+154%); bear FV $3.99 (+68%, formal modeled bear EXCEEDS current); EV/EBITDA on H1 run-rate 2.85x vs peer median 6-7x = 110-145%; FCF yield 8.3-9.5% at base vs peer 6-8%. No method <20% mismatch. Generalist-FV cross-check: thesis FV is -15.4% DISCOUNT to generalist (independent confirmation, not premium). [INFERENCE — D1 V2 CONCEDED-partial] Real sell-side (Morgans + Moelis, PT $4.17-4.77) prices ~50% of base FV → not \"zero credit\"; 12mo ceiling closer to $4.17-4.77, full PW-FV is 18-24mo target. Not EXTREME because partial credit observable.",
+      "score": 4,
+      "type": null
+    },
+    "V3": {
+      "level": "STRONG",
+      "name": "Identifiable Mispricing Reason",
+      "rationale": "Five specific verifiable reasons: (1) sell-side coverage starvation (2 brokers); (2) index-removal forced-selling 23 Mar 2026 (concrete mechanism); (3) Ahmet/Poynton 9M-share sell-down @ $3.60 misread as \"directors cashing out\"; (4) H1 FY26 print's 2-month failure to reprice = thin propagation, not zero awareness; (5) smart-money static (Hamish Douglass UNCHANGED 8mo). Drawdown causes classified (table below); all TRANSIENT-being-addressed or NOW-PAST-AMPLIFIER or LATENT-partially-realized. Forcing function: FY26 results Aug 2026 dated. Not EXTREME: Cause #4 STRUCTURAL-AMPLIFIER (not all temporary); D2 Q4 mechanism CONDITIONAL not MECHANICAL.",
+      "score": 4,
+      "type": null
+    },
+    "V4": {
+      "level": "STRONG",
+      "name": "Downside Protection",
+      "rationale": "Sub-archetype A (Balance Sheet as Weapon): [FACT] 0.1x net leverage, FY25 OCF $54M covers debt 1.4x, loan maturity Mar 2027 (~6-7mo AFTER FY26 results catalyst). Earnings-based bear FV $3.99 EXCEEDS current $2.37 (+68%); worst-of-worst stress $3.66 still +54%. Implied dividend yield 7.6-9.3% provides income carry. Pre-mortem (table below): 9 failure modes mostly bounded <15% damage; binary risks bounded ($1.25M max NSW penalty; PSHH PPA reclass low likelihood). Not EXTREME: hard NTA floor $0.116 below current (asset floor doesn't exist; only earnings floor); demand-side structural decline tail = long-tail permanent-loss path (low probability).",
+      "score": 4,
+      "type": "fact"
+    },
+    "V5": {
+      "level": "AVERAGE",
+      "name": "Thesis Simplicity",
+      "rationale": "3 observable required conditions for Base case (table below): 2 HOLDING (cycle trajectory + share gains via Oct YTD print; PSHH integration on-track), 1 AT-RISK (ANZ macro deepening) but mitigated by counter-cyclical share-gain proof. Bear floor only requires Conditions 1 + 3 (don't get materially worse than H1 + multiple stays >5x) — both currently HOLDING. Per AVERAGE anchor: \"2-4 conditions, most observable and currently holding. Some uncertainty in 1-2 conditions acceptable.\" Not STRONG: strict STRONG requires \"2 conditions, both observable and currently holding\" — MTO has 3 with 1 AT-RISK.",
+      "score": 3,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "11 paths identified; 6 truly orthogonal (uncorrelated with macro/cycle): #2 PSHH over-delivery, #3 sustained 22%+ share, #6 MCF JV scaling (+78% YoY H1), #7 e-commerce (+66% H1), #8 Sea-Doo/OHV/EV expansion, #11 strategic-buyer optionality. Early evidence on 4-6 paths. Robust to several individual path failures. Not EXTREME: cyclical/multiple/dividend-yield paths are macro-correlated and would weaken together; truly orthogonal paths individually smaller in magnitude.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "Audited filing baseline comprehensive: FY25 AR (KPMG audited 92pp) + Sep-26 corrigendum + H1 FY26 HYR (KPMG reviewed) + 5 prior filings via bulk-filing-review 2026-04-28 + 5 periodic transcripts + 1 M&A call + 1 mgmt presentation + Perplexity Deep Research 2026-04-28 (RBA, ASX IRD, FCAI, NZTA, S&P DJI, Form 604/605 primary citations). Every core thesis input has [FACT] support; FY26E EBITDA build is well-grounded [INFERENCE]. Bounded DATA GAPs: peer multiples (cross-checked), bank covenants (immaterial at 0.1x), Hamish Douglass entity (framing nuance). **No caps applied** (V7 ≥ AVERAGE → V1/V2/V4 uncapped). Not EXTREME: forward EBITDA build inferential; AOV peer multiple estimated.",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "AVERAGE",
+      "name": "Catalyst Clarity",
+      "rationale": "Per **CONDITIONAL self-correction cap rule**: D2 Q4 explicit verdict CONDITIONAL (downgraded from MECHANICAL); H1 FY26 print's 2-month failure to reprice = empirical confirmation; joint probability of 3-event self-correction = 0.35-0.40. Catalysts dated and identifiable (FY26 results ~Aug 2026, AGM trading update ~Nov 2026, H1 FY27 ~Feb 2027) but no purely ARITHMETIC mechanism exists to override the cap (no backlog/contract roll-off; index re-inclusion would require sustained recovery first; Form 604 Hamish Douglass increase is decision-dependent). Not STRONG: STRONG requires EVIDENTIAL self-correction with preconditions in motion AND not blocked by CONDITIONAL evidence.",
+      "score": 3,
+      "type": null
+    }
+  },
+  "pm": {
+    "archetype": "B",
+    "archetypeName": "Cyclical Inflection",
+    "flex": [
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "(DATA GAP) **Evidence:** Hamish Douglass disclosed as substantial holder per general web references; Chatham Asset Management also referenced. Recent Form 604 filings exist per Listcorp but specifics not pulled. No confirmed open-market cluster purchases at price levels $2.37 area documented in ups…",
+        "score": 3
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-28_MTO-ASX_pattern_match.md",
+    "total": 28.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "+138% base / +130% PW; 4-5 legs; strong dividend+cash floor; bounded binaries; no STRUCTURAL Part E cap",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Dated catalyst Aug 2026 FY26 results + mechanical organic inflection",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Market-leader 19.8% share; 25.9% GM; cyclical-discretionary tempers to 3.5",
+        "score": 3.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net debt $6.1M (0.1x EBITDA); acquisition self-funded; 9% dividend yield",
+        "score": 5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 28.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: MTO_H1FY26_HalfYearReport_2026-02-25.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 6 files in Transcripts/; 2 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 17+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-28",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

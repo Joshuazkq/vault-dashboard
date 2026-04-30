@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "WAY",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**CMS Prior Auth revenue quantification** — Federal mandate is live but no one (including WAY) has quantified the revenue impact. First data expected Q1-Q2 2026 earnings. This is the biggest unknown and the key catalyst.",
+      "**Iodine clinical AI attach rate** — 35% client overlap creates cross-sell opportunity, but actual attachment rate to existing payment clients is unknown. Monitor via: quarterly commentary on Iodine pipeline.",
+      "**Bullet maturity refinancing risk** — $1,438.7M due Oct 2029. Market conditions 2-3 years out will determine refi cost. If rates stay elevated, significant interest expense increase possible. Monitor via: credit markets, WAY's credit rating trajectory.",
+      "**Payer automation readiness** — CMS rule requires payer compliance, but actual payer technology readiness varies. Slow payer adoption delays WAY's revenue uplift. No public tracking of payer compliance rates."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Healthcare IT capex generally resilient but not immune to macro. Monitor hospital CFO commentary",
+        "current": "Stable; potential pressure from broader macro (oil/inflation)",
+        "lastUpdated": "2026-03-28",
+        "name": "Hospital capex environment",
+        "num": 7
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Expanding with scale. Iodine integration may create near-term noise. Judge on trailing 4Q basis",
+        "current": "42% (FY2025); guided 43% FY2026",
+        "lastUpdated": "2026-03-28",
+        "name": "Adj EBITDA margin",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Technical, not fundamental. Each secondary reduces overhang for future",
+        "current": "Overhang from PE sponsor selling down. Creates near-term price pressure",
+        "lastUpdated": "2026-03-28",
+        "name": "PE sponsor secondary offerings",
+        "num": 9
+      }
+    ],
+    "noiseFilter": [
+      "**PE sponsor secondary offerings** — Each secondary reduces overhang. Price pressure is mechanical, not fundamental. Don't confuse selling by financial sponsors with thesis deterioration.",
+      "**Goodwill impairment speculation** — 91.7% of assets is goodwill. Only matters if growth materially slows. At 38% subscription growth, impairment is not imminent.",
+      "**Single-quarter EBITDA margin dips** — Iodine integration will create near-term noise in margins. Track underlying margin ex-integration costs.",
+      "**Epic competitive announcements** — Epic is large but WAY's value prop is cross-EHR (500+ integrations). Single-EHR solutions don't compete with cross-platform workflow. Track actual EHR switching, not announcements."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/WAY/INDICATORS.md",
+    "staleDays": 25,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "Live Jan 1, 2026; WAY is incumbent processor for ~60% of US patients",
+        "direction": "→ Pending first read",
+        "lastUpdated": "2026-03-28",
+        "name": "CMS Prior Authorization Rule adoption",
+        "num": 1,
+        "source": "CMS Federal Register, WAY earnings",
+        "threshold": "Rule diluted/delayed = bear case; accelerated adoption = bull case. First data expected Q1-Q2 2026 earnings"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**+38% YoY (FY2025 confirmed).** Total rev $1,099M (+17%), organic 13%. Q4: $303.5M (+24%), organic 12%, Iodine $31M. 2026 guide: $1.274-1.294B (16-18%), organic ~10%.",
+        "direction": "↑ Positive (confirmed)",
+        "lastUpdated": "2026-04-06",
+        "name": "Subscription revenue growth (YoY)",
+        "num": 2,
+        "source": "WAY Q4 2025 earnings (Feb 17, 2026)",
+        "threshold": "<25% = deceleration concern; <15% = structural slowdown; >35% = AI/CMS acceleration"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "30-35% of new bookings; 150+ production AI models (AltitudeAI)",
+        "direction": "↑ Positive",
+        "lastUpdated": "2026-03-28",
+        "name": "AI bookings as % of new bookings",
+        "num": 3,
+        "source": "WAY earnings calls",
+        "threshold": "<20% = AI not differentiating; >40% = AI becoming core value prop"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$1,459.7M net debt / 3.16x adj EBITDA; bullet maturity $1,438.7M due Oct 2029",
+        "direction": "↓ Improving (~1 turn/yr deleveraging)",
+        "lastUpdated": "2026-03-28",
+        "name": "Net debt / adj EBITDA leverage",
+        "num": 4,
+        "source": "WAY 10-K",
+        "threshold": ">3.5x = leverage concern; <2.5x = deleverage thesis on track; approaching maturity without refinancing = risk"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$1.26B acquisition. **Ahead of plan:** accelerated product roadmap by ~2 years (CEO). Q4 rev $31M (above initial expectation). 1,000+ hospitals added. >90% of $14M expected synergies realized in 2026 (ahead of schedule). 35% client overlap creating cross-sell.",
+        "direction": "↑ **Ahead of plan** — roadmap accelerated 2 years",
+        "lastUpdated": "2026-04-06",
+        "name": "Iodine integration / cross-sell",
+        "num": 5,
+        "source": "WAY Q4 2025 earnings",
+        "threshold": "Failed integration = impairment; cross-sell attach >20% = revenue acceleration"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "112% (FY2025)",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-03-28",
+        "name": "Net revenue retention (NRR)",
+        "num": 6,
+        "source": "WAY 10-K",
+        "threshold": "<105% = expansion slowing; <100% = net churn; >115% = best-in-class"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — Q1 2026 earnings first read on CMS impact",
+        "assessment": "All indicators on track. CMS rule live but no revenue data yet. Subscription +38%, AI bookings 30-35%, leverage improving. Iodine in early integration.",
+        "date": "2026-03-28",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      },
+      {
+        "action": "No structural breach. Iodine ahead of plan is material positive for #5. CMS revenue quantification (#1) still pending — Q1 2026 earnings (~May) is first read.",
+        "assessment": "All indicators confirmed positive. Subscription growth strong. Iodine exceeded expectations. NRR 112% / GRR 97% = best-in-class. CMS Prior Auth: adoption tracking underway, no payer compliance % data yet. Record bookings suggest Q1 2026 will be strong.",
+        "date": "2026-04-06",
+        "indicator": "Q4/FY2025 results",
+        "new": "Q4: Rev $303.5M (+24%), organic 12%, Iodine $31M, EBITDA 43%. FY2025: Rev $1,099M (+17%), organic 13%, EBITDA $462.1M (42%), NRR 112%, GRR 97%. Record Q4 bookings: 15-20 >$1M (2x historic avg). **Iodine integration ahead of plan** — accelerated roadmap by ~2 years, 1,000+ hospitals added, >90% of $14M synergies in 2026. Auth Accelerate: 70% time reduction, >$15B denials prevented. 2026 guide: $1.274-1.294B (16-18%), organic ~10%, EBITDA ≥40%.",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "F",
+    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "max": 40,
+    "scoredDate": "2026-03-28",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_WAY_pattern_match.md",
+    "total": 32,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "48% off ATH; ~10x EV/EBITDA vs R1 taken private at 14x; 45% prob-weighted upside",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "CMS mandate LIVE Jan 2026 — hardest catalyst in theme; quarterly mechanical",
+        "score": 4.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "97% GRR, 112% NRR, 42% EBITDA; but leverage 3.4x + 10% SBC",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "Post-Iodine 3.4x leverage; $1.44B bullet due Oct 2029; but deleveraging ~1 turn/yr",
+        "score": 3.5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "run pattern-match",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Sources Processed",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "filing row dated 2026-03-27 in Sources Processed",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 15 Sources Processed rows; 15 files in Transcripts/; 15 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 4 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

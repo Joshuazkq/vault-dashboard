@@ -1,0 +1,348 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "PGC",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**ScotPac facility full covenant terms** — `[DATA GAP]`. Management-stated \"zero financial covenants\" on primary AUD 400M stack, but full loan-document terms (change-of-control, MAC clauses, cross-defaults) not publicly disclosed. A hidden trigger would be the FP-7 covenant-fragility leg rearming.",
+      "**Chemist Warehouse consolidation trajectory** — `[DATA GAP — partial]`. CW buying / consolidating independent pharmacies is ongoing; the PACE of consolidation determines the rate of channel-customer-credit stress for PGC. No single public tracker.",
+      "**Full ANZ healthcare distributor peer set beyond EBOS** — `[DATA GAP]`. EBOS is the only clean public peer; API was taken private (2022); Sigma merged into CW (2024). FP-1 Unverified-Core-Inputs partial flag. Weak peer set = wider multiple-confidence band.",
+      "**FY26 FY results date** — `[DATA GAP]`. Estimated ~26-28 Aug 2026 by analogy to FY24/25 cadence. Not yet pre-announced per 2026-04-20 news-scan Jan→Apr 2026 catalogue. Monitor ASX investor calendar.",
+      "**Infinity 101-pharmacy / 87-entity rollup residual cohort health** — `[DATA GAP]`. Fully provided for as a group, but specific residual cohort commercial status (how many still trading, which are recovering) not disclosed. Recovery above the provision would be a positive surprise; further deterioration would be incremental.",
+      "**Wilson Asset Management 7.45% intent** — `[DATA GAP — new institutional endorsement surfaced 22 Sep 2025]`. Hold horizon + accumulation vs distribution intent unclear."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Structural pressure on independent pharmacy channel — persistence is assumed, not news",
+        "current": "Active ongoing; 60-day rolling headline count to be tracked",
+        "lastUpdated": "2026-04-21",
+        "name": "PBS reform + Chemist Warehouse consolidation news velocity",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Proxy for channel-stress escalation (FP-7 amplifier). Spike >2x base rate = escalation",
+        "current": "[baseline to be established at first weekly scan]",
+        "lastUpdated": "2026-04-21",
+        "name": "Independent pharmacy insolvency filings (ASIC, rolling 90-day count)",
+        "num": 12
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "PGC base-case target 9.5x requires EBOS to hold >10x",
+        "current": "EV/EBITDA ~14x (trailing) — the direct peer anchor for PGC re-rate thesis",
+        "lastUpdated": "2026-04-21",
+        "name": "EBOS (NZX:EBO / ASX:EBO) quarterly multiple",
+        "num": 13
+      }
+    ],
+    "noiseFilter": [
+      "**2-analyst coverage swings** — Only Morgans + Bell Potter cover PGC (thin). Analyst PT moves = Rule 17 market-state context only, NEVER FV anchor. Consensus-PT swings of ±30% on single-analyst revision = noise.",
+      "**Statutory-vs-underlying EBITDA optics** — Infinity AUD 46.4M provision already provided. Statutory interest coverage 0.5x optic is KNOWN to be depressed by the one-off. Only a SECOND customer write-off (#1) reactivates the thesis concern.",
+      "**<A$500k daily volume moves** — PGC is thinly traded (tiny float after CH2 reverse merger). Intra-day 5-10% moves on <A$500k volume = retail noise. Only volume >A$2M or sustained 5-day institutional flow = signal.",
+      "**Individual pharmacy insolvencies below Infinity scale** — Single-pharmacy insolvencies (<AUD 5M exposure) are recurring ambient-noise in the Australian channel. Only aggregated filings across 90 days (#12) or a single filing >AUD 20M (#1) are structural.",
+      "**EMULAB FY24 write-down / Hooper era residuals** — Legacy pre-CH2-merger items. Already surfaced in bulk-transcript-review (FY24 Collins call). Any further EMULAB-era commentary is noise; only NEW post-CH2 provisions count.",
+      "**Collins EXEC-DIR-M&A transition** — Was surfaced as a potential \"departure signal\" but bulk-transcript-review confirmed this is M&A specialization, not a step-down. Any further commentary on Collins role is organizational noise."
+    ],
+    "sourceFile": "Themes/Sentiment Mismatch/Tickers/PGC/INDICATORS.md",
+    "staleDays": 4,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "FY26 Infinity AUD 46.4M provision (fully provided Feb 2026) — the **event this indicator is designed to catch a recurrence of**",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "Further customer credit write-off events (AUD M)",
+        "num": 1,
+        "source": "ASX market-sensitive announcement, PGC, Feb 2026",
+        "threshold": "Any single new customer write-off >AUD 20M = EXIT trigger (FP-7 primary trip)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~3.0x at 31 Dec 2025 (net debt AUD 287.5M ÷ rolling EBITDA ~AUD 95M); management guides ~2.0x at Jun 2026 (AUD ~200M net debt target)",
+        "direction": "↕ Awaiting 30 Jun 2026 print",
+        "lastUpdated": "2026-04-21",
+        "name": "Net debt / Underlying EBITDA (x)",
+        "num": 2,
+        "source": "PGC 1H FY26 Appendix 4D (Feb 2026)",
+        "threshold": ">3.0x sustained 2+ halves OR Jun 2026 print >2.5x = breach; >4.0x = tail-scenario probability rises"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "FY25 actual AUD 95.2M; FY26 guide midpoint AUD 102M; FY26 \"being achieved as forecast\" per 1H FY26 call",
+        "direction": "↕ Awaiting FY26 result Aug 2026",
+        "lastUpdated": "2026-04-21",
+        "name": "Underlying EBITDA vs FY26 guide AUD 97-107M",
+        "num": 3,
+        "source": "PGC 1H FY26 call, 25 Feb 2026",
+        "threshold": "<AUD 90M FY26 actual = base case fails; <AUD 80M = bear case activating"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "23% segment margin (FY25); 2.8% of revenue / 26% of statutory EBITDA = hidden-franchise franchise driver",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-21",
+        "name": "Asia segment EBITDA margin (%)",
+        "num": 4,
+        "source": "PGC FY25 AR segment note",
+        "threshold": "<18% sustained 2 halves = hidden franchise thesis fails (bull-case SOTP compresses)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "AUD 5M FY25 delivered; AUD 12M FY26 target \"being achieved as forecast\"",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "Synergy realization (AUD M annualised)",
+        "num": 5,
+        "source": "PGC 1H FY26 call, 25 Feb 2026",
+        "threshold": "<AUD 8M by 1H FY27 = execution miss; <AUD 5M = thesis break"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "FY25 NEGATIVE AUD 13.4M; Owner Earnings negative AUD 31M; working-capital reversal expected H2 FY26",
+        "direction": "↕ Critical — H2 FY26 decisive",
+        "lastUpdated": "2026-04-21",
+        "name": "Operating cash flow (AUD M)",
+        "num": 6,
+        "source": "PGC FY25 AR cash flow statement",
+        "threshold": "FY26 full-year OCF still negative = working-capital reversal thesis broken; <AUD -30M = compound-fragility triggered"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Collins bought AUD 540k @ A$0.18 (Dec 2025); Collins transition to Exec Dir M&A 1 Mar 2026 (confirmed)",
+        "direction": "↕ Watch",
+        "lastUpdated": "2026-04-21",
+        "name": "Insider trades — Collins / Riley / directors",
+        "num": 7,
+        "source": "ASX Appx 3Y, PGC, Dec 2025",
+        "threshold": "Collins OR Riley as NET seller in any 60-day window = breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Zero financial covenants (confirmed); NZ subsidiary NZ$12M RCF has covenants (complied)",
+        "direction": "Stable",
+        "lastUpdated": "2026-04-21",
+        "name": "ScotPac DFF+ABF AUD 400M primary facility terms",
+        "num": 8,
+        "source": "PGC FY25 AR facility note; 1H FY26 reviewed statements",
+        "threshold": "Any covenant introduction on ScotPac facility OR spread >+75bps on rollover = breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP — first print pending]",
+        "direction": "—",
+        "lastUpdated": "2026-04-21",
+        "name": "ANZ healthcare distributor credit spread (EBOS-proxy)",
+        "num": 9,
+        "source": "Bloomberg/CapIQ (Rule 10 standard)",
+        "threshold": ">50bps widening in 30d (Rule 10 §3.3.3 standard)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "[DATA GAP — first print pending]",
+        "direction": "—",
+        "lastUpdated": "2026-04-21",
+        "name": "Short interest (% of float)",
+        "num": 10,
+        "source": "ASX short-report (Rule 10 standard)",
+        "threshold": ">5% absolute OR >2x in 30d (Rule 10 §3.3.3 standard)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "1H FY26: AUD 235.5M revenue (+47.1% YoY) at 4.7% channel margin (+0.5pp YoY); Owens & Minor onboarded Jun 2025 — quantum of one-off boost not disclosed",
+        "direction": "↕ Watch — first true ex-OM read at FY26 full-year (Aug 2026)",
+        "lastUpdated": "2026-04-27",
+        "name": "Contract Logistics ex-Owens-Minor revenue + channel margin (parallel non-WC signal)",
+        "num": 11,
+        "source": "PGC 1H FY26 ASX Announcement; Council epistemic-audit recommendation #6",
+        "threshold": "FY26 ex-OM revenue growth <10% (vs +47% reported including OM) = repeatability fails; channel margin compression >100bps YoY = quality erosion"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "FY25 Infinity non-trade loans/receivables AUD 18.66M; balance outside Infinity = [DATA GAP — not separately disclosed]",
+        "direction": "↕ Watch — FY26 AR Note disclosure",
+        "lastUpdated": "2026-04-27",
+        "name": "Non-trade receivables / customer loans outside Infinity (parallel non-WC signal)",
+        "num": 12,
+        "source": "NOTES.md bulk filing review Key Finding 2; Council epistemic-audit C26",
+        "threshold": "Any new disclosed non-trade customer loans >AUD 5M to a single counterparty OR aggregated >AUD 15M = credit-underwriting-culture confirmation"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — baseline",
+        "assessment": "**Baseline established** under Rule 10 override (user-directed). RC 3/5 post 2026-04-20 bulk-filing-review (FY25 + FY24 + 1H FY26 + ASX announcements + 1H FY25) + 4/4 transcripts reviewed (FY23 Hooper/DiMartino, FY24 Collins, FY25 Crowe, 1H FY26 Pentland). FP-7 Compound Fragility pattern-match flag carried — primary reason for Rule 10 override.",
+        "date": "2026-04-21",
+        "indicator": "ALL",
+        "new": "—",
+        "old": "—"
+      }
+    ]
+  },
+  "pm": {
+    "archetype": "A",
+    "archetypeName": "Turnaround + Hidden Franchise",
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change",
+        "rationale": "**Evidence:** - Carmen Riley: CEO from 1 July 2025, previously COO (internal promotion, 10mo tenure at report date) [FACT — zoominfo / corporate governance] - David Collins: MD continuing, ex-CH2 CEO since 2005, co-acquired CH2 in Dec 2015 (20yr ANZ distribution veteran) [FACT — corporate governanc…",
+        "score": 3
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "**Evidence:** - MD Collins: 3,000,000 shares @ AUD 0.18 on 19 Dec 2025 = **AUD 540k** [FACT — tickerreport + simplywall.st] - Collins October 2025 cluster: 640,167 @ AUD 0.293 (Oct 21) + 105,114 @ AUD 0.276 (Oct 20) = **~AUD 215k** [FACT — finance.yahoo.com insider sentiment] - Combined Collins Oct…",
+        "score": 4
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage / Structural Neglect",
+        "rationale": "**Evidence:** - 2 sell-side analysts [FACT — gurufocus / fintel / stockanalysis / marketscreener] - Consensus BUY, PT range AUD 0.32-0.55 [FACT — same sources] — cited as \"where consensus sits\" only per CLAUDE.md Rule 17, NOT used as FV anchor - Market cap AUD 281M — below many institutional minimu…",
+        "score": 3
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-04-20",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-20_PGC_pattern_match.md",
+    "total": 23,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "**Parts A-C (abbreviated — reference `2026-04-20_PGC_situation_screen.md` §3):** - PW-FV AUD 0.360 vs. current AUD 0.17 = +112% upside [INFERENCE - STRONG — scenario math with de-biased probabilities] - Specific driver: Infinity AUD 46.4M write-off rolls off, underlying EBITDA normalizes to AUD 97-…",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "**Timing (abbreviated):** 2-year base case per situation-screen §3.4. **Self-correction tier quality (full):** EVIDENTIAL-mixed: - **ARITHMETIC** leg: Infinity write-off is a discrete 1H FY26 event — 1H FY27 (Feb 2027) results will mechanically show clean statutory underlying numbers. No market rec…",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "**Evidence:** - AU #3 healthcare distributor behind EBOS (ANZ #1) and post-CW-merger Sigma [FACT — FY26 industry positioning per EBOS / Sigma disclosures] - Two segments: ParagonCare (medical equipment/devices, higher-margin) and CH2 (pharma wholesale, thin) [FACT — company segment disclosure] - Un…",
+        "score": 2.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "**Evidence:** - Total debt AUD 316.56M, cash AUD 30.87M, **net debt AUD 285.7M** [FACT — simplywall.st, 2026-04-19] - Market cap AUD 281.4M — **net debt ≈ market cap** (equity-like fragility) [FACT — same source] - Debt / underlying FY26 EBITDA (midpoint 102M) = **2.8x — manageable** [INFERENCE - S…",
+        "score": 2.5
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 23.0/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "audited filing in Filings/",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "recent filing file: PGC_1H_FY26_Half_Year_Report_2026-02-24.md",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 6 Sources Processed rows; 5 files in Transcripts/",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 14+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-27",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ]
+}

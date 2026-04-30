@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "CDLR",
+    "version": "2.0.0"
+  },
+  "dimensions": {
+    "V1": {
+      "level": "STRONG",
+      "name": "Fundamentals Trajectory",
+      "rationale": "8x revenue growth in 4yr (EUR 107M→EUR 854-944M guide). Fleet 4→12 vessels. Mgmt alignment: BW Altor 28% accumulating; covenants structurally limit misallocation; track record flawless × 5 periods. Capped at 4 by margin normalization (68.5%→49-54%), 2028 soft spot, and T-class capital discipline question.",
+      "score": 4,
+      "type": null
+    },
+    "V2": {
+      "level": "AVERAGE",
+      "name": "Valuation Mismatch",
+      "rationale": "6.6x forward EV/EBITDA (~5x on full-fleet FY2027). Margin-adjusted: 0.128x/pt vs DEME 0.200x. But 14 Buy / 4 Hold consensus = partially recognized. Valuation anomaly real but smaller than originally claimed (was erroneously stated as 4-5x).",
+      "score": 3,
+      "type": null
+    },
+    "V3": {
+      "level": "AVERAGE",
+      "name": "Mispricing Reason",
+      "rationale": "Category mislabeling (offshore contractor vs infrastructure toll-road), leverage optics, listing fragmentation, constrained free float. Identifiable but verifying temporariness requires dividend initiation (2027) to force re-categorization. Weakest pillar per debate session.",
+      "score": 3,
+      "type": null
+    },
+    "V4": {
+      "level": "AVERAGE",
+      "name": "Downside Protection",
+      "rationale": "Pre-mortem: Hornsea 3 execution (15-20%), 2028 rate compression (20-25%), multiple cancellations (10-15%), mandate reversal (5%), covenant breach (<5%), T-class misallocation (15-20%). Termination fees proved (EUR 120M Hornsea 4). Soft asset floor (EUR 3.4B assets, replacement cost EUR 4-5B+). Leverage (EUR 1.3B net debt) amplifies all scenarios.",
+      "score": 3,
+      "type": null
+    },
+    "V5": {
+      "level": "STRONG",
+      "name": "Thesis Simplicity",
+      "rationale": "2 conditions: (1) European offshore wind demand continues — HOLDING (North Sea Summit 15 GW/yr, UK AR7 record, CfD reforms); (2) Fleet scaling executes — HOLDING (10/12 delivered, every prior delivery on time/budget). Everything else is upside optionality.",
+      "score": 4,
+      "type": null
+    },
+    "V6": {
+      "level": "STRONG",
+      "name": "Upside Optionality",
+      "rationale": "5 independent paths: (1) Dividend initiation 2027, (2) Multiple re-rating 6.6x→8-10x, (3) Day rates > 3% CAGR consensus, (4) Nexra/O&M to 30%+ of rev, (5) Asian market expansion (Taiwan contracted). Dividend and re-rating showing early evidence.",
+      "score": 4,
+      "type": null
+    },
+    "V7": {
+      "level": "STRONG",
+      "name": "Evidence Quality",
+      "rationale": "5 audited 20-F filings (FY2020-FY2024) + 15 earnings transcripts + Perplexity deep research (31 Qs, independently sourced). Core thesis is [FACT]-based. 2 minor DATA GAPs: Hornsea 3 idle-time contract terms, 2028 trough depth quantification.",
+      "score": 4,
+      "type": "fact"
+    },
+    "V8": {
+      "level": "STRONG",
+      "name": "Catalyst Clarity",
+      "rationale": "Dated: FY2025 20-F (Q2'26), H1 2026 results (Q3'26), Wind Ace delivery (Q3'26 — dividend unlock), dividend initiation (2027), Wind Apex (Q2'27 — FCF inflection). Minor timing uncertainty on dividend (board discretion).",
+      "score": 4,
+      "type": null
+    }
+  },
+  "pm": {
+    "archetype": "G",
+    "archetypeName": "Derived-Demand Monopoly",
+    "max": 35,
+    "scoredDate": "2026-04-17",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_CDLR_pattern_match.md",
+    "total": 28.5
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "run situation-screen",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 28.5/35",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "bulk-filing-review cited in NOTES.md",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "transcripts: 15 Sources Processed rows; 15 files in Transcripts/; 15 inline-cited",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md references 7+ pressure vectors",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic dated 2026-04-05",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "_meta": {
+    "generatedAt": "2026-04-30T16:08:37Z",
+    "sourceFingerprint": "6fe0b83c72297b9d",
+    "ticker": "ZM",
+    "version": "2.0.0"
+  },
+  "indicators": {
+    "blindspots": [
+      "**Anthropic stake exact ownership %** — Not disclosed by ZM; estimated 0.6-1.2% post-dilution. Drives the $2-9B FV range. Resolution: ZM FY26 10-K Note on Strategic Investments or fair-value disclosure.",
+      "**AI Companion revenue contribution** — Not separately disclosed. \"MAU tripled\" is a usage metric; revenue $ unknown. Proxy: watch for mgmt breakouts on earnings calls.",
+      "**Online / SMB segment churn rate** — Aggregated into \"Online\" ~39% of revenue; cohort-level churn not disclosed. Secular decline rate is critical for bear-case modeling.",
+      "**Teams Copilot's specific ZM displacement rate** — Microsoft reports Teams MAU but not ZM-specific switching. External surveys (Gartner, IDC) publish episodically. Structural risk; no reliable real-time metric.",
+      "**Anthropic dilution trajectory** — Depends on future rounds (maybe Series E at $1T+) and whether ZM participates pro-rata. Each round without ZM participation = dilution of the stake.",
+      "**Zoom Ventures non-Anthropic fair-value composition** — FY26 MTM gains ex-Anthropic ~$500M aggregate; individual company-level marks not public (48 portfolio cos per CBInsights). Could include Perplexity or other AI infra plays.",
+      "**Anthropic IPO definitive timeline** — Rumored Oct 2026 per TechCrunch; actual S-1 filing date unknown. Confidential S-1 filing not visible on EDGAR until public.",
+      "**Yuan China-US regulatory risk** — No specific threat currently disclosed, but Chinese-American founder with 25% voting control is a dual-class + geopolitical overhang that could materialize (CFIUS-style concerns unlikely but non-zero)."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Tracks scaling; normal 35-45% band for mature SaaS",
+        "current": "39.3% (Q4 FY26)",
+        "lastUpdated": "2026-04-17",
+        "name": "ZM quarterly non-GAAP operating margin",
+        "num": 11
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Analyst re-rate lags thesis; use as noise unless >10% move",
+        "current": "$94.14 (22 analysts, Buy)",
+        "lastUpdated": "2026-04-17",
+        "name": "Consensus PT",
+        "num": 12
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Narrower, growth-stage segment; monitor as mix indicator",
+        "current": "High double-digit YoY (Q4 FY26 per CXToday)",
+        "lastUpdated": "2026-04-17",
+        "name": "Zoom Contact Center (ZCX) ARR growth",
+        "num": 13
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Expected supportive; breakdown would be bullish signal",
+        "current": "Not separately disclosed",
+        "lastUpdated": "2026-04-17",
+        "name": "Zoom Phone revenue growth",
+        "num": 14
+      }
+    ],
+    "noiseFilter": [
+      "**Zoom Ventures non-cash MTM quarterly gains** — fluctuate with private-market marks; single-quarter swings <25% are NOISE. Structural only at IPO crystallization OR >25% quarterly swing on Anthropic mark.",
+      "**Analyst price target revisions <10%** — crowded coverage (22 analysts), most won't model the Anthropic stake or AI Companion monetization separately. Only react to analysts who break out SOTP.",
+      "**Daily / weekly stock price moves within 52-week range** — $69.15-$97.58 range; normal vol. Only react when price breaks below $70 (entry trigger) or above $97 (52W high breach).",
+      "**Quarterly revenue beats/misses <$25M vs consensus** — 2% of revenue; routine noise.",
+      "**CEO Yuan 10b5-1 programmatic selling** — pre-arranged trading plans; NOT a discretionary insider signal. Only discretionary buys or plan terminations are signal.",
+      "**FY27 non-GAAP EPS variance vs guide** — guide includes Anthropic MTM assumption that management cannot predict. GAAP will miss/beat on private-mark noise. Use cash-based metrics (FCF, OCF) instead.",
+      "**Headline P/E ratio (16.4x)** — includes $970M non-cash Anthropic MTM gain. Adjusted P/E is ~25.6x. Bulls who cite headline P/E are double-counting the hidden asset."
+    ],
+    "sourceFile": "Themes/AI Disruption/Tickers/ZM/INDICATORS.md",
+    "staleDays": 14,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**$380B completed (Feb 2026 round) / $800B VC offers rejected (Apr 2026)**",
+        "direction": "↑ Bullish (rising)",
+        "lastUpdated": "2026-04-17",
+        "name": "**Anthropic private valuation ⭐ PRIMARY**",
+        "num": 1,
+        "source": "Bloomberg, CNBC, TechCrunch",
+        "threshold": "**≥$1.2T next mark = hidden-asset thesis materially re-rates (re-screen immediate)**; <$300B next mark = AI-bubble reset (bear scenario activates)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Pre-S-1; rumored October 2026 (Goldman, JPM, MS in early talks per TechCrunch)",
+        "direction": "Binary pending",
+        "lastUpdated": "2026-04-17",
+        "name": "**Anthropic IPO status ⭐ PRIMARY CATALYST**",
+        "num": 2,
+        "source": "TechCrunch, Bloomberg",
+        "threshold": "**S-1 filed publicly = immediate re-screen trigger + self-correction upgrade CONDITIONAL→EVIDENTIAL**; IPO priced = crystallization event"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$30B as of March 2026 (up from $9B EOY 2025 per TechCrunch)",
+        "direction": "↑ Bullish (accelerating)",
+        "lastUpdated": "2026-04-17",
+        "name": "Anthropic revenue run-rate",
+        "num": 3,
+        "source": "TechCrunch, Bloomberg",
+        "threshold": "<$25B for 2Q consecutive = markdown risk; >$50B = $1T+ valuation support"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "61% (Q4 FY26 record)",
+        "direction": "↑ Bullish (record high)",
+        "lastUpdated": "2026-04-17",
+        "name": "ZM Enterprise revenue mix",
+        "num": 4,
+        "source": "ZM Q4 FY26 release",
+        "threshold": "<58% for 2Q = narrative breach; >65% = mix-shift thesis confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "Tripled YoY Q4 FY26 (absolute $ DATA GAP)",
+        "direction": "↑ Bullish (exponential)",
+        "lastUpdated": "2026-04-17",
+        "name": "AI Companion paid MAU trend",
+        "num": 5,
+        "source": "ZM Q4 FY26 release",
+        "threshold": "Flat/negative YoY for 2Q = monetization thesis fails; absolute revenue disclosure >5% of total = thesis confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "+4.4% FY26; Q4 +5.3% (accelerating)",
+        "direction": "→ At threshold (~5%)",
+        "lastUpdated": "2026-04-17",
+        "name": "**ZM total revenue growth YoY**",
+        "num": 6,
+        "source": "ZM Q4 FY26 release, FY27 guide +4%",
+        "threshold": "**<2% for 2 consecutive Qs = bear scenario activates**; >7% = bull scenario validates"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "39% FY26",
+        "direction": "→ Stable",
+        "lastUpdated": "2026-04-17",
+        "name": "ZM FCF margin",
+        "num": 7,
+        "source": "ZM FY26 release",
+        "threshold": "<35% for 2 consecutive Qs = margin thesis breach"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "~16% FY26 est (declining from 29% FY23)",
+        "direction": "↓ Bullish (declining)",
+        "lastUpdated": "2026-04-17",
+        "name": "SBC / revenue trend",
+        "num": 8,
+        "source": "Financial Freedom Journey analysis",
+        "threshold": "Re-accelerating >18% = dilution risk; <12% = thesis fully validates"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$1.6B FY26 (FY25 $1.09B; +47% YoY)",
+        "direction": "↑ Bullish (accelerating)",
+        "lastUpdated": "2026-04-17",
+        "name": "Buyback cadence (trailing 4Q)",
+        "num": 9,
+        "source": "ZM Q4 FY26 release",
+        "threshold": "Pause or <$1.0B trailing = capital-return torque fails; >$2.0B trailing = step-up validates"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**DATA GAP** — no public metric",
+        "direction": "⚠ Watch (Blindspot)",
+        "lastUpdated": "2026-04-17",
+        "name": "**Teams Copilot / Google Meet AI enterprise displacement**",
+        "num": 10,
+        "source": "Gartner/IDC surveys (awaiting)",
+        "threshold": "**>5% ZM enterprise share loss to AI-native alternatives = terminal-risk breach**; stable/growing share = thesis intact"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "Monitor #1, #2, #3 weekly; #4-9 quarterly with earnings; #10 continuously (external survey data when available). Re-screen when any re-eval trigger fires.",
+        "assessment": "No breach yet — initial baseline. Thesis FAILS Forward IRR gate on current math (6.6% vs 30%); user tracking pending catalyst.",
+        "date": "2026-04-17",
+        "indicator": "Inception baseline",
+        "new": "All indicators initialized from situation-screen 2026-04-17. Primary catalyst (#2 Anthropic IPO status) pre-S-1; primary asset (#1 Anthropic valuation) at $380B completed / $800B offers.",
+        "old": "—"
+      }
+    ]
+  },
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "situation-screen / Forward-IRR cited",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "run pattern-match",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "run filing-review on latest audited 10-K / 20-F / Annual Report",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "no Transcripts/ folder, zero transcript rows, no inline citation",
+      "reason": "no-transcripts-available",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation (Bull/Base/Bear PW-FV)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "DEBATES.md present but only 0 vectors detected — need 6",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "reason": "",
+      "since": "2026-04-30",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ]
+}
