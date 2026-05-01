@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
+  "businessBackground": "Magnera Corporation is the world's largest nonwovens company, formed November 4, 2024 via a Reverse Morris Trust transaction combining Berry Global Group's Health, Hygiene & Specialties (HHS) division with Glatfelter Corporation. Pre-Transaction Berry (Treasure) shareholders received 90% of the combined company; GLT shareholders retained 10%. Berry (Treasure) was the accounting acquirer.",
   "catalysts": [],
   "fairValue": {
     "baseCaseFV": "$33.43",
@@ -310,5 +311,89 @@
     "2026-04-20: - Report Review: Daily Intelligence Brief (Apr 13-20 Lookback)",
     "2026-04-08: - Fair Value Estimation (Peer-Anchored EV/EBITDA)"
   ],
+  "valuation": {
+    "lastUpdated": "2026-04-08",
+    "methodology": "Peer-Anchored EV/EBITDA",
+    "peers": [
+      {
+        "multiple": "SEE",
+        "name": "Sealed Air"
+      },
+      {
+        "multiple": "AMCR",
+        "name": "Amcor (incl Berry)"
+      },
+      {
+        "multiple": "SON",
+        "name": "Sonoco"
+      },
+      {
+        "multiple": "MATV",
+        "name": "Mativ Holdings"
+      }
+    ],
+    "sensitivity": {
+      "cols": [
+        "6.0x",
+        "7.0x",
+        "7.5x",
+        "8.0x",
+        "9.0x"
+      ],
+      "rows": [
+        {
+          "label": "EBITDA $340M",
+          "vals": [
+            "$8.25",
+            "$17.82",
+            "$22.61",
+            "$27.40",
+            "$37.00"
+          ]
+        },
+        {
+          "label": "EBITDA $370M",
+          "vals": [
+            "$13.34",
+            "$23.46",
+            "$28.53",
+            "$33.60",
+            "$43.74"
+          ]
+        },
+        {
+          "label": "EBITDA $395M",
+          "vals": [
+            "$18.00",
+            "$28.55",
+            "[$33.43]",
+            "$38.13",
+            "$48.71"
+          ]
+        },
+        {
+          "label": "EBITDA $420M",
+          "vals": [
+            "$22.67",
+            "$33.64",
+            "$38.34",
+            "$43.87",
+            "$54.89"
+          ]
+        },
+        {
+          "label": "EBITDA $450M",
+          "vals": [
+            "$28.38",
+            "$39.78",
+            "$44.48",
+            "$52.81",
+            "$62.13"
+          ]
+        }
+      ],
+      "title": "Sensitivity (Fair Value Per Share)"
+    }
+  },
   "variantViews": []
 }

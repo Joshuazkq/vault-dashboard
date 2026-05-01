@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "CF",
     "version": "2.0.0"
   },
@@ -480,6 +480,64 @@
     "2026-04-20: Cross-Ticker Signal: Hormuz Daily Briefing Apr 20 → Day 3 Post Re-Closure / Sunday Near-Zero Transits / 12/12 P&I Clubs",
     "2026-04-19: Cross-Ticker Signal: Hormuz Evening Briefing Apr 19 → Strait Re-Closed / CF Sold Off on False \"Open\""
   ],
+  "valuation": {
+    "peers": [
+      {
+        "multiple": "3.2x",
+        "name": "CF Industries (own, FY2022 peak)"
+      },
+      {
+        "multiple": "5.7x",
+        "name": "CF Industries (own, current)"
+      },
+      {
+        "multiple": "8.8-10.1x",
+        "name": "Nutrien (NTR)"
+      },
+      {
+        "multiple": "5.1-5.4x",
+        "name": "Mosaic (MOS)"
+      },
+      {
+        "multiple": "7.8x",
+        "name": "LSB Industries (LXU)"
+      }
+    ],
+    "sensitivity": {
+      "cols": [
+        "5x",
+        "6x",
+        "7x"
+      ],
+      "rows": [
+        {
+          "label": "S2 EPS $13.0",
+          "vals": [
+            "$65",
+            "$78",
+            "$91"
+          ]
+        },
+        {
+          "label": "S3 EPS $26.3",
+          "vals": [
+            "$132",
+            "$158",
+            "$184"
+          ]
+        },
+        {
+          "label": "S4 EPS $46.7",
+          "vals": [
+            "$234",
+            "$280",
+            "$327"
+          ]
+        }
+      ],
+      "title": "Fair Value ($/share) P/E P/E P/E"
+    }
+  },
   "variantViews": [
     "Mean-reversion requires supply catalyst (ceasefire + mine clearance + both chokepoints + China reversal). No catalyst exists. Triple constraint unprecedented."
   ]

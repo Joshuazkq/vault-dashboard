@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "TTD",
     "version": "2.0.0"
   },
+  "businessBackground": "The Trade Desk is a global leader in advertising technology, operating a self-service, cloud-based demand-side platform (DSP) for programmatic digital advertising. Founded November 2009 in Ventura, California (originally incorporated in Delaware; reincorporated in Nevada in 2024). IPO'd September 21, 2016 on Nasdaq. The company empowers ad buyers to create, manage, and optimize data-driven digital advertising campaigns across ad formats, channels, and devices.",
   "catalysts": [
     "Late Apr 2026: Proxy Statement (FY2025)",
     "May 8-14, 2026: Q1 2026 Earnings",
@@ -218,5 +219,25 @@
     "2026-04-17: Web-Search Research Pass",
     "2026-03-31: Report Review: Ad Tech Competitive Landscape — CRTO & TTD's Best-Positioned Challengers"
   ],
+  "valuation": {
+    "peers": [
+      {
+        "multiple": "29.6x",
+        "name": "APP (AppLovin)"
+      },
+      {
+        "multiple": "12.7x",
+        "name": "MGNI (Magnite)"
+      },
+      {
+        "multiple": "11.3x",
+        "name": "DV (DoubleVerify)"
+      },
+      {
+        "multiple": "16.2x",
+        "name": "RAMP (LiveRamp)"
+      }
+    ]
+  },
   "variantViews": []
 }

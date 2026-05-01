@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "GTT",
     "version": "2.0.0"
   },
@@ -453,5 +453,69 @@
       "prob": 13
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-03-28",
+    "methodology": "Peer-Anchored EV/EBITDA",
+    "peers": [
+      {
+        "multiple": "19.5x",
+        "name": "Rational AG (RAA.DE)"
+      },
+      {
+        "multiple": "21.1x",
+        "name": "Atlas Copco (ATCO-A.ST)"
+      },
+      {
+        "multiple": "18.5x",
+        "name": "Hexagon AB (HEXA-B.ST)"
+      },
+      {
+        "multiple": "16.7x",
+        "name": "Spirax Group (SPX.L)"
+      },
+      {
+        "multiple": "15.7x",
+        "name": "Dolby Labs (DLB)"
+      }
+    ],
+    "sensitivity": {
+      "cols": [
+        "18x",
+        "20x",
+        "22.5x",
+        "25x"
+      ],
+      "rows": [
+        {
+          "label": "EBITDA €440M",
+          "vals": [
+            "€222",
+            "€246",
+            "€275",
+            "€305"
+          ]
+        },
+        {
+          "label": "EBITDA €570M",
+          "vals": [
+            "€285",
+            "€316",
+            "€354",
+            "€393"
+          ]
+        },
+        {
+          "label": "EBITDA €620M",
+          "vals": [
+            "€309",
+            "€343",
+            "€383",
+            "€426"
+          ]
+        }
+      ],
+      "title": "Fair Value (€/share)"
+    }
+  },
   "variantViews": []
 }

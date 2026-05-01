@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "VOW",
     "version": "2.0.0"
   },
+  "businessBackground": "Vow ASA develops, delivers, and maintains advanced waste treatment, wastewater purification, and carbon conversion systems for maritime and industrial markets. The company evolved from Scanship (founded 1993, cruise wastewater specialist) into a multi-segment cleantech group through the ETIA acquisition (2019, pyrolysis) and C.H. Evensen acquisition (2022, heat treatment). Revenue model spans project delivery (Maritime newbuilds/retrofits), recurring aftermarket (spares, consumables, service), and industrial project execution (pyrolysis/heat treatment).",
   "catalysts": [
     "Q1 2026 results (May 20) — first read on 68% new-mix margins; the single most important data point"
   ],

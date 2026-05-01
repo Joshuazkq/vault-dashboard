@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "OSW",
     "version": "2.0.0"
   },
+  "businessBackground": "OneSpaWorld is the dominant provider of health and wellness services onboard cruise ships globally. The company operates spa, fitness, and beauty centres on **193 ships** across virtually all major cruise lines under long-term exclusive revenue-sharing contracts. It also operates destination resorts. OSW does not own ships, pay fuel costs, or bear itinerary risk — it is a pure-play on cruise passenger volume with asset-light economics.",
   "catalysts": [
     "Q2 2026: FY2025 10-K filed",
     "Q2 2026: Q1 2026 earnings",

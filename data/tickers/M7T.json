@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "M7T",
     "version": "2.0.0"
   },
+  "businessBackground": "ASX-listed enterprise medical imaging software provider (ASX:M7T). Two core products: **eUnity Enterprise Diagnostic Viewer** (zero-footprint HTML-5 browser-based viewer; FDA-approved including mammography; CE Mark Jan 2026 under EU MDR) and **Vendor Neutral Archive (VNA)** (vendor-agnostic data management platform that ingests imaging across vendors/formats). New **Flamingo modular orchestration architecture** launched at RSNA Nov 2025 — first customer Dec 2025. Recurring SaaS-style revenue model with 75-85% recurring revenue mix. Australian-headquartered, US-operated (principal place of b...",
   "catalysts": [],
   "fairValue": {
     "baseCaseFV": "A$0.527",
@@ -164,5 +165,39 @@
       "state": "MET"
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-04-28",
+    "methodology": "Type 2 Peer-Comp + Take-Private Floor",
+    "peers": [
+      {
+        "multiple": "$1.38",
+        "name": "HCAT (Health Catalyst)"
+      },
+      {
+        "multiple": "$1.01",
+        "name": "DH (Definitive Healthcare)"
+      },
+      {
+        "multiple": "$9.62",
+        "name": "PHR (Phreesia)"
+      },
+      {
+        "multiple": "$24.66",
+        "name": "DOCS (Doximity)"
+      },
+      {
+        "multiple": "A$100+",
+        "name": "PME.AX (Pro Medicus)"
+      },
+      {
+        "multiple": "take-private",
+        "name": "SPNS (Sapiens take-private)"
+      },
+      {
+        "multiple": "take-private",
+        "name": "PRO (PROS Holdings take-private)"
+      }
+    ]
+  },
   "variantViews": []
 }

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "MLP",
     "version": "2.0.0"
   },
+  "businessBackground": "NYSE-listed Hawaii landholder owning **22,286 acres on Maui** at $309M market cap. Reported book equity $33.1M ($1.67/share GAAP) because most land was acquired 1911-1932 at de minimis cost basis — book value is meaningless as a NAV proxy. FY2025 operating revenue **$19.5M (+68% YoY)** across three segments: Land Development & Sales ($5.8M), Leasing ($12.8M), Resort Amenities ($0.8M). Agave will be reported as a 4th segment beginning Q1 2026. The asset, not operating cash flow, is the value driver. Delaware corporation (reincorporated July 18 2022 from Hawaii); founded 1909.",
   "catalysts": [],
   "pm": {
     "archetype": "D",

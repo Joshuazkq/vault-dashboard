@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "AIM-TSX",
     "version": "2.0.0"
   },
+  "businessBackground": "TSX-listed (TSX:AIM) holding company in transition. Pre-Bozzetto-close (~6-8 weeks): two operating segments (Bozzetto chemicals being divested; Cortland International synthetic-fiber industrials) + Clear Media China outdoor advertising passive stake (10.85%) + corporate holdco. Post-deal: financial holding-company shell with CAD $181-185M cash + CAD $500M+ tax-loss carryforwards + Cortland (~$50-130M EV residual) + Clear Media (~$12-20M) + capital-deployment platform \"permanent capital vehicle\" strategy. Secondary listing JSE:AII (Johannesburg).",
   "catalysts": [],
   "pm": {
     "archetype": "C",

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "ERII",
     "version": "2.0.0"
   },
+  "businessBackground": "Energy Recovery designs, manufactures, and sells pressure exchanger (PX) devices that recover and recycle energy in industrial fluid-flow processes. The company's core market is seawater reverse osmosis (SWRO) desalination, where its PX devices reduce energy consumption by up to 60%. ERII holds ~90% market share in large-scale SWRO pressure exchangers globally, with 35,000+ units deployed across 7 continents serving 70+ million people daily.",
   "catalysts": [
     "~~Q2 2026~~: ~~FY2025 10-K filed~~",
     "Q2 2026: Q1 2026 earnings",
@@ -213,5 +214,35 @@
       "prob": 25
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-03-29",
+    "methodology": "EV/EBITDA Peer-Anchored",
+    "peers": [
+      {
+        "multiple": "17.0x",
+        "name": "XYL"
+      },
+      {
+        "multiple": "17.8x",
+        "name": "PNR"
+      },
+      {
+        "multiple": "15.9x",
+        "name": "WTS"
+      },
+      {
+        "multiple": "13.9x",
+        "name": "MWA"
+      },
+      {
+        "multiple": "18.2x",
+        "name": "IEX"
+      },
+      {
+        "multiple": "17.2x",
+        "name": "KAI"
+      }
+    ]
+  },
   "variantViews": []
 }

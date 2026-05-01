@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
+    "ticker": "DNG",
+    "version": "2.0.0"
+  },
+  "businessBackground": "Dynacor operates a **fee-based ASM (artisanal/small-scale mining) gold-ore processing model**: it purchases ore from government-licensed Peruvian ASM miners and processes it at its wholly-owned Chala mill, selling refined gold doré bars and silver pellets internationally at market prices. The earnings driver is the **cash gross operating margin per AuEq oz** — which expands when gold prices rise (because ASM ore-purchase pricing lags spot) and contracts when gold falls. Zero exploration capex, no reserve-replacement risk, no mine-development cycle.",
+  "catalysts": [
+    "Q2-2026 (~2 months): Senegal 50-tpd pilot — first ore",
+    "Q1-2026 (imminent): Q1-2026 earnings call / MD&A",
+    "Q4-2026: Ecuador Svetlana — first ore",
+    "Q1-2027: Ecuador commercial 300 → 500 tpd",
+    "Each quarterly print: Sales vs $530-580M guide / NI vs $22-26M guide",
+    "TBD 2026: Ghana announcement / formalization"
+  ],
+  "pm": {
+    "max": 35,
+    "scoredDate": "2026-05-01",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_DNG_pattern_match.md",
+    "total": 29
+  },
+  "premortem": [],
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR 52.2% from situation-screen 2026-05-01",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "Pattern-match score 29/35 STRONG (Archetype B + A) from 2026-05-01",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "run filing-review on latest audited 40-F / annual MD&A",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 40-F/annual MD&A within 12 months",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "run transcript-review",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "resolve [BLOCKING] items",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "run catalyst-tracker or add to THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "run market-vs-me-diagnostic",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ],
+  "recentNotes": [
+    "2026-05-01: Initial Onboarding (situation-screen + pattern-match + new-ticker)"
+  ],
+  "variantViews": []
+}

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "MYR",
     "version": "2.0.0"
   },
+  "businessBackground": "Myer Holdings is Australia's largest department-store operator and, post Jan 2025 Apparel Brands acquisition, operates as **Myer Group** — a scaled omnichannel retail platform of **769 total stores** across Australia and New Zealand supported by **~17,000 team members** (up to ~30,000 including brand partners per Wirth at 2025 AGM Q&A) and **~11 million total MYER one members of which ~5 million are engaged** (clarified at 2025 AGM Q&A tr. 00:52:30 — prior \"5.1M active\" figure is the engaged subset, not total registered).",
   "catalysts": [
     "2026-07-26: FY26 trading update (pre-close)",
     "2026-09-25 (est): FY26 full-year result",
@@ -463,6 +464,36 @@
       "prob": 25
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-04-20",
+    "methodology": "Peer-Comp + SOTP Cross-Check",
+    "peers": [
+      {
+        "multiple": "~10-12x",
+        "name": "PMV"
+      },
+      {
+        "multiple": "~5-7x",
+        "name": "SUL"
+      },
+      {
+        "multiple": "~6-8x",
+        "name": "HVN"
+      },
+      {
+        "multiple": "~6-8x",
+        "name": "AX1"
+      },
+      {
+        "multiple": "~5-7x",
+        "name": "ADH"
+      },
+      {
+        "multiple": "~6-7x",
+        "name": "MKS.L"
+      }
+    ]
+  },
   "variantViews": [
     "Base case A$0.40–0.55 is **below consensus PT** — suggesting we should be more cautious than the analyst community. Bull case A$0.55–0.80 overlaps consensus. The discrepancy with market implies market is **pricing further execution risk** than ana..."
   ]

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
+  "businessBackground": "Criteo S.A. is a global commerce media technology company founded Nov 3, 2005 as a societe par actions simplifiee (S.A.S.) under French law, subsequently converted to a societe anonyme (S.A.). IPO October 2013. The company operates through two reportable segments: Performance Media (demand-side full-funnel commerce advertising, combining legacy Marketing Solutions and Iponweb SSP capabilities) and Retail Media (supply-side monetization platform for retailers).",
   "catalysts": [
     "~May 2026: Q1 2026 Earnings",
     "H1 2026: RM headwind trough",
@@ -316,6 +317,62 @@
       "prob": 20
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-03-31",
+    "methodology": "EV/EBITDA Peer-Anchored",
+    "peers": [
+      {
+        "multiple": "15x",
+        "name": "TTD"
+      },
+      {
+        "multiple": "18x",
+        "name": "MGNI"
+      },
+      {
+        "multiple": "12.5x",
+        "name": "DV"
+      },
+      {
+        "multiple": "15x",
+        "name": "IAS"
+      }
+    ],
+    "sensitivity": {
+      "cols": [
+        "4x",
+        "7x",
+        "10x"
+      ],
+      "rows": [
+        {
+          "label": "EBITDA $320M",
+          "vals": [
+            "$33",
+            "$54",
+            "$75"
+          ]
+        },
+        {
+          "label": "EBITDA $420M",
+          "vals": [
+            "$40",
+            "$70",
+            "$97"
+          ]
+        },
+        {
+          "label": "EBITDA $472M",
+          "vals": [
+            "$44",
+            "$78",
+            "$111"
+          ]
+        }
+      ],
+      "title": "EBITDA × Multiple ($/share)"
+    }
+  },
   "variantViews": [
     "The market conflates \"ad tech\" with \"commodity DSP.\" Criteo's Shopper Graph is a genuinely differentiated data asset — validated by OpenAI (sole ad tech partner) and architecturally extended via MCP (Model Context Protocol) to be accessible to ALL..."
   ]

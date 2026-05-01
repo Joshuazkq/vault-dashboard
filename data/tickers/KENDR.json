@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "KENDR",
     "version": "2.0.0"
   },
+  "businessBackground": "Kendrion N.V. designs, manufactures, and delivers electromagnetic actuators, brakes, and control systems for industrial and (formerly) automotive applications. Founded >100 years ago, headquartered in the Netherlands, rooted operationally in Germany. Listed on Euronext Amsterdam.",
   "catalysts": [
     "Mar 25, 2026: EUR 10M buyback completed",
     "~May 2026: Q1 2026 earnings",
@@ -351,5 +352,58 @@
       "prob": 25
     }
   ],
+  "valuation": {
+    "methodology": "EV/EBITDA Peer-Anchored (Refreshed 2026-03-29)",
+    "peers": [
+      {
+        "multiple": "24.5x",
+        "name": "Halma"
+      },
+      {
+        "multiple": "15.6x",
+        "name": "Rotork"
+      },
+      {
+        "multiple": "15.3x",
+        "name": "Spirax Group"
+      },
+      {
+        "multiple": "14.2x",
+        "name": "IMI plc"
+      },
+      {
+        "multiple": "~14.9x",
+        "name": "Tier 1 median"
+      },
+      {
+        "multiple": "EV/EBITDA",
+        "name": "Peer"
+      },
+      {
+        "multiple": "7.7x",
+        "name": "TKH Group (NL)"
+      },
+      {
+        "multiple": "7.4x",
+        "name": "Aalberts (NL)"
+      },
+      {
+        "multiple": "6.5x",
+        "name": "Phoenix Mecano (CH)"
+      },
+      {
+        "multiple": "~7.4x",
+        "name": "Tier 2 median"
+      },
+      {
+        "multiple": "EV/EBITDA",
+        "name": "Deal"
+      },
+      {
+        "multiple": "~13x",
+        "name": "Regal Beloit → Altra Industrial Motion"
+      }
+    ]
+  },
   "variantViews": []
 }

@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
+    "ticker": "GETB",
+    "version": "2.0.0"
+  },
+  "businessBackground": "[INFERENCE — pre-filing] GetBusy plc is a UK-listed (AIM) micro-cap software holding company whose principal asset is **SmartVault**, a verticalized document-management and client-portal SaaS embedded across all major US tax-preparation platforms (Intuit ProConnect, Lacerte, Drake, ProSeries, UltraTax, CCH). Secondary products: **Workiro** (cloud-native document workflow, UK/ANZ) and **Virtual Cabinet** (legacy on-prem DMS being migrated to Workiro). Group revenue model is recurring SaaS (ARR-anchored) with high gross retention and embedded workflow switching costs. SmartVault is the primar...",
+  "catalysts": [
+    "~Sep 2026: H1 FY2026 interim results",
+    "H2 2026 / 2027: SmartVault $20M ARR threshold",
+    "~Mar 2027: FY2026 Annual Report + AI revenue disclosure",
+    "2027-2028: LIP vesting / sale event"
+  ],
+  "pm": {
+    "archetype": "Mixed F+G",
+    "archetypeName": "F-primary (AI/Tech Disruption Beneficiary, Misclassified vertical-SaaS at sub-1.5x ARR with shipped AI features) with G-secondary lens (Derived-Demand Monopoly position embedded in US tax-prep workflow ecosystem). Archetype B (Compounder Mispriced) not in canonical pool — F captures the AI-amplification + misclassification thesis better; G captures the embedded-niche monopoly economics in CPA/tax-prep document workflow.",
+    "max": 35,
+    "scoredDate": "2026-05-01",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_GETB_pattern_match.md",
+    "total": 27,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "PW-FV 235p (+218%); 3 legs (organic ARR + multiple re-rate + M&A); bear -9% at-the-money floor; bounded binaries; no STRUCTURAL-unaddressed cause",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "H1 FY2026 interims as next dated proof point; SmartVault $20M ARR threshold catalyst; EVIDENTIAL tier; sale-event optionality is mgmt-discretionary",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Embedded workflow position, 650M docs, 6,000 CPA firms, multi-platform integration; not monopoly; FY2025 EBITDA depressed",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash £0.9M, available cash £3.9M, no material debt; gate cleared (>= 2); buffer adequate not abundant",
+        "score": 4
+      }
+    ]
+  },
+  "premortem": [],
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR 58.8% from situation-screen 2026-05-01 (STRONG PASS)",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "Pattern-match score 27/35 Interesting-High (Archetype F+G) — MONITORING justification: 1pt shy of STRONG, multiple promotable upgrade paths within 6-12 months (H1 FY26 interims, AI revenue disclosure, M ARR cross)",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "run filing-review on latest audited 10-K / 20-F",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "run transcript-review",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "B",
+      "state": "PENDING"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "resolve [BLOCKING] items",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "run catalyst-tracker or add to THESIS Catalyst Timeline",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "run fair-value-estimation",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "run debate-session",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "run market-vs-me-diagnostic",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "run cross-model-validation + conviction-scoring",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ],
+  "recentNotes": [
+    "2026-05-01: Initial Onboarding via new-ticker"
+  ],
+  "variantViews": []
+}

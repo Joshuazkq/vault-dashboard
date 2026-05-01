@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "CDLR",
     "version": "2.0.0"
   },
+  "businessBackground": "Cadeler is the world's largest operator of Wind Turbine Installation Vessels (WTIVs), specializing in the transportation and installation of offshore wind turbines, foundations, and substations. The company reports as a **single operating segment** — vessels operate in a global market and are redeployed between regions.",
   "catalysts": [
     "Q2 2026: FY2025 20-F filed",
     "Q3 2026: H1 2026 results",

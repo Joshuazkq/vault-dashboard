@@ -2,40 +2,32 @@
   "_meta": {
     "generatedAt": "2026-05-01T02:19:58Z",
     "sourceFingerprint": "cce92fce2650e4bc",
-    "ticker": "PUBM",
+    "ticker": "MSI-AIM",
     "version": "2.0.0"
   },
-  "businessBackground": "PubMatic is an independent sell-side platform (SSP) providing cloud infrastructure for real-time programmatic advertising transactions. The company serves ~1,980 publishers across 64,000+ domains and 44,000+ apps. Revenue is generated as a percentage of the value of advertising impressions monetized on the platform (net revenue basis — PubMatic acts as agent, not principal).",
+  "businessBackground": "M.S. International plc is a UK-listed (AIM) niche industrial group with four operating segments, dominated by Defence and Security (70% of FY2025 turnover). Defence revenue is sourced primarily from naval gun systems supplied to NATO navies (UK Royal Navy core; first deliveries to USA & German Navy in FY25) and VSHORAD (Very Short-Range Air Defence) land-based counter-drone weapons systems supplied to Middle East customers.",
   "catalysts": [
-    "May 2026: Q1 2026 earnings",
-    "Aug 2026: Q2 2026 earnings",
-    "H2 2026: Google DOJ antitrust remedy phase",
-    "Ongoing: AgenticOS campaign count + revenue disclosure",
-    "Ongoing: SBC as % of revenue"
+    "~Jul 2026: FY2026 H1 → FY2026 H2 split clarification (interim language already issued; H2 results due ~Jan 2027 for A...",
+    "~Jan 2027: FY2026 Final Results (April year-end)",
+    "2026-2027: Possible US DoD prime contractor formalisation",
+    "2026-2027: VSHORAD export contract to additional NATO sovereign",
+    "Ongoing: NATO rearmament cycle multi-year programs (UK CASD, US AUKUS, German tranche-2 frigates, Polish/Baltic procu..."
   ],
-  "pm": {
-    "archetype": "F",
-    "archetypeName": "AI/Technology Disruption Beneficiary — Misclassified",
-    "max": 35,
-    "scoredDate": "2026-04-01",
-    "sourceFile": "_Screening/CapIQ Screeners/2026-04-01_PUBM_pattern_match.md",
-    "total": 25
-  },
   "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "Forward IRR 44.0% from situation-screen 2026-05-01",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "pattern-match 25.0/35",
+      "evidence": "Pattern-match score 29.5/35 STRONG (Archetype B + D-Var9) from 2026-05-01",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -44,87 +36,88 @@
     {
       "code": "A3",
       "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "audited filing in Filings/",
+      "evidence": "run filing-review on latest audited 10-K / 20-F",
       "reason": "",
-      "since": "",
+      "since": "2026-05-01",
       "stage": "A",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "recent filing file: PubMatic Inc._10-K_2025-12-31_English.md",
+      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
       "reason": "",
-      "since": "",
+      "since": "2026-05-01",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 11 files in Transcripts/; 11 inline-cited",
+      "evidence": "run transcript-review",
       "reason": "",
-      "since": "",
+      "since": "2026-05-01",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C1",
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "evidence": "resolve [BLOCKING] items",
       "reason": "",
-      "since": "",
+      "since": "2026-05-01",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "evidence": "run catalyst-tracker or add to THESIS Catalyst Timeline",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-01",
       "stage": "C",
       "state": "PENDING"
     },
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "run fair-value-estimation",
       "reason": "",
-      "since": "",
+      "since": "2026-05-01",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
       "evidence": "run debate-session",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-01",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "run market-vs-me-diagnostic",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-01",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "run cross-model-validation + conviction-scoring",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-01",
       "stage": "D",
       "state": "PENDING"
     }
   ],
   "recentNotes": [
-    "2026-04-27: Cross-Ticker Signal: CRTO Daily Brief → Apr 29 GOOGL/META adtech sentiment pre-trigger"
+    "2026-05-01: Initial onboarding (new-ticker)",
+    "2026-05-01: Rule §21 Live-Price Spread Resolution Log"
   ],
   "variantViews": []
 }

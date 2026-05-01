@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "TOI",
     "version": "2.0.0"
   },
+  "businessBackground": "Topicus.com is a European acquirer, manager, and builder of vertical market software (VMS) businesses, spun out of Constellation Software (TSX: CSU) in January 2021. The company operates across 40+ niche verticals in both public and private sectors, providing mission-critical, industry-specific software solutions. CSU retains 30.4% economic ownership and 50.1% voting control via a super voting share. Topicus Coop is the principal subsidiary (64.18% owned by Topicus).",
   "catalysts": [
     "~~Feb 25, 2026~~: ~~FY2025 annual FS + MD&A filed on SEDAR+~~",
     "~~Mar 20, 2026~~: ~~Bulk transcript review~~",

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "NWFL",
     "version": "2.0.0"
   },
+  "businessBackground": "Norwood Financial Corp is the holding company for Wayne Bank, a community bank serving northeastern Pennsylvania. The bank provides traditional commercial banking services including commercial and residential lending, deposit gathering, and wealth management. Revenue model: ~89% net interest income ($78.3M NII), ~11% non-interest income ($9.6M).",
   "catalysts": [
     "Apr 16, 2026: Q1 2026 earnings",
     "Jul 2026 (est.): Q2 2026 earnings",

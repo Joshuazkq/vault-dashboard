@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "STX.AX",
     "version": "2.0.0"
   },
+  "businessBackground": "Strike Energy Limited (ASX: STX, ABN/ACN 078 012 745) is an ASX-listed independent gas producer, developer, and explorer focused on conventional gas resources in Western Australia's Perth Basin. Operates ~1.06M acres gross (~880K net) of Perth Basin acreage spanning the proven Permian gas play (Greater Erregulla — north) and the Jurassic wet-gas play (Walyering / Ocean Hill — south). Strategic pivot during FY2025 from pure-play explorer to \"vertically integrated gas-to-power\" producer following Walyering reserves write-down and South Erregulla appraisal disappointments. Three priority value...",
   "catalysts": [
     "Q1 CY26 (overdue): West Erregulla / Erregulla Deep independent reserve recertification (incorporating Erregulla Deep-...",
     "Late May / early June 2026: Walyering W-1 drill result + flow test (46 PJ 2U gross prospective)",

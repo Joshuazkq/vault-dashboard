@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "ANG",
     "version": "2.0.0"
   },
+  "businessBackground": "Austin Engineering Limited (ASX: ANG) is the world's largest producer of customised dump truck bodies for the mining industry, designing and manufacturing per-customer engineered truck bodies (trays), excavator/dragline buckets, water tanks, tyre handlers, and ancillary mining equipment . The company has been operating for 40+ years (founded 1982 Brisbane) and currently builds ~500 trays annually at 6 operating sites across Australia (Perth, Mackay), Indonesia (Batam), USA (Casper, WY), and Chile (La Negra) plus 13 partner final-assembly companies globally . Austin's value proposition is pe...",
   "catalysts": [
     "May 2026: Chile new-contract deliveries begin (~$6.7M initial PO)",
     "**Late May – early Jun 2026**: Evidence-conversion check (pre-registered per 2026-04-21 epistemic-audit, ELEVATED urg...",
@@ -398,5 +399,51 @@
       "prob": 20
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-04-20",
+    "methodology": "Peer-Anchored Destination-State EV/EBITDA",
+    "peers": [
+      {
+        "multiple": "PRN",
+        "name": "Perenti"
+      },
+      {
+        "multiple": "EHL",
+        "name": "Emeco Holdings"
+      },
+      {
+        "multiple": "NWH",
+        "name": "NRW Holdings"
+      },
+      {
+        "multiple": "MND",
+        "name": "Monadelphous"
+      },
+      {
+        "multiple": "SRG",
+        "name": "SRG Global"
+      },
+      {
+        "multiple": "—",
+        "name": "Peer mean"
+      },
+      {
+        "multiple": "—",
+        "name": "Peer median (5-set)"
+      },
+      {
+        "multiple": "—",
+        "name": "Smallcap sub-cluster (PRN/EHL)"
+      },
+      {
+        "multiple": "—",
+        "name": "Industry median (cited, GuruFocus)"
+      },
+      {
+        "multiple": "—",
+        "name": "Through-cycle smallcap AU mining services"
+      }
+    ]
+  },
   "variantViews": []
 }

@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "MEI",
     "version": "2.0.0"
   },
+  "businessBackground": "Meteoric Resources NL is an Australian-listed exploration and development company advancing the Caldeira Rare Earth Project in Minas Gerais, Brazil — described as the world's highest-grade ionic clay rare earth deposit. The company's primary product is mixed rare earth carbonate (MREC) containing NdPr and heavy rare earth elements (Dy, Tb). The company was incorporated in 2004, headquartered in West Perth, Australia.",
   "catalysts": [
     "Mid-2026: DFS completion (Ausenco)",
     "Mid-2026: Construction licence (LI) application/grant",

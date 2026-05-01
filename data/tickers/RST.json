@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "RST",
     "version": "2.0.0"
   },
+  "businessBackground": "UK-listed B2B services group operating in **secure and sustainable business services for data, information, communications and assets** [FACT — FY25 RNS, p.1]. Three continuing-operations segments after December 2025 disposal of Harrow Green:",
   "catalysts": [
     "**12 May 2026**: AGM",
     "16 July 2026: Final dividend payment 4.7p",
@@ -280,5 +281,39 @@
     "2026-04-22: Bulk transcript review (5 distinct earnings calls FY24 → FY25)",
     "2026-04-22: Bulk filing review (7 filings; FY24 + FY25 annuals + RNS prelims + 3 EP slide decks + H1 2025 EP)"
   ],
+  "valuation": {
+    "lastUpdated": "2026-04-25",
+    "methodology": "Type 2 Turnaround + Type 3 SOTP overlay",
+    "peers": [
+      {
+        "multiple": "NYSE",
+        "name": "Iron Mountain (IRM)"
+      },
+      {
+        "multiple": "Historical",
+        "name": "Stericycle (acq WM 2024)"
+      },
+      {
+        "multiple": "LSE Main",
+        "name": "Mitie Group (MTO.L)"
+      },
+      {
+        "multiple": "LSE Main",
+        "name": "Serco Group (SRP.L)"
+      },
+      {
+        "multiple": "LSE Main",
+        "name": "Bunzl plc (BNZL.L)"
+      },
+      {
+        "multiple": "LSE AIM",
+        "name": "Mears Group (MER.L)"
+      },
+      {
+        "multiple": "LSE Main",
+        "name": "DCC plc (DCC.L)"
+      }
+    ]
+  },
   "variantViews": []
 }

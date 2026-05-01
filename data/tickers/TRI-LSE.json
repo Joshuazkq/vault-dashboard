@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:11:35Z",
-    "sourceFingerprint": "672dcd96604520c0",
+    "generatedAt": "2026-05-01T02:19:58Z",
+    "sourceFingerprint": "cce92fce2650e4bc",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
+  "businessBackground": "Trifast PLC designs, engineers, manufactures, and distributes industrial fasteners and Category C components to OEM assemblers and distributors across ~65 countries. The company operates under the \"TR Fastenings\" brand, supplying 50,000+ engineered fastener SKUs. Revenue model: ~30% manufactured in-house (cold-form, higher margin), ~70% procured from third-party supply base and distributed.",
   "catalysts": [
     "Jul 2025: FY2025 Final Results",
     "Nov 2025: H1 FY2026 Interim Results",
@@ -417,6 +418,32 @@
       "prob": 50
     }
   ],
+  "valuation": {
+    "lastUpdated": "2026-03-28",
+    "methodology": "4-Scenario Time-Discounted EV/EBIT",
+    "peers": [
+      {
+        "multiple": "13.1x",
+        "name": "Bossard (BOSN.SW)"
+      },
+      {
+        "multiple": "22.3x",
+        "name": "Bufab (BUFAB.ST)"
+      },
+      {
+        "multiple": "—",
+        "name": "LISI Group"
+      },
+      {
+        "multiple": "17.7x",
+        "name": "Peer median"
+      },
+      {
+        "multiple": "~7x",
+        "name": "TRI current"
+      }
+    ]
+  },
   "variantViews": [
     "The market is anchoring on the automotive narrative (~38% of revenue) while ignoring: (1) the certification moat that makes customers captive regardless of powertrain mix — EVs need fasteners too; (2) a visible, measurable margin recovery already ..."
   ]
