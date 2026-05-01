@@ -1,12 +1,15 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "CF",
     "version": "2.0.0"
   },
   "catalysts": [
-    "Q2 2026 earnings (late July) — decisive proof of realized pricing capture"
+    "Resolves at: Q2 2026 earnings (late July) — decisive proof of realized pricing capture",
+    "Open questions: Benchmark-to-realized bridge for Q2; CF-specific vs sector beta; DOJ escalation status",
+    "Patterns observed: Equity rerated faster than models; commodity confirmation split (Tampa yes, NOLA pending)",
+    "Angles to explore: Quarterly realized-price bridge model; peer-normalized war-beta study; Form 4 audit"
   ],
   "dimensions": {
     "V1": {

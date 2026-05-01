@@ -2075,7 +2075,7 @@ const D = {
   "freshness": {
     "overall": {
       "fileCount": 433,
-      "newestSourceTs": "2026-05-01T06:41:45Z",
+      "newestSourceTs": "2026-05-01T10:00:39Z",
       "oldestSourceTs": "2026-03-11T03:53:11Z"
     },
     "sections": {
@@ -2086,7 +2086,7 @@ const D = {
       },
       "portfolio": {
         "fileCount": 2,
-        "newestSourceTs": "2026-05-01T06:41:45Z",
+        "newestSourceTs": "2026-05-01T10:00:39Z",
         "oldestSourceTs": "2026-04-29T01:35:58Z"
       },
       "research": {
@@ -2101,13 +2101,13 @@ const D = {
       }
     }
   },
-  "generated": "2026-05-01T08:59:00Z",
-  "generatedAt": "2026-05-01T08:59:00Z",
+  "generated": "2026-05-01T10:15:23Z",
+  "generatedAt": "2026-05-01T10:15:23Z",
   "instrumentConcentration": {
     "Cash": 18.5,
     "Shares": 81.5
   },
-  "lastUpdated": "2026-05-01T08:59:00Z",
+  "lastUpdated": "2026-05-01T10:15:23Z",
   "options": [],
   "overhangWindows": [],
   "parked": [
@@ -2237,7 +2237,7 @@ const D = {
   "prepBriefGaps": [],
   "priceHistory": {},
   "priorityQueue": [],
-  "sourceFingerprint": "eb36e8b570390634",
+  "sourceFingerprint": "7346780c2294e013",
   "themeConcentration": [
     {
       "flag": "OVER_ADVISORY",
@@ -7516,9 +7516,10 @@ function renderTickerCard(sym, t) {
     h += ' <span class="' + (t.change >= 0 ? 'tc-return-pos' : 'tc-return-neg') + '">' + (t.change >= 0 ? '+' : '') + t.change.toFixed(1) + '%</span>';
   }
   h += '</div></div>';
-  // Meta: theme, conviction, RC, instrument, pattern-match
+  // Meta: theme, position size, conviction, RC, instrument, pattern-match
   h += '<div class="tc-meta">';
   h += '<span>' + esc(t.theme) + '</span>';
+  if (hasPosition) h += '<span class="pill pill-blue" style="font-size:10px;font-weight:700" title="Portfolio allocation">' + t.allocation + '%</span>';
   if (t.conviction) h += '<span class="pill pill-amber" style="font-size:10px">Conv ' + t.conviction + '/10</span>';
   if (t.rcDots && t.rcDots.length) {
     var rcMarks = t.rcDots.map(function(s){

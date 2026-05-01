@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "PUBM",
     "version": "2.0.0"
   },
@@ -13,6 +13,15 @@
     "Ongoing: AgenticOS campaign count + revenue disclosure",
     "Ongoing: SBC as % of revenue"
   ],
+  "fairValue": {
+    "baseCaseFV": "$13.50",
+    "bearCaseFV": "$5.65",
+    "bullCaseFV": "$24",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
+  },
   "financials": {
     "cash": "$145.5M",
     "debtDetails": [],

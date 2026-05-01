@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "DNG",
     "version": "2.0.0"
   },
@@ -14,6 +14,15 @@
     "Each quarterly print: Sales vs $530-580M guide / NI vs $22-26M guide",
     "TBD 2026: Ghana announcement / formalization"
   ],
+  "fairValue": {
+    "baseCaseFV": "CAD $12.54",
+    "bearCaseFV": "CAD $4.66",
+    "bullCaseFV": "CAD $24.11",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
+  },
   "pm": {
     "flex": [
       {
@@ -177,6 +186,23 @@
   ],
   "recentNotes": [
     "2026-05-01: Initial Onboarding (situation-screen + pattern-match + new-ticker)"
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "CAD $24.11",
+      "prob": 25
+    },
+    {
+      "name": "Base",
+      "price": "CAD $12.54",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "CAD $4.66",
+      "prob": 25
+    }
   ],
   "variantViews": []
 }

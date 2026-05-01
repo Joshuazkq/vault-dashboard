@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -77,7 +77,7 @@
     "bullCaseFV": "A$1.405",
     "lastUpdated": "2026-04-20",
     "methodology": "Peer-Comp + SOTP Cross-Check",
-    "probWeightedFV": null,
+    "probWeightedFV": "A$0.63",
     "thesisType": "- Primary: Type 2 Turnaround — destination-state (FY27+) valued against peer multiples at comparable maturity, with time-to-realization + execution-risk haircut"
   },
   "indicators": {

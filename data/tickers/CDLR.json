@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "CDLR",
     "version": "2.0.0"
   },
@@ -73,6 +73,15 @@
       "score": 4,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "ate 2026",
+    "bearCaseFV": "ate 2026",
+    "bullCaseFV": "ate 2026",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
   },
   "financials": {
     "cash": "58,464",
@@ -252,6 +261,23 @@
     "2026-03-29: Perplexity Deep Research (31 questions, external data)",
     "2026-03-28: Q4 2025 / FY2025 Annual Results Call (Mar 24, 2026)",
     "2026-03-28: Q3 2025 Earnings Call (Nov 20, 2025)"
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "ate 2026",
+      "prob": 20
+    },
+    {
+      "name": "Base",
+      "price": "ate 2026",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "ate 2026",
+      "prob": 30
+    }
   ],
   "variantViews": []
 }

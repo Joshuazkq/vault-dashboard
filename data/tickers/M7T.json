@@ -1,19 +1,25 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "M7T",
     "version": "2.0.0"
   },
   "businessBackground": "ASX-listed enterprise medical imaging software provider (ASX:M7T). Two core products: **eUnity Enterprise Diagnostic Viewer** (zero-footprint HTML-5 browser-based viewer; FDA-approved including mammography; CE Mark Jan 2026 under EU MDR) and **Vendor Neutral Archive (VNA)** (vendor-agnostic data management platform that ingests imaging across vendors/formats). New **Flamingo modular orchestration architecture** launched at RSNA Nov 2025 — first customer Dec 2025. Recurring SaaS-style revenue model with 75-85% recurring revenue mix. Australian-headquartered, US-operated (principal place of b...",
-  "catalysts": [],
+  "catalysts": [
+    "~Jul 2026: Q4 FY26 trading update + 4C cashflow report",
+    "~Aug 2026: FY26 full-year results (Jun 30 YE)",
+    "~Q1 FY27 (Sep-Oct 2026): First Flamingo customer ramp + new logo signings",
+    "~H1 FY27 results (Feb 2027): First-half FY27 trajectory",
+    "TBD FY27: eUnity 7.9 digital pathology pilot conversions"
+  ],
   "fairValue": {
     "baseCaseFV": "A$0.527",
     "bearCaseFV": "A$0.275",
     "bullCaseFV": "A$0.913",
     "lastUpdated": "2026-04-28",
     "methodology": "Type 2 Peer-Comp + Take-Private Floor",
-    "probWeightedFV": null,
+    "probWeightedFV": "(post-haircut)",
     "thesisType": "Type 2 (Turnaround) primary; Type 4 (Growth) secondary."
   },
   "pm": {
@@ -177,6 +183,23 @@
       "since": "",
       "stage": "D",
       "state": "MET"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "A$0.913",
+      "prob": 30
+    },
+    {
+      "name": "Base",
+      "price": "A$0.527",
+      "prob": 45
+    },
+    {
+      "name": "Bear",
+      "price": "A$0.275",
+      "prob": 25
     }
   ],
   "valuation": {

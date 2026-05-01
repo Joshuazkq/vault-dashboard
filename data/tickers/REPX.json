@@ -1,11 +1,17 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "REPX",
     "version": "2.0.0"
   },
-  "catalysts": [],
+  "catalysts": [
+    "Event: Date",
+    "Q1 2026 earnings: April 30 (8 days)",
+    "Q2 2026 earnings: ~July 2026",
+    "Silverback integration milestones: 2026 throughout",
+    "WTI macro regime: Ongoing"
+  ],
   "premortem": [],
   "rcChecklist": [
     {

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -14,12 +14,7 @@
     "Ongoing: Insider purchases",
     "Unknown: Analyst initiation",
     "Q3 FY2026 (Oct-Dec 2025): Saudi Arabia facility launch",
-    "**2026-04-22**: Iran-US ceasefire expiry",
-    "**Any day now (Apr 19–30)**: FY2026 Pre-close Trading Statement",
-    "Unknown: M&A approach",
-    "2026-05-28: Hormuz 3-month sustained-closure structural threshold (Indicator #13)",
-    "2026-07-31: FY2026 Final Results (PLACEHOLDER — refine to actual publication date when company announcement schedule ...",
-    "2026-11-30: H1 FY2027 Interim Results (placeholder — refine when published)"
+    "2026-04-22: Iran-US ceasefire expiry"
   ],
   "dimensions": {
     "V1": {
@@ -85,7 +80,7 @@
     "bullCaseFV": "173p",
     "lastUpdated": "2026-03-28",
     "methodology": "4-Scenario Time-Discounted EV/EBIT",
-    "probWeightedFV": "120p",
+    "probWeightedFV": "update (2026-04-30):",
     "thesisType": "Type 2 (Turnaround / Margin Inflection)."
   },
   "financials": {

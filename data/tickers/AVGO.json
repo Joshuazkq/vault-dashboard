@@ -1,11 +1,18 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "AVGO",
     "version": "2.0.0"
   },
-  "catalysts": [],
+  "catalysts": [
+    "Event: Date",
+    "Q1 FY2026 earnings: Completed / verify date",
+    "Q2 FY2026 earnings: ~June 2026",
+    "Q3 FY2026 earnings: ~Sep 2026",
+    "Q4 FY2026 earnings: ~Dec 2026",
+    "2031 Google supply agreement renewal inflection point: Long-tail"
+  ],
   "premortem": [],
   "rcChecklist": [
     {

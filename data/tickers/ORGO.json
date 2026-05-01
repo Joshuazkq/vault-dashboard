@@ -1,21 +1,30 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "ORGO",
     "version": "2.0.0"
   },
   "businessBackground": "Organogenesis Holdings is a US-based regenerative medicine company developing, manufacturing, and commercializing advanced wound-care and surgical/sports-medicine products. Core business: **advanced wound care** for diabetic foot ulcers (DFUs) and venous leg ulcers (VLUs) delivered through physician offices, hospital outpatient, and wound care clinics. Primary competitive position is built on **PMA-approved (FDA Premarket Approval) products** — the highest regulatory classification requiring Phase 3 pivotal evidence.",
   "catalysts": [
-    "**May 7, 2026**: Q1 2026 earnings call",
+    "May 7, 2026: Q1 2026 earnings call",
     "Jul–Aug 2026: CY2027 PFS proposed rule",
     "Aug 2026: Q2 2026 earnings",
-    "**2026-04-28**: ReNu BLA submission COMPLETED ✅",
+    "2026-04-28: ReNu BLA submission COMPLETED ✅",
     "Nov 2026: Q3 2026 earnings",
     "Nov 2026: CY2027 PFS final rule",
     "Feb 2027: Q4 2026 + FY2026",
-    "**Late 2026 / Early 2027**: ReNu PDUFA action"
+    "Late 2026 / Early 2027: ReNu PDUFA action"
   ],
+  "fairValue": {
+    "baseCaseFV": "$4",
+    "bearCaseFV": "$1.50",
+    "bullCaseFV": "$6",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
+  },
   "premortem": [],
   "rcChecklist": [
     {
@@ -120,6 +129,23 @@
   ],
   "recentNotes": [
     "2026-04-20: Initial research + new-ticker creation"
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "$6",
+      "prob": 25
+    },
+    {
+      "name": "Base",
+      "price": "$4",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "$1.50",
+      "prob": 25
+    }
   ],
   "variantViews": [
     "- Q4 2025 $225M was pull-forward — both mgmt and market anchor on an inflated trailing baseline that overstates BOTH the decline and the recovery. - PMA mix-shift is real but narrow (Apligraf 3% of units). The **operating leverage** on that 3% is ..."

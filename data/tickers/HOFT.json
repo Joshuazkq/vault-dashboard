@@ -1,12 +1,15 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "HOFT",
     "version": "2.0.0"
   },
   "catalysts": [
-    "FY26 10-K filing (late Apr / early May 2026) — highest-impact dated catalyst for refund $ quantification + HMI IOR APA"
+    "Resolves at: FY26 10-K filing (late Apr / early May 2026) — highest-impact dated catalyst for refund $ quantification...",
+    "Open questions: (1) Refund tax treatment (full rate vs offset), (2) Magnussen APA IOR language, (3) Section 301 Vietn...",
+    "Patterns observed: Forward tariff asymmetric information (sell-side cannot model refund); balance sheet transformatio...",
+    "Angles to explore: fair-value-estimation with refund scenarios; peer furniture comp analysis; 10-K monitoring"
   ],
   "dimensions": {
     "V1": {

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "TTD",
     "version": "2.0.0"
   },
@@ -73,6 +73,15 @@
       "score": 4,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "$36/share",
+    "bearCaseFV": "$23/share",
+    "bullCaseFV": "$51/share",
+    "lastUpdated": "2026-03-31",
+    "methodology": "EV/EBITDA Peer-Anchored + Owner Earnings Cross-Check",
+    "probWeightedFV": "$38/share",
+    "thesisType": "Mixed Type 4 + Type 2."
   },
   "financials": {
     "cash": "658.2",
@@ -259,6 +268,8 @@
     "2026-03-31: Report Review: Ad Tech Competitive Landscape — CRTO & TTD's Best-Positioned Challengers"
   ],
   "valuation": {
+    "lastUpdated": "2026-03-31",
+    "methodology": "EV/EBITDA Peer-Anchored + Owner Earnings Cross-Check",
     "peers": [
       {
         "multiple": "29.6x",

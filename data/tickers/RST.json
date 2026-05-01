@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "RST",
     "version": "2.0.0"
   },
   "businessBackground": "UK-listed B2B services group operating in **secure and sustainable business services for data, information, communications and assets** [FACT — FY25 RNS, p.1]. Three continuing-operations segments after December 2025 disposal of Harrow Green:",
   "catalysts": [
-    "**12 May 2026**: AGM",
+    "12 May 2026: AGM",
     "16 July 2026: Final dividend payment 4.7p",
     "~July-Aug 2026: H1 2026 trading update",
-    "**30 June 2026**: FY2025 statutory accounts due at Companies House (refined 2026-04-27 from prior \"Jun-Sep 2026\" range)",
-    "**Aug–Oct 2026**: Tranche 1 (Investec) buyback completion projected",
-    "**~mid-Sep 2026**: H1 2026 interim results",
-    "**October 2026**: Two-tier workforce / Employment Rights Act effective",
-    "Ongoing 2026: £20m buyback execution (T1 Investec → T2 Canaccord; cumulative ~£1.38m / £18.6m of £20m remaining throu...",
-    "~March 2027: FY2026 results"
+    "30 June 2026: FY2025 statutory accounts due at Companies House (refined 2026-04-27 from prior \"Jun-Sep 2026\" range)",
+    "Aug–Oct 2026: Tranche 1 (Investec) buyback completion projected",
+    "~mid-Sep 2026: H1 2026 interim results",
+    "October 2026: Two-tier workforce / Employment Rights Act effective",
+    "Ongoing 2026: £20m buyback execution (T1 Investec → T2 Canaccord; cumulative ~£1.38m / £18.6m of £20m remaining throu..."
   ],
   "dimensions": {
     "V1": {
@@ -81,7 +80,7 @@
     "bullCaseFV": "565p",
     "lastUpdated": "2026-04-25",
     "methodology": "Type 2 Turnaround + Type 3 SOTP overlay",
-    "probWeightedFV": "(25/50/25): 406p (PV today) — implies +60% upside vs ~254p current. Cross-check: council `all` 2026-04-24 PW-FV 404.9p (within 0.3% — strong independent convergence)",
+    "probWeightedFV": "406p (PV today) — implies +60% upside vs ~254p current. Cross-check: council `all` 2026-04-24 PW-FV 404.9p (within 0.3% — strong independent convergence)",
     "thesisType": "Primary Type 2 (Turnaround / Margin Inflection — Skinner-Baker post-restructuring torque) + Secondary Type 3 (SOTP — three segments with materially different margin profiles) + Tertiary Type 5 opti..."
   },
   "indicators": {

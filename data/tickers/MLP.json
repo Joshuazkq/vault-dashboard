@@ -1,12 +1,30 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "MLP",
     "version": "2.0.0"
   },
   "businessBackground": "NYSE-listed Hawaii landholder owning **22,286 acres on Maui** at $309M market cap. Reported book equity $33.1M ($1.67/share GAAP) because most land was acquired 1911-1932 at de minimis cost basis — book value is meaningless as a NAV proxy. FY2025 operating revenue **$19.5M (+68% YoY)** across three segments: Land Development & Sales ($5.8M), Leasing ($12.8M), Resort Amenities ($0.8M). Agave will be reported as a 4th segment beginning Q1 2026. The asset, not operating cash flow, is the value driver. Delaware corporation (reincorporated July 18 2022 from Hawaii); founded 1909.",
-  "catalysts": [],
+  "catalysts": [
+    "~May 2026: Q1 2026 earnings + 2026 Annual Meeting",
+    "Nov 25, 2025 (ALREADY PASSED — outcome DATA GAP): Honokohau Stream lawsuit (case 2CCV-25-0003632) hearing [Verified p...",
+    "TBD 2026: Court ruling on MLP Oct 10 2025 petition to set KRA annual meeting",
+    "June 1, 2026: Sellers options vest (133,333 @ $9.08 strike)",
+    "TBD 2026-2027: Honokohau Stream lawsuit motion practice / hearings",
+    "TBD 2026: Stephen Case Form 4 filings",
+    "Q4 2026: SERP termination at est $1.6M cost",
+    "Jan 1, 2027: Randle options vest (final tranche of Jan 2024 grant — 133,333 @ $15.75 strike)"
+  ],
+  "fairValue": {
+    "baseCaseFV": "$43.87/share",
+    "bearCaseFV": "$14.69/share",
+    "bullCaseFV": "$88.19/share",
+    "lastUpdated": null,
+    "methodology": "SOTP / NAV Peer-Comp (Revised 2026-04-28 post-Perplexity Computer — 3rd iteration; supersedes post-D1 same date)",
+    "probWeightedFV": "$43.23/share",
+    "thesisType": "Type 3 SOTP / NAV (primary) + Type 5 binary-event overlay (secondary, modeled via scenario probability adjustments at Step 7)."
+  },
   "pm": {
     "archetype": "D",
     "archetypeName": "Strategic Value Emergence",

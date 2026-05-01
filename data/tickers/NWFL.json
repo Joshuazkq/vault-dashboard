@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "NWFL",
     "version": "2.0.0"
   },
@@ -12,6 +12,15 @@
     "Ongoing: NIM expansion",
     "Unknown: Analyst initiation"
   ],
+  "fairValue": {
+    "baseCaseFV": "$34",
+    "bearCaseFV": "$22",
+    "bullCaseFV": "$38",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
+  },
   "pm": {
     "archetype": "A",
     "archetypeName": "Turnaround + Hidden Franchise",

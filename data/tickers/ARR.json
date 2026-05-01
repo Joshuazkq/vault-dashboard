@@ -1,11 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "ARR",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "fairValue": {
+    "baseCaseFV": "NOK 8",
+    "bearCaseFV": "NOK 4",
+    "bullCaseFV": "NOK 12",
+    "lastUpdated": null,
+    "methodology": null,
+    "probWeightedFV": null,
+    "thesisType": null
+  },
   "financials": {
     "cash": "73.8",
     "debtDetails": [],

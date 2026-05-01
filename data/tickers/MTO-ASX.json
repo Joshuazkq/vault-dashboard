@@ -1,13 +1,19 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T08:59:00Z",
-    "sourceFingerprint": "eb36e8b570390634",
+    "generatedAt": "2026-05-01T10:15:23Z",
+    "sourceFingerprint": "7346780c2294e013",
     "ticker": "MTO-ASX",
     "version": "2.0.0"
   },
   "businessBackground": "ASX-listed leading retailer and wholesale distributor of motorcycles, ATVs, scooters, and motorcycle/bicycle parts and accessories in Australia and New Zealand. Headquartered in Brisbane, Queensland. Network of **55 locations** post-Peter Stevens & Harley-Heaven (PSHH) acquisition (52 retail dealerships + 3 wholesale outlets, expanding into SA/WA for the first time). National new-vehicle market share: **19.8% as of H1 FY26** (target 20%+), up from 16.6% FY25, 15.5% FY24, 14.3% FY23. Two reportable segments: Motorcycle Retailing and Motorcycle & Accessories Wholesaling.",
   "catalysts": [
-    "FY26 full-year results ~Aug 2026 (~4 months) — primary forced-revelation event; Aug 2026 reporting window fixed by AS..."
+    "29 Apr 2026: March quarter CPI release (TODAY)",
+    "5 May 2026: RBA cash rate decision",
+    "~Aug 2026 (late) / early Sep 2026: FY26 full-year results (Jun 30 YE)",
+    "~Aug 2026: FY26 final dividend declaration",
+    "~Nov 2026: AGM trading update (~25 Nov 2026)",
+    "~Feb 2027: H1 FY27 results",
+    "15 Mar 2027: Bank loan refinancing maturity"
   ],
   "dimensions": {
     "V1": {
@@ -66,6 +72,15 @@
       "score": 3,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "AUD $5.63/share",
+    "bearCaseFV": "AUD $3.99/share",
+    "bullCaseFV": "AUD $7.00/share",
+    "lastUpdated": "2026-04-28",
+    "methodology": "Type 1 Cyclical / Scenario-Weighted",
+    "probWeightedFV": "AUD $5.56/share (+135% on $2.37)",
+    "thesisType": "Type 1 (Cyclical), with PSHH acquisition folded into earnings baseline (NOT stacked as Type 4)."
   },
   "pm": {
     "archetype": "B",
@@ -237,6 +252,23 @@
   "recentNotes": [
     "2026-04-28: Report Review: Perplexity Deep Research (13-Section External Validation)",
     "2026-04-29: Range-Bound Value-Trap Stress Test (User-Initiated Adversarial Probe)"
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "AUD $7.00/share",
+      "prob": 25
+    },
+    {
+      "name": "Base",
+      "price": "AUD $5.63/share",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "AUD $3.99/share",
+      "prob": 25
+    }
   ],
   "variantViews": [
     "Multi-quarter operating outperformance (+21% EBITDA, +29% NPAT, +320bps share, +18.8% dividend, -32% net debt YoY); PSHH PPA = nil goodwill (clean); Cassen NED buying into weakness; Pinnacle entering; bear FV $3.99 > current."
