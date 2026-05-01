@@ -1,10 +1,22 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Jul 2025: FY2025 Final Results",
+    "Nov 2025: H1 FY2026 Interim Results",
+    "Jul 2026: FY2026 Final Results",
+    "Nov 2026: H1 FY2027 Interim Results",
+    "Ongoing: Insider purchases",
+    "Unknown: Analyst initiation",
+    "Q3 FY2026 (Oct-Dec 2025): Saudi Arabia facility launch",
+    "**2026-04-22**: Iran-US ceasefire expiry",
+    "**Any day now (Apr 19–30)**: FY2026 Pre-close Trading Statement",
+    "Unknown: M&A approach"
+  ],
   "dimensions": {
     "V1": {
       "level": "STRONG",
@@ -62,6 +74,15 @@
       "score": 4,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "128p",
+    "bearCaseFV": "50p",
+    "bullCaseFV": "173p",
+    "lastUpdated": "2026-03-28",
+    "methodology": "4-Scenario Time-Discounted EV/EBIT",
+    "probWeightedFV": "120p",
+    "thesisType": "Type 2 (Turnaround / Margin Inflection)."
   },
   "indicators": {
     "blindspots": [
@@ -275,6 +296,7 @@
       }
     ]
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -375,5 +397,20 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "173p",
+      "prob": 30
+    },
+    {
+      "name": "Base",
+      "price": "128p",
+      "prob": 50
+    }
+  ],
+  "variantViews": [
+    "The market is anchoring on the automotive narrative (~38% of revenue) while ignoring: (1) the certification moat that makes customers captive regardless of powertrain mix — EVs need fasteners too; (2) a visible, measurable margin recovery already ..."
   ]
 }

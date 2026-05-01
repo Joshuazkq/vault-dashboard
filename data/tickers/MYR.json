@@ -1,10 +1,17 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "MYR",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "2026-07-26: FY26 trading update (pre-close)",
+    "2026-09-25 (est): FY26 full-year result",
+    "2026-11 (est): FY26 AGM",
+    "2027-03 (est): 1H FY27 result",
+    "Continuous: Lew on-market purchases (creep provisions +3%/6mo)"
+  ],
   "dimensions": {
     "V1": {
       "level": "AVERAGE",
@@ -28,10 +35,10 @@
       "type": null
     },
     "V4": {
-      "level": "STRONG",
+      "level": "AVERAGE",
       "name": "Downside Protection",
-      "rationale": "**Sub-archetype A (Balance Sheet as Weapon):** net cash A$287M = 58.9% of mcap; zero drawn debt; A$150M undrawn revolver to May 2028. **Floor is DYNAMIC, not static — H1 FY26 post-finance cash flow A$120M = floor grows A$0.07-0.11/share annually.** 10 failure modes enumerated, all bounded; no unlimited-downside binary. Bear-case FV A$0.317 > current A$0.282 (+12%) — positive absolute return even in thesis disappointment. Catastrophic (5%) modeled A$0.116 (floor minus burn). Not EXTREME because catastrophic FV A$0.116 and hard floor A$0.166 both below current A$0.282 = two of three EXTREME conditions mechanically unmet.",
-      "score": 4,
+      "rationale": "**Sub-archetype A (Balance Sheet as Weapon)** with council \"illusory net-cash floor\" qualifier accepted. Net cash A$287M = 58.9% of mcap; zero drawn debt; A$150M undrawn revolver to May 2028 — but lease liability A$1,630M (~280% of mcap) means net debt incl lease is materially negative; cash floor genuinely shareholder-accessible only IF mgmt does not deploy on bad M&A. **Council bear FV A$0.22 (vs prior local A$0.317)** is the more rigorous anchor — multiple 4.0x (vs prior 4.5x) closer to CapIQ peer-haircut empirical. Asymmetry IMPROVED at current A$0.26 (vs A$0.282 thesis-write): Bear A$0.22 = -15% downside, Base FV A$0.846 = +225% upside = 15:1 risk/reward at council's strict bear. **Revised PW-FV A$0.768 = +196% vs current A$0.26.** 10 failure modes still enumerated, all bounded. Cash floor stays at A$0.166 BUT the \"hard\" qualifier removed — soft-floor under stress because: (a) operating leases not bank debt but ARE fixed-charge-cover-binding under FCF stress, (b) covenants undisclosed on UNDRAWN revolver, (c) mgmt has net A$287M deployment discretion absent capital-return commitment. Catastrophic (5%) A$0.116 unchanged. Re-route to STRONG would require: explicit buyback authorisation OR committed capital-return policy OR Lew board governance of cash-deployment. (Source: cross-model.py council 2026-04-20 bear-case agent vulnerability #1; debate-session 2026-05-01 V6 PARTIAL CONCEDED.)",
+      "score": 3,
       "type": null
     },
     "V5": {
@@ -62,6 +69,15 @@
       "score": 4,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "A$0.846",
+    "bearCaseFV": "A$0.317",
+    "bullCaseFV": "A$1.405",
+    "lastUpdated": "2026-04-20",
+    "methodology": "Peer-Comp + SOTP Cross-Check",
+    "probWeightedFV": null,
+    "thesisType": "- Primary: Type 2 Turnaround — destination-state (FY27+) valued against peer multiples at comparable maturity, with time-to-realization + execution-risk haircut"
   },
   "indicators": {
     "blindspots": [
@@ -321,6 +337,7 @@
       }
     ]
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -397,11 +414,11 @@
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "run debate-session",
+      "evidence": "debate-session 2026-05-01: 6 vectors challenged + defended with web-search-grounded resolutions; logged to DEBATES.md. V4 STRONG→AVERAGE, V8 conditional on Q2 CY26",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "D",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D2",
@@ -421,5 +438,25 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "A$1.405",
+      "prob": 20
+    },
+    {
+      "name": "Base",
+      "price": "A$0.846",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "A$0.317",
+      "prob": 25
+    }
+  ],
+  "variantViews": [
+    "Base case A$0.40–0.55 is **below consensus PT** — suggesting we should be more cautious than the analyst community. Bull case A$0.55–0.80 overlaps consensus. The discrepancy with market implies market is **pricing further execution risk** than ana..."
   ]
 }

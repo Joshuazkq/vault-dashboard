@@ -1,10 +1,21 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "RST",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "**12 May 2026**: AGM",
+    "16 July 2026: Final dividend payment 4.7p",
+    "~July-Aug 2026: H1 2026 trading update",
+    "**30 June 2026**: FY2025 statutory accounts due at Companies House (refined 2026-04-27 from prior \"Jun-Sep 2026\" range)",
+    "**Aug–Oct 2026**: Tranche 1 (Investec) buyback completion projected",
+    "**~mid-Sep 2026**: H1 2026 interim results",
+    "**October 2026**: Two-tier workforce / Employment Rights Act effective",
+    "Ongoing 2026: £20m buyback execution (T1 Investec → T2 Canaccord; cumulative ~£1.38m / £18.6m of £20m remaining throu...",
+    "~March 2027: FY2026 results"
+  ],
   "dimensions": {
     "V1": {
       "level": "STRONG",
@@ -62,6 +73,15 @@
       "score": 3,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "425p",
+    "bearCaseFV": "210p",
+    "bullCaseFV": "565p",
+    "lastUpdated": "2026-04-25",
+    "methodology": "Type 2 Turnaround + Type 3 SOTP overlay",
+    "probWeightedFV": "(25/50/25): 406p (PV today) — implies +60% upside vs ~254p current. Cross-check: council `all` 2026-04-24 PW-FV 404.9p (within 0.3% — strong independent convergence)",
+    "thesisType": "Primary Type 2 (Turnaround / Margin Inflection — Skinner-Baker post-restructuring torque) + Secondary Type 3 (SOTP — three segments with materially different margin profiles) + Tertiary Type 5 opti..."
   },
   "indicators": {
     "blindspots": [
@@ -151,6 +171,7 @@
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-22_RST_pattern_match.md",
     "total": 30
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -251,5 +272,6 @@
       "stage": "D",
       "state": "MET"
     }
-  ]
+  ],
+  "variantViews": []
 }

@@ -1,10 +1,16 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "OSW",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Q2 2026: FY2025 10-K filed",
+    "Q2 2026: Q1 2026 earnings",
+    "H2 2026: 15 new ships delivering in 2026",
+    "2027+: Continued 4-7% annual cruise capacity growth (RCL guided)"
+  ],
   "pm": {
     "archetype": "G",
     "archetypeName": "Derived-Demand Monopoly",
@@ -13,6 +19,7 @@
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_OSW_pattern_match.md",
     "total": 28.5
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -113,5 +120,6 @@
       "stage": "D",
       "state": "PENDING"
     }
-  ]
+  ],
+  "variantViews": []
 }

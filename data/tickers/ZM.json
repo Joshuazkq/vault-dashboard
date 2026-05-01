@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "ZM",
     "version": "2.0.0"
   },
+  "catalysts": [],
   "indicators": {
     "blindspots": [
       "**Anthropic stake exact ownership %** — Not disclosed by ZM; estimated 0.6-1.2% post-dilution. Drives the $2-9B FV range. Resolution: ZM FY26 10-K Note on Strategic Investments or fair-value disclosure.",
@@ -174,6 +175,7 @@
       }
     ]
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -274,5 +276,6 @@
       "stage": "D",
       "state": "PENDING"
     }
-  ]
+  ],
+  "variantViews": []
 }

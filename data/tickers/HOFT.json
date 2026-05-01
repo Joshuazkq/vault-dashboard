@@ -1,10 +1,13 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "HOFT",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "FY26 10-K filing (late Apr / early May 2026) — highest-impact dated catalyst for refund $ quantification + HMI IOR APA"
+  ],
   "dimensions": {
     "V1": {
       "level": "AVERAGE",
@@ -63,6 +66,11 @@
       "type": null
     }
   },
+  "premortem": [
+    "Section 301 Vietnam rate ≥20%: -15-20%",
+    "Refund below $20M: -10-15%",
+    "Cycle extends + Margaritaville miss: -10-15%"
+  ],
   "rcChecklist": [
     {
       "code": "A1",
@@ -163,5 +171,8 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "variantViews": [
+    "CIT-ordered refund is mechanically certain at 12-20% of MCap. Balance sheet transformed in single year. Q4 profitability achieved. 3 quarters of order growth. Margaritaville ramping. Forward Sec 301 is real but separate from historical refund."
   ]
 }

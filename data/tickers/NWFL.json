@@ -1,10 +1,16 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "NWFL",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Apr 16, 2026: Q1 2026 earnings",
+    "Jul 2026 (est.): Q2 2026 earnings",
+    "Ongoing: NIM expansion",
+    "Unknown: Analyst initiation"
+  ],
   "pm": {
     "archetype": "A",
     "archetypeName": "Turnaround + Hidden Franchise",
@@ -12,5 +18,9 @@
     "scoredDate": "2026-04-07",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-07_NWFL_pattern_match.md",
     "total": 25.5
-  }
+  },
+  "premortem": [],
+  "variantViews": [
+    "The market has partially recognized the FY2025 turnaround but underestimates the forward earnings trajectory. The FY2024 \"loss year\" was a deliberate balance sheet reset — management proactively repositioned the securities portfolio ($20M loss), r..."
+  ]
 }

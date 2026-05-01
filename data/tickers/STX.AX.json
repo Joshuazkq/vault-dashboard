@@ -1,10 +1,24 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "STX.AX",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Q1 CY26 (overdue): West Erregulla / Erregulla Deep independent reserve recertification (incorporating Erregulla Deep-...",
+    "Late May / early June 2026: Walyering W-1 drill result + flow test (46 PJ 2U gross prospective)",
+    "Q2 CY26: South Erregulla mechanical completion + gas introduction",
+    "By July 2026: $15M Macquarie tranche credit-committee approval + drawdown",
+    "**July 29, 2026**: Carnarvon escrow expires (19.9% holder, 732.5M shares at $0.12)",
+    "~Sep 2026: FY26 Annual Report (audited by Deloitte)",
+    "**Oct 1, 2026**: South Erregulla commercial first power",
+    "2H CY26: West Erregulla FID target",
+    "Capacity Year 2026/27: South Erregulla Year 1 capacity revenue ~$18.4M",
+    "Capacity Year 2027/28: South Erregulla Year 2 capacity revenue ~$30.7M (final RCP $360,700/MW)",
+    "Capacity Year 2028/29: South Erregulla Year 3 capacity revenue ~$41.8M (draft BRCP $491,700/MW, +36%)",
+    "2027-2030: WA coal retirement window (Collie Oct 2027, Muja Oct 2029, Bluewaters from Oct 2028)"
+  ],
   "pm": {
     "archetype": "C",
     "archetypeName": "Event-Driven Dislocation",
@@ -13,6 +27,7 @@
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-27_STX.AX_pattern_match.md",
     "total": 29
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -113,5 +128,6 @@
       "stage": "D",
       "state": "PENDING"
     }
-  ]
+  ],
+  "variantViews": []
 }

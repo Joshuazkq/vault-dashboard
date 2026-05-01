@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
+  "catalysts": [],
   "indicators": {
     "blindspots": [
       "**IWant revenue impact quantification** — 100% of clients have access but no revenue disclosure. Is it a retention tool (free), a pricing tool (embedded in price increases), or a revenue driver (separate SKU)? This is the single biggest unknown. Monitor via: earnings call language on AI monetization.",
@@ -156,6 +157,7 @@
       }
     ]
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -256,5 +258,6 @@
       "stage": "D",
       "state": "PENDING"
     }
-  ]
+  ],
+  "variantViews": []
 }

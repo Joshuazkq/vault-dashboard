@@ -1,10 +1,13 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "VOW",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Q1 2026 results (May 20) — first read on 68% new-mix margins; the single most important data point"
+  ],
   "dimensions": {
     "V1": {
       "level": "STRONG",
@@ -362,6 +365,11 @@
       }
     ]
   },
+  "premortem": [
+    "Covenant breach → forced dilution: 30-50%",
+    "Industrial cash drain: NOK 30-50M burn",
+    "Working capital squeeze: acute liquidity crisis"
+  ],
   "rcChecklist": [
     {
       "code": "A1",
@@ -462,5 +470,8 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "variantViews": [
+    "Maritime division alone (70% share monopolist, NOK 1.7B backlog) exceeds group EV by 39%. Margin improvement is contractual (signed backlog at better terms replacing expiring contracts at worse terms), not aspirational."
   ]
 }

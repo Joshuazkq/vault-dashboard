@@ -1,10 +1,21 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "ORGO",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "**May 7, 2026**: Q1 2026 earnings call",
+    "Jul–Aug 2026: CY2027 PFS proposed rule",
+    "Aug 2026: Q2 2026 earnings",
+    "**2026-04-28**: ReNu BLA submission COMPLETED ✅",
+    "Nov 2026: Q3 2026 earnings",
+    "Nov 2026: CY2027 PFS final rule",
+    "Feb 2027: Q4 2026 + FY2026",
+    "**Late 2026 / Early 2027**: ReNu PDUFA action"
+  ],
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -105,5 +116,8 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "variantViews": [
+    "- Q4 2025 $225M was pull-forward — both mgmt and market anchor on an inflated trailing baseline that overstates BOTH the decline and the recovery. - PMA mix-shift is real but narrow (Apligraf 3% of units). The **operating leverage** on that 3% is ..."
   ]
 }

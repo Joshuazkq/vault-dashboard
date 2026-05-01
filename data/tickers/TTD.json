@@ -1,10 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "TTD",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Late Apr 2026: Proxy Statement (FY2025)",
+    "May 8-14, 2026: Q1 2026 Earnings",
+    "May 2026 (est.): NewFronts",
+    "June 2026 (est.): Cannes Lions",
+    "TBD: Permanent CFO announcement",
+    "TBD: OpenAI partnership decision",
+    "TBD: Additional Ventura OEM partners",
+    "Aug 2026 (est.): Q2 2026 Earnings"
+  ],
   "dimensions": {
     "V1": {
       "level": "STRONG",
@@ -101,6 +111,7 @@
       }
     ]
   },
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -201,5 +212,6 @@
       "stage": "D",
       "state": "PENDING"
     }
-  ]
+  ],
+  "variantViews": []
 }

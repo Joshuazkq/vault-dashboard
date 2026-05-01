@@ -1,10 +1,13 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "CF",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Q2 2026 earnings (late July) — decisive proof of realized pricing capture"
+  ],
   "dimensions": {
     "V1": {
       "level": "STRONG",
@@ -364,6 +367,11 @@
       }
     ]
   },
+  "premortem": [
+    "Rapid ceasefire: 15-20%",
+    "DOJ grand jury: 15-25%",
+    "Multiple compression (inflation): 10-20%"
+  ],
   "rcChecklist": [
     {
       "code": "A1",
@@ -464,5 +472,8 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "variantViews": [
+    "Mean-reversion requires supply catalyst (ceasefire + mine clearance + both chokepoints + China reversal). No catalyst exists. Triple constraint unprecedented."
   ]
 }

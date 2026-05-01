@@ -1,10 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "~May 2026: Q1 2026 Earnings",
+    "H1 2026: RM headwind trough",
+    "Q3 2026: Luxembourg redomiciliation",
+    "Q4 2026: Active fund pre-positioning",
+    "2026: OpenAI/MCP scaling",
+    "Q1 2027: US redomiciliation (target)",
+    "June 2027: Russell reconstitution",
+    "Ongoing: $200M buyback"
+  ],
   "dimensions": {
     "V1": {
       "level": "AVERAGE",
@@ -62,6 +72,15 @@
       "score": 4,
       "type": null
     }
+  },
+  "fairValue": {
+    "baseCaseFV": "$70.0",
+    "bearCaseFV": "$32.9",
+    "bullCaseFV": "$111.3",
+    "lastUpdated": "2026-03-31",
+    "methodology": "EV/EBITDA Peer-Anchored",
+    "probWeightedFV": "$74.9/share",
+    "thesisType": "Type 2 (Turnaround / Margin Inflection) + Type 5 (Event-Driven)."
   },
   "indicators": {
     "blindspots": [
@@ -167,6 +186,11 @@
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_CRTO_pattern_match.md",
     "total": 32.5
   },
+  "premortem": [
+    "Third major RM client loss: -$30-40M CeT",
+    "PM structural decline (>10% for 2+ quarters): -$92M CeT (PM = 78%)",
+    "CapEx stays structural ($150M+): FCF compressed 30%+"
+  ],
   "rcChecklist": [
     {
       "code": "A1",
@@ -267,5 +291,25 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "scenarios": [
+    {
+      "name": "Bull",
+      "price": "$111.3",
+      "prob": 30
+    },
+    {
+      "name": "Base",
+      "price": "$70.0",
+      "prob": 50
+    },
+    {
+      "name": "Bear",
+      "price": "$32.9",
+      "prob": 20
+    }
+  ],
+  "variantViews": [
+    "The market conflates \"ad tech\" with \"commodity DSP.\" Criteo's Shopper Graph is a genuinely differentiated data asset — validated by OpenAI (sole ad tech partner) and architecturally extended via MCP (Model Context Protocol) to be accessible to ALL..."
   ]
 }

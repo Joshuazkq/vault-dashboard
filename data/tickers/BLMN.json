@@ -1,10 +1,19 @@
 {
   "_meta": {
-    "generatedAt": "2026-04-30T16:08:37Z",
-    "sourceFingerprint": "6fe0b83c72297b9d",
+    "generatedAt": "2026-05-01T02:03:26Z",
+    "sourceFingerprint": "f62084ee7c219a7c",
     "ticker": "BLMN",
     "version": "2.0.0"
   },
+  "catalysts": [
+    "Feb 2026: Q4 CY2025 Results",
+    "May 2026: Q1 CY2026 Results",
+    "Aug 2026: Q2 CY2026 Results",
+    "Ongoing: Debt reduction via FCF",
+    "Unknown: Analyst re-initiation",
+    "Unknown: Starboard board actions"
+  ],
+  "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
@@ -105,5 +114,8 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "variantViews": [
+    "The market is pricing BLMN for permanent impairment while ignoring: (1) Outback traffic turned positive in Q4 2025 for the first time since 2021, outperforming industry by 190bps; (2) a credible CEO (Delta COO / Six Flags CEO) backed by Starboard ..."
   ]
 }
