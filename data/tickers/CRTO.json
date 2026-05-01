@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -198,10 +198,63 @@
   "pm": {
     "archetype": "Mixed A+F",
     "archetypeName": "Turnaround with Hidden Data Franchise + AI Disruption Beneficiary",
+    "flex": [
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "Chairman van der Kooi $423K across 3 open-market purchases sustained over 5 months into -63% drawdown (Nov 2025–Mar 2026) — meaningful single-insider signal. BUT: single insider only, CEO Komasinski has NOT bought on open market, CFO Glickman Mar-26 grant is routine vest (not purchase), CFO previou…",
+        "score": 3.5
+      },
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "Shopper Graph = 720M DAU, $1T in transactions, 4.5B SKUs, 235 retailer integrations built over 15 years. OpenAI selected Criteo as sole **commerce** ad tech partner (confirmed Mar 2, 2026 press release); Smartly added subsequently but for creative optimization (different function — does NOT dilute…",
+        "score": 5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "Market at ~1.4x EV/EBITDA implies EBITDA collapses to ~$91M (78% permanent decline from $407M ATH) — contradicted by 4 consecutive years of CeT growth, ATH OCF $311M, chairman buying into decline, OpenAI sole-commerce-partner selection, MCP extending moat. Narrative gap is extreme. Marginally below…",
+        "score": 4.5
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_CRTO_pattern_match.md",
-    "total": 32.5
+    "total": 32.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Price $18.50. Prob-weighted FV $50.5-74.9 (council-Claude range); bear-case FV $32.9-33.4 = +78-81% above current; stress $14.6 = only -21% downside. Parts A-C: >50% PW upside, specific drivers (redom chain, buyback, OpenAI). Part D: 8+ independent upside paths, strong floor (bear +78%), binaries b…",
+        "score": 5.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "7 dated catalysts with clear sequencing: Q1 2026 earnings (~May), Luxembourg redom (Q3 2026), active fund pre-positioning (Q4 2026), US redom (Q1 2027), Russell reconstitution (June 2027), $200M buyback (ongoing, unlocks post-Luxembourg), OpenAI/MCP scaling. Russell = mechanical 8-10% float passive…",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Shopper Graph = genuinely differentiated (720M DAU, $1T transactions, 4.5B SKUs); OpenAI sole commerce partner validates data moat; FY2025 EBITDA margin 35% is best-in-class for ad tech. BUT capped at 4: FY2026 guided 32-34% margin (compression), PM take-rate compression flagged by CFO (social/CTV…",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "$378-389M net cash, zero drawn debt, $475M undrawn RCF = $890M total liquidity on ~$940M market cap (42% of mcap in cash). FY2025 FCF $210M. No covenant risk, no refinancing risk. Buyback authorization $200M (21% of mcap) unlocks post-Luxembourg redom. **GATE: PASS.**",
+        "score": 5
+      }
+    ]
   },
   "premortem": [
     "Third major RM client loss: -$30-40M CeT",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "WK",
     "version": "2.0.0"
   },
@@ -25,6 +25,36 @@
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "80% Fortune 1000; linked data model; \"like switching auditors\"",
+        "score": 4
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "30% AI tier opt-in; >20% ACV uplift; 3 Intelligent products shipped",
+        "score": 4
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "3.9x P/S on 20% grower; AI invisible in tiering; not in AI ETFs",
+        "score": 4
+      },
+      {
+        "id": "F4",
+        "max": 5,
+        "name": "Recession Armor",
+        "rationale": "SEC-mandated; +18% in 2020, +21% in 2022; 97% GRR",
+        "score": 5
+      }
+    ],
     "max": 40,
     "scoredDate": "2026-03-28",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_WK_pattern_match.md",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "DNG",
     "version": "2.0.0"
   },
@@ -15,10 +15,63 @@
     "TBD 2026: Ghana announcement / formalization"
   ],
   "pm": {
+    "flex": [
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "9.27% ownership + 6 open-market buys flagged; primary SEDI verification pending",
+        "score": 3.5
+      },
+      {
+        "id": "B1",
+        "max": 5,
+        "name": "Supply/Demand Setup",
+        "rationale": "Gold tailwind $3,497 realized; Peru ASM regulatory regime ambiguous",
+        "score": 3.5
+      },
+      {
+        "id": "B3",
+        "max": 5,
+        "name": "Consensus Lag",
+        "rationale": "2 analysts; consensus implies +54% but own PW-FV is +132%; partial-not-frozen lag",
+        "score": 3.5
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-05-01",
     "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_DNG_pattern_match.md",
-    "total": 29
+    "total": 29,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "+131.8% PW upside, 4-leg thesis, bounded binaries, EVIDENTIAL self-correction; Floor at-current-price prevents 6/5",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Dated milestones (Senegal Q2-26, Ecuador Q4-26 / Q1-27) + mechanical quarterly print cadence vs guide",
+        "score": 4.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Fee-based no-exploration model, ~15% pre-tax ROIC on EV, gold tailwind; concentration risks prevent 5",
+        "score": 4
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash $33.5M, no debt, fully funds capex; gate cleared comfortably",
+        "score": 5
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

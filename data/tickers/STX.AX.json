@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "STX.AX",
     "version": "2.0.0"
   },
@@ -42,7 +42,23 @@
     "max": 35,
     "scoredDate": "2026-04-27",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-27_STX.AX_pattern_match.md",
-    "total": 29
+    "total": 29,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing",
+        "rationale": "",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "",
+        "score": 3
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

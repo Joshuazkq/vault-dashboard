@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "OSW",
     "version": "2.0.0"
   },
@@ -15,10 +15,56 @@
   "pm": {
     "archetype": "G",
     "archetypeName": "Derived-Demand Monopoly",
+    "flex": [
+      {
+        "id": "G1",
+        "max": 5,
+        "name": "Derived-Demand Monopoly Position",
+        "rationale": "90%+ share, exclusive contracts, <2 competitors, long-dated lock-in",
+        "score": 5
+      },
+      {
+        "id": "G2",
+        "max": 5,
+        "name": "Mechanical Revenue Linkage",
+        "rationale": "Newbuilds auto-covered; slight variability from passenger-spend behavior",
+        "score": 4.5
+      },
+      {
+        "id": "G3",
+        "max": 5,
+        "name": "Primary-vs-Derived Discovery Gap",
+        "rationale": "5-9 analysts vs 15-25+ primary; ~3-4x gap; Phase 2 Partial Discovery",
+        "score": 3
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_OSW_pattern_match.md",
-    "total": 28.5
+    "total": 28.5,
+    "universal": [
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "15 ship deliveries in 2026 = mechanical revenue; EVIDENTIAL self-correction tier",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Near-monopoly, 193 ships, exclusive contracts, revenue-sharing asset-light",
+        "score": 5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net debt ~$67M; $50M revolver; <1x leverage; GATE PASSED",
+        "score": 4.5
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

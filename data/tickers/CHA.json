@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "CHA",
     "version": "2.0.0"
   },
@@ -17,6 +17,36 @@
   "pm": {
     "archetype": "C",
     "archetypeName": "/A Hybrid — Post-IPO dislocation (-66%) on a capital-light franchise with hidden franchise economics. IPO valuation overshoot + competitive deterioration + PR crises + China ADR discount create event-driven repricing; underlying franchise model (97% franchised, multi-stream royalty revenue) is Archetype A franchise element.",
+    "flex": [
+      {
+        "id": "D1",
+        "max": 5,
+        "name": "Drawdown Severity",
+        "rationale": "-66% from IPO, -77% from high; partially structural (SSSG)",
+        "score": 4
+      },
+      {
+        "id": "D2",
+        "max": 5,
+        "name": "Management Quality",
+        "rationale": "Extraordinary founder but no public company track record; dual-class risk",
+        "score": 3
+      },
+      {
+        "id": "D3",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "No open market purchases at distressed prices; special dividend ambiguous",
+        "score": 2
+      },
+      {
+        "id": "D4",
+        "max": 5,
+        "name": "Hidden Asset / Franchise",
+        "rationale": "Capital-light franchise model, 45% GM, digital moat; BUT SSSG -28% threatens franchise economics",
+        "score": 4
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-03-30",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-30_CHA_pattern_match.md",

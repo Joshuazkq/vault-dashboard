@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "MLAB",
     "version": "2.0.0"
   },
@@ -21,6 +21,13 @@
         "max": 5,
         "name": "Coverage Gap",
         "rationale": "2-3 analysts, $453M mcap; thin but not zero",
+        "score": 3.5
+      },
+      {
+        "id": "C2",
+        "max": 5,
+        "name": "Business-Event Separation",
+        "rationale": "SDC/CS intact post-impairment; CG weakness ongoing",
         "score": 3.5
       }
     ],

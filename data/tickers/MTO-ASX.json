@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "MTO-ASX",
     "version": "2.0.0"
   },
@@ -77,6 +77,20 @@
         "name": "Insider Conviction",
         "rationale": "(DATA GAP) **Evidence:** Hamish Douglass disclosed as substantial holder per general web references; Chatham Asset Management also referenced. Recent Form 604 filings exist per Listcorp but specifics not pulled. No confirmed open-market cluster purchases at price levels $2.37 area documented in ups…",
         "score": 3
+      },
+      {
+        "id": "B1",
+        "max": 5,
+        "name": "Supply/Demand Setup",
+        "rationale": "Market-share consolidation; not sector supply deficit",
+        "score": 3
+      },
+      {
+        "id": "B3",
+        "max": 5,
+        "name": "Consensus Lag",
+        "rationale": "-40% stock vs +21% EBITDA print Feb 2026; 2-month lag post-results",
+        "score": 4
       }
     ],
     "max": 35,

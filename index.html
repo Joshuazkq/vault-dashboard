@@ -10,6 +10,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Vault">
 <meta name="theme-color" content="#0D0D0F">
+<script>
+  (function() {
+    try {
+      var s = localStorage.getItem('cardSize');
+      var px = { S: 280, M: 380, L: 520 }[s];
+      if (px) document.documentElement.style.setProperty('--card-min-width', px + 'px');
+    } catch (e) {}
+  })();
+</script>
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
 <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png">
@@ -34,6 +43,7 @@
   --text-fact: #A8D8A8;
   --text-inference: #A8C0D8;
   --border: #2E2E3A;
+  --card-min-width: 380px;
 }
 
 [data-theme="light"] {
@@ -408,7 +418,7 @@ tbody tr.row-clickable { cursor: pointer; }
 .rc-unmet { color: var(--accent-negative); text-align: center; }
 
 /* ── TICKER PIPELINE CARDS ── */
-.pipeline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.pipeline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr)); gap: 12px; margin-bottom: 16px; }
 .ticker-card {
   background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px;
   padding: 16px; position: relative; transition: border-color 0.2s, box-shadow 0.2s;
@@ -456,6 +466,39 @@ tbody tr.row-clickable { cursor: pointer; }
 .dim-mini { display: flex; gap: 2px; margin-top: 10px; }
 .dim-mini-seg { width: 100%; height: 4px; border-radius: 2px; }
 
+/* Card-size segmented control (paired with --card-min-width) */
+.card-size-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.card-size-row h3 { margin-bottom: 0; }
+.card-size-toggle {
+  display: inline-flex; gap: 2px; padding: 2px;
+  background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px;
+}
+.card-size-btn {
+  font-size: 10px; font-weight: 600; padding: 3px 10px;
+  background: transparent; color: var(--text-secondary);
+  border: none; border-radius: 4px; cursor: pointer;
+  font-family: inherit; line-height: 1.4;
+}
+.card-size-btn:hover { color: var(--text-primary); }
+.card-size-btn.active {
+  background: var(--bg-surface); color: var(--accent-blue);
+}
+
+/* Card-grid summary + thesis paragraphs (3-line clamp) */
+.tc-overview, .tc-thesis {
+  font-size: 12px; color: var(--text-secondary); line-height: 1.4;
+  margin-top: 8px;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.tc-thesis { font-style: italic; color: var(--text-primary); opacity: 0.85; }
+.tc-fv-chips { display: flex; gap: 8px; margin: 6px 0 4px; font-size: 11px; font-weight: 600; }
+.tc-fv-up { color: var(--accent-positive); }
+.tc-fv-down { color: var(--accent-negative); }
+
 /* Compact monitoring rows (legacy, kept for parked table) */
 .monitoring-table { width: 100%; }
 .monitoring-table th { text-align: left; font-size: 11px; color: var(--text-secondary); font-weight: 500; padding: 6px 8px; }
@@ -463,7 +506,7 @@ tbody tr.row-clickable { cursor: pointer; }
 .monitoring-table .mono { font-family: 'SF Mono','Fira Code',monospace; }
 
 /* Mini ticker cards (monitoring) */
-.pipeline-grid-mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; margin-bottom: 16px; }
+.pipeline-grid-mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(calc(var(--card-min-width) - 40px), 1fr)); gap: 8px; margin-bottom: 16px; }
 .ticker-card-mini {
   background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px;
   padding: 12px; transition: border-color 0.2s; cursor: default;
@@ -2032,7 +2075,7 @@ const D = {
   "freshness": {
     "overall": {
       "fileCount": 433,
-      "newestSourceTs": "2026-05-01T04:55:55Z",
+      "newestSourceTs": "2026-05-01T06:41:45Z",
       "oldestSourceTs": "2026-03-11T03:53:11Z"
     },
     "sections": {
@@ -2043,7 +2086,7 @@ const D = {
       },
       "portfolio": {
         "fileCount": 2,
-        "newestSourceTs": "2026-05-01T04:26:41Z",
+        "newestSourceTs": "2026-05-01T06:41:45Z",
         "oldestSourceTs": "2026-04-29T01:35:58Z"
       },
       "research": {
@@ -2058,13 +2101,13 @@ const D = {
       }
     }
   },
-  "generated": "2026-05-01T05:04:50Z",
-  "generatedAt": "2026-05-01T05:04:50Z",
+  "generated": "2026-05-01T08:59:00Z",
+  "generatedAt": "2026-05-01T08:59:00Z",
   "instrumentConcentration": {
     "Cash": 18.5,
     "Shares": 81.5
   },
-  "lastUpdated": "2026-05-01T05:04:50Z",
+  "lastUpdated": "2026-05-01T08:59:00Z",
   "options": [],
   "overhangWindows": [],
   "parked": [
@@ -2194,7 +2237,7 @@ const D = {
   "prepBriefGaps": [],
   "priceHistory": {},
   "priorityQueue": [],
-  "sourceFingerprint": "2fd86fcf58df60af",
+  "sourceFingerprint": "eb36e8b570390634",
   "themeConcentration": [
     {
       "flag": "OVER_ADVISORY",
@@ -2560,6 +2603,7 @@ const D = {
       },
       "rcTotal": 3,
       "status": "ACTIVE",
+      "summaryShort": "TSX-listed (TSX:AIM) holding company in transition. Pre-Bozzetto-close (~6-8 weeks): two operating segments (Bozzetto chemicals being divested; Cortland International synthetic-fiber industrials) + Clear Media China...",
       "theme": "Special Situation - Liquidation Arb"
     },
     "ANG": {
@@ -2606,6 +2650,7 @@ const D = {
       },
       "rcTotal": 8,
       "status": "ACTIVE",
+      "summaryShort": "Austin Engineering Limited (ASX: ANG) is the world's largest producer of customised dump truck bodies for the mining industry, designing and manufacturing per-customer engineered truck bodies (trays), excavator/dragline...",
       "theme": "Niche Industrial Monopolies"
     },
     "APP": {
@@ -2878,7 +2923,9 @@ const D = {
       },
       "rcTotal": 4,
       "status": "MONITORING",
-      "theme": "Sentiment Mismatch"
+      "summaryShort": "Bloomin' Brands operates a portfolio of casual dining restaurant brands: Outback Steakhouse (flagship), Carrabba's Italian Grill, Bonefish Grill, and Fleming's Prime Steakhouse & Wine Bar.",
+      "theme": "Sentiment Mismatch",
+      "thesisShort": "The market is pricing BLMN for permanent impairment while ignoring: (1) Outback traffic turned positive in Q4 2025 for the first time since 2021, outperforming industry by 190bps; (2) a credible CEO (Delta COO / Six Flags CEO) backed by Starboard ..."
     },
     "BRE": {
       "allocation": 0,
@@ -2994,6 +3041,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "MONITORING",
+      "summaryShort": "Cadeler is the world's largest operator of Wind Turbine Installation Vessels (WTIVs), specializing in the transportation and installation of offshore wind turbines, foundations, and substations.",
       "theme": "Derived-Demand Monopoly"
     },
     "CF": {
@@ -3069,7 +3117,8 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
-      "theme": "Hormuz"
+      "theme": "Hormuz",
+      "thesisShort": "CF is a genuine beneficiary of an unprecedented triple supply constraint (Hormuz + Ras Laffan + China) with mechanical self-correction via dated earnings catalysts."
     },
     "CHA": {
       "allocation": 0,
@@ -3131,6 +3180,7 @@ const D = {
       },
       "rcTotal": 4,
       "status": "MONITORING",
+      "summaryShort": "Chagee (霸王茶姬) is China's fastest-growing premium tea chain, operating 7,300+ teahouses globally via a capital-light managed franchise model (\"1+1+9+N\"). Of 6,440 stores at end-2024, 97% (6,271) were franchised.",
       "theme": "Sentiment Mismatch"
     },
     "CRTO": {
@@ -3208,7 +3258,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "Criteo S.A. is a global commerce media technology company founded Nov 3, 2005 as a societe par actions simplifiee (S.A.S.) under French law, subsequently converted to a societe anonyme (S.A.). IPO October 2013.",
       "theme": "AI Disruption",
+      "thesisShort": "Commerce media platform trading at ~1.56x EV/EBITDA on all-time-high earnings ($407M EBITDA) with a fortress balance sheet ($378M net cash, zero debt). Market prices permanent decline; every audited financial metric shows stabilization or growth.",
       "type": "INVESTMENT"
     },
     "CW": {
@@ -3361,6 +3413,7 @@ const D = {
       },
       "rcTotal": 2,
       "status": "ACTIVE",
+      "summaryShort": "Dynacor operates a **fee-based ASM (artisanal/small-scale mining) gold-ore processing model**: it purchases ore from government-licensed Peruvian ASM miners and processes it at its wholly-owned Chala mill, selling...",
       "theme": "Gold Safe-Haven"
     },
     "ECO": {
@@ -3511,6 +3564,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "MONITORING",
+      "summaryShort": "Energy Recovery designs, manufactures, and sells pressure exchanger (PX) devices that recover and recycle energy in industrial fluid-flow processes.",
       "theme": "Derived-Demand Monopoly"
     },
     "GETB": {
@@ -3581,6 +3635,7 @@ const D = {
       },
       "rcTotal": 2,
       "status": "MONITORING",
+      "summaryShort": "[INFERENCE — pre-filing] GetBusy plc is a UK-listed (AIM) micro-cap software holding company whose principal asset is **SmartVault**, a verticalized document-management and client-portal SaaS embedded across all major...",
       "theme": "AI Disruption"
     },
     "GMA": {
@@ -3838,7 +3893,8 @@ const D = {
       },
       "rcTotal": 3,
       "status": "ACTIVE",
-      "theme": "Tariff Refund"
+      "theme": "Tariff Refund",
+      "thesisShort": "HOFT is a thesis-supportive, fact-grounded opportunity with a dated arithmetic catalyst (CIT-ordered IEEPA refund at 12-20% of MCap) and a transformed balance sheet, but the MIA three-axis verdict cannot exceed AVERAGE/AVERAGE/STRONG without formal..."
     },
     "HSTM": {
       "allocation": 0,
@@ -3975,6 +4031,7 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "Kendrion N.V. designs, manufactures, and delivers electromagnetic actuators, brakes, and control systems for industrial and (formerly) automotive applications.",
       "theme": "Sentiment Mismatch"
     },
     "KIST": {
@@ -4078,6 +4135,7 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "ASX-listed enterprise medical imaging software provider (ASX:M7T).",
       "theme": "SaaS Post-Restructuring Torque"
     },
     "MAGN": {
@@ -4124,6 +4182,7 @@ const D = {
       },
       "rcTotal": 8,
       "status": "ACTIVE",
+      "summaryShort": "Magnera Corporation is the world's largest nonwovens company, formed November 4, 2024 via a Reverse Morris Trust transaction combining Berry Global Group's Health, Hygiene & Specialties (HHS) division with Glatfelter...",
       "theme": "Sentiment Mismatch"
     },
     "MCB": {
@@ -4232,6 +4291,7 @@ const D = {
       },
       "rcTotal": 6,
       "status": "MONITORING",
+      "summaryShort": "Meteoric Resources NL is an Australian-listed exploration and development company advancing the Caldeira Rare Earth Project in Minas Gerais, Brazil — described as the world's highest-grade ionic clay rare earth deposit.",
       "theme": "Rare Earths"
     },
     "MEOH": {
@@ -4301,7 +4361,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
-      "theme": "Real Asset NAV Realization"
+      "summaryShort": "NYSE-listed Hawaii landholder owning **22,286 acres on Maui** at $309M market cap.",
+      "theme": "Real Asset NAV Realization",
+      "thesisShort": "Market is genuinely inefficient on magnitude (PW-FV $41.77 vs $15.45 = +170% mismatch, council convergence at $40.03 = 4% spread, generalist FV $38.50 = +149% — mismatch is primarily about DISCOVERY with secondary thesis premium 33.8% MEDIUM)."
     },
     "MSI-AIM": {
       "allocation": 0,
@@ -4371,6 +4433,7 @@ const D = {
       },
       "rcTotal": 2,
       "status": "ACTIVE",
+      "summaryShort": "M.S. International plc is a UK-listed (AIM) niche industrial group with four operating segments, dominated by Defence and Security (70% of FY2025 turnover).",
       "theme": "Niche Industrial Monopolies"
     },
     "MTO-ASX": {
@@ -4450,7 +4513,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "ASX-listed leading retailer and wholesale distributor of motorcycles, ATVs, scooters, and motorcycle/bicycle parts and accessories in Australia and New Zealand. Headquartered in Brisbane, Queensland.",
       "theme": "Cyclical Inflection",
+      "thesisShort": "ANZ #1 motorcycle/powersports retailer at -40% drawdown vs +21% EBITDA / +29% NPAT / +18.8% dividend / +320bps share trajectory; bear FV $3.99 already EXCEEDS current $2.37 across every reasonable method, generalist FV $6.03 is independent confirmation.",
       "type": "INVESTMENT"
     },
     "MYR": {
@@ -4530,7 +4595,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "Myer Holdings is Australia's largest department-store operator and, post Jan 2025 Apparel Brands acquisition, operates as **Myer Group** — a scaled omnichannel retail platform of **769 total stores** across Australia...",
       "theme": "Sentiment Mismatch",
+      "thesisShort": "Base case A$0.40–0.55 is **below consensus PT** — suggesting we should be more cautious than the analyst community. Bull case A$0.55–0.80 overlaps consensus. The discrepancy with market implies market is **pricing further execution risk** than ana...",
       "type": "INVESTMENT"
     },
     "NEO": {
@@ -4641,7 +4708,9 @@ const D = {
       "price": "—",
       "rc": 0,
       "status": "PARKED",
-      "theme": "Sentiment Mismatch"
+      "summaryShort": "Norwood Financial Corp is the holding company for Wayne Bank, a community bank serving northeastern Pennsylvania.",
+      "theme": "Sentiment Mismatch",
+      "thesisShort": "The market has partially recognized the FY2025 turnaround but underestimates the forward earnings trajectory. The FY2024 \"loss year\" was a deliberate balance sheet reset — management proactively repositioned the securities portfolio ($20M loss), r..."
     },
     "OFLX": {
       "allocation": 0,
@@ -4733,6 +4802,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "MONITORING",
+      "summaryShort": "Omega Flex, Inc. is a leading manufacturer of flexible metal hose, principally corrugated stainless steel tubing (CSST) for fuel gas distribution in residential, commercial, and industrial buildings.",
       "theme": "Niche Industrial Monopolies"
     },
     "ORGO": {
@@ -4783,7 +4853,9 @@ const D = {
       },
       "rcTotal": 7,
       "status": "MONITORING",
-      "theme": "Sentiment Mismatch"
+      "summaryShort": "Organogenesis Holdings is a US-based regenerative medicine company developing, manufacturing, and commercializing advanced wound-care and surgical/sports-medicine products.",
+      "theme": "Sentiment Mismatch",
+      "thesisShort": "- Q4 2025 $225M was pull-forward — both mgmt and market anchor on an inflated trailing baseline that overstates BOTH the decline and the recovery. - PMA mix-shift is real but narrow (Apligraf 3% of units). The **operating leverage** on that 3% is ..."
     },
     "OSW": {
       "allocation": 0,
@@ -4841,6 +4913,7 @@ const D = {
       },
       "rcTotal": 5,
       "status": "MONITORING",
+      "summaryShort": "OneSpaWorld is the dominant provider of health and wellness services onboard cruise ships globally.",
       "theme": "Sentiment Mismatch"
     },
     "PAYC": {
@@ -4936,6 +5009,7 @@ const D = {
       },
       "rcTotal": 11,
       "status": "MONITORING",
+      "summaryShort": "Paragon Care Limited is a diversified healthcare wholesaler, distributor, and manufacturer across the Asia Pacific region — pharmaceuticals, capital equipment, diagnostics, medical consumables, devices, and...",
       "theme": "Sentiment Mismatch"
     },
     "PPIH": {
@@ -4986,6 +5060,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "PARKED",
+      "summaryShort": "Perma-Pipe International Holdings, Inc. is a single-segment manufacturer of **specialty piping systems and leak detection systems**.",
       "theme": "Niche Industrial Monopolies"
     },
     "PRE": {
@@ -5052,6 +5127,7 @@ const D = {
       },
       "rcTotal": 6,
       "status": "MONITORING",
+      "summaryShort": "PubMatic is an independent sell-side platform (SSP) providing cloud infrastructure for real-time programmatic advertising transactions. The company serves ~1,980 publishers across 64,000+ domains and 44,000+ apps.",
       "theme": "AI Disruption"
     },
     "REPX": {
@@ -5193,6 +5269,7 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "UK-listed B2B services group operating in **secure and sustainable business services for data, information, communications and assets** [FACT — FY25 RNS, p.1].",
       "theme": "Sentiment Mismatch",
       "type": "INVESTMENT"
     },
@@ -5404,6 +5481,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "PARKED",
+      "summaryShort": "Strike Energy Limited (ASX: STX, ABN/ACN 078 012 745) is an ASX-listed independent gas producer, developer, and explorer focused on conventional gas resources in Western Australia's Perth Basin.",
       "theme": "Hormuz"
     },
     "TOI": {
@@ -5458,6 +5536,7 @@ const D = {
       },
       "rcTotal": 6,
       "status": "ACTIVE",
+      "summaryShort": "Topicus.com is a European acquirer, manager, and builder of vertical market software (VMS) businesses, spun out of Constellation Software (TSX: CSU) in January 2021.",
       "theme": "AI Disruption"
     },
     "TRI-LSE": {
@@ -5533,7 +5612,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "MONITORING",
-      "theme": "Sentiment Mismatch"
+      "summaryShort": "Trifast PLC designs, engineers, manufactures, and distributes industrial fasteners and Category C components to OEM assemblers and distributors across ~65 countries.",
+      "theme": "Sentiment Mismatch",
+      "thesisShort": "The market is anchoring on the automotive narrative (~38% of revenue) while ignoring: (1) the certification moat that makes customers captive regardless of powertrain mix — EVs need fasteners too; (2) a visible, measurable margin recovery already ..."
     },
     "TTD": {
       "allocation": 0,
@@ -5625,6 +5706,7 @@ const D = {
       },
       "rcTotal": 7,
       "status": "MONITORING",
+      "summaryShort": "The Trade Desk is a global leader in advertising technology, operating a self-service, cloud-based demand-side platform (DSP) for programmatic digital advertising.",
       "theme": "AI Disruption"
     },
     "UCU": {
@@ -5739,7 +5821,9 @@ const D = {
       },
       "rcTotal": 11,
       "status": "ACTIVE",
+      "summaryShort": "Vow ASA develops, delivers, and maintains advanced waste treatment, wastewater purification, and carbon conversion systems for maritime and industrial markets.",
       "theme": "Sentiment Mismatch",
+      "thesisShort": "Vow is a 70% market share monopolist in cruise wastewater treatment, trading at 31% of probability-weighted fair value because the market prices the group as a failed turnaround while ignoring the Maritime franchise embedded within it.",
       "type": "INVESTMENT"
     },
     "WAY": {
@@ -7457,6 +7541,15 @@ function renderTickerCard(sym, t) {
     h += '<span class="pill" style="font-size:10px;background:' + etC + ';color:#000;font-weight:700" title="' + esc(t.entryTiming.rationale) + ' Review: ' + t.entryTiming.reviewDate + '">' + t.entryTiming.signal + '</span>';
   }
   h += '</div>';
+  // Upside/downside chips (LIGHT-side scalars; render even when fairValue is split out)
+  var hasUp = typeof t.upsidePct === 'number' && t.upsidePct > 0;
+  var hasDown = typeof t.downsidePct === 'number' && t.downsidePct < 0;
+  if (hasUp || hasDown) {
+    h += '<div class="tc-fv-chips">';
+    if (hasUp) h += '<span class="tc-fv-up">+' + t.upsidePct + '% upside</span>';
+    if (hasDown) h += '<span class="tc-fv-down">−' + Math.abs(t.downsidePct) + '% downside</span>';
+    h += '</div>';
+  }
   // Range bar
   if (t.fairValue) h += renderRangeBar(t);
   // Scenario strip
@@ -7473,6 +7566,13 @@ function renderTickerCard(sym, t) {
     h += '<div class="tc-action-item"><span class="tc-action-icon">&#128161;</span><span class="tc-action-text" style="color:var(--accent-blue);font-style:italic">' + esc(t.variantViews[0].substring(0, 100)) + (t.variantViews[0].length > 100 ? '...' : '') + '</span></div>';
   }
   h += '</div>';
+  // Overview + thesis paragraphs (LIGHT-side projections of businessBackground / Investment Verdict)
+  if (t.summaryShort) {
+    h += '<p class="tc-overview">' + esc(t.summaryShort) + '</p>';
+  }
+  if (t.thesisShort) {
+    h += '<p class="tc-thesis">' + esc(t.thesisShort) + '</p>';
+  }
   // V1-V8 mini bar
   h += renderDimMini(t);
   h += '</div>';
@@ -8128,7 +8228,14 @@ function renderResearch() {
 
   // Active positions — full cards
   if (active.length) {
-    h += '<h3 style="font-size:13px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Active Positions (' + active.length + ')</h3>';
+    var sz = (window.localStorage && localStorage.getItem('cardSize')) || 'M';
+    h += '<div class="card-size-row">';
+    h += '<h3 style="font-size:13px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px">Active Positions (' + active.length + ')</h3>';
+    h += '<div class="card-size-toggle" role="group" aria-label="Card size">';
+    ['S','M','L'].forEach(function(s) {
+      h += '<button class="card-size-btn' + (s === sz ? ' active' : '') + '" onclick="setCardSize(\'' + s + '\')" data-size="' + s + '">' + s + '</button>';
+    });
+    h += '</div></div>';
     h += '<div class="pipeline-grid">';
     active.forEach(function(item) { h += renderTickerCard(item.sym, item.t); });
     h += '</div>';
@@ -8357,6 +8464,17 @@ function updateThemeIcon(theme) {
   }
   updateThemeIcon(saved);
 })();
+
+// Card-size slider: maps S/M/L → --card-min-width, persists to localStorage.
+var CARD_SIZE_PX = { S: 280, M: 380, L: 520 };
+function setCardSize(size) {
+  var px = CARD_SIZE_PX[size] || CARD_SIZE_PX.M;
+  document.documentElement.style.setProperty('--card-min-width', px + 'px');
+  try { localStorage.setItem('cardSize', size); } catch (e) {}
+  document.querySelectorAll('.card-size-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-size') === size);
+  });
+}
 </script>
 </body>
 </html>

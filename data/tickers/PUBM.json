@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "PUBM",
     "version": "2.0.0"
   },
@@ -32,10 +32,63 @@
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary — Misclassified",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "1,980 publishers, 64K domains, 44K apps, 55% SPO activity; breadth-based not depth-based moat; competitors (Magnite, Index Exchange) have comparable publisher reach",
+        "score": 3
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "17 operational AI agents, 250+ agentic campaigns, NVIDIA partnership, Ad Context Protocol co-founder, 40%+ code via AI; shipped but revenue de minimis",
+        "score": 3.5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "Market prices PUBM as AI victim at 3.9x EV/EBITDA; own 10-K risk factors read as bear case while company has real AI infrastructure; wide narrative gap",
+        "score": 4
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-01",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-01_PUBM_pattern_match.md",
-    "total": 25
+    "total": 25,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "~55% prob-weighted upside; 3 independent legs (organic inflection, AgenticOS optionality, Google antitrust); floor ~ current price; no unaddressed structural causes but recurring headwind pattern is a concern",
+        "score": 3.5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "H2 2026 revenue inflection is dated (quarterly earnings) but depends on management delivering guided double-digit growth; mixed promise/delivery track record",
+        "score": 3
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "#2 independent SSP (~4% share), 1,980 publishers, 63.6% gross margins, owned infrastructure; but NOT a monopoly — demand-side dependency on TTD/Google DV360; 54% A/R concentration from top 3 buyers",
+        "score": 3
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "$145.5M cash, zero debt, $110M undrawn revolver, $46.3M FCF, $81.1M OCF — fortress",
+        "score": 5
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

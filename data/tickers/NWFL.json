@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "NWFL",
     "version": "2.0.0"
   },
@@ -15,10 +15,63 @@
   "pm": {
     "archetype": "A",
     "archetypeName": "Turnaround + Hidden Franchise",
+    "flex": [
+      {
+        "id": "A1",
+        "max": 5,
+        "name": "Management Change",
+        "rationale": "CEO Donnelly (2022) + CFO McCaffery (2024); strong execution but not \"fresh\" change; proven turnaround architect",
+        "score": 3.5
+      },
+      {
+        "id": "A2",
+        "max": 5,
+        "name": "Insider Conviction",
+        "rationale": "$274K+ cluster buy by 3-4 insiders, zero sales, immediately post-Q4 results; Director Carroll $168K purchase",
+        "score": 4.5
+      },
+      {
+        "id": "A3",
+        "max": 5,
+        "name": "Coverage / Structural Neglect",
+        "rationale": "1 analyst on $330M mcap / $2.9B-asset bank; meaningful undercoverage but NASDAQ-listed with 35% institutional",
+        "score": 4
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-07",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-07_NWFL_pattern_match.md",
-    "total": 25.5
+    "total": 25.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "8.3x fwd P/E, 1.33x P/TBV on 14% ROATE bank; 15-30% upside to fair P/TBV of 1.5-1.6x; stock near 52W highs limits magnitude",
+        "score": 3
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q1 2026 earnings (Apr 16) first to show acquisition accretion; NIM mechanically self-correcting; quarterly cadence",
+        "score": 3.5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Well-run community bank, diversified loan book, 0.29% NPAs, strong deposit growth; but rate-sensitive, limited moat",
+        "score": 3
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet (GATE)",
+        "rationale": "TCE 8.88%, Tier 1 12.37%, proactive securities repositioning, clean credit; DATA GAPs on securities detail",
+        "score": 4
+      }
+    ]
   },
   "premortem": [],
   "recentNotes": [

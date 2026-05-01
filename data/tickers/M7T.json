@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "M7T",
     "version": "2.0.0"
   },
@@ -26,6 +26,20 @@
         "name": "Insider Conviction",
         "rationale": "(DATA GAP) **Evidence:** SS notes \"Chairman + MD + Director multi-month accumulation Nov 2025 - Mar 2026 (SEDI transaction-level detail outstanding — DATA GAP).\" Three-insider cluster claimed but transaction-level not verified. Cluster size, prices, dates not pulled at express tier. **Score rationa…",
         "score": 4
+      },
+      {
+        "id": "E1",
+        "max": 5,
+        "name": "Restructuring Completeness",
+        "rationale": "6mo into reset; Q3 leading indicators just printing; not yet 1yr-proven",
+        "score": 3
+      },
+      {
+        "id": "E3",
+        "max": 5,
+        "name": "Perception Lag",
+        "rationale": "1.1x EV/Rev vs peer 2-12x; stabilization not yet priced",
+        "score": 4.5
       }
     ],
     "max": 35,

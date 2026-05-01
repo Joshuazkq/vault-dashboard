@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
@@ -138,6 +138,36 @@
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat",
+        "rationale": "Switching costs + platform advantage; client-siloed data, not a network effect; no patents",
+        "score": 3
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "IWant: 100% deployed, usage +80%, $100M AI infra, Forrester 431% ROI, retention 90→91%; no AI ARR metric",
+        "score": 3.5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "22-24 analysts; market fully informed; discount from growth deceleration, not misclassification",
+        "score": 2
+      },
+      {
+        "id": "F4",
+        "max": 5,
+        "name": "Recession Armor",
+        "rationale": "Legally mandated payroll; grew 14% through COVID (filing-confirmed); zero debt; counter-cyclical AI thesis",
+        "score": 5
+      }
+    ],
     "max": 40,
     "scoredDate": "2026-03-28",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_PAYC_pattern_match.md",

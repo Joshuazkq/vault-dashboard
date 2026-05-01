@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "TOI",
     "version": "2.0.0"
   },
@@ -173,6 +173,36 @@
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "180+ VMS with workflow data in regulated verticals; aggregate moat, not singular",
+        "score": 3.5
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "AI deployed across portfolio, but no measurable pricing uplift yet",
+        "score": 2.5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "Some VMS commoditization narrative, but drawdown isn't AI-driven",
+        "score": 2.5
+      },
+      {
+        "id": "F4",
+        "max": 5,
+        "name": "Recession Armor",
+        "rationale": "Grew through 2020 and 2022; 70%+ recurring; mission-critical government/healthcare",
+        "score": 5
+      }
+    ],
     "max": 40,
     "scoredDate": "2026-03-28",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_TOI_pattern_match.md",

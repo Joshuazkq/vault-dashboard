@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "GETB",
     "version": "2.0.0"
   },
@@ -15,6 +15,29 @@
   "pm": {
     "archetype": "Mixed F+G",
     "archetypeName": "F-primary (AI/Tech Disruption Beneficiary, Misclassified vertical-SaaS at sub-1.5x ARR with shipped AI features) with G-secondary lens (Derived-Demand Monopoly position embedded in US tax-prep workflow ecosystem). Archetype B (Compounder Mispriced) not in canonical pool — F captures the AI-amplification + misclassification thesis better; G captures the embedded-niche monopoly economics in CPA/tax-prep document workflow.",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "650M doc corpus + 5-platform integration = workflow moat; sub-monopoly vs. NetDocuments/iManage",
+        "score": 4
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "SmartRequestAI shipped; AI capex visible (£0.3M FY25 EBITDA); no quantified AI revenue uplift yet",
+        "score": 3
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "Discovery-gap mispricing (AIM neglect + SaaS reset) more than active AI-fear narrative",
+        "score": 3
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-05-01",
     "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_GETB_pattern_match.md",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "HSTM",
     "version": "2.0.0"
   },
@@ -159,6 +159,36 @@
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat",
+        "rationale": "Irreplaceable 35yr credentialing records + NurseGrid 670K MAU + MissionCare caregiver network + hStream ID 391K",
+        "score": 4.5
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "HLX + JANE AI shipped; no measurable AI revenue or pricing uplift yet; highest upgrade potential",
+        "score": 2.5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "5 analysts on $628M co; 2x P/S misses CredentialStream +21%, ShiftWizard +31%, deferred commissions 15% CAGR",
+        "score": 4
+      },
+      {
+        "id": "F4",
+        "max": 5,
+        "name": "Recession Armor",
+        "rationale": "Legally mandated healthcare compliance; grew through COVID; ~96% subscription; healthcare workforce expanding",
+        "score": 5
+      }
+    ],
     "max": 40,
     "scoredDate": "2026-03-28",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_HSTM_pattern_match.md",

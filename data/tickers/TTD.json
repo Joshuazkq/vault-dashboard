@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "TTD",
     "version": "2.0.0"
   },
@@ -93,6 +93,29 @@
   "pm": {
     "archetype": "Mixed F+C",
     "archetypeName": "AI/Tech Disruption Beneficiary (primary) + Event-Driven Dislocation (secondary).",
+    "flex": [
+      {
+        "id": "F1",
+        "max": 5,
+        "name": "Data/Network Moat Depth",
+        "rationale": "UID2 ecosystem, Kokai trained on $13.4B spend, OpenPath+Sincera supply data. Niche-specific (open-internet programmatic). Not TRI-Westlaw tier.",
+        "score": 4
+      },
+      {
+        "id": "F2",
+        "max": 5,
+        "name": "AI Integration Maturity",
+        "rationale": "Kokai 100% adoption (↑ from 85%); 26% CPA / 58% CPR / 94% CTR quantified; Kokai clients grow spend 20% faster; Ventura shipped Feb 2026. Attribution not disclosed.",
+        "score": 4.5
+      },
+      {
+        "id": "F3",
+        "max": 5,
+        "name": "Disruption Misperception",
+        "rationale": "Market prices deceleration/competition, not AI-threat. 29 analysts compress variant edge. Misperception on Kokai-driven re-acceleration + SBC cliff is variant but not dramatic.",
+        "score": 3
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_TTD_pattern_match.md",

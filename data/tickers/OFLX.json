@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "OFLX",
     "version": "2.0.0"
   },
@@ -293,6 +293,13 @@
         "max": 5,
         "name": "Coverage Gap",
         "rationale": "Zero coverage; $300M mcap; 121 institutions; ~$54M float",
+        "score": 5
+      },
+      {
+        "id": "C2",
+        "max": 5,
+        "name": "Business-Event Separation",
+        "rationale": "Moat completely intact through housing downturn; 60% GM held for 4 years",
         "score": 5
       }
     ],

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "PPIH",
     "version": "2.0.0"
   },
@@ -31,10 +31,63 @@
   "pm": {
     "archetype": "B",
     "archetypeName": "Cyclical Inflection",
+    "flex": [
+      {
+        "id": "B1",
+        "max": 5,
+        "name": "Supply/Demand Setup",
+        "rationale": "Structural MENA capex demand (Saudi 2030, UAE Cooling); no supply constraint",
+        "score": 3.5
+      },
+      {
+        "id": "B2",
+        "max": 5,
+        "name": "Cost Position / Margin Protection",
+        "rationale": "Demonstrated GM expansion; local MENA manufacturing; no named cost edge",
+        "score": 3
+      },
+      {
+        "id": "B3",
+        "max": 5,
+        "name": "Consensus Lag",
+        "rationale": "2 analysts; 15.5x TTM P/E on 33% growth; consensus lagging FY2025 inflection",
+        "score": 4
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_PPIH_pattern_match.md",
-    "total": 24.5
+    "total": 24.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "+55-70% revised base-case upside (down from situation-screen's +98%); 2.5 legs; thin floor; binary risks identified",
+        "score": 3
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Dated quarterly earnings + Ohio operational Q2 FY2026 + global credit close within 6-12 months",
+        "score": 4
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Margin inflection real (23%→33% GM) but single-segment project-based, no monopoly, no aftermarket",
+        "score": 3.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net debt $13.8M manageable; FCF lumpy; covenants intact; GATE PASSED",
+        "score": 3.5
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

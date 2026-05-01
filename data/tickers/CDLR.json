@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "CDLR",
     "version": "2.0.0"
   },
@@ -93,10 +93,56 @@
   "pm": {
     "archetype": "G",
     "archetypeName": "Derived-Demand Monopoly",
+    "flex": [
+      {
+        "id": "G1",
+        "max": 5,
+        "name": "Derived-Demand Monopoly",
+        "rationale": "Cadeler ~7 vs DEME 3 vs Maersk 1 (next-gen Europe); P-class 26% efficiency edge; yard scarcity + 3-4yr newbuild lead time",
+        "score": 4
+      },
+      {
+        "id": "G2",
+        "max": 5,
+        "name": "Mechanical Revenue Linkage",
+        "rationale": "EUR 2.8B backlog 80% FID; termination fees proved (EUR 120M Hornsea 4); SeAH resolution de-risks Wind Ally conversion",
+        "score": 4.5
+      },
+      {
+        "id": "G3",
+        "max": 5,
+        "name": "Discovery Gap",
+        "rationale": "5-6 named analysts vs Ørsted 25+, Vestas 30+; no U.S. majors; DEME +37% / CDLR -15% = sophisticated capital using DEME not CDLR",
+        "score": 4
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_CDLR_pattern_match.md",
-    "total": 28.5
+    "total": 28.5,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "6.6x fwd EV/EBITDA, 0.128x/margin pt vs DEME 0.200x; prob-wtd upside ~+27-40%; Part E all TRANSIENT (no STRUCTURAL cap)",
+        "score": 4
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Wind Ace Q3 2026 (dividend unlock), dividend init 2027, Wind Apex Q2 2027 (FCF), Hormuz-policy (UK AR8, DE +12GW, DK EUR 5B)",
+        "score": 4.5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net debt EUR 1.3B, ND/EBITDA ~2.8x fwd, covenant 9pt cushion, T-class extends capex cycle to 2031, fuel pass-through unknown",
+        "score": 3
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [

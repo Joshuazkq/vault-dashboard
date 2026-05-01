@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "CF",
     "version": "2.0.0"
   },
@@ -348,6 +348,29 @@
   "pm": {
     "archetype": "B",
     "archetypeName": "Cyclical Inflection + Misperceived Commodity Exposure",
+    "flex": [
+      {
+        "id": "B1",
+        "max": 5,
+        "name": "Supply/Demand Setup",
+        "rationale": "Triple supply constraint: Hormuz + Ras Laffan (structural) + China policy (through Aug); 32-36% seaborne offline",
+        "score": 5
+      },
+      {
+        "id": "B2",
+        "max": 5,
+        "name": "Cost Position",
+        "rationale": "HH $3.20 vs TTF $18+; $450+/t advantage widened; ME offline; LNG maxed = no transmission",
+        "score": 5
+      },
+      {
+        "id": "B3",
+        "max": 5,
+        "name": "Consensus Lag",
+        "rationale": "Consensus EPS $9.01 vs thesis $30.7 (3.4x gap); consensus PT $101.73 below current price; 2/20 Buy",
+        "score": 5
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-03-28",
     "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_CF_pattern_match.md",

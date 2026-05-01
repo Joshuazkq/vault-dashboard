@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "GTT",
     "version": "2.0.0"
   },
@@ -306,6 +306,29 @@
         "id": "FP-7",
         "match": "NO",
         "name": "Compound Fragility"
+      }
+    ],
+    "flex": [
+      {
+        "id": "B1",
+        "max": 5,
+        "name": "Supply/Demand Setup",
+        "rationale": "Structural vessel shortfall quantified; 84 mtpa FID; Ras Laffan rebuild; 230+ scrapping",
+        "score": 5
+      },
+      {
+        "id": "B2",
+        "max": 5,
+        "name": "Cost Position / Margin Protection",
+        "rationale": "Royalty model = zero marginal cost; 65-68% margin guided through trough; no competitor",
+        "score": 5
+      },
+      {
+        "id": "B3",
+        "max": 5,
+        "name": "Consensus Lag",
+        "rationale": "PT €186 << FV €342; but 18 analysts cover, stock already +80% from 52W low",
+        "score": 4
       }
     ],
     "max": 35,

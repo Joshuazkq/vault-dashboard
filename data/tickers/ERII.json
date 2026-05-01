@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T05:04:50Z",
-    "sourceFingerprint": "2fd86fcf58df60af",
+    "generatedAt": "2026-05-01T08:59:00Z",
+    "sourceFingerprint": "eb36e8b570390634",
     "ticker": "ERII",
     "version": "2.0.0"
   },
@@ -99,10 +99,63 @@
   "pm": {
     "archetype": "G",
     "archetypeName": "Derived-Demand Monopoly",
+    "flex": [
+      {
+        "id": "G1",
+        "max": 5,
+        "name": "Derived-Demand Monopoly Position",
+        "rationale": "~90% SWRO PX market share; sole-source at project design phase; regulatory/technical lock-in via engineering specification; zero displacement across 21 transcripts. Failure-mode vulnerability check: water is non-substitutable — lowest regulatory-change risk among 10-case Archetype G cohort.",
+        "score": 5
+      },
+      {
+        "id": "G2",
+        "max": 5,
+        "name": "Mechanical Revenue Linkage",
+        "rationale": "Each large SWRO plant (≥100K m³/day) requires 20-50 PX units — plant-level deterministic. But revenue is project-delivery dependent, not per-unit royalty like GTT. $32.8M Saudi contract announcements show lumpy PO conversion. Weaker mechanical link than GTT (royalty model) or OSW (existing-ship cov…",
+        "score": 3.5
+      },
+      {
+        "id": "G3",
+        "max": 5,
+        "name": "Primary-vs-Derived Discovery Gap",
+        "rationale": "3-5 analysts on ERII vs Veolia 25+, ACWA Power 15+ = 5-8x coverage asymmetry. ERII not in water ETFs (PHO, FIW). Amundi +323% QoQ accumulation (to 5.4% outstanding) = early institutional discovery signal. 3-5 analyst count static over 12 months despite revenue $104M→$135M — gap still open. Phase 1…",
+        "score": 5
+      }
+    ],
     "max": 35,
     "scoredDate": "2026-04-17",
     "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_ERII_pattern_match.md",
-    "total": 32
+    "total": 32,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Parts A-C: prob-wtd FV $19.49 at 25/50/25 scenarios = +83% prob-wtd upside from $10.62; bear FV $11.76 > current (positive in all scenarios, asymmetry: infinite). Part D: multi-legged (Saudi + MENA + APAC), strong floor (net cash $1.54/share + $20M recurring aftermarket + installed base replacement…",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Q1 2026 earnings (~May 2026) is dated and specific. But thesis-realizing catalysts (Saudi pipeline FID→PO conversion, Q650 adoption, coverage expansion) are unscheduled. Organic inflection exists (SWPC pipeline expanding; Amundi accumulating) but credibility overhang (M3/M5: 2.5/5) creates a \"show…",
+        "score": 3
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "~90% market share in SWRO pressure exchangers; 35,000+ units deployed; PX specified at project design phase; 30-year design life, single moving part; Water segment 46% operating margin FY2025; 69.6%→65.1% gross margin (compressed but still above peers). Monopoly AND structural tailwind (IDA 14.8M m…",
+        "score": 5
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash $83.3M ($1.54/share), zero funded debt across all 4 FY2022-2025, $50M undrawn revolver to Jan 2031, only LCs outstanding ($20.4M). Covenant net debt/EBITDA ≤3.0x, in compliance. Gate PASS — not even close. (Source: 10-K FY2025 p.48, 69, 89)",
+        "score": 5
+      }
+    ]
   },
   "premortem": [],
   "rcChecklist": [
