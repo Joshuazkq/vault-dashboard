@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "ERII",
     "version": "2.0.0"
   },
@@ -79,6 +79,22 @@
     "methodology": "EV/EBITDA Peer-Anchored",
     "probWeightedFV": "$19.49/share",
     "thesisType": "Type 4: Structural Growth Mispricing."
+  },
+  "financials": {
+    "cash": "—",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$0.42",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "$22,962",
+    "revenue": "$134,987",
+    "revenueGrowth": "-6.9%",
+    "totalDebt": "—"
   },
   "pm": {
     "archetype": "G",

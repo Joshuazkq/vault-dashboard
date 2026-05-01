@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "PGC",
     "version": "2.0.0"
   },
@@ -13,6 +13,22 @@
     "Ongoing: ASX Appendix 3Y filings",
     "Ongoing: AU pharmacy channel news"
   ],
+  "financials": {
+    "cash": "AUD 20.3M",
+    "debtDetails": [],
+    "ebitda": "AUD 95.2M",
+    "ebitdaMargin": "—",
+    "eps": "1.24c",
+    "fcf": "−AUD 30.3M",
+    "fy": "FY25",
+    "leverage": "2.3x",
+    "leverageNum": 2.27,
+    "netDebt": "AUD 216.4M",
+    "netIncome": "AUD 20.6M",
+    "revenue": "AUD 3,613.9M (+22%)",
+    "revenueGrowth": "—",
+    "totalDebt": "—"
+  },
   "indicators": {
     "blindspots": [
       "**ScotPac facility full covenant terms** — `[DATA GAP]`. Management-stated \"zero financial covenants\" on primary AUD 400M stack, but full loan-document terms (change-of-control, MAC clauses, cross-defaults) not publicly disclosed. A hidden trigger would be the FP-7 covenant-fragility leg rearming.",

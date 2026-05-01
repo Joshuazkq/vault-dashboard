@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "PPIH",
     "version": "2.0.0"
   },
@@ -12,6 +12,22 @@
     "~Nov-Dec 2026: FY2026 Q3 10-Q",
     "~Apr 2027: FY2026 10-K"
   ],
+  "financials": {
+    "cash": "$18,720",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$2.09",
+    "fcf": "($1,271)",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "$13,819",
+    "netIncome": "$17,035",
+    "revenue": "$210,925",
+    "revenueGrowth": "+33.2%",
+    "totalDebt": "$32,539"
+  },
   "pm": {
     "archetype": "B",
     "archetypeName": "Cyclical Inflection",

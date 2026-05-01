@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "WAY",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "—",
+    "debtDetails": [],
+    "ebitda": "462.1",
+    "ebitdaMargin": "+42.0%",
+    "eps": "$0.61",
+    "fcf": "283.2",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "112.1",
+    "revenue": "1,099.3",
+    "revenueGrowth": "+16.5%",
+    "totalDebt": "—"
+  },
   "indicators": {
     "blindspots": [
       "**CMS Prior Auth revenue quantification** — Federal mandate is live but no one (including WAY) has quantified the revenue impact. First data expected Q1-Q2 2026 earnings. This is the biggest unknown and the key catalyst.",

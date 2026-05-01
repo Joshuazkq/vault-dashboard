@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "TTD",
     "version": "2.0.0"
   },
@@ -73,6 +73,22 @@
       "score": 4,
       "type": null
     }
+  },
+  "financials": {
+    "cash": "658.2",
+    "debtDetails": [],
+    "ebitda": "1,196.4",
+    "ebitdaMargin": "+41.3%",
+    "eps": "$0.91",
+    "fcf": "795.7",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "443.3",
+    "revenue": "2,896.3",
+    "revenueGrowth": "+18.5%",
+    "totalDebt": "$0"
   },
   "pm": {
     "archetype": "Mixed F+C",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "GETB",
     "version": "2.0.0"
   },
@@ -64,7 +64,7 @@
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "Pattern-match score 27/35 Interesting-High (Archetype F+G) — MONITORING justification: 1pt shy of STRONG, multiple promotable upgrade paths within 6-12 months (H1 FY26 interims, AI revenue disclosure, M ARR cross)",
+      "evidence": "Pattern-match score 27/35 Interesting-High (Archetype F+G) — MONITORING justification: 1pt shy of STRONG, multiple promotable upgrade paths within 6-12 months (H1 FY26 interims, AI revenue disclosure, $20M ARR cross)",
       "reason": "",
       "since": "",
       "stage": "A",

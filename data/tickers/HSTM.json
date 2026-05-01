@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "HSTM",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "—",
+    "debtDetails": [],
+    "ebitda": "71.8",
+    "ebitdaMargin": "+23.6%",
+    "eps": "0.61",
+    "fcf": "31.1",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "18.3",
+    "revenue": "304.1",
+    "revenueGrowth": "+4.3%",
+    "totalDebt": "0"
+  },
   "indicators": {
     "blindspots": [
       "**hStream AI platform development timeline** — No public roadmap. This is the offensive AI thesis. If it ships with measurable features, HSTM re-rates from compliance vendor to AI-enabled platform. If cancelled, growth ceiling is 5-7% blended. Monitor via: product announcements, earnings call commentary.",

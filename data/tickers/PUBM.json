@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "PUBM",
     "version": "2.0.0"
   },
@@ -13,6 +13,22 @@
     "Ongoing: AgenticOS campaign count + revenue disclosure",
     "Ongoing: SBC as % of revenue"
   ],
+  "financials": {
+    "cash": "$145.5M",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$(0.31)",
+    "fcf": "$46.2",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "$(14.5)",
+    "revenue": "$282.9",
+    "revenueGrowth": "-2.9%",
+    "totalDebt": "—"
+  },
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary — Misclassified",

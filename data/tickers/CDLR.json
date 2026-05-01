@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "CDLR",
     "version": "2.0.0"
   },
@@ -73,6 +73,22 @@
       "score": 4,
       "type": null
     }
+  },
+  "financials": {
+    "cash": "58,464",
+    "debtDetails": [],
+    "ebitda": "425,000",
+    "ebitdaMargin": "68.5%",
+    "eps": "—",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "1.2x",
+    "leverageNum": 1.21,
+    "netDebt": "512,553",
+    "netIncome": "65,069",
+    "revenue": "620,400",
+    "revenueGrowth": "+149.4%",
+    "totalDebt": "571,017"
   },
   "pm": {
     "archetype": "G",

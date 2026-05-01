@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "NICE",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "$481.7",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$6.76",
+    "fcf": "—",
+    "fy": "FY2024",
+    "leverage": "Net cash",
+    "leverageNum": 0,
+    "netDebt": "-$1,162.9",
+    "netIncome": "$442.6",
+    "revenue": "$2,735.3",
+    "revenueGrowth": "+15.0%",
+    "totalDebt": "$458.8"
+  },
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",

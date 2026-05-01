@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "APP",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "(est)",
+    "debtDetails": [],
+    "ebitda": "$4,512",
+    "ebitdaMargin": "+82.3%",
+    "eps": "~$9.88",
+    "fcf": "~$3,950",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "(est)",
+    "netIncome": "$3,334",
+    "revenue": "$5,481",
+    "revenueGrowth": "+16.4%",
+    "totalDebt": "$3,550"
+  },
   "pm": {
     "archetype": "F",
     "archetypeName": "AI/Technology Disruption Beneficiary",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "ANG",
     "version": "2.0.0"
   },
@@ -22,6 +22,22 @@
     "methodology": "Peer-Anchored Destination-State EV/EBITDA",
     "probWeightedFV": "$0.282",
     "thesisType": "Type 2 (Turnaround) primary + Type 1 (Cyclical) secondary."
+  },
+  "financials": {
+    "cash": "—",
+    "debtDetails": [],
+    "ebitda": "41,664",
+    "ebitdaMargin": "11.1%",
+    "eps": "4.23",
+    "fcf": "—",
+    "fy": "FY25",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "26,327",
+    "revenue": "376,729",
+    "revenueGrowth": "+22.2%",
+    "totalDebt": "—"
   },
   "indicators": {
     "blindspots": [

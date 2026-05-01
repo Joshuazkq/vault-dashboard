@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "VOW",
     "version": "2.0.0"
   },
@@ -66,6 +66,22 @@
       "score": 5,
       "type": null
     }
+  },
+  "financials": {
+    "cash": "30.5",
+    "debtDetails": [],
+    "ebitda": "-48.6",
+    "ebitdaMargin": "-4.7%",
+    "eps": "-0.96",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "361.5",
+    "netIncome": "-279.5",
+    "revenue": "1,034.2",
+    "revenueGrowth": "+1.6%",
+    "totalDebt": "392.0"
   },
   "indicators": {
     "blindspots": [

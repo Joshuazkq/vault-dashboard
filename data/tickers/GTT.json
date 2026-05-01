@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "GTT",
     "version": "2.0.0"
   },
@@ -72,6 +72,22 @@
     "methodology": "Peer-Anchored EV/EBITDA",
     "probWeightedFV": "€346/share",
     "thesisType": "Type 4 (Structural Growth Mispricing) + Type 5 (Event-Driven)."
+  },
+  "financials": {
+    "cash": "267.5",
+    "debtDetails": [],
+    "ebitda": "542",
+    "ebitdaMargin": "67%",
+    "eps": "11.12",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "Net cash",
+    "leverageNum": 0,
+    "netDebt": "(199.3)",
+    "netIncome": "414",
+    "revenue": "803",
+    "revenueGrowth": "+25.3%",
+    "totalDebt": "—"
   },
   "indicators": {
     "blindspots": [

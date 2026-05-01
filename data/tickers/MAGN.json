@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
@@ -15,6 +15,22 @@
     "methodology": "Peer-Anchored EV/EBITDA",
     "probWeightedFV": "$34.93/share",
     "thesisType": "Type 2 (Turnaround / Margin Inflection) + Type 5 (Event-Driven)."
+  },
+  "financials": {
+    "cash": "$264M",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "($4.47)",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "($159)",
+    "revenue": "$3,204",
+    "revenueGrowth": "+46.5%",
+    "totalDebt": "$1,931M"
   },
   "indicators": {
     "cyclical": [

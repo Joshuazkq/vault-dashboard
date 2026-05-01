@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -82,6 +82,22 @@
     "methodology": "EV/EBITDA Peer-Anchored",
     "probWeightedFV": "$74.9/share",
     "thesisType": "Type 2 (Turnaround / Margin Inflection) + Type 5 (Event-Driven)."
+  },
+  "financials": {
+    "cash": "$342",
+    "debtDetails": [],
+    "ebitda": "$407",
+    "ebitdaMargin": "35%",
+    "eps": "$2.73",
+    "fcf": "$210",
+    "fy": "FY2025",
+    "leverage": "Net cash",
+    "leverageNum": 0,
+    "netDebt": "-$389",
+    "netIncome": "$149",
+    "revenue": "$1,945",
+    "revenueGrowth": "+0.6%",
+    "totalDebt": "$0"
   },
   "indicators": {
     "blindspots": [

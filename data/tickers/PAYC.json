@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "$402.0",
+    "debtDetails": [],
+    "ebitda": "$775.4",
+    "ebitdaMargin": "+41.2%",
+    "eps": "$8.92",
+    "fcf": "$341.0",
+    "fy": "FY2024",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "$502.0",
+    "revenue": "$1,883.2",
+    "revenueGrowth": "+11.2%",
+    "totalDebt": "—"
+  },
   "indicators": {
     "blindspots": [
       "**IWant revenue impact quantification** — 100% of clients have access but no revenue disclosure. Is it a retention tool (free), a pricing tool (embedded in price increases), or a revenue driver (separate SKU)? This is the single biggest unknown. Monitor via: earnings call language on AI monetization.",

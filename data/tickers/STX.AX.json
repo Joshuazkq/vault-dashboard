@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "STX.AX",
     "version": "2.0.0"
   },
@@ -20,6 +20,22 @@
     "Capacity Year 2028/29: South Erregulla Year 3 capacity revenue ~$41.8M (draft BRCP $491,700/MW, +36%)",
     "2027-2030: WA coal retirement window (Collie Oct 2027, Muja Oct 2029, Bluewaters from Oct 2028)"
   ],
+  "financials": {
+    "cash": "—",
+    "debtDetails": [],
+    "ebitda": "n.a.",
+    "ebitdaMargin": "—",
+    "eps": "(5.5)",
+    "fcf": "—",
+    "fy": "FY25",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "—",
+    "revenue": "72.7",
+    "revenueGrowth": "+59.4%",
+    "totalDebt": "—"
+  },
   "pm": {
     "archetype": "C",
     "archetypeName": "Event-Driven Dislocation",

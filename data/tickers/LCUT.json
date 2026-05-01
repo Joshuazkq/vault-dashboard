@@ -1,11 +1,27 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "LCUT",
     "version": "2.0.0"
   },
   "catalysts": [],
+  "financials": {
+    "cash": "$24.4",
+    "debtDetails": [],
+    "ebitda": "$50.8",
+    "ebitdaMargin": "+7.8%",
+    "eps": "($4.37)",
+    "fcf": "—",
+    "fy": "FY2025",
+    "leverage": "3.1x",
+    "leverageNum": 3.13,
+    "netDebt": "$158.8",
+    "netIncome": "($95.7)",
+    "revenue": "$647.9",
+    "revenueGrowth": "-5.1%",
+    "totalDebt": "$180.0"
+  },
   "premortem": [],
   "rcChecklist": [
     {

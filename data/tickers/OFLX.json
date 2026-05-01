@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "OFLX",
     "version": "2.0.0"
   },
@@ -73,6 +73,22 @@
       "score": 2,
       "type": null
     }
+  },
+  "financials": {
+    "cash": "$53,226",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$1.47",
+    "fcf": "$15,351",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "$14,827",
+    "revenue": "$98,296",
+    "revenueGrowth": "-3.3%",
+    "totalDebt": "$0"
   },
   "indicators": {
     "cyclical": [

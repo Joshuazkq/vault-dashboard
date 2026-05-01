@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:19:58Z",
-    "sourceFingerprint": "cce92fce2650e4bc",
+    "generatedAt": "2026-05-01T04:36:41Z",
+    "sourceFingerprint": "8eb8060e50ab1e5f",
     "ticker": "CF",
     "version": "2.0.0"
   },
@@ -65,6 +65,22 @@
       "score": 4,
       "type": null
     }
+  },
+  "financials": {
+    "cash": "$1,982",
+    "debtDetails": [],
+    "ebitda": "—",
+    "ebitdaMargin": "—",
+    "eps": "$8.97",
+    "fcf": "$1,802",
+    "fy": "FY2025",
+    "leverage": "—",
+    "leverageNum": 0,
+    "netDebt": "—",
+    "netIncome": "—",
+    "revenue": "$7,084",
+    "revenueGrowth": "+19.3%",
+    "totalDebt": "$3,250"
   },
   "indicators": {
     "blindspots": [
