@@ -1973,6 +1973,12 @@ const D = {
         "title": "— WAY RC 5/11 → 6/11 (C2 MET — Analyst Day catalyst registered)"
       },
       {
+        "date": "2026-05-01",
+        "theme": "Sentiment Mismatch",
+        "tier": "MINOR",
+        "title": "— TRI-LSE: Research Confidence 8/11 → 11/11 (RC gate cleared, no thesis change)"
+      },
+      {
         "date": "2026-04-30",
         "theme": "AI Disruption",
         "tier": "MINOR",
@@ -1981,12 +1987,6 @@ const D = {
       {
         "date": "2026-04-30",
         "theme": "Rare Earths",
-        "tier": "MINOR",
-        "title": "— WATCHLIST schema marker (Phase 2.1)"
-      },
-      {
-        "date": "2026-04-30",
-        "theme": "Tariff Refund",
         "tier": "MINOR",
         "title": "— WATCHLIST schema marker (Phase 2.1)"
       }
@@ -2032,7 +2032,7 @@ const D = {
   "freshness": {
     "overall": {
       "fileCount": 433,
-      "newestSourceTs": "2026-05-01T04:34:33Z",
+      "newestSourceTs": "2026-05-01T04:55:55Z",
       "oldestSourceTs": "2026-03-11T03:53:11Z"
     },
     "sections": {
@@ -2048,23 +2048,23 @@ const D = {
       },
       "research": {
         "fileCount": 384,
-        "newestSourceTs": "2026-05-01T04:29:52Z",
+        "newestSourceTs": "2026-05-01T04:55:55Z",
         "oldestSourceTs": "2026-03-11T03:53:11Z"
       },
       "themes": {
         "fileCount": 15,
-        "newestSourceTs": "2026-05-01T04:34:33Z",
+        "newestSourceTs": "2026-05-01T04:55:00Z",
         "oldestSourceTs": "2026-04-17T16:24:22Z"
       }
     }
   },
-  "generated": "2026-05-01T04:36:41Z",
-  "generatedAt": "2026-05-01T04:36:41Z",
+  "generated": "2026-05-01T05:04:50Z",
+  "generatedAt": "2026-05-01T05:04:50Z",
   "instrumentConcentration": {
     "Cash": 18.5,
     "Shares": 81.5
   },
-  "lastUpdated": "2026-05-01T04:36:41Z",
+  "lastUpdated": "2026-05-01T05:04:50Z",
   "options": [],
   "overhangWindows": [],
   "parked": [
@@ -2194,7 +2194,7 @@ const D = {
   "prepBriefGaps": [],
   "priceHistory": {},
   "priorityQueue": [],
-  "sourceFingerprint": "8eb8060e50ab1e5f",
+  "sourceFingerprint": "2fd86fcf58df60af",
   "themeConcentration": [
     {
       "flag": "OVER_ADVISORY",
@@ -5510,12 +5510,12 @@ const D = {
       "inceptionReturn": 0.0,
       "patternMatch": 0,
       "price": "—",
-      "rc": 10,
+      "rc": 11,
       "rcDots": [
         "MET",
         "MET",
         "MET",
-        "PENDING",
+        "MET",
         "MET",
         "MET",
         "MET",
@@ -5524,19 +5524,14 @@ const D = {
         "MET",
         "MET"
       ],
-      "rcPending": [
-        {
-          "code": "B1",
-          "since": "2026-04-30"
-        }
-      ],
+      "rcPending": [],
       "rcStages": {
         "A": "3/3",
-        "B": "1/2",
+        "B": "2/2",
         "C": "3/3",
         "D": "3/3"
       },
-      "rcTotal": 10,
+      "rcTotal": 11,
       "status": "MONITORING",
       "theme": "Sentiment Mismatch"
     },
@@ -6067,11 +6062,16 @@ function _hydrateTicker(sym) {
     if (window._tickerHydrated[sym]) return resolve(true);
     var t = D.tickers[sym];
     if (!t) return resolve(false);
-    fetch('data/tickers/' + encodeURIComponent(sym) + '.json', {cache: 'force-cache'})
+    // Cache-bust by source fingerprint so a fresh deploy invalidates the cached
+    // per-ticker JSON. `cache: 'default'` lets the browser revalidate via standard
+    // HTTP caching when the URL repeats, but forces a fresh fetch when fingerprint
+    // changes (which is exactly when source data changed).
+    var fp = (D.sourceFingerprint || '').slice(0, 16);
+    var url = 'data/tickers/' + encodeURIComponent(sym) + '.json' + (fp ? '?v=' + fp : '');
+    fetch(url, {cache: 'default'})
       .then(function(r) { return r.ok ? r.json() : null; })
       .then(function(payload) {
         if (payload) {
-          // Merge heavy fields onto the light summary already in D.tickers[sym].
           Object.keys(payload).forEach(function(k) {
             if (k === '_meta') return;
             if (t[k] === undefined) t[k] = payload[k];

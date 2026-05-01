@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T04:36:41Z",
-    "sourceFingerprint": "8eb8060e50ab1e5f",
+    "generatedAt": "2026-05-01T05:04:50Z",
+    "sourceFingerprint": "2fd86fcf58df60af",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -348,11 +348,11 @@
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "recent filing file: Trifast_Annual_Report_2025-07-10.md",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "B",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "B2",
@@ -419,11 +419,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-01: Filing Review: FY2025 Annual Report (10-K equivalent — B1 RC evidence)",
     "2026-04-30: Conviction Rescore (Partial: V1, V2, V4, V7) + MIA Asymmetry Restoration",
     "2026-04-23: Data Correction Amendment: Hormuz/Ceasefire State",
     "2026-04-21: Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)",
-    "2026-04-20: Blind MIA Rerun (Policy-Enforced under §10b BLINDNESS REQUIREMENT)",
-    "2026-04-20: Report Review: Daily Intelligence Briefing (MAGN + TRI-LSE Daily, Apr 20)"
+    "2026-04-20: Blind MIA Rerun (Policy-Enforced under §10b BLINDNESS REQUIREMENT)"
   ],
   "scenarios": [
     {
