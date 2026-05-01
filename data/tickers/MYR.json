@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -438,6 +438,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: Report Review: MYR Weekly Intelligence Update (23–30 Apr 2026)",
+    "2026-04-21: Weekly Leading-Indicator Scan (First post-entry refresh)",
+    "2026-04-20: CapIQ Pro Data Pull (Peer Multiples + Consensus)",
+    "2026-04-20: Bulk Transcript Review: 3 Earnings Calls (H1 FY25 + FY25 + 1H FY26)",
+    "2026-04-20: 1H FY26 Results Call (24 Mar 2026)"
   ],
   "scenarios": [
     {

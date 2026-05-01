@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "ARR",
     "version": "2.0.0"
   },
@@ -107,6 +107,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-22: News-Scan: Q1 2026 Earnings Date Confirmed May 20 — Pre-Catalyst Refresh",
+    "2026-03-24: Pattern-Match Rescore (Post Bulk-Filing-Review)",
+    "2026-03-23: Bulk Filing Review: FY2023 Annual + FY2024 Annual + Q1-Q4 2025 + Q4 Presentation",
+    "2026-03-23: FY2025 Quarterly Reports (Q1-Q4) + Q4 Presentation",
+    "2026-03-23: Initial Entry (Pattern-Match Screen)"
   ],
   "variantViews": []
 }

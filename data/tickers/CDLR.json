@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "CDLR",
     "version": "2.0.0"
   },
@@ -182,6 +182,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-17: Web-Search Research Pass (post pattern-match re-score)",
+    "2026-03-29: Hormuz Disruption Impact Assessment (22 questions, Perplexity)",
+    "2026-03-29: Perplexity Deep Research (31 questions, external data)",
+    "2026-03-28: Q4 2025 / FY2025 Annual Results Call (Mar 24, 2026)",
+    "2026-03-28: Q3 2025 Earnings Call (Nov 20, 2025)"
   ],
   "variantViews": []
 }

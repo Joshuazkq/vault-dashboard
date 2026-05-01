@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "SKM",
     "version": "2.0.0"
   },
@@ -261,6 +261,11 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: Filing Review: SKM 20-F (FY2025, filed 2026-04-29)",
+    "2026-04-30: Report Review: SKM / Anthropic Weekly Intelligence Update (23–30 Apr 2026)",
+    "2026-04-22: EXPRESS TRADE Entry (user-directed override of gate-fail verdict)"
   ],
   "variantViews": []
 }

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "PPIH",
     "version": "2.0.0"
   },
@@ -120,6 +120,12 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-17: Onboarded to Niche Industrial Monopolies theme as MONITORING",
+    "2026-04-17: Bulk Filing Review (5x 10-K FY2021-FY2025 + 3x FY2025 10-Q)",
+    "2026-04-17: Web-Search Addendum — Strategic Alternatives Review + AI DC Confirmation + Partial Proxy Data",
+    "2026-04-17: DEF 14A Proxy Review (2025-05-14 filing)"
   ],
   "variantViews": []
 }

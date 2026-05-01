@@ -1,11 +1,18 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "NFE",
     "version": "2.0.0"
   },
   "catalysts": [],
   "premortem": [],
+  "recentNotes": [
+    "2026-03-29: CHANGELOG: Status PASSED → MONITORING",
+    "2026-03-29: Report Review: NFE Latest Filings Analysis & Equity Attractiveness (Week of March 21–28, 2026)",
+    "2026-03-20: RSA Signed: Equity Thesis Moot",
+    "2026-03-20: Catalyst Update: Brazil LRCAP Auction + Q4 Earnings",
+    "2026-03-19: Report Review: HH-International Gas Arbitrage Screen"
+  ],
   "variantViews": []
 }

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "ANG",
     "version": "2.0.0"
   },
@@ -373,6 +373,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-20: Management Alignment Assessment + Capital Allocation Review",
+    "2026-04-20: Capital Allocation Review: ANG",
+    "2026-04-20: Initial research baseline + pattern-match",
+    "2026-04-20: Bulk filing-review (7 filings: FY23 → H1 FY26)",
+    "2026-04-20: Bulk transcript-review (9 transcripts: FY23 → H1 FY26)"
   ],
   "scenarios": [
     {

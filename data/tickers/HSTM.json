@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "HSTM",
     "version": "2.0.0"
   },
@@ -279,6 +279,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-23: Data Propagation: Epic EpicOps Credentialing Timeline Correction",
+    "2026-04-16: T4 Mispricing Assessment: Assess-Only (No Event-Prep This Session per User)",
+    "2026-03-30: Weekly Monitor: Jefferies Coverage Initiation + Share Buyback",
+    "2026-03-29: Perplexity Stress Test + Bull Rebuttal Synthesis",
+    "2026-03-29: Perplexity Fact-Check: Thesis Source Verification"
   ],
   "variantViews": []
 }

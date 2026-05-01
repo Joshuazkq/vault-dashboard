@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -291,6 +291,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: Report Review: CRTO Weekly Intelligence Update (23–30 Apr 2026)",
+    "2026-04-28: Report Review: VOW-CRTO Daily Intelligence Brief (28 Apr — T-1 to GOOG/META Q1, T-8 to CRTO Q1)",
+    "2026-04-27: Report Review: CRTO AI Market Development — 1-Month Progress Report (Late March – Late April 2026)",
+    "2026-04-27: Report Review: VOW & CRTO Daily Intelligence Briefing (CRTO half)",
+    "2026-04-21: Report Review: AI Compute Arms Race (Theme-Level Supply Chain Report)"
   ],
   "scenarios": [
     {

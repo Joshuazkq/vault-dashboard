@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "TTD",
     "version": "2.0.0"
   },
@@ -212,6 +212,11 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-27: Cross-Ticker Signal: CRTO Daily Brief → Apr 29 GOOGL/META adtech sentiment pre-trigger",
+    "2026-04-17: Web-Search Research Pass",
+    "2026-03-31: Report Review: Ad Tech Competitive Landscape — CRTO & TTD's Best-Positioned Challengers"
   ],
   "variantViews": []
 }

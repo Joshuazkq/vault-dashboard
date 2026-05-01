@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "MTO-ASX",
     "version": "2.0.0"
   },
@@ -218,6 +218,10 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-28: Report Review: Perplexity Deep Research (13-Section External Validation)",
+    "2026-04-29: Range-Bound Value-Trap Stress Test (User-Initiated Adversarial Probe)"
   ],
   "variantViews": [
     "Multi-quarter operating outperformance (+21% EBITDA, +29% NPAT, +320bps share, +18.8% dividend, -32% net debt YoY); PSHH PPA = nil goodwill (clean); Cassen NED buying into weakness; Pinnacle entering; bear FV $3.99 > current."

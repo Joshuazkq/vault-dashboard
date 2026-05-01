@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "SPSC",
     "version": "2.0.0"
   },
@@ -275,6 +275,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-16: News Scan: Dual Activist Escalation — Irenic + Anson Push Strategic Review",
+    "2026-03-30: Weekly Monitor: MAX AI Launch, CFO Transition, Institutional Exit",
+    "2026-03-29: Management Alignment Assessment: SPSC",
+    "2026-03-28: Bulk Transcript Review: 19 Transcripts (Q3 2022 through Morgan Stanley Conference Mar 2026)",
+    "2026-03-28: 10-Q Gap-Fill Review: 5x 10-Q (Q1 2023, Q1/Q2/Q3 2024, Q2 2025)"
   ],
   "variantViews": []
 }

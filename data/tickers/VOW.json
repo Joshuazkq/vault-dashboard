@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "VOW",
     "version": "2.0.0"
   },
@@ -470,6 +470,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: REFUTATION: \"24% New-Contract Margin from Q4 2025 Slide\" Claim — DO NOT REINTRODUCE",
+    "2026-04-30: Report Review: VOW ASA Weekly Intelligence Update (23–30 Apr 2026)",
+    "2026-04-30: Derivation: Q4 2025 Audited Standalone + 9M 2025 Implied (Work-Backwards from FY2025 Audited)",
+    "2026-04-29: Report Review: VOW ASA Remuneration Report 2025",
+    "2026-04-29: Filing Review: VOW ASA Annual and Sustainability Report 2025 (FY2025 Audited Annual Report)"
   ],
   "variantViews": [
     "Maritime division alone (70% share monopolist, NOK 1.7B backlog) exceeds group EV by 39%. Margin improvement is contractual (signed backlog at better terms replacing expiring contracts at worse terms), not aspirational."

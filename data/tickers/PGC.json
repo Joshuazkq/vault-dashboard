@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "PGC",
     "version": "2.0.0"
   },
@@ -352,6 +352,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-20: Debate Session Summary (web-search refutation mode) [RESEARCH]",
+    "2026-04-20: Transcript Review: PGC FY25 Verbatim Prepared Remarks (supplementary to S&P extract) [RESEARCH]",
+    "2026-04-20: ASX Announcement Review: 3-PDF batch (Ramsay 16 Jan, Riley MD 25 Feb, Haju 2 Apr) [RESEARCH]",
+    "2026-04-20: Transcript Review: PGC FY24 Full-Year Earnings Call (30 Aug 2024) [RESEARCH]",
+    "2026-04-20: Transcript Review: PGC FY23 Full-Year Earnings Call (30 Aug 2023) [RESEARCH]"
   ],
   "variantViews": []
 }

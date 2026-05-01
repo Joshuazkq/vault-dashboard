@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
@@ -258,6 +258,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-22: News-Scan: Q1 2026 Earnings Date Confirmed May 6",
+    "2026-03-29: Management Alignment Assessment: PAYC",
+    "2026-03-28: Bulk Filing Review: 21 Filings (FY2019-FY2025 YTD)",
+    "2026-03-28: Bulk Transcript Review: Cumulative Research Baseline",
+    "2026-03-28: Q4 2025 / FY2025 Earnings Call (Feb 11, 2026)"
   ],
   "variantViews": []
 }

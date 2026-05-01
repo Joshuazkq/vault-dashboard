@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "OFLX",
     "version": "2.0.0"
   },
@@ -415,6 +415,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-28: Report Review: OFLX & BKTI Daily Intelligence Brief (28 Apr — Q1 estimated this week, Maryland clarification, §232 ta...",
+    "2026-04-22: News-Scan: Pre-Q1-2026-Earnings Refresh (7 Days to April 29)",
+    "2026-03-30: Weekly Monitor: CEO Buying, Q1 Results, Dividend",
+    "2026-03-29: Initial Research & New-Ticker Creation",
+    "2026-03-29: Bulk Filing Review (4x 10-K, 3x 10-Q, 2x 11-K)"
   ],
   "variantViews": []
 }

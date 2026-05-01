@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "NICE",
     "version": "2.0.0"
   },
@@ -145,6 +145,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-02: FY2025 20-F Review",
+    "2026-03-28: Report Review: Comprehensive Company Analysis (Perplexity Deep Research)",
+    "2026-03-28: Perplexity Deep Research: Research Gap Resolution",
+    "2026-03-28: Bulk Filing Review: FY2024 and FY2021 20-F Annual Reports",
+    "2026-03-28: Bulk Transcript Review: Cumulative Research Baseline"
   ],
   "variantViews": []
 }

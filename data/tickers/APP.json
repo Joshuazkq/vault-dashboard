@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "APP",
     "version": "2.0.0"
   },
@@ -145,6 +145,10 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-03-23: Report Review: Open Items Response (Perplexity Deep Research)",
+    "2026-03-23: Report Review: Morgan Stanley TMT Conference Fireside Chat (Mar 4, 2026)"
   ],
   "variantViews": []
 }

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -397,6 +397,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: Conviction Rescore (Partial: V1, V2, V4, V7) + MIA Asymmetry Restoration",
+    "2026-04-23: Data Correction Amendment: Hormuz/Ceasefire State",
+    "2026-04-21: Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)",
+    "2026-04-20: Blind MIA Rerun (Policy-Enforced under §10b BLINDNESS REQUIREMENT)",
+    "2026-04-20: Report Review: Daily Intelligence Briefing (MAGN + TRI-LSE Daily, Apr 20)"
   ],
   "scenarios": [
     {

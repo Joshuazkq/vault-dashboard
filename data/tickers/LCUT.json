@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "LCUT",
     "version": "2.0.0"
   },
@@ -107,6 +107,13 @@
       "stage": "D",
       "state": "PENDING"
     }
+  ],
+  "recentNotes": [
+    "2026-04-21: Cross-Ticker Signal: Daily Intelligence Briefing Apr 21 → $166B Refund Portal Confirmed Active",
+    "2026-04-20: Monday Data Session: CBP CAPE Phase 1 LIVE TODAY",
+    "2026-04-16: News Scan: CAPE Phase 1 Launch Confirmed April 20 + Process Details",
+    "2026-04-06: Monday Data Session: CBP ACE Timeline Update + CIT Expansion",
+    "2026-03-20: Report Review: LCUT/UEIC Tariff Refund Addendum"
   ],
   "variantViews": []
 }

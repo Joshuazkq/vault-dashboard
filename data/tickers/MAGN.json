@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T02:03:38Z",
-    "sourceFingerprint": "f62084ee7c219a7c",
+    "generatedAt": "2026-05-01T02:11:35Z",
+    "sourceFingerprint": "672dcd96604520c0",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
@@ -302,6 +302,13 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-04-30: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (30 Apr) — MAGN section",
+    "2026-04-28: - Report Review: MAGN+TRI-LSE Daily Intelligence Brief (28 Apr — Q2 Date CONFIRMED 7 May, +9 days)",
+    "2026-04-21: - Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)",
+    "2026-04-20: - Report Review: Daily Intelligence Brief (Apr 13-20 Lookback)",
+    "2026-04-08: - Fair Value Estimation (Peer-Anchored EV/EBITDA)"
   ],
   "variantViews": []
 }
