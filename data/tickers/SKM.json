@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "SKM",
     "version": "2.0.0"
   },
@@ -68,7 +68,7 @@
       "**Sell-side telco-core PT changes** — Most US sell-side firms model SKM as a Korean telco at 6-7x EV/EBITDA without Anthropic stake explicit. PT changes that don't reference Anthropic stake (#7) are telco-core noise. Only react to PT changes that explicitly cite the stake."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/SKM/INDICATORS.md",
-    "staleDays": 4,
+    "staleDays": 5,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -167,7 +167,7 @@
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "A",
       "state": "PENDING"
     },
@@ -176,7 +176,7 @@
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "A",
       "state": "PENDING"
     },
@@ -185,7 +185,7 @@
       "criterion": "OVERVIEW.md sourced from audited filing",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "A",
       "state": "PENDING"
     },
@@ -194,7 +194,7 @@
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "B",
       "state": "PENDING"
     },
@@ -203,7 +203,7 @@
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "B",
       "state": "PENDING"
     },
@@ -212,7 +212,7 @@
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "C",
       "state": "PENDING"
     },
@@ -221,7 +221,7 @@
       "criterion": "≥1 dated forward catalyst registered",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "C",
       "state": "PENDING"
     },
@@ -230,7 +230,7 @@
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "C",
       "state": "PENDING"
     },
@@ -239,7 +239,7 @@
       "criterion": "debate-session run across all 6 pressure vectors",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     },
@@ -248,7 +248,7 @@
       "criterion": "market-vs-me-diagnostic run within 90 days",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     },
@@ -257,7 +257,7 @@
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     }

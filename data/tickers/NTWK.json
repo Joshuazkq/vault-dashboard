@@ -2,84 +2,67 @@
   "_meta": {
     "generatedAt": "2026-05-02T15:38:30Z",
     "sourceFingerprint": "65c2cb9895e26230",
-    "ticker": "APP",
+    "ticker": "NTWK",
     "version": "2.0.0"
   },
   "catalysts": [],
-  "financials": {
-    "cash": "(est)",
-    "debtDetails": [],
-    "ebitda": "$4,512",
-    "ebitdaMargin": "+82.3%",
-    "eps": "~$9.88",
-    "fcf": "~$3,950",
-    "fy": "FY2025",
-    "leverage": "—",
-    "leverageNum": 0,
-    "netDebt": "(est)",
-    "netIncome": "$3,334",
-    "revenue": "$5,481",
-    "revenueGrowth": "+16.4%",
-    "totalDebt": "$3,550"
-  },
   "pm": {
-    "archetype": "F",
-    "archetypeName": "AI/Technology Disruption Beneficiary",
+    "archetype": "Mixed F+A",
     "flex": [
       {
         "id": "F1",
         "max": 5,
         "name": "Data/Network Moat Depth",
-        "rationale": "AXON 1B+ devices; vertical integration; but PIGs allegations risk",
-        "score": 4
+        "rationale": "Mid-tier workflow embedment; replication cost ~$50-100M / 3-5yr",
+        "score": 3
       },
       {
         "id": "F2",
         "max": 5,
         "name": "AI Integration Maturity",
-        "rationale": "AI IS the product; 82% margins; AXON 3.0 generative AI",
-        "score": 5
+        "rationale": "Announced AI strategy; no measurable revenue/margin uplift; borderline AI-washing",
+        "score": 2
       },
       {
         "id": "F3",
         "max": 5,
         "name": "Disruption Misperception",
-        "rationale": "Widely recognized AI company; 26 analysts; no narrative gap",
-        "score": 1
+        "rationale": "Quantitative narrative gap (0.8x sub-rev vs 4-5x peer); 0 coverage; 50% mix achieved",
+        "score": 4
       }
     ],
     "max": 35,
-    "scoredDate": "2026-03-28",
-    "sourceFile": "_Screening/CapIQ Screeners/2026-03-28_APP_pattern_match.md",
-    "total": 26,
+    "scoredDate": "2026-05-01",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_NTWK_pattern_match.md",
+    "total": 23.5,
     "universal": [
       {
         "id": "U1",
         "max": 5,
         "name": "Mispricing Assessment",
-        "rationale": "49% drawdown; 45-60% base upside; but execution-dependent on e-commerce TAM",
-        "score": 3.5
+        "rationale": "PW-FV $7.07 (+137%, IRR 41%); 3 legs but correlated; thin floor; bear case -33%; OCF gap unverified holds at 4 not 5",
+        "score": 4
       },
       {
         "id": "U2",
         "max": 5,
         "name": "Repricing Mechanism",
-        "rationale": "E-commerce self-serve H1 2026 + quarterly earnings, but SEC timeline opaque",
-        "score": 3.5
+        "rationale": "CONDITIONAL tier; ARR threshold crossing 12-18mo; institutional re-categorization is multi-quarter",
+        "score": 3
       },
       {
         "id": "U3",
         "max": 5,
         "name": "Business Quality",
-        "rationale": "82% EBITDA margin, $3.95B FCF; data provenance allegations cloud quality",
-        "score": 4
+        "rationale": "Stable niche (49% GM, sticky OEMs) but not monopoly; cash conversion gap; customer concentration",
+        "score": 3
       },
       {
         "id": "U4",
         "max": 5,
-        "name": "Balance Sheet (GATE)",
-        "rationale": "Net debt/EBITDA 0.4-0.6x; $3.95B FCF; fortress",
-        "score": 5
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "Net cash $9M (26% mcap); GAAP profitable; mechanical micro-cap torque; OCF gap shy of 5",
+        "score": 4.5
       }
     ]
   },
@@ -88,47 +71,47 @@
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "A",
-      "state": "PENDING"
-    },
-    {
-      "code": "A2",
-      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "pattern-match 19.0/35 — below MONITORING threshold (≥22)",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "A",
-      "state": "PENDING"
-    },
-    {
-      "code": "A3",
-      "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "audited filing in Sources Processed",
+      "evidence": "Phase 3 streamlined Forward IRR 44-87% annualized via EV/subscription 0.6x → 2-3x re-rate as ARR crosses $40M (`_Outputs/Perplexity Prompt/asymmetric-screen-2026-04-30-v3/phase3-5-results.md`). Formal `situation-screen` skill not yet run.",
       "reason": "",
       "since": "",
       "stage": "A",
       "state": "MET"
     },
     {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "Phase 4 abbreviated estimate ~24.5/35 INTERESTING. U1 capped at 2/5 (STRUCTURAL drawdown — legacy services optics). ≥22 cleared; MONITORING-with-CAUTION justified given U1 cap + insider concentration risk.",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "Need 10-K / 10-Q filings + filing-review skill run.",
+      "reason": "",
+      "since": "2026-05-02",
+      "stage": "A",
+      "state": "PENDING"
+    },
+    {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "NETSOL FY2025 10-K (June FY end) — needs download.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "B",
       "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 8 files in Transcripts/",
+      "evidence": "Q4 FY2025 (Sep 2025) + Q1 FY2026 transcripts needed.",
       "reason": "",
-      "since": "",
+      "since": "2026-05-02",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C1",
@@ -142,52 +125,48 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "evidence": "BMW $16M US contract revenue recognition cadence FY2026; subscription ARR $40M crossover trigger; OEM contract pipeline (Oman Sinbad, Netherlands Hilterman) H1 FY2026 expected.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "Phase 3 abbreviated derivation only.",
       "reason": "",
-      "since": "",
+      "since": "2026-05-02",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "DEBATES.md references 7+ pressure vectors",
+      "evidence": "needs D1 owning skill",
       "reason": "",
-      "since": "",
+      "since": "2026-05-02",
       "stage": "D",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "needs D2 owning skill",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "Insider-cluster risk should be hammered hard in council bear-case agent.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     }
-  ],
-  "recentNotes": [
-    "2026-03-23: Report Review: Open Items Response (Perplexity Deep Research)",
-    "2026-03-23: Report Review: Morgan Stanley TMT Conference Fireside Chat (Mar 4, 2026)"
   ],
   "variantViews": []
 }

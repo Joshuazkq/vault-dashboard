@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "MSI-AIM",
     "version": "2.0.0"
   },
@@ -81,11 +81,11 @@
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "run fair-value-estimation",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D1",

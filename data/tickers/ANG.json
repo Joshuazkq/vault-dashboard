@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "ANG",
     "version": "2.0.0"
   },
@@ -82,7 +82,7 @@
       "**COO D'Rozario option expiry behavior (Apr 2026)** — 5M options @ A$0.35 strike expire 12 Apr 2026; most tranches likely worthless at current A$0.195. Expiry is mechanical. Not an insider-sell signal."
     ],
     "sourceFile": "Themes/Niche Industrial Monopolies/Tickers/ANG/INDICATORS.md",
-    "staleDays": 10,
+    "staleDays": 11,
     "structural": [
       {
         "class": "STRUCTURAL",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -139,7 +139,7 @@
       "**Peer share price moves (Bossard, Bufab)** — These are much larger, more liquid, better-covered companies. Their share price dynamics are driven by different factors (institutional flows, index inclusion). Not informative for TRI."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/TRI-LSE/INDICATORS.md",
-    "staleDays": 11,
+    "staleDays": 12,
     "structural": [
       {
         "class": "STRUCTURAL",

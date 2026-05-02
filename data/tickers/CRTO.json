@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -159,7 +159,7 @@
       "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
-    "staleDays": 27,
+    "staleDays": 28,
     "trendLog": [
       {
         "action": "No action needed",

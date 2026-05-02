@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -132,7 +132,7 @@
       "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MYR/INDICATORS.md",
-    "staleDays": 10,
+    "staleDays": 11,
     "structural": [
       {
         "class": "STRUCTURAL",

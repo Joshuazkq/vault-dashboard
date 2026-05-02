@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
+    "ticker": "HANWHA",
+    "version": "2.0.0"
+  },
+  "businessBackground": "Hanwha Corporation (KOSE:A000880) is the listed parent of the Hanwha Group, founded 1952, headquartered Seoul. Operates a hybrid structure of (a) defense/explosives + chemicals/construction operating segments at the parent level, and (b) holding-company stakes in 4 listed Korean subsidiaries (Hanwha Aerospace, Hanwha Solutions, Hanwha Ocean, Hanwha Systems) plus unlisted subsidiaries including Hanwha Energy. 3,493 parent-level employees per CapIQ (2026-05-01).",
+  "catalysts": [
+    "Jun-30-2026: Spin-off record date",
+    "Jul-1-2026: Spin-off completion (Hanwha Machinery & Service Holdings)",
+    "Jul–Dec 2026: Post-spin institutional rebalancing (forced-seller dynamics on SpinCo holders)",
+    "Mar 2027: AGM (next regular cycle)",
+    "Mid-2027: Korean Commercial Act amendments effective",
+    "Q1-Q4 2026/2027: Quarterly earnings (regular)"
+  ],
+  "fairValue": {
+    "baseCaseFV": "16,188",
+    "bearCaseFV": "12,950",
+    "bullCaseFV": "19,426",
+    "lastUpdated": "2026-05-02",
+    "methodology": "Type 3 SOTP + Type 5 Spin-Off Overlay",
+    "probWeightedFV": "upside:",
+    "thesisType": "Type 3 SOTP (primary) + Type 5 Event-Driven (overlay) + Type 1 Cyclical (HA defense supercycle underlay)."
+  },
+  "pm": {
+    "archetype": "Mixed D+C",
+    "flex": [
+      {
+        "id": "C1",
+        "max": 5,
+        "name": "Event Boundedness (C-pool)",
+        "rationale": "Hard Jul-1-2026 deadline + binary resolution",
+        "score": 5
+      }
+    ],
+    "max": 35,
+    "scoredDate": "2026-05-01",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-05-01_HANWHA_pattern_match.md",
+    "total": 31,
+    "universal": [
+      {
+        "id": "U1",
+        "max": 5,
+        "name": "Mispricing Assessment",
+        "rationale": "Forward IRR +58% USD-net Base, +29% Pessimistic; PW-FV +116% absolute; multi-leg (4 legs); PROTECTED FLOOR (Bear +85% above live); MED-confidence stakes prevent 6/5",
+        "score": 5
+      },
+      {
+        "id": "U2",
+        "max": 5,
+        "name": "Repricing Mechanism",
+        "rationale": "Jul-1-2026 spin-off close (CapIQ-confirmed) + monthly sub-stake mark-to-market mechanical",
+        "score": 5
+      },
+      {
+        "id": "U3",
+        "max": 5,
+        "name": "Business Quality",
+        "rationale": "Average industrial conglomerate parent; event drives thesis per Category SS footnote",
+        "score": 3
+      },
+      {
+        "id": "U4",
+        "max": 5,
+        "name": "Balance Sheet & Torque (GATE)",
+        "rationale": "~20% debt/mcap parent; sub-stake collateral coverage 3.3×; manageable",
+        "score": 4
+      }
+    ]
+  },
+  "premortem": [],
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR USD-net +58.2% Base / STRONG PASS from situation-screen 2026-05-01",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 31/35 STRONG on 2026-05-01",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "CapIQ structured-database extract of FY2025 Annual Financial Supplement filed 2026-03-18 (MI KEY 4219494, SPCIQ 2482203). Saved to Tickers/HANWHA/Filings/2026-05-02_CapIQ_HANWHA_FY2025_extract.md. OVERVIEW.md fully populated: Revenue Mix verified by segment, Key Metrics from audited IS+BS, SOTP from Public Holdings Detailed (11/11 records).",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "Hanwha Corp FY2025 audited Annual Financial Supplement (FYE 12/31/2025), filed 2026-03-18 via DART, ingested by CapIQ via Kolon Benit feed. Filing date ~6 weeks old, well within 12-month RC window. Extracted Income Statement, Balance Sheet, Segment Analysis, Public Holdings to Filings/2026-05-02_CapIQ_HANWHA_FY2025_extract.md.",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "Hanwha Group issuers (Hanwha Corp, Hanwha Aerospace, etc.) do not publish English earnings-call transcripts. Verified user 2026-05-02; standard for KOSE small/mid-cap without US ADRs. Substitute material: CapIQ FY2025 Annual Financial Supplement extract (Filings/2026-05-02_CapIQ_HANWHA_FY2025_extract.md, 590 lines), CapIQ Segment Analysis FY2025, CapIQ Public Holdings Detailed (HC+HA), CapIQ M&A Deal Profiles (3 transactions), CapIQ Hanwha Energy Private Ownership view. Pending: HC Q1 2026 earnings-release PDF post-5/6/2026 + HA Q1 2026 earnings-release PDF (already released 4/29/2026).",
+      "reason": "no-transcripts-available",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "resolve [BLOCKING] items",
+      "reason": "",
+      "since": "2026-05-01",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "Two dated forward catalysts: (1) Hanwha Machinery & Service Holdings spin-off — record date 2026-06-30, expected close 2026-07-01 per CapIQ Transaction IQTR1981016417, announced 2026-01-14 (already in THESIS Catalyst Timeline); (2) Q1 2026 Earnings Call 2026-05-06 8:01 PM ET per CapIQ Corporate Profile (accessed 2026-05-02). Both events dated and confirmed.",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value-estimation 2026-05-02: Type 3 SOTP + Type 5 overlay; Approach C primary PW-FV 356,300 KRW (+167%); Bull 440,800 / Base 367,300 / Bear 293,800 KRW with probs 20/45/35; council cross-check via cross-model.py fair-value gpt-5.5 xhigh PW-FV 394,147 KRW = +10.6% divergence within tolerance ($0.6781 cost); thesis premium MODERATE 29.7% per council methodology; saved Council/2026-05-02_fair-value_gpt-5.5.json",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "debate-session 2026-05-02: 6 vectors logged in DEBATES.md (Holdco Discount Convergence Base Rate, Marginal Buyer Identity, Catalyst Convergence Timing, Implied Probability of Reform Failure, Hanwha Energy Cross-Shareholding Capital Allocation, [RANDOM] DATA GAP Resolution Risk). Resolutions: 4 COUNTERED (V2/V3/V4/V5/V6), 1 OPEN (V1 needs HD Hyundai primary-source pull), 0 CONCEDED. Material corrections logged: spin-off date 7/1/2026 to 8/1/2026 (entity)+8/25/2026 (listing); Hanwha Energy ownership 22.16% not 7.25%; Korea Zinc 7.75% cross-holding still held by HC+Hanwha Impact. Web-search-supported via 17 trade-press/academic sources.",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "market-vs-me-diagnostic 2026-05-02: Divergence MODEL+STRUCTURAL SKEPTICISM; 0/10 red flags; verdict 'Market likely wrong' (74.5% discount vs Korean post-reform peer mean 30-45%; 4-event dated staircase 5/6 Q1 + 6/2026 EGM + 8/1/2026 spin-off close + 1/1/2027 Commercial Act); V2 >=4/5 anchor, V3 >=4/5 anchor; Q4 CONDITIONAL joint prob ~40-50%; 6 falsification criteria with 2 MEDIUM AT RISK; 90-day staleness re-run by 2026-08-02",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "reason": "",
+      "since": "",
+      "stage": "D",
+      "state": "MET"
+    }
+  ],
+  "valuation": {
+    "lastUpdated": "2026-05-02",
+    "methodology": "Type 3 SOTP + Type 5 Spin-Off Overlay",
+    "peers": [
+      {
+        "multiple": "003550",
+        "name": "LG Corp"
+      },
+      {
+        "multiple": "028260",
+        "name": "Samsung C&T"
+      },
+      {
+        "multiple": "002380",
+        "name": "KCC"
+      },
+      {
+        "multiple": "267250",
+        "name": "HD Hyundai"
+      },
+      {
+        "multiple": "034730 / 001040",
+        "name": "SK Inc / CJ Corp"
+      }
+    ]
+  },
+  "variantViews": []
+}

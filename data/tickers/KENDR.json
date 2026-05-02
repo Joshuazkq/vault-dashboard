@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "KENDR",
     "version": "2.0.0"
   },
@@ -140,7 +140,7 @@
       "**Iran conflict short-term price action** — Conflict creates asymmetric risk (prob-weighted EUR 9.43 under conflict scenarios) but is a MACRO event, not KENDR-specific. Balance sheet (0.8x leverage, EUR 92M liquidity) survives even S3 Severe. Medium-term: conflict may ACCELERATE wind demand (EU EUR 75B EIB mandate)."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/KENDR/INDICATORS.md",
-    "staleDays": 25,
+    "staleDays": 26,
     "structural": [
       {
         "class": "STRUCTURAL",

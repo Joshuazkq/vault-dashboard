@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-01T10:15:23Z",
-    "sourceFingerprint": "7346780c2294e013",
+    "generatedAt": "2026-05-02T15:38:30Z",
+    "sourceFingerprint": "65c2cb9895e26230",
     "ticker": "OFLX",
     "version": "2.0.0"
   },
@@ -127,7 +127,7 @@
       "**Maryland legislative noise on bills numbered SB 586 / HB 503 / SB 175 in non-CSST contexts** — vault now has the definitive 2024-2025-2026 chain. Future CSST 36C legislation will surface via firerescue1 / Maryland Department of Labor / Maryland State Fire Marshal channels, not generic state-bill scans."
     ],
     "sourceFile": "Themes/Niche Industrial Monopolies/Tickers/OFLX/INDICATORS.md",
-    "staleDays": 3,
+    "staleDays": 4,
     "structural": [
       {
         "class": "STRUCTURAL",

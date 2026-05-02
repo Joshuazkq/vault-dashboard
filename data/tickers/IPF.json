@@ -2,23 +2,16 @@
   "_meta": {
     "generatedAt": "2026-05-02T15:38:30Z",
     "sourceFingerprint": "65c2cb9895e26230",
-    "ticker": "AVGO",
+    "ticker": "IPF",
     "version": "2.0.0"
   },
-  "catalysts": [
-    "Event: Date",
-    "Q1 FY2026 earnings: Completed / verify date",
-    "Q2 FY2026 earnings: ~June 2026",
-    "Q3 FY2026 earnings: ~Sep 2026",
-    "Q4 FY2026 earnings: ~Dec 2026",
-    "2031 Google supply agreement renewal inflection point: Long-tail"
-  ],
+  "catalysts": [],
   "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "situation-screen / Forward-IRR cited",
+      "evidence": "Phase 3 streamlined Forward IRR 30-65% annualized via 0.5x→0.7-1.0x book re-rate + 7-8% dividend yield (`_Outputs/Perplexity Prompt/asymmetric-screen-2026-04-30-v3/phase3-5-results.md`). Formal `situation-screen` skill not yet run — abbreviated derivation only.",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -27,7 +20,7 @@
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "pattern-match 28.0/35",
+      "evidence": "Phase 4 abbreviated pattern-match estimate ~25.5/35 INTERESTING. Formal `pattern-match` skill not yet run — abbreviated only. ≥22 cleared; MONITORING placement justified.",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -36,29 +29,29 @@
     {
       "code": "A3",
       "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "run filing-review on latest audited 10-K / 20-F / Annual Report",
+      "evidence": "Need FY2024 Annual Report PDF download + filing-review skill run.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "A",
       "state": "PENDING"
     },
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "FY2024 results statement available via ipfin.co.uk; Annual Report (audited) needs download.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "B",
       "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 25 inline-cited",
+      "evidence": "LSE-listed; transcripts via Investor Meet Company / RNS calls — needs collection.",
       "reason": "",
-      "since": "",
+      "since": "2026-05-02",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C1",
@@ -72,45 +65,45 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "C",
-      "state": "PENDING"
-    },
-    {
-      "code": "C3",
-      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "FY2025 results statement scheduled ~Mar 2026 (annual cadence); Polish KNF licence decision pending; Mexico Home Credit segment FY2025 trajectory disclosure.",
       "reason": "",
       "since": "",
       "stage": "C",
       "state": "MET"
     },
     {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "Phase 3 abbreviated derivation only. Formal skill needed.",
+      "reason": "",
+      "since": "2026-05-02",
+      "stage": "C",
+      "state": "PENDING"
+    },
+    {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "run debate-session",
+      "evidence": "needs D1 owning skill",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "needs D2 owning skill",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "needs D3 owning skill",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-02",
       "stage": "D",
       "state": "PENDING"
     }
