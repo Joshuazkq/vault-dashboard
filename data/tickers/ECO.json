@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "ECO",
     "version": "2.0.0"
   },
@@ -70,11 +70,11 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "evidence": "entry in _Outputs/catalyst-calendar.md",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "C3",

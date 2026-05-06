@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "GTT",
     "version": "2.0.0"
   },
@@ -130,7 +130,7 @@
       "**FLNG/FSRU one-off orders** — Each is valuable but lumpy. Don't extrapolate one FLNG order into a trend."
     ],
     "sourceFile": "Themes/Hormuz/Tickers/GTT/INDICATORS.md",
-    "staleDays": 10,
+    "staleDays": 15,
     "structural": [
       {
         "class": "STRUCTURAL",

@@ -1,18 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "HANWHA",
     "version": "2.0.0"
   },
   "businessBackground": "Hanwha Corporation (KOSE:A000880) is the listed parent of the Hanwha Group, founded 1952, headquartered Seoul. Operates a hybrid structure of (a) defense/explosives + chemicals/construction operating segments at the parent level, and (b) holding-company stakes in 4 listed Korean subsidiaries (Hanwha Aerospace, Hanwha Solutions, Hanwha Ocean, Hanwha Systems) plus unlisted subsidiaries including Hanwha Energy. 3,493 parent-level employees per CapIQ (2026-05-01).",
   "catalysts": [
+    "May-6-2026: Q1 2026 Earnings Call (8:01 PM ET)",
+    "Jun-15-2026: EGM vote on spin-off plan",
     "Jun-30-2026: Spin-off record date",
-    "Jul-1-2026: Spin-off completion (Hanwha Machinery & Service Holdings)",
-    "Jul–Dec 2026: Post-spin institutional rebalancing (forced-seller dynamics on SpinCo holders)",
-    "Mar 2027: AGM (next regular cycle)",
-    "Mid-2027: Korean Commercial Act amendments effective",
-    "Q1-Q4 2026/2027: Quarterly earnings (regular)"
+    "Jul-1-2026: Spin-off effective date (분할기일) — Hanwha Machinery & Service Holdings entity established",
+    "Jul-24-2026: SpinCo re-listing date (재상장일) on KRX (Source: investchosun 2026-01-14, smartbizn 2026-01-14)",
+    "~Jul-Aug 2026: Korean Commercial Act audit-committee aggregate 3% voting cap effective for large companies (HC qualif...",
+    "Aug–Dec 2026: Post-spin institutional rebalancing (forced-seller dynamics on SpinCo holders); RemainCo single-thesis ...",
+    "Mar 2027: AGM (next regular cycle) — first AGM under hybrid format"
   ],
   "fairValue": {
     "baseCaseFV": "16,188",
@@ -119,11 +121,11 @@
     {
       "code": "C1",
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "resolve [BLOCKING] items",
+      "evidence": "A1 RESOLVED 2026-05-04: HC parent-only (별도) net interest-bearing debt FY2025 = KRW 4,657.4B (~$3.16B) per Hankyung Magazine 2026-03-27 — sits 93% to Bear scenario. A3 RESOLVED 2026-05-04: §530-9 ratio RemainCo 0.7634722 / SpinCo 0.2365278 (book) and 1.1826390 SpinCo shares per HC share (issuance) per investchosun 2026-01-14 + smartbizn 2026-01-14. A2 WAIVED-PARTIAL: FY2024 standalone OP KRW 308.2B confirmed (Hanwha Corp IR Condensed Separate FS); FY2025 OP awaits 5/6/2026 Q1 IR; not a primary FV driver (FV anchored on listed-stake NAV). User-confirmed waive-partial 2026-05-04. Full evidence in NOTES.md '2026-05-04 — Web Research Gap-Closure Pass'.",
       "reason": "",
-      "since": "2026-05-01",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "C2",
@@ -170,6 +172,9 @@
       "stage": "D",
       "state": "MET"
     }
+  ],
+  "recentNotes": [
+    "2026-05-04: Web Research Gap-Closure Pass"
   ],
   "valuation": {
     "lastUpdated": "2026-05-02",

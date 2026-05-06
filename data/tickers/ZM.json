@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "ZM",
     "version": "2.0.0"
   },
@@ -61,7 +61,7 @@
       "**Headline P/E ratio (16.4x)** — includes $970M non-cash Anthropic MTM gain. Adjusted P/E is ~25.6x. Bulls who cite headline P/E are double-counting the hidden asset."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/ZM/INDICATORS.md",
-    "staleDays": 15,
+    "staleDays": 20,
     "structural": [
       {
         "class": "STRUCTURAL",

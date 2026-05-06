@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "SGE",
     "version": "2.0.0"
   },
@@ -46,7 +46,7 @@
       "**Intuit competitive announcements** — Intuit talks about moving upmarket every year. Actual Intacct displacement data is what matters, not press releases."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/SGE/INDICATORS.md",
-    "staleDays": 35,
+    "staleDays": 40,
     "structural": [
       {
         "class": "STRUCTURAL",

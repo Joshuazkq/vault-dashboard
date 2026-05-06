@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "RST",
     "version": "2.0.0"
   },
@@ -135,7 +135,7 @@
       "**Synertec earn-out absolute magnitude** — £10m earn-out remaining is self-mitigating (RST pays less if Synertec under-delivers). Headlines about earn-out level are not signal — what matters is the underlying NHS share trajectory (25% → 35% target)."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/RST/INDICATORS.md",
-    "staleDays": 7,
+    "staleDays": 12,
     "trendLog": [
       {
         "action": "No action — baseline log only",

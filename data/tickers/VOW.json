@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "VOW",
     "version": "2.0.0"
   },
@@ -137,7 +137,7 @@
       "**\"VOW subsequent equity offering\" (retracted 2026-04-20)** — A prior daily briefing draft attributed a MarketScreener \"Final result of subsequent offering and allocation of offer shares\" (17 Apr 2026) to VOW ASA. That notice was issued by **Golden Energy Offshore Services ASA**, NOT VOW ASA. Fully retracted. No VOW equity issuance is live. Last VOW equity raise on record remains the Dec 2024 rights issue (NOK 250M gross, 166.67M new shares at NOK 1.50). Thesis-breaker (e) \"forced dilutive raise\" is NOT triggered. Indicator #8 covenant status reverts to pre-bridge severity (no equity cure funded). Documented here to prevent reactive thesis revision if the misattribution resurfaces. (Source: Daily Intelligence Brief 2026-04-20, Double-Check Log item 1.)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/VOW/INDICATORS.md",
-    "staleDays": 2,
+    "staleDays": 7,
     "structural": [
       {
         "class": "STRUCTURAL",

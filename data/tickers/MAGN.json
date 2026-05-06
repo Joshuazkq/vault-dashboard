@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
@@ -76,7 +76,7 @@
       "**Routine supply-chain reshuffling commentary on tariffs** — Magnera management views direct tariff cost as limited; only escalation to confirmed margin compression matters."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MAGN/INDICATORS.md",
-    "staleDays": 4,
+    "staleDays": 9,
     "structural": [
       {
         "class": "STRUCTURAL",

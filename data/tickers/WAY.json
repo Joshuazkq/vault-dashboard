@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "WAY",
     "version": "2.0.0"
   },
@@ -62,7 +62,7 @@
       "**Epic competitive announcements** — Epic is large but WAY's value prop is cross-EHR (500+ integrations). Single-EHR solutions don't compete with cross-platform workflow. Track actual EHR switching, not announcements."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/WAY/INDICATORS.md",
-    "staleDays": 26,
+    "staleDays": 31,
     "structural": [
       {
         "class": "STRUCTURAL",

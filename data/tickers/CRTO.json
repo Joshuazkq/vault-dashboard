@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-02T15:38:30Z",
-    "sourceFingerprint": "65c2cb9895e26230",
+    "generatedAt": "2026-05-06T17:32:20Z",
+    "sourceFingerprint": "7227fb92d31c27c5",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -159,7 +159,7 @@
       "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
-    "staleDays": 28,
+    "staleDays": 33,
     "trendLog": [
       {
         "action": "No action needed",
@@ -363,11 +363,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-07: Q1 2026 Earnings Review: 8-K + Prepared Remarks + Investor Presentation + Factsheet + Investor FAQ + OpenAI May Press...",
     "2026-04-30: Report Review: CRTO Weekly Intelligence Update (23–30 Apr 2026)",
     "2026-04-28: Report Review: VOW-CRTO Daily Intelligence Brief (28 Apr — T-1 to GOOG/META Q1, T-8 to CRTO Q1)",
     "2026-04-27: Report Review: CRTO AI Market Development — 1-Month Progress Report (Late March – Late April 2026)",
-    "2026-04-27: Report Review: VOW & CRTO Daily Intelligence Briefing (CRTO half)",
-    "2026-04-21: Report Review: AI Compute Arms Race (Theme-Level Supply Chain Report)"
+    "2026-04-27: Report Review: VOW & CRTO Daily Intelligence Briefing (CRTO half)"
   ],
   "scenarios": [
     {
