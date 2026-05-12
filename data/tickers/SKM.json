@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "SKM",
     "version": "2.0.0"
   },
@@ -68,53 +68,53 @@
       "**Sell-side telco-core PT changes** — Most US sell-side firms model SKM as a Korean telco at 6-7x EV/EBITDA without Anthropic stake explicit. PT changes that don't reference Anthropic stake (#7) are telco-core noise. Only react to PT changes that explicitly cite the stake."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/SKM/INDICATORS.md",
-    "staleDays": 10,
+    "staleDays": 1,
     "structural": [
       {
         "class": "STRUCTURAL",
-        "current": "**$380B post-money (Series G, Feb 12 2026)**; secondary $800B+ ask DECLINED Apr 15 2026",
+        "current": "**$380B post-money (Series G, Feb 12 2026)**; secondary $800B+ ask DECLINED Apr 15 2026; **near-$1T pre-money round in active board-pending talks (FT/Reuters May 7-8, ~$50B target, Dragoneer + General Catalyst) — NOT CLOSED**; secondary marks ~$1.0-1.2T on Forge / LinkedIn (May 2026 — informational only)",
         "direction": "↑ Re-rating cycle",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-12",
         "name": "**Anthropic implied valuation (most recent transaction)** ⭐ THESIS-CORE",
         "num": 1,
-        "source": "Anthropic press release Feb 12 2026; TechCrunch Apr 15 2026",
+        "source": "Anthropic press release Feb 12 2026; TechCrunch Apr 15 2026; FT/Reuters May 7-8 2026; Business Insider May 2026",
         "threshold": "**<$350B next primary round = down-round → thesis-break (S5 trigger a) → mandatory exit;** $400-600B = base; ≥$600B transacted secondary or primary = Rule §20 fire (Bull scenario activating)"
       },
       {
         "class": "STRUCTURAL",
-        "current": "**Q4 2026 considered (per The Information / Investing.com)**; Polymarket 97.2% NO IPO by Jun 30 2026; FutureSearch median **March 2027 filing**",
+        "current": "**GS/JPM/MS in early-stage IPO advisory discussions (Reuters/FT May 7 2026); tentative October 2026 target, ~$60B target raise; Wilson Sonsini engaged for legal prep — no formal mandate.** No S-1 on EDGAR. Prediction-market consensus prices 2027 listing (Polymarket \"before 2027\" 6-9%; \"before 2028\" 52-58%; Kalshi \"S-1 in 2026\" 15-20% — noise per Indicator §86)",
         "direction": "↕ Pre-filing window",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-12",
         "name": "**Anthropic IPO timeline (filing / pricing)**",
         "num": 2,
-        "source": "Investing.com / The Information; Polymarket; FutureSearch",
+        "source": "Reuters May 7 2026; FT May 7 2026; Bearbull.io 29 Apr 2026; Polymarket / Kalshi",
         "threshold": "Formal announcement of delay to **H2 2027 or later = thesis-break (S5 trigger c) → mandatory exit**; S-1 filing = Rule §20 fire (Bull confirmation); roadshow / pricing = full-exit trigger per S5 ladder"
       },
       {
         "class": "STRUCTURAL",
-        "current": "**0.3-0.7% range (estimate)** — diluted from 0.7% (Aug 2023). Mid-stake $1.90B on $14.82B mkt cap = ~13.6% torque. **Exact % is the single largest hidden-input variable.**",
+        "current": "**Working est. 0.3% (FY2025 DART annual report; KRW 1.37T ~$970M book)** — diluted from 0.7% (Aug 2023). 20-F (29 Apr) + Q1 earnings (7 May) BOTH passed without primary-source disclosure. **Q1 stake % per balance sheet not in publicly available transcript text; verify via full DART 분기보고서 expected late May 2026.**",
         "direction": "⚠ DATA GAP",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-12",
         "name": "**SKM Anthropic stake % (current ownership)** ⭐ DATA GAP",
         "num": 3,
-        "source": "SKM filings (Q1 2026 earnings ~early May); Anthropic S-1 if/when",
-        "threshold": "**Disclosure of stake <0.3% = thesis-break (S5 trigger b) → mandatory exit**; disclosure 0.3-0.5% = base, hold; ≥0.5% = bull confirmation. First forcing event: SKM Q1 2026 earnings ~early May."
+        "source": "SKM filings (FY2025 DART, 20-F Apr 29, Q1 6-K May 6); Anthropic S-1 if/when",
+        "threshold": "**Disclosure of stake <0.3% = thesis-break (S5 trigger b) → mandatory exit**; disclosure 0.3-0.5% = base, hold; ≥0.5% = bull confirmation. Next forcing event: K-DART Q1 interim filing late May 2026."
       },
       {
         "class": "STRUCTURAL",
-        "current": "Entry ref $38.62; current MTM band $32.83 ≤ price ≤ $44.41 (±15% from entry)",
+        "current": "**Live $38.58 (-0.10% from entry $38.62) per prices.py 2026-05-12.** Morningstar FV $44.70 (May 7) = $0.30 ABOVE upper MTM trigger $44.41 — close watch",
         "direction": "→ In-band",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-12",
         "name": "**SKM share price vs MTM triggers**",
         "num": 4,
-        "source": "live price; THESIS.md MTM_TRIGGERS metadata",
+        "source": "prices.py 2026-05-12; THESIS.md MTM_TRIGGERS metadata",
         "threshold": "**Price ≥$44.41 = upper Rule §20 trigger → immediate mid-trade re-score; price ≤$32.83 = lower Rule §20 trigger → immediate mid-trade re-score.** S5 trim ladder: 25% at $44 / 50% of remaining at $48 / full exit at $52+"
       },
       {
         "class": "STRUCTURAL",
-        "current": "No active governance event flagged at entry; SK Group Chairman Chey Tae-won under historic divorce / chaebol-restructuring overhang (cyclical, not active)",
+        "current": "No active governance event flagged. **2026-05-12 refresh: No new FSC/FSS investigation specifically targeting SK Group or Chey Tae-won in May 5-11 window; no insider sale >$50M; Chey AI stance unchanged (Jan/March 2026 statements); sector-wide FSC/FSS governance reform power struggle is not SK-specific.**",
         "direction": "→ Stable",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-12",
         "name": "**Korean holdco governance — SK Group leadership / regulatory**",
         "num": 5,
         "source": "Korean financial press (Chosun / Hankyoreh / Yonhap); FSC / FSS announcements",
@@ -122,23 +122,23 @@
       },
       {
         "class": "STRUCTURAL",
-        "current": "Series G closed Feb 12 2026 at $380B. Series H/I plausible given Anthropic capex needs but not announced. SKM pro-rata / anti-dilution rights **DATA GAP**.",
-        "direction": "↕ Watch",
-        "lastUpdated": "2026-04-27",
+        "current": "Series G closed Feb 12 2026 at $380B. **~$50B round at $900B-$1T pre-money in board-pending discussions (FT/Reuters May 7-8 + Bloomberg/TechCrunch Apr 28-29) — board decision expected May 2026; round NOT yet closed.** Blackstone/GS/H&F/General Atlantic ~$1.5B PE-AI-tools JV announced May 3 (commercial, not funding). SKM pro-rata / anti-dilution rights **DATA GAP** persists.",
+        "direction": "↕ Board-pending",
+        "lastUpdated": "2026-05-12",
         "name": "**Anthropic primary round cadence**",
         "num": 6,
-        "source": "Anthropic press releases; Information / TechCrunch / Bloomberg AI desk",
+        "source": "Anthropic press releases; FT/Reuters May 7-8 2026; Bloomberg AI desk; WSJ May 3 2026 (Blackstone JV)",
         "threshold": "New primary round at $400-600B with SKM participating = base hold; new primary at <$350B = thesis-break #1; new primary at ≥$600B = bull confirmation; new primary where SKM does NOT participate AND stake dilutes = T4a stake-dilution bear path firing"
       },
       {
         "class": "STRUCTURAL",
-        "current": "**Not yet explicitly modeled** by US sell-side (per S1 / S4 thesis). Morningstar upgraded coverage citing Anthropic exposure Apr 2026 (first western explicit recognition). Korean media coverage growing.",
-        "direction": "↑ Early recognition",
-        "lastUpdated": "2026-04-27",
+        "current": "**4 firms explicit Anthropic SOTP: Morningstar ×2 (May 7 update FV $44.70, Feb 12 FV $35), Korea Investment & Securities (KRW 121,000), Yuanta Securities Korea (KRW 118,000). UBS partial (cited stake range, Neutral PT KRW 52,000, no SOTP).** Big-3 (GS/JPM/MS) 0/3 PUBLISHED — **NEW BLINDSPOT 2026-05-12: GS/JPM/MS reportedly in early-stage Anthropic IPO advisory discussions; conflict-of-interest may structurally suppress Big-3 SKM SOTP publication during advisory window.**",
+        "direction": "↑ V2 OPEN held; Big-3 conflict-blindspot identified",
+        "lastUpdated": "2026-05-12",
         "name": "**Western sell-side modeling of Anthropic stake**",
         "num": 7,
-        "source": "Bloomberg / FactSet sell-side notes; Morningstar",
-        "threshold": "First major US sell-side firm publishing explicit stake-value SOTP = bull (V2 crowding-counter erodes; price re-rates); 3+ firms with explicit SOTP = thesis already-priced (V2 crowding-attack confirmed → trim regardless of catalyst)"
+        "source": "Morningstar (May 7 + Feb 12); UBS Jan 27; Korea Investment Apr 14; Yuanta Apr 20; Reuters/FT May 7 (Big-3 IPO advisory)",
+        "threshold": "First major US sell-side firm publishing explicit stake-value SOTP = bull (V2 crowding-counter erodes; price re-rates); 3+ firms with explicit SOTP = thesis already-priced (V2 crowding-attack confirmed → trim regardless of catalyst) — **THRESHOLD BREACHED 2026-05-08; held 2026-05-12.** Big-3 silence during IPO advisory window is ambiguous (not bullish absence of recognition)"
       }
     ],
     "trendLog": [
@@ -157,6 +157,38 @@
         "indicator": "INDICATORS.md created",
         "new": "Initial baseline post-entry. All 7 structural + 5 cyclical indicators at entry-context baseline. Indicator #3 (stake %) flagged DATA GAP — first forcing event Q1 2026 earnings ~early May.",
         "old": "—"
+      },
+      {
+        "action": "Mid-trade re-score Trigger 3 (S3 catalyst) fired 7 May. Re-score outcome: Setup 17/25 (passes 16 gate); stress 2 OPEN + 1 PARTIAL (fails ≤1 OPEN target). User selected full HOLD at 2% (Override #2 — stress-residual override, not Setup Score gate-fail).",
+        "assessment": "V2 stress vector flips PARTIAL → OPEN. Structural failure 5 months ahead of mid-trade check.",
+        "date": "2026-05-08",
+        "indicator": "#7 Western SOTP modeling",
+        "new": "**4+ Western firms with explicit Anthropic-SOTP modeling (Morningstar dominantly weighting Anthropic).** Threshold \"3+ firms = V2 crowding-attack confirmed → trim regardless of catalyst\" BREACHED.",
+        "old": "\"Not yet explicitly modeled; Morningstar first\""
+      },
+      {
+        "action": "Continue tracking; K-DART Q1 interim becomes primary near-term resolution path.",
+        "assessment": "Two forcing events passed without resolution. DATA GAP persists. V3 OPEN held.",
+        "date": "2026-05-08",
+        "indicator": "#3 Stake %",
+        "new": "Working est. **0.3%** (press); 20-F (29 Apr) and Q1 earnings (7 May) BOTH passed without primary-source disclosure. FVOCI election → markups never flow through EPS. Next forcing event: K-DART Q1 interim filing or Anthropic S-1.",
+        "old": "\"0.3-0.7% range; first forcing event Q1 2026 earnings\""
+      },
+      {
+        "action": "Rule §20 Trigger 3 fired → mid-trade re-score executed 2026-05-08.",
+        "assessment": "Catalyst transmission muted as predicted by 20-F review. Operating recovery is incremental tailwind but not stake-thesis-confirming.",
+        "date": "2026-05-08",
+        "indicator": "S3 catalyst row 1 (Q1 earnings)",
+        "new": "**FIRED 7 May 2026** — operating recovery confirmed (OI ₩537.6B, +351% QoQ; AIDC +89.3% YoY; MNO +210k; DPS ₩830 resumed). NO Anthropic stake fair-value disclosure (FVOCI insulates EPS).",
+        "old": "\"Pending early May, prob 60%, +3 to +8%\""
+      },
+      {
+        "action": "No action — refresh log only. Override #2 §1 forcing events tracker: 26 days remain to 2026-06-07 time-decay; Anthropic board outcome + K-DART Q1 interim are the near-term resolution paths.",
+        "assessment": "Net: trajectory bullish but no transactable threshold crossed; Override #2 governing behavior continues unchanged. Big-3 conflict-blindspot reframes V2 risk to concentrate at IPO pricing event rather than via incremental sell-side publication.",
+        "date": "2026-05-12",
+        "indicator": "Weekly tracker refresh (5-11 May report review)",
+        "new": "**No structural threshold breach.** #1 ($380B primary unchanged; $900B-$1T round in talks, not closed); #2 (GS/JPM/MS IPO advisory discussions, Oct 2026 tentative target, no S-1); #3 (0.3% stake; K-DART Q1 interim late May still pending); #4 (live $38.58 = -0.10% from entry, in-band; Morningstar FV $44.70 ~$0.30 above upper MTM trigger — watch); #5 (governance stable); #6 (Anthropic board pending May 2026); #7 V2 OPEN held — Big-3 conflict-of-interest blindspot newly identified.",
+        "old": "n/a"
       }
     ]
   },
@@ -167,7 +199,7 @@
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "A",
       "state": "PENDING"
     },
@@ -176,7 +208,7 @@
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "A",
       "state": "PENDING"
     },
@@ -185,7 +217,7 @@
       "criterion": "OVERVIEW.md sourced from audited filing",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "A",
       "state": "PENDING"
     },
@@ -194,7 +226,7 @@
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "B",
       "state": "PENDING"
     },
@@ -203,7 +235,7 @@
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "B",
       "state": "PENDING"
     },
@@ -212,7 +244,7 @@
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "C",
       "state": "PENDING"
     },
@@ -221,7 +253,7 @@
       "criterion": "≥1 dated forward catalyst registered",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "C",
       "state": "PENDING"
     },
@@ -230,7 +262,7 @@
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "C",
       "state": "PENDING"
     },
@@ -239,7 +271,7 @@
       "criterion": "debate-session run across all 6 pressure vectors",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "D",
       "state": "PENDING"
     },
@@ -248,7 +280,7 @@
       "criterion": "market-vs-me-diagnostic run within 90 days",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "D",
       "state": "PENDING"
     },
@@ -257,12 +289,14 @@
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-07",
+      "since": "2026-05-13",
       "stage": "D",
       "state": "PENDING"
     }
   ],
   "recentNotes": [
+    "2026-05-12: Report Review: SKM/Anthropic Weekly Tracker (5–11 May 2026) — STATUS: NO NEW THRESHOLD BREACH; OVERRIDE #2 HOLDS",
+    "2026-05-08: Report Review: SKM/Anthropic Weekly Intelligence Update (1–8 May 2026) — MATERIAL: V2 CROWDING-ATTACK CONFIRMED + S3 ...",
     "2026-04-30: Filing Review: SKM 20-F (FY2025, filed 2026-04-29)",
     "2026-04-30: Report Review: SKM / Anthropic Weekly Intelligence Update (23–30 Apr 2026)",
     "2026-04-22: EXPRESS TRADE Entry (user-directed override of gate-fail verdict)"

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "WAY",
     "version": "2.0.0"
   },
@@ -32,24 +32,24 @@
     "cyclical": [
       {
         "class": "CYCLICAL",
-        "context": "Healthcare IT capex generally resilient but not immune to macro. Monitor hospital CFO commentary",
-        "current": "Stable; potential pressure from broader macro (oil/inflation)",
-        "lastUpdated": "2026-03-28",
+        "context": "Healthcare IT capex generally resilient but not immune to macro. Bifurcation — patient-payment softer, core provider-solutions intact. Monitor Q2 (guide softened to flat-to-+1% sequential vs prior 1-3%)",
+        "current": "**Q1 2026: Patient-payment segment (~25% of total rev) faced \"hospital financing difficulties\" + \"print-to-digital shift\" + \"payer pushback\" (mgmt: \"not competitive or product-driven\"). Provider solutions (75% of rev) growing 13-14% organic — resilient.**",
+        "lastUpdated": "2026-04-29",
         "name": "Hospital capex environment",
         "num": 7
       },
       {
         "class": "CYCLICAL",
-        "context": "Expanding with scale. Iodine integration may create near-term noise. Judge on trailing 4Q basis",
-        "current": "42% (FY2025); guided 43% FY2026",
-        "lastUpdated": "2026-03-28",
+        "context": "Expanding with scale; Q1 above FY25, at FY26 guide. Iodine integration noise contained. Judge on trailing 4Q basis",
+        "current": "**Q1 2026: 43% (vs 42% FY2025; in-line with 43% FY2026 guide).** UFCF $90M (67% EBITDA conversion).",
+        "lastUpdated": "2026-04-29",
         "name": "Adj EBITDA margin",
         "num": 8
       },
       {
         "class": "CYCLICAL",
         "context": "Technical, not fundamental. Each secondary reduces overhang for future",
-        "current": "Overhang from PE sponsor selling down. Creates near-term price pressure",
+        "current": "Overhang from PE sponsor selling down. Creates near-term price pressure. (No new Q1 data — keep unchanged.)",
         "lastUpdated": "2026-03-28",
         "name": "PE sponsor secondary offerings",
         "num": 9
@@ -62,66 +62,66 @@
       "**Epic competitive announcements** — Epic is large but WAY's value prop is cross-EHR (500+ integrations). Single-EHR solutions don't compete with cross-platform workflow. Track actual EHR switching, not announcements."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/WAY/INDICATORS.md",
-    "staleDays": 31,
+    "staleDays": 14,
     "structural": [
       {
         "class": "STRUCTURAL",
-        "current": "Live Jan 1, 2026; WAY is incumbent processor for ~60% of US patients",
-        "direction": "→ Pending first read",
-        "lastUpdated": "2026-03-28",
+        "current": "Live Jan 1, 2026; WAY is incumbent processor for ~60% of US patients. **Q1 2026 call: management did NOT quantify CMS-specific revenue impact or payer compliance %. Blindspot persists.** Closest proxy: \"approximately 40% of new bookings\" AI-driven (#3) — broader than CMS but directionally consistent.",
+        "direction": "→ DATA GAP CONTINUES (no Q1 quantification)",
+        "lastUpdated": "2026-04-29",
         "name": "CMS Prior Authorization Rule adoption",
         "num": 1,
-        "source": "CMS Federal Register, WAY earnings",
-        "threshold": "Rule diluted/delayed = bear case; accelerated adoption = bull case. First data expected Q1-Q2 2026 earnings"
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
+        "threshold": "Rule diluted/delayed = bear case; accelerated adoption = bull case. **First read attempted Q1 2026; pushed to Q2 2026 (~Aug) — quantification gap is itself a soft signal: incumbent processor isn't yet seeing material rule-driven uplift.**"
       },
       {
         "class": "STRUCTURAL",
-        "current": "**+38% YoY (FY2025 confirmed).** Total rev $1,099M (+17%), organic 13%. Q4: $303.5M (+24%), organic 12%, Iodine $31M. 2026 guide: $1.274-1.294B (16-18%), organic ~10%.",
-        "direction": "↑ Positive (confirmed)",
-        "lastUpdated": "2026-04-06",
+        "current": "**Q1 2026: Subscription rev $172M (+38% YoY headline, +14% organic).** Total Q1 rev $314M (+22% YoY, 11% organic). FY26 guide reaffirmed $1.274-1.294B (16-18%); Q2 sequential softer (flat to +1% vs prior guide 1-3%) due to patient-payment pressure.",
+        "direction": "↑ Positive (Q1 confirmed +38% headline / +14% organic; above >35% accel threshold on headline, in-range on organic)",
+        "lastUpdated": "2026-04-29",
         "name": "Subscription revenue growth (YoY)",
         "num": 2,
-        "source": "WAY Q4 2025 earnings (Feb 17, 2026)",
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
         "threshold": "<25% = deceleration concern; <15% = structural slowdown; >35% = AI/CMS acceleration"
       },
       {
         "class": "STRUCTURAL",
-        "current": "30-35% of new bookings; 150+ production AI models (AltitudeAI)",
-        "direction": "↑ Positive",
-        "lastUpdated": "2026-03-28",
+        "current": "**Q1 2026: \"roughly 40% of new bookings\" driven by AI-powered capabilities (up from 30-35% FY2025).** \"Nearly 40% of revenue is generated by AI-embedded workflows\" (CEO Hawkins). 150+ production AI models (AltitudeAI).",
+        "direction": "↑ **Approaching upper threshold — AT 40% boundary** (not yet >40%; one more quarterly tick crosses it)",
+        "lastUpdated": "2026-04-29",
         "name": "AI bookings as % of new bookings",
         "num": 3,
-        "source": "WAY earnings calls",
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
         "threshold": "<20% = AI not differentiating; >40% = AI becoming core value prop"
       },
       {
         "class": "STRUCTURAL",
-        "current": "$1,459.7M net debt / 3.16x adj EBITDA; bullet maturity $1,438.7M due Oct 2029",
-        "direction": "↓ Improving (~1 turn/yr deleveraging)",
-        "lastUpdated": "2026-03-28",
+        "current": "**Q1 2026: Net leverage 2.7x (improved from 3.0x at end-2025; 0.3-turn improvement in a single quarter).** $1,438.7M bullet maturity due Oct 2029 unchanged. UFCF $90M Q1 (67% EBITDA conversion).",
+        "direction": "↓ Improving **faster than 1-turn/yr trajectory** — 0.2x from <2.5x deleverage-on-track threshold",
+        "lastUpdated": "2026-04-29",
         "name": "Net debt / adj EBITDA leverage",
         "num": 4,
-        "source": "WAY 10-K",
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
         "threshold": ">3.5x = leverage concern; <2.5x = deleverage thesis on track; approaching maturity without refinancing = risk"
       },
       {
         "class": "STRUCTURAL",
-        "current": "$1.26B acquisition. **Ahead of plan:** accelerated product roadmap by ~2 years (CEO). Q4 rev $31M (above initial expectation). 1,000+ hospitals added. >90% of $14M expected synergies realized in 2026 (ahead of schedule). 35% client overlap creating cross-sell.",
-        "direction": "↑ **Ahead of plan** — roadmap accelerated 2 years",
-        "lastUpdated": "2026-04-06",
+        "current": "**Q1 2026: Integration \"running ahead of plan\" (CEO). Iodine clinical data covers ~1/3 of US hospital discharges annually — provides AI training corpus addressing \"convergence of financial and clinical data\" (CEO-described \"1 of the largest unmet needs in the revenue cycle\").** Cross-sell pipeline qualifying — WAY started Q2 with \"largest qualified pipeline of new and cross-sell upsell opportunities in our history.\"",
+        "direction": "↑ **Sustained ahead-of-plan** (4th consecutive quarter)",
+        "lastUpdated": "2026-04-29",
         "name": "Iodine integration / cross-sell",
         "num": 5,
-        "source": "WAY Q4 2025 earnings",
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
         "threshold": "Failed integration = impairment; cross-sell attach >20% = revenue acceleration"
       },
       {
         "class": "STRUCTURAL",
-        "current": "112% (FY2025)",
-        "direction": "→ Stable",
-        "lastUpdated": "2026-03-28",
+        "current": "**Q1 2026: 111%** (down 1pp from FY2025 112% but \"slightly above historical 108%-110% range\" per CFO).",
+        "direction": "→ Stable (within 108-110% historical band)",
+        "lastUpdated": "2026-04-29",
         "name": "Net revenue retention (NRR)",
         "num": 6,
-        "source": "WAY 10-K",
+        "source": "WAY Q1 2026 earnings call (Apr 29, 2026)",
         "threshold": "<105% = expansion slowing; <100% = net churn; >115% = best-in-class"
       }
     ],
@@ -141,6 +141,14 @@
         "indicator": "Q4/FY2025 results",
         "new": "Q4: Rev $303.5M (+24%), organic 12%, Iodine $31M, EBITDA 43%. FY2025: Rev $1,099M (+17%), organic 13%, EBITDA $462.1M (42%), NRR 112%, GRR 97%. Record Q4 bookings: 15-20 >$1M (2x historic avg). **Iodine integration ahead of plan** — accelerated roadmap by ~2 years, 1,000+ hospitals added, >90% of $14M synergies in 2026. Auth Accelerate: 70% time reduction, >$15B denials prevented. 2026 guide: $1.274-1.294B (16-18%), organic ~10%, EBITDA ≥40%.",
         "old": "—"
+      },
+      {
+        "action": "No CHANGELOG mandatory trigger fires (no V-dim shift, no allocation/band change, no scenario probability re-weighting). **Q2 sequential softness + #1 quantification gap raise discipline question — flag for Q2 review.** Live $19.72 (Source: prices.py 2026-05-13) — **below bear-case floor $20-22** since at least late-April; monitor whether price discount reflects #1 gap or broader sector de-rating. Set #1 next-read expectation = Q2 2026 earnings (~Aug 4-7) + Analyst Day Aug 25 (CMS-monetization disclosure highest-impact open question).",
+        "assessment": "**No structural threshold breach.** #2 subscription headline above >35% accel threshold; organic 14% in-range. #3 AI bookings AT 40% boundary (not yet >40% breach — one more quarterly tick crosses). #4 leverage faster-than-trajectory (0.2x from <2.5x deleverage-on-track threshold). #5 Iodine sustained ahead-of-plan (4th consecutive quarter). #6 NRR -1pp but in-range. #8 margin at FY26 guide. **Soft signal: #1 quantification gap is itself meaningful — if incumbent ~60% processor isn't seeing material CMS-driven uplift by Q1 2026, either the rule is operating at lower revenue intensity than thesis assumed OR uplift is back-end-loaded to H2 2026.**",
+        "date": "**2026-04-29**",
+        "indicator": "**Q1 2026 results (Apr 29 call)**",
+        "new": "Q1 rev $314M (+22% YoY, **organic 11%**); Subscription $172M (**+38% headline, +14% organic**); Volume-based $139M (+7%); Adj EBITDA $135M (+26%, **43% margin**); UFCF $90M (67% conversion); **Net leverage 2.7x (down from 3.0x — single-quarter 0.3-turn improvement)**; **NRR 111%** (-1pp vs FY25 but within 108-110% historical band per CFO); **AI bookings ~40% of new** (up from 30-35%); \"nearly 40% of revenue is AI-embedded workflows.\" Iodine \"running ahead of plan\" — clinical data on ~1/3 of US hospital discharges. **42 new $100k+ clients (total 1,433, +15% YoY).** FY26 guide reaffirmed $1.274-1.294B / Adj EBITDA $530-540M. **Q2 sequential guide softened: flat-to-+1% (vs prior 1-3%)** due to patient-payment-segment pressure (hospital financing difficulties, print-to-digital, payer pushback — \"not competitive or product-driven\" per mgmt). Started Q2 with **\"largest qualified pipeline in our history.\"** **CMS Prior Auth #1: management did NOT quantify CMS-specific revenue impact or payer compliance %** — Q1 was expected first read; quantification pushed to Q2 (~Aug) or later. **Analyst Day announced Tuesday Aug 25 2026.**",
+        "old": "Per FY2025 baseline above"
       }
     ]
   },

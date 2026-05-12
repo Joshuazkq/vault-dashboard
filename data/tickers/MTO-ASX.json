@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "MTO-ASX",
     "version": "2.0.0"
   },
@@ -81,6 +81,140 @@
     "methodology": "Type 1 Cyclical / Scenario-Weighted",
     "probWeightedFV": "AUD $5.56/share (+135% on $2.37)",
     "thesisType": "Type 1 (Cyclical), with PSHH acquisition folded into earnings baseline (NOT stacked as Type 4)."
+  },
+  "indicators": {
+    "blindspots": [
+      "**Bank covenant thresholds (Fixed Charge Cover + Leverage Ratio)** — Reside in confidential facility docs; not in public filings. Stress sensitivity unknown if EBITDA falls <$50M or H2 deteriorates. Trackable via FY26 AR Note 20 (~Aug 2026) or refi announcement.",
+      "**Goodwill-impairment dynamics (Wholesaling CGU)** — $27.3M goodwill impairs at <0.5% rev CAGR vs 3.5% base — an extremely tight margin. A macro slowdown to 0-2% in H2 creates impairment risk within FY26 close. Sensitivity ~$0.37/sh.",
+      "**Institutional breadth beyond Spheria (5.28%) + Pinnacle (5.36%)** — WAM Microcap / NAOS / Ophir / Forager holdings not tracked. Affects re-rating-mechanism durability if smart-money cluster is shallow. Trackable via monthly NTA fund reports.",
+      "**Hamish Douglass 10.45% holding structure** — Personal vs Magellan-fund holding unverified; if fund-mandate, exit could cap upside. Form 604 not directly inspected.",
+      "**FY23 peak-cycle net debt** — ~A$36M estimate used in per-share rebase math; not verified from FY23 AR. LOW impact (~$0.07/sh)."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Cycle-bottom narrative requires sentiment to inflect; current sentiment data argues cycle may not have bottomed. Bear-case feed for V1/V6.",
+        "current": "RBA 4.10%; **72% market-implied prob of May 2026 hike to 4.35%** (decision 5-May-2026); ANZ-Roy Morgan sentiment 62.3 (50-yr lows; LR avg 123.3)",
+        "lastUpdated": "2026-04-28",
+        "name": "RBA cash rate path + AU consumer sentiment",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "H1 margin 1.3% is transient (lease accounting + integration overhead). H2 margin recovery >2.0% = PSHH accretive on pace; <1.5% = drag persists.",
+        "current": "H1 PSHH: $52.7M revenue / $0.7M PBT (1.3% margin) over 5 months; annualized $63.2M / $0.823M per Note 15",
+        "lastUpdated": "2026-04-28",
+        "name": "PSHH integration H2 margin ramp",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Sustainable if FY26E NPAT >$20M; payout >50% during refi window would signal capital pressure.",
+        "current": "H1 FY26 interim 9.5c (vs FY25 total 13c); modeled FY26E 18-22c at A$2.37 = **7.6-9.3% yield**",
+        "lastUpdated": "2026-04-28",
+        "name": "Dividend yield / payout ratio",
+        "num": 10
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Below-peer discount is core V2 mispricing. Peer multiple compression to ~5.0x in recession would compress MTO's absolute multiple 25-30%.",
+        "current": "MTO ~2.85x (FY26E run-rate); peer median AOV/SUL/BAP ~7.3-8.4x LTM (vault historical 8.0x)",
+        "lastUpdated": "2026-04-30",
+        "name": "Peer EV/EBITDA multiple",
+        "num": 11
+      }
+    ],
+    "noiseFilter": [
+      "**Index removal 23-Mar-2026** — Forced passive-fund selling explains $4.00 → $2.37 path but is mechanical, not fundamental. MTO was index-added only 22-Sep-2025 (6-month window). Re-inclusion requires price + liquidity recovery, not thesis validation.",
+      "**Ahmet insider sell-down (5.0M @ A$3.60, 29-Aug-2025)** — Ahmet cashed out personal stake post-CEO retirement transition; placed institutionally; no trickle selling since Form 604 filed 2-Sep-2025. Cassen's counter-buying (100K @ A$3.15 + A$2.20 Dec-2025/Mar-2026) is stronger directional signal.",
+      "**Stamp-duty provision A$5M restatement Nov 2025** — One-time AASB 108 cleanup (NSW vehicle reg on optional equipment). Affects prior-period retained earnings, not forward cash flows. No evidence of other-jurisdiction breach (A14 watch open but no disclosure to date).",
+      "**Single-half Retailing margin compression (1.2% vs 1.5%)** — PSHH AASB 16 lease-accounting suppresses segment profit (not EBITDA) during integration. Transient noise; track ex-integration margin trend, not single-half print.",
+      "**RBA hiking cycle into 7-May-2026 CPI print** — Macro risk is bounded and near-term. FY26 results (~Aug 2026) post-date macro binary; no thesis-decisive read before July 2026."
+    ],
+    "sourceFile": "Themes/Cyclical Inflection/Tickers/MTO-ASX/INDICATORS.md",
+    "staleDays": 13,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**H1 FY26 organic +4.8% YoY** ($396.4M vs H1 FY25 $328M organic-equivalent); Oct YTD +6.2% per Nov 2025 AGM",
+        "direction": "↑ Above threshold (inflection signal alive)",
+        "lastUpdated": "2026-04-28",
+        "name": "Organic revenue growth (group)",
+        "num": 1,
+        "source": "H1 FY26 HYR + AGM Nov 2025 (per OVERVIEW.md p.5; THESIS.md p.365)",
+        "threshold": "<0% = market-share losses / cycle still deteriorating; >+5% sustained = cyclical inflection confirmed"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "19.8% H1 FY26 (Oct YTD 22.0% per Nov 2025 AGM commentary)",
+        "direction": "→ Stable around 20%",
+        "lastUpdated": "2026-04-28",
+        "name": "New-motorcycle market share",
+        "num": 2,
+        "source": "OVERVIEW.md p.8; THESIS.md p.405",
+        "threshold": "<18% = post-PSHH share leakage; >20% sustained = inflection locked"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$27.3M Wholesaling goodwill; KPMG sensitivity: impairs if rev CAGR <0.5% (vs base 3.5% FY25-FY27)",
+        "direction": "→ On track (H1 +4.8% well above)",
+        "lastUpdated": "2026-04-28",
+        "name": "Wholesaling CGU goodwill-impairment headroom",
+        "num": 3,
+        "source": "FY25 AR Key Audit Matter (OVERVIEW.md p.186-188)",
+        "threshold": "<0.5% CAGR over forward 3-yr base = impairment trigger (~$0.37/sh sensitivity); >2.5% safe"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**H1 FY26 1.2%** (down from 1.5% H1 FY25 — PSHH integration drag)",
+        "direction": "↓ Watch — within 0.2pp of breach threshold; expected H2 recovery",
+        "lastUpdated": "2026-04-28",
+        "name": "Retailing segment profit margin",
+        "num": 4,
+        "source": "H1 FY26 HYR (OVERVIEW.md p.72; THESIS.md p.149 OVERHANG #4)",
+        "threshold": "<1.0% sustained 2 halves = margin compression structural; >1.5% = integration normalizing"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**A$6.1M net debt @ 31-Dec-2025** (~0.1x FY26E EBITDA $60-65M); $40M facility fully drawn",
+        "direction": "→ Fortress maintained",
+        "lastUpdated": "2026-04-28",
+        "name": "Net debt / leverage",
+        "num": 5,
+        "source": "OVERVIEW.md p.91-93; THESIS.md p.368",
+        "threshold": ">0.5x EBITDA = covenant-stress zone; <0.1x = fortress"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "$40M facility, maturity **15-Mar-2027** (corrected from prior 1-Sep-2026 estimate); FY26 results ~Aug 2026 gives ~7-month refi window",
+        "direction": "→ Watch (gates FY26 results read-through)",
+        "lastUpdated": "2026-04-28",
+        "name": "Bank facility refinancing status",
+        "num": 6,
+        "source": "H1 FY26 HYR Note 13 (OVERVIEW.md p.115)",
+        "threshold": "Term/pricing materially worse than existing 5.55% OR covenants tightened = leverage flexibility shrinks; refi not announced by Dec 2026 = stress signal"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**H1 FY26 $31.7M** → implied FY26E midpoint $60-65M (H2 build $28.3-33.3M; +5-10% YoY)",
+        "direction": "→ On-track per H1",
+        "lastUpdated": "2026-04-28",
+        "name": "FY26E EBITDA run-rate",
+        "num": 7,
+        "source": "OVERVIEW.md p.20-21; THESIS.md p.223 FY26E scenario build",
+        "threshold": "<$55M FY26 outturn = organic deceleration / cycle-bottom mis-call; >$68M = macro tailwind emerging"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "No action — baseline log only. Per Rule §10, INDICATORS.md created post-entry (entered 2026-04-29; 14d lag).",
+        "assessment": "All structural indicators on track at position entry baseline. H1 FY26 organic +4.8% above breach floor. Retailing margin 1.2% within 0.2pp of <1.0% structural breach — closest watch-item. FY26 full-year results (~Aug 2026) is primary catalyst window.",
+        "date": "2026-05-13",
+        "indicator": "Initial setup",
+        "new": "—",
+        "old": "—"
+      }
+    ]
   },
   "pm": {
     "archetype": "B",
@@ -250,6 +384,7 @@
     }
   ],
   "recentNotes": [
+    "2026-05-09: News Scan: 2026-04-24 → 2026-05-09 — CFMOTO MOU (5/4) — strategic-distribution longevity signal",
     "2026-04-28: Report Review: Perplexity Deep Research (13-Section External Validation)",
     "2026-04-29: Range-Bound Value-Trap Stress Test (User-Initiated Adversarial Probe)"
   ],

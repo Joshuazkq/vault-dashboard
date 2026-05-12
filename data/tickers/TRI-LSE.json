@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -139,7 +139,7 @@
       "**Peer share price moves (Bossard, Bufab)** — These are much larger, more liquid, better-covered companies. Their share price dynamics are driven by different factors (institutional flows, index inclusion). Not informative for TRI."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/TRI-LSE/INDICATORS.md",
-    "staleDays": 17,
+    "staleDays": 23,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -308,6 +308,62 @@
         "indicator": "Strait of Hormuz (#13)",
         "new": "**Re-closed per Iran 18 Apr after ceasefire breakdown.** US seized Iranian vessel (Touska) 19 Apr. Maritime traffic standstill 19-20 Apr per Windward (35 vessel reversals, 5 VLCCs among them). Ceasefire expires 22 Apr.",
         "old": "\"Completely open\" (Apr 17)"
+      },
+      {
+        "action": "CHANGELOG evaluation triggered (Rule §10). Surfaced as CHANGELOG candidate to user; awaiting authorization before any WATCHLIST status / scenario probability change. Per Rule §11, INDICATORS.md propagation alone does not fire CHANGELOG mandatory trigger — actual scenario probability re-weighting would. Continue monitoring 2026-05-28 Hormuz milestone for combined macro stack.",
+        "assessment": "**BREACH ACTIVE — formal structural threshold (>$100 sustained 3+ months) MET as of 2026-05-08.** Input cost inflation risk activated for raw materials + freight (TRI sources ~70% from Asia). Does NOT meet \">$140 = UK recession trigger\" level.",
+        "date": "**2026-05-08**",
+        "indicator": "Brent crude (#11)",
+        "new": "**$109-115/bbl May 5-8 2026; sustained 6+ weeks above $100 since Iran conflict re-escalation.** (Source: 2026-05-08 MAGN-TRI brief §5 citing Fortune $115.01 May 4; Octagon AI / Brent crude oil price May 6 2026 $107+.)",
+        "old": "$95.19 (2026-04-20 ref, post-Iran-headline retrace)"
+      },
+      {
+        "action": "No structural breach — confirms continued progression. Full results 2 July 2026 will be the audited confirmation; pre-close already de-risks the headline. (Source: 2026-05-08 MAGN-TRI brief §1 citing Stockopedia / 29 Apr 2026 RNS.)",
+        "assessment": "Sequential improvement consistent with Rebuild trajectory: FY24 5.1% → FY25 6.7% → FY26 7.8% (+150bps over 2 years toward >10% medium-term target).",
+        "date": "**2026-05-08**",
+        "indicator": "EBIT margin (#1)",
+        "new": "**7.8% full year FY26** (revenue ~£207M, underlying EBIT ~£16M, gross margin +150bps to ~30%; pre-close 29 Apr 2026 RNS).",
+        "old": "6.3% reported / 7.1% CER (H1 FY2026)"
+      },
+      {
+        "action": "No breach — clear positive read. Auto sector divergence persists (TRI ~38% auto exposure remains under pressure despite headline PMI strength). (Source: 2026-05-08 MAGN-TRI brief §5 citing S&P Global / Morningstar.)",
+        "assessment": "Strong mfg sentiment recovery; well above 47 structural-headwind threshold. Internal quality improved vs March's deteriorating internals.",
+        "date": "**2026-05-08**",
+        "indicator": "UK Manufacturing PMI (#2)",
+        "new": "**53.7 (April 2026 final, 47-month high; output, new orders, employment all rose; clients pulling forward purchases).**",
+        "old": "51.0 (Mar 2026 final)"
+      },
+      {
+        "action": "WATCH. May-01 PSS impact + cross-platform reconciliation needed. H2 FY2026 GM headwind estimate band 20-100bps depending on which series anchors actuals. (Source: 2026-05-08 MAGN-TRI brief §5 citing Flexport / Drewry / Yahoo Finance.)",
+        "assessment": "BORDERLINE — Flexport at structural threshold ($3,000) but Drewry separately lower at ~$2,052. Cross-platform inconsistency.",
+        "date": "**2026-05-08**",
+        "indicator": "Asia-Europe freight (#12)",
+        "new": "**Cross-platform divergence: Flexport Shanghai-Rotterdam $3,004/FEU (valid to May 15); Drewry $2,052/FEU separately. Spot rates jumped 19% to $2,443 (Mar 12 Yahoo Finance).**",
+        "old": "Drewry $2,052/FEU (Mar 5 2026)"
+      },
+      {
+        "action": "Active monitoring; binary on Iran-US MOU signing + Hormuz reopening trajectory. CHANGELOG evaluation is conditional on 2026-05-28 milestone outcome. (Source: 2026-05-08 MAGN-TRI brief §5 citing Barchart May 6.)",
+        "assessment": "Conditional structural breach milestone 2026-05-28 (20 days from this read). If Iran-US framework signs and Hormuz reopens fully within 30 days (per macro briefing nuclear MOU framework reported), breach evaluation softens. If conflict re-escalates and transit remains <10% of pre-war for 3+ months from Feb 28 close, formal 3-month structural breach fires 2026-05-28.",
+        "date": "**2026-05-08**",
+        "indicator": "Strait of Hormuz (#13)",
+        "new": "**Operationally open per brief; transit volumes severely reduced (~9-15/day vs 138/day pre-war per separate macro briefing). Iran-ceasefire headline 5 May caused Brent drop; Iran conflict ongoing; ceasefire talks active 6 May.**",
+        "old": "\"Effectively closed since ~Feb 28\" (2026-04-21 vault read)"
+      },
+      {
+        "action": "Positive structural signal; vault THESIS §Variant Perception framing of \"Slater distributing 10.98%→8.91%\" is INCORRECT per RNS reconciliation — flag for thesis-revision. (Source: 2026-05-08 MAGN-TRI brief §1, §6 citing Investegate RNS 9553011 5 May 2026 + 9433102 Feb 2026.)",
+        "assessment": "Strong continuation — aligned shareholders accumulating at trough. Combined ~27.7% = effective takeover-price floor at any consensus PT range £1.15-1.40. CEO Percival + NED Watson DRIP-only in window (already vault-recorded).",
+        "date": "**2026-05-08**",
+        "indicator": "Insider buying (#4)",
+        "new": "**Slater Investments 10.27% TR-1 cross 1 May 2026 (notification 5 May). 13,975,194 shares total — same count as Feb 2026 notification; Slater has NOT sold; apparent % decline from 10.98% reflects share-count expansion via DRIP. Net 1 May acquisition: +1,369,869 incremental notified shares. Combined Mills + Slater ~27.7%.**",
+        "old": "Mills 17.41% + Slater 8.91% (interim)"
+      },
+      {
+        "action": "Surface freight #12 cross-platform divergence (>40% spread) to user for source-authority decision per Rule §21; continue 28 May Hormuz milestone watch; binary risk window narrowing.",
+        "assessment": "**No breach-flag status change.** #11 Brent already BREACH ACTIVE; #13 Hormuz BREACH-FLAG with 28 May milestone; #12 freight remains BORDERLINE/WATCH pending Rule §21 source-authority decision. UK PMI strong positive; EU Auto Q1 reversal positive; Slater + Mills aligned-shareholder accumulation positive. Per Rule §11 evaluation: no V1-V8 shift, no allocation band change, no scenario probability re-weighting → NO CHANGELOG mandatory trigger fires.",
+        "date": "**2026-05-11**",
+        "indicator": "13-indicator scoreboard reaffirmed + #2/#12/#13 refinements (per 11 May Daily Intelligence Briefing)",
+        "new": "**#1 EBIT 7.8% FY26 reaffirmed; #2 UK PMI clarified — 53.7 IS April final (47-month high; output, new orders, employment all rose); March final separately at 51.4. #3 EU Auto Q1 +4% YoY (BEV 19.4%) reaffirmed. #4 Slater 10.27% / Mills 17.41% / DRIP April reaffirmed. #5 3 analysts (Peel Hunt 140p, Berenberg 130p, Cavendish) reaffirmed; Cavendish 29 Apr morning note with FY27 EPS revision noted. #6 Leverage <1.0x reaffirmed. #7 WC% no new data (wait Jul 2 finals). #11 Brent $109/bbl May (down from April peak $117) — BREACH ACTIVE remains. #12 Freight CROSS-PLATFORM DIVERGENCE >40%: Flexport Shanghai-Rotterdam $3,004/FEU (valid 15 May); BRF Logistics May spot $1,300–1,900/TEU; Drewry WCI Shanghai-Rotterdam $2,443 mid-March. Per Rule §21, source-authority deferred to user — DO NOT silently pick one. #13 Hormuz contested/restricted; Iran formal Hormuz vetting agency; US \"Project Freedom\" naval escort paused 5 May citing Iran negotiation progress; US-Iran fire exchange 4 May. 3-month structural-breach milestone 2026-05-28 = ~17 days out.** (Sources: brief footnotes [^30] LSE + [^31] Investegate + [^33] Slater TR-1 + [^34]–[^36] Berenberg/Cavendish + [^48]–[^49] UK PMI + [^50]–[^52] ACEA Auto + [^54] Fortune Brent + [^55]–[^57] Flexport/BRF/Drewry freight + [^23]–[^27] Brent/Hormuz/Iran.)",
+        "old": "All 13 indicators per 2026-05-08 Trend Log readings"
       }
     ]
   },
@@ -414,11 +470,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-11: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (11 May 2026) — TRI section",
+    "2026-05-08: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (8 May 2026) — TRI section",
     "2026-05-01: Filing Review: FY2025 Annual Report (10-K equivalent — B1 RC evidence)",
     "2026-04-30: Conviction Rescore (Partial: V1, V2, V4, V7) + MIA Asymmetry Restoration",
-    "2026-04-23: Data Correction Amendment: Hormuz/Ceasefire State",
-    "2026-04-21: Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)",
-    "2026-04-20: Blind MIA Rerun (Policy-Enforced under §10b BLINDNESS REQUIREMENT)"
+    "2026-04-23: Data Correction Amendment: Hormuz/Ceasefire State"
   ],
   "scenarios": [
     {

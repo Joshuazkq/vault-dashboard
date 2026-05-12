@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
@@ -63,7 +63,7 @@
       "**Share price moves on rate expectations** — Float income sensitivity to rates is known. Stock moves on Fed commentary are mechanical, not fundamental."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/PAYC/INDICATORS.md",
-    "staleDays": 31,
+    "staleDays": 37,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -132,6 +132,14 @@
         "indicator": "FY2025 / Q4 2025 results",
         "new": "Q4: Rev $544.3M (+10.2%), recurring $517.1M (+11.2%), EBITDA 43.4%. FY2025: Rev $2,051.7M (+9%), recurring $1,938.7M (+10.3%), retention 91%. 2026 guide: $2.175-2.195B (below $2.228B consensus), recurring 7-8%, float ~$103M, EBITDA ~44%. Stock -7.9% on below-consensus guide.",
         "old": "—"
+      },
+      {
+        "action": "No structural breach (no threshold crossed in either direction). HOLD MONITORING — entry gate unchanged. CHANGELOG entry logged (AI Disruption theme 2026-05-09). Watch Q2 2026 (~Aug) for: (a) IWant ARR metrics, (b) FY26 guide raise pattern, (c) buyback execution rate.",
+        "assessment": "**#1 Recurring rev growth ex-float**: +9% — slight deceleration from Q4 11.2%; still at structural threshold. **#3 IWant adoption**: qualitative-only refresh; quantitative ARR metric NOT disclosed (key bear-relief item still missing). **#4 Revenue guidance**: HELD (no raise) — historical pattern is 3 raises/yr; Q1 hold is below pattern. **#5 EBITDA stability**: 44% guide confirms fortress. **NEW indicator candidate: Buyback execution rate** ($2B authorization at $1B/quarter = 12mo full retirement; slower pace = signal degradation). **Entry triggers status**: 0 of 3 triggers fired (no pullback to $100-110, no IWant ARR + no guide raise, no succession).",
+        "date": "2026-05-09",
+        "indicator": "**Q1 2026 results (5/7) + $2B buyback**",
+        "new": "**Q1 2026: Revenue $572M (+8% YoY) / Adj EPS $3.15 vs $2.99 (+5% beat) / Recurring $544M (+9%) / GAAP NI $156M.** **FY26 guide HELD** at $2.175-2.195B (6-7%), EBITDA $950-970M (~44%) — no raise. **NEW $2B buyback authorization** replaces prior plan (~30% of $6.7B mcap); 8.38M shares already retired pre-Q1 for ~$1.06B (avg ~$126/sh). IWant qualitative traction confirmed (\"usage up sharply, affecting pipeline opportunities\") but **NO explicit ARR metrics disclosed**. Richison continued as CEO. Stock $132.62 +5% above buyback avg.",
+        "old": "Q4 2025 baseline"
       }
     ]
   },
@@ -306,11 +314,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-09: News Scan: Q1 2026 Print BEAT (Rev +8% / Adj EPS +5% / FY26 Guide Held / $2B Buyback / IWant Traction Qualified) — Th...",
     "2026-04-22: News-Scan: Q1 2026 Earnings Date Confirmed May 6",
     "2026-03-29: Management Alignment Assessment: PAYC",
     "2026-03-28: Bulk Filing Review: 21 Filings (FY2019-FY2025 YTD)",
-    "2026-03-28: Bulk Transcript Review: Cumulative Research Baseline",
-    "2026-03-28: Q4 2025 / FY2025 Earnings Call (Feb 11, 2026)"
+    "2026-03-28: Bulk Transcript Review: Cumulative Research Baseline"
   ],
   "variantViews": []
 }

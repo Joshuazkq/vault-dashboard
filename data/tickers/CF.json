@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "CF",
     "version": "2.0.0"
   },
@@ -135,7 +135,7 @@
       "**CF share price moves on market-wide selloffs** — CF correlates with energy/materials in risk-off. If urea prices hold while CF drops, that's a buying opportunity, not a thesis challenge."
     ],
     "sourceFile": "Themes/Hormuz/Tickers/CF/INDICATORS.md",
-    "staleDays": 31,
+    "staleDays": 37,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -345,6 +345,22 @@
         "indicator": "European plant activity",
         "new": "**Grupa Azoty (Poland) halted new orders** — Europe's largest state-owned nitrogen producer. European ammonia prices +7.9% MoM (March). Broad margin pressure from elevated TTF post-Hormuz.",
         "old": "Operating (with pressure)"
+      },
+      {
+        "action": "CHANGELOG entry logged (Hormuz theme 2026-05-09). MONITORING-HOLD. Re-entry pending full 4-trigger clearance.",
+        "assessment": "**Q1 print confirms re-entry trigger #2** (Q2 2026 realized-pricing catch-up). PW-FV uplift framework $190 → ~$200-210 candidate at unchanged peer multiple. **NO position re-entry this session** — gate requires #1 NOLA-confirmation + #3 options-window + clean technical setup; only 2/4 triggers met. MIA Magnitude AVG → STRONG candidate (formal council deferred).",
+        "date": "2026-05-09",
+        "indicator": "**CF Q1 2026 actual print (5/6)**",
+        "new": "**Q1 2026 NI $615M (+97% YoY) / Adj EBITDA $983M (+53%) / Adj EPS $2.89 vs $2.43 consensus (+19%) / Revenue $1.99B vs $1.77B (+12%)**. Company explicitly cites Middle East / Hormuz tightening nitrogen supply-demand.",
+        "old": "Q1 2025 NI $312M / EBITDA $644M"
+      },
+      {
+        "action": "No action — within existing assessment.",
+        "assessment": "Hormuz duration cluster (4/30 8 data points + Q1 management citation) → S4 probability sustained.",
+        "date": "2026-05-09",
+        "indicator": "**Hormuz operational status (#7)**",
+        "new": "**Held** — ceasefire announced-not-effective; CF management Q1 commentary explicitly cites Middle East tightening; no functional reopening signal in window.",
+        "old": "\"5% pre-conflict throughput\" (5/5)"
       }
     ]
   },

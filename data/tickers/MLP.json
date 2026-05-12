@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "MLP",
     "version": "2.0.0"
   },
@@ -175,6 +175,7 @@
     }
   ],
   "recentNotes": [
+    "2026-05-09: News Scan: 2026-04-24 → 2026-05-09 — no material events",
     "2026-04-28: D2 Market-vs-Me Diagnostic (RC pipeline)"
   ],
   "variantViews": []

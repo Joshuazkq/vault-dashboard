@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "VOW",
     "version": "2.0.0"
   },
@@ -105,9 +105,9 @@
       },
       {
         "class": "CYCLICAL",
-        "context": "Follows booking cycles. **VOW implication: all three operators expanding fleets with record financial results. Combined newbuild capex $5-6B+ in 2026. Orderbook structurally secured through 2036.**",
-        "current": "**Record strong across all three majors.** **RCL FY2025:** Adj EPS $15.64 (+35%), $17.9B revenue, $4.3B net income. 2026 guide: EPS $17.70-18.10 (+13%), double-digit rev growth, record WAVE bookings. Discovery class + 10 Celebrity river ships ordered. **CCL FY2025:** Record $26.6B revenue, $7.2B adj EBITDA (record, +$1B YoY), Q1 2026 record $6.2B revenue, adj EPS $0.20 (+50%). 2026E: ~$3.5B adj net income. Newbuild capex ~$0.6B, non-newbuild ~$2.5B. **NCLH FY2025:** $9.8B rev (+3.7%), $2.73B EBITDA (+11%), 2026 newbuild capex ~$2.8B. Elliott activist >10%. Weakest of three but still expanding fleet. Iran substitution effect confirmed and ongoing. Brent >$100 = fuel drag but NOT slowing newbuild commitments.",
-        "lastUpdated": "2026-04-06",
+        "context": "Follows booking cycles. **VOW implication: operators absorbing fuel headwind via EPS trim, NOT via capex deferral. RCL ordered MORE ships (Icon VI/VII) in same window as guidance cut. Combined newbuild capex commitment intact through 2030+. NCLH is the relative weak link — second consecutive cut would raise deferral risk; no signal yet. Orderbook structurally secured through 2036+.**",
+        "current": "**EPS guidance compressing on fuel; newbuild capex INTACT.** **RCL Q1 2026 (30 Apr 2026):** Adj EPS $3.60 (beat consensus by 12.6%, beat own midpoint by $0.37); revenue $4.45B (+11.3% YoY); FY2026 adj EPS guide CUT to $17.10-$17.50 (from $17.70-$18.10) on $0.62/share fuel headwind ($1.35B FY fuel, 59% hedged) + $0.12 TUI Cruises. Q2 2026 guide: capacity +4.9% YoY, net yields +0.2% CC, adj EPS $3.83-$3.93. **27 Apr 2026: Icon VI/VII ordered at Meyer Turku (delivery 2029/2030) — newbuild commitment expanded despite EPS trim.** **CCL FY2025/Q1 FY2026:** Record $26.6B revenue, $7.2B adj EBITDA, Q1 2026 record $6.2B revenue, adj EPS $0.20 (+50%). FY2026 guide $2.21, absorbed >$500M fuel headwind. 85% of 2026 booked at record prices. **NCLH Q1 2026 (4 May 2026):** Adj EPS $0.23 (beat $0.14 consensus 61%); revenue $2.3B (+10% YoY); adj EBITDA $533M (+18% YoY); GAAP net income $104.7M (vs −$40.3M YoY). **FY2026 adj EPS guide CUT from $2.38 to $1.45-$1.79 (~30% midpoint cut)**; FY adj EBITDA cut to $2.48-$2.64B; FY fuel ~$800M; $125M annualized SG&A savings program; war-related $0.08 EPS impact + $0.55-$0.89 gross margin pressure on Middle East itinerary disruptions. Stock fell 8% on day; four firms cut PT. NCLH balance-sheet WATCH (Elliott activist >10%; 5.2x net leverage target); 17 newbuilds-on-order intact, NO cancellation signal.",
+        "lastUpdated": "2026-05-08",
         "name": "Cruise operator capex guidance",
         "num": 10
       },
@@ -137,16 +137,16 @@
       "**\"VOW subsequent equity offering\" (retracted 2026-04-20)** — A prior daily briefing draft attributed a MarketScreener \"Final result of subsequent offering and allocation of offer shares\" (17 Apr 2026) to VOW ASA. That notice was issued by **Golden Energy Offshore Services ASA**, NOT VOW ASA. Fully retracted. No VOW equity issuance is live. Last VOW equity raise on record remains the Dec 2024 rights issue (NOK 250M gross, 166.67M new shares at NOK 1.50). Thesis-breaker (e) \"forced dilutive raise\" is NOT triggered. Indicator #8 covenant status reverts to pre-bridge severity (no equity cure funded). Documented here to prevent reactive thesis revision if the misattribution resurfaces. (Source: Daily Intelligence Brief 2026-04-20, Double-Check Log item 1.)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/VOW/INDICATORS.md",
-    "staleDays": 7,
+    "staleDays": 5,
     "structural": [
       {
         "class": "STRUCTURAL",
-        "current": "**80-100 ships on order (industry trackers, Apr 2026).** Originally 74 entering 2026; updated to 80-100 with new orders from MSC (4 New Frontier from Meyer Werft, delivery 2030-2033), NCLH (4 at 226,000 GT from Fincantieri, 3 additional Mar 2026 for 2036-2037 = 17 total on order), RCL (2 Discovery class + options on 5th/6th Icon). **74 ships on order entering 2026** (~$80B+), highest since pre-pandemic (CruiseIndustryNews Jan 2026). 15 ocean ships delivering in 2026 alone (+30,000 berths, >$11B capex). European yards (Fincantieri/Meyer Werft/Chantiers) hold EUR 57B orderbook 2024-2036, 80%+ cruise. Fincantieri backlog EUR 63.2B through 2037. Meyer Werft: EUR 10B MSC order (4-6 ships to 2033); MSC 4+2 LOI at Meyer Werft confirmed Dec 2025. RCL capacity growth: +6.7%/+4%/+6%/+7% through 2029; options on 5th-6th Icon-class; 2 Discovery-class from Chantiers (Jan 2026, 2029-2030 delivery). MSC \"New Frontier\" class: 4 ships from Meyer Werft (Dec 2025, 2030-2033). **NCLH: 3 ships from Fincantieri (Mar 2026, 2036-2037); now 17 on order.** **Princess Cruises (Carnival Corp) Voyager Class: 3 ships × 183,000 GT / 4,700 pax confirmed 15 Apr 2026 from Fincantieri Monfalcone, delivery late 2035 / 2038 / 2039, LNG dual-fuel (Carnival's 19th-21st LNG vessels). Carnival Corp also has 7 additional ships under contract delivering 2027-2033 (10 total Carnival-side beyond Voyager Class).** VIK: options for 2 additional ocean ships (2034 delivery).",
+        "current": "**85-105 ships on order (industry trackers, May 2026).** Originally 74 entering 2026; updated to 80-100 + 5 trailing-30-day orders. **NEW (27 Apr 2026): RCL Group ordered Icon VI and Icon VII at Meyer Turku, deliveries 2029 and 2030; part of long-term framework agreement extending Meyer Turku capacity through 2036. Meyer Turku is a Scanship-contracting yard.** Updated to 80-100 with new orders from MSC (4 New Frontier from Meyer Werft, delivery 2030-2033), NCLH (4 at 226,000 GT from Fincantieri, 3 additional Mar 2026 for 2036-2037 = 17 total on order), RCL (2 Discovery class + Icon VI/VII confirmed Apr 2026, framework to 2036). **74 ships on order entering 2026** (~$80B+); CruiseIndustryNews May 2026 reports global orderbook >$90B through 2039 with vessel count above 90, breaching upper bound of tracking range. European yards (Fincantieri/Meyer Werft/Meyer Turku/Chantiers) hold EUR 57B orderbook 2024-2036, 80%+ cruise. Fincantieri backlog EUR 63.2B through 2037. Meyer Werft: EUR 10B MSC order (4-6 ships to 2033); MSC 4+2 LOI at Meyer Werft confirmed Dec 2025. **Meyer Turku: 4 Icon-class ships built/in build (Icon Jan 2024, Star Aug 2025, Legend Jul 2026, Hero 2027); Icon V/VI/VII confirmed for 2028/2029/2030 delivery; 25 ships built for RCL over 30+ years.** RCL capacity growth: +6.7%/+4%/+6%/+7% through 2029; framework extension to 2036 + Icon VI/VII confirmation; 2 Discovery-class from Chantiers (Jan 2026, 2029-2030 delivery). MSC \"New Frontier\" class: 4 ships from Meyer Werft (Dec 2025, 2030-2033). **NCLH: 3 ships from Fincantieri (Mar 2026, 2036-2037); now 17 on order. Watch item: NCLH FY2026 EPS guide cut ~30% on 4 May 2026 — no order-cancellation signal yet, but second consecutive cut would raise newbuild-deferral risk.** **Princess Cruises (Carnival Corp) Voyager Class: 3 ships × 183,000 GT / 4,700 pax confirmed 15 Apr 2026 from Fincantieri Monfalcone, delivery late 2035 / 2038 / 2039, LNG dual-fuel (Carnival's 19th-21st LNG vessels). Carnival Corp also has 7 additional ships under contract delivering 2027-2033 (10 total Carnival-side beyond Voyager Class).** VIK: options for 2 additional ocean ships (2034 delivery).",
         "direction": "↑ Strong",
-        "lastUpdated": "2026-04-27",
+        "lastUpdated": "2026-05-08",
         "name": "Global cruise newbuild orderbook (ships)",
         "num": 1,
-        "source": "Daily Intelligence Brief v2 Apr 27 (Princess press release 15 Apr 2026, Fincantieri); prior 2026-04-20 update; cruise-substitution-2026.md; CruiseIndustryNews",
+        "source": "Weekly Intelligence Brief 1-8 May 2026 + web supplement (PRNewswire RCL Group 27 Apr 2026 Icon VI/VII; gCaptain; Late Cruise News 28 Apr 2026); CruiseIndustryNews 5 May 2026; Princess press release 15 Apr 2026, Fincantieri; cruise-substitution-2026.md",
         "threshold": "<60 ships = peak concern; <45 = structural demand decline"
       },
       {
@@ -277,6 +277,21 @@
         "indicator": "#1 Cruise newbuild orderbook",
         "new": "80-100 ships + Princess Voyager Class 3 ships × 183,000 GT confirmed 15 Apr 2026 (Fincantieri Monfalcone, delivery 2035/2038/2039, LNG dual-fuel; Carnival's 19th-21st LNG vessels). Also: brief surfaces 7 additional Carnival ships under contract 2027-2033.",
         "old": "80-100 ships (Apr 2026)"
+      },
+      {
+        "action": "No action — confirmation of EXTREME V6 framing; mild positive reinforcement; no thesis change",
+        "assessment": "**No breach — POSITIVE reinforcement of V6 path #3.** Threshold (<60 = peak concern) remains far above. Meyer Turku confirmed as multi-decade Scanship-customer yard (25 ships built for RCL over 30+ years). Brief author missed Icon VI/VII (inconsistent window discipline — included 16 Apr Princess but excluded 27 Apr Icon). Web supplement closes the gap. NCLH FY2026 EPS guide cut ~30% on 4 May 2026 — flagged as balance-sheet WATCH, NO order-cancellation signal yet.",
+        "date": "2026-05-08",
+        "indicator": "#1 Cruise newbuild orderbook",
+        "new": "80-100 + 5 trailing-30-day orders (3 Princess Voyager Apr 16 + 2 RCL Icon VI/VII Apr 27 at Meyer Turku, delivery 2029/2030) = 85-105 ships. CruiseIndustryNews 5 May 2026 reports >$90B orderbook through 2039 with vessel count above 90. RCL framework with Meyer Turku extended to 2036.",
+        "old": "80-100 + 3 Princess Voyager (Apr 2026)"
+      },
+      {
+        "assessment": "No action — cyclical update only; no structural threshold; signal supportive of V6 thesis (capex commitment intact even as operator EPS compresses)",
+        "date": "2026-05-08",
+        "indicator": "#10 Cruise operator capex (cyclical)",
+        "new": "RCL Q1 2026 beat + FY EPS cut $0.60 on fuel + Icon VI/VII order. NCLH Q1 2026 beat + FY EPS cut ~30% midpoint + 17 newbuilds intact. **Operators absorbing fuel headwind via EPS trim, NOT via capex deferral.**",
+        "old": "\"Record strong across all three majors\""
       }
     ]
   },
@@ -492,11 +507,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-12: Report Review: VOW ASA Weekly Intelligence Update (5–11 May 2026) — DELTA vs 2026-05-08",
+    "2026-05-08: Report Review: VOW ASA Weekly Intelligence Brief (1–8 May 2026) + Targeted Web Supplement",
     "2026-04-30: REFUTATION: \"24% New-Contract Margin from Q4 2025 Slide\" Claim — DO NOT REINTRODUCE",
     "2026-04-30: Report Review: VOW ASA Weekly Intelligence Update (23–30 Apr 2026)",
-    "2026-04-30: Derivation: Q4 2025 Audited Standalone + 9M 2025 Implied (Work-Backwards from FY2025 Audited)",
-    "2026-04-29: Report Review: VOW ASA Remuneration Report 2025",
-    "2026-04-29: Filing Review: VOW ASA Annual and Sustainability Report 2025 (FY2025 Audited Annual Report)"
+    "2026-04-30: Derivation: Q4 2025 Audited Standalone + 9M 2025 Implied (Work-Backwards from FY2025 Audited)"
   ],
   "variantViews": [
     "Maritime division alone (70% share monopolist, NOK 1.7B backlog) exceeds group EV by 39%. Margin improvement is contractual (signed backlog at better terms replacing expiring contracts at worse terms), not aspirational."

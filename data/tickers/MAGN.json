@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
@@ -76,7 +76,7 @@
       "**Routine supply-chain reshuffling commentary on tariffs** — Magnera management views direct tariff cost as limited; only escalation to confirmed margin compression matters."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MAGN/INDICATORS.md",
-    "staleDays": 9,
+    "staleDays": 15,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -207,6 +207,14 @@
         "indicator": "INDICATORS.md created",
         "new": "—",
         "old": "—"
+      },
+      {
+        "action": "Macro-input row capture; no MAGN thesis-breaker activation; continue Q3 EBITDA pace watch ($85–87M est. per CFO forward framing).",
+        "assessment": "No breach-flag status change: PP still elevated YTD vs structural threshold; Brent breach already flagged in TRI INDICATORS Trend Log 2026-05-08 — propagated here as upstream input-cost cascade for MAGN (resin/energy/transport ~70% COGS); Hormuz binary risk window now ~17 days to 28 May 3-month structural-breach milestone. Indirect inputs for MAGN — no MAGN-specific structural threshold breached today.",
+        "date": "2026-05-11",
+        "indicator": "Macro-input refresh (PP / Brent / Hormuz) — Rule §10 propagation from 11 May Daily Intelligence Briefing",
+        "new": "**PP Asia 8,712 CNY/T on 7 May 2026, −5.98% MoM** (modest deflation off high base; still elevated YTD per April vault read of +34% YoY); **Brent $109/bbl May 2026** (down from April peak $117/bbl per countryeconomy.com); **Hormuz: contested / restricted with Iran formal vetting agency; US \"Project Freedom\" Hormuz operation suspended 5 May citing Iran negotiation progress; US-Iran fire exchange 4 May**. (Sources: brief footnotes [^21] Trading Economics PP; [^23] countryeconomy Brent; [^24]–[^27] Hormuz / Iran-US Axios/CNN/LA Times.)",
+        "old": "PP Asia ~$0.62/lb (April vault read); Brent unspecified at 28 Apr; Hormuz unspecified at 28 Apr"
       }
     ]
   },
@@ -223,11 +231,11 @@
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "Forward IRR 76.6% from situation-screen 2026-05-07 (STRONG PASS, BEAR-CASE-NEGATIVE flag); artifact at _Screening/CapIQ Screeners/2026-05-07_MAGN_situation_screen.md",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A2",
@@ -295,20 +303,20 @@
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "DEBATES.md present but only 5 vectors detected — need 6",
+      "evidence": "DEBATES.md now has 6 pressure vectors (added 2026-05-07: Drawdown Diagnosis vs Mechanical Inflection — PARTIALLY COUNTERED, V3/V4/V8 unchanged)",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "D",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "Market-vs-Me Diagnostic dated 2026-05-07 in THESIS.md (post Q1 2026 earnings beat; PW-FV .19 re-weighted; LEAN entry maintained)",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "D",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D3",
@@ -321,11 +329,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-11: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (11 May 2026) — MAGN section",
+    "2026-05-08: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (8 May 2026) — MAGN section",
     "2026-04-30: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (30 Apr) — MAGN section",
     "2026-04-28: - Report Review: MAGN+TRI-LSE Daily Intelligence Brief (28 Apr — Q2 Date CONFIRMED 7 May, +9 days)",
-    "2026-04-21: - Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)",
-    "2026-04-20: - Report Review: Daily Intelligence Brief (Apr 13-20 Lookback)",
-    "2026-04-08: - Fair Value Estimation (Peer-Anchored EV/EBITDA)"
+    "2026-04-21: - Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)"
   ],
   "valuation": {
     "lastUpdated": "2026-04-08",

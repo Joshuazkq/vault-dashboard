@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "NICE",
     "version": "2.0.0"
   },
@@ -95,16 +95,16 @@
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "run `situation-screen` at $92.73 (Source: prices.py 2026-05-09); Forward IRR uncertain at this price + guide",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "A",
       "state": "PENDING"
     },
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "pattern-match via Cluster A/B fingerprint",
+      "evidence": "33.5/40 STRONG (`_Screening/CapIQ Screeners/2026-03-28_NICE_pattern_match.md`)",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -113,7 +113,7 @@
     {
       "code": "A3",
       "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "audited filing in Filings/",
+      "evidence": "OVERVIEW.md sources NICE 20-F FY2025 (filed 2026-02-26) + FY2024 + FY2021; NOTES.md 2026-04-02 confirms 20-F-depth review",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -122,16 +122,16 @@
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "FY2025 20-F filed 2026-02-26 reviewed in NOTES on 2026-04-02 BUT canonical PDF/MD missing from `Filings/` — procure from EDGAR (accession 0001003935-26-000010), `convert` skill, then re-run `filing-review` to formalize",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "B",
       "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 15 files in Transcripts/; 15 inline-cited",
+      "evidence": "15 transcripts in `Transcripts/`; bulk-transcript-review 2026-03-28. **Augment pending**: ingest Q1 2026 earnings transcript (2026-05-06) and 6-K for factual hygiene before C3/D1/D3.",
       "reason": "",
       "since": "",
       "stage": "B",
@@ -149,55 +149,55 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "evidence": "Q2 2026 earnings catalyst registered in THESIS.md Forward Catalyst Timeline (~2026-08-13, verify); 4 dated catalysts total: Q2 earnings, Q3 earnings, Cognigy exit ARR readout Dec 2026, FY2026 20-F ~2027-Mar. forward_catalyst_label set in YAML; forward_catalyst_date pending date-lock.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "run fair-value-estimation (Bull/Base/Bear PW-FV)",
+      "evidence": "run `fair-value-estimation` post-A1; populate §Scenario Analysis placeholder",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "C",
       "state": "PENDING"
     },
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "DEBATES.md present but only 0 vectors detected — need 6",
+      "evidence": "DEBATES.md present but only 0 vectors detected — run `debate-session`; critical NICE-specific vectors: Consensus Pricing, Competitive Pressure, Mgmt Credibility, Capital Allocation, Demand Durability, Disclosure Quality (gross AI ARR vs net-of-cannibalization)",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "run `market-vs-me-diagnostic` post-D1; consensus PT distribution $119–170, mean ~$146 across 3 published post-Q1 cuts",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "run `conviction-scoring` (V1–V8) → `cross-model-validation` full pipeline (gpt-5.5 xhigh, --batch); +`angels-advocate` if HC band",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-09",
       "stage": "D",
       "state": "PENDING"
     }
   ],
   "recentNotes": [
+    "2026-05-09: Q1 2026 Post-Print Web Research (Source-Once Aggregation)",
     "2026-04-02: FY2025 20-F Review",
     "2026-03-28: Report Review: Comprehensive Company Analysis (Perplexity Deep Research)",
     "2026-03-28: Perplexity Deep Research: Research Gap Resolution",
-    "2026-03-28: Bulk Filing Review: FY2024 and FY2021 20-F Annual Reports",
-    "2026-03-28: Bulk Transcript Review: Cumulative Research Baseline"
+    "2026-03-28: Bulk Filing Review: FY2024 and FY2021 20-F Annual Reports"
   ],
   "variantViews": []
 }

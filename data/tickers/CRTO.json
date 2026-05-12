@@ -1,87 +1,87 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
   "businessBackground": "Criteo S.A. is a global commerce media technology company founded Nov 3, 2005 as a societe par actions simplifiee (S.A.S.) under French law, subsequently converted to a societe anonyme (S.A.). IPO October 2013. The company operates through two reportable segments: Performance Media (demand-side full-funnel commerce advertising, combining legacy Marketing Solutions and Iponweb SSP capabilities) and Retail Media (supply-side monetization platform for retailers).",
   "catalysts": [
-    "~May 2026: Q1 2026 Earnings",
+    "~~2026-05-06~~: ~~Q1 2026 Earnings~~",
+    "~early Aug 2026: Q2 2026 Earnings (NEW NEAR-TERM GATE)",
     "H1 2026: RM headwind trough",
     "Q3 2026: Luxembourg redomiciliation",
     "Q4 2026: Active fund pre-positioning",
     "2026: OpenAI/MCP scaling",
     "Q1 2027: US redomiciliation (target)",
-    "June 2027: Russell reconstitution",
-    "Ongoing: $200M buyback"
+    "June 2027: Russell reconstitution"
   ],
   "dimensions": {
     "V1": {
       "level": "AVERAGE",
       "name": "Fundamentals Trajectory",
-      "rationale": "[COUNCIL: all, gpt-5.4, 2026-04-05] [EPISTEMIC: 2026-04-07] FY2025 EBITDA ATH ($407M), but FY2026 guide is flat-to-+2% CeT, 32-34% EBITDA margin (down from 35%), CapEx ~$190M (nearly doubled), FCF conversion ~40%. CFO explicitly flagged take-rate compression in both PM (social/CTV mix) and RM (large retailer contract + display). This is stabilization, not inflection. **Earnings quality caveat:** FY2025 ATH margins partially flattered by non-recurring tailwinds: (1) server useful-life extension 5→6 years (Jan 2025) reduced depreciation [FACT: 10-Q Q3 2025 Note 1 p.9]; (2) Iponweb LUS roll-off reduced SBC $103M→$58M (-44%); (3) lower CPMs on purchased inventory reduced TAC [FACT: 10-Q Q3 2025 pp.27-28]. Normalized sustainable EBITDA may be $380-400M rather than $407M. Do not anchor on $407M as the repeatable baseline — 3 council agents independently flagged this. Management alignment decent (chairman $423K buying, $200M buyback) but not structurally locked. Score reduced from 4→3: council bear-case take-rate/CapEx warnings persuasive; bull-optionality prevented drop to 2/5.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **HELD at AVERAGE post-Q1.** Trajectory reset from \"trough then H2 growth\" to \"transition year, Q4 growth at best.\" Q1 CeT $250M MET top of guide ✓ + EBITDA $65M ABOVE guide + margin guide held 32-34%, but FY26 CeT guide CUT to LSD decline (-300 bps midpoint), PM CeT -2% CC (78% of CeT segment), return-to-growth pushed Q4'26 (vs prior H2'26), NEW PM US-enterprise weakness (~150 bps; 8% LTM CeT bucket). Mgmt alignment two-step: (1) STRUCTURAL constraints favorable — $371M cash, $889M liquidity, no debt, $190M buyback authorization; French 10% buyback cap removes post Lux Q3'26. (2) ALIGNMENT signals mixed-positive — Chairman van der Kooi 3 open-market buys $423K (Nov'25-Mar'26 at $22.61/$21.52/$17.81), CFO RSU grant Mar'26 conditional on Lux redom; CEO Komasinski grant-sourced ownership only (no open-market purchases); CFO sold 61,347 sh @ $40.36 Nov'24. NOT WEAK because credible path to FY27 inflection still exists (RM lap Nov'26, OpenAI scaling, GO ramp at 2/3 of US small clients). NOT STRONG because PM (cash engine) just weakened. Council bear-case Model A 13.1% Compound-Failure Tail probability + epistemic-audit DRIFT detection (Q1 trough/H2 → Q4 recovery + 2027 reacceleration) keep score capped. (Sources: 8-K 2026-05-06; Q1'26 Prepared Remarks; OVERVIEW.md FY26 Outlook)",
       "score": 3,
       "type": null
     },
     "V2": {
       "level": "EXTREME",
       "name": "Valuation Mismatch",
-      "rationale": "Market prices CRTO at ~1.56x EV/EBITDA (~$637M EV on $407M EBITDA) — massive discount to 12-15x peer band. Price $18.50 vs council FV $50.5 = +173% upside; vs Claude FV $74.9 = +305%. Multi-method confirms: P/E at 15x peer-median = $40.8 (+120%); Owner Earnings cap @ 8% = $60.6 (+228%); trailing FCF yield 33%. Direction overwhelmingly clear. Score capped at 5 (not EXTREME) because vault documents conflicting EV/EBITDA figures (1.2x, 1.56x, 2.5x) and MGNI peer multiples (~6x, 18x, 22.2x) — valuation GAP is massive but precision is weaker.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **UPGRADE STRONG → EXTREME post-Q1.** At $15.64 (Source: prices.py 2026-05-07; -22% intraday post-Q1 reaction), EV $426M (mcap $797M − $371M net cash); **EV/TTM EBITDA 1.12× vs peer median 15× = 93% discount**. PW-FV $69.72 = **+346%**; bear FV $32.92 = +110% (no scenario-set downside); Owner Earnings cap @ 8% = $47.08 = +201%; Generalist FV (peer median × TTM, thesis-independent) $119.10 = **+662%**. Multi-method stress test: weakest reasonable method (4× bear) still +110% upside. Council market-inefficiency rated EXTREME (\"market is pricing the thesis at negative value... mismatch robust across every reasonable parameterization\"). Council fair-value PW-FV $68.8 (1.3% divergence vs Claude $69.72 = NOT material). Mismatch DEEPENED post-Q1: prior $18.50 anchor +173-305% → current $15.64 +335-602%.",
       "score": 5,
       "type": null
     },
     "V3": {
-      "level": "EXTREME",
+      "level": "STRONG",
       "name": "Identifiable Mispricing Reason",
-      "rationale": "All 5 drawdown causes classified TRANSIENT (see table). Mispricing reasons are specific and verifiable: (1) RM client losses misread as secular trend (actually 2 idiosyncratic clients, quantified headwind); (2) French domicile blocking institutional/index access (being addressed, 15-month timeline); (3) sub-$1B market cap triggering mandate-driven forced selling (Cadian -50%, Voya -100%, Lord Abbett -100%). Self-correcting mechanism: redomiciliation + Russell inclusion + buyback mechanically address barriers. **[2026-04-16]:** Prior 4/5 cap (RM-PM flywheel \"credible structural alternative\") removed — flywheel COUNTERED in DEBATES.md: PM CeT grew every year through RM headwind (FY2024-2025); largest lost client's data integration intact under multiyear contract; Shopper Graph DAU 685M→720M; OpenAI sole-partner selection validates data quality. All causes TRANSIENT with active remediation and dated self-correcting mechanism. (Sources: DEBATES.md 2026-04-16 counter; Q1-Q4 2025 Earnings Calls; 10-K FY2021/FY2025; Criteo PR Mar 2, 2026)",
-      "score": 5,
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **DOWNGRADE 5 → 4 post-Q1.** Cannot be EXTREME because new V1 PM US-enterprise client weakness (~150 bps of FY26 guide cut, 8% LTM CeT bucket) is TRANSIENT-UNPROVEN; structural if repeated. Market's bear case post-Q1 is now articulable + partially valid: \"structurally challenged ad-tech intermediary; FY25 was peak; FY26 guide cut signals further deterioration of PM (cash engine) via in-housing + take-rate compression; -22% reaction is rational repricing.\" Drawdown Diagnosis (4 causes): B2/B1 RM scope reductions TRANSIENT with structural-watch trigger; **NEW V1/D4 PM US-enterprise weakness TRANSIENT-UNPROVEN** (resolution Q2-Q4'26; reclassify STRUCTURAL if PM declines >10% for 2Q or further guide cuts); A1/A2 domicile/index STRUCTURAL but addressed (Lux Q3'26 ✓, US Q1'27, Russell Jun'27); C1/B3 forced selling + category narrative TRANSIENT plus narrative. Mispricing mechanism still time-bounded but with one unproven element. (Sources: 8-K 2026-05-06; Q1'26 Prepared Remarks; Investor Presentation slide 23; CHANGELOG.md 2026-05-07)",
+      "score": 4,
       "type": null
     },
     "V4": {
       "level": "STRONG",
       "name": "Downside Protection",
-      "rationale": "Net cash $389M on ~$940M market cap = ~41% of market cap backed by cash. Zero debt. ~$475M undrawn facilities. Total liquidity ~$891M. FY2025 FCF $210M. No covenant risk, no refinancing risk. BUT: council Model A thesis-failure probability 11-15% (permanent capital loss) and 35-45% dead-money/value-trap probability. Balance sheet is fortress but operating franchise can deteriorate without triggering distress. Score unchanged at 4.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **HELD STRONG.** $371M cash + securities, $889M total liquidity, zero LT debt; at $15.64 mcap $797M, **net cash = 47% mcap (BETTER than prior 41%)**. $190M buyback authorization remaining; French 10% cap removes post Lux Q3'26. Lux dissenters' rights: EUR 17.94 floor / 10% cap / EUR 94.25M aggregate. Sub-archetype A \"Balance Sheet as Weapon\" applies; A6 leverage framework does not apply (net-cash). NOT EXTREME because: (a) cash floor $371M < mcap $797M (no hard-asset-floor exceeds price); (b) **LESSONS A21 applies** — council bear-case stress $10-18 (Model A 13.1%, range 10-18%) is materially wider than formal bear $32.92; asymmetry should NOT be treated as hard floor; (c) compound fragility risk (FP-7 FULL MATCH from bear-case agent) — correlated PM/RM/CapEx/take-rate erosion. 7-mode pre-mortem: PM structural decline (35-50% impairment); CapEx structural reset >$150M FY27 (15-30%); 3rd RM loss (20-30% + thesis reclassification); OpenAI commoditization (5-15% optionality erosion); buyback consumes cash into declining business (10-20%); litigation tail (2-10%); redom executes but fails to rerate (5-15%).",
       "score": 4,
       "type": null
     },
     "V5": {
       "level": "AVERAGE",
       "name": "Thesis Simplicity",
-      "rationale": "[COUNCIL: all, gpt-5.4, 2026-04-05] Two top-level conditions: (1) $400M+ EBITDA durable; (2) multiple re-rates from ~1.4x to 3x+. But Condition 1 hides correlated sub-risks that bear-case agent clearly mapped: RM retailer-control pressure, PM targeting/take-rate quality, CapEx normalization, and unresolved data-rights dependency. Condition 2 depends on 15-month redomiciliation/index chain. Neither condition secure enough for 4/5. Score reduced from 4→3.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **HELD AVERAGE.** 3 independent required conditions per council: (1) EBITDA/owner-earnings durability — **AT RISK** (Q1 print delivered, but FY26 EBITDA implied ~$382M vs FY25 $407M; PM weakness needs Q2-Q4 proof); (2) CapEx/FCF normalization — **UNCONFIRMED** (FY27 disclosure pending; <$120M = cyclical confirmation, >$150M = structural); (3) Rerating mechanism — **AT RISK** (Lux Q3'26 + buyback + Russell Jun'27 mechanical IF US Q1'27 hits Apr'27 rank day). NOT WEAK because base case doesn't require ALL upside paths to fire — any one of redom/buyback/M&A/visible recovery can drive modest multiple. NOT STRONG because Q1 guide cut demonstrated H2 return-to-growth slipped to Q4; correlated-cluster bear council framing applies.",
       "score": 3,
       "type": null
     },
     "V6": {
       "level": "EXTREME",
       "name": "Upside Optionality",
-      "rationale": "8+ independent paths with early evidence: (1) RM headwind trough → growth reacceleration; (2) OpenAI ChatGPT ad scaling; (3) MCP adoption by other LLMs; (4) Russell index inclusion; (5) buyback retiring shares at trough; (6) M&A exit; (7) Commerce GO! self-service at 80%+ margin; (8) SA360 search-to-shelf budget unlock (600% ROAS, ~2 growth points guided) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04]; (9) auction-based display wallet-share expansion (49 retailers, 21% of on-site spend) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04]; (10) agency holdco standardization (38% of RM, 3/4 products) [COUNCIL: bull-optionality, gpt-5.4, 2026-04-04].",
+      "rationale": "[COUNCIL: bull-optionality, gpt-5.5, 2026-05-07] **HELD EXTREME with CONDITIONAL flag.** 11+ independent paths with early evidence. Bull-optionality NEW finding: **off-site RM + SSP makes retailer losses non-binary** (probability 0.45, market awareness INVISIBLE; Costco contradiction — Moloco won onsite, but Q4'25 disclosed Criteo 7M-shopper / 2,000% ROAS off-site Costco activation). 7 EXPANDED paths: retailer-owned AI assistants + Page Intelligence; organic API monetization; GO ARPU expansion (cross-channel 3× spend; discovery 1/3 of budgets); Commerce Grid hidden turnaround (AdTech Services +7%); owned infra as moat; gross media-spend yield leverage ($1B+ Q1); Lux dissenters' event-arb. Plus: 1,000+ OpenAI brands + 2× CV + AU/CA/NZ; MCP via dentsu agent; 60+ retailers auction display; $190M buyback at trough; Lux Q3'26; Russell Jun'27. **CONDITIONAL flag**: V6 5/5 → 3/5 if 2nd OpenAI AdTech partner signed within Q3'26 (May press release silent on \"first AdTech partner\" language).",
       "score": 5,
       "type": null
     },
     "V7": {
       "level": "AVERAGE",
       "name": "Evidence Quality",
-      "rationale": "Core thesis rests on audited 10-K data (4 annual + 4 quarterly filings reviewed). 18 transcripts reviewed. EBITDA, OCF, balance sheet, CeT trajectory are all [FACT]-labeled from filings. Score reduced from 4→3 because critical gaps ARE thesis-critical: OpenAI revenue-share terms/exclusivity undisclosed, Shopper Graph data-source decomposition unanswered (key to RM-PM flywheel risk), FY2027 capex normalization unknown, MGNI peer-multiple unreconciled (affects V2 precision). These require resolution before upgrading.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07; council rated 4/5 STRONG; Claude held 3/5 per strict rubric] **HELD AVERAGE.** RC 11/11; 19 transcripts + 9 filings + Q1 2026 8-K + Investor Presentation + factsheet + Investor FAQ + OpenAI press release processed. Q1 trough delivery RESOLVED near-term DATA GAP. BUT 6 critical forward-looking DATA GAPs persist + 2 NEW post-Q1: (1) PM US-enterprise client identity (NEW); (2) OpenAI exclusivity status (NEW — May press release silent); (3) FY27 CapEx normalization; (4) OpenAI revenue economics; (5) Shopper Graph data-source decomposition; (6) MGNI peer-multiple reconcile; (7) GO CeT contribution; (8) take-rate trajectory. **STRONG requires \"No critical DATA GAPs\"** per rubric — not satisfied. Per epistemic-audit, RC 11/11 partly reflects label management (HIGH_PRIORITY vs BLOCKING) — flagged CEREMONIAL. LESSONS A24: high research confidence ≠ asymmetric mispricing.",
       "score": 3,
-      "type": "fact"
+      "type": null
     },
     "V8": {
       "level": "STRONG",
       "name": "Catalyst Clarity",
-      "rationale": "7 dated catalysts with estimated impact, clear sequencing. Key dates: Q1 2026 earnings (~May 2026), Luxembourg (Q3 2026), Russell (June 2027). All are specific and observable. Score 4 (not 5) because the full re-rating requires 15 months and 7 sequential events — timing uncertainty on US redomiciliation (must hit April 2027 rank day) could delay Russell by a full year.",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **HELD STRONG.** Q1'26 catalyst FIRED with mixed outcome (CeT $250M MET top of guide ✓ but FY26 guide cut). Replaced by dated chain: Q2 ~early Aug 2026 (CeT $260-264M guide); FY27 CapEx Q4'26-Q1'27 (resolves cyclical/structural debate); Q4'26 return-to-growth; Lux Q3'26 ✓ confirmed; US Q1'27 redom; Russell Jun'27 (mechanical IF US redom hits Apr'27 rank day). Self-correction tier: mostly EVIDENTIAL (preconditions in motion); Russell ARITHMETIC IF US redom eligible. NOT EXTREME because Q1 outcome mixed (cuts EXTREME's \"ARITHMETIC self-correction\" claim) + chain length ~14 months + return-to-growth pushed Q4'26. LESSONS A22 + A31 satisfied (timeline-matched, dated catalogue).",
       "score": 4,
       "type": null
     }
   },
   "fairValue": {
-    "baseCaseFV": "$70.0",
-    "bearCaseFV": "$32.9",
-    "bullCaseFV": "$111.3",
-    "lastUpdated": "2026-03-31",
-    "methodology": "EV/EBITDA Peer-Anchored",
-    "probWeightedFV": "$74.9/share",
-    "thesisType": "Type 2 (Turnaround / Margin Inflection) + Type 5 (Event-Driven)."
+    "baseCaseFV": "50%",
+    "bearCaseFV": "25%",
+    "bullCaseFV": "25%",
+    "lastUpdated": null,
+    "methodology": "EV/EBITDA Peer-Anchored — REFRESHED 2026-05-07",
+    "probWeightedFV": "$69.72/share",
+    "thesisType": "(UNCHANGED)"
   },
   "financials": {
     "cash": "$342",
@@ -159,7 +159,7 @@
       "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
-    "staleDays": 33,
+    "staleDays": 39,
     "trendLog": [
       {
         "action": "No action needed",
@@ -192,6 +192,14 @@
         "indicator": "Short Interest (#10)",
         "new": "1.07M shares / 2.12% float (Apr 14, 2026). +12.8% MoM (from 948,594). Days to cover 1.57-2.23. [FACT: Finviz, StockAnalysis.com, Apr 14 2026]",
         "old": "DATA GAP"
+      },
+      {
+        "action": "Position size: HOLD pending formal scoring rerun.",
+        "assessment": "Two items elevated to highest WATCH: (#2) PM CeT growth and (#6) FY27 CapEx normalization. No EXIT triggers fired.",
+        "date": "2026-05-07",
+        "indicator": "All structural indicators",
+        "new": "**Q1 2026 results processed.** #1 CeT $250M MET top of guide ✓ (trough confirmed); #2 PM CeT -2% CC moves to ⚠ ELEVATED WATCH (US Large Commerce Growth = 8% CeT bucket per slide 23 quantifies new bear vector); #3 retention 88% incl. largest / 110% ex-largest ✓; #4 $889M liquidity / $371M cash+sec ✓ FORTRESS; #5 TTM EBITDA = $380M ($407M − $92M + $65M); #6 CapEx framing demoted to mgmt-asserted hypothesis pending FY27 disclosure (Rule §17 analogue); #7 OpenAI 1,000+ brands / ~2× CV / AU/CA/NZ — V6 5/5 CONDITIONAL on exclusivity (May press release silent on \"first AdTech partner\"); #8 weighted-avg diluted 50.97M (-11% YoY) ✓ AHEAD; #9 Lux Q3'26 confirmed ✓. **No structural threshold breach.** FY26 guide cut flat-to-+2% CC → low-single-digit decline (~-300 bps) is documented in CHANGELOG MATERIAL entry. Triggers conviction-scoring rerun (V1↓ 3→2-3, V3↓ 5→4, V5↓ 3→2, V6↑ conditional, V8↓ 4→3.5-4) + MIA refresh + fair-value-estimation refresh + scenario probability recompute.",
+        "old": "(pre-Q1'26 baseline)"
       }
     ]
   },
@@ -328,7 +336,7 @@
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "fair-value-estimation 2026-05-07: PW-FV $69.72 (Bull/Base/Bear $109.78/$68.09/$32.92 at 25/50/25)",
       "reason": "",
       "since": "",
       "stage": "C",
@@ -355,7 +363,7 @@
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "evidence": "conviction-scoring 2026-05-07 Full Assessment + cross-model.py council 2026-05-07 (5 agents + epistemic-audit auto-fired); band HIGH_CONVICTION via §12 Path 2; bear-case + epistemic-audit serving as angels-advocate equivalent for adversarial closure",
       "reason": "",
       "since": "",
       "stage": "D",
@@ -363,32 +371,31 @@
     }
   ],
   "recentNotes": [
+    "2026-05-11: Report Review: CRTO Weekly Intelligence Update (May 5–11, 2026)",
+    "2026-05-08: Report Review: CRTO Weekly Intelligence Update (May 1–8, 2026)",
+    "2026-05-08: Q1 2026 Earnings Call Transcript Review (Q&A Only — Incremental to 2026-05-07 Prepared-Remarks Extract)",
     "2026-05-07: Q1 2026 Earnings Review: 8-K + Prepared Remarks + Investor Presentation + Factsheet + Investor FAQ + OpenAI May Press...",
-    "2026-04-30: Report Review: CRTO Weekly Intelligence Update (23–30 Apr 2026)",
-    "2026-04-28: Report Review: VOW-CRTO Daily Intelligence Brief (28 Apr — T-1 to GOOG/META Q1, T-8 to CRTO Q1)",
-    "2026-04-27: Report Review: CRTO AI Market Development — 1-Month Progress Report (Late March – Late April 2026)",
-    "2026-04-27: Report Review: VOW & CRTO Daily Intelligence Briefing (CRTO half)"
+    "2026-04-30: Report Review: CRTO Weekly Intelligence Update (23–30 Apr 2026)"
   ],
   "scenarios": [
     {
       "name": "Bull",
-      "price": "$111.3",
-      "prob": 30
+      "price": "25%",
+      "prob": 25
     },
     {
       "name": "Base",
-      "price": "$70.0",
+      "price": "50%",
       "prob": 50
     },
     {
       "name": "Bear",
-      "price": "$32.9",
-      "prob": 20
+      "price": "25%",
+      "prob": 25
     }
   ],
   "valuation": {
-    "lastUpdated": "2026-03-31",
-    "methodology": "EV/EBITDA Peer-Anchored",
+    "methodology": "EV/EBITDA Peer-Anchored — REFRESHED 2026-05-07",
     "peers": [
       {
         "multiple": "15x",
@@ -417,29 +424,27 @@
         {
           "label": "EBITDA $320M",
           "vals": [
-            "$33",
-            "$54",
-            "$75"
+            "$34.68",
+            "$55.11",
+            "$75.53"
           ]
         },
         {
-          "label": "EBITDA $420M",
+          "label": "EBITDA $400M",
           "vals": [
-            "$40",
-            "$70",
-            "$97"
+            "$42.55  $68.09  $93.62"
           ]
         },
         {
-          "label": "EBITDA $472M",
+          "label": "EBITDA $450M",
           "vals": [
-            "$44",
-            "$78",
-            "$111"
+            "$46.81",
+            "$75.53",
+            "$104.26"
           ]
         }
       ],
-      "title": "EBITDA × Multiple ($/share)"
+      "title": "EBITDA × Multiple ($/share, holding net cash $400M / shares 47M)"
     }
   },
   "variantViews": [

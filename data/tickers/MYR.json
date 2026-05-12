@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -132,7 +132,7 @@
       "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MYR/INDICATORS.md",
-    "staleDays": 16,
+    "staleDays": 1,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -186,13 +186,13 @@
       },
       {
         "class": "STRUCTURAL",
-        "current": "26.77% at 1 July 2025 (Form 603/604); creep provisions allow +3%/6mo. **[DATA GAP] No new Form 603/604/605 in 14-21 Apr window; no ASX confirmation of formal Lew board commencement sighted.**",
-        "direction": "↕ Watch (creep window open; **board-join confirmation overdue vs AGM target Apr 2026**)",
-        "lastUpdated": "2026-04-21",
+        "current": "26.77% at 1 July 2025 (Form 603/604); creep provisions allow +3%/6mo. **[DATA GAP] No new Form 603/604/605 in 5–11 May 2026 window; no ASX Appendix 3X for Solomon Lew commencement sighted as of 2026-05-12 = ~12 days overdue vs April 2026 commencement target (shareholder-approved at Dec 2025 FY25 AGM — NOT a separate April-AGM event, which does not exist publicly).**",
+        "direction": "↕ Watch (creep window open; board-join overdue vs April 2026 target; 30 Jun 2026 escalation gate ~7 weeks away)",
+        "lastUpdated": "2026-05-12",
         "name": "Lew Group (Premier Investments + associates) ownership (% of issued capital)",
         "num": 6,
-        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B8) + ASX Form 604 / MYR FY25 AR Directors' Report",
-        "threshold": "Net seller during 2026 = REDUCE to 2-3%; any on-market buy post-Apr-2026 board join = up-size gate to 6-7%"
+        "source": "(Source: 2026-04-21 baseline + 2026-05-11 weekly + Notice of AGM 2025 PDF, ASX 10 Nov 2025; Inside Retail Dec 2025 secondary)",
+        "threshold": "Net seller during 2026 = REDUCE to 2-3%; any on-market buy post-Apr-2026 board join = up-size gate to 6-7%; **board-join slip past 30 Jun 2026 = escalation gate fires (V8 conditional rescore per CHANGELOG 2026-05-01)**"
       },
       {
         "class": "STRUCTURAL",
@@ -206,12 +206,12 @@
       },
       {
         "class": "STRUCTURAL",
-        "current": "**5.39% (13 Apr 2026) — up ~0.95pp from ~4.44% at 31 Mar 2026 (~30d). [FACT]**",
-        "direction": "↑ **BREACH — >5% absolute threshold crossed; 30d delta +0.95pp (<2x, partial)**",
-        "lastUpdated": "2026-04-21",
+        "current": "**6.49% (1 May 2026 ASIC) — up +1.51pp over prior 30 days. New 52-week high (range 0.20%–6.49%). [FACT]** Prior readings: 4.44% (31 Mar) → 5.39% (13 Apr) → 6.11% (22 Apr) → 6.49% (1 May).",
+        "direction": "↑ **BREACH SUSTAINED — >5% absolute threshold crossed since 13 Apr; 30d delta +1.51pp (<2x — full 2x trigger would require 4.98%→9.96%, partial only). New 52w high.**",
+        "lastUpdated": "2026-05-12",
         "name": "Short interest (% of float)",
         "num": 8,
-        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B6, ShortMan.com.au / ASIC, 13 Apr 2026; Fintel at 31 Mar 2026)",
+        "source": "(Source: ShortInterest.au, sourced from ASIC daily short-position reports, accessed 2026-05-12; T+4 data for trade dates 5-9 May 2026 publishes 13-15 May 2026)",
         "threshold": ">5% absolute or >2x increase in 30d (Rule 10 standard)"
       },
       {
@@ -275,6 +275,46 @@
         "indicator": "#14 MYER one partners",
         "new": "\"+News Corp / Glamour Australia multi-year exclusive beauty (mid-2026 launch, Gen Z/Millennial, social-first)\"",
         "old": "\"5.1M, JD Sports+CBA+The Dom\""
+      },
+      {
+        "action": "No new CHANGELOG entry (CHANGELOG 2026-04-21 already covers the >5% structural breach). Continue weekly monitoring; route to debate-session if 2x trigger fires OR if 8%+ absolute.",
+        "assessment": "**Breach sustained, not escalated to 2x trigger.** Trajectory ~+0.34pp/week; at current rate full 2x trigger fires ~July 2026. **[INFERENCE]** No new structural driver identified — continuation of post-Perpetual-exit / Lew-board-overdue / RBA-cycle sentiment trade. Aggregate short-build is now ~+2.0pp over ~6 weeks (4.44% 31 Mar → 6.49% 1 May).",
+        "date": "2026-05-12",
+        "indicator": "#8 Short Interest",
+        "new": "**6.49% (1 May 2026 ASIC); new 52-week high; +1.51pp over 30 days.** Intermediate prints: 6.11% (22 Apr ASIC) → 6.49% (1 May ASIC).",
+        "old": "5.39% (13 Apr 2026) — breach baseline"
+      },
+      {
+        "action": "No action this week; monitor weekly. New QUESTIONS entry routed.",
+        "assessment": "**[INFERENCE]** Slip risk emerging — verify via myer.com.au seller portal. If no go-live by 31 May 2026, escalate; if no go-live by 30 Jun 2026, integration-execution narrative takes a hit.",
+        "date": "2026-05-12",
+        "indicator": "#9 AB Integration (Mirakl)",
+        "new": "**No public go-live confirmation in 5-11 May 2026 window** despite May 2026 target",
+        "old": "\"Mirakl May 2026 confirmed live w/ Samsung partner\""
+      },
+      {
+        "action": "No action this week.",
+        "assessment": "Anchor refined; no value change. 30 Jun 2026 escalation gate unchanged (V8 conditional rescore per CHANGELOG 2026-05-01).",
+        "date": "2026-05-12",
+        "indicator": "#6 Lew Timing",
+        "new": "**\"April 2026 AGM\" reference clarified per 2026-05-11 weekly: no publicly-scheduled April 2026 AGM exists. Solomon Lew commencement was shareholder-approved at FY25 AGM 11 Dec 2025; effective commencement target April 2026 (Appendix 3X pending; ~12 days overdue).**",
+        "old": "\"26.77% / board-join overdue vs AGM target Apr 2026\""
+      },
+      {
+        "action": "No structural breach. Monitor April MHSI 28 May 2026 release.",
+        "assessment": "Cyclical, mixed. Monthly bounce (+1.3%) positive; Q1 volume softening is the new watch-signal. Aggregate consumer OK; segment-volume softening matters for Myer specifically.",
+        "date": "2026-05-12",
+        "indicator": "#13 MHSI cyclical",
+        "new": "**March 2026 MHSI (4 May release): clothing/footwear +1.3% MoM; Q1 2026 chain-volume -1.0% QoQ (first contraction after Q4 +3.5%).**",
+        "old": "\"Feb 2026: Clothing/footwear +4.93% YoY\""
+      },
+      {
+        "action": "No structural breach. Flag for next debate-session if RBA continues hiking.",
+        "assessment": "**[INFERENCE]** Cumulative effect of three 2026 hikes deepens V4 cost-of-capital pressure and discretionary-demand headwind. Inside V4 bear-case envelope (which assumes -5%+ comps recession); not yet activating.",
+        "date": "2026-05-12",
+        "indicator": "RBA macro context",
+        "new": "**RBA hiked +25bps to 4.35% on 5 May 2026 (3rd 2026 hike; 8-1 vote). Consumer discretionary weakest ASX 200 sector that day.**",
+        "old": "\"RBA cash rate 4.10% pre-2026-05-05\""
       }
     ]
   },
@@ -441,11 +481,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-12: Report Review: MYR Weekly Intelligence Update (5–11 May 2026)",
+    "2026-05-08: Report Review: MYR Weekly Intelligence Update (1–8 May 2026)",
     "2026-04-30: Report Review: MYR Weekly Intelligence Update (23–30 Apr 2026)",
     "2026-04-21: Weekly Leading-Indicator Scan (First post-entry refresh)",
-    "2026-04-20: CapIQ Pro Data Pull (Peer Multiples + Consensus)",
-    "2026-04-20: Bulk Transcript Review: 3 Earnings Calls (H1 FY25 + FY25 + 1H FY26)",
-    "2026-04-20: 1H FY26 Results Call (24 Mar 2026)"
+    "2026-04-20: CapIQ Pro Data Pull (Peer Multiples + Consensus)"
   ],
   "scenarios": [
     {

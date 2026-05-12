@@ -1,20 +1,20 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-06T17:32:20Z",
-    "sourceFingerprint": "7227fb92d31c27c5",
+    "generatedAt": "2026-05-12T19:55:22Z",
+    "sourceFingerprint": "f87e4ca9ed2af320",
     "ticker": "HANWHA",
     "version": "2.0.0"
   },
   "businessBackground": "Hanwha Corporation (KOSE:A000880) is the listed parent of the Hanwha Group, founded 1952, headquartered Seoul. Operates a hybrid structure of (a) defense/explosives + chemicals/construction operating segments at the parent level, and (b) holding-company stakes in 4 listed Korean subsidiaries (Hanwha Aerospace, Hanwha Solutions, Hanwha Ocean, Hanwha Systems) plus unlisted subsidiaries including Hanwha Energy. 3,493 parent-level employees per CapIQ (2026-05-01).",
   "catalysts": [
-    "May-6-2026: Q1 2026 Earnings Call (8:01 PM ET)",
-    "Jun-15-2026: EGM vote on spin-off plan",
-    "Jun-30-2026: Spin-off record date",
-    "Jul-1-2026: Spin-off effective date (분할기일) — Hanwha Machinery & Service Holdings entity established",
-    "Jul-24-2026: SpinCo re-listing date (재상장일) on KRX (Source: investchosun 2026-01-14, smartbizn 2026-01-14)",
-    "~Jul-Aug 2026: Korean Commercial Act audit-committee aggregate 3% voting cap effective for large companies (HC qualif...",
-    "Aug–Dec 2026: Post-spin institutional rebalancing (forced-seller dynamics on SpinCo holders); RemainCo single-thesis ...",
-    "Mar 2027: AGM (next regular cycle) — first AGM under hybrid format"
+    "~~May-6-2026~~: Q1 2026 Earnings Call ✅ DONE — standalone OP KRW 189B (+24.81% YoY); BEAT",
+    "~Late May 2026: HC Board Meeting — revise 분할계획서 + reconfirm full schedule (Source: m-i.kr / IB Tomato 2026-05-08)",
+    "May-29-2026: REVISED Shareholder Record Date for spin-off (was 4/23/2026) (Source: m-i.kr 2026-05-08)",
+    "~~Jun-15-2026~~: ~~EGM vote on spin-off plan~~ — POSTPONED to H2 2026 (TBD post late-May board)",
+    "~~Jun-30-2026~~: ~~Spin-off record date~~ — superseded by revised 5/29/2026 record date",
+    "~~Jul-1-2026~~: ~~Spin-off effective date~~ — POSTPONED to H2 2026 (TBD; market consensus likely Aug-Sep 2026)",
+    "~~Jul-24-2026~~: ~~SpinCo re-listing date~~ — POSTPONED to H2 2026 (TBD; likely Sep-Oct 2026)",
+    "~Jul-Aug 2026: Korean Commercial Act audit-committee aggregate 3% voting cap effective for large companies (HC qualif..."
   ],
   "fairValue": {
     "baseCaseFV": "16,188",
@@ -24,6 +24,179 @@
     "methodology": "Type 3 SOTP + Type 5 Spin-Off Overlay",
     "probWeightedFV": "upside:",
     "thesisType": "Type 3 SOTP (primary) + Type 5 Event-Driven (overlay) + Type 1 Cyclical (HA defense supercycle underlay)."
+  },
+  "indicators": {
+    "blindspots": [
+      "**HD Hyundai 2017–2024 IR materials (holdco-discount narrowing trajectory)** — DEBATES Vector 1 OPEN pending primary-source pull. What was HD's pre/post-restructuring discount path? Categorization of failed peers (Posco/LG/Samsung C&T) as \"structurally disconfirmed\" is judgment, not documented. Risk: HC is precedent-bound if HD was unusual, not representative.",
+      "**Hanwha Energy IPO valuation + timing** — Initiated 3/11/2025 but no public price target or close date disclosed. HC residual minority stake carrying value unknown ($200–500M assumed). If IPO underperforms or delays >12 months, the external price-discovery anchor on Hanwha Energy's 22.16% HC block weakens.",
+      "**Korean reform enforcement credibility post-1/1/2027** — Commercial Act audit-cap + director-duty extension are on books, but enforcement by Korean courts / FSC is untested. If enforcement is \"procedural theater\" historically, the structural-reform premium compresses.",
+      "**Parent cash-generation trajectory post-spin** — Defense/explosives/construction operating margin durability at parent-only level is largely opaque (consolidated EBIT $2.92B; parent-only carve unknown). If parent standalone OP <KRW 300B, forward dividend (KRW 1,000) sustainability is pressure point.",
+      "**SpinCo Day-1 forced-seller dynamics** — Korean ETFs / index funds may be mandate-blocked from holding SpinCo on 7/24 listing date. Magnitude of forced-selling dislocation unknown — could create attractive SpinCo entry or distort RemainCo re-rating in first 30 days."
+    ],
+    "cyclical": [
+      {
+        "class": "CYCLICAL",
+        "context": "Single largest correlated risk — HA peak-cycle drawdown would compress SOTP. Monitor HA quarterly earnings + global defense order books + Korea export pipeline.",
+        "current": "**HA = 71% of listed-stake NAV.** Q1 2026 EPS +9.4% beat; global defense peer multiples 12-15x EV/EBITDA (cycle peak). Order book intact.",
+        "lastUpdated": "2026-05-13",
+        "name": "Hanwha Aerospace (HA) defense supercycle durability",
+        "num": 8
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Affects parent cash flow visibility but NOT SOTP (mark-to-market on 49.98% stake; 2.5T KRW book value already in NAV). Remote from core thesis.",
+        "current": "Q3 2025 estimated distributable income ~−KRW 2T; surrender-reserve strain. **Dividends to HC parent UNLIKELY in 2026.**",
+        "lastUpdated": "2026-05-08",
+        "name": "Hanwha Life dividend upstream capacity",
+        "num": 9
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Validates FY2025 operating-loss position was trough. Monitor quarterly OP trajectory. Rights offering ~KRW 700B sequencing is separate noise item.",
+        "current": "**Q1 2026 OP +205% YoY** (all divisions profitable; chemicals bottom-of-cycle confirmed)",
+        "lastUpdated": "2026-05-08",
+        "name": "Hanwha Solutions profitability recovery",
+        "num": 10
+      },
+      {
+        "class": "CYCLICAL",
+        "context": "Capital actions validate management confidence in post-spin cash flow. Slippage / cancellation of these = forward soft signal of parent OP stress.",
+        "current": "Forward dividend KRW 1,000/sh (+25% vs FY2024 KRW 800); share cancellation 5.94% (4.458M shares); preferred buyback KRW 456.2B announced",
+        "lastUpdated": "2026-05-04",
+        "name": "Parent-only capital-allocation discipline",
+        "num": 11
+      }
+    ],
+    "noiseFilter": [
+      "**Treasury-share-cancellation (5.94%) execution-timing slip** — Forward action tied to spin-off execution. 4-6 week delay is mechanical, not thesis-altering. Per-share EPS accretion remains intact.",
+      "**Korea Zinc cross-shareholding ownership changes** — HC may sell 7.75% Korea Zinc stake to fund Hanwha Solutions ~KRW 700B rights offering. Related-party cross-holding simplification is governance-positive; sale price is market-driven, not fundamental.",
+      "**Q1 2026 effective tax rate / Income-from-Affiliates noise** — FY2025 effective tax 0.94% anomaly + Income-from-Affiliates −82% YoY are one-time items unrelated to core holdco-discount thesis. Defer investigation to FY2026 Q2 DART 사업보고서; thesis does not hinge on parent-only EBITDA.",
+      "**Hanwha Life dividend non-payment** — Insurance sub under capital constraints; affects parent cash-flow visibility but NOT listed-stake NAV (mark-to-market on the 49.98% Hanwha Life stake; book value already captured in SOTP). Remote from core thesis."
+    ],
+    "sourceFile": "Themes/Korea Governance Reform/Tickers/HANWHA/INDICATORS.md",
+    "staleDays": 0,
+    "structural": [
+      {
+        "class": "STRUCTURAL",
+        "current": "**KRW 4,657.4B (~$3.16B) FY2025** — sits 93% to Bear scenario assumption (KRW 5.0T cap)",
+        "direction": "→ Stable; near Bear cap",
+        "lastUpdated": "2026-05-04",
+        "name": "Parent-only net debt",
+        "num": 1,
+        "source": "Hankyung Magazine 2026-03-27 (THESIS.md Verified Anchors)",
+        "threshold": ">KRW 5.4T = exceeds Bear scenario margin (compresses Approach C FV); pre-defined Falsification #4 trigger"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**RemainCo 76.35% / SpinCo 23.65%; 1.1826390 SpinCo per HC share** — small NAV impact (~0.3% per-share NAV; ~9.9% pre-spin price impact mechanical)",
+        "direction": "→ RESOLVED — confirms SpinCo is structural cleanup, not major NAV event",
+        "lastUpdated": "2026-05-04",
+        "name": "§530-9 spin share-allocation ratio",
+        "num": 2,
+        "source": "investchosun + smartbizn 2026-01-14",
+        "threshold": "RemainCo allocation drops <70% = dilutive to HC SOTP"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**$23,030.5M (KRW 33.9T at 1,473 FX)** — 11 holdings; Hanwha Aerospace 71% dominant ($16.4B)",
+        "direction": "↑ Major upward revision via CapIQ 2026-05-02 (was KRW 15.2T pre-CapIQ)",
+        "lastUpdated": "2026-05-02",
+        "name": "Listed-stake gross NAV (HC SOTP)",
+        "num": 3,
+        "source": "CapIQ Public Holdings 2026-05-02; OVERVIEW.md SOTP",
+        "threshold": "<$18B sustained 30+ days = structural re-rating event (defense supercycle break OR Korean discount widening)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**74.5%** ($5,879M mcap / $23,031M NAV)",
+        "direction": "↓ Widened from prior 70%+ estimate on verified NAV — deeper mispricing",
+        "lastUpdated": "2026-05-02",
+        "name": "Implied holdco discount",
+        "num": 4,
+        "source": "OVERVIEW.md Key Metrics",
+        "threshold": "Discount stays flat >12mo post 7/1/2026 spin-off = governance-reform thesis fails to monetize; <50% = thesis fully priced (trim trigger)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**22.16% Hanwha Energy + family direct = 42.67% effective**",
+        "direction": "↑ Insider accumulation at 0.25x P/B 18mo ago = high-conviction signal",
+        "lastUpdated": "2026-05-04",
+        "name": "Family / Hanwha Energy effective control",
+        "num": 5,
+        "source": "KED Global 2025-12-16; Businesskorea 2024-11-06 (DEBATES Vector 2)",
+        "threshold": "<30% effective = governance discipline at risk OR hostile-block emerges = thesis premise breaks"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**REVISED dates: shareholder record 5/29/2026 → EGM vote 6/15/2026 → spin-effective 7/1/2026 → SpinCo listing 7/24/2026**",
+        "direction": "→ Late-May board reconfirmation watch; 3 discipline signals to monitor (§530-9 fairness opinion, Solutions rights timing, board cohesion)",
+        "lastUpdated": "2026-05-08",
+        "name": "Spin-off catalyst chain status",
+        "num": 6,
+        "source": "investchosun + smartbizn 2026-01-14; m-i.kr 2026-05-08",
+        "threshold": "EGM approval fails OR spin delayed >6mo from 7/1/2026 = primary thesis catalyst breaks (V5 territory)"
+      },
+      {
+        "class": "STRUCTURAL",
+        "current": "**~Jul-Aug 2026** (1yr post 7/22/2025 promulgation; revised tighter from 1/1/2027)",
+        "direction": "↓ Tighter than originally modeled — lands within ~1 month of spin-off (compounds re-rating)",
+        "lastUpdated": "2026-05-04",
+        "name": "Korean Commercial Act audit-cap effective date",
+        "num": 7,
+        "source": "Sodali 2025; Lexology",
+        "threshold": "Enforcement materially watered down OR 6+ month delay = governance-reform forcing function weakens"
+      }
+    ],
+    "trendLog": [
+      {
+        "action": "OVERVIEW.md SOTP updated; THESIS.md Verified Anchors line 97",
+        "assessment": "Major UPWARD REVISION. Bear-case floor still +57% above current even at 60% discount on $23.0B verified NAV.",
+        "date": "2026-05-02",
+        "indicator": "#3 Listed-stake gross NAV",
+        "new": "**KRW 33.9T = $23,031M (CapIQ-verified)** — Hanwha Life 49.98% (NEW), Systems direct stake, Vision/Galleria pre-spin additions",
+        "old": "KRW 15.2T (pre-CapIQ estimate)"
+      },
+      {
+        "action": "No CHANGELOG required; thesis intact",
+        "assessment": "Validates Approach C Base FV robustness; no downward FV revision required. Forward range KRW 5.0-5.4T if Solutions rights + Korea Zinc sale sequence slips.",
+        "date": "2026-05-04",
+        "indicator": "#1 Parent-only net debt",
+        "new": "**KRW 4,657.4B resolved** — 93% to Bear cap",
+        "old": "DATA GAP (prior range Bull $0 / Base −KRW 2T / Bear −KRW 5T)"
+      },
+      {
+        "action": "THESIS.md Catalyst Timeline updated",
+        "assessment": "Confirms SpinCo is mechanical cleanup, not material NAV event",
+        "date": "2026-05-04",
+        "indicator": "#2 §530-9 ratio",
+        "new": "**76.35/23.65 split; 1.1826 issuance ratio; per-share NAV impact ~KRW 13,243**",
+        "old": "DATA GAP (small impact assumed)"
+      },
+      {
+        "action": "THESIS.md Catalyst Timeline + DEBATES Vector 3 correction",
+        "assessment": "DEBATES.md Vector 3 8/1 date corrected. 18-month catalyst staircase intact (spin 7/1 + audit-cap ~Jul-Aug + Commercial Act hybrid AGM 1/1/2027).",
+        "date": "2026-05-04",
+        "indicator": "#6 Spin dates",
+        "new": "**REVISED: record 5/29 / EGM 6/15 / effective 7/1 / listing 7/24**",
+        "old": "CapIQ stale (8/1/2026 assumption)"
+      },
+      {
+        "action": "MONITOR LATE-MAY BOARD OUTCOME",
+        "assessment": "If ≥2 of 3 signals confirmed at late-May board → discipline UPGRADE re-enables CORE 15% size-up. If second postponement without addressing signals → V5 THESIS-BREAK territory; auto-trigger debate-session on Falsification #5/6.",
+        "date": "2026-05-08",
+        "indicator": "#6 Late-May board reconfirmation watch",
+        "new": "**NEW RISK SURFACE:** Directors' liability under amended Commercial Act Article 382-3 (7/22/2025 effective) may drive second postponement if board cannot resolve §530-9 fairness opinion + Solutions rights timing + board cohesion. Three discipline signals to track.",
+        "old": "Spin dates confirmed"
+      },
+      {
+        "action": "No action",
+        "assessment": "Baseline log only",
+        "date": "2026-05-13",
+        "indicator": "INDICATORS.md created",
+        "new": "Initial setup per Rule §10 (INVESTMENT entered 2026-05-05; 8d lag). All structural indicators at entry baseline; #6 Late-May Board is highest-attention near-term watch.",
+        "old": "—"
+      }
+    ]
   },
   "pm": {
     "archetype": "Mixed D+C",
@@ -174,7 +347,8 @@
     }
   ],
   "recentNotes": [
-    "2026-05-04: Web Research Gap-Closure Pass"
+    "2026-05-04: Web Research Gap-Closure Pass",
+    "2026-05-08: Q1 2026 Earnings Review"
   ],
   "valuation": {
     "lastUpdated": "2026-05-02",
