@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -34,7 +34,7 @@
     "V3": {
       "level": "STRONG",
       "name": "Identifiable Mispricing Reason",
-      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **DOWNGRADE 5 → 4 post-Q1.** Cannot be EXTREME because new V1 PM US-enterprise client weakness (~150 bps of FY26 guide cut, 8% LTM CeT bucket) is TRANSIENT-UNPROVEN; structural if repeated. Market's bear case post-Q1 is now articulable + partially valid: \"structurally challenged ad-tech intermediary; FY25 was peak; FY26 guide cut signals further deterioration of PM (cash engine) via in-housing + take-rate compression; -22% reaction is rational repricing.\" Drawdown Diagnosis (4 causes): B2/B1 RM scope reductions TRANSIENT with structural-watch trigger; **NEW V1/D4 PM US-enterprise weakness TRANSIENT-UNPROVEN** (resolution Q2-Q4'26; reclassify STRUCTURAL if PM declines >10% for 2Q or further guide cuts); A1/A2 domicile/index STRUCTURAL but addressed (Lux Q3'26 ✓, US Q1'27, Russell Jun'27); C1/B3 forced selling + category narrative TRANSIENT plus narrative. Mispricing mechanism still time-bounded but with one unproven element. (Sources: 8-K 2026-05-06; Q1'26 Prepared Remarks; Investor Presentation slide 23; CHANGELOG.md 2026-05-07)",
+      "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07; **REFRESHED 2026-05-14 Pattern-2-lens**] **DOWNGRADE 5 → 4 post-Q1 HELD; attribution refreshed.** V3 cap-below-EXTREME has TWO candidate drivers (not one, as of 2026-05-14): (a) original — PM US-enterprise client weakness TRANSIENT-UNPROVEN (~150 bps of FY26 guide cut, 8% LTM CeT bucket); (b) NEW — Pattern-2 ad-spend cannibalization (theme Risk #9): agent-routed demand reallocation could ACCELERATE PM-US-enterprise weakness if enterprise PM clients are reallocating to agent-routed channels OR could be INDEPENDENT if PM weakness is purely cyclical-macro. Q2'26 print resolves which attribution dominates: (a) PM weakness recurs without enterprise-clients citing agent-routed reallocation = cyclical-macro driver; (b) enterprise clients explicitly cite reallocation to ChatGPT / Adobe / Kargo ad-stacks = Pattern-2 mechanism active. Either way, V3 score holds 4/5 STRONG this session — the attribution narrative refines but numerical V-dim doesn't move. Market's bear case post-Q1 is articulable + partially valid: \"structurally challenged ad-tech intermediary; FY25 was peak; FY26 guide cut signals further deterioration of PM (cash engine) via in-housing + take-rate compression + (NEW 2026-05-14) potential agent-routed cannibalization; -22% reaction is rational repricing.\" Drawdown Diagnosis (4 causes): B2/B1 RM scope reductions TRANSIENT with structural-watch trigger; **V1/D4 PM US-enterprise weakness TRANSIENT-UNPROVEN with Pattern-2 candidate driver** (resolution Q2-Q4'26; reclassify STRUCTURAL if PM declines >10% for 2Q or further guide cuts; Pattern-2 attribution test = enterprise clients explicitly cite agent-routed reallocation); A1/A2 domicile/index STRUCTURAL but addressed (Lux Q3'26 ✓, US Q1'27, Russell Jun'27); C1/B3 forced selling + category narrative TRANSIENT plus narrative. Mispricing mechanism still time-bounded but with one unproven element + one Pattern-2-candidate-driver element. (Sources: 8-K 2026-05-06; Q1'26 Prepared Remarks; Investor Presentation slide 23; CHANGELOG.md 2026-05-07; Theme `Themes/AI Disruption/THESIS.md` Risk #9 Pattern 2 2026-05-13; CRTO Pattern-2-lens revision CHANGELOG 2026-05-14)",
       "score": 4,
       "type": null
     },
@@ -50,13 +50,6 @@
       "name": "Thesis Simplicity",
       "rationale": "[COUNCIL: all, gpt-5.5, 2026-05-07] **HELD AVERAGE.** 3 independent required conditions per council: (1) EBITDA/owner-earnings durability — **AT RISK** (Q1 print delivered, but FY26 EBITDA implied ~$382M vs FY25 $407M; PM weakness needs Q2-Q4 proof); (2) CapEx/FCF normalization — **UNCONFIRMED** (FY27 disclosure pending; <$120M = cyclical confirmation, >$150M = structural); (3) Rerating mechanism — **AT RISK** (Lux Q3'26 + buyback + Russell Jun'27 mechanical IF US Q1'27 hits Apr'27 rank day). NOT WEAK because base case doesn't require ALL upside paths to fire — any one of redom/buyback/M&A/visible recovery can drive modest multiple. NOT STRONG because Q1 guide cut demonstrated H2 return-to-growth slipped to Q4; correlated-cluster bear council framing applies.",
       "score": 3,
-      "type": null
-    },
-    "V6": {
-      "level": "EXTREME",
-      "name": "Upside Optionality",
-      "rationale": "[COUNCIL: bull-optionality, gpt-5.5, 2026-05-07] **HELD EXTREME with CONDITIONAL flag.** 11+ independent paths with early evidence. Bull-optionality NEW finding: **off-site RM + SSP makes retailer losses non-binary** (probability 0.45, market awareness INVISIBLE; Costco contradiction — Moloco won onsite, but Q4'25 disclosed Criteo 7M-shopper / 2,000% ROAS off-site Costco activation). 7 EXPANDED paths: retailer-owned AI assistants + Page Intelligence; organic API monetization; GO ARPU expansion (cross-channel 3× spend; discovery 1/3 of budgets); Commerce Grid hidden turnaround (AdTech Services +7%); owned infra as moat; gross media-spend yield leverage ($1B+ Q1); Lux dissenters' event-arb. Plus: 1,000+ OpenAI brands + 2× CV + AU/CA/NZ; MCP via dentsu agent; 60+ retailers auction display; $190M buyback at trough; Lux Q3'26; Russell Jun'27. **CONDITIONAL flag**: V6 5/5 → 3/5 if 2nd OpenAI AdTech partner signed within Q3'26 (May press release silent on \"first AdTech partner\" language).",
-      "score": 5,
       "type": null
     },
     "V7": {
@@ -159,7 +152,7 @@
       "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
-    "staleDays": 39,
+    "staleDays": 41,
     "trendLog": [
       {
         "action": "No action needed",
@@ -200,6 +193,14 @@
         "indicator": "All structural indicators",
         "new": "**Q1 2026 results processed.** #1 CeT $250M MET top of guide ✓ (trough confirmed); #2 PM CeT -2% CC moves to ⚠ ELEVATED WATCH (US Large Commerce Growth = 8% CeT bucket per slide 23 quantifies new bear vector); #3 retention 88% incl. largest / 110% ex-largest ✓; #4 $889M liquidity / $371M cash+sec ✓ FORTRESS; #5 TTM EBITDA = $380M ($407M − $92M + $65M); #6 CapEx framing demoted to mgmt-asserted hypothesis pending FY27 disclosure (Rule §17 analogue); #7 OpenAI 1,000+ brands / ~2× CV / AU/CA/NZ — V6 5/5 CONDITIONAL on exclusivity (May press release silent on \"first AdTech partner\"); #8 weighted-avg diluted 50.97M (-11% YoY) ✓ AHEAD; #9 Lux Q3'26 confirmed ✓. **No structural threshold breach.** FY26 guide cut flat-to-+2% CC → low-single-digit decline (~-300 bps) is documented in CHANGELOG MATERIAL entry. Triggers conviction-scoring rerun (V1↓ 3→2-3, V3↓ 5→4, V5↓ 3→2, V6↑ conditional, V8↓ 4→3.5-4) + MIA refresh + fair-value-estimation refresh + scenario probability recompute.",
         "old": "(pre-Q1'26 baseline)"
+      },
+      {
+        "action": "**Rule §11 hard-trigger fired (band change).** CHANGELOG MATERIAL entry written. Frontmatter band-tag + conviction-score updated. portfolio.md row sync required at next portfolio-update run (band column needs HIGH_CONVICTION → BASE). Watch Q2'26 print for: (a) commerce-vertical carve-out language (re-upgrade trigger), (b) PM clients citing agent-routed reallocation (Pattern-2 attribution confirmation), (c) re-evaluate council light run necessity.",
+        "assessment": "This is V-dim recalibration + band-tag change, NOT structural-threshold breach. #7 (OpenAI partnership) status moves from CONDITIONAL to FIRED but underlying ad-partnership relationship intact (Criteo still listed; 1,000+ brands integration unchanged). No EXIT trigger fired. Conditional re-upgrade trigger: if Q2'26 OpenAI/Criteo joint disclosure designates Criteo commerce-vertical-only with no overlap from other 4 partners, V6 could be re-upgraded → Asymmetry back to STRONG → band tag back to HIGH CONVICTION. Live price $16.15 (Source: prices.py 2026-05-14; -0.31% vs 5/13 anchor; within 10% Rule §21 tolerance).",
+        "date": "2026-05-14",
+        "indicator": "**Pattern-2-Lens V6 CONDITIONAL FIRED + band tag HIGH CONVICTION → BASE**",
+        "new": "**#7 OpenAI partnership — V6 CONDITIONAL FIRED** on launch-day multi-partner co-listing at OpenAI Ads Manager (May 5, 2026): Adobe / Criteo / Kargo / Pacvue / StackAdapt. User-confirmed reading: **#1 Literal** — trigger language (\"V6 5/5 → 3/5 if 2nd OpenAI AdTech partner signed within Q3'26\") fires when 2nd-5th partners co-listed at launch. **V6 5/5 EXTREME → 3/5 AVERAGE.** Asymmetry composite (V4 STRONG + V8 STRONG + V6 AVERAGE) = 3.67 drops below STRONG threshold under §10b + LESSONS A21. MIA verdict EXTREME / AVERAGE / **AVERAGE** (was STRONG). Path 2 collapses → band steps **HIGH CONVICTION (25%) → BASE (10% cap)**. **Conviction 7.5 → 7.0/10.** Cluster A 62.5% → 50%. **Allocation 8.5% HELD sub-band-defensive within BASE 10% cap** — no forced trim. V3 4/5 STRONG HELD (Pattern-2 mechanism added as candidate attribution driver alongside cyclical-macro PM-US-enterprise-weakness; numerical score unchanged).",
+        "old": "2026-05-07 post-Q1 baseline"
       }
     ]
   },

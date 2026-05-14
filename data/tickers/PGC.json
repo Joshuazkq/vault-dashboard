@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "PGC",
     "version": "2.0.0"
   },
@@ -73,7 +73,7 @@
       "**Collins EXEC-DIR-M&A transition** — Was surfaced as a potential \"departure signal\" but bulk-transcript-review confirmed this is M&A specialization, not a step-down. Any further commentary on Collins role is organizational noise."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/PGC/INDICATORS.md",
-    "staleDays": 16,
+    "staleDays": 18,
     "structural": [
       {
         "class": "STRUCTURAL",

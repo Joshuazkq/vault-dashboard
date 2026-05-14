@@ -1,31 +1,33 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "ECO",
     "version": "2.0.0"
   },
   "catalysts": [
     "Event: Date",
-    "Q1 2026 earnings: ~May 2026",
-    "Q2 2026 earnings: ~August 2026",
-    "Hormuz ceasefire outcome: Binary ~Apr 22"
+    "Q2 2026 earnings: ~Aug 12, 2026",
+    "Q1 2026 booked-day trajectory update: ~Jun-Jul 2026 (next IR PR window)",
+    "Q3 2026 earnings: ~Nov 2026",
+    "Final 2 Suezmax deliveries (Nissos Tigani + Vous): May-Jul 2026",
+    "Hormuz ceasefire / diplomatic resolution: Ongoing — S3 50% / S4 45% theme weights"
   ],
   "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "situation-screen / Forward-IRR cited",
+      "evidence": "situation-screen 2026-05-14 (session #14 formal re-anchor): Forward IRR 8.8% at $54.44 vs PW-FV $59.23 — FAIL 30% gate. Stage-3 entry anchor $25-28 mispriced by +95-118% repricing; pullback re-anchor zone $35-45 cleanly clears gate (32-69% IRR). Artifact at _Screening/CapIQ Screeners/2026-05-14_ECO_situation_screen.md",
       "reason": "",
-      "since": "",
+      "since": "2026-05-14",
       "stage": "A",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "pattern-match 27.0/35",
+      "evidence": "pattern-match 27.0/35 INTERESTING-HIGH",
       "reason": "",
       "since": "",
       "stage": "A",
@@ -34,34 +36,34 @@
     {
       "code": "A3",
       "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "run filing-review on latest audited 10-K / 20-F / Annual Report",
+      "evidence": "ECO 20-F FY2025 processed 2026-05-14; OVERVIEW.md regenerated from audited Item 4.B + Item 5 + Item 8.B + Consolidated Statements.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "B",
-      "state": "PENDING"
-    },
-    {
-      "code": "B2",
-      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 25 inline-cited",
+      "evidence": "ECO 20-F FY2025 filed 2026-03-20, period of report 2025-12-31, age ~2 months.",
       "reason": "",
       "since": "",
       "stage": "B",
       "state": "MET"
     },
     {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "PRs in ECO/Transcripts/; documented in NOTES.md Sources Processed table.",
+      "reason": "press-release-substitute; full earnings call transcripts unavailable in clean text form as of 2026-05-14 acquisition. Q4'25 + Q1'26 6-K Exhibit 99.1 press releases processed as substitutes.",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
       "code": "C1",
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "evidence": "no open [BLOCKING] items in QUESTIONS.md (Stage-3 BLOCKING (b)(c)(d) resolved; (a) deferred to D-stage; new Q8 [CRITICAL — non-blocking for stage-C] is the A1 re-anchor itself, not a thesis-blocker)",
       "reason": "",
       "since": "",
       "stage": "C",
@@ -70,7 +72,7 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "evidence": "Q2 2026 earnings ~Aug 12 registered via ECO/THESIS.md frontmatter forward_catalyst_date: 2026-08-12; mid-Q booked-day trajectory update ~Jun-Jul deferred to next catalyst-tracker regen.",
       "reason": "",
       "since": "",
       "stage": "C",
@@ -79,36 +81,36 @@
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "session-13 narrative rollback: C3 PW-FV Bull/Base/Bear ($70-88 / $55-64 / $24 at 35/45/20%) is preliminary pending A1 re-anchor outcome; formal FVE re-derivation deferred to Phase 2 if A1 clears",
       "reason": "",
-      "since": "",
+      "since": "2026-05-14",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "run debate-session",
+      "evidence": "DEFERRED to Pipeline-B post-Q2 earnings (~Aug 2026)",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "DEFERRED to Pipeline-B post-Q2 earnings",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "DEFERRED to Pipeline-B post-Q2 earnings",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     }

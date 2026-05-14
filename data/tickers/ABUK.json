@@ -2,45 +2,30 @@
   "_meta": {
     "generatedAt": "2026-05-14T16:44:57Z",
     "sourceFingerprint": "1e853cd9db042637",
-    "ticker": "LCUT",
+    "ticker": "ABUK",
     "version": "2.0.0"
   },
+  "businessBackground": "Abu Qir Fertilizers and Chemical Industries Co SAE operates nitrogen and ammonia production facilities at the Abu Qir industrial complex near Alexandria, Egypt.",
   "catalysts": [],
-  "financials": {
-    "cash": "$24.4",
-    "debtDetails": [],
-    "ebitda": "$50.8",
-    "ebitdaMargin": "+7.8%",
-    "eps": "($4.37)",
-    "fcf": "—",
-    "fy": "FY2025",
-    "leverage": "3.1x",
-    "leverageNum": 3.13,
-    "netDebt": "$158.8",
-    "netIncome": "($95.7)",
-    "revenue": "$647.9",
-    "revenueGrowth": "-5.1%",
-    "totalDebt": "$180.0"
-  },
   "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "Forward IRR +40-47% from 2026-05-13 situation-screen; EVIDENTIAL tier; BEAR-NEG flag fired",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "run pattern-match",
+      "evidence": "pattern-match 27/35 INTERESTING-HIGH from 2026-05-13",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A3",
@@ -54,38 +39,38 @@
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "Egyptian Arabic-primary annual report not retrieved",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "B",
       "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 12 inline-cited",
+      "evidence": "Egyptian earnings calls in Arabic; English summary access via Mubasher / Zawya / arabfinance",
       "reason": "",
-      "since": "",
+      "since": "2026-05-14",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C1",
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "evidence": "See QUESTIONS.md",
       "reason": "",
-      "since": "",
+      "since": "2026-05-14",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "evidence": "Q2 release ~Aug 2026 in frontmatter; needs catalyst-calendar",
       "reason": "",
-      "since": "",
+      "since": "2026-05-14",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C3",
@@ -99,37 +84,33 @@
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "run debate-session",
+      "evidence": "Not run",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "Not run",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "Not run",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-14",
       "stage": "D",
       "state": "PENDING"
     }
   ],
   "recentNotes": [
-    "2026-04-21: Cross-Ticker Signal: Daily Intelligence Briefing Apr 21 → $166B Refund Portal Confirmed Active",
-    "2026-04-20: Monday Data Session: CBP CAPE Phase 1 LIVE TODAY",
-    "2026-04-16: News Scan: CAPE Phase 1 Launch Confirmed April 20 + Process Details",
-    "2026-04-06: Monday Data Session: CBP ACE Timeline Update + CIT Expansion",
-    "2026-03-20: Report Review: LCUT/UEIC Tariff Refund Addendum"
+    "2026-05-13: Onboarding from Hormuz Fertilizer Promotion Session"
   ],
   "variantViews": []
 }

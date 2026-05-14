@@ -2,134 +2,119 @@
   "_meta": {
     "generatedAt": "2026-05-14T16:44:57Z",
     "sourceFingerprint": "1e853cd9db042637",
-    "ticker": "LCUT",
+    "ticker": "EUR-ASX",
     "version": "2.0.0"
   },
-  "catalysts": [],
-  "financials": {
-    "cash": "$24.4",
-    "debtDetails": [],
-    "ebitda": "$50.8",
-    "ebitdaMargin": "+7.8%",
-    "eps": "($4.37)",
-    "fcf": "—",
-    "fy": "FY2025",
-    "leverage": "3.1x",
-    "leverageNum": 3.13,
-    "netDebt": "$158.8",
-    "netIncome": "($95.7)",
-    "revenue": "$647.9",
-    "revenueGrowth": "-5.1%",
-    "totalDebt": "$180.0"
-  },
+  "catalysts": [
+    "2026-04-27: LOI announced",
+    "2026-05-07: Mutual due diligence complete; exclusivity extended",
+    "≤2026-07-31: SID signing target (judgment)",
+    "Q3-2026: EUR shareholder meeting (court-approved scheme vote)",
+    "2H-2026: Deal close target",
+    "2026-10-31: Sage PSU Tranche 1 deadline ($16.25 VWAP)",
+    "2026-12-31: Time-stop (judgment)"
+  ],
   "premortem": [],
   "rcChecklist": [
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "A",
       "state": "PENDING"
     },
     {
       "code": "A2",
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "run pattern-match",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "A",
       "state": "PENDING"
     },
     {
       "code": "A3",
       "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "bulk-filing-review cited in NOTES.md",
+      "evidence": "",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "A",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "B",
       "state": "PENDING"
     },
     {
       "code": "B2",
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 12 inline-cited",
+      "evidence": "",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "B",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C1",
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
+      "evidence": "",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "entry in _Outputs/catalyst-calendar.md",
+      "evidence": "",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "evidence": "",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "C",
-      "state": "MET"
+      "state": "PENDING"
     },
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "run debate-session",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "D",
       "state": "PENDING"
     },
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
+      "evidence": "",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "2026-05-15",
       "stage": "D",
       "state": "PENDING"
     }
-  ],
-  "recentNotes": [
-    "2026-04-21: Cross-Ticker Signal: Daily Intelligence Briefing Apr 21 → $166B Refund Portal Confirmed Active",
-    "2026-04-20: Monday Data Session: CBP CAPE Phase 1 LIVE TODAY",
-    "2026-04-16: News Scan: CAPE Phase 1 Launch Confirmed April 20 + Process Details",
-    "2026-04-06: Monday Data Session: CBP ACE Timeline Update + CIT Expansion",
-    "2026-03-20: Report Review: LCUT/UEIC Tariff Refund Addendum"
   ],
   "variantViews": []
 }

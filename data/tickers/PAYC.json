@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
@@ -63,7 +63,7 @@
       "**Share price moves on rate expectations** — Float income sensitivity to rates is known. Stock moves on Fed commentary are mechanical, not fundamental."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/PAYC/INDICATORS.md",
-    "staleDays": 37,
+    "staleDays": 39,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -140,6 +140,14 @@
         "indicator": "**Q1 2026 results (5/7) + $2B buyback**",
         "new": "**Q1 2026: Revenue $572M (+8% YoY) / Adj EPS $3.15 vs $2.99 (+5% beat) / Recurring $544M (+9%) / GAAP NI $156M.** **FY26 guide HELD** at $2.175-2.195B (6-7%), EBITDA $950-970M (~44%) — no raise. **NEW $2B buyback authorization** replaces prior plan (~30% of $6.7B mcap); 8.38M shares already retired pre-Q1 for ~$1.06B (avg ~$126/sh). IWant qualitative traction confirmed (\"usage up sharply, affecting pipeline opportunities\") but **NO explicit ARR metrics disclosed**. Richison continued as CEO. Stock $132.62 +5% above buyback avg.",
         "old": "Q4 2025 baseline"
+      },
+      {
+        "action": "No structural threshold breach. Entry-trigger framework UNCHANGED status-quo MONITORING; reconsidered post-Q2'26 resolution gate. CHANGELOG entries: PAYC ticker CHANGELOG.md file inception (this session); theme-level entry (this session, path d). **Forced-decision deadline: Q2'26 print (~Aug 2026)** — not a routine cadence checkpoint.",
+        "assessment": "**#3 IWant adoption** indicator-status interpretation now explicitly bifurcated under inversion-framework: bull-frame reads 80% MoM growth as moat-deepening (Tier 1 anchor pattern); bear-frame reads same metric as canonical \"AI-vulnerable adoption-without-monetization\" precursor to margin compression. No threshold breach in either direction this session. **No M-composite change** (3.75/5 HELD; bear-case wins post-Q2'26 would compress M3 + M5). **Theme-level path (d) propagation:** Theme THESIS.md PAYC anchor entry annotated `(UNRESOLVED pending Q2'26)` — see `Themes/AI Disruption/CHANGELOG.md` 2026-05-14 entry.",
+        "date": "2026-05-14",
+        "indicator": "**Three-Tier inversion test conducted (framework, not threshold-recalibration)**",
+        "new": "**UNRESOLVED** (LOW confidence). Bull/Bear V1-V8 dual-frame scoring completed in `DEBATES.md` Vector 1. Bull frame (moat-deepening via 100% IWant adoption + 80% MoM usage + 91% retention + Forrester 400% ROI + record Jan'26 bookings) and bear frame (moat-eroding via no IWant ARR disclosure + FY26 guide-hold breaking 3x-raise pattern + Forrester ROI accruing to customer not pricing power) both have substantial evidence. Default to UNRESOLVED rather than \"Tier 3 held by default\" (anti-update bias).",
+        "old": "Tier-3 (AI-Vulnerable) anchor assignment per theme THESIS.md 2026-05-13 codification"
       }
     ]
   },
@@ -288,11 +296,11 @@
     {
       "code": "D1",
       "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "DEBATES.md present but only 0 vectors detected — need 6",
+      "evidence": "DEBATES.md references 1+ pressure vectors",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "D",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D2",

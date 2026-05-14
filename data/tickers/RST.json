@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "RST",
     "version": "2.0.0"
   },
@@ -135,7 +135,7 @@
       "**Synertec earn-out absolute magnitude** — £10m earn-out remaining is self-mitigating (RST pays less if Synertec under-delivers). Headlines about earn-out level are not signal — what matters is the underlying NHS share trajectory (25% → 35% target)."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/RST/INDICATORS.md",
-    "staleDays": 18,
+    "staleDays": 20,
     "trendLog": [
       {
         "action": "No action — baseline log only",
@@ -274,11 +274,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-14: Action 4 (watchlist-audit Action 4): RST DATA GAP triage pass — covenant headroom verification",
     "2026-05-08: Report Review: Weekly Intelligence Update (24 Apr – 8 May 2026) — INCREMENTAL DELTA",
     "2026-04-27: Follow-up: 35% NHS Notify target verification (RESOLVED) + catalyst-calendar update",
     "2026-04-27: Report Review: Weekly Intelligence Update & Monthly Structural Sweep (14–27 Apr 2026 / Apr 2026)",
-    "2026-04-22: Report review (2 IPs: 2025-03-16 FY24 results presentation + 2025-10-23 Cardington/MK site visit)",
-    "2026-04-22: Bulk transcript review (5 distinct earnings calls FY24 → FY25)"
+    "2026-04-22: Report review (2 IPs: 2025-03-16 FY24 results presentation + 2025-10-23 Cardington/MK site visit)"
   ],
   "valuation": {
     "lastUpdated": "2026-04-25",

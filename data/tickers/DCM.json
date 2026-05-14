@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
+    "ticker": "DCM",
+    "version": "2.0.0"
+  },
+  "businessBackground": "Petro Viet Nam Ca Mau Fertilizer Joint Stock Company (PVCFC) operates urea, NPK, and blended-fertilizer plants in the southwestern Mekong Delta region. Brand: \"Đạm Cà Mau\" (Dam Ca Mau).",
+  "catalysts": [],
+  "premortem": [],
+  "rcChecklist": [
+    {
+      "code": "A1",
+      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
+      "evidence": "Forward IRR +38-48% from 2026-05-13 situation-screen; EVIDENTIAL tier",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A2",
+      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
+      "evidence": "pattern-match 29/35 STRONG from 2026-05-13",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "A3",
+      "criterion": "OVERVIEW.md sourced from audited filing",
+      "evidence": "Pipeline-A 2026-05-14 Chrome MCP retry: OVERVIEW.md sourced from FY2025 audited consolidated financial statements (primary PDF Themes/Hormuz/Tickers/DCM/Filings/DCM_FY2025_Audited_Consolidated.pdf, released 2026-02-28) + Q1 2026 consolidated financial statements (Themes/Hormuz/Tickers/DCM/Filings/DCM_Q1_2026_Consolidated.pdf, released 2026-04-24) + PVCFC IR primary docs (Five-Year Plan, EGM Documents, AGM 2026 resolution 2026-04-23) + broker triangulation (VDSC/MBS/BVSC). Detail extraction beyond cover/explanation pages limited by rasterized inner pages — gas SPA Amendment 11 specific terms remain [DATA GAP].",
+      "reason": "",
+      "since": "",
+      "stage": "A",
+      "state": "MET"
+    },
+    {
+      "code": "B1",
+      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
+      "evidence": "Pipeline-A 2026-05-14 Chrome MCP retry: FY2025 audited consolidated financial statements primary PDF downloaded from PVCFC IR (Themes/Hormuz/Tickers/DCM/Filings/DCM_FY2025_Audited_Consolidated.pdf; published 2026-02-28, 2.5mo old, well within ≤12mo gate). Headline figures verified from explanation letter (page 2 of 49): consolidated revenue VND 17,223.06B (+23.53% YoY), COGS VND 12,582.27B (+14.99% YoY), pre-tax profit VND 2,207.43B (+45.03% YoY), profit-after-tax VND 1,961.84B (+37.38% YoY). BOD Resolution 423/NQ-PVCFC dated 2026-02-28 (Chairman Tran Ngoc Nguyen). Detail extraction from pages 4-49 limited (rasterized images; gas SPA Amendment 11 + related-party notes not text-extractable).",
+      "reason": "",
+      "since": "",
+      "stage": "B",
+      "state": "MET"
+    },
+    {
+      "code": "B2",
+      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
+      "evidence": "Pipeline-A 2026-05-14: PVCFC publishes English Investor Newsletters / quarterly updates (written summaries) but NO English earnings call transcripts. Vietnamese-only earnings calls confirmed via PVCFC IR site. Primary-data validation routed through audited filing + broker analyst notes (VDSC/MBS/BVSC) per OVERVIEW Sources.",
+      "reason": "no-transcripts-available",
+      "since": "",
+      "stage": "B",
+      "state": "WAIVED"
+    },
+    {
+      "code": "C1",
+      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
+      "evidence": "Amendment 11 dated 18 Nov 2025 (counterparty substitution PV GAS replaces PVN as Seller; no re-pricing/term change) extracted via Vietnamese tesseract OCR (vie+eng) of FY2025 audited consolidated PDF p.45 OTHER COMMITMENTS note 2026-05-14 evening; Q2 BLOCKING resolved with primary-filing citation; original Contract 3918 runs 20yr from 2015 to ~2035 with no 2027 cliff. See NOTES.md 2026-05-14 (evening) and QUESTIONS.md Q2.",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C2",
+      "criterion": "≥1 dated forward catalyst registered",
+      "evidence": "Pipeline-A 2026-05-14: Q1 2026 release 2026-06-01 registered in _Outputs/catalyst-calendar.md Weeks 3-4 section (surgical Write insertion; full catalyst-tracker regen deferred per AMBIGUOUS MOU branch). Source-of-truth: THESIS.md frontmatter forward_catalyst_date: 2026-06-01. PRIMARY repricing catalyst — realized-pricing catch-up to India $935/t Apr 2026 tender substitution.",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "C3",
+      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
+      "reason": "",
+      "since": "",
+      "stage": "C",
+      "state": "MET"
+    },
+    {
+      "code": "D1",
+      "criterion": "debate-session run across all 6 pressure vectors",
+      "evidence": "Not run",
+      "reason": "",
+      "since": "2026-05-14",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D2",
+      "criterion": "market-vs-me-diagnostic run within 90 days",
+      "evidence": "Not run",
+      "reason": "",
+      "since": "2026-05-14",
+      "stage": "D",
+      "state": "PENDING"
+    },
+    {
+      "code": "D3",
+      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
+      "evidence": "Not run",
+      "reason": "",
+      "since": "2026-05-14",
+      "stage": "D",
+      "state": "PENDING"
+    }
+  ],
+  "recentNotes": [
+    "2026-05-13: Onboarding from Hormuz Fertilizer Promotion Session",
+    "2026-05-14: Pipeline-A Run (AMBIGUOUS MOU Branch)"
+  ],
+  "variantViews": []
+}

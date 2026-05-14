@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -66,9 +66,9 @@
     "V8": {
       "level": "STRONG",
       "name": "Catalyst Clarity",
-      "rationale": "**5 dated catalysts in next 5 months:** Lew joins Board April 2026 (EVIDENTIAL, ~1-2 weeks), interim dividend 21 May 2026 (ARITHMETIC), Mirakl launch May 2026 (EVIDENTIAL), H2 FY26 trading update ~Jul 2026 (EVIDENTIAL), **FY26 result ~Sep 2026 (ARITHMETIC, primary catalyst — synergy run-rate + AB goodwill test + FY27 guidance)**. **New post bulk-review: NDC full implementation slipped to post-Jan-2027 peak** — extends catalyst timeline but doesn't remove it. Mixed ARITHMETIC + EVIDENTIAL. Does not reach EXTREME because most imminent (Lew board) is EVIDENTIAL not ARITHMETIC.",
+      "rationale": "**5 dated catalysts in next 5 months:** Lew joins Board April 2026 (EVIDENTIAL, ~1-2 weeks), interim dividend 21 May 2026 (ARITHMETIC), Mirakl launch May 2026 (EVIDENTIAL), H2 FY26 trading update ~Jul 2026 (EVIDENTIAL), **FY26 result ~Sep 2026 (ARITHMETIC, primary catalyst — synergy run-rate + AB goodwill test + FY27 guidance)**. **New post bulk-review: NDC full implementation slipped to post-Jan-2027 peak** — extends catalyst timeline but doesn't remove it. Mixed ARITHMETIC + EVIDENTIAL. Does not reach EXTREME because most imminent (Lew board) is EVIDENTIAL not ARITHMETIC. **2026-05-14 update (watchlist-audit Action 3):** Lew board commencement now T+14d MECHANICALLY OVERDUE (HotCopper announcement-list verified 2026-05-14; no Appendix 3X observed since 30 Apr 2026). [FACT] Steven Lew (son of Solomon Lew) confirmed via multi-source web verification; GRB 136-concession deal (Aug 2025–) compounds the Lew-family commercial nexus (Premier + GRB + April board seat). [INFERENCE] V8 governance-dimension downgrade-risk has structurally elevated: two pre-committed triggers armed — (a) FY25 AR Note D5 confirmation of GRB-RPT disclosure status (DATA GAP today); (b) Solomon Lew board commencement slippage past 30 Jun 2026 without explanation. **V8 currently HELD STRONG (4)** because pre-committed downgrade trigger is \"without explanation\" + 30 Jun 2026 deadline — AGM commentary previously cited \"Apparel Brands TSA finalisation\" as the explanation, so commencement-slippage alone does not yet fire the downgrade. **Formal `conviction-scoring` Partial Rescore on V4 + V8 deferred pending user invocation (Design Philosophy: reasoning-heavy skills are user-confirmation-gated, not autonomous).** (Sources: NOTES.md 2026-05-14 audit-execution entry; QUESTIONS.md updated entries 2026-05-14.)",
       "score": 4,
-      "type": null
+      "type": "fact"
     }
   },
   "fairValue": {
@@ -132,7 +132,7 @@
       "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MYR/INDICATORS.md",
-    "staleDays": 1,
+    "staleDays": 3,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -481,11 +481,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-14: Debate Session: 3-Vector Re-Stress (triggered by price drop + Lew delay)",
+    "2026-05-14: Action 2 (watchlist-audit Action 2): MYR Lew board + GRB nexus + substantial-holder web-research pass",
     "2026-05-12: Report Review: MYR Weekly Intelligence Update (5–11 May 2026)",
     "2026-05-08: Report Review: MYR Weekly Intelligence Update (1–8 May 2026)",
-    "2026-04-30: Report Review: MYR Weekly Intelligence Update (23–30 Apr 2026)",
-    "2026-04-21: Weekly Leading-Indicator Scan (First post-entry refresh)",
-    "2026-04-20: CapIQ Pro Data Pull (Peer Multiples + Consensus)"
+    "2026-04-30: Report Review: MYR Weekly Intelligence Update (23–30 Apr 2026)"
   ],
   "scenarios": [
     {

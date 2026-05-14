@@ -1,18 +1,18 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "ANG",
     "version": "2.0.0"
   },
   "businessBackground": "Austin Engineering Limited (ASX: ANG) is the world's largest producer of customised dump truck bodies for the mining industry, designing and manufacturing per-customer engineered truck bodies (trays), excavator/dragline buckets, water tanks, tyre handlers, and ancillary mining equipment . The company has been operating for 40+ years (founded 1982 Brisbane) and currently builds ~500 trays annually at 6 operating sites across Australia (Perth, Mackay), Indonesia (Batam), USA (Casper, WY), and Chile (La Negra) plus 13 partner final-assembly companies globally . Austin's value proposition is pe...",
   "catalysts": [
-    "May 2026: Chile new-contract deliveries begin (~$6.7M initial PO)",
-    "Late May – early Jun 2026: Evidence-conversion check (pre-registered per 2026-04-21 epistemic-audit, ELEVATED urgency...",
-    "Q4 FY26 (Apr-Jun 2026): Chile expected to return to profitability",
-    "~June 2026: FY26 trading update (if issued)",
-    "~Aug 2026: H2 FY26 + FY26 full-year result — PRIMARY RE-EVALUATION GATE. First clean half with Chile new-terms + NA e...",
-    "Feb 2027: H1 FY27 result"
+    "2026-05-31 (May 2026): Chile new-contract deliveries begin (~$6.7M initial PO)",
+    "2026-05-31 (Late May – early Jun 2026): Evidence-conversion check (pre-registered per 2026-04-21 epistemic-audit, ELE...",
+    "2026-06-30 (Q4 FY26, Apr-Jun 2026): Chile expected to return to profitability",
+    "2026-06-30 (~Jun 2026): FY26 trading update (if issued)",
+    "2026-08-31 (~Aug 2026): H2 FY26 + FY26 full-year result — PRIMARY RE-EVALUATION GATE. First clean half with Chile new...",
+    "2027-02-28 (Feb 2027): H1 FY27 result"
   ],
   "fairValue": {
     "baseCaseFV": "$0.229",
@@ -82,7 +82,7 @@
       "**COO D'Rozario option expiry behavior (Apr 2026)** — 5M options @ A$0.35 strike expire 12 Apr 2026; most tranches likely worthless at current A$0.195. Expiry is mechanical. Not an insider-sell signal."
     ],
     "sourceFile": "Themes/Niche Industrial Monopolies/Tickers/ANG/INDICATORS.md",
-    "staleDays": 22,
+    "staleDays": 24,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -294,11 +294,11 @@
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
+      "evidence": "situation-screen 2026-05-13 Forward IRR +66% (1yr) at A$0.17 entry — PASS gate (>30%). See _Screening/CapIQ Screeners/2026-05-13_ANG_situation_screen.md + _Screening/Scenario-Cards/ANG/scenario-card-2026-05-13.md.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A2",
@@ -321,11 +321,11 @@
     {
       "code": "B1",
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "run filing-review on a 10-K/20-F/10-Q within 12 months",
+      "evidence": "H1 FY26 Half-Yearly Report (filed 2026-02-25, ASX-equivalent of 10-Q; FY25 Annual Report Aug 2025 also reviewed). Both in Filings/, both extracted to .md, bulk-filing-review executed 2026-04-20.",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "B",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "B2",
@@ -348,11 +348,11 @@
     {
       "code": "C2",
       "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
+      "evidence": "forward dated event in THESIS Catalyst Timeline",
       "reason": "",
-      "since": "2026-04-30",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "C3",

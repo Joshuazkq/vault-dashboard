@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "HANWHA",
     "version": "2.0.0"
   },
@@ -74,7 +74,7 @@
       "**Hanwha Life dividend non-payment** — Insurance sub under capital constraints; affects parent cash-flow visibility but NOT listed-stake NAV (mark-to-market on the 49.98% Hanwha Life stake; book value already captured in SOTP). Remote from core thesis."
     ],
     "sourceFile": "Themes/Korea Governance Reform/Tickers/HANWHA/INDICATORS.md",
-    "staleDays": 0,
+    "staleDays": 2,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -347,6 +347,7 @@
     }
   ],
   "recentNotes": [
+    "2026-05-14: Action 5 (watchlist-audit Action 5): Late-May board watch armed + DART 1Q parent-debt spot-check",
     "2026-05-04: Web Research Gap-Closure Pass",
     "2026-05-08: Q1 2026 Earnings Review"
   ],

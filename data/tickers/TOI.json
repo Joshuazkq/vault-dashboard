@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "TOI",
     "version": "2.0.0"
   },
@@ -56,7 +56,7 @@
       "**Netherlands revenue concentration commentary** — 44.4% is known. Gradual diversification expected. Don't react to country-level revenue shifts <5pp."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/TOI/INDICATORS.md",
-    "staleDays": 26,
+    "staleDays": 28,
     "structural": [
       {
         "class": "STRUCTURAL",

@@ -1,18 +1,18 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-12T19:55:22Z",
-    "sourceFingerprint": "f87e4ca9ed2af320",
+    "generatedAt": "2026-05-14T16:44:57Z",
+    "sourceFingerprint": "1e853cd9db042637",
     "ticker": "GTT",
     "version": "2.0.0"
   },
   "catalysts": [],
   "dimensions": {
     "V1": {
-      "level": "STRONG",
+      "level": "EXTREME",
       "name": "Fundamentals Trajectory",
-      "rationale": "**DOWNGRADED Apr 3 (5→4, council concession).** [COUNCIL: all, o3, 2026-04-03] Council scored 4/5 — conceded after adversarial review. Rubric 5 requires \"Business inflecting meaningfully upward\" but FY2026 revenue is guided DOWN 3-8% (€740-780M vs €803M). Order book declined 342→288 units. The inflection is forward-looking (FID pipeline, Q1 ordering pace), not current. Leading indicators are exceptional: 84 mtpa FID record, 14 LNGC orders YTD 2026, Ras Laffan structural catalyst (17% capacity destroyed, 3-5yr repair), force majeure on long-term contracts. But the trough IS happening now — rubric says \"inflecting\" (present tense). 4/5 is the honest score until reported numbers confirm re-acceleration (expected FY2027). *(Prior: 5/5 from Mar 20. Sources: FY2025 Earnings Call; Ras Laffan Impact Assessment; Council validation 2026-04-03)*",
-      "score": 4,
-      "type": null
+      "rationale": "**UPGRADED STRONG → EXTREME 2026-05-14 (partial reassessment).** The 2026-04-03 council's \"present tense\" downgrade gate is cleared by Q1 Apr 22 reported numbers: [FACT] order book INFLECTED 288→297 (first net quarterly increase since H1 2024 peak — reverses council's \"342→288 declined\" basis); [FACT] 32 orders Q1 vs 16 Q1 2025 = DOUBLED YoY (\"second-best Q1 ever\" per CEO Michel); [FACT] 29 LNGC alone annualizes to 116/yr — exceeds Clarksons full-year forecast (115) in a single quarter; [FACT] 2 VLECs (Very Large Ethane Carriers) — segment expansion beyond pure LNGC + LNG-as-fuel; [FACT] FY26 guide REAFFIRMED €740-780M revenue / €490-530M EBITDA under Hormuz conflict (\"no direct impact\"). New CEO Michel held the guide where he could have used conflict cover to lower — revealed-preference management alignment. EXTREME rubric (\"Multiple independent fundamental drivers simultaneously accelerating; Management alignment structurally locked in; Historically unusual trajectory\") met on 4-of-5 sub-criteria: orders, backlog, segment expansion, alignment all present-tense inflecting; sector-historical unusual confirmed (Clarksons full-year in 1Q). Revenue-DOWN-guide is the rubric partial-miss but is mechanically explained by GTT's 2-4yr recognition lag — orders inflected NOW, revenue follows 2028-30. Margin held at structural peak (67%) is not \"accelerating\" but is physically capped by asset-light royalty model. **Council gate (verbatim \"reported numbers confirm re-acceleration\") MET on orders + backlog axes — the two dimensions council itself identified as binding.** Q2 print is monitoring point, not blocker. *(Prior: STRONG since 2026-04-03 council concession; previously 5/5 from Mar 20. Sources: GTT Q1 2026 Activity Update press release Apr 22, 2026; NOTES.md §2026-04-23 Q1 Activity Update Processed; 2026-04-03 council validation; vault-scoring-portfolio.md V1 rubric.)*",
+      "score": 5,
+      "type": "fact"
     },
     "V2": {
       "level": "STRONG",
@@ -65,12 +65,12 @@
     }
   },
   "fairValue": {
-    "baseCaseFV": "€354",
+    "baseCaseFV": "€590M",
     "bearCaseFV": "€222",
     "bullCaseFV": "€426",
-    "lastUpdated": "2026-03-28",
+    "lastUpdated": "2026-05-14",
     "methodology": "Peer-Anchored EV/EBITDA",
-    "probWeightedFV": "€346/share",
+    "probWeightedFV": "€352 → €359 (+€7, +2.0%)",
     "thesisType": "Type 4 (Structural Growth Mispricing) + Type 5 (Event-Driven)."
   },
   "financials": {
@@ -130,7 +130,7 @@
       "**FLNG/FSRU one-off orders** — Each is valuable but lumpy. Don't extrapolate one FLNG order into a trend."
     ],
     "sourceFile": "Themes/Hormuz/Tickers/GTT/INDICATORS.md",
-    "staleDays": 21,
+    "staleDays": 23,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -452,7 +452,7 @@
     {
       "code": "D2",
       "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic dated 2026-04-07",
+      "evidence": "market-vs-me-diagnostic 2026-05-14 — verdict MARKET WRONG (high confidence); ~70% upside (PW-FV €352 vs spot €207); divergence STRUCTURAL primary + MAGNITUDE secondary; 1-2/10 red flags (Council o3 €309 vs Claude €352 12pp gap; mild assumption stack but 0/3 bear-case runs found new vulnerabilities); falsification 3/3 holding; gate-mapping: re-entry condition #4 PARTIAL-confirmation via verdict, condition #1 (cleaner options window) remains binding NOT MET. Supersedes prior 2026-04-07 mis-labeled evidence (which was actually conviction-rescore + MIA). See THESIS.md ## Market-vs-Me Diagnostic (2026-05-14) section.",
       "reason": "",
       "since": "",
       "stage": "D",
@@ -461,11 +461,11 @@
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "Council populated; band=HIGH_CONVICTION; angels-advocate=yes",
+      "evidence": "Council 2026-05-15 ran (6 agents, gpt-5.5 xhigh, $6.74); DISCONFIRMS 5/14 self-MIA — MIA AVERAGE/AVERAGE/STRONG → band BASE (10%). Phase 3.5 BLOCKING V1 divergence opened (council V1=STRONG vs 5/14 EXTREME); clean-close requires `conviction-scoring --partial V1`. Band=BASE so angels-advocate not required.",
       "reason": "",
-      "since": "",
+      "since": "2026-05-15",
       "stage": "D",
-      "state": "MET"
+      "state": "PENDING"
     }
   ],
   "recentNotes": [
@@ -479,21 +479,21 @@
     {
       "name": "Bull",
       "price": "€426",
-      "prob": 27
+      "prob": 30
     },
     {
       "name": "Base",
-      "price": "€354",
+      "price": "€590M",
       "prob": 55
     },
     {
       "name": "Bear",
       "price": "€222",
-      "prob": 13
+      "prob": 10
     }
   ],
   "valuation": {
-    "lastUpdated": "2026-03-28",
+    "lastUpdated": "2026-05-14",
     "methodology": "Peer-Anchored EV/EBITDA",
     "peers": [
       {
@@ -535,12 +535,12 @@
           ]
         },
         {
-          "label": "EBITDA €570M",
+          "label": "EBITDA €590M",
           "vals": [
-            "€285",
-            "€316",
-            "€354",
-            "€393"
+            "€295",
+            "€326",
+            "€366",
+            "€406"
           ]
         },
         {
