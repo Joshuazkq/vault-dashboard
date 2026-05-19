@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "PGC",
     "version": "2.0.0"
   },
@@ -73,7 +73,7 @@
       "**Collins EXEC-DIR-M&A transition** — Was surfaced as a potential \"departure signal\" but bulk-transcript-review confirmed this is M&A specialization, not a step-down. Any further commentary on Collins role is organizational noise."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/PGC/INDICATORS.md",
-    "staleDays": 18,
+    "staleDays": 22,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -204,6 +204,14 @@
         "indicator": "ALL",
         "new": "—",
         "old": "—"
+      },
+      {
+        "action": "No action — confirmed on track. Decisive event remains the FY26 full-year result ~Aug 2026.",
+        "assessment": "**No structural threshold breached.** #9 and #10 DATA GAPs persist (export returned [NO DATA]). FP-7 watch (#1 customer write-off recurrence) clean — no new write-off event. Route-B ticker (MONITORING) — manual indicator-update process applied; no auto-CHANGELOG.",
+        "date": "2026-05-18",
+        "indicator": "Weekly leading-indicator scan (week ending 2026-05-18)",
+        "new": "**No PGC ASX announcement in the 12–18 May window** (next scheduled: annual report 29 Sep 2026). Section C returned [NO DATA] on independent-pharmacy insolvency filings (cyclical #12), EBOS earnings / multiple move (cyclical #13), the ANZ healthcare-distributor credit-spread proxy (#9), PGC short interest (#10), the ScotPac facility (#8), and TGA actions. Chemist Warehouse (via Sigma) reported strong May 2026 momentum — sector context, no direct PGC channel impact. [FACT] PGC A$0.145; new 52-wk low A$0.14 (11 May 2026); mcap ~A$240M (Source: Perplexity weekly scan 2026-05-18). [SOURCE CONFLICT — Rule §8] Export flags Wilson AM substantial-holder status: \"ceased to be substantial holder\" (Form 605, 12 Jun 2025) vs FT company profile 4.99% (Dec 2025) — unresolved, likely a sub-threshold continuing position vs a fresh primary filing; vault THESIS records Wilson AM 7.45% per the 22 Sep 2025 register, and no new Form 603/604/605 surfaced in window.",
+        "old": "n/a"
       }
     ]
   },

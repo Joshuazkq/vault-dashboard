@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "MYR",
     "version": "2.0.0"
   },
@@ -107,9 +107,9 @@
       },
       {
         "class": "CYCLICAL",
-        "context": "Monthly MHSI release; trend-line proxy for category demand. **+YoY in both relevant categories supports soft-landing thesis (not recession).**",
-        "current": "**Feb 2026 MHSI (replacement series, 6 Apr 2026 release): total household spend +0.3% MoM / +4.6% YoY to A$79.1B. Clothing, footwear & personal accessory +4.93% YoY (A$2.84B → A$2.98B); Department stores + large online +3.70% YoY (A$1.58B → A$1.64B). [FACT]** Series changed — 8501.0 ceased 31 Jul 2025; MHSI is ABS replacement. Next release 5 May 2026.",
-        "lastUpdated": "2026-04-21",
+        "context": "Monthly MHSI release; trend-line proxy for category demand. **Aggregate consumer OK; Q1 segment-volume softening is the watch-signal.**",
+        "current": "**March 2026 MHSI (released 4 May 2026): total household spending +1.6% MoM SA. Clothing & footwear MoM — ⚠️CONFLICT: +1.3% (ABS-direct, per INDICATORS 2026-05-12 + NOTES 2026-05-14 debate) vs +0.2% (2026-05-15 weekly); unresolved per Rule §8 — cyclical, no thesis impact, verify at April MHSI 28 May 2026. [FACT]** Q1 2026 clothing/footwear chain-volume -1.0% QoQ (first contraction). Prior: Feb 2026 MHSI clothing/footwear +4.93% YoY; dept stores+online +3.70% YoY.",
+        "lastUpdated": "2026-05-15",
         "name": "ABS Retail Trade 8501.0 (Department stores + Clothing, footwear & personal accessory retailing)",
         "num": 13
       },
@@ -129,10 +129,10 @@
       "**Single-director single-day trades** — Only cluster signals (3+ directors within 30 days) or Lew Group Form 604/605 moves carry thesis weight. Isolated A$10-50k director trades are PR noise.",
       "**Short-term ASX queries on disclosure** — ASX can issue queries on any disclosure. Response within 10 business days = operational noise. Only unresolved / escalated queries touching financial-statements integrity are structural.",
       "**Sass&bide / Marcs / David Lawrence individual-brand margin swings** — These three brands are ~A$10M synergy target combined; individual brand performance is noise vs the aggregated A$40M total synergy pool. Only aggregate tracking matters.",
-      "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6)"
+      "**52-week-low prints on intraday / weekly ticks (13 Apr 2026 A$0.28)** — **[FACT]** MYR printed 52-wk low A$0.28 on 13 Apr 2026 during broader ASX Small Ords sell-off (XSO -10.65% 3-mo to 17 Apr before recovering +9.5% 1-mo). XSO recovery + Perpetual substantial-holder exit (24 Mar 2026) → absorbable short-term mechanical flow, NOT thesis breakdown. **[INFERENCE]** Only a close below A$0.25 sustained for 5+ sessions on volume >A$5M/day = meaningful. Single-day 52-wk lows during sector-wide risk-off = noise. (Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §Cross-Ticker D2 + §MYR B6) **Update 2026-05-15:** new 52-wk low A$0.25 set 4 May 2026; MYR A$0.25 live (prices.py 2026-05-15). Still AT — not sustained below — the A$0.25 meaningful-threshold; classification holds, floor under test."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MYR/INDICATORS.md",
-    "staleDays": 3,
+    "staleDays": 1,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -186,42 +186,42 @@
       },
       {
         "class": "STRUCTURAL",
-        "current": "26.77% at 1 July 2025 (Form 603/604); creep provisions allow +3%/6mo. **[DATA GAP] No new Form 603/604/605 in 5–11 May 2026 window; no ASX Appendix 3X for Solomon Lew commencement sighted as of 2026-05-12 = ~12 days overdue vs April 2026 commencement target (shareholder-approved at Dec 2025 FY25 AGM — NOT a separate April-AGM event, which does not exist publicly).**",
-        "direction": "↕ Watch (creep window open; board-join overdue vs April 2026 target; 30 Jun 2026 escalation gate ~7 weeks away)",
-        "lastUpdated": "2026-05-12",
+        "current": "~29.72% (Oct 2025, 514,380,403 shares — post-51.7M on-market buy; Ragtrader). Prior Form 603/604 datum 26.77% at 1 Jul 2025. Creep provisions allow +3%/6mo. **[DATA GAP] No new Form 603/604/605 in 9–15 May 2026 window; no ASX Appendix 3X for Solomon Lew commencement sighted as of 2026-05-15 = ~19 days overdue vs April 2026 commencement target (shareholder-approved Dec 2025 FY25 AGM — no separate April-AGM event exists publicly). Gary Weiss (Lew associate) joined HR & Remuneration Committee eff 28 Apr 2026 (MarketScreener). Unidentified new substantial holder (Form 603 timestamped 28–29 Apr 2026) still not identified in authorised sources.**",
+        "direction": "↕ Watch (creep window open; board-join ~22d overdue vs April 2026 target; no Appendix 3X / Form 603-605 in 12–18 May window; 30 Jun 2026 escalation gate ~6 weeks away)",
+        "lastUpdated": "2026-05-18",
         "name": "Lew Group (Premier Investments + associates) ownership (% of issued capital)",
         "num": 6,
-        "source": "(Source: 2026-04-21 baseline + 2026-05-11 weekly + Notice of AGM 2025 PDF, ASX 10 Nov 2025; Inside Retail Dec 2025 secondary)",
+        "source": "(Source: 2026-04-21 baseline + 2026-05-15 weekly + 2026-05-18 weekly + Notice of AGM 2025 PDF, ASX 10 Nov 2025)",
         "threshold": "Net seller during 2026 = REDUCE to 2-3%; any on-market buy post-Apr-2026 board join = up-size gate to 6-7%; **board-join slip past 30 Jun 2026 = escalation gate fires (V8 conditional rescore per CHANGELOG 2026-05-01)**"
       },
       {
         "class": "STRUCTURAL",
-        "current": "[DATA GAP — first print pending]",
-        "direction": "—",
-        "lastUpdated": "2026-04-21",
+        "current": "**First print: iTraxx Australia 5Y CDS Series 44 = 72 bps (8 May 2026); intra-window peak 78 bps (4 May); ~66 bps end-Jan 2026 = +6 to +12 bps/30d. [FACT]** NOTE: Series 44 is investment-grade (25 liquid AU IG entities) — directional proxy only; dedicated ASX Sub-IG discretionary spread not published = [DATA GAP persists].",
+        "direction": "→ stable (well within 50bps threshold; no breach)",
+        "lastUpdated": "2026-05-15",
         "name": "ASX consumer discretionary credit spread / iTraxx Australia Sub-IG",
         "num": 7,
-        "source": "Bloomberg/CapIQ/Markit (Rule 10 §3.3.3 standard)",
+        "source": "OCBC Daily Credit Snapshot 4 & 8 May 2026 (via 2026-05-15 weekly)",
         "threshold": ">50bps widening in 30d = macro-stress signal (Rule 10 standard)"
       },
       {
         "class": "STRUCTURAL",
-        "current": "**6.49% (1 May 2026 ASIC) — up +1.51pp over prior 30 days. New 52-week high (range 0.20%–6.49%). [FACT]** Prior readings: 4.44% (31 Mar) → 5.39% (13 Apr) → 6.11% (22 Apr) → 6.49% (1 May).",
-        "direction": "↑ **BREACH SUSTAINED — >5% absolute threshold crossed since 13 Apr; 30d delta +1.51pp (<2x — full 2x trigger would require 4.98%→9.96%, partial only). New 52w high.**",
-        "lastUpdated": "2026-05-12",
+        "current": "**6.41% (4 May 2026 ASIC daily report — 110,939,159 short / 1,730,746,199 on issue). [FACT]** Series: 4.44% (31 Mar) → 5.39% (13 Apr) → 6.11% (22 Apr) → 6.49% (1 May) → 6.41% (4 May); StockTrack records intra-period peak 6.62% (28 Apr). 30d build ~+1.5pp.",
+        "direction": "↑ **BREACH SUSTAINED >5% (since 13 Apr); flat-to-trimming vs 1 May. 2x trigger NOT met — 2026-05-15 weekly's \"16 Apr 0.32% → doubling\" claim REJECTED as an extraction error (contradicts vault ASIC series 5.39% on 13 Apr; report cited adjacent-ticker row).**",
+        "lastUpdated": "2026-05-15",
         "name": "Short interest (% of float)",
         "num": 8,
-        "source": "(Source: ShortInterest.au, sourced from ASIC daily short-position reports, accessed 2026-05-12; T+4 data for trade dates 5-9 May 2026 publishes 13-15 May 2026)",
+        "source": "ASIC daily short report 4 May 2026 (via 2026-05-15 weekly); ShortInterest.au; StockTrack.com.au",
         "threshold": ">5% absolute or >2x increase in 30d (Rule 10 standard)"
       },
       {
         "class": "STRUCTURAL",
-        "current": "MEB relaunch Feb 2026 delivered; **MEB redesign of 5 owned labels (Blaq, Basque, Grab, There After, Regatta) underway per Ragtrader 9 Apr 2026 [FACT]**; Mirakl May 2026 confirmed live w/ Samsung partner [FACT]; transitional services in-housed (disclosed 1H FY26)",
-        "direction": "→ On track (Mirakl live date ~May 2026, confirmed in scan window)",
-        "lastUpdated": "2026-04-21",
+        "current": "MEB relaunch Feb 2026 delivered (~3/4 legacy MEB inventory cleared at 1H FY26); **MEB redesign of 5 owned labels (Blaq, Basque, Grab, There After [replaced retired Tokito], Regatta) underway [FACT]**; **Mirakl: 1H FY26 slide guided \"on track for launch in May\" — NO public go-live confirmation as of 15 May 2026 [INFERENCE — slip-watch, 2nd consecutive week]**; Samsung confirmed new marketplace partner; transitional services in-housed (1H FY26)",
+        "direction": "→ On track; Mirakl go-live unconfirmed (escalate if no launch by 31 May 2026)",
+        "lastUpdated": "2026-05-15",
         "name": "Apparel Brands integration execution milestones (MEB relaunch / Mirakl / transitional services in-housing)",
         "num": 9,
-        "source": "(Source: 2026-04-21_Weekly_Leading_Indicator_Scan.md, §MYR B3; Ragtrader 9 Apr 2026; Michael West Media HY26 briefing 23 Mar 2026)",
+        "source": "(Source: 2026-05-15 weekly; 2026-04-21 baseline; Ragtrader 9 Apr 2026)",
         "threshold": "Mirakl launch slippage >Q4 CY2026 OR MEB abandoned = integration execution failure signal"
       },
       {
@@ -315,6 +315,62 @@
         "indicator": "RBA macro context",
         "new": "**RBA hiked +25bps to 4.35% on 5 May 2026 (3rd 2026 hike; 8-1 vote). Consumer discretionary weakest ASX 200 sector that day.**",
         "old": "\"RBA cash rate 4.10% pre-2026-05-05\""
+      },
+      {
+        "action": "No action — within range.",
+        "assessment": "First print. +6–12 bps/30d — **well within 50 bps macro-stress threshold; no breach.** Series 44 is IG (not Sub-IG) — directional proxy only; true ASX Sub-IG discretionary spread unpublished (DATA GAP persists).",
+        "date": "2026-05-15",
+        "indicator": "#7 iTraxx/credit",
+        "new": "**iTraxx Australia 5Y CDS Series 44: 72 bps (8 May 2026); intra-window peak 78 bps (4 May); ~66 bps end-Jan 2026.**",
+        "old": "[DATA GAP — first print pending]"
+      },
+      {
+        "action": "No new CHANGELOG (>5% breach already covered by CHANGELOG 2026-04-21). Continue weekly monitoring.",
+        "assessment": "Breach sustained >5% (since 13 Apr); flat-to-trimming vs 1 May (StockTrack peak 6.62% on 28 Apr). **2026-05-15 weekly flagged a \"30-day doubling\" (16 Apr 0.32% → 4 May 6.41%) — REJECTED as a data-extraction error: 0.32% contradicts the vault's clean ASIC series (5.39% on 13 Apr, 3 days earlier) and the report's [22] citation snippet shows adjacent-ticker rows (BOQ/Bannerman). Credible 30d move = +1.5pp. 2x trigger NOT met.**",
+        "date": "2026-05-15",
+        "indicator": "#8 Short Interest",
+        "new": "**6.41% (4 May 2026 ASIC; 110.9M short / 1,730.7M on issue).**",
+        "old": "6.49% (1 May 2026)"
+      },
+      {
+        "action": "No action — monitor weekly. QUESTIONS entry already open (2026-05-12).",
+        "assessment": "Slip-watch, 2nd consecutive week. Threshold breach requires slippage past Q4 CY2026 — far off. **[INFERENCE]** Escalate if no go-live by 31 May 2026; integration-narrative hit if none by 30 Jun.",
+        "date": "2026-05-15",
+        "indicator": "#9 AB Integration (Mirakl)",
+        "new": "**No public go-live confirmation as of 15 May 2026.** 1H FY26 slide language was \"on track for launch in May\" — prior dashboard wording \"confirmed live\" corrected.",
+        "old": "\"Mirakl May 2026 confirmed live\""
+      },
+      {
+        "action": "No action this week; 30 Jun gate live.",
+        "assessment": "Board-join continues to slip; 30 Jun 2026 V8-rescore escalation gate now ~6 weeks away. Unidentified new substantial holder (Form 603, 28–29 Apr) still not identified.",
+        "date": "2026-05-15",
+        "indicator": "#6 Lew Timing",
+        "new": "**~19 days overdue vs April 2026 commencement target; no Appendix 3X sighted 9–15 May. Gary Weiss joined HR & Rem Committee eff 28 Apr 2026.**",
+        "old": "\"~12 days overdue (2026-05-12)\""
+      },
+      {
+        "action": "No structural breach. Verify at April MHSI release 28 May 2026.",
+        "assessment": "**Source conflict (Rule §8)** — +1.3% (ABS-direct) vs +0.2% (weekly synthesis) unresolved; cyclical, no thesis impact. Total household spend +1.6% MoM.",
+        "date": "2026-05-15",
+        "indicator": "#13 MHSI cyclical",
+        "new": "**2026-05-15 weekly reports clothing/footwear +0.2% MoM for the same March 2026 release.**",
+        "old": "\"Mar 2026: clothing/footwear +1.3% MoM (2026-05-12 entry)\""
+      },
+      {
+        "action": "No action — noise-filter classification holds; monitor.",
+        "assessment": "Within Noise Filter #7 (meaningful only on a close <A$0.25 sustained 5+ sessions on >A$5M/day volume) — price is AT, not sustained below, the line. Floor under test; ~32d of post-13-Apr weakness.",
+        "date": "2026-05-15",
+        "indicator": "Price context (Noise #7)",
+        "new": "**New 52-wk low A$0.25 (4 May 2026); MYR A$0.25 live (prices.py 2026-05-15); A$0.265 close 13 May.**",
+        "old": "52-wk low A$0.28 (13 Apr)"
+      },
+      {
+        "action": "No action — confirmed on track. Watch: Mirakl 31 May gate; Lew 30 Jun escalation gate; April MHSI 28 May.",
+        "assessment": "**No structural threshold breached.** #8 short-interest >5% breach remains sustained (already covered by CHANGELOG 2026-04-21); no new ASIC print in window. Price drift below A$0.25 stays within Noise Filter #7 pending the volume/duration test.",
+        "date": "2026-05-18",
+        "indicator": "Weekly leading-indicator scan (week ending 2026-05-18)",
+        "new": "**No new MYR-specific data in window.** Section B of the combined ANG/MYR/PGC scan returned [NO DATA] on ASX announcements (B1), ABS Retail Trade release (B2), MYER one partner news (B4), short interest (B6), and goodwill impairment (B7). #9 Mirakl — no public go-live confirmation (3rd consecutive week; 31 May escalation gate ~13 days out). #6 Lew board — no Appendix 3X / Form 603-605 in the 12–18 May window; commencement now ~22 days overdue vs the April 2026 target. [FACT] MYR ~A$0.235–0.240; export cites a marginal new 52-wk low ~A$0.24 touched 18 May; A$0.015 dividend pays 21 May 2026 (declared at 1H FY26 — not a new event) (Source: Perplexity weekly scan 2026-05-18).",
+        "old": "n/a"
       }
     ]
   },
@@ -481,11 +537,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-15: Report Review: Weekly Intelligence Update (9–15 May 2026)",
     "2026-05-14: Debate Session: 3-Vector Re-Stress (triggered by price drop + Lew delay)",
     "2026-05-14: Action 2 (watchlist-audit Action 2): MYR Lew board + GRB nexus + substantial-holder web-research pass",
     "2026-05-12: Report Review: MYR Weekly Intelligence Update (5–11 May 2026)",
-    "2026-05-08: Report Review: MYR Weekly Intelligence Update (1–8 May 2026)",
-    "2026-04-30: Report Review: MYR Weekly Intelligence Update (23–30 Apr 2026)"
+    "2026-05-08: Report Review: MYR Weekly Intelligence Update (1–8 May 2026)"
   ],
   "scenarios": [
     {

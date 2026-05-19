@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "SPSC",
     "version": "2.0.0"
   },
@@ -46,7 +46,7 @@
       "**Analyst PT revisions without new modeling** — Most estimates don't separate core vs. recovery. Only react to analysts who model segment-level dynamics."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/SPSC/INDICATORS.md",
-    "staleDays": 30,
+    "staleDays": 34,
     "structural": [
       {
         "class": "STRUCTURAL",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "ECO",
     "version": "2.0.0"
   },
@@ -18,11 +18,11 @@
     {
       "code": "A1",
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "situation-screen 2026-05-14 (session #14 formal re-anchor): Forward IRR 8.8% at $54.44 vs PW-FV $59.23 — FAIL 30% gate. Stage-3 entry anchor $25-28 mispriced by +95-118% repricing; pullback re-anchor zone $35-45 cleanly clears gate (32-69% IRR). Artifact at _Screening/CapIQ Screeners/2026-05-14_ECO_situation_screen.md",
+      "evidence": "Forward IRR formula cited",
       "reason": "",
-      "since": "2026-05-14",
+      "since": "",
       "stage": "A",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "A2",
@@ -81,11 +81,11 @@
     {
       "code": "C3",
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "session-13 narrative rollback: C3 PW-FV Bull/Base/Bear ($70-88 / $55-64 / $24 at 35/45/20%) is preliminary pending A1 re-anchor outcome; formal FVE re-derivation deferred to Phase 2 if A1 clears",
+      "evidence": "fair-value / scenario PW-FV present in THESIS.md",
       "reason": "",
-      "since": "2026-05-14",
+      "since": "",
       "stage": "C",
-      "state": "PENDING"
+      "state": "MET"
     },
     {
       "code": "D1",

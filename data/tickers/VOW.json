@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "VOW",
     "version": "2.0.0"
   },
@@ -137,7 +137,7 @@
       "**\"VOW subsequent equity offering\" (retracted 2026-04-20)** — A prior daily briefing draft attributed a MarketScreener \"Final result of subsequent offering and allocation of offer shares\" (17 Apr 2026) to VOW ASA. That notice was issued by **Golden Energy Offshore Services ASA**, NOT VOW ASA. Fully retracted. No VOW equity issuance is live. Last VOW equity raise on record remains the Dec 2024 rights issue (NOK 250M gross, 166.67M new shares at NOK 1.50). Thesis-breaker (e) \"forced dilutive raise\" is NOT triggered. Indicator #8 covenant status reverts to pre-bridge severity (no equity cure funded). Documented here to prevent reactive thesis revision if the misattribution resurfaces. (Source: Daily Intelligence Brief 2026-04-20, Double-Check Log item 1.)"
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/VOW/INDICATORS.md",
-    "staleDays": 7,
+    "staleDays": 11,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -292,6 +292,14 @@
         "indicator": "#10 Cruise operator capex (cyclical)",
         "new": "RCL Q1 2026 beat + FY EPS cut $0.60 on fuel + Icon VI/VII order. NCLH Q1 2026 beat + FY EPS cut ~30% midpoint + 17 newbuilds intact. **Operators absorbing fuel headwind via EPS trim, NOT via capex deferral.**",
         "old": "\"Record strong across all three majors\""
+      },
+      {
+        "action": "No action — confirmed on track. **IMMINENT CATALYST: Q1 2026 results 20 May 2026 (tomorrow)** — multiple structural rows decisive on that print; re-run indicator-update / event-prep immediately post-release.",
+        "assessment": "**Weekly leading-indicator scan processed (week ending 2026-05-18).** No new cruise newbuild orders or Scanship contracts confirmed in the May 12–18 window. Two OSE notices: (a) 2026-05-13 \"Invitation to presentation of Q1 2026 financial results\" — **VOW Q1 2026 results release Wed 20 May 2026** (decisive print for #2 options outstanding, #3 ships-being-bid, #4 new-contract margin at ~68% new mix, plus first reads on #8 covenant and #9 contract assets); (b) 2026-05-05 \"Notice of AGM\" — **AGM Wed 27 May 2026, 13:00 CEST**. [FACT] VOW ~NOK 2.36-2.44, 52-wk range NOK 1.45-3.50, mcap ~NOK 688M (Source: Perplexity weekly scan 2026-05-18). No structural threshold breached.",
+        "date": "2026-05-18",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
       }
     ]
   },
@@ -507,11 +515,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-15: Report Review: VOW ASA Weekly Intelligence Update (8–15 May 2026) — DELTA vs 2026-05-12",
     "2026-05-12: Report Review: VOW ASA Weekly Intelligence Update (5–11 May 2026) — DELTA vs 2026-05-08",
     "2026-05-08: Report Review: VOW ASA Weekly Intelligence Brief (1–8 May 2026) + Targeted Web Supplement",
     "2026-04-30: REFUTATION: \"24% New-Contract Margin from Q4 2025 Slide\" Claim — DO NOT REINTRODUCE",
-    "2026-04-30: Report Review: VOW ASA Weekly Intelligence Update (23–30 Apr 2026)",
-    "2026-04-30: Derivation: Q4 2025 Audited Standalone + 9M 2025 Implied (Work-Backwards from FY2025 Audited)"
+    "2026-04-30: Report Review: VOW ASA Weekly Intelligence Update (23–30 Apr 2026)"
   ],
   "variantViews": [
     "Maritime division alone (70% share monopolist, NOK 1.7B backlog) exceeds group EV by 39%. Margin improvement is contractual (signed backlog at better terms replacing expiring contracts at worse terms), not aspirational."

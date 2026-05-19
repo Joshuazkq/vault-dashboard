@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "ANG",
     "version": "2.0.0"
   },
@@ -82,7 +82,7 @@
       "**COO D'Rozario option expiry behavior (Apr 2026)** — 5M options @ A$0.35 strike expire 12 Apr 2026; most tranches likely worthless at current A$0.195. Expiry is mechanical. Not an insider-sell signal."
     ],
     "sourceFile": "Themes/Niche Industrial Monopolies/Tickers/ANG/INDICATORS.md",
-    "staleDays": 24,
+    "staleDays": 1,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -176,12 +176,12 @@
       },
       {
         "class": "STRUCTURAL",
-        "current": "[DATA GAP — first print pending]",
-        "direction": "—",
-        "lastUpdated": "2026-04-21",
+        "current": "**0.07% of issue (ASX short-report, May 2026) [VERIFIED — trade]** — extremely low; no active short positioning. DATA GAP resolved.",
+        "direction": "→ Benign",
+        "lastUpdated": "2026-05-18",
         "name": "Short interest (% of float)",
         "num": 10,
-        "source": "ASX short-report (Rule 10 standard)",
+        "source": "ASX short-report (via Perplexity weekly scan 2026-05-18)",
         "threshold": ">5% absolute OR >2x in 30d (Rule 10 §3.3.3 standard)"
       }
     ],
@@ -193,6 +193,14 @@
         "indicator": "ALL",
         "new": "—",
         "old": "—"
+      },
+      {
+        "action": "No action — confirmed on track. Decisive event remains the H2 FY26 result ~Aug 2026; Chile renegotiated-contract May 2026 deliveries (#1) are the near-term watch.",
+        "assessment": "**No structural threshold breached.** Route-B ticker (MONITORING) — manual indicator-update process applied; no auto-CHANGELOG.",
+        "date": "2026-05-18",
+        "indicator": "Weekly leading-indicator scan (week ending 2026-05-18)",
+        "new": "**No ANG ASX announcement in the 12–18 May window** (most recent = 13 Apr 2026 \"Notification of cessation of securities\"; no Appendix 3Y director filings sighted). #4 — BHP/RIO/FMG at/near record commodity-price highs; no formal FY26/FY27 capex cut → U1 STRUCTURAL-cap trigger does NOT fire. #7 (Schlam/USCO/Xeroline competitive activity), #8 (Grasberg restart) — [NO DATA] in window. **#10 Short interest — DATA GAP resolved: 0.07% of issue (ASX short-report, May 2026) — extremely low, no active short thesis.** #9 AU mining-services credit-spread proxy — [DATA GAP persists]. [FACT] ANG ~A$0.185–0.190 (15 May close); 52-wk range A$0.160–0.390; mcap ~A$115M (Source: Perplexity weekly scan 2026-05-18).",
+        "old": "n/a"
       }
     ]
   },

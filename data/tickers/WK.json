@@ -1,26 +1,9 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "WK",
     "version": "2.0.0"
-  },
-  "catalysts": [],
-  "financials": {
-    "cash": "338,769",
-    "debtDetails": [],
-    "ebitda": "—",
-    "ebitdaMargin": "—",
-    "eps": "$(0.47)",
-    "fcf": "138.0",
-    "fy": "FY2025",
-    "leverage": "—",
-    "leverageNum": 0,
-    "netDebt": "—",
-    "netIncome": "(26.2)",
-    "revenue": "884.6",
-    "revenueGrowth": "+19.8%",
-    "totalDebt": "—"
   },
   "pm": {
     "archetype": "F",
@@ -89,115 +72,5 @@
         "score": 4
       }
     ]
-  },
-  "premortem": [],
-  "rcChecklist": [
-    {
-      "code": "A1",
-      "criterion": "situation-screen passed (Forward IRR > 30% gate)",
-      "evidence": "run situation-screen",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "A",
-      "state": "PENDING"
-    },
-    {
-      "code": "A2",
-      "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
-      "evidence": "run pattern-match",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "A",
-      "state": "PENDING"
-    },
-    {
-      "code": "A3",
-      "criterion": "OVERVIEW.md sourced from audited filing",
-      "evidence": "audited filing in Filings/",
-      "reason": "",
-      "since": "",
-      "stage": "A",
-      "state": "MET"
-    },
-    {
-      "code": "B1",
-      "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
-      "evidence": "recent filing file: Workiva_Inc_-_Form_10-K(Feb-19-2026).md",
-      "reason": "",
-      "since": "",
-      "stage": "B",
-      "state": "MET"
-    },
-    {
-      "code": "B2",
-      "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
-      "evidence": "transcripts: 22 Sources Processed rows; 22 files in Transcripts/; 22 inline-cited",
-      "reason": "",
-      "since": "",
-      "stage": "B",
-      "state": "MET"
-    },
-    {
-      "code": "C1",
-      "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
-      "evidence": "no open [BLOCKING] items in QUESTIONS.md",
-      "reason": "",
-      "since": "",
-      "stage": "C",
-      "state": "MET"
-    },
-    {
-      "code": "C2",
-      "criterion": "≥1 dated forward catalyst registered",
-      "evidence": "no forward catalyst found — update catalyst-tracker or THESIS Catalyst Timeline",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "C",
-      "state": "PENDING"
-    },
-    {
-      "code": "C3",
-      "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
-      "evidence": "restored 2026-04-30 — was MET pre-refresh-all bug; rerun owning skill to refresh evidence text",
-      "reason": "",
-      "since": "",
-      "stage": "C",
-      "state": "MET"
-    },
-    {
-      "code": "D1",
-      "criterion": "debate-session run across all 6 pressure vectors",
-      "evidence": "DEBATES.md present but only 5 vectors detected — need 6",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "D",
-      "state": "PENDING"
-    },
-    {
-      "code": "D2",
-      "criterion": "market-vs-me-diagnostic run within 90 days",
-      "evidence": "market-vs-me-diagnostic section present but >90 days old or no date",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "D",
-      "state": "PENDING"
-    },
-    {
-      "code": "D3",
-      "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "run cross-model-validation + conviction-scoring (+ angels-advocate if HIGH_CONVICTION)",
-      "reason": "",
-      "since": "2026-04-30",
-      "stage": "D",
-      "state": "PENDING"
-    }
-  ],
-  "recentNotes": [
-    "2026-03-27: Bulk Transcript Review (22 transcripts)",
-    "2026-03-27: Q4 2025 Earnings Call (Tier 3 Deep Extraction)",
-    "2026-03-27: Analyst/Investor Day (Tier 3 Deep Extraction)",
-    "2026-03-27: Special Call: Workiva AI Roadmap (Tier 3 Deep Extraction)",
-    "2026-03-27: MS Conference Mar 2026 (Tier 3 Deep Extraction)"
-  ],
-  "variantViews": []
+  }
 }

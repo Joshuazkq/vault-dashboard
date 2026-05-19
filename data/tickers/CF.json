@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "CF",
     "version": "2.0.0"
   },
@@ -135,7 +135,7 @@
       "**CF share price moves on market-wide selloffs** — CF correlates with energy/materials in risk-off. If urea prices hold while CF drops, that's a buying opportunity, not a thesis challenge."
     ],
     "sourceFile": "Themes/Hormuz/Tickers/CF/INDICATORS.md",
-    "staleDays": 39,
+    "staleDays": 43,
     "structural": [
       {
         "class": "STRUCTURAL",

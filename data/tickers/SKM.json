@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "SKM",
     "version": "2.0.0"
   },
@@ -20,8 +20,8 @@
       {
         "class": "CYCLICAL",
         "context": "KRW weakness drags ADR (SKM NYSE) vs underlying KRX 017670.KS. >8% KRW weakening = S4 Bear path partial firing. Track 30-day MA + Korean current account / BoK rate decisions",
-        "current": "~1,380-1,420 KRW/USD range (entry context)",
-        "lastUpdated": "2026-04-27",
+        "current": "**~1,476-1,499 KRW/USD (May 12-18 2026; ~6% weaker vs ~1,400 entry context — below the 8% S4 partial-fire threshold). 30-day change: won -1.83%.** Entry context was ~1,380-1,420.",
+        "lastUpdated": "2026-05-18",
         "name": "KRW / USD",
         "num": 8
       },
@@ -68,16 +68,16 @@
       "**Sell-side telco-core PT changes** — Most US sell-side firms model SKM as a Korean telco at 6-7x EV/EBITDA without Anthropic stake explicit. PT changes that don't reference Anthropic stake (#7) are telco-core noise. Only react to PT changes that explicitly cite the stake."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/SKM/INDICATORS.md",
-    "staleDays": 3,
+    "staleDays": 1,
     "structural": [
       {
         "class": "STRUCTURAL",
-        "current": "**$380B post-money (Series G, Feb 12 2026)**; secondary $800B+ ask DECLINED Apr 15 2026; **near-$1T pre-money round in active board-pending talks (FT/Reuters May 7-8, ~$50B target, Dragoneer + General Catalyst) — NOT CLOSED**; secondary marks ~$1.0-1.2T on Forge / LinkedIn (May 2026 — informational only)",
+        "current": "**$380B post-money (Series G, Feb 12 2026)**; secondary $800B+ ask DECLINED Apr 15 2026; **near-$1T pre-money round in active board-pending talks (FT/Reuters May 7-8; NYT + Bloomberg May 12 sharpen the figure to ~$900-950B valuation / $30-50B target raise; Dragoneer + General Catalyst) — IN NEGOTIATION, NOT CLOSED**; secondary marks ~$1.0-1.2T on Forge / LinkedIn (May 2026 — informational only)",
         "direction": "↑ Re-rating cycle",
-        "lastUpdated": "2026-05-12",
+        "lastUpdated": "2026-05-18",
         "name": "**Anthropic implied valuation (most recent transaction)** ⭐ THESIS-CORE",
         "num": 1,
-        "source": "Anthropic press release Feb 12 2026; TechCrunch Apr 15 2026; FT/Reuters May 7-8 2026; Business Insider May 2026",
+        "source": "Anthropic press release Feb 12 2026; TechCrunch Apr 15 2026; FT/Reuters May 7-8 2026; NYT + Bloomberg May 12 2026; Perplexity weekly scan 2026-05-18",
         "threshold": "**<$350B next primary round = down-round → thesis-break (S5 trigger a) → mandatory exit;** $400-600B = base; ≥$600B transacted secondary or primary = Rule §20 fire (Bull scenario activating)"
       },
       {
@@ -189,6 +189,14 @@
         "indicator": "Weekly tracker refresh (5-11 May report review)",
         "new": "**No structural threshold breach.** #1 ($380B primary unchanged; $900B-$1T round in talks, not closed); #2 (GS/JPM/MS IPO advisory discussions, Oct 2026 tentative target, no S-1); #3 (0.3% stake; K-DART Q1 interim late May still pending); #4 (live $38.58 = -0.10% from entry, in-band; Morningstar FV $44.70 ~$0.30 above upper MTM trigger — watch); #5 (governance stable); #6 (Anthropic board pending May 2026); #7 V2 OPEN held — Big-3 conflict-of-interest blindspot newly identified.",
         "old": "n/a"
+      },
+      {
+        "action": "No action — refresh log only. **CHANGELOG: not warranted** — in-negotiation valuation is not a closed transaction and the round was already captured 2026-05-12; surfaced to user, no write. Override #2 §1 time-decay: 20 days remain to 2026-06-07.",
+        "assessment": "The $900-950B figure is a refinement of the board-pending round already logged 2026-05-12, not a new transactable event. Bull trajectory intact; threshold fires only on a *closed* round/secondary. Override #2 governing behavior unchanged.",
+        "date": "2026-05-18",
+        "indicator": "Weekly leading-indicator scan (week ending 2026-05-18)",
+        "new": "**No structural threshold breach; no Rule §20 trigger fired.** [FACT] #1 — NYT (May 12) + Bloomberg (May 12) sharpen the in-talks Anthropic round to ~$900-950B valuation / $30-50B raise; **round remains IN NEGOTIATION, not a closed transaction** — the #1 threshold (≥$600B *transacted* secondary or primary) is NOT met. #2 — Anthropic IPO unchanged (Q4 2026 talk, Wilson Sonsini, no S-1). #3 — stake % still DATA GAP; K-DART Q1 interim (late May) still the resolution path. #5 — no SK Group / Chey Tae-won governance event in window. #7 — no new Big-3 SOTP note; V2 OPEN held. #8 (cyclical) — KRW updated to ~1,476-1,499 (~6% weaker vs entry context, below 8% S4 partial-fire threshold).",
+        "old": "n/a"
       }
     ]
   },
@@ -199,7 +207,7 @@
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -208,7 +216,7 @@
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -217,7 +225,7 @@
       "criterion": "OVERVIEW.md sourced from audited filing",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -226,7 +234,7 @@
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "B",
       "state": "PENDING"
     },
@@ -235,7 +243,7 @@
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "B",
       "state": "PENDING"
     },
@@ -244,7 +252,7 @@
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -253,7 +261,7 @@
       "criterion": "≥1 dated forward catalyst registered",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -262,7 +270,7 @@
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -271,7 +279,7 @@
       "criterion": "debate-session run across all 6 pressure vectors",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     },
@@ -280,7 +288,7 @@
       "criterion": "market-vs-me-diagnostic run within 90 days",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     },
@@ -289,7 +297,7 @@
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     }

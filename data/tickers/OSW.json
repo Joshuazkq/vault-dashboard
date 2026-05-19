@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "OSW",
     "version": "2.0.0"
   },
@@ -20,48 +20,48 @@
         "id": "G1",
         "max": 5,
         "name": "Derived-Demand Monopoly Position",
-        "rationale": "90%+ share, exclusive contracts, <2 competitors, long-dated lock-in",
+        "rationale": "—",
         "score": 5
       },
       {
         "id": "G2",
         "max": 5,
         "name": "Mechanical Revenue Linkage",
-        "rationale": "Newbuilds auto-covered; slight variability from passenger-spend behavior",
+        "rationale": "—",
         "score": 4.5
       },
       {
         "id": "G3",
         "max": 5,
         "name": "Primary-vs-Derived Discovery Gap",
-        "rationale": "5-9 analysts vs 15-25+ primary; ~3-4x gap; Phase 2 Partial Discovery",
+        "rationale": "—",
         "score": 3
       }
     ],
     "max": 35,
-    "scoredDate": "2026-04-17",
-    "sourceFile": "_Screening/CapIQ Screeners/2026-04-17_OSW_pattern_match.md",
-    "total": 28.5,
+    "scoredDate": "2026-05-15",
+    "sourceFile": "_Screening/CapIQ Screeners/2026-05-15_OSW_pattern_match_rescore.md",
+    "total": 28,
     "universal": [
       {
         "id": "U2",
         "max": 5,
         "name": "Repricing Mechanism",
-        "rationale": "15 ship deliveries in 2026 = mechanical revenue; EVIDENTIAL self-correction tier",
+        "rationale": "—",
         "score": 4
       },
       {
         "id": "U3",
         "max": 5,
         "name": "Business Quality",
-        "rationale": "Near-monopoly, 193 ships, exclusive contracts, revenue-sharing asset-light",
+        "rationale": "—",
         "score": 5
       },
       {
         "id": "U4",
         "max": 5,
         "name": "Balance Sheet & Torque (GATE)",
-        "rationale": "Net debt ~$67M; $50M revolver; <1x leverage; GATE PASSED",
+        "rationale": "—",
         "score": 4.5
       }
     ]

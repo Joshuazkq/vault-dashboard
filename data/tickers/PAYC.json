@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "PAYC",
     "version": "2.0.0"
   },
@@ -63,7 +63,7 @@
       "**Share price moves on rate expectations** — Float income sensitivity to rates is known. Stock moves on Fed commentary are mechanical, not fundamental."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/PAYC/INDICATORS.md",
-    "staleDays": 39,
+    "staleDays": 43,
     "structural": [
       {
         "class": "STRUCTURAL",

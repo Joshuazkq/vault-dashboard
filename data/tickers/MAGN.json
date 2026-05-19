@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "MAGN",
     "version": "2.0.0"
   },
@@ -76,7 +76,7 @@
       "**Routine supply-chain reshuffling commentary on tariffs** — Magnera management views direct tariff cost as limited; only escalation to confirmed margin compression matters."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/MAGN/INDICATORS.md",
-    "staleDays": 17,
+    "staleDays": 21,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -215,6 +215,14 @@
         "indicator": "Macro-input refresh (PP / Brent / Hormuz) — Rule §10 propagation from 11 May Daily Intelligence Briefing",
         "new": "**PP Asia 8,712 CNY/T on 7 May 2026, −5.98% MoM** (modest deflation off high base; still elevated YTD per April vault read of +34% YoY); **Brent $109/bbl May 2026** (down from April peak $117/bbl per countryeconomy.com); **Hormuz: contested / restricted with Iran formal vetting agency; US \"Project Freedom\" Hormuz operation suspended 5 May citing Iran negotiation progress; US-Iran fire exchange 4 May**. (Sources: brief footnotes [^21] Trading Economics PP; [^23] countryeconomy Brent; [^24]–[^27] Hormuz / Iran-US Axios/CNN/LA Times.)",
         "old": "PP Asia ~$0.62/lb (April vault read); Brent unspecified at 28 Apr; Hormuz unspecified at 28 Apr"
+      },
+      {
+        "action": "No MAGN thesis-breaker activation; H2-acceleration requirement reaffirmed (LTM $364M vs $380M guide floor); continue Q3 ~Aug 2026 EBITDA-pace watch.",
+        "assessment": "**No breach-flag status change.** #5 within-basis clarification — no structural threshold crossed. PP/Brent already flagged; freight remains below threshold. Per Rule §11: no V-dim shift, no allocation-band change, no scenario re-weight → NO CHANGELOG mandatory trigger.",
+        "date": "2026-05-15",
+        "indicator": "Leverage (#5) two-way clarification + macro-input reaffirm — Rule §10 propagation from 15 May Daily Intelligence Briefing",
+        "new": "**#5 Leverage:** Q2 10-Q discloses gross debt $1,899M, cash $303M → Net Debt ~$1,596M. **LTM-actual net leverage ~4.4x** (÷ LTM Adj EBITDA $364M); **PF net leverage ~3.87x** (÷ PF Adj EBITDA $412M incl $48M synergy/cost-reduction add-backs). The \"3.8x\" baseline and \">4.0x = thesis-altering\" threshold are on the PF/covenant-EBITDA basis (credit agreement admits synergy credit) → **PF 3.87x < 4.0x = NOT breached.** LTM-actual ~4.4x carried as skeptic-anchor watch framing only. **Macro reaffirm:** European PP $2.05/kg (+30.6% MoM April); NA PP $1.48/kg (+6.5% May); Brent ~$108–111/bbl; Shanghai-Rotterdam freight ~$2,046–2,232/FEU (below $3,000). (Source: brief §3 leverage trigger + §4 cost scan [^15]–[^20].)",
+        "old": "#5 carried as \"3.8x\" PF/covenant basis; PP/Brent per 2026-05-11 row"
       }
     ]
   },
@@ -329,11 +337,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-15: Report Review: MAGN & TRI-LSE Daily Intelligence Briefing (15 May 2026) — MAGN section",
     "2026-05-11: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (11 May 2026) — MAGN section",
     "2026-05-08: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (8 May 2026) — MAGN section",
     "2026-04-30: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (30 Apr) — MAGN section",
-    "2026-04-28: - Report Review: MAGN+TRI-LSE Daily Intelligence Brief (28 Apr — Q2 Date CONFIRMED 7 May, +9 days)",
-    "2026-04-21: - Report Review: Daily Intelligence Brief (MAGN + TRI-LSE Daily, Apr 14-21 Lookback)"
+    "2026-04-28: - Report Review: MAGN+TRI-LSE Daily Intelligence Brief (28 Apr — Q2 Date CONFIRMED 7 May, +9 days)"
   ],
   "valuation": {
     "lastUpdated": "2026-04-08",

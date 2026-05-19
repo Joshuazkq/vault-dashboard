@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "CRTO",
     "version": "2.0.0"
   },
@@ -152,7 +152,7 @@
       "**SBC volatility quarter-to-quarter** — Iponweb LUS roll-off complete. Quarterly SBC fluctuates with grant timing and stock price. Only track annualized run-rate vs normalized expectation (~$55-65M)."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/CRTO/INDICATORS.md",
-    "staleDays": 41,
+    "staleDays": 45,
     "trendLog": [
       {
         "action": "No action needed",
@@ -195,12 +195,28 @@
         "old": "(pre-Q1'26 baseline)"
       },
       {
+        "action": "No breach. Continue semi-monthly monitoring; check the post-earnings print at the next FINRA window.",
+        "assessment": "[FACT] 2.14–2.16% well below the 5% absolute threshold. [FACT] -8.21% MoM is a DECLINE — opposite direction to the 2× / 30-day investigate trigger. [INFERENCE] Short positioning eased slightly into the April 30 print; benign, consistent with the discovery-gap thesis — no active short thesis priced into the name. [DATA GAP] Apr 30 settlement predates the May 6 -13% post-Q1 earnings reaction; post-earnings FINRA print not yet published. Data cross-fed from the 2026-05-15 weekly intelligence brief — no Perplexity indicator export this cycle.",
+        "date": "2026-05-16",
+        "indicator": "Short Interest (#10)",
+        "new": "1.05M / ~2.14–2.16% (Apr 30, 2026 FINRA print); -8.21% MoM; DTC 6.5",
+        "old": "1.07M / 2.12% (Apr 14, 2026)"
+      },
+      {
         "action": "**Rule §11 hard-trigger fired (band change).** CHANGELOG MATERIAL entry written. Frontmatter band-tag + conviction-score updated. portfolio.md row sync required at next portfolio-update run (band column needs HIGH_CONVICTION → BASE). Watch Q2'26 print for: (a) commerce-vertical carve-out language (re-upgrade trigger), (b) PM clients citing agent-routed reallocation (Pattern-2 attribution confirmation), (c) re-evaluate council light run necessity.",
         "assessment": "This is V-dim recalibration + band-tag change, NOT structural-threshold breach. #7 (OpenAI partnership) status moves from CONDITIONAL to FIRED but underlying ad-partnership relationship intact (Criteo still listed; 1,000+ brands integration unchanged). No EXIT trigger fired. Conditional re-upgrade trigger: if Q2'26 OpenAI/Criteo joint disclosure designates Criteo commerce-vertical-only with no overlap from other 4 partners, V6 could be re-upgraded → Asymmetry back to STRONG → band tag back to HIGH CONVICTION. Live price $16.15 (Source: prices.py 2026-05-14; -0.31% vs 5/13 anchor; within 10% Rule §21 tolerance).",
         "date": "2026-05-14",
         "indicator": "**Pattern-2-Lens V6 CONDITIONAL FIRED + band tag HIGH CONVICTION → BASE**",
         "new": "**#7 OpenAI partnership — V6 CONDITIONAL FIRED** on launch-day multi-partner co-listing at OpenAI Ads Manager (May 5, 2026): Adobe / Criteo / Kargo / Pacvue / StackAdapt. User-confirmed reading: **#1 Literal** — trigger language (\"V6 5/5 → 3/5 if 2nd OpenAI AdTech partner signed within Q3'26\") fires when 2nd-5th partners co-listed at launch. **V6 5/5 EXTREME → 3/5 AVERAGE.** Asymmetry composite (V4 STRONG + V8 STRONG + V6 AVERAGE) = 3.67 drops below STRONG threshold under §10b + LESSONS A21. MIA verdict EXTREME / AVERAGE / **AVERAGE** (was STRONG). Path 2 collapses → band steps **HIGH CONVICTION (25%) → BASE (10% cap)**. **Conviction 7.5 → 7.0/10.** Cluster A 62.5% → 50%. **Allocation 8.5% HELD sub-band-defensive within BASE 10% cap** — no forced trim. V3 4/5 STRONG HELD (Pattern-2 mechanism added as candidate attribution driver alongside cyclical-macro PM-US-enterprise-weakness; numerical score unchanged).",
         "old": "2026-05-07 post-Q1 baseline"
+      },
+      {
+        "action": "No action — confirmed on track. Next decisive data: Q2'26 earnings ~early Aug 2026.",
+        "assessment": "**Weekly leading-indicator scan processed (week ending 2026-05-18).** Price-/news-monitoring scan only — no new quarterly structural data. [FACT] CRTO ~$16.05, near 52-wk low ($15.55; low hit May 6 post-Q1); YTD ~-42.9% (Source: Perplexity weekly scan 2026-05-18). [FACT] No SEC Form 4 or 6-K in the May 12–18 window; last material filings = Apr 28 bylaw 8-K, May 6 Q1 8-K + Form 425, May 8 proxy (all previously known). [FACT] Benchmark PT cut $30→$25 (May 7) — market-state context only per Rule §17 / Noise Filter #2. DoorDash Canada RM expansion (Apr 16) already captured in #3. Redomiciliation on track (Lux Q3'26 / US Q1'27). [SOURCE CONFLICT — Rule §8] Export states Criteo \"remains first and sole confirmed ad tech partner\"; this is news-sourced and is SUPERSEDED by the dashboard's 2026-05-14 user-confirmed reading (multi-partner co-listing at OpenAI Ads Manager May 5) — #7 status unchanged. **No structural threshold breached.**",
+        "date": "2026-05-18",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
       }
     ]
   },
@@ -372,11 +388,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-15: Report Review: CRTO Weekly Intelligence Update (May 8–15, 2026)",
     "2026-05-11: Report Review: CRTO Weekly Intelligence Update (May 5–11, 2026)",
     "2026-05-08: Report Review: CRTO Weekly Intelligence Update (May 1–8, 2026)",
     "2026-05-08: Q1 2026 Earnings Call Transcript Review (Q&A Only — Incremental to 2026-05-07 Prepared-Remarks Extract)",
-    "2026-05-07: Q1 2026 Earnings Review: 8-K + Prepared Remarks + Investor Presentation + Factsheet + Investor FAQ + OpenAI May Press...",
-    "2026-04-30: Report Review: CRTO Weekly Intelligence Update (23–30 Apr 2026)"
+    "2026-05-07: Q1 2026 Earnings Review: 8-K + Prepared Remarks + Investor Presentation + Factsheet + Investor FAQ + OpenAI May Press..."
   ],
   "scenarios": [
     {

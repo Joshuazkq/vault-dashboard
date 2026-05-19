@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "RST",
     "version": "2.0.0"
   },
@@ -96,8 +96,8 @@
       {
         "class": "CYCLICAL",
         "context": "Mismatch is the thesis. Daily moves of 2-5% are AIM-noise. Track 30-day MA + relative-to-AIM-100",
-        "current": "~254p (entry ref); Bear 221.6p / Base 414.2p / Bull 495.2p / Super-Bull 594.4p; PW-FV 404.9p (+59%)",
-        "lastUpdated": "2026-04-25",
+        "current": "**~265–270p (May 15–18 2026; 52-wk range 222–288.96p; mcap ~£354–364M)**; entry ref ~254p. Bear 221.6p / Base 414.2p / Bull 495.2p / Super-Bull 594.4p; PW-FV 404.9p (+~50% vs ~270p). YTD total return ~-1.65% vs FTSE AIM 100 -1.32%.",
+        "lastUpdated": "2026-05-18",
         "name": "RST share price (LON: RST)",
         "num": 14
       },
@@ -135,7 +135,7 @@
       "**Synertec earn-out absolute magnitude** — £10m earn-out remaining is self-mitigating (RST pays less if Synertec under-delivers). Headlines about earn-out level are not signal — what matters is the underlying NHS share trajectory (25% → 35% target)."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/RST/INDICATORS.md",
-    "staleDays": 20,
+    "staleDays": 1,
     "trendLog": [
       {
         "action": "No action — baseline log only",
@@ -160,6 +160,14 @@
         "indicator": "#12 Buyback pace",
         "new": "Cumulative ~£1.38m / £18.6m remaining; T1 Investec £8.6m left, T2 Canaccord pending; T1 completion projected Aug–Oct 2026; 136,357,876 shares-in-issue post 17 Apr",
         "old": "Active 12mo programme; latest 13–17 Apr week (figure prev. 160k corrected to 170k via primary RNS)"
+      },
+      {
+        "action": "No action — confirmed on track; all signals positive/in-line. Next decisive print: **H1 2026 interim 28 July 2026** (resolves #1/#2/#3/#4/#5).",
+        "assessment": "**Weekly leading-indicator scan processed (week ending 2026-05-18).** Five RNS in window. **(1) Trading update 12 May:** four months to 30 Apr \"robust\"; revenues up significantly (prior-year M&A + strong organic growth in digitisation / outbound comms / IT recycling); core doc-storage stable; margins \"strong across each division\"; Board confident FY26 adj PBT \"in line with market expectations\" (#6 reaffirmed); **3 Datashred bolt-on acquisitions ~£3.5M aggregate** (Russell Richardson & Sons, Paper Shredding Services, RDS Confidential Shredding — consolidation thesis supportive of #3); **H1 2026 results date confirmed 28 July 2026** (earlier \"mid-Sep\" estimate superseded — #1 forward read pulled ~7 weeks earlier). **(2) AGM 13 May:** all resolutions passed → buyback authority renewed (#12 gate cleared). **(3) Buyback RNS 18 May:** +100k sh @ ~268.07p (May 11–15) + prior 110k @ ~266–270p (May 5–8); shares-in-issue → 135,867,876; cumulative est ~£1.94m / ~£18.06m remaining. **(4) PDMR RNS 8 May:** Skinner + Baker exercised Nov-2023 LTIP options, retained net shares (no sell-down); #11 holdings increased. **(5) TR-1 7 May:** Artemis crossed 3.20%→4.00% — new institutional accumulator. Canaccord (12 May): \"In-line as organic growth builds\", Buy maintained — market-state context only per Rule §17. **No structural threshold breached.**",
+        "date": "2026-05-18",
+        "indicator": "All structural indicators",
+        "new": "—",
+        "old": "—"
       }
     ]
   },

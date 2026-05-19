@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "EUR-ASX",
     "version": "2.0.0"
   },
@@ -21,7 +21,7 @@
       "criterion": "situation-screen passed (Forward IRR > 30% gate)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -30,7 +30,7 @@
       "criterion": "pattern-match scored ≥28 (or ≥22 with MONITORING justification)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -39,7 +39,7 @@
       "criterion": "OVERVIEW.md sourced from audited filing",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "A",
       "state": "PENDING"
     },
@@ -48,7 +48,7 @@
       "criterion": "Latest annual filing (10-K/20-F) reviewed within 12 months",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "B",
       "state": "PENDING"
     },
@@ -57,7 +57,7 @@
       "criterion": "≥2 earnings transcripts reviewed (or waived if ticker has no transcripts available)",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "B",
       "state": "PENDING"
     },
@@ -66,7 +66,7 @@
       "criterion": "All [BLOCKING] QUESTIONS.md items resolved",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -75,7 +75,7 @@
       "criterion": "≥1 dated forward catalyst registered",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -84,7 +84,7 @@
       "criterion": "fair-value-estimation complete with Bull/Base/Bear PW-FV",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "C",
       "state": "PENDING"
     },
@@ -93,7 +93,7 @@
       "criterion": "debate-session run across all 6 pressure vectors",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     },
@@ -102,7 +102,7 @@
       "criterion": "market-vs-me-diagnostic run within 90 days",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     },
@@ -111,7 +111,7 @@
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
       "evidence": "",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "2026-05-19",
       "stage": "D",
       "state": "PENDING"
     }

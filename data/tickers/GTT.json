@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "GTT",
     "version": "2.0.0"
   },
@@ -130,7 +130,7 @@
       "**FLNG/FSRU one-off orders** — Each is valuable but lumpy. Don't extrapolate one FLNG order into a trend."
     ],
     "sourceFile": "Themes/Hormuz/Tickers/GTT/INDICATORS.md",
-    "staleDays": 23,
+    "staleDays": 27,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -461,11 +461,11 @@
     {
       "code": "D3",
       "criterion": "conviction-scoring + cross-model-validation council both complete; angels-advocate if band ≥ HIGH_CONVICTION",
-      "evidence": "Council 2026-05-15 ran (6 agents, gpt-5.5 xhigh, $6.74); DISCONFIRMS 5/14 self-MIA — MIA AVERAGE/AVERAGE/STRONG → band BASE (10%). Phase 3.5 BLOCKING V1 divergence opened (council V1=STRONG vs 5/14 EXTREME); clean-close requires `conviction-scoring --partial V1`. Band=BASE so angels-advocate not required.",
+      "evidence": "Council populated; band=BASE; angels-advocate=yes",
       "reason": "",
-      "since": "2026-05-15",
+      "since": "",
       "stage": "D",
-      "state": "PENDING"
+      "state": "MET"
     }
   ],
   "recentNotes": [

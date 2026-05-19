@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "HSTM",
     "version": "2.0.0"
   },
@@ -62,7 +62,7 @@
       "**Q4 earnings beat magnitude** — Q4 beat +12.5% is positive but partially seasonal. Judge earnings quality on annual trends."
     ],
     "sourceFile": "Themes/AI Disruption/Tickers/HSTM/INDICATORS.md",
-    "staleDays": 22,
+    "staleDays": 26,
     "structural": [
       {
         "class": "STRUCTURAL",

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-14T16:44:57Z",
-    "sourceFingerprint": "1e853cd9db042637",
+    "generatedAt": "2026-05-19T11:16:54Z",
+    "sourceFingerprint": "f89bff086a24f46b",
     "ticker": "TRI-LSE",
     "version": "2.0.0"
   },
@@ -139,7 +139,7 @@
       "**Peer share price moves (Bossard, Bufab)** — These are much larger, more liquid, better-covered companies. Their share price dynamics are driven by different factors (institutional flows, index inclusion). Not informative for TRI."
     ],
     "sourceFile": "Themes/Sentiment Mismatch/Tickers/TRI-LSE/INDICATORS.md",
-    "staleDays": 25,
+    "staleDays": 29,
     "structural": [
       {
         "class": "STRUCTURAL",
@@ -358,6 +358,14 @@
         "old": "Mills 17.41% + Slater 8.91% (interim)"
       },
       {
+        "action": "Reconcile #5 3rd-analyst identity (Zeus vs Cavendish) at 2 July finals window; continue 28 May Hormuz milestone watch — formal Indicator #13 structural breach fires if closure sustained, triggering Rule §10 CHANGELOG evaluation.",
+        "assessment": "**No breach-flag status change.** #11 already BREACH ACTIVE; #13 BREACH-FLAG with 28 May milestone ~13d out; #5/#7 refinements only. Per Rule §11: no V1-V8 shift, no allocation-band change, no scenario-probability re-weighting → NO CHANGELOG mandatory trigger.",
+        "date": "**2026-05-15**",
+        "indicator": "13-indicator scoreboard reaffirmed + #5/#7/#13 refinements (per 15 May Daily Intelligence Briefing)",
+        "new": "**#1 EBIT 7.8% FY26 reaffirmed** (revenue ~£207M vs £214M consensus; GM +150bps to ~30%; 29 Apr pre-close). **#5 Analyst coverage:** count 3 reaffirmed, but **3rd-analyst identity discrepancy** — 15 May brief names Peel Hunt / Berenberg / **Zeus Capital** (footnote = Zeus research note 28 Apr); vault carried **Cavendish** (29 Apr morning note). Both notes plausibly exist; count = 3 either way, no new initiation. **#7 WC% refined:** H1 FY2026 **41.0%** vs FY2025 **39.4%** (vault prior carried \"41% (FY2025)\") — split sharpens the read; WATCH, above 33–36% target, directionally worse YoY, below 45% kill. **#11 Brent ~$108–111** BREACH ACTIVE remains. **#12 Freight** Shanghai-Rotterdam ~$2,046/FEU, WCI ~$2,232 — below $3,000. **#13 Hormuz** effectively closed since 28 Feb (~2.5 months); 3-month structural-breach milestone **~28 May = ~13 days out**. NEW: Malaysia manufacturing closure (effective Apr 2026, sales/distribution hub retained) — inside the known ~£8M FY27 revenue envelope. (Sources: 15 May brief §1/§3/§4/§5.)",
+        "old": "All indicators per 2026-05-11 Trend Log readings"
+      },
+      {
         "action": "Surface freight #12 cross-platform divergence (>40% spread) to user for source-authority decision per Rule §21; continue 28 May Hormuz milestone watch; binary risk window narrowing.",
         "assessment": "**No breach-flag status change.** #11 Brent already BREACH ACTIVE; #13 Hormuz BREACH-FLAG with 28 May milestone; #12 freight remains BORDERLINE/WATCH pending Rule §21 source-authority decision. UK PMI strong positive; EU Auto Q1 reversal positive; Slater + Mills aligned-shareholder accumulation positive. Per Rule §11 evaluation: no V1-V8 shift, no allocation band change, no scenario probability re-weighting → NO CHANGELOG mandatory trigger fires.",
         "date": "**2026-05-11**",
@@ -470,11 +478,11 @@
     }
   ],
   "recentNotes": [
+    "2026-05-15: Report Review: MAGN & TRI-LSE Daily Intelligence Briefing (15 May 2026) — TRI section",
     "2026-05-11: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (11 May 2026) — TRI section",
     "2026-05-08: Report Review: MAGN+TRI-LSE Daily Intelligence Briefing (8 May 2026) — TRI section",
     "2026-05-01: Filing Review: FY2025 Annual Report (10-K equivalent — B1 RC evidence)",
-    "2026-04-30: Conviction Rescore (Partial: V1, V2, V4, V7) + MIA Asymmetry Restoration",
-    "2026-04-23: Data Correction Amendment: Hormuz/Ceasefire State"
+    "2026-04-30: Conviction Rescore (Partial: V1, V2, V4, V7) + MIA Asymmetry Restoration"
   ],
   "scenarios": [
     {
